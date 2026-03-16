@@ -2,7 +2,7 @@
 
 ## Deliverables
 
-- `renaissance-skills.html`
+- `index.html`
   - Single-file vanilla HTML/CSS/JS prototype
   - Dark premium landing page and interactive single-page experience
 - `HANDOFF.md`

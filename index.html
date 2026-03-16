@@ -3,7 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Renaissance Skills</title>
+  <title>Renaissance Skills — Map Your Cross-Domain Profile</title>
+  <meta name="description" content="Renaissance Skills is an assessment and development platform that maps your cross-domain skill distribution, assigns a Renaissance archetype, and builds a personalized growth path for the AI era.">
+  <meta property="og:title" content="Renaissance Skills — Map Your Cross-Domain Profile">
+  <meta property="og:description" content="Profile your cross-domain fluency, discover your Renaissance archetype, and build a personalized growth path for the AI era.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Renaissance Skills">
+  <meta name="twitter:description" content="Map your cross-domain skill profile. Discover your Renaissance archetype.">
+  <meta name="theme-color" content="#0d0d0d">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='none' stroke='%23d4af37' stroke-width='4'/><circle cx='50' cy='50' r='25' fill='none' stroke='%23d4af37' stroke-width='2' opacity='.5'/><circle cx='50' cy='50' r='8' fill='%23d4af37'/></svg>">
   <style>
     :root {
       --bg: #0d0d0d;
@@ -1296,6 +1305,108 @@
       }
     }
 
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 100;
+      padding: 0.75rem 1.2rem;
+      background: var(--gold);
+      color: #14110a;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 0 0 8px 0;
+    }
+
+    .skip-link:focus {
+      left: 0;
+    }
+
+    .mobile-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      background: rgba(255, 255, 255, 0.03);
+      place-items: center;
+      color: var(--muted);
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .mobile-toggle:hover,
+    .mobile-toggle:focus-visible {
+      color: var(--text);
+      border-color: rgba(212, 175, 55, 0.45);
+    }
+
+    .mobile-toggle svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 19;
+      background: rgba(9, 9, 9, 0.96);
+      backdrop-filter: blur(24px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .mobile-menu.is-open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .mobile-menu .nav-link {
+      font-size: 1.4rem;
+      letter-spacing: 0.1em;
+      padding: 0.5rem 0;
+    }
+
+    .mobile-menu .nav-link::after {
+      display: none;
+    }
+
+    .mobile-menu-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      transition: color 0.2s ease;
+    }
+
+    .mobile-menu-close:hover,
+    .mobile-menu-close:focus-visible {
+      color: var(--text);
+    }
+
     @media (max-width: 640px) {
       :root {
         --container: min(100vw - 1.2rem, 100%);
@@ -1303,12 +1414,16 @@
 
       .nav {
         padding: 0.8rem 0;
-        justify-content: center;
+        justify-content: space-between;
       }
 
       .nav-links,
       .nav-cta {
         display: none;
+      }
+
+      .mobile-toggle {
+        display: grid;
       }
 
       .section {
@@ -1356,6 +1471,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#home">Skip to content</a>
   <header class="nav-wrap">
     <div class="container nav">
       <a class="brand" href="#home">
@@ -1369,8 +1485,28 @@
         <a class="nav-link" href="#about">About</a>
       </nav>
       <button class="nav-cta" data-scroll-target="#assessment">Enter Assessment</button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+      </button>
     </div>
   </header>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="6" y1="6" x2="18" y2="18"/>
+        <line x1="18" y1="6" x2="6" y2="18"/>
+      </svg>
+    </button>
+    <a class="nav-link" href="#home" data-mobile-link>Home</a>
+    <a class="nav-link" href="#assessment" data-mobile-link>Assessment</a>
+    <a class="nav-link" href="#development" data-mobile-link>Development</a>
+    <a class="nav-link" href="#about" data-mobile-link>About</a>
+  </div>
 
   <main>
     <section class="section hero" id="home">
@@ -2122,7 +2258,7 @@
       const values = Object.values(profile);
       const average = values.reduce((sum, value) => sum + value, 0) / values.length;
       const spread = Math.max(...values) - Math.min(...values);
-      return Math.max(0, Math.round(average - spread * 0.25));
+      return Math.max(0, Math.round(average - spread * 0.35));
     }
 
     function renderSkillNodes() {
@@ -2230,7 +2366,7 @@
         copyStatus.textContent = "Ready to copy into your private local model.";
       } else {
         promptTitle.textContent = "Preview Output";
-        promptDescription.textContent = "Select “The LLM Mirror” to generate a prompt that can be pasted into your own local model for a privacy-first synthesis.";
+        promptDescription.textContent = 'Select “The LLM Mirror” to generate a prompt that can be pasted into your own local model for a privacy-first synthesis.';
         mirrorPrompt.value = "Choose The LLM Mirror to generate your prompt.";
         copyStatus.textContent = "Prompt updates when The LLM Mirror is selected.";
       }
@@ -2242,29 +2378,62 @@
         "Use the chat history or notes I provide as evidence. Do not flatter or generalize without signal.",
         "",
         "Rate me from 0 to 100 in these eight domains:",
-        "1. Leadership",
-        "2. Creativity",
-        "3. Strategy",
-        "4. Tech Proficiency",
-        "5. Problem Solving",
-        "6. Critical Thinking",
-        "7. Adaptability",
-        "8. Data Analysis",
+        "1. leadership - Ability to align people, create clarity, and move decisions forward",
+        "2. creativity - Ability to generate novel approaches, ideas, and reframings",
+        "3. strategy - Ability to sequence action, model tradeoffs, and see leverage",
+        "4. tech_proficiency - Practical fluency with tools, systems, and technical workflows",
+        "5. problem_solving - Ability to decompose complexity and get to workable solutions",
+        "6. critical_thinking - Ability to question assumptions, weigh evidence, and reason rigorously",
+        "7. adaptability - Ability to adjust plans and behavior under changing conditions",
+        "8. data_analysis - Ability to use evidence, measurement, and quantitative signal",
         "",
-        "Then return:",
-        "- A one-sentence summary of my overall profile",
-        "- A likely archetype from: The Polymath, The Strategist, The Builder, The Leader",
-        "- My top three strongest domains with brief evidence",
-        "- My three weakest domains with brief evidence",
-        "- A recommended learning sequence to make my profile more well-rounded",
+        "For each domain, also assign a confidence level (low, medium, high) based on how much evidence you found.",
         "",
-        "Output format:",
+        "Then determine:",
+        "- My top 3 strongest domains (highest scores)",
+        "- My 3 weakest growth domains (lowest scores)",
+        "- My primary archetype from: polymath, strategist, builder, leader",
+        "- A confidence value for the archetype between 0.35 and 0.85",
+        "- A balance index from 0-100 reflecting how even my profile is (higher = more balanced)",
+        "- 3 recommended starter modules mapped from my weakest domains",
+        "",
+        "Return your response as JSON in exactly this format:",
         "{",
-        '  "summary": "...",',
-        '  "archetype": "...",',
-        '  "strengths": [{"domain":"...","score":0,"evidence":"..."}],',
-        '  "weaknesses": [{"domain":"...","score":0,"evidence":"..."}],',
-        '  "learning_sequence": ["...", "...", "...", "..."]',
+        '  "assessment_id": "llm_mirror_v1",',
+        '  "assessment_name": "The LLM Mirror",',
+        '  "scores": {',
+        '    "leadership": 0,',
+        '    "creativity": 0,',
+        '    "strategy": 0,',
+        '    "tech_proficiency": 0,',
+        '    "problem_solving": 0,',
+        '    "critical_thinking": 0,',
+        '    "adaptability": 0,',
+        '    "data_analysis": 0',
+        "  },",
+        '  "confidence_per_domain": {',
+        '    "leadership": "medium",',
+        '    "creativity": "medium"',
+        '    // ... all 8 domains',
+        "  },",
+        '  "levels": {',
+        '    "leadership": "Functional",',
+        '    // Use: Emerging (0-44), Developing (45-59), Functional (60-74), Strong (75-89), Signature (90-100)',
+        "  },",
+        '  "top_strengths": ["domain_key", "domain_key", "domain_key"],',
+        '  "growth_domains": ["domain_key", "domain_key", "domain_key"],',
+        '  "archetype": {',
+        '    "key": "strategist",',
+        '    "label": "The Strategist",',
+        '    "confidence": 0.68',
+        "  },",
+        '  "balance_index": 68,',
+        '  "recommended_modules": [',
+        '    "Module name for weakest domain",',
+        '    "Module name for second weakest",',
+        '    "Module name for third weakest"',
+        "  ],",
+        '  "evidence_notes": "Brief summary of what evidence supported the assessment"',
         "}"
       ].join("\n");
     }
@@ -2422,9 +2591,53 @@
         await navigator.clipboard.writeText(mirrorPrompt.value);
         copyStatus.textContent = "Prompt copied. Paste it into your private local model.";
       } catch (error) {
-        mirrorPrompt.select();
-        document.execCommand("copy");
-        copyStatus.textContent = "Prompt copied using the fallback copy method.";
+        const textArea = document.createElement("textarea");
+        textArea.value = mirrorPrompt.value;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+          document.execCommand("copy");
+          copyStatus.textContent = "Prompt copied.";
+        } catch (err) {
+          copyStatus.textContent = "Could not copy. Please select the prompt text and copy manually.";
+        }
+        document.body.removeChild(textArea);
+      }
+    });
+
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileToggle = document.getElementById("mobileToggle");
+    const mobileMenuClose = document.getElementById("mobileMenuClose");
+
+    function openMobileMenu() {
+      mobileMenu.classList.add("is-open");
+      mobileMenuClose.focus();
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove("is-open");
+      mobileToggle.focus();
+      document.body.style.overflow = "";
+    }
+
+    mobileToggle.addEventListener("click", openMobileMenu);
+    mobileMenuClose.addEventListener("click", closeMobileMenu);
+
+    [...document.querySelectorAll("[data-mobile-link]")].forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        closeMobileMenu();
+        const target = link.getAttribute("href");
+        if (target) smoothScrollTo(target);
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && mobileMenu.classList.contains("is-open")) {
+        closeMobileMenu();
       }
     });
 
