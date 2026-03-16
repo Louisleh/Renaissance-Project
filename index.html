@@ -292,14 +292,16 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1.25rem;
+      gap: 2rem;
     }
 
     .nav-link {
       position: relative;
       color: var(--muted);
-      font-size: 0.95rem;
-      letter-spacing: 0.08em;
+      font-family: var(--heading-font);
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       padding-bottom: 0.3rem;
       transition: color 0.25s ease;
@@ -351,25 +353,312 @@
     }
 
     .hero {
-      padding-top: 4.5rem;
-      padding-bottom: 5.5rem;
+      padding-top: 2rem;
+      padding-bottom: 0;
+      min-height: calc(100vh - var(--nav-height));
+      display: flex;
+      flex-direction: column;
     }
 
     .hero-shell {
-      display: grid;
-      gap: 2.3rem;
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      flex: 1;
     }
 
-    .hero-copy {
-      max-width: 940px;
+    /* Hero Top Bar */
+    .hero-top {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .hero-brand-title {
+      font-family: var(--heading-font);
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .hero-brand-sub {
+      font-size: 0.78rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--muted-strong);
+      margin-top: 0.3rem;
+    }
+
+    .hero-headline {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-headline h1 {
+      font-size: clamp(2.2rem, 5.5vw, 4.5rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.05;
+      background: linear-gradient(180deg, #f5e6b8 0%, #d4af37 50%, #a8862a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Central Stage */
+    .hero-center {
+      position: relative;
+      width: min(100%, 1200px);
+      flex: 1;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Constellation background */
+    .hero-constellation {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .hero-constellation svg {
+      width: 100%;
+      height: 100%;
+      opacity: 0.35;
+    }
+
+    /* Central Vitruvian figure */
+    .hero-figure-wrap {
+      position: relative;
+      width: min(420px, 50vw);
+      aspect-ratio: 1;
+      z-index: 2;
+    }
+
+    .hero-figure-circle {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 2px solid rgba(212, 175, 55, 0.3);
+      box-shadow:
+        0 0 80px rgba(212, 175, 55, 0.08),
+        inset 0 0 60px rgba(212, 175, 55, 0.06);
+    }
+
+    .hero-figure-circle::before {
+      content: "";
+      position: absolute;
+      inset: 8%;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    .hero-figure-circle::after {
+      content: "";
+      position: absolute;
+      inset: -6%;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.08);
+      animation: slowPulse 8s ease-in-out infinite;
+    }
+
+    .hero-figure-square {
+      position: absolute;
+      inset: 8%;
+      border: 1px solid rgba(212, 175, 55, 0.18);
+    }
+
+    .hero-figure-svg {
+      position: absolute;
+      inset: 10%;
+      z-index: 1;
+    }
+
+    .hero-figure-svg svg {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.15));
+    }
+
+    /* Radar overlay on figure */
+    .hero-radar-overlay {
+      position: absolute;
+      inset: 2%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-radar-overlay svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Skill Labels - floating around center */
+    .hero-skill-labels {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .hero-skill-label {
+      position: absolute;
+      font-family: var(--heading-font);
+      font-size: clamp(0.7rem, 1.3vw, 1.05rem);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+      pointer-events: auto;
+      cursor: default;
+      transition: color 0.25s ease, text-shadow 0.25s ease;
+    }
+
+    .hero-skill-label:hover {
+      color: var(--text);
+      text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    }
+
+    .hero-skill-label::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+
+    /* Archetype corner cards */
+    .hero-archetypes {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-arch-card {
+      position: absolute;
+      width: clamp(140px, 16vw, 200px);
+      pointer-events: auto;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.25s ease;
+    }
+
+    .hero-arch-card:hover {
+      transform: scale(1.05);
+    }
+
+    .hero-arch-card--tl { top: 0; left: 0; }
+    .hero-arch-card--tr { top: 0; right: 0; }
+    .hero-arch-card--bl { bottom: 2rem; left: 0; }
+    .hero-arch-card--br { bottom: 2rem; right: 0; }
+
+    .hero-arch-icon {
+      width: clamp(80px, 10vw, 120px);
+      height: clamp(80px, 10vw, 120px);
+      margin: 0 auto 0.5rem;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      background:
+        radial-gradient(circle at center, rgba(212, 175, 55, 0.08), transparent 60%),
+        rgba(13, 13, 13, 0.7);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.4), inset 0 0 30px rgba(212, 175, 55, 0.05);
+    }
+
+    .hero-arch-icon svg {
+      width: 55%;
+      height: 55%;
+      opacity: 0.7;
+    }
+
+    .hero-arch-name {
+      font-family: var(--heading-font);
+      font-size: clamp(0.7rem, 1vw, 0.9rem);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-arch-desc {
+      font-size: clamp(0.6rem, 0.8vw, 0.75rem);
+      color: var(--muted-strong);
+      line-height: 1.4;
+    }
+
+    /* Connection lines from archetypes to center */
+    .hero-connections {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-connections svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* CTA area */
+    .hero-cta-area {
+      text-align: center;
+      padding: 1.5rem 0;
+      z-index: 4;
+    }
+
+    .hero-cta-sub {
+      margin-top: 0.6rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    /* Bottom info bar */
+    .hero-info-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      width: 100%;
+      max-width: 700px;
       margin: 0 auto;
+      padding: 1.5rem 0 2rem;
+      border-top: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    .hero-info-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
       text-align: center;
     }
 
-    .hero-copy p {
-      margin-inline: auto;
-      max-width: 64ch;
+    .hero-info-icon {
+      width: 36px;
+      height: 36px;
+      color: var(--gold);
+      opacity: 0.7;
+    }
+
+    .hero-info-title {
+      font-family: var(--heading-font);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero-info-desc {
+      font-size: 0.78rem;
+      color: var(--muted-strong);
     }
 
     .hero-actions {
@@ -379,6 +668,30 @@
       justify-content: center;
       gap: 1rem;
       flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero-archetypes {
+        display: none;
+      }
+      .hero-center {
+        min-height: 400px;
+      }
+      .hero-figure-wrap {
+        width: min(320px, 70vw);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-center {
+        min-height: 350px;
+      }
+      .hero-figure-wrap {
+        width: min(280px, 80vw);
+      }
+      .hero-info-bar {
+        grid-template-columns: 1fr;
+      }
     }
 
     .hero-button,
@@ -417,259 +730,29 @@
       color: var(--text);
     }
 
-    .hero-stage {
-      width: min(980px, 100%);
-      margin: 0 auto;
-      padding: 2.2rem 0 0;
-    }
-
-    .orbit-panel {
-      position: relative;
-      padding: clamp(1rem, 2vw, 2rem);
-      border-radius: 38px;
-      border: 1px solid rgba(212, 175, 55, 0.16);
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015)),
-        radial-gradient(circle at top, rgba(212, 175, 55, 0.08), transparent 36%),
-        rgba(17, 15, 12, 0.88);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      isolation: isolate;
-    }
-
-    .orbit-panel::before,
-    .orbit-panel::after {
-      content: "";
-      position: absolute;
-      border-radius: 50%;
-      pointer-events: none;
-    }
-
-    .orbit-panel::before {
-      width: 480px;
-      height: 480px;
-      inset: -120px auto auto -120px;
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.12), transparent 66%);
-      filter: blur(14px);
-      opacity: 0.7;
-    }
-
-    .orbit-panel::after {
-      width: 420px;
-      height: 420px;
-      inset: auto -140px -160px auto;
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.08), transparent 70%);
-      filter: blur(20px);
-      opacity: 0.55;
-    }
-
-    .orbit-grid {
-      display: grid;
-      gap: 1.6rem;
-    }
-
-    .hero-orbit {
-      width: min(100%, 760px);
-      aspect-ratio: 1 / 1;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    .hero-orbit::before,
-    .hero-orbit::after {
-      content: "";
-      position: absolute;
-      inset: 14%;
-      border-radius: 50%;
-      border: 1px solid rgba(212, 175, 55, 0.14);
-      pointer-events: none;
-    }
-
-    .hero-orbit::after {
-      inset: 20%;
-      border-style: dashed;
-      opacity: 0.55;
-      animation: slowPulse 8s ease-in-out infinite;
-    }
-
-    @keyframes slowPulse {
-      0%, 100% {
-        transform: scale(1);
-        opacity: 0.4;
-      }
-      50% {
-        transform: scale(1.03);
-        opacity: 0.82;
-      }
-    }
-
-    .orbit-rings {
-      position: absolute;
-      inset: 8%;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle at center, rgba(212, 175, 55, 0.06), transparent 48%),
-        radial-gradient(circle at center, transparent 43%, rgba(212, 175, 55, 0.08) 44%, transparent 45%),
-        radial-gradient(circle at center, transparent 56%, rgba(212, 175, 55, 0.06) 57%, transparent 58%),
-        radial-gradient(circle at center, transparent 69%, rgba(212, 175, 55, 0.05) 70%, transparent 71%);
-      pointer-events: none;
-    }
-
-    .orbit-rings::before {
-      content: "";
-      position: absolute;
-      inset: 6%;
-      border-radius: 50%;
-      border: 1px solid rgba(212, 175, 55, 0.18);
-      box-shadow: 0 0 60px rgba(212, 175, 55, 0.08), inset 0 0 40px rgba(212, 175, 55, 0.06);
-      animation: ringRotate 26s linear infinite;
-    }
-
-    @keyframes ringRotate {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
     .radar-svg {
-      position: absolute;
-      inset: 12%;
       overflow: visible;
-      filter: drop-shadow(0 0 24px rgba(212, 175, 55, 0.16));
-      pointer-events: none;
+      filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.1));
     }
 
     .radar-axis,
     .radar-ring-line {
       fill: none;
-      stroke: rgba(212, 175, 55, 0.24);
-      stroke-width: 1;
+      stroke: rgba(212, 175, 55, 0.18);
+      stroke-width: 0.8;
       vector-effect: non-scaling-stroke;
     }
 
     .radar-ring-line {
-      stroke: rgba(212, 175, 55, 0.14);
+      stroke: rgba(212, 175, 55, 0.1);
     }
 
     .radar-glow {
-      fill: rgba(212, 175, 55, 0.08);
-      stroke: rgba(212, 175, 55, 0.22);
-      stroke-width: 2;
       vector-effect: non-scaling-stroke;
     }
 
     .radar-shape {
-      fill: rgba(212, 175, 55, 0.14);
-      stroke: rgba(239, 211, 104, 0.92);
-      stroke-width: 2;
       vector-effect: non-scaling-stroke;
-    }
-
-    .radar-dot {
-      fill: #f3dd91;
-      stroke: rgba(13, 13, 13, 0.8);
-      stroke-width: 2;
-      transition: transform 0.2s ease, r 0.2s ease, filter 0.2s ease;
-      transform-origin: center;
-      filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.45));
-    }
-
-    .radar-dot.is-active {
-      r: 8;
-      filter: drop-shadow(0 0 14px rgba(212, 175, 55, 0.85));
-    }
-
-    .figure-shell {
-      position: absolute;
-      inset: 26%;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle at center, rgba(255, 255, 255, 0.02), transparent 56%),
-        radial-gradient(circle at center, rgba(212, 175, 55, 0.1), transparent 74%);
-      box-shadow:
-        inset 0 0 0 1px rgba(212, 175, 55, 0.1),
-        0 0 34px rgba(212, 175, 55, 0.12);
-      display: grid;
-      place-items: center;
-      pointer-events: none;
-    }
-
-    .figure-shell::before {
-      content: "";
-      position: absolute;
-      inset: 10%;
-      border-radius: 50%;
-      border: 1px solid rgba(212, 175, 55, 0.14);
-    }
-
-    .vitruvian {
-      width: 54%;
-      height: 54%;
-      opacity: 0.72;
-    }
-
-    .skill-layer {
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-    }
-
-    .skill-node {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      min-width: 128px;
-      padding: 0.7rem 0.9rem;
-      display: grid;
-      gap: 0.18rem;
-      border-radius: 18px;
-      border: 1px solid rgba(212, 175, 55, 0.16);
-      background: rgba(12, 11, 9, 0.72);
-      color: var(--muted);
-      text-align: left;
-      box-shadow: 0 14px 26px rgba(0, 0, 0, 0.22);
-      backdrop-filter: blur(12px);
-      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, color 0.22s ease;
-    }
-
-    .skill-node span:first-child {
-      font-size: 0.86rem;
-      letter-spacing: 0.04em;
-    }
-
-    .skill-node .skill-score {
-      color: var(--text);
-      font-family: var(--heading-font);
-      font-size: 1.05rem;
-    }
-
-    .skill-node:hover,
-    .skill-node:focus-visible,
-    .skill-node.is-active {
-      color: var(--text);
-      transform: translate(-50%, -50%) scale(1.05);
-      border-color: rgba(239, 211, 104, 0.5);
-      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28), 0 0 34px rgba(212, 175, 55, 0.12);
-    }
-
-    .skill-node::before {
-      content: "";
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: rgba(212, 175, 55, 0.76);
-      box-shadow: 0 0 16px rgba(212, 175, 55, 0.6);
-      position: absolute;
-      top: 0.85rem;
-      right: 0.9rem;
-    }
-
-    .hero-dashboard {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
     }
 
     .dashboard-card,
@@ -1269,11 +1352,6 @@
     }
 
     @media (max-width: 820px) {
-      .hero {
-        padding-top: 3.5rem;
-      }
-
-      .hero-dashboard,
       .spotlight-shell,
       .future-grid,
       .growth-grid,
@@ -1285,15 +1363,6 @@
       .archetype-grid,
       .about-grid {
         grid-template-columns: 1fr;
-      }
-
-      .hero-orbit {
-        width: min(100%, 660px);
-      }
-
-      .skill-node {
-        min-width: 108px;
-        padding: 0.55rem 0.78rem;
       }
 
       .timeline-card {
@@ -1438,21 +1507,6 @@
       .ghost-button {
         width: 100%;
         justify-content: center;
-      }
-
-      .hero-orbit {
-        aspect-ratio: auto;
-        min-height: 640px;
-      }
-
-      .orbit-rings,
-      .radar-svg,
-      .figure-shell {
-        inset: 16% 9% 24%;
-      }
-
-      .skill-node {
-        min-width: 112px;
       }
 
       .timeline-card {
@@ -2071,7 +2125,7 @@
         <a class="nav-link" href="#development">Development</a>
         <a class="nav-link" href="#about">About</a>
       </nav>
-      <button class="nav-cta" data-scroll-target="#assessment">Enter Assessment</button>
+      <button class="nav-cta" id="navGetStarted">Get Started</button>
       <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <line x1="4" y1="7" x2="20" y2="7"/>
@@ -2196,66 +2250,183 @@
   <main>
     <section class="section hero" id="home">
       <div class="container hero-shell">
-        <div class="hero-copy reveal">
-          <div class="pill">The Rebirth of the Renaissance Man</div>
-          <div class="eyebrow">Assessment Platform</div>
-          <h1>Map the mind you have. Build the synthesis the future rewards.</h1>
-          <p class="lede">
-            Renaissance Skills turns scattered strengths into a visible operating system. Profile your cross-domain
-            fluency, see where over-specialization leaves you fragile, and train toward a balanced, AI-resilient skill graph.
-          </p>
-          <div class="hero-actions">
-            <button class="hero-button" id="heroAssessmentButton">Start Your Personalized Assessment</button>
-            <a class="ghost-button" href="#archetypes" data-scroll-target="#archetypes">Explore the Archetypes</a>
-          </div>
+
+        <!-- Brand title -->
+        <div class="hero-top reveal">
+          <div class="hero-brand-title">Renaissance Skills</div>
+          <div class="hero-brand-sub">Empower Your Potential | Unlock Your Genius</div>
         </div>
 
-        <div class="hero-stage reveal">
-          <div class="orbit-panel">
-            <div class="orbit-grid">
-              <div class="hero-orbit">
-                <div class="orbit-rings" aria-hidden="true"></div>
-                <svg class="radar-svg" viewBox="-190 -190 380 380" aria-hidden="true">
-                  <g id="radarRings"></g>
-                  <g id="radarAxes"></g>
-                  <polygon id="radarGlow" class="radar-glow" points=""></polygon>
-                  <polygon id="radarShape" class="radar-shape" points=""></polygon>
-                  <g id="radarDots"></g>
+        <!-- Main headline -->
+        <div class="hero-headline reveal">
+          <h1>Recover Your Full Potential</h1>
+        </div>
+
+        <!-- Central composition -->
+        <div class="hero-center">
+
+          <!-- Constellation background -->
+          <div class="hero-constellation" aria-hidden="true">
+            <svg id="heroConstellationSvg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice"></svg>
+          </div>
+
+          <!-- Connection lines -->
+          <div class="hero-connections" aria-hidden="true">
+            <svg id="heroConnectionsSvg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice"></svg>
+          </div>
+
+          <!-- 4 Archetype cards in corners -->
+          <div class="hero-archetypes" aria-hidden="true">
+            <div class="hero-arch-card hero-arch-card--tl" data-scroll-target="#archetypes">
+              <div class="hero-arch-icon">
+                <svg viewBox="0 0 200 200" fill="none">
+                  <circle cx="100" cy="35" r="14" stroke="rgba(212,175,55,0.6)" stroke-width="1.5"/>
+                  <circle cx="100" cy="100" r="65" stroke="rgba(212,175,55,0.25)" stroke-width="1.5"/>
+                  <path d="M100 49V115M100 60L55 85M100 60L145 85M100 68L45 118M100 68L155 118M85 115L75 152M115 115L125 152" stroke="rgba(239,211,104,0.55)" stroke-width="1.8" stroke-linecap="round"/>
+                  <circle cx="60" cy="60" r="6" stroke="rgba(212,175,55,0.4)" stroke-width="1"/>
+                  <circle cx="140" cy="60" r="6" stroke="rgba(212,175,55,0.4)" stroke-width="1"/>
+                  <path d="M54 60L66 60M140 54L140 66" stroke="rgba(212,175,55,0.5)" stroke-width="1.2" stroke-linecap="round"/>
                 </svg>
-
-                <div class="figure-shell" aria-hidden="true">
-                  <svg class="vitruvian" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="100" cy="36" r="16" stroke="rgba(212,175,55,0.55)" stroke-width="2"/>
-                    <circle cx="100" cy="100" r="74" stroke="rgba(212,175,55,0.2)" stroke-width="2"/>
-                    <rect x="36" y="36" width="128" height="128" stroke="rgba(212,175,55,0.16)" stroke-width="2"/>
-                    <path d="M100 52V118M68 78L100 95L132 78M62 124L100 118L138 124M82 118L72 156M118 118L128 156" stroke="rgba(239,211,104,0.74)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M100 62L50 88M100 62L150 88M100 70L38 124M100 70L162 124" stroke="rgba(212,175,55,0.46)" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                </div>
-
-                <div class="skill-layer" id="skillLayer" aria-label="Skill domains"></div>
               </div>
+              <div class="hero-arch-name">The Polymath</div>
+              <div class="hero-arch-desc">Balanced skill distribution across all domains</div>
+            </div>
 
-              <div class="hero-dashboard">
-                <div class="dashboard-card">
-                  <strong>Current Method</strong>
-                  <span id="heroMethod">The Quick Pulse</span>
-                  <p id="heroMethodCopy">Rapid onboarding for fast baseline visibility.</p>
-                </div>
-                <div class="dashboard-card">
-                  <strong>Recommended Archetype</strong>
-                  <span id="heroArchetype">The Strategist</span>
-                  <p id="heroArchetypeCopy">Strong systems thinking with clear growth edges in data fluency.</p>
-                </div>
-                <div class="dashboard-card">
-                  <strong>Live Domain Insight</strong>
-                  <span id="heroInsightTitle">Data Analysis</span>
-                  <p id="heroInsightCopy">A low-signal zone that should be elevated to support stronger decision quality.</p>
-                </div>
+            <div class="hero-arch-card hero-arch-card--tr" data-scroll-target="#archetypes">
+              <div class="hero-arch-icon">
+                <svg viewBox="0 0 200 200" fill="none">
+                  <circle cx="100" cy="35" r="14" stroke="rgba(212,175,55,0.6)" stroke-width="1.5"/>
+                  <circle cx="100" cy="100" r="65" stroke="rgba(212,175,55,0.25)" stroke-width="1.5"/>
+                  <path d="M100 49V115M100 60L55 85M100 60L145 85M85 115L75 152M115 115L125 152" stroke="rgba(239,211,104,0.55)" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M60 70L90 100L140 55" stroke="rgba(212,175,55,0.5)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                  <circle cx="80" cy="140" r="18" stroke="rgba(212,175,55,0.35)" stroke-width="1"/>
+                  <path d="M80 130V150M70 140H90" stroke="rgba(212,175,55,0.4)" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
               </div>
+              <div class="hero-arch-name">The Strategist</div>
+              <div class="hero-arch-desc">High analytical skills and strategic thinking</div>
+            </div>
+
+            <div class="hero-arch-card hero-arch-card--bl" data-scroll-target="#archetypes">
+              <div class="hero-arch-icon">
+                <svg viewBox="0 0 200 200" fill="none">
+                  <circle cx="100" cy="35" r="14" stroke="rgba(212,175,55,0.6)" stroke-width="1.5"/>
+                  <circle cx="100" cy="100" r="65" stroke="rgba(212,175,55,0.25)" stroke-width="1.5"/>
+                  <path d="M100 49V115M100 60L55 85M100 60L145 85M85 115L75 152M115 115L125 152" stroke="rgba(239,211,104,0.55)" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M65 65H80V80H65ZM85 75L100 60L115 75L100 90Z" stroke="rgba(212,175,55,0.45)" stroke-width="1.2" fill="none"/>
+                </svg>
+              </div>
+              <div class="hero-arch-name">The Leader</div>
+              <div class="hero-arch-desc">High interpersonal skills and adaptive coordination</div>
+            </div>
+
+            <div class="hero-arch-card hero-arch-card--br" data-scroll-target="#archetypes">
+              <div class="hero-arch-icon">
+                <svg viewBox="0 0 200 200" fill="none">
+                  <circle cx="100" cy="35" r="14" stroke="rgba(212,175,55,0.6)" stroke-width="1.5"/>
+                  <circle cx="100" cy="100" r="65" stroke="rgba(212,175,55,0.25)" stroke-width="1.5"/>
+                  <path d="M100 49V115M100 60L55 85M100 60L145 85M85 115L75 152M115 115L125 152" stroke="rgba(239,211,104,0.55)" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M70 60L85 80L65 80ZM120 55L140 55L140 75L120 75Z" stroke="rgba(212,175,55,0.45)" stroke-width="1.2" fill="none"/>
+                  <path d="M75 140L90 125M110 140L125 125" stroke="rgba(212,175,55,0.4)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="hero-arch-name">The Builder</div>
+              <div class="hero-arch-desc">High execution and technical implementation skills</div>
             </div>
           </div>
+
+          <!-- Central Vitruvian figure -->
+          <div class="hero-figure-wrap">
+            <div class="hero-figure-circle"></div>
+            <div class="hero-figure-square"></div>
+
+            <!-- Radar overlay -->
+            <div class="hero-radar-overlay">
+              <svg class="radar-svg" viewBox="-190 -190 380 380" aria-hidden="true">
+                <g id="radarRings"></g>
+                <g id="radarAxes"></g>
+                <polygon id="radarGlow" class="radar-glow" points="" fill="rgba(212,175,55,0.06)" stroke="rgba(212,175,55,0.18)" stroke-width="1.5"></polygon>
+                <polygon id="radarShape" class="radar-shape" points="" fill="rgba(212,175,55,0.1)" stroke="rgba(239,211,104,0.7)" stroke-width="1.5"></polygon>
+                <g id="radarDots"></g>
+              </svg>
+            </div>
+
+            <!-- Vitruvian Man SVG -->
+            <div class="hero-figure-svg">
+              <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Head -->
+                <circle cx="200" cy="72" r="28" stroke="rgba(212,175,55,0.65)" stroke-width="2"/>
+                <ellipse cx="200" cy="70" rx="20" ry="22" stroke="rgba(239,211,104,0.3)" stroke-width="1"/>
+                <!-- Hair hint -->
+                <path d="M180 58C185 48 195 42 200 42C205 42 215 48 220 58" stroke="rgba(212,175,55,0.35)" stroke-width="1.5" fill="none"/>
+                <!-- Neck -->
+                <path d="M200 100V108" stroke="rgba(239,211,104,0.7)" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- Torso -->
+                <path d="M200 108V240" stroke="rgba(239,211,104,0.7)" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- Shoulders -->
+                <path d="M170 125L200 115L230 125" stroke="rgba(239,211,104,0.65)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Chest lines -->
+                <path d="M180 135L200 145L220 135" stroke="rgba(212,175,55,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+                <!-- Hips -->
+                <path d="M180 235L200 240L220 235" stroke="rgba(239,211,104,0.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Arms straight out -->
+                <path d="M170 125L95 155" stroke="rgba(239,211,104,0.65)" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M230 125L305 155" stroke="rgba(239,211,104,0.65)" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- Forearms straight -->
+                <path d="M95 155L42 175" stroke="rgba(239,211,104,0.6)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M305 155L358 175" stroke="rgba(239,211,104,0.6)" stroke-width="2" stroke-linecap="round"/>
+                <!-- Arms raised (Vitruvian second pose) -->
+                <path d="M170 125L90 90" stroke="rgba(212,175,55,0.35)" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M230 125L310 90" stroke="rgba(212,175,55,0.35)" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M90 90L45 55" stroke="rgba(212,175,55,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M310 90L355 55" stroke="rgba(212,175,55,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+                <!-- Legs straight -->
+                <path d="M190 240L165 330" stroke="rgba(239,211,104,0.6)" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M210 240L235 330" stroke="rgba(239,211,104,0.6)" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- Lower legs -->
+                <path d="M165 330L152 380" stroke="rgba(239,211,104,0.5)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M235 330L248 380" stroke="rgba(239,211,104,0.5)" stroke-width="2" stroke-linecap="round"/>
+                <!-- Legs spread (second pose) -->
+                <path d="M190 240L120 350" stroke="rgba(212,175,55,0.3)" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M210 240L280 350" stroke="rgba(212,175,55,0.3)" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M120 350L100 390" stroke="rgba(212,175,55,0.25)" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M280 350L300 390" stroke="rgba(212,175,55,0.25)" stroke-width="1.5" stroke-linecap="round"/>
+                <!-- Navel marker -->
+                <circle cx="200" cy="200" r="3" fill="rgba(212,175,55,0.5)"/>
+                <!-- Body glow -->
+                <circle cx="200" cy="200" r="40" fill="rgba(212,175,55,0.03)" stroke="none"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Floating skill labels -->
+          <div class="hero-skill-labels" id="heroSkillLabels"></div>
         </div>
+
+        <!-- CTA -->
+        <div class="hero-cta-area reveal">
+          <button class="hero-button" id="heroAssessmentButton">Start Your Individual Assessment</button>
+          <p class="hero-cta-sub">Discover Your Unique Skill Profile</p>
+        </div>
+
+        <!-- Bottom info bar -->
+        <div class="hero-info-bar reveal">
+          <div class="hero-info-item">
+            <svg class="hero-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <circle cx="12" cy="12" r="9"/><path d="M12 7V12L15 14"/><path d="M8 2L4 5M16 2L20 5"/>
+            </svg>
+            <span class="hero-info-title">How It Works</span>
+            <span class="hero-info-desc">Map your unique skill profile in minutes</span>
+          </div>
+          <div class="hero-info-item">
+            <svg class="hero-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M12 2L15 8.5L22 9.5L17 14.5L18 21.5L12 18.5L6 21.5L7 14.5L2 9.5L9 8.5Z"/>
+            </svg>
+            <span class="hero-info-title">Platform Benefits</span>
+            <span class="hero-info-desc">Discover your unique development path</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -2846,19 +3017,11 @@
     const assessmentCards = [...document.querySelectorAll("[data-assessment-card]")];
     const archetypeCards = [...document.querySelectorAll("[data-archetype]")];
     const tabButtons = [...document.querySelectorAll("[data-tab]")];
-    const skillLayer = document.getElementById("skillLayer");
     const radarRings = document.getElementById("radarRings");
     const radarAxes = document.getElementById("radarAxes");
     const radarShape = document.getElementById("radarShape");
     const radarGlow = document.getElementById("radarGlow");
     const radarDots = document.getElementById("radarDots");
-
-    const heroMethod = document.getElementById("heroMethod");
-    const heroMethodCopy = document.getElementById("heroMethodCopy");
-    const heroArchetype = document.getElementById("heroArchetype");
-    const heroArchetypeCopy = document.getElementById("heroArchetypeCopy");
-    const heroInsightTitle = document.getElementById("heroInsightTitle");
-    const heroInsightCopy = document.getElementById("heroInsightCopy");
 
     const consoleTitle = document.getElementById("consoleTitle");
     const consoleDescription = document.getElementById("consoleDescription");
@@ -2946,83 +3109,86 @@
       return Math.max(0, Math.round(average - spread * 0.35));
     }
 
-    function renderSkillNodes() {
-      const assessment = getCurrentAssessment();
-      const nodes = skillOrder.map((skill, index) => {
-        const angle = (-90 + index * 45) * (Math.PI / 180);
-        const mobileRadius = window.innerWidth < 641 ? 40 : 42;
-        const x = 50 + Math.cos(angle) * mobileRadius;
-        const y = 50 + Math.sin(angle) * mobileRadius;
-        const value = assessment.profile[skill];
-        return `
-          <button
-            class="skill-node${state.pinnedSkill === skill ? " is-active" : ""}"
-            data-skill="${skill}"
-            style="left:${x}%; top:${y}%"
-            aria-label="${skill}: ${value} out of 100"
-          >
-            <span>${skill}</span>
-            <span class="skill-score">${value}</span>
-          </button>
-        `;
+    function renderHeroSkillLabels() {
+      const labelsEl = document.getElementById("heroSkillLabels");
+      if (!labelsEl) return;
+      // Positions for 8 labels radiating around the center figure
+      const positions = [
+        { skill: "Leadership",       left: "35%", top: "12%" },
+        { skill: "Creativity",       left: "65%", top: "12%" },
+        { skill: "Strategy",         left: "80%", top: "30%" },
+        { skill: "Tech Proficiency", left: "22%", top: "75%" },
+        { skill: "Problem Solving",  left: "20%", top: "55%" },
+        { skill: "Critical Thinking",left: "78%", top: "55%" },
+        { skill: "Adaptability",     left: "35%", top: "88%" },
+        { skill: "Data Analysis",    left: "65%", top: "88%" }
+      ];
+
+      labelsEl.innerHTML = positions.map(p => {
+        return `<span class="hero-skill-label" style="left:${p.left};top:${p.top}">${p.skill}</span>`;
       }).join("");
+    }
 
-      skillLayer.innerHTML = nodes;
+    function buildHeroConstellation() {
+      const svg = document.getElementById("heroConstellationSvg");
+      if (!svg) return;
+      let lines = "";
+      // Random constellation lines
+      const stars = [];
+      for (let i = 0; i < 60; i++) {
+        const x = Math.random() * 1200;
+        const y = Math.random() * 600;
+        const r = Math.random() * 1.5 + 0.5;
+        stars.push({ x, y });
+        lines += `<circle cx="${x}" cy="${y}" r="${r}" fill="rgba(212,175,55,${Math.random() * 0.4 + 0.1})"/>`;
+      }
+      // Connect some nearby stars
+      for (let i = 0; i < stars.length; i++) {
+        for (let j = i + 1; j < stars.length; j++) {
+          const dist = Math.hypot(stars[i].x - stars[j].x, stars[i].y - stars[j].y);
+          if (dist < 120 && Math.random() > 0.6) {
+            lines += `<line x1="${stars[i].x}" y1="${stars[i].y}" x2="${stars[j].x}" y2="${stars[j].y}" stroke="rgba(212,175,55,0.08)" stroke-width="0.5"/>`;
+          }
+        }
+      }
+      // Subtle arc decorations
+      lines += `<circle cx="600" cy="300" r="250" fill="none" stroke="rgba(212,175,55,0.06)" stroke-width="0.5"/>`;
+      lines += `<circle cx="600" cy="300" r="280" fill="none" stroke="rgba(212,175,55,0.04)" stroke-width="0.5" stroke-dasharray="4 8"/>`;
+      svg.innerHTML = lines;
+    }
 
-      [...skillLayer.querySelectorAll(".skill-node")].forEach((node) => {
-        const skill = node.dataset.skill;
-        node.addEventListener("mouseenter", () => setActiveSkill(skill, true));
-        node.addEventListener("focus", () => setActiveSkill(skill, true));
-        node.addEventListener("mouseleave", () => setActiveSkill(state.pinnedSkill, true));
-        node.addEventListener("blur", () => setActiveSkill(state.pinnedSkill, true));
-        node.addEventListener("click", () => setActiveSkill(skill, false));
-      });
+    function buildHeroConnections() {
+      const svg = document.getElementById("heroConnectionsSvg");
+      if (!svg) return;
+      // Subtle connection arcs from corners toward center
+      svg.innerHTML = `
+        <line x1="100" y1="80" x2="480" y2="250" stroke="rgba(212,175,55,0.06)" stroke-width="0.5" stroke-dasharray="3 6"/>
+        <line x1="1100" y1="80" x2="720" y2="250" stroke="rgba(212,175,55,0.06)" stroke-width="0.5" stroke-dasharray="3 6"/>
+        <line x1="100" y1="480" x2="480" y2="350" stroke="rgba(212,175,55,0.06)" stroke-width="0.5" stroke-dasharray="3 6"/>
+        <line x1="1100" y1="480" x2="720" y2="350" stroke="rgba(212,175,55,0.06)" stroke-width="0.5" stroke-dasharray="3 6"/>
+      `;
     }
 
     function renderRadar() {
       const assessment = getCurrentAssessment();
       const values = skillOrder.map((skill) => assessment.profile[skill]);
-      radarShape.setAttribute("points", polygonPoints(values));
-      radarGlow.setAttribute("points", polygonPoints(values, 1.08));
+      if (radarShape) radarShape.setAttribute("points", polygonPoints(values));
+      if (radarGlow) radarGlow.setAttribute("points", polygonPoints(values, 1.08));
 
-      radarDots.innerHTML = skillOrder.map((skill, index) => {
-        const point = polarPoint(index, assessment.profile[skill]);
-        const activeClass = skill === state.pinnedSkill ? "radar-dot is-active" : "radar-dot";
-        return `<circle class="${activeClass}" data-dot="${skill}" cx="${point.x}" cy="${point.y}" r="5.8"></circle>`;
-      }).join("");
-    }
-
-    function setActiveSkill(skill, temporary) {
-      const assessment = getCurrentAssessment();
-      const value = assessment.profile[skill];
-      if (!temporary) {
-        state.pinnedSkill = skill;
+      if (radarDots) {
+        radarDots.innerHTML = skillOrder.map((skill, index) => {
+          const point = polarPoint(index, assessment.profile[skill]);
+          return `<circle class="radar-dot" cx="${point.x}" cy="${point.y}" r="4" fill="#f3dd91" stroke="rgba(13,13,13,0.6)" stroke-width="1.5" style="filter:drop-shadow(0 0 6px rgba(212,175,55,0.4))"></circle>`;
+        }).join("");
       }
-
-      heroInsightTitle.textContent = skill;
-      heroInsightCopy.textContent = `${skillDescriptions[skill]} Current score: ${value}/100.`;
-
-      [...document.querySelectorAll(".skill-node")].forEach((node) => {
-        node.classList.toggle("is-active", node.dataset.skill === skill);
-      });
-
-      [...document.querySelectorAll("[data-dot]")].forEach((dot) => {
-        dot.classList.toggle("is-active", dot.dataset.dot === skill);
-      });
     }
 
     function updateHero() {
       const assessment = getCurrentAssessment();
-      heroMethod.textContent = assessment.title;
-      heroMethodCopy.textContent = assessment.heroCopy;
-      heroArchetype.textContent = archetypes[assessment.archetype].title;
-      heroArchetypeCopy.textContent = assessment.description;
       if (!assessment.profile[state.pinnedSkill]) {
         state.pinnedSkill = getWeakestDomains(assessment.profile, 1)[0];
       }
-      renderSkillNodes();
       renderRadar();
-      setActiveSkill(state.pinnedSkill, true);
     }
 
     function updateAssessmentSection() {
@@ -3243,7 +3409,7 @@
       });
     });
 
-    // Hero CTA is handled by Quick Pulse hookQuickPulseTriggers()
+    // Hero CTA and Nav "Get Started" are handled by hookQuickPulseTriggers()
 
     assessmentButtons.forEach((button) => {
       button.addEventListener("click", () => {
@@ -3361,12 +3527,13 @@
     });
 
     window.addEventListener("resize", () => {
-      renderSkillNodes();
       renderRadar();
-      setActiveSkill(state.pinnedSkill, true);
     });
 
     buildRadarScaffold();
+    renderHeroSkillLabels();
+    buildHeroConstellation();
+    buildHeroConnections();
     applyAssessment("quick");
 
     // ── Quick Pulse Assessment Engine ──
@@ -3919,18 +4086,18 @@
 
     // Hook into existing page buttons to open Quick Pulse
     function hookQuickPulseTriggers() {
-      // "Start Your Personalized Assessment" hero button
+      // Hero CTA button
       const heroBtn = document.getElementById("heroAssessmentButton");
-      heroBtn.addEventListener("click", () => {
-        qpOpen();
-      });
+      if (heroBtn) heroBtn.addEventListener("click", () => qpOpen());
+
+      // Nav "Get Started" button
+      const navGetStarted = document.getElementById("navGetStarted");
+      if (navGetStarted) navGetStarted.addEventListener("click", () => qpOpen());
 
       // Quick Pulse "Select Method" button
       assessmentButtons.forEach(btn => {
         if (btn.dataset.assessment === "quick") {
-          btn.addEventListener("click", () => {
-            qpOpen();
-          });
+          btn.addEventListener("click", () => qpOpen());
         }
       });
     }
