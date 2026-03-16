@@ -1468,6 +1468,593 @@
         align-items: start;
       }
     }
+    /* ── Quick Pulse Assessment Overlay ── */
+
+    .qp-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      background: var(--bg);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .qp-overlay.is-open {
+      display: block;
+    }
+
+    .qp-container {
+      width: min(720px, calc(100vw - 2rem));
+      margin: 0 auto;
+      padding: 2rem 0 4rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .qp-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+      margin-bottom: 2rem;
+    }
+
+    .qp-header-brand {
+      font-family: var(--heading-font);
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .qp-close {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      background: rgba(255, 255, 255, 0.03);
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .qp-close:hover,
+    .qp-close:focus-visible {
+      color: var(--text);
+      border-color: rgba(212, 175, 55, 0.45);
+    }
+
+    /* Screens */
+    .qp-screen {
+      display: none;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    .qp-screen.is-active {
+      display: flex;
+    }
+
+    /* Intro Screen */
+    .qp-intro {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 1.5rem;
+    }
+
+    .qp-intro h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .qp-intro-body {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 52ch;
+      line-height: 1.65;
+    }
+
+    .qp-intro-bullets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+    }
+
+    .qp-intro-bullets .pill {
+      font-size: 0.85rem;
+    }
+
+    .qp-intro-note {
+      color: var(--muted-strong);
+      font-size: 0.88rem;
+      font-style: italic;
+    }
+
+    .qp-start-btn {
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, var(--gold), var(--gold-strong));
+      color: #14110a;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      border-radius: 999px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.38), 0 0 28px rgba(212, 175, 55, 0.2);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .qp-start-btn:hover,
+    .qp-start-btn:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.42), 0 0 36px rgba(212, 175, 55, 0.28);
+    }
+
+    .qp-back-link {
+      color: var(--muted);
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .qp-back-link:hover {
+      color: var(--text);
+    }
+
+    /* Progress Bar */
+    .qp-progress {
+      margin-bottom: 2rem;
+    }
+
+    .qp-progress-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.6rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+    }
+
+    .qp-progress-track {
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(212, 175, 55, 0.08);
+      overflow: hidden;
+    }
+
+    .qp-progress-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.4), var(--gold));
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+      transition: width 0.35s ease;
+    }
+
+    /* Question Card */
+    .qp-question-card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .qp-prompt {
+      font-family: var(--heading-font);
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      line-height: 1.3;
+    }
+
+    .qp-options {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .qp-option {
+      text-align: left;
+      padding: 1rem 1.2rem;
+      border-radius: 18px;
+      border: 1px solid rgba(212, 175, 55, 0.16);
+      background: rgba(255, 255, 255, 0.025);
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.5;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .qp-option:hover,
+    .qp-option:focus-visible {
+      border-color: rgba(212, 175, 55, 0.35);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .qp-option.is-selected {
+      border-color: rgba(239, 211, 104, 0.55);
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.14), rgba(212, 175, 55, 0.06));
+      color: var(--text);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 0 0 20px rgba(212, 175, 55, 0.08);
+    }
+
+    .qp-option.is-selected::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.7);
+      margin-right: 0.6rem;
+      vertical-align: middle;
+    }
+
+    /* Navigation Buttons */
+    .qp-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-top: auto;
+      padding-top: 2rem;
+    }
+
+    .qp-nav-btn {
+      padding: 0.85rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .qp-btn-back {
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+    }
+
+    .qp-btn-back:hover {
+      color: var(--text);
+      border-color: rgba(212, 175, 55, 0.35);
+    }
+
+    .qp-btn-next {
+      background: linear-gradient(135deg, var(--gold), var(--gold-strong));
+      color: #14110a;
+      font-weight: 700;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(212, 175, 55, 0.15);
+    }
+
+    .qp-btn-next:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35), 0 0 28px rgba(212, 175, 55, 0.22);
+    }
+
+    .qp-btn-next:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Calculating Screen */
+    .qp-calculating {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .qp-calc-spinner {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 3px solid rgba(212, 175, 55, 0.15);
+      border-top-color: var(--gold);
+      animation: qpSpin 0.8s linear infinite;
+    }
+
+    @keyframes qpSpin {
+      to { transform: rotate(360deg); }
+    }
+
+    .qp-calc-text {
+      font-family: var(--heading-font);
+      font-size: 1.4rem;
+      color: var(--muted);
+    }
+
+    /* Results Screen */
+    .qp-results {
+      gap: 2.5rem;
+    }
+
+    .qp-results-header {
+      text-align: center;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .qp-results-header h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .qp-results-confidence {
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-style: italic;
+    }
+
+    .qp-archetype-result {
+      text-align: center;
+      padding: 2rem;
+      border-radius: 26px;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      background:
+        radial-gradient(circle at top, rgba(212, 175, 55, 0.08), transparent 50%),
+        var(--panel);
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .qp-archetype-result .archetype-tag {
+      justify-self: center;
+    }
+
+    .qp-archetype-result h3 {
+      font-size: 1.8rem;
+    }
+
+    .qp-archetype-result p {
+      color: var(--muted);
+      max-width: 50ch;
+      margin: 0 auto;
+    }
+
+    .qp-archetype-confidence {
+      color: var(--muted-strong);
+      font-size: 0.82rem;
+    }
+
+    /* Results Radar */
+    .qp-radar-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .qp-radar-wrap {
+      aspect-ratio: 1;
+      max-width: 380px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .qp-radar-wrap svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .qp-domain-list {
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .qp-domain-row {
+      display: grid;
+      gap: 0.3rem;
+    }
+
+    .qp-domain-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .qp-domain-name {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .qp-domain-score {
+      font-family: var(--heading-font);
+      font-size: 1rem;
+    }
+
+    .qp-domain-level {
+      font-size: 0.75rem;
+      color: var(--muted-strong);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .qp-domain-bar {
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(212, 175, 55, 0.06);
+      overflow: hidden;
+    }
+
+    .qp-domain-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.3), rgba(212, 175, 55, 0.85));
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.15);
+      transition: width 0.6s ease;
+    }
+
+    /* Strengths / Growth */
+    .qp-sg-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .qp-sg-card {
+      padding: 1.3rem;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+    }
+
+    .qp-sg-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .qp-sg-list {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .qp-sg-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .qp-sg-item::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .qp-strength-item::before {
+      background: var(--gold);
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+    }
+
+    .qp-growth-item::before {
+      background: rgba(212, 175, 55, 0.35);
+    }
+
+    /* Balance */
+    .qp-balance-row {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+    }
+
+    .qp-balance-number {
+      font-family: var(--heading-font);
+      font-size: 3.5rem;
+      line-height: 1;
+      color: var(--gold);
+    }
+
+    .qp-balance-info {
+      display: grid;
+      gap: 0.3rem;
+    }
+
+    .qp-balance-info h4 {
+      font-size: 1.1rem;
+    }
+
+    .qp-balance-info p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* Recommended Modules */
+    .qp-modules {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .qp-modules h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .qp-module-card {
+      padding: 1rem 1.2rem;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .qp-module-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(212, 175, 55, 0.12);
+      color: var(--gold);
+      font-family: var(--heading-font);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .qp-module-info {
+      display: grid;
+      gap: 0.15rem;
+    }
+
+    .qp-module-name {
+      font-size: 0.95rem;
+    }
+
+    .qp-module-domain {
+      font-size: 0.78rem;
+      color: var(--muted-strong);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Results Actions */
+    .qp-results-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      padding-top: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .qp-radar-section,
+      .qp-sg-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .qp-balance-row {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .qp-results-actions {
+        flex-direction: column;
+      }
+
+      .qp-results-actions button {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1506,6 +2093,104 @@
     <a class="nav-link" href="#assessment" data-mobile-link>Assessment</a>
     <a class="nav-link" href="#development" data-mobile-link>Development</a>
     <a class="nav-link" href="#about" data-mobile-link>About</a>
+  </div>
+
+  <!-- Quick Pulse Assessment Overlay -->
+  <div class="qp-overlay" id="qpOverlay" role="dialog" aria-label="Quick Pulse Assessment" aria-modal="true">
+    <div class="qp-container">
+      <div class="qp-header">
+        <span class="qp-header-brand">Quick Pulse</span>
+        <button class="qp-close" id="qpClose" aria-label="Close assessment">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Screen 1: Intro -->
+      <div class="qp-screen is-active" id="qpIntroScreen">
+        <div class="qp-intro">
+          <div class="eyebrow">The Quick Pulse</div>
+          <h2 id="qpIntroHeadline">Map your Renaissance baseline</h2>
+          <p class="qp-intro-body" id="qpIntroBody">This short assessment estimates how your strengths are distributed across eight cross-domain capabilities. You will get an archetype, a skill profile, and recommended next steps.</p>
+          <div class="qp-intro-bullets" id="qpIntroBullets"></div>
+          <p class="qp-intro-note">Your result is a directional baseline — not a definitive measurement.</p>
+          <button class="qp-start-btn" id="qpStartBtn">Start Quick Pulse</button>
+          <button class="qp-back-link" id="qpBackToModes">Back to Assessment Modes</button>
+        </div>
+      </div>
+
+      <!-- Screen 2/3: Question Flow -->
+      <div class="qp-screen" id="qpQuestionScreen">
+        <div class="qp-progress" aria-live="polite">
+          <div class="qp-progress-info">
+            <span id="qpQuestionCounter">Question 1 of 10</span>
+            <span id="qpProgressPct">10%</span>
+          </div>
+          <div class="qp-progress-track">
+            <div class="qp-progress-fill" id="qpProgressFill" style="width: 10%"></div>
+          </div>
+        </div>
+        <div class="qp-question-card">
+          <p class="qp-prompt" id="qpPrompt"></p>
+          <div class="qp-options" id="qpOptions" role="radiogroup"></div>
+          <div class="qp-nav">
+            <button class="qp-nav-btn qp-btn-back" id="qpBack">Back</button>
+            <button class="qp-nav-btn qp-btn-next" id="qpNext" disabled>Next</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen 4: Calculating -->
+      <div class="qp-screen" id="qpCalcScreen">
+        <div class="qp-calculating">
+          <div class="qp-calc-spinner" aria-hidden="true"></div>
+          <p class="qp-calc-text">Mapping your Renaissance profile...</p>
+        </div>
+      </div>
+
+      <!-- Screen 5: Results -->
+      <div class="qp-screen" id="qpResultsScreen">
+        <div class="qp-results">
+          <div class="qp-results-header">
+            <div class="eyebrow">Your Renaissance Profile</div>
+            <h2>Assessment Complete</h2>
+            <p class="qp-results-confidence">Directional baseline — Quick Pulse v1</p>
+          </div>
+
+          <div class="qp-archetype-result" id="qpArchetypeResult"></div>
+
+          <div class="qp-radar-section">
+            <div class="qp-radar-wrap">
+              <svg id="qpRadarSvg" viewBox="-200 -200 400 400"></svg>
+            </div>
+            <div class="qp-domain-list" id="qpDomainList"></div>
+          </div>
+
+          <div class="qp-sg-grid">
+            <div class="qp-sg-card">
+              <h4>Top Strengths</h4>
+              <div class="qp-sg-list" id="qpStrengthsList"></div>
+            </div>
+            <div class="qp-sg-card">
+              <h4>Growth Domains</h4>
+              <div class="qp-sg-list" id="qpGrowthList"></div>
+            </div>
+          </div>
+
+          <div class="qp-balance-row" id="qpBalanceRow"></div>
+
+          <div class="qp-modules" id="qpModules">
+            <h4>Recommended Starter Modules</h4>
+          </div>
+
+          <div class="qp-results-actions">
+            <button class="hero-button" id="qpViewDev">View Development Path</button>
+            <button class="ghost-button" id="qpRetake">Retake Quick Pulse</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <main>
@@ -2558,9 +3243,7 @@
       });
     });
 
-    document.getElementById("heroAssessmentButton").addEventListener("click", () => {
-      smoothScrollTo("#assessment");
-    });
+    // Hero CTA is handled by Quick Pulse hookQuickPulseTriggers()
 
     assessmentButtons.forEach((button) => {
       button.addEventListener("click", () => {
@@ -2685,6 +3368,583 @@
 
     buildRadarScaffold();
     applyAssessment("quick");
+
+    // ── Quick Pulse Assessment Engine ──
+
+    const qpModuleData = {
+      "module_id": "quick_pulse_v1",
+      "module_name": "The Quick Pulse",
+      "version": 1,
+      "estimated_minutes": 4,
+      "question_count": 10,
+      "confidence_label": "Directional baseline",
+      "intro": {
+        "headline": "Map your Renaissance baseline",
+        "body": "This short assessment estimates how your strengths are distributed across eight cross-domain capabilities. You will get an archetype, a skill profile, and recommended next steps.",
+        "bullets": ["10 questions", "3\u20134 minutes", "Immediate results", "Best used as a first-pass baseline"]
+      },
+      "domains": [
+        {"key": "leadership", "label": "Leadership"},
+        {"key": "creativity", "label": "Creativity"},
+        {"key": "strategy", "label": "Strategy"},
+        {"key": "tech_proficiency", "label": "Tech Proficiency"},
+        {"key": "problem_solving", "label": "Problem Solving"},
+        {"key": "critical_thinking", "label": "Critical Thinking"},
+        {"key": "adaptability", "label": "Adaptability"},
+        {"key": "data_analysis", "label": "Data Analysis"}
+      ],
+      "levels": [
+        {"label": "Emerging", "min": 0, "max": 44},
+        {"label": "Developing", "min": 45, "max": 59},
+        {"label": "Functional", "min": 60, "max": 74},
+        {"label": "Strong", "min": 75, "max": 89},
+        {"label": "Signature", "min": 90, "max": 100}
+      ],
+      "starter_module_map": {
+        "leadership": "Influence Through Clarity",
+        "creativity": "Cross-Domain Idea Generation",
+        "strategy": "Systems Mapping and Leverage",
+        "tech_proficiency": "Tool Fluency for Non-Specialists",
+        "problem_solving": "Constraint Decomposition",
+        "critical_thinking": "Assumption Testing",
+        "adaptability": "Operating Under Change",
+        "data_analysis": "Evidence Before Intuition"
+      },
+      "archetypes": [
+        {"key": "polymath", "label": "The Polymath", "description": "A broad, balanced synthesizer with unusual pattern transfer across domains."},
+        {"key": "strategist", "label": "The Strategist", "description": "A systems-oriented thinker who links evidence, tradeoffs, and long-range direction."},
+        {"key": "builder", "label": "The Builder", "description": "An execution-heavy profile that turns ideas into tools, systems, and outputs."},
+        {"key": "leader", "label": "The Leader", "description": "A people-and-direction profile that creates clarity and adapts well under uncertainty."}
+      ],
+      "questions": [
+        {"id":"qp_01","prompt":"You are starting a new project with vague goals and incomplete context. What do you do first?","options":[{"id":"a","label":"Map the outcome, constraints, and likely tradeoffs before acting.","weights":{"strategy":3,"critical_thinking":1}},{"id":"b","label":"Open the relevant tools and build a rough prototype to learn by doing.","weights":{"tech_proficiency":3,"problem_solving":1}},{"id":"c","label":"Talk to the key people involved and align on expectations and ownership.","weights":{"leadership":3,"adaptability":1}},{"id":"d","label":"Generate several unconventional ways the problem could be framed before choosing a path.","weights":{"creativity":3,"strategy":1}}]},
+        {"id":"qp_02","prompt":"A team is stuck between two competing approaches. Which move sounds most like you?","options":[{"id":"a","label":"Facilitate a decision, get alignment, and assign a clear owner.","weights":{"leadership":3,"strategy":1}},{"id":"b","label":"Compare the assumptions, evidence, and downside risks in each option.","weights":{"critical_thinking":3,"data_analysis":1}},{"id":"c","label":"Run a quick test, simulation, or demo so reality can decide faster.","weights":{"problem_solving":3,"tech_proficiency":1}},{"id":"d","label":"Reframe the problem so the team can see a third option they have not considered.","weights":{"creativity":3,"adaptability":1}}]},
+        {"id":"qp_03","prompt":"You notice a workflow is repetitive, frustrating, and error-prone. What is your instinct?","options":[{"id":"a","label":"Automate it, template it, or simplify it through tooling.","weights":{"tech_proficiency":3,"problem_solving":1}},{"id":"b","label":"Measure where time and errors are actually occurring before changing anything.","weights":{"data_analysis":3,"critical_thinking":1}},{"id":"c","label":"Clarify roles, expectations, and handoffs so the team operates more smoothly.","weights":{"leadership":3,"adaptability":1}},{"id":"d","label":"Redesign the process from first principles rather than patching it.","weights":{"strategy":3,"creativity":1}}]},
+        {"id":"qp_04","prompt":"You need to learn a new domain fast. Which approach feels most natural?","options":[{"id":"a","label":"Jump into a real tool or project and learn through direct experimentation.","weights":{"tech_proficiency":3,"adaptability":1}},{"id":"b","label":"Study the underlying concepts and models before trying to apply them.","weights":{"critical_thinking":3,"strategy":1}},{"id":"c","label":"Talk to experienced people and synthesize what actually works from their patterns.","weights":{"leadership":3,"adaptability":1}},{"id":"d","label":"Explore adjacent fields first so you can import surprising analogies and ideas.","weights":{"creativity":3,"strategy":1}}]},
+        {"id":"qp_05","prompt":"You need to persuade skeptical stakeholders to support a recommendation. What do you lean on most?","options":[{"id":"a","label":"A clear narrative about priorities, tradeoffs, and long-term direction.","weights":{"leadership":3,"strategy":1}},{"id":"b","label":"The evidence, benchmark data, and the logic behind the recommendation.","weights":{"data_analysis":3,"critical_thinking":1}},{"id":"c","label":"A concrete demo, workflow, or working proof that shows it can be done.","weights":{"tech_proficiency":3,"problem_solving":1}},{"id":"d","label":"An original framing or analogy that makes the opportunity suddenly obvious.","weights":{"creativity":3,"leadership":1}}]},
+        {"id":"qp_06","prompt":"The situation changes mid-project and your original plan no longer fits. What do you do?","options":[{"id":"a","label":"Adjust scope fast and keep momentum with the best workable version.","weights":{"adaptability":3,"problem_solving":1}},{"id":"b","label":"Pause long enough to re-check assumptions and verify what signal is still reliable.","weights":{"critical_thinking":3,"data_analysis":1}},{"id":"c","label":"Realign the people involved around the next most important decision.","weights":{"leadership":3,"strategy":1}},{"id":"d","label":"Explore alternate directions others may be missing and choose the strongest pivot.","weights":{"creativity":3,"adaptability":1}}]},
+        {"id":"qp_07","prompt":"How do you usually know a solution actually worked?","options":[{"id":"a","label":"People are aligned, confusion is lower, and execution becomes smoother.","weights":{"leadership":3,"adaptability":1}},{"id":"b","label":"The metrics improved against a baseline or expected outcome.","weights":{"data_analysis":3,"critical_thinking":1}},{"id":"c","label":"The system became faster, cleaner, or more reliable in practice.","weights":{"tech_proficiency":3,"problem_solving":1}},{"id":"d","label":"It opened up a stronger long-term path or strategic option than before.","weights":{"strategy":3,"creativity":1}}]},
+        {"id":"qp_08","prompt":"You hear a bold claim in a meeting or article. What is your first instinct?","options":[{"id":"a","label":"Probe the assumptions, evidence quality, and hidden incentives behind it.","weights":{"critical_thinking":3,"data_analysis":1}},{"id":"b","label":"Map the second-order effects and how it changes the broader system.","weights":{"strategy":3,"critical_thinking":1}},{"id":"c","label":"See how you would test it in practice or build a small version of it.","weights":{"problem_solving":3,"tech_proficiency":1}},{"id":"d","label":"Connect it to patterns from completely different fields and see what transfers.","weights":{"creativity":3,"strategy":1}}]},
+        {"id":"qp_09","prompt":"A capable colleague is struggling with a new assignment. How do you tend to help?","options":[{"id":"a","label":"Clarify priorities, remove blockers, and help them regain momentum.","weights":{"leadership":3,"adaptability":1}},{"id":"b","label":"Give them a framework for making tradeoffs and choosing among options.","weights":{"strategy":3,"critical_thinking":1}},{"id":"c","label":"Create a checklist, template, or tool that makes the work easier to execute.","weights":{"tech_proficiency":3,"problem_solving":1}},{"id":"d","label":"Brainstorm alternate approaches with them until a more original path appears.","weights":{"creativity":3,"leadership":1}}]},
+        {"id":"qp_10","prompt":"At the end of a project, what kind of reflection feels most useful?","options":[{"id":"a","label":"Review the evidence, signal quality, mistakes, and what the team missed.","weights":{"critical_thinking":3,"data_analysis":1}},{"id":"b","label":"Capture the repeatable system or playbook so the next round starts stronger.","weights":{"strategy":3,"tech_proficiency":1}},{"id":"c","label":"Reflect on how coordination, ownership, and decision-making worked across people.","weights":{"leadership":3,"adaptability":1}},{"id":"d","label":"Identify the most surprising ideas worth exploring further next time.","weights":{"creativity":3,"strategy":1}}]}
+      ]
+    };
+
+    // ── Scoring Engine (pure functions) ──
+
+    function qpComputeRawScores(responses, questions) {
+      const raw = {};
+      qpModuleData.domains.forEach(d => { raw[d.key] = 0; });
+
+      responses.forEach(resp => {
+        const question = questions.find(q => q.id === resp.question_id);
+        if (!question) return;
+        const option = question.options.find(o => o.id === resp.option_id);
+        if (!option || !option.weights) return;
+        Object.entries(option.weights).forEach(([domain, weight]) => {
+          if (domain in raw) raw[domain] += weight;
+        });
+      });
+
+      return raw;
+    }
+
+    function qpComputeMaxPossible(questions) {
+      const maxes = {};
+      qpModuleData.domains.forEach(d => { maxes[d.key] = 0; });
+
+      questions.forEach(q => {
+        const domainMax = {};
+        q.options.forEach(opt => {
+          if (!opt.weights) return;
+          Object.entries(opt.weights).forEach(([domain, weight]) => {
+            if (!(domain in domainMax)) domainMax[domain] = 0;
+            domainMax[domain] = Math.max(domainMax[domain], weight);
+          });
+        });
+        Object.entries(domainMax).forEach(([domain, val]) => {
+          if (domain in maxes) maxes[domain] += val;
+        });
+      });
+
+      return maxes;
+    }
+
+    function qpNormalize(raw, maxPossible) {
+      const normalized = {};
+      Object.keys(raw).forEach(domain => {
+        const maxVal = maxPossible[domain] || 0;
+        if (maxVal === 0) { normalized[domain] = 20; return; }
+        normalized[domain] = Math.min(100, Math.max(0, Math.round(20 + (raw[domain] / maxVal) * 80)));
+      });
+      return normalized;
+    }
+
+    function qpGetLevel(score) {
+      for (const level of qpModuleData.levels) {
+        if (score >= level.min && score <= level.max) return level.label;
+      }
+      return "Emerging";
+    }
+
+    function qpComputeLevels(scores) {
+      const levels = {};
+      Object.entries(scores).forEach(([domain, score]) => {
+        levels[domain] = qpGetLevel(score);
+      });
+      return levels;
+    }
+
+    function qpComputeArchetype(scores) {
+      const s = scores;
+      const domainsAbove60 = Object.values(s).filter(v => v >= 60).length;
+      const breadthBonus = domainsAbove60 >= 6 ? 5 : 0;
+
+      const clusters = {
+        leader:     s.leadership * 0.45 + s.adaptability * 0.25 + s.strategy * 0.20 + s.creativity * 0.10,
+        strategist: s.strategy * 0.40 + s.critical_thinking * 0.30 + s.data_analysis * 0.20 + s.leadership * 0.10,
+        builder:    s.tech_proficiency * 0.35 + s.problem_solving * 0.35 + s.data_analysis * 0.20 + s.adaptability * 0.10,
+        polymath:   s.creativity * 0.25 + s.strategy * 0.20 + s.critical_thinking * 0.20 + s.adaptability * 0.15 + s.leadership * 0.10 + s.problem_solving * 0.10 + breadthBonus
+      };
+
+      const sorted = Object.entries(clusters).sort((a, b) => b[1] - a[1]);
+      const topKey = sorted[0][0];
+      const topScore = sorted[0][1];
+      const secondScore = sorted[1][1];
+
+      const spread = Math.max(...Object.values(s)) - Math.min(...Object.values(s));
+      let chosenKey = topKey;
+      if (topKey !== "polymath" && clusters.polymath >= topScore - 3 && spread < 30) {
+        chosenKey = "polymath";
+      }
+
+      const chosenScore = clusters[chosenKey];
+      const nextBest = chosenKey === topKey ? secondScore : topScore;
+      const confidence = Math.min(0.85, Math.max(0.35, (chosenScore - nextBest) / 15));
+
+      const archInfo = qpModuleData.archetypes.find(a => a.key === chosenKey);
+      return {
+        key: chosenKey,
+        label: archInfo ? archInfo.label : chosenKey,
+        description: archInfo ? archInfo.description : "",
+        confidence: Math.round(confidence * 100) / 100
+      };
+    }
+
+    function qpComputeBalanceIndex(scores) {
+      const values = Object.values(scores);
+      const avg = values.reduce((a, b) => a + b, 0) / values.length;
+      const spread = Math.max(...values) - Math.min(...values);
+      return Math.max(0, Math.min(100, Math.round(avg - spread * 0.35)));
+    }
+
+    function qpGetTopStrengths(scores, count) {
+      return Object.entries(scores).sort((a, b) => b[1] - a[1]).slice(0, count).map(([k]) => k);
+    }
+
+    function qpGetGrowthDomains(scores, count) {
+      return Object.entries(scores).sort((a, b) => a[1] - b[1]).slice(0, count).map(([k]) => k);
+    }
+
+    function qpGetRecommendedModules(growthDomains) {
+      return growthDomains.map(d => qpModuleData.starter_module_map[d] || d);
+    }
+
+    function qpDomainLabel(key) {
+      const d = qpModuleData.domains.find(dom => dom.key === key);
+      return d ? d.label : key;
+    }
+
+    function qpComputeFullResult(responses) {
+      const questions = qpModuleData.questions;
+      const raw = qpComputeRawScores(responses, questions);
+      const maxPossible = qpComputeMaxPossible(questions);
+      const scores = qpNormalize(raw, maxPossible);
+      const levels = qpComputeLevels(scores);
+      const archetype = qpComputeArchetype(scores);
+      const balanceIndex = qpComputeBalanceIndex(scores);
+      const topStrengths = qpGetTopStrengths(scores, 3);
+      const growthDomains = qpGetGrowthDomains(scores, 3);
+      const recommendedModules = qpGetRecommendedModules(growthDomains);
+
+      return {
+        assessment_id: "quick_pulse_v1",
+        assessment_name: "The Quick Pulse",
+        completed_at: new Date().toISOString(),
+        response_count: responses.length,
+        responses: responses,
+        scores: scores,
+        levels: levels,
+        top_strengths: topStrengths,
+        growth_domains: growthDomains,
+        archetype: archetype,
+        balance_index: balanceIndex,
+        recommended_modules: recommendedModules
+      };
+    }
+
+    // ── Quick Pulse UI State ──
+
+    const qpState = {
+      currentQuestion: 0,
+      answers: {},
+      result: null
+    };
+
+    const qpOverlay = document.getElementById("qpOverlay");
+    const qpCloseBtn = document.getElementById("qpClose");
+    const qpIntroScreen = document.getElementById("qpIntroScreen");
+    const qpQuestionScreen = document.getElementById("qpQuestionScreen");
+    const qpCalcScreen = document.getElementById("qpCalcScreen");
+    const qpResultsScreen = document.getElementById("qpResultsScreen");
+
+    const qpStartBtn = document.getElementById("qpStartBtn");
+    const qpBackToModes = document.getElementById("qpBackToModes");
+    const qpBack = document.getElementById("qpBack");
+    const qpNext = document.getElementById("qpNext");
+    const qpPrompt = document.getElementById("qpPrompt");
+    const qpOptions = document.getElementById("qpOptions");
+    const qpQuestionCounter = document.getElementById("qpQuestionCounter");
+    const qpProgressPct = document.getElementById("qpProgressPct");
+    const qpProgressFill = document.getElementById("qpProgressFill");
+
+    function qpShowScreen(screen) {
+      [qpIntroScreen, qpQuestionScreen, qpCalcScreen, qpResultsScreen].forEach(s => s.classList.remove("is-active"));
+      screen.classList.add("is-active");
+    }
+
+    function qpOpen() {
+      qpOverlay.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+
+      // Populate intro from module data
+      document.getElementById("qpIntroHeadline").textContent = qpModuleData.intro.headline;
+      document.getElementById("qpIntroBody").textContent = qpModuleData.intro.body;
+      const bulletsEl = document.getElementById("qpIntroBullets");
+      bulletsEl.innerHTML = qpModuleData.intro.bullets.map(b => `<span class="pill">${b}</span>`).join("");
+
+      qpShowScreen(qpIntroScreen);
+    }
+
+    function qpClose() {
+      qpOverlay.classList.remove("is-open");
+      document.body.style.overflow = "";
+    }
+
+    function qpReset() {
+      qpState.currentQuestion = 0;
+      qpState.answers = {};
+      qpState.result = null;
+    }
+
+    function qpRenderQuestion() {
+      const q = qpModuleData.questions[qpState.currentQuestion];
+      const total = qpModuleData.questions.length;
+      const num = qpState.currentQuestion + 1;
+      const pct = Math.round((num / total) * 100);
+
+      qpQuestionCounter.textContent = `Question ${num} of ${total}`;
+      qpProgressPct.textContent = `${pct}%`;
+      qpProgressFill.style.width = `${pct}%`;
+
+      qpPrompt.textContent = q.prompt;
+
+      const selectedId = qpState.answers[q.id] || null;
+      qpOptions.innerHTML = q.options.map(opt => {
+        const selected = opt.id === selectedId ? " is-selected" : "";
+        return `<button class="qp-option${selected}" data-option-id="${opt.id}" role="radio" aria-checked="${opt.id === selectedId}">${opt.label}</button>`;
+      }).join("");
+
+      [...qpOptions.querySelectorAll(".qp-option")].forEach(btn => {
+        btn.addEventListener("click", () => {
+          qpState.answers[q.id] = btn.dataset.optionId;
+          qpRenderQuestion();
+        });
+      });
+
+      qpNext.disabled = !selectedId;
+
+      const isLast = qpState.currentQuestion === total - 1;
+      qpNext.textContent = isLast ? "See My Results" : "Next";
+      qpBack.style.visibility = qpState.currentQuestion === 0 ? "hidden" : "visible";
+    }
+
+    // ── Results Radar (standalone for results view) ──
+
+    function qpBuildResultsRadar(scores) {
+      const svg = document.getElementById("qpRadarSvg");
+      const domainKeys = qpModuleData.domains.map(d => d.key);
+      const radius = 160;
+      const count = domainKeys.length;
+
+      function polar(index, value) {
+        const angle = ((-90 + index * (360 / count)) * Math.PI) / 180;
+        const scaled = radius * (value / 100);
+        return { x: Math.cos(angle) * scaled, y: Math.sin(angle) * scaled };
+      }
+
+      function polyPoints(values) {
+        return values.map((v, i) => {
+          const p = polar(i, Math.min(100, v));
+          return `${p.x.toFixed(2)},${p.y.toFixed(2)}`;
+        }).join(" ");
+      }
+
+      const ringScales = [1, 0.8, 0.6, 0.4, 0.2];
+      const ringsHtml = ringScales.map(s => {
+        const pts = polyPoints(domainKeys.map(() => s * 100));
+        return `<polygon fill="none" stroke="rgba(212,175,55,0.14)" stroke-width="1" points="${pts}"/>`;
+      }).join("");
+
+      const axesHtml = domainKeys.map((_, i) => {
+        const p = polar(i, 100);
+        return `<line x1="0" y1="0" x2="${p.x}" y2="${p.y}" stroke="rgba(212,175,55,0.24)" stroke-width="1"/>`;
+      }).join("");
+
+      const labelsHtml = domainKeys.map((key, i) => {
+        const p = polar(i, 118);
+        const label = qpDomainLabel(key);
+        const anchor = Math.abs(p.x) < 10 ? "middle" : p.x > 0 ? "start" : "end";
+        return `<text x="${p.x}" y="${p.y}" fill="#bcb4a3" font-size="11" text-anchor="${anchor}" dominant-baseline="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">${label}</text>`;
+      }).join("");
+
+      const values = domainKeys.map(k => scores[k] || 20);
+      const shapePoints = polyPoints(values);
+      const glowPoints = polyPoints(values.map(v => Math.min(100, v * 1.08)));
+
+      const dotsHtml = domainKeys.map((k, i) => {
+        const p = polar(i, scores[k] || 20);
+        return `<circle cx="${p.x}" cy="${p.y}" r="5" fill="#f3dd91" stroke="rgba(13,13,13,0.8)" stroke-width="2" filter="url(#qpDotGlow)"/>`;
+      }).join("");
+
+      svg.innerHTML = `
+        <defs><filter id="qpDotGlow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+        ${ringsHtml}
+        ${axesHtml}
+        <polygon fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.22)" stroke-width="2" points="${glowPoints}"/>
+        <polygon fill="rgba(212,175,55,0.14)" stroke="rgba(239,211,104,0.92)" stroke-width="2" points="${shapePoints}"/>
+        ${dotsHtml}
+        ${labelsHtml}
+      `;
+    }
+
+    // ── Render Results ──
+
+    function qpRenderResults(result) {
+      // Archetype
+      const archEl = document.getElementById("qpArchetypeResult");
+      archEl.innerHTML = `
+        <span class="archetype-tag">${result.archetype.label}</span>
+        <h3>${result.archetype.label}</h3>
+        <p>${result.archetype.description}</p>
+        <p class="qp-archetype-confidence">Confidence: ${Math.round(result.archetype.confidence * 100)}%</p>
+      `;
+
+      // Radar
+      qpBuildResultsRadar(result.scores);
+
+      // Domain list
+      const domainListEl = document.getElementById("qpDomainList");
+      const domainKeys = qpModuleData.domains.map(d => d.key);
+      domainListEl.innerHTML = domainKeys.map(key => {
+        const score = result.scores[key];
+        const level = result.levels[key];
+        return `
+          <div class="qp-domain-row">
+            <div class="qp-domain-head">
+              <span class="qp-domain-name">${qpDomainLabel(key)}</span>
+              <span><span class="qp-domain-score">${score}</span> <span class="qp-domain-level">${level}</span></span>
+            </div>
+            <div class="qp-domain-bar"><div class="qp-domain-fill" style="width:${score}%"></div></div>
+          </div>
+        `;
+      }).join("");
+
+      // Strengths
+      const strengthsEl = document.getElementById("qpStrengthsList");
+      strengthsEl.innerHTML = result.top_strengths.map(key => {
+        return `<div class="qp-sg-item qp-strength-item">${qpDomainLabel(key)} — ${result.scores[key]} (${result.levels[key]})</div>`;
+      }).join("");
+
+      // Growth
+      const growthEl = document.getElementById("qpGrowthList");
+      growthEl.innerHTML = result.growth_domains.map(key => {
+        return `<div class="qp-sg-item qp-growth-item">${qpDomainLabel(key)} — ${result.scores[key]} (${result.levels[key]})</div>`;
+      }).join("");
+
+      // Balance
+      const balanceEl = document.getElementById("qpBalanceRow");
+      const balanceDesc = result.balance_index >= 75
+        ? "Strong breadth with manageable gaps."
+        : result.balance_index >= 55
+          ? "Moderate asymmetry with meaningful upside."
+          : "Significant specialization — focused development will help.";
+      balanceEl.innerHTML = `
+        <div class="qp-balance-number">${result.balance_index}</div>
+        <div class="qp-balance-info">
+          <h4>Balance Index</h4>
+          <p>${balanceDesc}</p>
+        </div>
+      `;
+
+      // Modules
+      const modulesEl = document.getElementById("qpModules");
+      const moduleCards = result.recommended_modules.map((mod, i) => {
+        const domainKey = result.growth_domains[i];
+        return `
+          <div class="qp-module-card">
+            <div class="qp-module-num">${i + 1}</div>
+            <div class="qp-module-info">
+              <span class="qp-module-name">${mod}</span>
+              <span class="qp-module-domain">${qpDomainLabel(domainKey)}</span>
+            </div>
+          </div>
+        `;
+      }).join("");
+      modulesEl.innerHTML = `<h4>Recommended Starter Modules</h4>${moduleCards}`;
+    }
+
+    // ── Wire results into main page dashboard ──
+
+    function qpApplyToMainPage(result) {
+      // Build a profile object in the format the existing page expects
+      const profile = {};
+      qpModuleData.domains.forEach(d => {
+        profile[d.label] = result.scores[d.key];
+      });
+
+      // Update the quick assessment data with real scores
+      assessments.quick.profile = profile;
+      assessments.quick.archetype = result.archetype.key;
+      assessments.quick.archetypeDisplay = result.archetype.label.replace("The ", "");
+
+      // Build growth items from result
+      assessments.quick.growth = result.growth_domains.map((domainKey, i) => ({
+        meta: `Priority 0${i + 1} \u2022 ${qpDomainLabel(domainKey)}`,
+        title: result.recommended_modules[i],
+        copy: `Strengthen your ${qpDomainLabel(domainKey).toLowerCase()} to build a more balanced Renaissance profile.`,
+        foot: `Starter module \u2022 ${qpDomainLabel(domainKey)}`
+      }));
+
+      // Update path based on growth domains
+      assessments.quick.path = result.growth_domains.map((domainKey, i) => ({
+        phase: `Phase ${["I","II","III","IV"][i] || (i + 1)}`,
+        title: `Develop ${qpDomainLabel(domainKey).toLowerCase()}`,
+        copy: `Focus on ${result.recommended_modules[i]} to raise your ${qpDomainLabel(domainKey).toLowerCase()} from ${result.levels[domainKey]} toward Functional or Strong.`,
+        foot: `Targets ${qpDomainLabel(domainKey)} domain`
+      }));
+
+      // Re-apply to refresh hero, dashboard, etc.
+      applyAssessment("quick");
+    }
+
+    // ── localStorage Persistence ──
+
+    const QP_STORAGE_KEY = "renaissance_quick_pulse_result";
+
+    function qpSaveResult(result) {
+      try {
+        localStorage.setItem(QP_STORAGE_KEY, JSON.stringify(result));
+      } catch (e) { /* storage full or unavailable */ }
+    }
+
+    function qpLoadResult() {
+      try {
+        const stored = localStorage.getItem(QP_STORAGE_KEY);
+        return stored ? JSON.parse(stored) : null;
+      } catch (e) { return null; }
+    }
+
+    // ── Event Wiring ──
+
+    qpCloseBtn.addEventListener("click", qpClose);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && qpOverlay.classList.contains("is-open")) qpClose();
+    });
+
+    qpBackToModes.addEventListener("click", qpClose);
+
+    qpStartBtn.addEventListener("click", () => {
+      qpReset();
+      qpShowScreen(qpQuestionScreen);
+      qpRenderQuestion();
+    });
+
+    qpBack.addEventListener("click", () => {
+      if (qpState.currentQuestion > 0) {
+        qpState.currentQuestion--;
+        qpRenderQuestion();
+      }
+    });
+
+    qpNext.addEventListener("click", () => {
+      const q = qpModuleData.questions[qpState.currentQuestion];
+      if (!qpState.answers[q.id]) return;
+
+      if (qpState.currentQuestion < qpModuleData.questions.length - 1) {
+        qpState.currentQuestion++;
+        qpRenderQuestion();
+      } else {
+        // Submit — show calculating then results
+        qpShowScreen(qpCalcScreen);
+        setTimeout(() => {
+          const responses = Object.entries(qpState.answers).map(([qid, oid]) => ({
+            question_id: qid,
+            option_id: oid
+          }));
+          const result = qpComputeFullResult(responses);
+          qpState.result = result;
+
+          qpSaveResult(result);
+          qpRenderResults(result);
+          qpApplyToMainPage(result);
+          qpShowScreen(qpResultsScreen);
+        }, 900);
+      }
+    });
+
+    // View Development Path — close overlay and scroll to dashboard
+    document.getElementById("qpViewDev").addEventListener("click", () => {
+      qpClose();
+      smoothScrollTo("#development");
+    });
+
+    // Retake
+    document.getElementById("qpRetake").addEventListener("click", () => {
+      qpReset();
+      qpShowScreen(qpQuestionScreen);
+      qpRenderQuestion();
+    });
+
+    // Hook into existing page buttons to open Quick Pulse
+    function hookQuickPulseTriggers() {
+      // "Start Your Personalized Assessment" hero button
+      const heroBtn = document.getElementById("heroAssessmentButton");
+      heroBtn.addEventListener("click", () => {
+        qpOpen();
+      });
+
+      // Quick Pulse "Select Method" button
+      assessmentButtons.forEach(btn => {
+        if (btn.dataset.assessment === "quick") {
+          btn.addEventListener("click", () => {
+            qpOpen();
+          });
+        }
+      });
+    }
+
+    hookQuickPulseTriggers();
+
+    // Restore previous result on load
+    (function qpRestoreOnLoad() {
+      const saved = qpLoadResult();
+      if (saved && saved.scores) {
+        qpState.result = saved;
+        qpApplyToMainPage(saved);
+      }
+    })();
   </script>
 </body>
 </html>
