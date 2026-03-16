@@ -1,0 +1,2477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renaissance Skills</title>
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --bg-deep: #090909;
+      --panel: rgba(22, 21, 18, 0.88);
+      --gold: #d4af37;
+      --gold-strong: #b5952f;
+      --text: #e6e6e6;
+      --muted: #bcb4a3;
+      --muted-strong: #8c8577;
+      --border: rgba(212, 175, 55, 0.2);
+      --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+      --heading-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --body-font: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      --container: min(1180px, calc(100vw - 2rem));
+      --nav-height: 78px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: auto;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: var(--body-font);
+      background:
+        radial-gradient(circle at top, rgba(212, 175, 55, 0.09), transparent 28%),
+        radial-gradient(circle at 20% 15%, rgba(212, 175, 55, 0.06), transparent 24%),
+        linear-gradient(180deg, var(--bg-deep) 0%, var(--bg) 40%, #0f0e0a 100%);
+      min-height: 100vh;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::before {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: radial-gradient(circle at center, black 46%, transparent 100%);
+      opacity: 0.18;
+    }
+
+    body::after {
+      background:
+        radial-gradient(circle at 50% 12%, rgba(212, 175, 55, 0.08), transparent 24%),
+        radial-gradient(circle at 80% 40%, rgba(212, 175, 55, 0.04), transparent 22%),
+        radial-gradient(circle at 18% 60%, rgba(212, 175, 55, 0.04), transparent 18%);
+      animation: ambientShift 18s linear infinite alternate;
+      opacity: 0.8;
+    }
+
+    @keyframes ambientShift {
+      from {
+        transform: translateY(0) scale(1);
+      }
+      to {
+        transform: translateY(-24px) scale(1.03);
+      }
+    }
+
+    ::selection {
+      background: rgba(212, 175, 55, 0.28);
+      color: var(--text);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: 0;
+      background: none;
+      color: inherit;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    main,
+    header,
+    footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      width: var(--container);
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 6.5rem 0;
+      position: relative;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.16), transparent);
+      opacity: 0.7;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 36px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: var(--heading-font);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 5.7rem);
+      line-height: 0.98;
+    }
+
+    h2 {
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      line-height: 1.05;
+    }
+
+    h3 {
+      font-size: clamp(1.35rem, 2vw, 1.9rem);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .lede {
+      font-size: 1.06rem;
+      color: var(--muted);
+      max-width: 70ch;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.025);
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .pill::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 16px rgba(212, 175, 55, 0.8);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(34px);
+      transition: opacity 0.85s ease, transform 0.85s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(180deg, rgba(9, 9, 9, 0.9), rgba(9, 9, 9, 0.56));
+      border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+    }
+
+    .nav {
+      min-height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-family: var(--heading-font);
+      letter-spacing: 0.06em;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      position: relative;
+      background:
+        radial-gradient(circle at center, rgba(212, 175, 55, 0.15), transparent 60%),
+        linear-gradient(145deg, rgba(212, 175, 55, 0.1), rgba(255, 255, 255, 0.02));
+      box-shadow: inset 0 0 22px rgba(212, 175, 55, 0.08), 0 0 30px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+    }
+
+    .brand-mark::before,
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+    }
+
+    .brand-mark::before {
+      width: 72%;
+      height: 72%;
+    }
+
+    .brand-mark::after {
+      width: 32%;
+      height: 32%;
+      background: rgba(212, 175, 55, 0.2);
+      box-shadow: 0 0 18px rgba(212, 175, 55, 0.6);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.25rem;
+    }
+
+    .nav-link {
+      position: relative;
+      color: var(--muted);
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding-bottom: 0.3rem;
+      transition: color 0.25s ease;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      transform: scaleX(0.25);
+      transform-origin: center;
+      opacity: 0;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible,
+    .nav-link.is-active {
+      color: var(--text);
+    }
+
+    .nav-link:hover::after,
+    .nav-link:focus-visible::after,
+    .nav-link.is-active::after {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+
+    .nav-cta {
+      padding: 0.78rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.18), rgba(212, 175, 55, 0.05));
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-cta:hover,
+    .nav-cta:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.38), 0 0 24px rgba(212, 175, 55, 0.18);
+    }
+
+    .hero {
+      padding-top: 4.5rem;
+      padding-bottom: 5.5rem;
+    }
+
+    .hero-shell {
+      display: grid;
+      gap: 2.3rem;
+      align-items: center;
+    }
+
+    .hero-copy {
+      max-width: 940px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-copy p {
+      margin-inline: auto;
+      max-width: 64ch;
+    }
+
+    .hero-actions {
+      margin-top: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-button,
+    .ghost-button,
+    .assessment-button,
+    .copy-button,
+    .tab-button {
+      border-radius: 999px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .hero-button {
+      padding: 1rem 1.5rem;
+      background: linear-gradient(135deg, var(--gold), var(--gold-strong));
+      color: #14110a;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.38), 0 0 28px rgba(212, 175, 55, 0.2);
+    }
+
+    .hero-button:hover,
+    .hero-button:focus-visible,
+    .assessment-button:hover,
+    .assessment-button:focus-visible,
+    .copy-button:hover,
+    .copy-button:focus-visible,
+    .tab-button:hover,
+    .tab-button:focus-visible {
+      transform: translateY(-2px);
+    }
+
+    .ghost-button {
+      padding: 0.95rem 1.35rem;
+      border: 1px solid rgba(212, 175, 55, 0.24);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+    }
+
+    .hero-stage {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      padding: 2.2rem 0 0;
+    }
+
+    .orbit-panel {
+      position: relative;
+      padding: clamp(1rem, 2vw, 2rem);
+      border-radius: 38px;
+      border: 1px solid rgba(212, 175, 55, 0.16);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015)),
+        radial-gradient(circle at top, rgba(212, 175, 55, 0.08), transparent 36%),
+        rgba(17, 15, 12, 0.88);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .orbit-panel::before,
+    .orbit-panel::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .orbit-panel::before {
+      width: 480px;
+      height: 480px;
+      inset: -120px auto auto -120px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.12), transparent 66%);
+      filter: blur(14px);
+      opacity: 0.7;
+    }
+
+    .orbit-panel::after {
+      width: 420px;
+      height: 420px;
+      inset: auto -140px -160px auto;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.08), transparent 70%);
+      filter: blur(20px);
+      opacity: 0.55;
+    }
+
+    .orbit-grid {
+      display: grid;
+      gap: 1.6rem;
+    }
+
+    .hero-orbit {
+      width: min(100%, 760px);
+      aspect-ratio: 1 / 1;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .hero-orbit::before,
+    .hero-orbit::after {
+      content: "";
+      position: absolute;
+      inset: 14%;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.14);
+      pointer-events: none;
+    }
+
+    .hero-orbit::after {
+      inset: 20%;
+      border-style: dashed;
+      opacity: 0.55;
+      animation: slowPulse 8s ease-in-out infinite;
+    }
+
+    @keyframes slowPulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.4;
+      }
+      50% {
+        transform: scale(1.03);
+        opacity: 0.82;
+      }
+    }
+
+    .orbit-rings {
+      position: absolute;
+      inset: 8%;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at center, rgba(212, 175, 55, 0.06), transparent 48%),
+        radial-gradient(circle at center, transparent 43%, rgba(212, 175, 55, 0.08) 44%, transparent 45%),
+        radial-gradient(circle at center, transparent 56%, rgba(212, 175, 55, 0.06) 57%, transparent 58%),
+        radial-gradient(circle at center, transparent 69%, rgba(212, 175, 55, 0.05) 70%, transparent 71%);
+      pointer-events: none;
+    }
+
+    .orbit-rings::before {
+      content: "";
+      position: absolute;
+      inset: 6%;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      box-shadow: 0 0 60px rgba(212, 175, 55, 0.08), inset 0 0 40px rgba(212, 175, 55, 0.06);
+      animation: ringRotate 26s linear infinite;
+    }
+
+    @keyframes ringRotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .radar-svg {
+      position: absolute;
+      inset: 12%;
+      overflow: visible;
+      filter: drop-shadow(0 0 24px rgba(212, 175, 55, 0.16));
+      pointer-events: none;
+    }
+
+    .radar-axis,
+    .radar-ring-line {
+      fill: none;
+      stroke: rgba(212, 175, 55, 0.24);
+      stroke-width: 1;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .radar-ring-line {
+      stroke: rgba(212, 175, 55, 0.14);
+    }
+
+    .radar-glow {
+      fill: rgba(212, 175, 55, 0.08);
+      stroke: rgba(212, 175, 55, 0.22);
+      stroke-width: 2;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .radar-shape {
+      fill: rgba(212, 175, 55, 0.14);
+      stroke: rgba(239, 211, 104, 0.92);
+      stroke-width: 2;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .radar-dot {
+      fill: #f3dd91;
+      stroke: rgba(13, 13, 13, 0.8);
+      stroke-width: 2;
+      transition: transform 0.2s ease, r 0.2s ease, filter 0.2s ease;
+      transform-origin: center;
+      filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.45));
+    }
+
+    .radar-dot.is-active {
+      r: 8;
+      filter: drop-shadow(0 0 14px rgba(212, 175, 55, 0.85));
+    }
+
+    .figure-shell {
+      position: absolute;
+      inset: 26%;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.02), transparent 56%),
+        radial-gradient(circle at center, rgba(212, 175, 55, 0.1), transparent 74%);
+      box-shadow:
+        inset 0 0 0 1px rgba(212, 175, 55, 0.1),
+        0 0 34px rgba(212, 175, 55, 0.12);
+      display: grid;
+      place-items: center;
+      pointer-events: none;
+    }
+
+    .figure-shell::before {
+      content: "";
+      position: absolute;
+      inset: 10%;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.14);
+    }
+
+    .vitruvian {
+      width: 54%;
+      height: 54%;
+      opacity: 0.72;
+    }
+
+    .skill-layer {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+    }
+
+    .skill-node {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      min-width: 128px;
+      padding: 0.7rem 0.9rem;
+      display: grid;
+      gap: 0.18rem;
+      border-radius: 18px;
+      border: 1px solid rgba(212, 175, 55, 0.16);
+      background: rgba(12, 11, 9, 0.72);
+      color: var(--muted);
+      text-align: left;
+      box-shadow: 0 14px 26px rgba(0, 0, 0, 0.22);
+      backdrop-filter: blur(12px);
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, color 0.22s ease;
+    }
+
+    .skill-node span:first-child {
+      font-size: 0.86rem;
+      letter-spacing: 0.04em;
+    }
+
+    .skill-node .skill-score {
+      color: var(--text);
+      font-family: var(--heading-font);
+      font-size: 1.05rem;
+    }
+
+    .skill-node:hover,
+    .skill-node:focus-visible,
+    .skill-node.is-active {
+      color: var(--text);
+      transform: translate(-50%, -50%) scale(1.05);
+      border-color: rgba(239, 211, 104, 0.5);
+      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28), 0 0 34px rgba(212, 175, 55, 0.12);
+    }
+
+    .skill-node::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.76);
+      box-shadow: 0 0 16px rgba(212, 175, 55, 0.6);
+      position: absolute;
+      top: 0.85rem;
+      right: 0.9rem;
+    }
+
+    .hero-dashboard {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .dashboard-card,
+    .assessment-card,
+    .console-card,
+    .archetype-card,
+    .spotlight-card,
+    .summary-card,
+    .growth-card,
+    .timeline-card,
+    .about-card,
+    .future-card {
+      border-radius: 26px;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+        var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .dashboard-card {
+      padding: 1.2rem 1.3rem;
+      display: grid;
+      gap: 0.45rem;
+      min-height: 122px;
+    }
+
+    .dashboard-card strong {
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .dashboard-card span {
+      font-family: var(--heading-font);
+      font-size: clamp(1.55rem, 3vw, 2rem);
+    }
+
+    .dashboard-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .section-head {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 2.4rem;
+    }
+
+    .section-head .lede {
+      max-width: 62ch;
+    }
+
+    .assessment-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .assessment-card {
+      position: relative;
+      padding: 1.5rem;
+      display: grid;
+      gap: 1rem;
+      overflow: hidden;
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .assessment-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -20% -40% auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.15), transparent 68%);
+      filter: blur(10px);
+      opacity: 0.55;
+    }
+
+    .assessment-card:hover,
+    .assessment-card:focus-within,
+    .assessment-card.is-selected {
+      transform: translateY(-4px);
+      border-color: rgba(239, 211, 104, 0.42);
+      box-shadow: 0 24px 44px rgba(0, 0, 0, 0.35), 0 0 36px rgba(212, 175, 55, 0.1);
+    }
+
+    .assessment-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .assessment-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      background: linear-gradient(145deg, rgba(212, 175, 55, 0.12), rgba(255, 255, 255, 0.02));
+      color: #f0de9b;
+      box-shadow: inset 0 0 18px rgba(212, 175, 55, 0.08);
+    }
+
+    .assessment-meta {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.73rem;
+    }
+
+    .assessment-copy {
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .assessment-copy p {
+      color: var(--muted);
+    }
+
+    .assessment-list {
+      display: grid;
+      gap: 0.5rem;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .assessment-list div {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .assessment-list div::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.75);
+      box-shadow: 0 0 14px rgba(212, 175, 55, 0.42);
+    }
+
+    .assessment-button {
+      justify-self: start;
+      padding: 0.78rem 1.1rem;
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .assessment-button.is-active {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.07));
+      border-color: rgba(239, 211, 104, 0.45);
+    }
+
+    .assessment-console {
+      margin-top: 1.6rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      gap: 1.2rem;
+      align-items: stretch;
+    }
+
+    .console-card,
+    .summary-card,
+    .spotlight-card,
+    .about-card,
+    .future-card {
+      padding: 1.5rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .console-card h3,
+    .summary-card h3,
+    .spotlight-card h3,
+    .about-card h3,
+    .future-card h3 {
+      font-size: 1.3rem;
+    }
+
+    .console-kicker {
+      color: var(--muted);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.76rem;
+    }
+
+    .console-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    .console-stat {
+      padding: 0.9rem 1rem;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(212, 175, 55, 0.12);
+      display: grid;
+      gap: 0.28rem;
+    }
+
+    .console-stat strong {
+      font-size: 1.45rem;
+      font-family: var(--heading-font);
+    }
+
+    .console-stat span {
+      color: var(--muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .prompt-panel {
+      display: grid;
+      gap: 0.85rem;
+      align-content: start;
+    }
+
+    .prompt-panel textarea {
+      width: 100%;
+      min-height: 260px;
+      border-radius: 20px;
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      background: rgba(0, 0, 0, 0.26);
+      color: var(--text);
+      padding: 1rem;
+      resize: vertical;
+      box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .copy-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .copy-button {
+      padding: 0.78rem 1.1rem;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.84rem;
+    }
+
+    .copy-status {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .archetype-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .archetype-card {
+      padding: 1.35rem;
+      display: grid;
+      gap: 0.85rem;
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+      cursor: pointer;
+    }
+
+    .archetype-card:hover,
+    .archetype-card:focus-visible,
+    .archetype-card.is-active {
+      transform: translateY(-4px);
+      border-color: rgba(239, 211, 104, 0.42);
+      box-shadow: 0 22px 38px rgba(0, 0, 0, 0.32), 0 0 30px rgba(212, 175, 55, 0.1);
+    }
+
+    .archetype-tag {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      padding: 0.42rem 0.72rem;
+      border-radius: 999px;
+      background: rgba(212, 175, 55, 0.12);
+      color: #efd368;
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .archetype-desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .archetype-score {
+      margin-top: auto;
+      color: var(--text);
+      font-size: 0.92rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .spotlight-shell {
+      margin-top: 1.2rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    .spotlight-card small {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.72rem;
+    }
+
+    .spotlight-card strong {
+      font-family: var(--heading-font);
+      font-size: 1.2rem;
+    }
+
+    .dashboard-shell {
+      display: grid;
+      grid-template-columns: minmax(290px, 0.86fr) minmax(0, 1.14fr);
+      gap: 1.2rem;
+      align-items: start;
+    }
+
+    .summary-card {
+      position: sticky;
+      top: calc(var(--nav-height) + 1rem);
+    }
+
+    .balance-value {
+      font-family: var(--heading-font);
+      font-size: clamp(3.1rem, 8vw, 4.5rem);
+      line-height: 0.92;
+    }
+
+    .scorebars {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .scorebar {
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .scorebar-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .scorebar-track {
+      height: 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, 0.08);
+    }
+
+    .scorebar-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.9));
+      box-shadow: 0 0 18px rgba(212, 175, 55, 0.22);
+    }
+
+    .weakness-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .weakness-chip {
+      padding: 0.55rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .dashboard-main {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .tab-row {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .tab-button {
+      padding: 0.88rem 1.15rem;
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      background: rgba(255, 255, 255, 0.025);
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+    }
+
+    .tab-button.is-active {
+      color: #14110a;
+      background: linear-gradient(135deg, #e2c869, var(--gold));
+      border-color: rgba(239, 211, 104, 0.48);
+    }
+
+    .panel-stack {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .panel {
+      display: none;
+    }
+
+    .panel.is-active {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .growth-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .growth-card,
+    .timeline-card {
+      padding: 1.3rem;
+      display: grid;
+      gap: 0.75rem;
+      min-height: 230px;
+    }
+
+    .growth-meta,
+    .timeline-phase {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.72rem;
+    }
+
+    .growth-card p,
+    .timeline-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .growth-foot,
+    .timeline-foot {
+      margin-top: auto;
+      color: #efd368;
+      font-size: 0.88rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .timeline-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .timeline-card {
+      position: relative;
+      grid-template-columns: 92px 1fr;
+      align-items: start;
+      min-height: unset;
+    }
+
+    .timeline-card::before {
+      content: "";
+      position: absolute;
+      left: 45px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, rgba(212, 175, 55, 0.35), rgba(212, 175, 55, 0.03));
+      opacity: 0.8;
+    }
+
+    .timeline-index {
+      position: relative;
+      z-index: 1;
+      width: 92px;
+      display: grid;
+      justify-items: center;
+      gap: 0.45rem;
+    }
+
+    .timeline-index strong {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, rgba(212, 175, 55, 0.22), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      color: #efd368;
+      font-family: var(--heading-font);
+      box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.08);
+    }
+
+    .timeline-content {
+      display: grid;
+      gap: 0.72rem;
+    }
+
+    .future-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .future-card {
+      min-height: 210px;
+      align-content: start;
+    }
+
+    .future-card .placeholder {
+      margin-top: auto;
+      padding: 0.9rem 1rem;
+      border-radius: 18px;
+      border: 1px dashed rgba(212, 175, 55, 0.26);
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .about-card p {
+      color: var(--muted);
+    }
+
+    .about-card ul {
+      margin: 0;
+      padding-left: 1.2rem;
+      color: var(--muted);
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    footer {
+      padding: 1.5rem 0 3rem;
+      color: var(--muted-strong);
+      font-size: 0.88rem;
+    }
+
+    .footer-row {
+      border-top: 1px solid rgba(212, 175, 55, 0.12);
+      padding-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1100px) {
+      .assessment-grid,
+      .archetype-grid,
+      .about-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .dashboard-shell,
+      .assessment-console {
+        grid-template-columns: 1fr;
+      }
+
+      .summary-card {
+        position: relative;
+        top: auto;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        padding-top: 3.5rem;
+      }
+
+      .hero-dashboard,
+      .spotlight-shell,
+      .future-grid,
+      .growth-grid,
+      .console-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .assessment-grid,
+      .archetype-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-orbit {
+        width: min(100%, 660px);
+      }
+
+      .skill-node {
+        min-width: 108px;
+        padding: 0.55rem 0.78rem;
+      }
+
+      .timeline-card {
+        grid-template-columns: 70px 1fr;
+      }
+
+      .timeline-card::before {
+        left: 33px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      :root {
+        --container: min(100vw - 1.2rem, 100%);
+      }
+
+      .nav {
+        padding: 0.8rem 0;
+        justify-content: center;
+      }
+
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .section {
+        padding: 5rem 0;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-button,
+      .ghost-button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-orbit {
+        aspect-ratio: auto;
+        min-height: 640px;
+      }
+
+      .orbit-rings,
+      .radar-svg,
+      .figure-shell {
+        inset: 16% 9% 24%;
+      }
+
+      .skill-node {
+        min-width: 112px;
+      }
+
+      .timeline-card {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-card::before,
+      .timeline-index {
+        display: none;
+      }
+
+      .copy-row {
+        align-items: start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Renaissance Skills</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#assessment">Assessment</a>
+        <a class="nav-link" href="#development">Development</a>
+        <a class="nav-link" href="#about">About</a>
+      </nav>
+      <button class="nav-cta" data-scroll-target="#assessment">Enter Assessment</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section hero" id="home">
+      <div class="container hero-shell">
+        <div class="hero-copy reveal">
+          <div class="pill">The Rebirth of the Renaissance Man</div>
+          <div class="eyebrow">Assessment Platform</div>
+          <h1>Map the mind you have. Build the synthesis the future rewards.</h1>
+          <p class="lede">
+            Renaissance Skills turns scattered strengths into a visible operating system. Profile your cross-domain
+            fluency, see where over-specialization leaves you fragile, and train toward a balanced, AI-resilient skill graph.
+          </p>
+          <div class="hero-actions">
+            <button class="hero-button" id="heroAssessmentButton">Start Your Personalized Assessment</button>
+            <a class="ghost-button" href="#archetypes" data-scroll-target="#archetypes">Explore the Archetypes</a>
+          </div>
+        </div>
+
+        <div class="hero-stage reveal">
+          <div class="orbit-panel">
+            <div class="orbit-grid">
+              <div class="hero-orbit">
+                <div class="orbit-rings" aria-hidden="true"></div>
+                <svg class="radar-svg" viewBox="-190 -190 380 380" aria-hidden="true">
+                  <g id="radarRings"></g>
+                  <g id="radarAxes"></g>
+                  <polygon id="radarGlow" class="radar-glow" points=""></polygon>
+                  <polygon id="radarShape" class="radar-shape" points=""></polygon>
+                  <g id="radarDots"></g>
+                </svg>
+
+                <div class="figure-shell" aria-hidden="true">
+                  <svg class="vitruvian" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="36" r="16" stroke="rgba(212,175,55,0.55)" stroke-width="2"/>
+                    <circle cx="100" cy="100" r="74" stroke="rgba(212,175,55,0.2)" stroke-width="2"/>
+                    <rect x="36" y="36" width="128" height="128" stroke="rgba(212,175,55,0.16)" stroke-width="2"/>
+                    <path d="M100 52V118M68 78L100 95L132 78M62 124L100 118L138 124M82 118L72 156M118 118L128 156" stroke="rgba(239,211,104,0.74)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M100 62L50 88M100 62L150 88M100 70L38 124M100 70L162 124" stroke="rgba(212,175,55,0.46)" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+
+                <div class="skill-layer" id="skillLayer" aria-label="Skill domains"></div>
+              </div>
+
+              <div class="hero-dashboard">
+                <div class="dashboard-card">
+                  <strong>Current Method</strong>
+                  <span id="heroMethod">The Quick Pulse</span>
+                  <p id="heroMethodCopy">Rapid onboarding for fast baseline visibility.</p>
+                </div>
+                <div class="dashboard-card">
+                  <strong>Recommended Archetype</strong>
+                  <span id="heroArchetype">The Strategist</span>
+                  <p id="heroArchetypeCopy">Strong systems thinking with clear growth edges in data fluency.</p>
+                </div>
+                <div class="dashboard-card">
+                  <strong>Live Domain Insight</strong>
+                  <span id="heroInsightTitle">Data Analysis</span>
+                  <p id="heroInsightCopy">A low-signal zone that should be elevated to support stronger decision quality.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="assessment">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Tri-Modal Assessment</div>
+          <h2>Choose the depth, privacy model, and speed that matches your context.</h2>
+          <p class="lede">
+            Each pathway produces a Renaissance profile, identifies weak domains, and feeds a tailored development sequence.
+            The difference is how much evidence you want and how you want to supply it.
+          </p>
+        </div>
+
+        <div class="assessment-grid">
+          <article class="assessment-card reveal" data-assessment-card="quick">
+            <div class="assessment-top">
+              <div class="assessment-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 3V12L18 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="assessment-meta">10 Questions • 3 Minutes</div>
+            </div>
+            <div class="assessment-copy">
+              <h3>The Quick Pulse</h3>
+              <p>Immediate onboarding for users who want a fast directional profile and actionable next steps.</p>
+            </div>
+            <div class="assessment-list">
+              <div>Rapid multiple-choice baseline</div>
+              <div>Best for first-time exploration</div>
+              <div>Instantly recommends a growth focus</div>
+            </div>
+            <button class="assessment-button" data-assessment="quick">Select Method</button>
+          </article>
+
+          <article class="assessment-card reveal" data-assessment-card="deep">
+            <div class="assessment-top">
+              <div class="assessment-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 4.5H19V19.5H5V4.5Z" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M8 8H16M8 12H16M8 16H13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="assessment-meta">Scenario-Based • High Accuracy</div>
+            </div>
+            <div class="assessment-copy">
+              <h3>The Deep Dive</h3>
+              <p>Detailed evaluation for users who want richer signal, stronger archetype precision, and nuanced blind-spot mapping.</p>
+            </div>
+            <div class="assessment-list">
+              <div>Multi-scenario reasoning prompts</div>
+              <div>Higher confidence archetype assignment</div>
+              <div>Sharper curriculum sequencing</div>
+            </div>
+            <button class="assessment-button" data-assessment="deep">Select Method</button>
+          </article>
+
+          <article class="assessment-card reveal" data-assessment-card="mirror">
+            <div class="assessment-top">
+              <div class="assessment-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 3C8 3 4.5 6 4.5 10C4.5 13.1 6.7 15.8 9.7 16.7L10.3 21L14 17.4H14.2C18.5 17.4 21.5 14.2 21.5 10C21.5 6 18 3 14 3H12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M8 9H16M8 12H14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="assessment-meta">Private LLM Workflow</div>
+            </div>
+            <div class="assessment-copy">
+              <h3>The LLM Mirror</h3>
+              <p>Generate a privacy-preserving prompt for a local LLM to infer your skill distribution from your own conversations.</p>
+            </div>
+            <div class="assessment-list">
+              <div>No chat history sent to the platform</div>
+              <div>Paste back only the summary output</div>
+              <div>Designed for synthesis from real behavior</div>
+            </div>
+            <button class="assessment-button" data-assessment="mirror">Select Method</button>
+          </article>
+        </div>
+
+        <div class="assessment-console reveal">
+          <section class="console-card" aria-live="polite">
+            <div class="console-kicker">Assessment Preview</div>
+            <h3 id="consoleTitle">The Quick Pulse</h3>
+            <p id="consoleDescription">
+              Rapid onboarding for professionals who want a crisp baseline of strengths, imbalances, and immediate growth priorities.
+            </p>
+            <div class="console-stats">
+              <div class="console-stat">
+                <strong id="consoleDuration">03</strong>
+                <span>Minutes</span>
+              </div>
+              <div class="console-stat">
+                <strong id="consoleConfidence">Directional</strong>
+                <span>Signal Type</span>
+              </div>
+              <div class="console-stat">
+                <strong id="consoleArchetype">Strategist</strong>
+                <span>Likely Archetype</span>
+              </div>
+            </div>
+            <div class="pill" id="consoleSummaryPill">Immediate baseline with fast calibration.</div>
+          </section>
+
+          <section class="console-card prompt-panel" aria-live="polite">
+            <div class="console-kicker">Private LLM Generator</div>
+            <h3 id="promptTitle">Preview Output</h3>
+            <p id="promptDescription">
+              Select “The LLM Mirror” to generate a prompt that can be pasted into your own local model for a privacy-first synthesis.
+            </p>
+            <textarea id="mirrorPrompt" readonly>Choose The LLM Mirror to generate your prompt.</textarea>
+            <div class="copy-row">
+              <button class="copy-button" id="copyPromptButton">Copy Prompt</button>
+              <span class="copy-status" id="copyStatus">Prompt updates when The LLM Mirror is selected.</span>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="archetypes">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Archetype Profiling</div>
+          <h2>Four dominant operating modes for how broad capability turns into action.</h2>
+          <p class="lede">
+            Archetypes do not lock a user into identity. They simply name the strongest visible pattern so the platform can
+            counterbalance it with deliberate synthesis training.
+          </p>
+        </div>
+
+        <div class="archetype-grid">
+          <button class="archetype-card reveal" data-archetype="polymath">
+            <span class="archetype-tag">The Polymath</span>
+            <h3>The Polymath</h3>
+            <p class="archetype-desc">Broad conceptual reach with unusually strong pattern transfer across domains.</p>
+            <div class="archetype-score">High breadth • Strategic synthesis</div>
+          </button>
+
+          <button class="archetype-card reveal" data-archetype="strategist">
+            <span class="archetype-tag">The Strategist</span>
+            <h3>The Strategist</h3>
+            <p class="archetype-desc">Sees systems, allocates effort well, and connects decisions to long-range leverage.</p>
+            <div class="archetype-score">High foresight • Scenario fluency</div>
+          </button>
+
+          <button class="archetype-card reveal" data-archetype="builder">
+            <span class="archetype-tag">The Builder</span>
+            <h3>The Builder</h3>
+            <p class="archetype-desc">Execution-heavy profile with strong technical momentum and tangible output capacity.</p>
+            <div class="archetype-score">High execution • Technical force</div>
+          </button>
+
+          <button class="archetype-card reveal" data-archetype="leader">
+            <span class="archetype-tag">The Leader</span>
+            <h3>The Leader</h3>
+            <p class="archetype-desc">Coordinates people, meaning, and adaptation under uncertainty with unusual clarity.</p>
+            <div class="archetype-score">High influence • Adaptive range</div>
+          </button>
+        </div>
+
+        <div class="spotlight-shell reveal" aria-live="polite">
+          <section class="spotlight-card">
+            <small>Archetype Spotlight</small>
+            <h3 id="spotlightTitle">The Strategist</h3>
+            <p id="spotlightDescription">
+              Designs coherent paths through complexity and naturally links decisions to second-order effects.
+            </p>
+          </section>
+          <section class="spotlight-card">
+            <small>Signature Strength</small>
+            <strong id="spotlightStrength">Systems pattern recognition</strong>
+            <p id="spotlightStrengthCopy">Excels at seeing how distinct domains influence one another before others notice the connection.</p>
+          </section>
+          <section class="spotlight-card">
+            <small>Balancing Move</small>
+            <strong id="spotlightBalance">Increase technical and data fluency</strong>
+            <p id="spotlightBalanceCopy">Without stronger evidence handling, strategic insight risks remaining abstract rather than operational.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="development">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Development & Curriculum</div>
+          <h2>Translate the assessment into targeted growth and a sequenced synthesis roadmap.</h2>
+          <p class="lede">
+            The dashboard below simulates what users see after profiling: weak areas become visible, micro-courses are prioritized,
+            and a cross-domain order of operations turns breadth into durable capability.
+          </p>
+        </div>
+
+        <div class="dashboard-shell">
+          <aside class="summary-card reveal" aria-live="polite">
+            <div class="console-kicker">Post-Assessment Dashboard</div>
+            <h3 id="summaryTitle">Quick Pulse Summary</h3>
+            <p id="summaryCopy">A fast readout focused on giving you the shortest path from imbalance to functional breadth.</p>
+            <div class="balance-value" id="balanceValue">68</div>
+            <div class="pill" id="balancePill">Balance Index • Moderate asymmetry with high upside</div>
+            <div class="scorebars" id="scorebars"></div>
+            <div>
+              <div class="console-kicker">Priority Domains</div>
+              <div class="weakness-list" id="weaknessList"></div>
+            </div>
+          </aside>
+
+          <div class="dashboard-main">
+            <div class="tab-row reveal">
+              <button class="tab-button is-active" data-tab="growth">Targeted Growth</button>
+              <button class="tab-button" data-tab="path">AI-Optimized Synthesis Path</button>
+            </div>
+
+            <div class="panel-stack">
+              <section class="panel is-active reveal" id="growthPanel" aria-live="polite">
+                <div class="growth-grid" id="growthGrid"></div>
+              </section>
+
+              <section class="panel reveal" id="pathPanel" aria-live="polite">
+                <div class="timeline-grid" id="timelineGrid"></div>
+              </section>
+            </div>
+
+            <div class="future-grid reveal">
+              <section class="future-card">
+                <div class="console-kicker">Recommended Reading</div>
+                <h3 id="readingTitle">Foundational Inputs</h3>
+                <p id="readingCopy">Curated books and essays will surface here to reinforce weak domains and deepen cross-domain reasoning.</p>
+                <div class="placeholder" id="readingPlaceholder">Placeholder: systems thinking, history, broad sciences, and decision-making texts.</div>
+              </section>
+              <section class="future-card">
+                <div class="console-kicker">1-on-1 Coaching</div>
+                <h3 id="coachingTitle">Coaching Layer</h3>
+                <p id="coachingCopy">A future premium layer for guided accountability, curriculum pacing, and synthesis coaching.</p>
+                <div class="placeholder" id="coachingPlaceholder">Placeholder: book a coaching session once expert matching is enabled.</div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">About The Platform</div>
+          <h2>Built on the belief that AI rewards orchestration more than narrow repetition.</h2>
+          <p class="lede">
+            The industrial logic of specialization produced immense efficiency. The AI era changes the winning profile:
+            users who can connect abstractions, systems, people, and tools become disproportionately valuable.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <section class="about-card reveal">
+            <h3>Product Thesis</h3>
+            <p>
+              Renaissance Skills is designed to expose lopsided development early, translate it into a living skill graph, and
+              make weak-domain training feel as concrete as professional upskilling in a single discipline.
+            </p>
+          </section>
+          <section class="about-card reveal">
+            <h3>Who It Serves</h3>
+            <ul>
+              <li>Specialists exposed to automation risk</li>
+              <li>Students building resilient, non-fragile career profiles</li>
+              <li>Generalists who want a more formal synthesis framework</li>
+            </ul>
+          </section>
+          <section class="about-card reveal">
+            <h3>Phase Two</h3>
+            <ul>
+              <li>Affiliate reading layers and foundational libraries</li>
+              <li>Coaching integrations and accountability loops</li>
+              <li>Expanded diagnostics for longitudinal growth tracking</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>Renaissance Skills prototype</span>
+      <span>Single-file vanilla HTML, CSS, and JavaScript</span>
+    </div>
+  </footer>
+
+  <script>
+    const assessments = {
+      quick: {
+        title: "The Quick Pulse",
+        shortTitle: "Quick Pulse",
+        duration: "03",
+        signal: "Directional",
+        archetype: "strategist",
+        archetypeDisplay: "Strategist",
+        summary: "Immediate baseline with fast calibration.",
+        description: "Rapid onboarding for professionals who want a crisp baseline of strengths, imbalances, and immediate growth priorities.",
+        heroCopy: "Rapid onboarding for fast baseline visibility.",
+        profile: {
+          "Leadership": 64,
+          "Creativity": 72,
+          "Strategy": 79,
+          "Tech Proficiency": 55,
+          "Problem Solving": 82,
+          "Critical Thinking": 76,
+          "Adaptability": 69,
+          "Data Analysis": 52
+        },
+        growth: [
+          {
+            meta: "Priority 01 • Data Analysis",
+            title: "Evidence Before Intuition",
+            copy: "Translate qualitative judgment into measurable signals, simple experiments, and repeatable decision criteria.",
+            foot: "4 micro-lessons • 90 minutes"
+          },
+          {
+            meta: "Priority 02 • Tech Proficiency",
+            title: "Tool Fluency for Non-Specialists",
+            copy: "Build the technical literacy needed to collaborate with AI systems, automation tools, and product teams.",
+            foot: "5 micro-lessons • 2 hours"
+          },
+          {
+            meta: "Priority 03 • Adaptability",
+            title: "Operating in Unfinished Environments",
+            copy: "Learn how to change plans quickly without losing strategic coherence when evidence shifts.",
+            foot: "3 scenarios • 70 minutes"
+          },
+          {
+            meta: "Priority 04 • Leadership",
+            title: "Influence Through Clarity",
+            copy: "Strengthen narrative framing so strategic insight can move teams rather than remain personally obvious.",
+            foot: "4 exercises • 80 minutes"
+          }
+        ],
+        path: [
+          {
+            phase: "Phase I",
+            title: "Stabilize the weakest evidence systems",
+            copy: "Begin with data literacy so interpretation, prioritization, and tradeoffs are grounded in more than instinct.",
+            foot: "Unlocks stronger strategic calibration"
+          },
+          {
+            phase: "Phase II",
+            title: "Add technical interface fluency",
+            copy: "Learn enough tools and workflows to turn judgment into implementation leverage across product and AI environments.",
+            foot: "Converts insight into execution"
+          },
+          {
+            phase: "Phase III",
+            title: "Stress-test adaptability under change",
+            copy: "Use short simulations to practice decision updates when constraints, inputs, or goals shift unexpectedly.",
+            foot: "Builds resilient response range"
+          },
+          {
+            phase: "Phase IV",
+            title: "Elevate communication and influence",
+            copy: "Close the loop by expressing synthesis in a way that can align collaborators, stakeholders, and teams.",
+            foot: "Turns private clarity into collective movement"
+          }
+        ],
+        reading: "Placeholder: practical statistics, systems thinking, product judgment, and adaptive decision-making.",
+        coaching: "Placeholder: a coach would help convert strategy into consistent weekly execution."
+      },
+      deep: {
+        title: "The Deep Dive",
+        shortTitle: "Deep Dive",
+        duration: "18",
+        signal: "High Fidelity",
+        archetype: "polymath",
+        archetypeDisplay: "Polymath",
+        summary: "Scenario-based assessment with richer confidence.",
+        description: "Detailed evaluation for users who want stronger archetype precision, more nuanced blind-spot mapping, and a more deliberate growth sequence.",
+        heroCopy: "Detailed mapping with higher-confidence profiling.",
+        profile: {
+          "Leadership": 76,
+          "Creativity": 85,
+          "Strategy": 88,
+          "Tech Proficiency": 69,
+          "Problem Solving": 90,
+          "Critical Thinking": 84,
+          "Adaptability": 80,
+          "Data Analysis": 66
+        },
+        growth: [
+          {
+            meta: "Priority 01 • Tech Proficiency",
+            title: "From Conceptual Range to Build Capacity",
+            copy: "Extend conceptual intelligence into direct technical execution so synthesis can materialize faster.",
+            foot: "6 micro-lessons • 2.5 hours"
+          },
+          {
+            meta: "Priority 02 • Data Analysis",
+            title: "Quantitative Backbone",
+            copy: "Sharpen numerical reasoning so broad insight is supported by rigorous evidence handling and experiment design.",
+            foot: "4 labs • 2 hours"
+          },
+          {
+            meta: "Priority 03 • Leadership",
+            title: "Lead Through Translation",
+            copy: "Convert cross-domain complexity into shared language that helps others move with confidence.",
+            foot: "3 case studies • 75 minutes"
+          },
+          {
+            meta: "Priority 04 • Focus Discipline",
+            title: "Selective Depth Drills",
+            copy: "Practice going narrow on demand without losing the broad perspective that defines the profile.",
+            foot: "5 exercises • 95 minutes"
+          }
+        ],
+        path: [
+          {
+            phase: "Phase I",
+            title: "Increase technical embodiment",
+            copy: "Reinforce technical build skills first so wide-ranging cognition gains a faster path to concrete artifacts.",
+            foot: "Prevents abstraction bottlenecks"
+          },
+          {
+            phase: "Phase II",
+            title: "Add quantitative rigor",
+            copy: "Introduce stronger analytics to create a firmer bridge between synthesis, evidence, and prioritization.",
+            foot: "Improves confidence under complexity"
+          },
+          {
+            phase: "Phase III",
+            title: "Practice translation for teams",
+            copy: "Focus on turning multi-domain insights into clear framing for collaborators with narrower vantage points.",
+            foot: "Broadens impact radius"
+          },
+          {
+            phase: "Phase IV",
+            title: "Alternate breadth with deliberate depth",
+            copy: "Use periodic depth sprints to ensure range remains paired with tactical credibility.",
+            foot: "Creates a more durable Polymath profile"
+          }
+        ],
+        reading: "Placeholder: systems theory, broad science, history of technology, and quantitative reasoning.",
+        coaching: "Placeholder: a coach would help convert broad capability into a sharper operating cadence."
+      },
+      mirror: {
+        title: "The LLM Mirror",
+        shortTitle: "LLM Mirror",
+        duration: "Private",
+        signal: "Behavioral",
+        archetype: "leader",
+        archetypeDisplay: "Leader",
+        summary: "Privacy-first synthesis from your own conversational history.",
+        description: "Generate a prompt for a local LLM, paste in your own chat history privately, and return only the summarized profile to produce a skill graph.",
+        heroCopy: "Private synthesis from real conversational behavior.",
+        profile: {
+          "Leadership": 82,
+          "Creativity": 73,
+          "Strategy": 75,
+          "Tech Proficiency": 63,
+          "Problem Solving": 71,
+          "Critical Thinking": 78,
+          "Adaptability": 89,
+          "Data Analysis": 58
+        },
+        growth: [
+          {
+            meta: "Priority 01 • Data Analysis",
+            title: "Make Adaptation Measurable",
+            copy: "Pair situational flexibility with evidence handling so pivots are guided by data rather than solely by instinct.",
+            foot: "4 labs • 85 minutes"
+          },
+          {
+            meta: "Priority 02 • Tech Proficiency",
+            title: "Operational Tool Literacy",
+            copy: "Strengthen the ability to use technical systems directly when coordinating people, work, and AI-supported processes.",
+            foot: "5 modules • 2 hours"
+          },
+          {
+            meta: "Priority 03 • Strategic Framing",
+            title: "From Adaptation to Architecture",
+            copy: "Turn high responsiveness into more explicit strategic models and clearer sequencing decisions.",
+            foot: "3 frameworks • 75 minutes"
+          },
+          {
+            meta: "Priority 04 • Creativity",
+            title: "Creative Expansion Sessions",
+            copy: "Stretch imaginative range so leadership and adaptability produce more surprising, high-upside solution spaces.",
+            foot: "4 prompts • 60 minutes"
+          }
+        ],
+        path: [
+          {
+            phase: "Phase I",
+            title: "Ground judgment in stronger evidence",
+            copy: "Start by increasing quantitative fluency so highly adaptive decisions have a stronger signal base.",
+            foot: "Stabilizes rapid pivots"
+          },
+          {
+            phase: "Phase II",
+            title: "Expand technical touchpoints",
+            copy: "Develop enough direct technical literacy to operate with less dependence on translation layers.",
+            foot: "Improves execution autonomy"
+          },
+          {
+            phase: "Phase III",
+            title: "Strengthen strategic architecture",
+            copy: "Formalize how goals, constraints, and tradeoffs are structured so leadership becomes more reproducible.",
+            foot: "Makes instinct legible"
+          },
+          {
+            phase: "Phase IV",
+            title: "Broaden idea generation",
+            copy: "Add creative drills that increase range and allow leadership to steer toward more original outcomes.",
+            foot: "Completes the synthesis loop"
+          }
+        ],
+        reading: "Placeholder: decision science, measurement, communication under uncertainty, and creative strategy.",
+        coaching: "Placeholder: a coach would help convert adaptive leadership into a disciplined skill graph."
+      }
+    };
+
+    const archetypes = {
+      polymath: {
+        title: "The Polymath",
+        description: "Builds unusual insight by carrying meaningful fluency across multiple disciplines at once.",
+        strength: "Cross-domain pattern transfer",
+        strengthCopy: "Quickly spots structural similarities between ideas, industries, and systems that appear unrelated on the surface.",
+        balance: "Practice selective technical depth",
+        balanceCopy: "Breadth becomes more defensible when at least one execution-heavy domain can anchor the synthesis."
+      },
+      strategist: {
+        title: "The Strategist",
+        description: "Designs coherent paths through complexity and naturally links decisions to second-order effects.",
+        strength: "Systems pattern recognition",
+        strengthCopy: "Excels at seeing how distinct domains influence one another before others notice the connection.",
+        balance: "Increase technical and data fluency",
+        balanceCopy: "Without stronger evidence handling, strategic insight risks remaining abstract rather than operational."
+      },
+      builder: {
+        title: "The Builder",
+        description: "Moves from idea to artifact quickly and tends to learn through making rather than pure abstraction.",
+        strength: "Execution momentum",
+        strengthCopy: "Creates tangible progress rapidly and can transform conceptual ambiguity into working systems.",
+        balance: "Expand historical and strategic range",
+        balanceCopy: "Execution improves when grounded in broader context, longer time horizons, and higher-level synthesis."
+      },
+      leader: {
+        title: "The Leader",
+        description: "Coordinates people, priorities, and adaptation with high social signal and strong situational response.",
+        strength: "Influence under uncertainty",
+        strengthCopy: "Maintains coherence across moving constraints and can mobilize others even when the environment remains fluid.",
+        balance: "Deepen evidence-backed reasoning",
+        balanceCopy: "Leadership compounds when paired with stronger data, sharper models, and more deliberate technical literacy."
+      }
+    };
+
+    const skillOrder = [
+      "Leadership",
+      "Creativity",
+      "Strategy",
+      "Tech Proficiency",
+      "Problem Solving",
+      "Critical Thinking",
+      "Adaptability",
+      "Data Analysis"
+    ];
+
+    const skillDescriptions = {
+      "Leadership": "Your ability to align people, frame direction, and convert insight into coordinated movement.",
+      "Creativity": "The range and originality of ideas you can generate when the problem is ambiguous or underdefined.",
+      "Strategy": "How well you design long-range paths, sequence tradeoffs, and identify leverage in complex systems.",
+      "Tech Proficiency": "Your practical fluency with tools, digital systems, and technical workflows that amplify capability.",
+      "Problem Solving": "Your strength in decomposing complexity, locating constraints, and producing workable solutions.",
+      "Critical Thinking": "The rigor of your reasoning, including skepticism, evidence handling, and logical coherence.",
+      "Adaptability": "Your ability to update behavior, plans, and assumptions as environments change.",
+      "Data Analysis": "Your capacity to interpret evidence, quantify uncertainty, and ground decisions in signal rather than narrative."
+    };
+
+    const state = {
+      assessment: "quick",
+      tab: "growth",
+      spotlight: "strategist",
+      pinnedSkill: "Data Analysis"
+    };
+
+    const navLinks = [...document.querySelectorAll(".nav-link")];
+    const assessmentButtons = [...document.querySelectorAll("[data-assessment]")];
+    const assessmentCards = [...document.querySelectorAll("[data-assessment-card]")];
+    const archetypeCards = [...document.querySelectorAll("[data-archetype]")];
+    const tabButtons = [...document.querySelectorAll("[data-tab]")];
+    const skillLayer = document.getElementById("skillLayer");
+    const radarRings = document.getElementById("radarRings");
+    const radarAxes = document.getElementById("radarAxes");
+    const radarShape = document.getElementById("radarShape");
+    const radarGlow = document.getElementById("radarGlow");
+    const radarDots = document.getElementById("radarDots");
+
+    const heroMethod = document.getElementById("heroMethod");
+    const heroMethodCopy = document.getElementById("heroMethodCopy");
+    const heroArchetype = document.getElementById("heroArchetype");
+    const heroArchetypeCopy = document.getElementById("heroArchetypeCopy");
+    const heroInsightTitle = document.getElementById("heroInsightTitle");
+    const heroInsightCopy = document.getElementById("heroInsightCopy");
+
+    const consoleTitle = document.getElementById("consoleTitle");
+    const consoleDescription = document.getElementById("consoleDescription");
+    const consoleDuration = document.getElementById("consoleDuration");
+    const consoleConfidence = document.getElementById("consoleConfidence");
+    const consoleArchetype = document.getElementById("consoleArchetype");
+    const consoleSummaryPill = document.getElementById("consoleSummaryPill");
+
+    const promptTitle = document.getElementById("promptTitle");
+    const promptDescription = document.getElementById("promptDescription");
+    const mirrorPrompt = document.getElementById("mirrorPrompt");
+    const copyPromptButton = document.getElementById("copyPromptButton");
+    const copyStatus = document.getElementById("copyStatus");
+
+    const spotlightTitle = document.getElementById("spotlightTitle");
+    const spotlightDescription = document.getElementById("spotlightDescription");
+    const spotlightStrength = document.getElementById("spotlightStrength");
+    const spotlightStrengthCopy = document.getElementById("spotlightStrengthCopy");
+    const spotlightBalance = document.getElementById("spotlightBalance");
+    const spotlightBalanceCopy = document.getElementById("spotlightBalanceCopy");
+
+    const summaryTitle = document.getElementById("summaryTitle");
+    const summaryCopy = document.getElementById("summaryCopy");
+    const balanceValue = document.getElementById("balanceValue");
+    const balancePill = document.getElementById("balancePill");
+    const scorebars = document.getElementById("scorebars");
+    const weaknessList = document.getElementById("weaknessList");
+    const growthGrid = document.getElementById("growthGrid");
+    const timelineGrid = document.getElementById("timelineGrid");
+    const growthPanel = document.getElementById("growthPanel");
+    const pathPanel = document.getElementById("pathPanel");
+    const readingTitle = document.getElementById("readingTitle");
+    const readingCopy = document.getElementById("readingCopy");
+    const readingPlaceholder = document.getElementById("readingPlaceholder");
+    const coachingTitle = document.getElementById("coachingTitle");
+    const coachingCopy = document.getElementById("coachingCopy");
+    const coachingPlaceholder = document.getElementById("coachingPlaceholder");
+
+    const scrollTargets = [...document.querySelectorAll("[data-scroll-target], .nav-link")];
+
+    function buildRadarScaffold() {
+      const ringScales = [1, 0.8, 0.6, 0.4, 0.2];
+      radarRings.innerHTML = ringScales.map((scale) => {
+        return `<polygon class="radar-ring-line" points="${polygonPoints(skillOrder.map(() => scale * 100))}"></polygon>`;
+      }).join("");
+
+      radarAxes.innerHTML = skillOrder.map((_, index) => {
+        const point = polarPoint(index, 100);
+        return `<line class="radar-axis" x1="0" y1="0" x2="${point.x}" y2="${point.y}"></line>`;
+      }).join("");
+    }
+
+    function polarPoint(index, value) {
+      const radius = 160;
+      const angle = ((-90 + index * (360 / skillOrder.length)) * Math.PI) / 180;
+      const scaled = radius * (value / 100);
+      return {
+        x: Math.cos(angle) * scaled,
+        y: Math.sin(angle) * scaled
+      };
+    }
+
+    function polygonPoints(values, expand = 1) {
+      return values.map((value, index) => {
+        const point = polarPoint(index, Math.min(100, value * expand));
+        return `${point.x.toFixed(2)},${point.y.toFixed(2)}`;
+      }).join(" ");
+    }
+
+    function getCurrentAssessment() {
+      return assessments[state.assessment];
+    }
+
+    function getWeakestDomains(profile, count = 3) {
+      return Object.entries(profile)
+        .sort((a, b) => a[1] - b[1])
+        .slice(0, count)
+        .map(([name]) => name);
+    }
+
+    function getBalanceIndex(profile) {
+      const values = Object.values(profile);
+      const average = values.reduce((sum, value) => sum + value, 0) / values.length;
+      const spread = Math.max(...values) - Math.min(...values);
+      return Math.max(0, Math.round(average - spread * 0.25));
+    }
+
+    function renderSkillNodes() {
+      const assessment = getCurrentAssessment();
+      const nodes = skillOrder.map((skill, index) => {
+        const angle = (-90 + index * 45) * (Math.PI / 180);
+        const mobileRadius = window.innerWidth < 641 ? 40 : 42;
+        const x = 50 + Math.cos(angle) * mobileRadius;
+        const y = 50 + Math.sin(angle) * mobileRadius;
+        const value = assessment.profile[skill];
+        return `
+          <button
+            class="skill-node${state.pinnedSkill === skill ? " is-active" : ""}"
+            data-skill="${skill}"
+            style="left:${x}%; top:${y}%"
+            aria-label="${skill}: ${value} out of 100"
+          >
+            <span>${skill}</span>
+            <span class="skill-score">${value}</span>
+          </button>
+        `;
+      }).join("");
+
+      skillLayer.innerHTML = nodes;
+
+      [...skillLayer.querySelectorAll(".skill-node")].forEach((node) => {
+        const skill = node.dataset.skill;
+        node.addEventListener("mouseenter", () => setActiveSkill(skill, true));
+        node.addEventListener("focus", () => setActiveSkill(skill, true));
+        node.addEventListener("mouseleave", () => setActiveSkill(state.pinnedSkill, true));
+        node.addEventListener("blur", () => setActiveSkill(state.pinnedSkill, true));
+        node.addEventListener("click", () => setActiveSkill(skill, false));
+      });
+    }
+
+    function renderRadar() {
+      const assessment = getCurrentAssessment();
+      const values = skillOrder.map((skill) => assessment.profile[skill]);
+      radarShape.setAttribute("points", polygonPoints(values));
+      radarGlow.setAttribute("points", polygonPoints(values, 1.08));
+
+      radarDots.innerHTML = skillOrder.map((skill, index) => {
+        const point = polarPoint(index, assessment.profile[skill]);
+        const activeClass = skill === state.pinnedSkill ? "radar-dot is-active" : "radar-dot";
+        return `<circle class="${activeClass}" data-dot="${skill}" cx="${point.x}" cy="${point.y}" r="5.8"></circle>`;
+      }).join("");
+    }
+
+    function setActiveSkill(skill, temporary) {
+      const assessment = getCurrentAssessment();
+      const value = assessment.profile[skill];
+      if (!temporary) {
+        state.pinnedSkill = skill;
+      }
+
+      heroInsightTitle.textContent = skill;
+      heroInsightCopy.textContent = `${skillDescriptions[skill]} Current score: ${value}/100.`;
+
+      [...document.querySelectorAll(".skill-node")].forEach((node) => {
+        node.classList.toggle("is-active", node.dataset.skill === skill);
+      });
+
+      [...document.querySelectorAll("[data-dot]")].forEach((dot) => {
+        dot.classList.toggle("is-active", dot.dataset.dot === skill);
+      });
+    }
+
+    function updateHero() {
+      const assessment = getCurrentAssessment();
+      heroMethod.textContent = assessment.title;
+      heroMethodCopy.textContent = assessment.heroCopy;
+      heroArchetype.textContent = archetypes[assessment.archetype].title;
+      heroArchetypeCopy.textContent = assessment.description;
+      if (!assessment.profile[state.pinnedSkill]) {
+        state.pinnedSkill = getWeakestDomains(assessment.profile, 1)[0];
+      }
+      renderSkillNodes();
+      renderRadar();
+      setActiveSkill(state.pinnedSkill, true);
+    }
+
+    function updateAssessmentSection() {
+      const assessment = getCurrentAssessment();
+
+      assessmentCards.forEach((card) => {
+        card.classList.toggle("is-selected", card.dataset.assessmentCard === state.assessment);
+      });
+
+      assessmentButtons.forEach((button) => {
+        button.classList.toggle("is-active", button.dataset.assessment === state.assessment);
+        button.textContent = button.dataset.assessment === state.assessment ? "Selected" : "Select Method";
+      });
+
+      consoleTitle.textContent = assessment.title;
+      consoleDescription.textContent = assessment.description;
+      consoleDuration.textContent = assessment.duration;
+      consoleConfidence.textContent = assessment.signal;
+      consoleArchetype.textContent = assessment.archetypeDisplay;
+      consoleSummaryPill.textContent = assessment.summary;
+
+      if (state.assessment === "mirror") {
+        promptTitle.textContent = "LLM Mirror Prompt";
+        promptDescription.textContent = "Paste this into your private local LLM, along with your own chat history or notes, then return only the summary output to the platform.";
+        mirrorPrompt.value = buildMirrorPrompt();
+        copyStatus.textContent = "Ready to copy into your private local model.";
+      } else {
+        promptTitle.textContent = "Preview Output";
+        promptDescription.textContent = "Select “The LLM Mirror” to generate a prompt that can be pasted into your own local model for a privacy-first synthesis.";
+        mirrorPrompt.value = "Choose The LLM Mirror to generate your prompt.";
+        copyStatus.textContent = "Prompt updates when The LLM Mirror is selected.";
+      }
+    }
+
+    function buildMirrorPrompt() {
+      return [
+        "You are evaluating my cross-domain skill distribution for a platform called Renaissance Skills.",
+        "Use the chat history or notes I provide as evidence. Do not flatter or generalize without signal.",
+        "",
+        "Rate me from 0 to 100 in these eight domains:",
+        "1. Leadership",
+        "2. Creativity",
+        "3. Strategy",
+        "4. Tech Proficiency",
+        "5. Problem Solving",
+        "6. Critical Thinking",
+        "7. Adaptability",
+        "8. Data Analysis",
+        "",
+        "Then return:",
+        "- A one-sentence summary of my overall profile",
+        "- A likely archetype from: The Polymath, The Strategist, The Builder, The Leader",
+        "- My top three strongest domains with brief evidence",
+        "- My three weakest domains with brief evidence",
+        "- A recommended learning sequence to make my profile more well-rounded",
+        "",
+        "Output format:",
+        "{",
+        '  "summary": "...",',
+        '  "archetype": "...",',
+        '  "strengths": [{"domain":"...","score":0,"evidence":"..."}],',
+        '  "weaknesses": [{"domain":"...","score":0,"evidence":"..."}],',
+        '  "learning_sequence": ["...", "...", "...", "..."]',
+        "}"
+      ].join("\n");
+    }
+
+    function updateSpotlight(archetypeKey) {
+      state.spotlight = archetypeKey;
+      const info = archetypes[archetypeKey];
+
+      spotlightTitle.textContent = info.title;
+      spotlightDescription.textContent = info.description;
+      spotlightStrength.textContent = info.strength;
+      spotlightStrengthCopy.textContent = info.strengthCopy;
+      spotlightBalance.textContent = info.balance;
+      spotlightBalanceCopy.textContent = info.balanceCopy;
+
+      archetypeCards.forEach((card) => {
+        card.classList.toggle("is-active", card.dataset.archetype === archetypeKey);
+      });
+    }
+
+    function renderSummary() {
+      const assessment = getCurrentAssessment();
+      const balance = getBalanceIndex(assessment.profile);
+      const weakest = getWeakestDomains(assessment.profile);
+
+      summaryTitle.textContent = `${assessment.shortTitle} Summary`;
+      summaryCopy.textContent = assessment.description;
+      balanceValue.textContent = balance;
+      balancePill.textContent = `Balance Index • ${balance >= 75 ? "Strong breadth with manageable gaps" : "Moderate asymmetry with high upside"}`;
+
+      const strongest = [...skillOrder].sort((a, b) => assessment.profile[b] - assessment.profile[a])[0];
+      const highlightedSkills = [...weakest, strongest].slice(0, 4);
+
+      scorebars.innerHTML = highlightedSkills.map((skill) => {
+        const value = assessment.profile[skill];
+        return `
+          <div class="scorebar">
+            <div class="scorebar-head">
+              <span>${skill}</span>
+              <strong>${value}</strong>
+            </div>
+            <div class="scorebar-track">
+              <div class="scorebar-fill" style="width:${value}%"></div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      weaknessList.innerHTML = weakest.map((skill) => `<span class="weakness-chip">${skill}</span>`).join("");
+
+      growthGrid.innerHTML = assessment.growth.map((item) => {
+        return `
+          <article class="growth-card">
+            <div class="growth-meta">${item.meta}</div>
+            <h3>${item.title}</h3>
+            <p>${item.copy}</p>
+            <div class="growth-foot">${item.foot}</div>
+          </article>
+        `;
+      }).join("");
+
+      timelineGrid.innerHTML = assessment.path.map((item, index) => {
+        return `
+          <article class="timeline-card">
+            <div class="timeline-index">
+              <strong>0${index + 1}</strong>
+              <span class="timeline-phase">${item.phase}</span>
+            </div>
+            <div class="timeline-content">
+              <h3>${item.title}</h3>
+              <p>${item.copy}</p>
+              <div class="timeline-foot">${item.foot}</div>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      readingTitle.textContent = "Recommended Reading";
+      readingCopy.textContent = "Foundational books and essays will reinforce your weakest domains while increasing synthesis range.";
+      readingPlaceholder.textContent = assessment.reading;
+      coachingTitle.textContent = "Book a Coaching Session";
+      coachingCopy.textContent = "Future coaching helps users turn assessment signal into weekly execution, accountability, and reflection.";
+      coachingPlaceholder.textContent = assessment.coaching;
+    }
+
+    function updateTabUI() {
+      tabButtons.forEach((button) => {
+        button.classList.toggle("is-active", button.dataset.tab === state.tab);
+      });
+
+      growthPanel.classList.toggle("is-active", state.tab === "growth");
+      pathPanel.classList.toggle("is-active", state.tab === "path");
+    }
+
+    function applyAssessment(key) {
+      state.assessment = key;
+      state.pinnedSkill = getWeakestDomains(assessments[key].profile, 1)[0];
+      updateHero();
+      updateAssessmentSection();
+      updateSpotlight(assessments[key].archetype);
+      renderSummary();
+      updateTabUI();
+    }
+
+    function smoothScrollTo(selector) {
+      const target = document.querySelector(selector);
+      if (!target) {
+        return;
+      }
+      const top = target.getBoundingClientRect().top + window.scrollY - 84;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+
+    scrollTargets.forEach((element) => {
+      element.addEventListener("click", (event) => {
+        const targetSelector = element.dataset.scrollTarget || element.getAttribute("href");
+        if (!targetSelector || !targetSelector.startsWith("#")) {
+          return;
+        }
+        event.preventDefault();
+        smoothScrollTo(targetSelector);
+      });
+    });
+
+    document.getElementById("heroAssessmentButton").addEventListener("click", () => {
+      smoothScrollTo("#assessment");
+    });
+
+    assessmentButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        applyAssessment(button.dataset.assessment);
+      });
+    });
+
+    archetypeCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        updateSpotlight(card.dataset.archetype);
+      });
+    });
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        state.tab = button.dataset.tab;
+        updateTabUI();
+      });
+    });
+
+    copyPromptButton.addEventListener("click", async () => {
+      if (state.assessment !== "mirror") {
+        copyStatus.textContent = "Select The LLM Mirror before copying.";
+        return;
+      }
+
+      try {
+        await navigator.clipboard.writeText(mirrorPrompt.value);
+        copyStatus.textContent = "Prompt copied. Paste it into your private local model.";
+      } catch (error) {
+        mirrorPrompt.select();
+        document.execCommand("copy");
+        copyStatus.textContent = "Prompt copied using the fallback copy method.";
+      }
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.18
+    });
+
+    document.querySelectorAll(".reveal").forEach((element) => {
+      revealObserver.observe(element);
+    });
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+        navLinks.forEach((link) => {
+          link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
+        });
+      });
+    }, {
+      rootMargin: "-45% 0px -45% 0px",
+      threshold: 0
+    });
+
+    ["home", "assessment", "development", "about"].forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) {
+        sectionObserver.observe(section);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      renderSkillNodes();
+      renderRadar();
+      setActiveSkill(state.pinnedSkill, true);
+    });
+
+    buildRadarScaffold();
+    applyAssessment("quick");
+  </script>
+</body>
+</html>
