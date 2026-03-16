@@ -438,49 +438,26 @@
       z-index: 2;
     }
 
-    .hero-figure-circle {
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      border: 2px solid rgba(212, 175, 55, 0.3);
-      box-shadow:
-        0 0 80px rgba(212, 175, 55, 0.08),
-        inset 0 0 60px rgba(212, 175, 55, 0.06);
-    }
-
-    .hero-figure-circle::before {
-      content: "";
-      position: absolute;
-      inset: 8%;
-      border-radius: 50%;
-      border: 1px solid rgba(212, 175, 55, 0.15);
-    }
-
-    .hero-figure-circle::after {
-      content: "";
-      position: absolute;
-      inset: -6%;
-      border-radius: 50%;
-      border: 1px solid rgba(212, 175, 55, 0.08);
-      animation: slowPulse 8s ease-in-out infinite;
-    }
-
+    .hero-figure-circle,
     .hero-figure-square {
-      position: absolute;
-      inset: 8%;
-      border: 1px solid rgba(212, 175, 55, 0.18);
+      display: none; /* Image artwork includes its own circle/square framing */
     }
 
     .hero-figure-svg {
       position: absolute;
-      inset: 10%;
+      inset: 0;
       z-index: 1;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border-radius: 50%;
     }
 
-    .hero-figure-svg svg {
-      width: 100%;
-      height: 100%;
-      filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.15));
+    .hero-vitruvian-img {
+      width: 110%;
+      height: 110%;
+      object-fit: cover;
+      filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.25));
     }
 
     /* Radar overlay on figure */
@@ -565,19 +542,26 @@
       height: clamp(80px, 10vw, 120px);
       margin: 0 auto 0.5rem;
       border-radius: 50%;
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      background:
-        radial-gradient(circle at center, rgba(212, 175, 55, 0.08), transparent 60%),
-        rgba(13, 13, 13, 0.7);
+      border: none;
+      background: transparent;
       display: grid;
       place-items: center;
-      box-shadow: 0 0 40px rgba(0, 0, 0, 0.4), inset 0 0 30px rgba(212, 175, 55, 0.05);
+      overflow: hidden;
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
     }
 
-    .hero-arch-icon svg {
-      width: 55%;
-      height: 55%;
-      opacity: 0.7;
+    .hero-arch-icon svg,
+    .hero-arch-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      opacity: 0.85;
+      transition: opacity 0.25s ease;
+    }
+
+    .hero-arch-card:hover .hero-arch-img {
+      opacity: 1;
     }
 
     .hero-arch-name {
@@ -2279,14 +2263,7 @@
           <div class="hero-archetypes" aria-hidden="true">
             <div class="hero-arch-card hero-arch-card--tl" data-scroll-target="#archetypes">
               <div class="hero-arch-icon">
-                <svg viewBox="0 0 200 200" fill="none">
-                  <circle cx="100" cy="35" r="14" stroke="rgba(212,175,55,0.6)" stroke-width="1.5"/>
-                  <circle cx="100" cy="100" r="65" stroke="rgba(212,175,55,0.25)" stroke-width="1.5"/>
-                  <path d="M100 49V115M100 60L55 85M100 60L145 85M100 68L45 118M100 68L155 118M85 115L75 152M115 115L125 152" stroke="rgba(239,211,104,0.55)" stroke-width="1.8" stroke-linecap="round"/>
-                  <circle cx="60" cy="60" r="6" stroke="rgba(212,175,55,0.4)" stroke-width="1"/>
-                  <circle cx="140" cy="60" r="6" stroke="rgba(212,175,55,0.4)" stroke-width="1"/>
-                  <path d="M54 60L66 60M140 54L140 66" stroke="rgba(212,175,55,0.5)" stroke-width="1.2" stroke-linecap="round"/>
-                </svg>
+                <img src="assets/arch-polymath.png" alt="The Polymath" class="hero-arch-img" />
               </div>
               <div class="hero-arch-name">The Polymath</div>
               <div class="hero-arch-desc">Balanced skill distribution across all domains</div>
@@ -2294,14 +2271,7 @@
 
             <div class="hero-arch-card hero-arch-card--tr" data-scroll-target="#archetypes">
               <div class="hero-arch-icon">
-                <svg viewBox="0 0 200 200" fill="none">
-                  <circle cx="100" cy="35" r="14" stroke="rgba(212,175,55,0.6)" stroke-width="1.5"/>
-                  <circle cx="100" cy="100" r="65" stroke="rgba(212,175,55,0.25)" stroke-width="1.5"/>
-                  <path d="M100 49V115M100 60L55 85M100 60L145 85M85 115L75 152M115 115L125 152" stroke="rgba(239,211,104,0.55)" stroke-width="1.8" stroke-linecap="round"/>
-                  <path d="M60 70L90 100L140 55" stroke="rgba(212,175,55,0.5)" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-                  <circle cx="80" cy="140" r="18" stroke="rgba(212,175,55,0.35)" stroke-width="1"/>
-                  <path d="M80 130V150M70 140H90" stroke="rgba(212,175,55,0.4)" stroke-width="1.2" stroke-linecap="round"/>
-                </svg>
+                <img src="assets/arch-strategist.png" alt="The Strategist" class="hero-arch-img" />
               </div>
               <div class="hero-arch-name">The Strategist</div>
               <div class="hero-arch-desc">High analytical skills and strategic thinking</div>
@@ -2309,12 +2279,7 @@
 
             <div class="hero-arch-card hero-arch-card--bl" data-scroll-target="#archetypes">
               <div class="hero-arch-icon">
-                <svg viewBox="0 0 200 200" fill="none">
-                  <circle cx="100" cy="35" r="14" stroke="rgba(212,175,55,0.6)" stroke-width="1.5"/>
-                  <circle cx="100" cy="100" r="65" stroke="rgba(212,175,55,0.25)" stroke-width="1.5"/>
-                  <path d="M100 49V115M100 60L55 85M100 60L145 85M85 115L75 152M115 115L125 152" stroke="rgba(239,211,104,0.55)" stroke-width="1.8" stroke-linecap="round"/>
-                  <path d="M65 65H80V80H65ZM85 75L100 60L115 75L100 90Z" stroke="rgba(212,175,55,0.45)" stroke-width="1.2" fill="none"/>
-                </svg>
+                <img src="assets/arch-leader.png" alt="The Leader" class="hero-arch-img" />
               </div>
               <div class="hero-arch-name">The Leader</div>
               <div class="hero-arch-desc">High interpersonal skills and adaptive coordination</div>
@@ -2322,13 +2287,7 @@
 
             <div class="hero-arch-card hero-arch-card--br" data-scroll-target="#archetypes">
               <div class="hero-arch-icon">
-                <svg viewBox="0 0 200 200" fill="none">
-                  <circle cx="100" cy="35" r="14" stroke="rgba(212,175,55,0.6)" stroke-width="1.5"/>
-                  <circle cx="100" cy="100" r="65" stroke="rgba(212,175,55,0.25)" stroke-width="1.5"/>
-                  <path d="M100 49V115M100 60L55 85M100 60L145 85M85 115L75 152M115 115L125 152" stroke="rgba(239,211,104,0.55)" stroke-width="1.8" stroke-linecap="round"/>
-                  <path d="M70 60L85 80L65 80ZM120 55L140 55L140 75L120 75Z" stroke="rgba(212,175,55,0.45)" stroke-width="1.2" fill="none"/>
-                  <path d="M75 140L90 125M110 140L125 125" stroke="rgba(212,175,55,0.4)" stroke-width="2" stroke-linecap="round"/>
-                </svg>
+                <img src="assets/arch-builder.png" alt="The Builder" class="hero-arch-img" />
               </div>
               <div class="hero-arch-name">The Builder</div>
               <div class="hero-arch-desc">High execution and technical implementation skills</div>
@@ -2351,51 +2310,9 @@
               </svg>
             </div>
 
-            <!-- Vitruvian Man SVG -->
+            <!-- Vitruvian Man Image -->
             <div class="hero-figure-svg">
-              <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Head -->
-                <circle cx="200" cy="72" r="28" stroke="rgba(212,175,55,0.65)" stroke-width="2"/>
-                <ellipse cx="200" cy="70" rx="20" ry="22" stroke="rgba(239,211,104,0.3)" stroke-width="1"/>
-                <!-- Hair hint -->
-                <path d="M180 58C185 48 195 42 200 42C205 42 215 48 220 58" stroke="rgba(212,175,55,0.35)" stroke-width="1.5" fill="none"/>
-                <!-- Neck -->
-                <path d="M200 100V108" stroke="rgba(239,211,104,0.7)" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- Torso -->
-                <path d="M200 108V240" stroke="rgba(239,211,104,0.7)" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- Shoulders -->
-                <path d="M170 125L200 115L230 125" stroke="rgba(239,211,104,0.65)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <!-- Chest lines -->
-                <path d="M180 135L200 145L220 135" stroke="rgba(212,175,55,0.3)" stroke-width="1.5" stroke-linecap="round"/>
-                <!-- Hips -->
-                <path d="M180 235L200 240L220 235" stroke="rgba(239,211,104,0.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <!-- Arms straight out -->
-                <path d="M170 125L95 155" stroke="rgba(239,211,104,0.65)" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M230 125L305 155" stroke="rgba(239,211,104,0.65)" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- Forearms straight -->
-                <path d="M95 155L42 175" stroke="rgba(239,211,104,0.6)" stroke-width="2" stroke-linecap="round"/>
-                <path d="M305 155L358 175" stroke="rgba(239,211,104,0.6)" stroke-width="2" stroke-linecap="round"/>
-                <!-- Arms raised (Vitruvian second pose) -->
-                <path d="M170 125L90 90" stroke="rgba(212,175,55,0.35)" stroke-width="1.8" stroke-linecap="round"/>
-                <path d="M230 125L310 90" stroke="rgba(212,175,55,0.35)" stroke-width="1.8" stroke-linecap="round"/>
-                <path d="M90 90L45 55" stroke="rgba(212,175,55,0.3)" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M310 90L355 55" stroke="rgba(212,175,55,0.3)" stroke-width="1.5" stroke-linecap="round"/>
-                <!-- Legs straight -->
-                <path d="M190 240L165 330" stroke="rgba(239,211,104,0.6)" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M210 240L235 330" stroke="rgba(239,211,104,0.6)" stroke-width="2.5" stroke-linecap="round"/>
-                <!-- Lower legs -->
-                <path d="M165 330L152 380" stroke="rgba(239,211,104,0.5)" stroke-width="2" stroke-linecap="round"/>
-                <path d="M235 330L248 380" stroke="rgba(239,211,104,0.5)" stroke-width="2" stroke-linecap="round"/>
-                <!-- Legs spread (second pose) -->
-                <path d="M190 240L120 350" stroke="rgba(212,175,55,0.3)" stroke-width="1.8" stroke-linecap="round"/>
-                <path d="M210 240L280 350" stroke="rgba(212,175,55,0.3)" stroke-width="1.8" stroke-linecap="round"/>
-                <path d="M120 350L100 390" stroke="rgba(212,175,55,0.25)" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M280 350L300 390" stroke="rgba(212,175,55,0.25)" stroke-width="1.5" stroke-linecap="round"/>
-                <!-- Navel marker -->
-                <circle cx="200" cy="200" r="3" fill="rgba(212,175,55,0.5)"/>
-                <!-- Body glow -->
-                <circle cx="200" cy="200" r="40" fill="rgba(212,175,55,0.03)" stroke="none"/>
-              </svg>
+              <img src="assets/vitruvian-main.png" alt="Vitruvian Man — Renaissance Skills" class="hero-vitruvian-img" />
             </div>
           </div>
 
