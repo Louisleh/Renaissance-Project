@@ -88,6 +88,40 @@
       }
     }
 
+    /* ── Hero entrance & ambient animations ── */
+    @keyframes heroFadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes heroScaleIn {
+      from { opacity: 0; transform: scale(0.85); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes heroPulseRing {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50%      { transform: scale(1.08); opacity: 0.2; }
+    }
+    @keyframes heroGlowPulse {
+      0%, 100% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.2), 0 0 80px rgba(212, 175, 55, 0.08); }
+      50%      { box-shadow: 0 0 60px rgba(212, 175, 55, 0.35), 0 0 120px rgba(212, 175, 55, 0.15); }
+    }
+    @keyframes heroFloat {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-8px); }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    @keyframes archCardEnter {
+      from { opacity: 0; transform: translateY(30px) scale(0.9); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes ctaGlow {
+      0%, 100% { box-shadow: 0 16px 40px rgba(0,0,0,0.38), 0 0 28px rgba(212,175,55,0.2); }
+      50%      { box-shadow: 0 16px 50px rgba(0,0,0,0.45), 0 0 50px rgba(212,175,55,0.35), 0 0 80px rgba(212,175,55,0.12); }
+    }
+
     ::selection {
       background: rgba(212, 175, 55, 0.28);
       color: var(--text);
@@ -371,6 +405,7 @@
     .hero-top {
       text-align: center;
       margin-bottom: 1rem;
+      animation: heroFadeUp 1s ease-out 0.2s both;
     }
 
     .hero-brand-title {
@@ -392,6 +427,7 @@
     .hero-headline {
       text-align: center;
       margin-bottom: 1.5rem;
+      animation: heroFadeUp 1s ease-out 0.4s both;
     }
 
     .hero-headline h1 {
@@ -399,10 +435,15 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       line-height: 1.05;
-      background: linear-gradient(180deg, #f5e6b8 0%, #d4af37 50%, #a8862a 100%);
+      background: linear-gradient(
+        90deg,
+        #a8862a 0%, #d4af37 25%, #f5e6b8 50%, #d4af37 75%, #a8862a 100%
+      );
+      background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      animation: shimmer 6s linear infinite;
     }
 
     /* Central Stage */
@@ -410,10 +451,11 @@
       position: relative;
       width: min(100%, 1200px);
       flex: 1;
-      min-height: 500px;
+      min-height: 520px;
       display: flex;
       align-items: center;
       justify-content: center;
+      animation: heroScaleIn 1.4s ease-out 0.5s both;
     }
 
     /* Constellation background */
@@ -427,7 +469,7 @@
     .hero-constellation svg {
       width: 100%;
       height: 100%;
-      opacity: 0.35;
+      opacity: 0.4;
     }
 
     /* Central Vitruvian figure */
@@ -436,11 +478,28 @@
       width: min(420px, 50vw);
       aspect-ratio: 1;
       z-index: 2;
+      animation: heroScaleIn 1.2s ease-out 0.6s both;
     }
 
-    .hero-figure-circle,
+    .hero-figure-circle {
+      position: absolute;
+      inset: -8%;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      animation: heroPulseRing 4s ease-in-out infinite;
+    }
+
+    .hero-figure-circle::before {
+      content: "";
+      position: absolute;
+      inset: -12%;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.08);
+      animation: heroPulseRing 4s ease-in-out 1s infinite;
+    }
+
     .hero-figure-square {
-      display: none; /* Image artwork includes its own circle/square framing */
+      display: none;
     }
 
     .hero-figure-svg {
@@ -451,13 +510,15 @@
       place-items: center;
       overflow: hidden;
       border-radius: 50%;
+      animation: heroGlowPulse 4s ease-in-out infinite;
     }
 
     .hero-vitruvian-img {
       width: 110%;
       height: 110%;
       object-fit: cover;
-      filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.25));
+      filter: drop-shadow(0 0 50px rgba(212, 175, 55, 0.3)) drop-shadow(0 0 100px rgba(212, 175, 55, 0.1));
+      animation: heroFloat 6s ease-in-out infinite;
     }
 
     /* Radar overlay on figure */
@@ -525,29 +586,44 @@
       pointer-events: auto;
       text-align: center;
       cursor: pointer;
-      transition: transform 0.25s ease;
+      padding: 1rem 0.5rem 0.8rem;
+      border-radius: 16px;
+      background: rgba(18, 16, 12, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.12);
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      animation: archCardEnter 0.8s ease-out both;
     }
+
+    .hero-arch-card--tl { top: 0; left: 0; animation-delay: 0.8s; }
+    .hero-arch-card--tr { top: 0; right: 0; animation-delay: 1.0s; }
+    .hero-arch-card--bl { bottom: 2rem; left: 0; animation-delay: 1.2s; }
+    .hero-arch-card--br { bottom: 2rem; right: 0; animation-delay: 1.4s; }
 
     .hero-arch-card:hover {
-      transform: scale(1.05);
+      transform: scale(1.08) translateY(-4px);
+      border-color: rgba(212, 175, 55, 0.35);
+      box-shadow: 0 8px 32px rgba(212, 175, 55, 0.12), 0 0 0 1px rgba(212, 175, 55, 0.08);
     }
-
-    .hero-arch-card--tl { top: 0; left: 0; }
-    .hero-arch-card--tr { top: 0; right: 0; }
-    .hero-arch-card--bl { bottom: 2rem; left: 0; }
-    .hero-arch-card--br { bottom: 2rem; right: 0; }
 
     .hero-arch-icon {
       width: clamp(80px, 10vw, 120px);
       height: clamp(80px, 10vw, 120px);
       margin: 0 auto 0.5rem;
       border-radius: 50%;
-      border: none;
-      background: transparent;
+      border: 2px solid rgba(212, 175, 55, 0.25);
+      background: rgba(212, 175, 55, 0.05);
       display: grid;
       place-items: center;
       overflow: hidden;
-      box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.15), inset 0 0 20px rgba(212, 175, 55, 0.05);
+      transition: border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .hero-arch-card:hover .hero-arch-icon {
+      border-color: rgba(212, 175, 55, 0.5);
+      box-shadow: 0 0 40px rgba(212, 175, 55, 0.25), inset 0 0 20px rgba(212, 175, 55, 0.08);
     }
 
     .hero-arch-icon svg,
@@ -556,12 +632,13 @@
       height: 100%;
       object-fit: cover;
       border-radius: 50%;
-      opacity: 0.85;
-      transition: opacity 0.25s ease;
+      opacity: 0.88;
+      transition: opacity 0.35s ease, transform 0.35s ease;
     }
 
     .hero-arch-card:hover .hero-arch-img {
       opacity: 1;
+      transform: scale(1.05);
     }
 
     .hero-arch-name {
@@ -597,6 +674,7 @@
       text-align: center;
       padding: 1.5rem 0;
       z-index: 4;
+      animation: heroFadeUp 1s ease-out 1.4s both;
     }
 
     .hero-cta-sub {
@@ -616,6 +694,7 @@
       margin: 0 auto;
       padding: 1.5rem 0 2rem;
       border-top: 1px solid rgba(212, 175, 55, 0.1);
+      animation: heroFadeUp 1s ease-out 1.6s both;
     }
 
     .hero-info-item {
@@ -688,12 +767,14 @@
     }
 
     .hero-button {
-      padding: 1rem 1.5rem;
+      padding: 1rem 2rem;
       background: linear-gradient(135deg, var(--gold), var(--gold-strong));
       color: #14110a;
       font-weight: 700;
-      letter-spacing: 0.05em;
+      font-size: 1rem;
+      letter-spacing: 0.06em;
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.38), 0 0 28px rgba(212, 175, 55, 0.2);
+      animation: ctaGlow 3s ease-in-out infinite;
     }
 
     .hero-button:hover,
