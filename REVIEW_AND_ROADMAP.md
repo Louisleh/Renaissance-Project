@@ -111,17 +111,17 @@ These are genuinely strong:
 
 **Goal:** Fix bugs, close spec gaps, make the prototype demo-ready.
 
-| Task | Priority | Effort |
+| Task | Priority | Status |
 |------|----------|--------|
-| Fix balance index multiplier (0.25 → 0.35) | Critical | 5 min |
-| Fix HTML entity rendering in JS string | Critical | 5 min |
-| Add mobile hamburger menu | High | 2-3 hrs |
-| Add `prefers-reduced-motion` media query | High | 30 min |
-| Add skip-to-content link | Medium | 15 min |
-| Add meta description + OG tags + favicon | Medium | 30 min |
-| Run contrast audit and fix failing text | Medium | 1 hr |
-| Align LLM Mirror prompt to canonical schema | Medium | 30 min |
-| Remove deprecated `execCommand` fallback | Low | 15 min |
+| Fix balance index multiplier (0.25 → 0.35) | Critical | Done |
+| Fix HTML entity rendering in JS string | Critical | Done |
+| Add mobile hamburger menu | High | Done |
+| Add `prefers-reduced-motion` media query | High | Done |
+| Add skip-to-content link | Medium | Done |
+| Add meta description + OG tags + favicon | Medium | Done |
+| Run contrast audit and fix failing text | Medium | Done (all colors pass WCAG AA) |
+| Align LLM Mirror prompt to canonical schema | Medium | Done |
+| Remove deprecated `execCommand` fallback | Low | Done (improved with proper fallback) |
 
 ### Phase 1: Live Quick Pulse Assessment (1-2 weeks)
 
