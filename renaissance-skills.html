@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Renaissance Skills</title>
+  <title>Renaissance Skills — Map Your Cross-Domain Profile</title>
+  <meta name="description" content="Renaissance Skills is an assessment and development platform that maps your cross-domain skill distribution, assigns a Renaissance archetype, and builds a personalized growth path for the AI era.">
   <style>
     :root {
       --bg: #0d0d0d;
@@ -1296,6 +1297,35 @@
       }
     }
 
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 100;
+      padding: 0.75rem 1.2rem;
+      background: var(--gold);
+      color: #14110a;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 0 0 8px 0;
+    }
+
+    .skip-link:focus {
+      left: 0;
+    }
+
     @media (max-width: 640px) {
       :root {
         --container: min(100vw - 1.2rem, 100%);
@@ -1356,6 +1386,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#home">Skip to content</a>
   <header class="nav-wrap">
     <div class="container nav">
       <a class="brand" href="#home">
@@ -2122,7 +2153,7 @@
       const values = Object.values(profile);
       const average = values.reduce((sum, value) => sum + value, 0) / values.length;
       const spread = Math.max(...values) - Math.min(...values);
-      return Math.max(0, Math.round(average - spread * 0.25));
+      return Math.max(0, Math.round(average - spread * 0.35));
     }
 
     function renderSkillNodes() {
@@ -2230,7 +2261,7 @@
         copyStatus.textContent = "Ready to copy into your private local model.";
       } else {
         promptTitle.textContent = "Preview Output";
-        promptDescription.textContent = "Select “The LLM Mirror” to generate a prompt that can be pasted into your own local model for a privacy-first synthesis.";
+        promptDescription.textContent = 'Select “The LLM Mirror” to generate a prompt that can be pasted into your own local model for a privacy-first synthesis.';
         mirrorPrompt.value = "Choose The LLM Mirror to generate your prompt.";
         copyStatus.textContent = "Prompt updates when The LLM Mirror is selected.";
       }
