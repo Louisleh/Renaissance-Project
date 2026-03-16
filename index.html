@@ -184,7 +184,7 @@
       text-transform: uppercase;
       letter-spacing: 0.22em;
       font-size: 0.75rem;
-      color: var(--muted);
+      color: var(--gold);
     }
 
     .eyebrow::before {
@@ -192,6 +192,13 @@
       width: 36px;
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    .eyebrow::after {
+      content: "";
+      width: 36px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), transparent);
     }
 
     h1,
@@ -534,11 +541,11 @@
       height: 100%;
     }
 
-    /* Skill Labels - floating around center */
+    /* Skill Labels - floating around center, behind archetype cards */
     .hero-skill-labels {
       position: absolute;
-      inset: 0;
-      z-index: 3;
+      inset: 10% 18%;
+      z-index: 1;
       pointer-events: none;
     }
 
@@ -739,9 +746,14 @@
       }
       .hero-center {
         min-height: 400px;
+        justify-content: center;
       }
       .hero-figure-wrap {
         width: min(320px, 70vw);
+        margin: 0 auto;
+      }
+      .hero-skill-labels {
+        inset: 5% 5%;
       }
     }
 
@@ -751,6 +763,10 @@
       }
       .hero-figure-wrap {
         width: min(280px, 80vw);
+        margin: 0 auto;
+      }
+      .hero-skill-labels {
+        inset: 2% 0%;
       }
       .hero-info-bar {
         grid-template-columns: 1fr;
@@ -868,8 +884,16 @@
       margin-bottom: 2.4rem;
     }
 
+    .section-head h2 {
+      max-width: 52ch;
+    }
+
     .section-head .lede {
       max-width: 62ch;
+    }
+
+    .section + .section {
+      border-top: 1px solid rgba(212, 175, 55, 0.06);
     }
 
     .assessment-grid {
@@ -884,7 +908,7 @@
       display: grid;
       gap: 1rem;
       overflow: hidden;
-      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
     }
 
     .assessment-card::before {
@@ -897,14 +921,20 @@
       background: radial-gradient(circle, rgba(212, 175, 55, 0.15), transparent 68%);
       filter: blur(10px);
       opacity: 0.55;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .assessment-card:hover::before {
+      opacity: 0.85;
+      transform: scale(1.2);
     }
 
     .assessment-card:hover,
     .assessment-card:focus-within,
     .assessment-card.is-selected {
-      transform: translateY(-4px);
-      border-color: rgba(239, 211, 104, 0.42);
-      box-shadow: 0 24px 44px rgba(0, 0, 0, 0.35), 0 0 36px rgba(212, 175, 55, 0.1);
+      transform: translateY(-6px);
+      border-color: rgba(239, 211, 104, 0.5);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.4), 0 0 40px rgba(212, 175, 55, 0.15);
     }
 
     .assessment-top {
@@ -920,10 +950,16 @@
       border-radius: 16px;
       display: grid;
       place-items: center;
-      border: 1px solid rgba(212, 175, 55, 0.22);
-      background: linear-gradient(145deg, rgba(212, 175, 55, 0.12), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      background: linear-gradient(145deg, rgba(212, 175, 55, 0.14), rgba(255, 255, 255, 0.02));
       color: #f0de9b;
-      box-shadow: inset 0 0 18px rgba(212, 175, 55, 0.08);
+      box-shadow: inset 0 0 18px rgba(212, 175, 55, 0.08), 0 0 20px rgba(212, 175, 55, 0.08);
+      transition: box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .assessment-card:hover .assessment-icon {
+      border-color: rgba(212, 175, 55, 0.45);
+      box-shadow: inset 0 0 18px rgba(212, 175, 55, 0.12), 0 0 30px rgba(212, 175, 55, 0.15);
     }
 
     .assessment-meta {
@@ -1091,16 +1127,33 @@
       padding: 1.35rem;
       display: grid;
       gap: 0.85rem;
-      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
       cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .archetype-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(circle at 50% 120%, rgba(212, 175, 55, 0.08), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .archetype-card:hover::after,
+    .archetype-card.is-active::after {
+      opacity: 1;
     }
 
     .archetype-card:hover,
     .archetype-card:focus-visible,
     .archetype-card.is-active {
-      transform: translateY(-4px);
-      border-color: rgba(239, 211, 104, 0.42);
-      box-shadow: 0 22px 38px rgba(0, 0, 0, 0.32), 0 0 30px rgba(212, 175, 55, 0.1);
+      transform: translateY(-6px);
+      border-color: rgba(239, 211, 104, 0.5);
+      box-shadow: 0 24px 44px rgba(0, 0, 0, 0.35), 0 0 40px rgba(212, 175, 55, 0.12);
     }
 
     .archetype-tag {
@@ -1135,6 +1188,15 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
       gap: 1rem;
+    }
+
+    .spotlight-card {
+      transition: border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .spotlight-card:hover {
+      border-color: rgba(212, 175, 55, 0.3);
+      box-shadow: var(--shadow), 0 0 30px rgba(212, 175, 55, 0.06);
     }
 
     .spotlight-card small {
@@ -1199,6 +1261,7 @@
       border-radius: inherit;
       background: linear-gradient(90deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.9));
       box-shadow: 0 0 18px rgba(212, 175, 55, 0.22);
+      transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .weakness-list {
@@ -1269,6 +1332,14 @@
       display: grid;
       gap: 0.75rem;
       min-height: 230px;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .growth-card:hover,
+    .timeline-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 175, 55, 0.3);
+      box-shadow: var(--shadow), 0 0 30px rgba(212, 175, 55, 0.08);
     }
 
     .growth-meta,
@@ -1368,6 +1439,16 @@
       display: grid;
       grid-template-columns: 1.2fr 1fr 1fr;
       gap: 1rem;
+    }
+
+    .about-card {
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 175, 55, 0.3);
+      box-shadow: var(--shadow), 0 0 30px rgba(212, 175, 55, 0.06);
     }
 
     .about-card p {
@@ -3112,14 +3193,14 @@
       if (!labelsEl) return;
       // Positions for 8 labels radiating around the center figure
       const positions = [
-        { skill: "Leadership",       left: "35%", top: "12%" },
-        { skill: "Creativity",       left: "65%", top: "12%" },
-        { skill: "Strategy",         left: "80%", top: "30%" },
-        { skill: "Tech Proficiency", left: "22%", top: "75%" },
-        { skill: "Problem Solving",  left: "20%", top: "55%" },
-        { skill: "Critical Thinking",left: "78%", top: "55%" },
-        { skill: "Adaptability",     left: "35%", top: "88%" },
-        { skill: "Data Analysis",    left: "65%", top: "88%" }
+        { skill: "Leadership",       left: "32%", top: "8%" },
+        { skill: "Creativity",       left: "62%", top: "8%" },
+        { skill: "Strategy",         left: "72%", top: "32%" },
+        { skill: "Tech Proficiency", left: "28%", top: "78%" },
+        { skill: "Problem Solving",  left: "26%", top: "52%" },
+        { skill: "Critical Thinking",left: "70%", top: "58%" },
+        { skill: "Adaptability",     left: "35%", top: "92%" },
+        { skill: "Data Analysis",    left: "60%", top: "92%" }
       ];
 
       labelsEl.innerHTML = positions.map(p => {
