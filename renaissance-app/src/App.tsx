@@ -8,9 +8,11 @@ import { DashboardSection } from './components/Dashboard/DashboardSection';
 import { AboutSection } from './components/About/AboutSection';
 import { QuickPulseOverlay, loadSavedResult } from './components/QuickPulse/QuickPulseOverlay';
 import { ResultsPage } from './components/Results/ResultsPage';
+import { ErrorBoundary } from './components/common/ErrorBoundary';
 import { computeBalanceIndex } from './lib/scoring';
 import { assessmentModes } from './data/assessments';
 import type { AssessmentMode, AssessmentResult, ArchetypeKey, DomainScores, ProfileIntelligence } from './types';
+import './components/common/ErrorBoundary.css';
 import './styles/global.css';
 
 function HomePage() {
@@ -123,9 +125,11 @@ function ResultsRoute() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/results" element={<ResultsRoute />} />
-    </Routes>
+    <ErrorBoundary>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/results" element={<ResultsRoute />} />
+      </Routes>
+    </ErrorBoundary>
   );
 }

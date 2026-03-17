@@ -1,9 +1,10 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { RadarChart } from '../RadarChart/RadarChart';
 import { computeFullResult, domainLabel } from '../../lib/scoring';
 import { generateProfileIntelligence } from '../../lib/profile-intelligence';
+import { useAnimatedCounter } from '../../hooks/useAnimatedCounter';
 import moduleData from '../../data/quick-pulse-module.json';
-import type { QuickPulseModule, AssessmentResult, QuestionResponse, ProfileIntelligence, DomainKey } from '../../types';
+import type { QuickPulseModule, AssessmentResult, QuestionResponse, ProfileIntelligence } from '../../types';
 import './QuickPulseOverlay.css';
 
 const qpData = moduleData as unknown as QuickPulseModule;
@@ -29,12 +30,27 @@ export function loadSavedResult(): AssessmentResult | null {
   } catch { return null; }
 }
 
+// Animated score display
+function AnimatedScore({ value }: { value: number }) {
+  const animated = useAnimatedCounter(value, 1200, true);
+  return <span className="qp-domain-score">{animated}</span>;
+}
+
+function AnimatedBalance({ value }: { value: number }) {
+  const animated = useAnimatedCounter(value, 1400, true);
+  return <div className="qp-balance-number">{animated}</div>;
+}
+
 export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOverlayProps) {
   const [screen, setScreen] = useState<Screen>('intro');
   const [currentQ, setCurrentQ] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [result, setResult] = useState<AssessmentResult | null>(null);
   const [intelligence, setIntelligence] = useState<ProfileIntelligence | null>(null);
+  const [slideDirection, setSlideDirection] = useState<'forward' | 'back'>('forward');
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const questionCardRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const total = qpData.questions.length;
   const question = qpData.questions[currentQ];
@@ -45,11 +61,14 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
     setResult(null);
     setIntelligence(null);
     setScreen('intro');
+    setSlideDirection('forward');
   }, []);
 
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      // Focus the container when opened
+      setTimeout(() => containerRef.current?.focus(), 100);
     } else {
       document.body.style.overflow = '';
     }
@@ -64,6 +83,17 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
     return () => document.removeEventListener('keydown', handleKey);
   }, [isOpen, onClose]);
 
+  // Smooth question transition
+  const transitionToQuestion = useCallback((newQ: number, direction: 'forward' | 'back') => {
+    setSlideDirection(direction);
+    setIsTransitioning(true);
+
+    setTimeout(() => {
+      setCurrentQ(newQ);
+      setIsTransitioning(false);
+    }, 200);
+  }, []);
+
   const selectAnswer = (questionId: string, optionId: string) => {
     setAnswers(prev => ({ ...prev, [questionId]: optionId }));
   };
@@ -71,9 +101,8 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
   const handleNext = () => {
     if (!answers[question.id]) return;
     if (currentQ < total - 1) {
-      setCurrentQ(c => c + 1);
+      transitionToQuestion(currentQ + 1, 'forward');
     } else {
-      // Submit
       setScreen('calculating');
       setTimeout(() => {
         const responses: QuestionResponse[] = Object.entries(answers).map(([qid, oid]) => ({
@@ -92,14 +121,22 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
   };
 
   const handleBack = () => {
-    if (currentQ > 0) setCurrentQ(c => c - 1);
+    if (currentQ > 0) transitionToQuestion(currentQ - 1, 'back');
+  };
+
+  // Keyboard navigation within options
+  const handleOptionKeyDown = (e: React.KeyboardEvent, optionId: string) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      selectAnswer(question.id, optionId);
+    }
   };
 
   if (!isOpen) return null;
 
   return (
-    <div className="qp-overlay is-open">
-      <div className="qp-container">
+    <div className="qp-overlay is-open" role="dialog" aria-modal="true" aria-label="Quick Pulse Assessment">
+      <div className="qp-container" ref={containerRef} tabIndex={-1}>
         <div className="qp-header">
           <span className="qp-header-brand">Quick Pulse</span>
           <button className="qp-close" onClick={onClose} aria-label="Close assessment">
@@ -111,13 +148,17 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
 
         {/* Intro Screen */}
         {screen === 'intro' && (
-          <div className="qp-screen is-active">
+          <div className="qp-screen is-active qp-screen-enter">
             <div className="qp-intro">
               <div className="eyebrow">The Quick Pulse</div>
               <h2>{qpData.intro.headline}</h2>
               <p className="qp-intro-body">{qpData.intro.body}</p>
               <div className="qp-intro-bullets">
-                {qpData.intro.bullets.map(b => <span key={b} className="pill">{b}</span>)}
+                {qpData.intro.bullets.map((b, i) => (
+                  <span key={b} className="pill" style={{ animationDelay: `${0.1 + i * 0.08}s` }}>
+                    {b}
+                  </span>
+                ))}
               </div>
               <p className="qp-intro-note">Your result is a directional baseline — not a definitive measurement.</p>
               <button className="qp-start-btn" onClick={() => { reset(); setScreen('question'); }}>
@@ -142,17 +183,25 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
                 <div className="qp-progress-fill" style={{ width: `${((currentQ + 1) / total) * 100}%` }} />
               </div>
             </div>
-            <div className="qp-question-card">
+            <div
+              ref={questionCardRef}
+              className={`qp-question-card ${isTransitioning ? `qp-slide-out-${slideDirection}` : 'qp-slide-in'}`}
+              key={currentQ}
+            >
               <p className="qp-prompt">{question.prompt}</p>
-              <div className="qp-options" role="radiogroup">
-                {question.options.map(opt => (
+              <div className="qp-options" role="radiogroup" aria-label={`Question ${currentQ + 1}`}>
+                {question.options.map((opt, i) => (
                   <button
                     key={opt.id}
                     className={`qp-option ${answers[question.id] === opt.id ? 'is-selected' : ''}`}
                     role="radio"
                     aria-checked={answers[question.id] === opt.id}
                     onClick={() => selectAnswer(question.id, opt.id)}
+                    onKeyDown={(e) => handleOptionKeyDown(e, opt.id)}
+                    style={{ animationDelay: `${0.05 + i * 0.05}s` }}
+                    tabIndex={0}
                   >
+                    <span className="qp-option-letter">{String.fromCharCode(65 + i)}</span>
                     {opt.label}
                   </button>
                 ))}
@@ -181,15 +230,29 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
         {screen === 'calculating' && (
           <div className="qp-screen is-active">
             <div className="qp-calculating">
-              <div className="qp-calc-spinner" aria-hidden="true" />
+              <div className="qp-calc-ring" aria-hidden="true">
+                <svg viewBox="0 0 80 80" width="80" height="80">
+                  <circle cx="40" cy="40" r="35" fill="none" stroke="rgba(212,175,55,0.12)" strokeWidth="2" />
+                  <circle cx="40" cy="40" r="35" fill="none" stroke="var(--gold)" strokeWidth="2"
+                    strokeDasharray="220" strokeDashoffset="160" strokeLinecap="round"
+                    className="qp-calc-arc" />
+                  <circle cx="40" cy="40" r="18" fill="none" stroke="rgba(212,175,55,0.06)" strokeWidth="1" />
+                  <circle cx="40" cy="40" r="6" fill="var(--gold)" opacity="0.3" />
+                </svg>
+              </div>
               <p className="qp-calc-text">Mapping your Renaissance profile...</p>
+              <div className="qp-calc-dots">
+                <span className="qp-calc-dot" />
+                <span className="qp-calc-dot" />
+                <span className="qp-calc-dot" />
+              </div>
             </div>
           </div>
         )}
 
         {/* Results Screen */}
         {screen === 'results' && result && intelligence && (
-          <div className="qp-screen is-active">
+          <div className="qp-screen is-active qp-results-enter">
             <div className="qp-results">
               <div className="qp-results-header">
                 <div className="eyebrow">Your Renaissance Profile</div>
@@ -197,16 +260,18 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
                 <p className="qp-results-confidence">Directional baseline — Quick Pulse v1</p>
               </div>
 
-              {/* Archetype */}
-              <div className="qp-archetype-result">
+              {/* Archetype with entrance animation */}
+              <div className="qp-archetype-result qp-stagger-1">
                 <span className="archetype-tag">{result.archetype.label}</span>
                 <h3>{result.archetype.label}</h3>
                 <p>{result.archetype.description}</p>
-                <p className="qp-archetype-confidence">Confidence: {Math.round(result.archetype.confidence * 100)}%</p>
+                <p className="qp-archetype-confidence">
+                  Confidence: {Math.round(result.archetype.confidence * 100)}%
+                </p>
               </div>
 
               {/* Profile Intelligence Narrative */}
-              <div className="qp-intelligence-card">
+              <div className="qp-intelligence-card qp-stagger-2">
                 <h4>Profile Analysis</h4>
                 <p>{intelligence.narrative.summary}</p>
                 <div className="qp-intel-section">
@@ -220,7 +285,7 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
               </div>
 
               {/* Radar */}
-              <div className="qp-radar-section">
+              <div className="qp-radar-section qp-stagger-3">
                 <div className="qp-radar-wrap">
                   <RadarChart
                     labels={qpData.domains.map(d => d.label)}
@@ -230,17 +295,23 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
                   />
                 </div>
                 <div className="qp-domain-list">
-                  {qpData.domains.map(d => (
-                    <div key={d.key} className="qp-domain-row">
+                  {qpData.domains.map((d, i) => (
+                    <div key={d.key} className="qp-domain-row" style={{ animationDelay: `${0.3 + i * 0.08}s` }}>
                       <div className="qp-domain-head">
                         <span className="qp-domain-name">{d.label}</span>
                         <span>
-                          <span className="qp-domain-score">{result.scores[d.key]}</span>{' '}
+                          <AnimatedScore value={result.scores[d.key]} />{' '}
                           <span className="qp-domain-level">{result.levels[d.key]}</span>
                         </span>
                       </div>
                       <div className="qp-domain-bar">
-                        <div className="qp-domain-fill" style={{ width: `${result.scores[d.key]}%` }} />
+                        <div
+                          className="qp-domain-fill qp-bar-animate"
+                          style={{
+                            '--bar-width': `${result.scores[d.key]}%`,
+                            animationDelay: `${0.4 + i * 0.1}s`,
+                          } as React.CSSProperties}
+                        />
                       </div>
                     </div>
                   ))}
@@ -248,12 +319,13 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
               </div>
 
               {/* Strengths / Growth */}
-              <div className="qp-sg-grid">
+              <div className="qp-sg-grid qp-stagger-4">
                 <div className="qp-sg-card">
                   <h4>Top Strengths</h4>
                   <div className="qp-sg-list">
                     {result.top_strengths.map(key => (
                       <div key={key} className="qp-sg-item qp-strength-item">
+                        <span className="qp-sg-indicator qp-sg-strength-dot" />
                         {domainLabel(key, qpData.domains)} — {result.scores[key]} ({result.levels[key]})
                       </div>
                     ))}
@@ -264,6 +336,7 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
                   <div className="qp-sg-list">
                     {result.growth_domains.map(key => (
                       <div key={key} className="qp-sg-item qp-growth-item">
+                        <span className="qp-sg-indicator qp-sg-growth-dot" />
                         {domainLabel(key, qpData.domains)} — {result.scores[key]} ({result.levels[key]})
                       </div>
                     ))}
@@ -273,7 +346,7 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
 
               {/* Weak Domain Analysis */}
               {intelligence.weak_domains.length > 0 && (
-                <div className="qp-weak-analysis">
+                <div className="qp-weak-analysis qp-stagger-5">
                   <h4>Weak Domain Analysis</h4>
                   {intelligence.weak_domains.map(wd => (
                     <div key={wd.domain} className={`qp-weak-item qp-weak-${wd.severity}`}>
@@ -291,8 +364,8 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
               )}
 
               {/* Balance */}
-              <div className="qp-balance-row">
-                <div className="qp-balance-number">{result.balance_index}</div>
+              <div className="qp-balance-row qp-stagger-5">
+                <AnimatedBalance value={result.balance_index} />
                 <div className="qp-balance-info">
                   <h4>Balance Index</h4>
                   <p>{intelligence.balance_interpretation}</p>
@@ -300,10 +373,14 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
               </div>
 
               {/* Curriculum Recommendations */}
-              <div className="qp-curriculum">
+              <div className="qp-curriculum qp-stagger-6">
                 <h4>Development Curriculum</h4>
-                {intelligence.curriculum.map(c => (
-                  <div key={c.domain} className={`qp-curriculum-card qp-priority-${c.priority}`}>
+                {intelligence.curriculum.map((c, i) => (
+                  <div
+                    key={c.domain}
+                    className={`qp-curriculum-card qp-priority-${c.priority}`}
+                    style={{ animationDelay: `${0.6 + i * 0.1}s` }}
+                  >
                     <div className="qp-curriculum-order">{c.order}</div>
                     <div className="qp-curriculum-info">
                       <span className="qp-curriculum-name">{c.module_name}</span>
@@ -321,8 +398,26 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
                 ))}
               </div>
 
+              {/* Shareable Profile Summary */}
+              <div className="qp-share-card qp-stagger-7">
+                <div className="qp-share-inner">
+                  <div className="qp-share-brand">Renaissance Skills</div>
+                  <div className="qp-share-archetype">{result.archetype.label}</div>
+                  <div className="qp-share-scores">
+                    {qpData.domains.map(d => (
+                      <div key={d.key} className="qp-share-score-item">
+                        <span>{d.label}</span>
+                        <strong>{result.scores[d.key]}</strong>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="qp-share-balance">Balance: {result.balance_index}</div>
+                  <div className="qp-share-footer">renaissanceskills.com</div>
+                </div>
+              </div>
+
               {/* Actions */}
-              <div className="qp-results-actions">
+              <div className="qp-results-actions qp-stagger-7">
                 <button className="hero-button" onClick={() => { onClose(); setTimeout(() => document.getElementById('development')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100); }}>
                   View Development Path
                 </button>
