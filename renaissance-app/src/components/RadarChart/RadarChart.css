@@ -1,0 +1,20 @@
+.radar-chart {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.radar-chart--animated .radar-shape {
+  animation: radarFillIn 0.8s ease-out both;
+}
+
+@keyframes radarFillIn {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
