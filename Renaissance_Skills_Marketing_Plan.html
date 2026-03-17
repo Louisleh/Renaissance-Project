@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 2.2cm 2.4cm 2.4cm 2.4cm;
+    @bottom-center {
+      content: counter(page);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 9px;
+      color: #999;
+    }
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    color: #1a1a2e;
+  }
+
+  /* ── Cover Page ── */
+  .cover {
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+  }
+  .cover-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #b8860b, #d4a847);
+    color: #fff;
+    font-size: 9pt;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 22px;
+    border-radius: 3px;
+    margin-bottom: 40px;
+  }
+  .cover h1 {
+    font-size: 32pt;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #0f0f23;
+    margin-bottom: 8px;
+  }
+  .cover h1 span {
+    color: #b8860b;
+  }
+  .cover h2 {
+    font-size: 14pt;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 50px;
+  }
+  .cover-meta {
+    font-size: 9.5pt;
+    color: #888;
+    line-height: 1.8;
+  }
+  .cover-line {
+    width: 60px;
+    height: 2px;
+    background: #b8860b;
+    margin: 30px auto;
+  }
+
+  /* ── Section Headings ── */
+  h2 {
+    font-size: 16pt;
+    font-weight: 700;
+    color: #0f0f23;
+    margin-top: 30px;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #b8860b;
+  }
+  h3 {
+    font-size: 12pt;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-top: 22px;
+    margin-bottom: 8px;
+  }
+  h4 {
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: #333;
+    margin-top: 16px;
+    margin-bottom: 6px;
+  }
+
+  p { margin-bottom: 10px; }
+
+  /* ── Tables ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 18px 0;
+    font-size: 9.5pt;
+  }
+  th {
+    background: #0f0f23;
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+    padding: 8px 10px;
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  td {
+    padding: 7px 10px;
+    border-bottom: 1px solid #e8e8e8;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #fafaf8; }
+
+  /* ── Lists ── */
+  ul, ol {
+    margin: 8px 0 12px 20px;
+  }
+  li {
+    margin-bottom: 4px;
+  }
+
+  /* ── Callout boxes ── */
+  .callout {
+    background: #faf8f2;
+    border-left: 4px solid #b8860b;
+    padding: 14px 18px;
+    margin: 16px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .callout p { margin-bottom: 4px; }
+  .callout strong { color: #0f0f23; }
+
+  .callout-blue {
+    background: #f2f5fa;
+    border-left-color: #3366cc;
+  }
+
+  /* ── Highlight metrics ── */
+  .metric-row {
+    display: flex;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .metric-card {
+    flex: 1;
+    background: #0f0f23;
+    color: #fff;
+    padding: 16px;
+    border-radius: 6px;
+    text-align: center;
+  }
+  .metric-card .number {
+    font-size: 22pt;
+    font-weight: 700;
+    color: #d4a847;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .metric-card .label {
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #aaa;
+  }
+
+  /* ── Page breaks ── */
+  .page-break { page-break-before: always; }
+
+  /* ── Phase timeline ── */
+  .phase-header {
+    background: linear-gradient(135deg, #0f0f23, #1a1a3e);
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 6px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+  .phase-header h3 {
+    color: #d4a847;
+    margin: 0 0 2px 0;
+    font-size: 13pt;
+  }
+  .phase-header p {
+    color: #ccc;
+    margin: 0;
+    font-size: 9pt;
+  }
+
+  /* ── Small text ── */
+  .fine-print {
+    font-size: 8.5pt;
+    color: #999;
+    font-style: italic;
+  }
+
+  .tag {
+    display: inline-block;
+    background: #eee;
+    color: #555;
+    font-size: 8pt;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-right: 4px;
+    font-weight: 600;
+  }
+  .tag-gold {
+    background: #f5ecd5;
+    color: #8b6914;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════ COVER ═══════════════════ -->
+<div class="cover">
+  <div class="cover-badge">Confidential</div>
+  <h1>Renaissance <span>Skills</span></h1>
+  <h2>Marketing &amp; Monetization Rollout Plan</h2>
+  <div class="cover-line"></div>
+  <div class="cover-meta">
+    Prepared March 2026<br>
+    Version 1.0
+  </div>
+</div>
+
+<!-- ═══════════════════ TOC ═══════════════════ -->
+<h2>Contents</h2>
+<ol style="font-size: 11pt; line-height: 2.2;">
+  <li>Market Opportunity</li>
+  <li>Competitive Positioning</li>
+  <li>Business Model &amp; Pricing</li>
+  <li>Go-to-Market Strategy</li>
+  <li>Marketing Budget Allocation</li>
+  <li>Revenue Projections</li>
+  <li>Strategic Decisions</li>
+  <li>Defensible Moat</li>
+</ol>
+
+<div class="page-break"></div>
+
+<!-- ═══════════════════ 1. MARKET ═══════════════════ -->
+<h2>1. Market Opportunity</h2>
+
+<p>The professional skills assessment market is valued at <strong>$7–10B in 2025</strong> and growing at <strong>9–12% CAGR</strong>, projected to reach $15–25B by 2030. AI-driven assessments specifically are seeing <strong>55% adoption growth</strong>. According to Mercer's 2025/2026 Skills Snapshot Survey, 91% of companies see AI transforming their workforce and are actively responding.</p>
+
+<div class="metric-row">
+  <div class="metric-card">
+    <span class="number">$10B+</span>
+    <span class="label">Market Size 2025</span>
+  </div>
+  <div class="metric-card">
+    <span class="number">9–12%</span>
+    <span class="label">Annual Growth (CAGR)</span>
+  </div>
+  <div class="metric-card">
+    <span class="number">91%</span>
+    <span class="label">Companies Adapting to AI</span>
+  </div>
+  <div class="metric-card">
+    <span class="number">55%</span>
+    <span class="label">AI Assessment Adoption Growth</span>
+  </div>
+</div>
+
+<div class="callout">
+  <p><strong>Renaissance Skills sits at a unique intersection:</strong> it's not a hiring filter (like HackerRank/TestGorilla) and not a personality quiz (like 16Personalities/MBTI). It's a <strong>cross-domain skill profiler with a development engine</strong> — closer to CliftonStrengths in ambition but built for the AI era with a modern, product-led approach.</p>
+</div>
+
+<h3>Key Market Drivers</h3>
+<ul>
+  <li><strong>Skills-based organizations rising:</strong> 38% of companies now maintain an enterprise-wide skills library (up from 30% in 2023), and 55% map skills directly to jobs (up from 47%).</li>
+  <li><strong>AI workforce transformation:</strong> Companies need to assess and develop cross-functional skills as AI reshapes job requirements.</li>
+  <li><strong>Self-directed development:</strong> Professionals increasingly want to own their development outside of employer-provided training.</li>
+  <li><strong>Assessment fatigue:</strong> Users want assessments that lead to action, not just labels — Renaissance's curriculum engine addresses this directly.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<!-- ═══════════════════ 2. COMPETITIVE ═══════════════════ -->
+<h2>2. Competitive Positioning</h2>
+
+<table>
+  <tr>
+    <th>Platform</th>
+    <th>Model</th>
+    <th>Price</th>
+    <th>Strength</th>
+    <th>Renaissance Differentiator</th>
+  </tr>
+  <tr>
+    <td><strong>16Personalities</strong></td>
+    <td>Freemium</td>
+    <td>Free / $9/user/mo</td>
+    <td>1.4B tests taken, viral sharing</td>
+    <td>Renaissance is <em>skills</em>, not personality — actionable, not descriptive</td>
+  </tr>
+  <tr>
+    <td><strong>CliftonStrengths</strong></td>
+    <td>Paid</td>
+    <td>$25–$60 per assessment</td>
+    <td>Fortune 500 trust, 36M users</td>
+    <td>Modern, self-serve, AI-era focused, no consultant required</td>
+  </tr>
+  <tr>
+    <td><strong>TestGorilla</strong></td>
+    <td>B2B SaaS</td>
+    <td>$75–$400/mo</td>
+    <td>Pre-hire screening</td>
+    <td>Development-oriented, not gatekeeping</td>
+  </tr>
+  <tr>
+    <td><strong>Pluralsight</strong></td>
+    <td>Subscription</td>
+    <td>$29–$59/mo</td>
+    <td>Massive course libraries</td>
+    <td>Diagnosis before prescription — not a content dump</td>
+  </tr>
+</table>
+
+<div class="callout">
+  <p><strong>Positioning Statement:</strong> Renaissance Skills is the first cross-domain profiling platform that diagnoses professional capabilities across 8 skill domains, identifies your professional archetype, and generates a dependency-ordered development curriculum — telling you not just <em>what</em> to learn, but <em>in what order</em> and <em>why it matters for your archetype</em>.</p>
+</div>
+
+<h3>Unique Value Propositions</h3>
+<ol>
+  <li><strong>"Diagnosis before prescription"</strong> — Most platforms sell courses. Renaissance tells you <em>which</em> courses matter and <em>why</em>.</li>
+  <li><strong>Archetype identity</strong> — Four archetypes (Polymath, Strategist, Builder, Leader) give users a professional identity they share and grow into.</li>
+  <li><strong>Dependency-aware curriculum</strong> — Topologically-sorted learning paths ensure prerequisites are met before advanced skills.</li>
+  <li><strong>Privacy-first AI</strong> — The Mirror assessment mode processes data locally, a powerful trust signal in 2026.</li>
+</ol>
+
+<div class="page-break"></div>
+
+<!-- ═══════════════════ 3. BUSINESS MODEL ═══════════════════ -->
+<h2>3. Business Model &amp; Pricing</h2>
+
+<p>Recommended model: <strong>Freemium + Tiered B2B</strong>, following the 16Personalities playbook (free core → paid depth → team/enterprise), adapted for Renaissance's development-oriented product.</p>
+
+<h3>B2C Pricing Tiers</h3>
+<table>
+  <tr>
+    <th>Tier</th>
+    <th>Price</th>
+    <th>Includes</th>
+  </tr>
+  <tr>
+    <td><strong>Free</strong><br><span class="tag tag-gold">Quick Pulse</span></td>
+    <td>$0</td>
+    <td>10-question assessment, archetype result, radar chart, top 3 strengths, shareable profile card</td>
+  </tr>
+  <tr>
+    <td><strong>Pro Profile</strong></td>
+    <td>$14.99 one-time</td>
+    <td>Full narrative report, weak domain analysis, archetype confidence breakdown, curriculum roadmap, PDF export, Deep Dive assessment (24–30 questions)</td>
+  </tr>
+  <tr>
+    <td><strong>Growth Plan</strong></td>
+    <td>$9.99/mo</td>
+    <td>All Pro features + longitudinal tracking, reassessment loops, reading recommendations, progress checkpoints, priority module unlocks</td>
+  </tr>
+</table>
+
+<h3>B2B Pricing Tiers</h3>
+<table>
+  <tr>
+    <th>Tier</th>
+    <th>Price</th>
+    <th>Includes</th>
+  </tr>
+  <tr>
+    <td><strong>Teams</strong></td>
+    <td>$12/member/mo</td>
+    <td>Team dashboard, aggregate skill distribution, archetype diversity view, manager insights, bulk assessment</td>
+  </tr>
+  <tr>
+    <td><strong>Enterprise</strong></td>
+    <td>Custom</td>
+    <td>SSO/SAML, API access, custom domains, white-label assessments, dedicated success manager, org-wide skill gap analysis</td>
+  </tr>
+</table>
+
+<h3>Additional Revenue Streams</h3>
+<table>
+  <tr>
+    <th>Stream</th>
+    <th>Mechanism</th>
+    <th>Margin</th>
+  </tr>
+  <tr>
+    <td><strong>Coaching Marketplace</strong></td>
+    <td>Platform fee on coach bookings</td>
+    <td>20–30% take rate</td>
+  </tr>
+  <tr>
+    <td><strong>Reading Affiliates</strong></td>
+    <td>Amazon Associates / Bookshop.org links from curriculum</td>
+    <td>5–8% commission</td>
+  </tr>
+  <tr>
+    <td><strong>Certification Program</strong></td>
+    <td>"Renaissance Certified Coach" credential</td>
+    <td>$2,000–$5,000 per cert</td>
+  </tr>
+  <tr>
+    <td><strong>API Access</strong></td>
+    <td>Per-assessment pricing for LMS/HRIS/ATS integrations</td>
+    <td>High margin, usage-based</td>
+  </tr>
+</table>
+
+<div class="page-break"></div>
+
+<!-- ═══════════════════ 4. GTM ═══════════════════ -->
+<h2>4. Go-to-Market Strategy</h2>
+
+<p>A three-phase rollout using <strong>Product-Led Growth (PLG)</strong> as the primary acquisition engine, layering B2B sales on top of a proven consumer base.</p>
+
+<!-- Phase A -->
+<div class="phase-header">
+  <h3>Phase A — Viral Foundation</h3>
+  <p>Months 1–3 &nbsp;·&nbsp; Goal: 50,000 free assessments, build organic growth loop</p>
+</div>
+
+<h4>Product-Led Growth Motions</h4>
+<ul>
+  <li>The <strong>free Quick Pulse</strong> is the acquisition engine — no signup required to start</li>
+  <li>Shareable profile card drives organic social sharing (already built in the app)</li>
+  <li>"Compare with a friend" mechanic — share your link, they take the assessment, see side-by-side results</li>
+  <li>Results page includes social meta tags (OG image with radar chart + archetype)</li>
+</ul>
+
+<h4>Content Marketing</h4>
+<ul>
+  <li>Launch blog: "The 8 Skills That Define the AI-Era Professional"</li>
+  <li>Publish archetype deep-dives: "Are You a Polymath, Strategist, Builder, or Leader?"</li>
+  <li>SEO-targeted pages for each domain ("How to Develop Critical Thinking Skills in 2026")</li>
+  <li>Guest posts on HBR online, Fast Company, LinkedIn articles</li>
+</ul>
+
+<h4>Community Seeding</h4>
+<ul>
+  <li>Reddit: r/careerguidance, r/cscareerquestions, r/productivity — authentic engagement</li>
+  <li>Twitter/X and LinkedIn: archetype reveal posts</li>
+  <li>Discord community for users discussing development paths</li>
+  <li>Product Hunt launch — target top 5 of the day</li>
+</ul>
+
+<div class="callout callout-blue">
+  <p><strong>Phase A Targets:</strong> 50K assessments completed · 15% share rate · 5% email capture rate</p>
+</div>
+
+<!-- Phase B -->
+<div class="phase-header">
+  <h3>Phase B — Monetization Activation</h3>
+  <p>Months 4–8 &nbsp;·&nbsp; Goal: First revenue, prove willingness to pay</p>
+</div>
+
+<h4>Launch Pro Profile</h4>
+<ul>
+  <li>Gate full narrative, weak domain analysis, and curriculum behind a one-time $14.99 paywall</li>
+  <li>Show a "preview" of the narrative on the free tier (first sentence + blur) to drive conversion</li>
+  <li>A/B test pricing: $9.99 vs $14.99 vs $19.99</li>
+</ul>
+
+<h4>Launch Growth Plan Subscription</h4>
+<ul>
+  <li>Reassessment after completing recommended modules — "Did your scores improve?"</li>
+  <li>Longitudinal progress charts (radar chart over time)</li>
+  <li>Monthly "skill briefing" email with personalized recommendations</li>
+</ul>
+
+<h4>B2B Pilot Program</h4>
+<ul>
+  <li>Reach out to 20–50 forward-thinking companies (startups, L&D teams, bootcamps)</li>
+  <li>Offer free team pilot: 10 seats, 30 days</li>
+  <li>Build case studies: "Team X discovered a critical thinking gap and closed it in 8 weeks"</li>
+</ul>
+
+<h4>Affiliate Revenue</h4>
+<ul>
+  <li>Each curriculum recommendation links to 2–3 books via Amazon Associates or Bookshop.org</li>
+  <li>Low effort, immediate passive revenue stream</li>
+</ul>
+
+<div class="callout callout-blue">
+  <p><strong>Phase B Targets:</strong> 3–5% free-to-paid conversion · $5–10K MRR · 3–5 B2B pilots · NPS > 50</p>
+</div>
+
+<div class="page-break"></div>
+
+<!-- Phase C -->
+<div class="phase-header">
+  <h3>Phase C — Scale &amp; Enterprise</h3>
+  <p>Months 9–18 &nbsp;·&nbsp; Goal: Sustainable revenue growth, enterprise pipeline</p>
+</div>
+
+<h4>Enterprise Product</h4>
+<ul>
+  <li>Org-wide skill gap heatmaps</li>
+  <li>Team composition analysis ("Your team is 80% Builders — where are your Strategists?")</li>
+  <li>Integration with HRIS (BambooHR, Workday) and LMS (Degreed, Cornerstone)</li>
+  <li>White-label option for coaching firms and universities</li>
+</ul>
+
+<h4>Coaching Marketplace</h4>
+<ul>
+  <li>Curated network of coaches matched by archetype and weak domain</li>
+  <li>Platform takes 25% of session fees</li>
+  <li>Coaches get certified through Renaissance methodology</li>
+</ul>
+
+<h4>Deep Dive Assessment Launch</h4>
+<ul>
+  <li>24–30 questions, semi-adaptive</li>
+  <li>Premium-only (included in Pro/Growth)</li>
+  <li>Quick Pulse becomes the top-of-funnel hook; Deep Dive becomes the "real" assessment</li>
+</ul>
+
+<h4>University &amp; Bootcamp Channel</h4>
+<ul>
+  <li>Institutional pricing for student cohorts</li>
+  <li>Partner with coding bootcamps, MBA programs, professional development programs</li>
+  <li>Students get free assessments; institutions get aggregate analytics dashboard</li>
+</ul>
+
+<div class="callout callout-blue">
+  <p><strong>Phase C Targets:</strong> $50–100K MRR · 500K+ total assessments · 10+ enterprise contracts · 30%+ coaching marketplace margin</p>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ═══════════════════ 5. BUDGET ═══════════════════ -->
+<h2>5. Marketing Budget Allocation — Year 1</h2>
+
+<table>
+  <tr>
+    <th>Channel</th>
+    <th>% of Budget</th>
+    <th>Rationale</th>
+  </tr>
+  <tr>
+    <td><strong>Content &amp; SEO</strong></td>
+    <td>35%</td>
+    <td>Long-term organic growth, domain authority for skill-related keywords</td>
+  </tr>
+  <tr>
+    <td><strong>Social &amp; Community</strong></td>
+    <td>20%</td>
+    <td>Viral loop amplification, archetype identity brand building</td>
+  </tr>
+  <tr>
+    <td><strong>Paid Acquisition</strong></td>
+    <td>20%</td>
+    <td>LinkedIn ads to L&amp;D professionals, Google ads on skill assessment keywords</td>
+  </tr>
+  <tr>
+    <td><strong>Launch Events</strong></td>
+    <td>10%</td>
+    <td>Product Hunt launch, initial press coverage spike</td>
+  </tr>
+  <tr>
+    <td><strong>Partnerships &amp; Affiliates</strong></td>
+    <td>10%</td>
+    <td>Bootcamp/university deals, influencer partnerships</td>
+  </tr>
+  <tr>
+    <td><strong>PR &amp; Thought Leadership</strong></td>
+    <td>5%</td>
+    <td>Conference talks, podcast appearances, industry credibility</td>
+  </tr>
+</table>
+
+<div class="page-break"></div>
+
+<!-- ═══════════════════ 6. PROJECTIONS ═══════════════════ -->
+<h2>6. Revenue Projections (Conservative)</h2>
+
+<table>
+  <tr>
+    <th>Month</th>
+    <th>Free Users (Cumulative)</th>
+    <th>Paid Users (Cumulative)</th>
+    <th>MRR</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td><strong>3</strong></td>
+    <td>50,000</td>
+    <td>—</td>
+    <td>$0</td>
+    <td>PLG foundation phase</td>
+  </tr>
+  <tr>
+    <td><strong>6</strong></td>
+    <td>150,000</td>
+    <td>4,500</td>
+    <td>$12,000</td>
+    <td>Pro Profile + early Growth subscriptions</td>
+  </tr>
+  <tr>
+    <td><strong>9</strong></td>
+    <td>350,000</td>
+    <td>15,000</td>
+    <td>$35,000</td>
+    <td>B2B pilots converting to paid</td>
+  </tr>
+  <tr>
+    <td><strong>12</strong></td>
+    <td>600,000</td>
+    <td>35,000</td>
+    <td>$80,000</td>
+    <td>Enterprise deals closing</td>
+  </tr>
+  <tr>
+    <td><strong>18</strong></td>
+    <td>1,200,000</td>
+    <td>80,000</td>
+    <td>$200,000</td>
+    <td>Coaching marketplace + Deep Dive live</td>
+  </tr>
+</table>
+
+<p class="fine-print">Assumes 3% free-to-paid conversion, $10 blended ARPU, 5% monthly growth in free users after initial spike.</p>
+
+<h3>Annual Revenue Summary</h3>
+<div class="metric-row">
+  <div class="metric-card">
+    <span class="number">$960K</span>
+    <span class="label">Year 1 ARR (Month 12)</span>
+  </div>
+  <div class="metric-card">
+    <span class="number">$2.4M</span>
+    <span class="label">Year 1.5 ARR (Month 18)</span>
+  </div>
+  <div class="metric-card">
+    <span class="number">1.2M</span>
+    <span class="label">Total Assessments by Month 18</span>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ═══════════════════ 7. STRATEGIC DECISIONS ═══════════════════ -->
+<h2>7. Key Strategic Decisions</h2>
+
+<h3>1. Consumer-first or Professional-first?</h3>
+<p>Consumer-first (like 16Personalities) builds volume and virality. Professional-first (like CliftonStrengths) builds revenue faster.</p>
+<div class="callout">
+  <p><strong>Recommendation:</strong> Consumer-first for the first 6 months to build the assessment base, then layer B2B on top of proven engagement data and case studies.</p>
+</div>
+
+<h3>2. Privacy as a Differentiator</h3>
+<p>The LLM Mirror assessment mode processes data locally — "your data never leaves your device." In the post-AI privacy landscape of 2026, this is a genuine competitive advantage. Market it aggressively as a trust signal, especially for enterprise buyers with compliance requirements.</p>
+
+<h3>3. Archetype Identity as Brand</h3>
+<p>16Personalities succeeded because people <em>identify</em> with their type ("I'm an INTJ"). Renaissance can build the same identity gravity with its four archetypes.</p>
+<ul>
+  <li>Social profile badges ("I'm a Polymath")</li>
+  <li>Archetype merchandise (stickers, apparel)</li>
+  <li>Community sub-groups organized by archetype</li>
+  <li>LinkedIn badge integration</li>
+</ul>
+
+<h3>4. Open vs. Gated Curriculum</h3>
+<p>Show the curriculum roadmap for free (what you need to learn and in what order), but gate the detailed content, resources, and tracking behind paid tiers. This creates desire — users see the path but need to pay to walk it.</p>
+
+<div class="page-break"></div>
+
+<!-- ═══════════════════ 8. MOAT ═══════════════════ -->
+<h2>8. Defensible Moat</h2>
+
+<p>What makes Renaissance Skills defensible over time:</p>
+
+<table>
+  <tr>
+    <th>Moat</th>
+    <th>Description</th>
+    <th>Strength Over Time</th>
+  </tr>
+  <tr>
+    <td><strong>Longitudinal Data</strong></td>
+    <td>Once users have assessment history, switching costs increase — their growth story lives in Renaissance</td>
+    <td>Grows stronger with every reassessment</td>
+  </tr>
+  <tr>
+    <td><strong>Dependency-Aware Curriculum</strong></td>
+    <td>Not just "take these courses" but "take them in this order because X depends on Y" — a genuine technical differentiator</td>
+    <td>Deepens as curriculum library expands</td>
+  </tr>
+  <tr>
+    <td><strong>Archetype Identity</strong></td>
+    <td>Social identity creates retention — people don't leave their "type"</td>
+    <td>Network effects as archetype communities form</td>
+  </tr>
+  <tr>
+    <td><strong>Cross-Domain Positioning</strong></td>
+    <td>Competitors do single-skill assessment; Renaissance profiles the whole professional</td>
+    <td>Hard to replicate without rebuilding scoring engine</td>
+  </tr>
+  <tr>
+    <td><strong>AI-Era Framing</strong></td>
+    <td>Purpose-built for the skills that matter as AI reshapes work — timely and differentiated from legacy tools</td>
+    <td>First-mover advantage in narrative</td>
+  </tr>
+  <tr>
+    <td><strong>Privacy-First Architecture</strong></td>
+    <td>Mirror mode's local processing is a genuine trust advantage for privacy-conscious users and enterprises</td>
+    <td>Regulatory tailwinds strengthen this moat</td>
+  </tr>
+</table>
+
+<div class="callout" style="margin-top: 30px;">
+  <p><strong>Bottom Line:</strong> Renaissance Skills has a clear path from a free viral assessment tool to a $1M+ ARR platform within 12–18 months. The combination of product-led growth, archetype identity, and a technically differentiated curriculum engine creates both acquisition velocity and long-term defensibility. The key is to execute consumer-first for volume, then convert that data and engagement into enterprise value.</p>
+</div>
+
+</body>
+</html>
