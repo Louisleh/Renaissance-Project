@@ -544,7 +544,7 @@
     /* Skill Labels - floating around center, behind archetype cards */
     .hero-skill-labels {
       position: absolute;
-      inset: 10% 18%;
+      inset: 5% 8%;
       z-index: 1;
       pointer-events: none;
     }
@@ -2793,8 +2793,7 @@
 
   <footer>
     <div class="container footer-row">
-      <span>Renaissance Skills prototype</span>
-      <span>Single-file vanilla HTML, CSS, and JavaScript</span>
+      <span>&copy; 2026 Renaissance Skills</span>
     </div>
   </footer>
 
@@ -3193,14 +3192,14 @@
       if (!labelsEl) return;
       // Positions for 8 labels radiating around the center figure
       const positions = [
-        { skill: "Leadership",       left: "32%", top: "8%" },
-        { skill: "Creativity",       left: "62%", top: "8%" },
-        { skill: "Strategy",         left: "72%", top: "32%" },
-        { skill: "Tech Proficiency", left: "28%", top: "78%" },
-        { skill: "Problem Solving",  left: "26%", top: "52%" },
-        { skill: "Critical Thinking",left: "70%", top: "58%" },
-        { skill: "Adaptability",     left: "35%", top: "92%" },
-        { skill: "Data Analysis",    left: "60%", top: "92%" }
+        { skill: "Leadership",       left: "18%", top: "5%" },
+        { skill: "Creativity",       left: "72%", top: "5%" },
+        { skill: "Strategy",         left: "82%", top: "30%" },
+        { skill: "Tech Proficiency", left: "10%", top: "80%" },
+        { skill: "Problem Solving",  left: "8%",  top: "48%" },
+        { skill: "Critical Thinking",left: "80%", top: "55%" },
+        { skill: "Adaptability",     left: "30%", top: "95%" },
+        { skill: "Data Analysis",    left: "64%", top: "95%" }
       ];
 
       labelsEl.innerHTML = positions.map(p => {
