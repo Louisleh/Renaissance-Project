@@ -148,7 +148,7 @@
 
 .lm-start-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.18);
+  box-shadow: 0 8px 24px var(--gold-18);
 }
 
 .lm-back-link {
@@ -288,7 +288,7 @@
 }
 
 .lm-import-desc code {
-  background: rgba(212, 175, 55, 0.1);
+  background: var(--gold-10);
   color: var(--gold);
   padding: 2px 6px;
   border-radius: 4px;
@@ -351,15 +351,15 @@
 }
 
 .lm-errors {
-  background: rgba(220, 80, 60, 0.08);
-  border: 1px solid rgba(220, 80, 60, 0.25);
+  background: var(--danger-8);
+  border: 1px solid var(--danger-25);
 }
 
 .lm-error-item { color: #e8715a; padding: 2px 0; }
 
 .lm-warnings {
-  background: rgba(212, 175, 55, 0.06);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  background: var(--gold-6);
+  border: 1px solid var(--gold-20);
 }
 
 .lm-warning-item { color: var(--gold); padding: 2px 0; }
@@ -448,7 +448,7 @@
 .lm-intel-section {
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(212, 175, 55, 0.08);
+  border-top: 1px solid var(--gold-8);
 }
 
 .lm-intel-section h5 {
@@ -583,7 +583,7 @@
 }
 
 .lm-sg-strength-dot { background: var(--gold); }
-.lm-sg-growth-dot { background: rgba(220, 80, 60, 0.7); }
+.lm-sg-growth-dot { background: var(--danger-70); }
 
 /* Balance */
 .lm-balance-row {

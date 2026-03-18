@@ -35,7 +35,7 @@ const plans: PlanCard[] = [
   {
     tier: 'pro',
     price: '$12/mo',
-    subtitle: 'Unlock the full build path',
+    subtitle: 'Full assessment + complete curriculum',
     badge: 'Most Popular',
     features: [
       'Everything in Free',
@@ -49,7 +49,7 @@ const plans: PlanCard[] = [
   {
     tier: 'premium',
     price: '$29/mo',
-    subtitle: 'Guided Renaissance growth',
+    subtitle: 'Assessment + curriculum + 1-on-1 coaching',
     features: [
       'Everything in Pro',
       'Personalized reading order',
@@ -138,8 +138,8 @@ export function PricingPage() {
       <div className="container">
         <div className="section-head">
           <div className="eyebrow">Pricing</div>
-          <h1>Choose your path</h1>
-          <p className="lede">Unlock the full Renaissance platform when you want deeper diagnostics, full curriculum access, and guided support.</p>
+          <h1>Invest in the Full Diagnostic</h1>
+          <p className="lede">The free tier gives you a directional baseline. Pro unlocks scenario-based assessment, the complete 8-course curriculum, and longitudinal tracking.</p>
         </div>
 
         <p className="pricing-status">{statusCopy}</p>
@@ -191,6 +191,29 @@ export function PricingPage() {
           <span>All plans include unlimited Quick Pulse assessments.</span>
           <span>Cancel anytime • No long-term commitment.</span>
         </div>
+
+        <section className="pricing-faq">
+          <div className="eyebrow">FAQ</div>
+          <h2>Common Questions</h2>
+          <div className="pricing-faq-grid">
+            <details className="pricing-faq-item">
+              <summary>Can I retake assessments?</summary>
+              <p>Unlimited. Each retake updates your skill graph and adjusts your curriculum sequence based on new scores.</p>
+            </details>
+            <details className="pricing-faq-item">
+              <summary>What's the difference between Quick Pulse and Deep Dive?</summary>
+              <p>Quick Pulse is 10 questions in 3 minutes for a directional baseline. Deep Dive uses scenario-based prompts over 18 minutes for higher-confidence scoring and sharper archetype assignment.</p>
+            </details>
+            <details className="pricing-faq-item">
+              <summary>Is my data private?</summary>
+              <p>Assessment results are stored locally by default. Sign in to sync across devices. The LLM Mirror never sends your chat history to our servers — only the summarized scores come back.</p>
+            </details>
+            <details className="pricing-faq-item">
+              <summary>Can I cancel anytime?</summary>
+              <p>Yes. No lock-in, no cancellation fee. Your assessment history stays accessible on the free tier.</p>
+            </details>
+          </div>
+        </section>
 
         {stripePricingTableId && isStripeConfigured && (
           <section className="pricing-embed">

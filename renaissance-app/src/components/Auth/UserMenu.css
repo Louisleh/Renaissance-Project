@@ -8,8 +8,8 @@
   gap: 0.7rem;
   padding: 0.5rem 0.65rem 0.5rem 0.5rem;
   border-radius: 999px;
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.16), rgba(212, 175, 55, 0.04));
+  border: 1px solid var(--gold-35);
+  background: linear-gradient(135deg, var(--gold-16), var(--gold-4));
   color: var(--text);
   cursor: pointer;
   transition: all 0.3s ease;

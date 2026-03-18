@@ -93,7 +93,7 @@
 .cur-progress-track {
   height: 10px;
   border-radius: 999px;
-  background: rgba(212, 175, 55, 0.1);
+  background: var(--gold-10);
   overflow: hidden;
 }
 
@@ -101,7 +101,7 @@
   height: 100%;
   border-radius: inherit;
   background: var(--gold);
-  box-shadow: 0 0 18px rgba(212, 175, 55, 0.22);
+  box-shadow: 0 0 18px var(--gold-22);
   transition: width 0.35s ease;
 }
 
@@ -123,7 +123,7 @@
 
 .cur-comparison-item {
   border-radius: 12px;
-  border: 1px solid rgba(212, 175, 55, 0.12);
+  border: 1px solid var(--gold-12);
   background: rgba(255, 255, 255, 0.02);
   padding: 1rem;
   display: grid;
@@ -150,7 +150,7 @@
 }
 
 .cur-comparison-delta.is-positive {
-  background: rgba(212, 175, 55, 0.14);
+  background: var(--gold-14);
   color: var(--gold);
 }
 
@@ -192,7 +192,7 @@
 
 .cur-course-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(212, 175, 55, 0.35);
+  border-color: var(--gold-35);
 }
 
 .cur-course-card.is-locked {
@@ -229,7 +229,7 @@
 }
 
 .cur-priority-high {
-  background: rgba(212, 175, 55, 0.16);
+  background: var(--gold-16);
   color: #0d0d0d;
   font-weight: 700;
 }

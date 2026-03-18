@@ -123,7 +123,9 @@ export function AssessmentSection({
                   {card.key === 'deep' && !hasAccess('deep_dive')
                     ? 'Unlock Pro'
                     : isSelected
-                      ? 'Selected'
+                      ? card.key === 'quick' ? 'Start Quick Pulse'
+                        : card.key === 'deep' ? 'Start Deep Dive'
+                        : 'Start LLM Mirror'
                       : 'Select Method'}
                 </button>
               </article>

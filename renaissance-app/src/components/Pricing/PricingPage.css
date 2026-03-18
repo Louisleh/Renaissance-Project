@@ -29,16 +29,16 @@
 }
 
 .pricing-card--pro {
-  border-color: rgba(212, 175, 55, 0.45);
-  background: linear-gradient(180deg, rgba(212, 175, 55, 0.12), rgba(22, 21, 18, 0.88));
+  border-color: var(--gold-45);
+  background: linear-gradient(180deg, var(--gold-12), rgba(22, 21, 18, 0.88));
 }
 
 .pricing-card--premium {
-  background: linear-gradient(180deg, rgba(212, 175, 55, 0.18), rgba(22, 21, 18, 0.92));
+  background: linear-gradient(180deg, var(--gold-18), rgba(22, 21, 18, 0.92));
 }
 
 .pricing-card.is-current {
-  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.28), var(--shadow);
+  box-shadow: 0 0 0 1px var(--gold-28), var(--shadow);
 }
 
 .pricing-badge {
@@ -77,7 +77,7 @@
 }
 
 .pricing-button--pro {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.08));
+  background: linear-gradient(135deg, var(--gold-20), var(--gold-8));
 }
 
 .pricing-button--premium {
@@ -123,12 +123,75 @@
   color: #f4c9c9;
 }
 
+/* ── FAQ Section ── */
+
+.pricing-faq {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.pricing-faq h2 {
+  margin-bottom: 2rem;
+}
+
+.pricing-faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pricing-faq-item {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  cursor: pointer;
+}
+
+.pricing-faq-item summary {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pricing-faq-item summary::after {
+  content: '+';
+  color: var(--gold);
+  font-size: 1.2rem;
+  font-weight: 300;
+  transition: transform 0.2s;
+}
+
+.pricing-faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.pricing-faq-item summary::-webkit-details-marker { display: none; }
+
+.pricing-faq-item p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin-top: 0.75rem;
+}
+
 @media (max-width: 640px) {
   .pricing-page {
     padding: 3rem 0 5rem;
   }
 
   .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-faq-grid {
     grid-template-columns: 1fr;
   }
 }

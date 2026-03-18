@@ -17,8 +17,8 @@
 }
 
 .assessment-card.is-selected {
-  border-color: rgba(212, 175, 55, 0.5);
-  box-shadow: 0 0 32px rgba(212, 175, 55, 0.1), var(--shadow);
+  border-color: var(--gold-50);
+  box-shadow: 0 0 32px var(--gold-10), var(--shadow);
 }
 
 .assessment-top {
@@ -35,7 +35,7 @@
   display: grid;
   place-items: center;
   color: var(--gold);
-  background: rgba(212, 175, 55, 0.06);
+  background: var(--gold-6);
 }
 
 .assessment-meta {
@@ -71,8 +71,8 @@
   margin-top: auto;
   padding: 0.85rem 1.2rem;
   border-radius: 999px;
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), rgba(212, 175, 55, 0.04));
+  border: 1px solid var(--gold-30);
+  background: linear-gradient(135deg, var(--gold-12), var(--gold-4));
   color: var(--text);
   font-size: 0.9rem;
   letter-spacing: 0.08em;
@@ -84,7 +84,7 @@
 .assessment-button:hover,
 .assessment-button:focus-visible {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3), 0 0 16px rgba(212, 175, 55, 0.12);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3), 0 0 16px var(--gold-12);
 }
 
 .assessment-button.is-active {

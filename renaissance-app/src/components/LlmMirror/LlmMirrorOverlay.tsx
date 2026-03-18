@@ -181,7 +181,7 @@ export function LlmMirrorOverlay({ isOpen, onClose, onComplete }: LlmMirrorOverl
                 </div>
               </div>
               <button className="lm-start-btn" onClick={() => setScreen('prompt')}>
-                Get Started
+                Copy the Analysis Prompt
               </button>
               <button className="lm-back-link" onClick={onClose}>
                 Back to Assessment Modes

@@ -67,7 +67,7 @@
   border: 1px solid var(--border);
   font-size: 0.78rem;
   color: var(--muted);
-  background: rgba(212, 175, 55, 0.04);
+  background: var(--gold-4);
 }
 
 .dashboard-main {
@@ -93,8 +93,8 @@
 }
 
 .tab-button.is-active {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
-  border-color: rgba(212, 175, 55, 0.4);
+  background: linear-gradient(135deg, var(--gold-15), var(--gold-5));
+  border-color: var(--gold-40);
   color: var(--text);
 }
 

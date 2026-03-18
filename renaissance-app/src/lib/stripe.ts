@@ -50,7 +50,8 @@ export async function openCustomerPortal(customerId: string): Promise<void> {
   }
 
   // TODO: replace this with a Supabase Edge Function that creates a Stripe Customer Portal session.
+  void customerId;
   window.alert(
-    `Customer portal backend not configured yet for ${customerId}. Contact support@renaissanceskills.com to manage your subscription.`
+    'Subscription management is launching soon. For immediate changes, contact support@renaissanceskills.com.'
   );
 }

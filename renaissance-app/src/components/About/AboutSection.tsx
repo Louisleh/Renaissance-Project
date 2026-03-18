@@ -30,13 +30,28 @@ export function AboutSection() {
             </ul>
           </section>
           <section className="about-card reveal">
-            <h3>What's Next</h3>
-            <ul>
-              <li>Affiliate reading layers and foundational libraries</li>
-              <li>Coaching integrations and accountability loops</li>
-              <li>Expanded diagnostics for longitudinal growth tracking</li>
-            </ul>
+            <h3>Built for the AI Transition</h3>
+            <p>
+              Renaissance Skills draws on research in cross-domain skill development, adaptive expertise,
+              and professional resilience. The platform is designed for a world where AI handles routine
+              execution and humans who connect disciplines become disproportionately valuable.
+            </p>
           </section>
+        </div>
+
+        <div className="trust-bar reveal">
+          <div className="trust-stat">
+            <strong>8</strong>
+            <span>Professional domains assessed</span>
+          </div>
+          <div className="trust-stat">
+            <strong>3</strong>
+            <span>Assessment modes including privacy-first LLM analysis</span>
+          </div>
+          <div className="trust-stat">
+            <strong>40+</strong>
+            <span>Micro-lessons across the full curriculum</span>
+          </div>
         </div>
       </div>
     </section>

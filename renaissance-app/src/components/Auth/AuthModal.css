@@ -56,7 +56,7 @@
 }
 
 .auth-tab.is-active {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.18), rgba(212, 175, 55, 0.06));
+  background: linear-gradient(135deg, var(--gold-18), var(--gold-6));
   color: var(--text);
 }
 
@@ -174,7 +174,7 @@
 }
 
 .auth-success {
-  background: rgba(212, 175, 55, 0.08);
+  background: var(--gold-8);
   color: var(--text);
 }
 

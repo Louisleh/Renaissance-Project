@@ -123,7 +123,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.38), 0 0 28px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.38), 0 0 28px var(--gold-20);
   transition: all 0.3s ease;
 }
 
@@ -161,7 +161,7 @@
 .dd-domain-bar,
 .dd-curriculum-track {
   height: 5px;
-  background: rgba(212, 175, 55, 0.1);
+  background: var(--gold-10);
   border-radius: 999px;
   overflow: hidden;
 }
@@ -260,14 +260,14 @@
 .dd-option:hover,
 .dd-option:focus-visible {
   color: var(--text);
-  border-color: rgba(212, 175, 55, 0.35);
+  border-color: var(--gold-35);
   transform: translateX(4px);
 }
 
 .dd-option.is-selected {
   color: var(--text);
   border-color: var(--gold);
-  background: rgba(212, 175, 55, 0.08);
+  background: var(--gold-8);
   transform: translateX(4px);
 }
 
@@ -275,7 +275,7 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  border: 1px solid var(--gold-30);
   display: grid;
   place-items: center;
   color: var(--gold);
@@ -458,7 +458,7 @@
 .dd-compare-item {
   padding: 0.95rem;
   border-radius: 14px;
-  border: 1px solid rgba(212, 175, 55, 0.12);
+  border: 1px solid var(--gold-12);
   background: rgba(255, 255, 255, 0.02);
   display: grid;
   gap: 0.25rem;
@@ -478,7 +478,7 @@
 }
 
 .dd-compare-delta.is-positive {
-  background: rgba(212, 175, 55, 0.14);
+  background: var(--gold-14);
   color: var(--gold);
 }
 
@@ -523,7 +523,7 @@
 
 .dd-sg-strength-dot {
   background: var(--gold);
-  box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 12px var(--gold-50);
 }
 
 .dd-sg-growth-dot {
@@ -599,7 +599,7 @@
 }
 
 .dd-priority-high {
-  background: rgba(212, 175, 55, 0.12);
+  background: var(--gold-12);
   color: var(--gold);
 }
 

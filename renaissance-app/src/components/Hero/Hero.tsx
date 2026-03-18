@@ -59,11 +59,11 @@ export function Hero({ profile, onStartAssessment }: HeroProps) {
       <div className="container hero-shell">
         <div className="hero-top reveal">
           <div className="hero-brand-title">Renaissance Skills</div>
-          <div className="hero-brand-sub">Empower Your Potential | Unlock Your Genius</div>
+          <div className="hero-brand-sub">Diagnose Skill Imbalances | Build Durable Breadth</div>
         </div>
 
         <div className="hero-headline reveal">
-          <h1>Recover Your Full Potential</h1>
+          <h1>Map What You're Made Of</h1>
         </div>
 
         <div className="hero-center">
@@ -101,7 +101,7 @@ export function Hero({ profile, onStartAssessment }: HeroProps) {
           >
             Start Your Individual Assessment
           </button>
-          <p className="hero-cta-sub">Discover Your Unique Skill Profile</p>
+          <p className="hero-cta-sub">3 minutes to your 8-domain skill graph</p>
         </div>
 
         <div className="hero-info-bar reveal">
@@ -110,14 +110,14 @@ export function Hero({ profile, onStartAssessment }: HeroProps) {
               <circle cx="12" cy="12" r="9" /><path d="M12 7V12L15 14" /><path d="M8 2L4 5M16 2L20 5" />
             </svg>
             <span className="hero-info-title">How It Works</span>
-            <span className="hero-info-desc">Map your unique skill profile in minutes</span>
+            <span className="hero-info-desc">Answer 10 questions, get scored on 8 domains</span>
           </div>
           <div className="hero-info-item">
             <svg className="hero-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
               <path d="M12 2L15 8.5L22 9.5L17 14.5L18 21.5L12 18.5L6 21.5L7 14.5L2 9.5L9 8.5Z" />
             </svg>
             <span className="hero-info-title">Platform Benefits</span>
-            <span className="hero-info-desc">Discover your unique development path</span>
+            <span className="hero-info-desc">Prioritized curriculum based on your weakest domains</span>
           </div>
         </div>
       </div>

@@ -28,8 +28,8 @@ export const assessmentModes: Record<string, AssessmentModeConfig> = {
       { phase: "Phase III", title: "Stress-test adaptability under change", copy: "Use short simulations to practice decision updates when constraints, inputs, or goals shift unexpectedly.", foot: "Builds resilient response range" },
       { phase: "Phase IV", title: "Elevate communication and influence", copy: "Close the loop by expressing synthesis in a way that can align collaborators, stakeholders, and teams.", foot: "Turns private clarity into collective movement" }
     ],
-    reading: "Placeholder: practical statistics, systems thinking, product judgment, and adaptive decision-making.",
-    coaching: "Placeholder: a coach would help convert strategy into consistent weekly execution."
+    reading: "Thinking in Bets (Annie Duke), Upstream (Dan Heath), The Signal and the Noise (Nate Silver) — grounding strategic instinct in evidence-based decision frameworks.",
+    coaching: "A coach helps translate your Strategist pattern into consistent weekly execution: identifying where analysis stalls action and building decision cadence."
   },
   deep: {
     title: "The Deep Dive",
@@ -58,8 +58,8 @@ export const assessmentModes: Record<string, AssessmentModeConfig> = {
       { phase: "Phase III", title: "Practice translation for teams", copy: "Focus on turning multi-domain insights into clear framing for collaborators with narrower vantage points.", foot: "Broadens impact radius" },
       { phase: "Phase IV", title: "Alternate breadth with deliberate depth", copy: "Use periodic depth sprints to ensure range remains paired with tactical credibility.", foot: "Creates a more durable Polymath profile" }
     ],
-    reading: "Placeholder: systems theory, broad science, history of technology, and quantitative reasoning.",
-    coaching: "Placeholder: a coach would help convert broad capability into a sharper operating cadence."
+    reading: "Range (David Epstein), The Systems View of Life (Capra & Luisi), Antifragile (Nassim Taleb) — expanding cross-domain transfer and building robust mental models.",
+    coaching: "A coach helps a Polymath focus: selecting depth sprints, sequencing learning for compounding returns, and converting breadth into legible professional value."
   },
   mirror: {
     title: "The LLM Mirror",
@@ -88,8 +88,8 @@ export const assessmentModes: Record<string, AssessmentModeConfig> = {
       { phase: "Phase III", title: "Strengthen strategic architecture", copy: "Formalize how goals, constraints, and tradeoffs are structured so leadership becomes more reproducible.", foot: "Makes instinct legible" },
       { phase: "Phase IV", title: "Broaden idea generation", copy: "Add creative drills that increase range and allow leadership to steer toward more original outcomes.", foot: "Completes the synthesis loop" }
     ],
-    reading: "Placeholder: decision science, measurement, communication under uncertainty, and creative strategy.",
-    coaching: "Placeholder: a coach would help convert adaptive leadership into a disciplined skill graph."
+    reading: "Superforecasting (Tetlock), Crucial Conversations (Patterson et al.), The Art of Action (Bungay) — strengthening evidence use, communication under pressure, and strategic clarity.",
+    coaching: "A coach helps convert adaptive leadership into a disciplined growth loop: setting measurable targets per domain and building accountability rhythms."
   }
 };
 

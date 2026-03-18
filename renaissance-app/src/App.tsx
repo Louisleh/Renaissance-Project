@@ -54,9 +54,30 @@ function AppFrame({
       <Nav onGetStarted={onGetStarted} onOpenAuth={() => setAuthOpen(true)} />
       {children}
       <footer>
-        <div className="container footer-row">
-          <span>Renaissance Skills</span>
-          <span>Vite + React + TypeScript</span>
+        <div className="container footer-grid">
+          <div className="footer-brand">
+            <strong>Renaissance Skills</strong>
+            <span>Cross-domain skill assessment and development for the AI era.</span>
+          </div>
+          <div className="footer-col">
+            <span className="footer-heading">Product</span>
+            <a href="/#assessment">Assessment</a>
+            <a href="/curriculum">Curriculum</a>
+            <a href="/pricing">Pricing</a>
+          </div>
+          <div className="footer-col">
+            <span className="footer-heading">Account</span>
+            <a href="/profile">Profile</a>
+            <a href="/history">History</a>
+            <a href="/coaching">Coaching</a>
+          </div>
+          <div className="footer-col">
+            <span className="footer-heading">Support</span>
+            <a href="mailto:support@renaissanceskills.com">Contact</a>
+          </div>
+        </div>
+        <div className="container footer-bottom">
+          <span>&copy; 2026 Renaissance Skills. All rights reserved.</span>
         </div>
       </footer>
       <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} />
