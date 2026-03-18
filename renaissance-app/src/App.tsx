@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, useRef, type ReactNode } from 'react';
+import { lazy, Suspense, useState, useCallback, useEffect, useRef, type ReactNode } from 'react';
 import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { AuthModal } from './components/Auth/AuthModal';
 import { Nav } from './components/Nav/Nav';
@@ -9,14 +9,6 @@ import { DashboardSection } from './components/Dashboard/DashboardSection';
 import { AboutSection } from './components/About/AboutSection';
 import { QuickPulseOverlay, loadSavedResult } from './components/QuickPulse/QuickPulseOverlay';
 import { DeepDiveOverlay, loadSavedDeepDiveResult } from './components/DeepDive/DeepDiveOverlay';
-import { ResultsPage } from './components/Results/ResultsPage';
-import { CurriculumPage } from './components/Curriculum/CurriculumPage';
-import { CourseOverview } from './components/Curriculum/CourseOverview';
-import { LessonView } from './components/Curriculum/LessonView';
-import { HistoryPage } from './components/History/HistoryPage';
-import { ProfilePage } from './components/Profile/ProfilePage';
-import { PricingPage } from './components/Pricing/PricingPage';
-import { CoachingPage } from './components/Coaching/CoachingPage';
 import { ErrorBoundary } from './components/common/ErrorBoundary';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { SubscriptionProvider } from './contexts/SubscriptionContext';
@@ -26,6 +18,26 @@ import { assessmentModes } from './data/assessments';
 import type { AssessmentMode, AssessmentResult, ArchetypeKey, DomainScores } from './types';
 import './components/common/ErrorBoundary.css';
 import './styles/global.css';
+
+// Lazy-loaded route components — split into separate chunks
+const ResultsPage = lazy(() => import('./components/Results/ResultsPage').then(m => ({ default: m.ResultsPage })));
+const CurriculumPage = lazy(() => import('./components/Curriculum/CurriculumPage').then(m => ({ default: m.CurriculumPage })));
+const CourseOverview = lazy(() => import('./components/Curriculum/CourseOverview').then(m => ({ default: m.CourseOverview })));
+const LessonView = lazy(() => import('./components/Curriculum/LessonView').then(m => ({ default: m.LessonView })));
+const HistoryPage = lazy(() => import('./components/History/HistoryPage').then(m => ({ default: m.HistoryPage })));
+const ProfilePage = lazy(() => import('./components/Profile/ProfilePage').then(m => ({ default: m.ProfilePage })));
+const PricingPage = lazy(() => import('./components/Pricing/PricingPage').then(m => ({ default: m.PricingPage })));
+const CoachingPage = lazy(() => import('./components/Coaching/CoachingPage').then(m => ({ default: m.CoachingPage })));
+
+function LazyFallback() {
+  return (
+    <main id="main-content">
+      <div className="container" style={{ padding: '5rem 0', textAlign: 'center' }}>
+        <div className="summary-card"><p style={{ color: 'var(--muted)' }}>Loading…</p></div>
+      </div>
+    </main>
+  );
+}
 
 function AppFrame({
   children,
@@ -238,83 +250,21 @@ function HomePage() {
   );
 }
 
-function ResultsRoute() {
+function LazyRoute({ children }: { children: ReactNode }) {
   const navigate = useNavigate();
   return (
     <AppFrame onGetStarted={() => navigate('/', { state: { openQuickPulse: true } })}>
-      <ResultsPage />
+      <Suspense fallback={<LazyFallback />}>{children}</Suspense>
     </AppFrame>
   );
 }
 
-function CurriculumRoute() {
+function AuthLazyRoute({ children }: { children: ReactNode }) {
   const navigate = useNavigate();
-  return (
-    <AppFrame onGetStarted={() => navigate('/', { state: { openQuickPulse: true } })}>
-      <CurriculumPage />
-    </AppFrame>
-  );
-}
-
-function CourseOverviewRoute() {
-  const navigate = useNavigate();
-  return (
-    <AppFrame onGetStarted={() => navigate('/', { state: { openQuickPulse: true } })}>
-      <CourseOverview />
-    </AppFrame>
-  );
-}
-
-function LessonRoute() {
-  const navigate = useNavigate();
-  return (
-    <AppFrame onGetStarted={() => navigate('/', { state: { openQuickPulse: true } })}>
-      <LessonView />
-    </AppFrame>
-  );
-}
-
-function HistoryRoute() {
-  const navigate = useNavigate();
-
   return (
     <AppFrame onGetStarted={() => navigate('/', { state: { openQuickPulse: true } })}>
       <RequireAuth>
-        <HistoryPage />
-      </RequireAuth>
-    </AppFrame>
-  );
-}
-
-function ProfileRoute() {
-  const navigate = useNavigate();
-
-  return (
-    <AppFrame onGetStarted={() => navigate('/', { state: { openQuickPulse: true } })}>
-      <RequireAuth>
-        <ProfilePage />
-      </RequireAuth>
-    </AppFrame>
-  );
-}
-
-function PricingRoute() {
-  const navigate = useNavigate();
-
-  return (
-    <AppFrame onGetStarted={() => navigate('/', { state: { openQuickPulse: true } })}>
-      <PricingPage />
-    </AppFrame>
-  );
-}
-
-function CoachingRoute() {
-  const navigate = useNavigate();
-
-  return (
-    <AppFrame onGetStarted={() => navigate('/', { state: { openQuickPulse: true } })}>
-      <RequireAuth>
-        <CoachingPage />
+        <Suspense fallback={<LazyFallback />}>{children}</Suspense>
       </RequireAuth>
     </AppFrame>
   );
@@ -326,14 +276,14 @@ function AppRoutes() {
       <RouteAnalytics />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/results" element={<ResultsRoute />} />
-        <Route path="/curriculum" element={<CurriculumRoute />} />
-        <Route path="/curriculum/:courseId" element={<CourseOverviewRoute />} />
-        <Route path="/curriculum/:courseId/:lessonId" element={<LessonRoute />} />
-        <Route path="/history" element={<HistoryRoute />} />
-        <Route path="/profile" element={<ProfileRoute />} />
-        <Route path="/pricing" element={<PricingRoute />} />
-        <Route path="/coaching" element={<CoachingRoute />} />
+        <Route path="/results" element={<LazyRoute><ResultsPage /></LazyRoute>} />
+        <Route path="/curriculum" element={<LazyRoute><CurriculumPage /></LazyRoute>} />
+        <Route path="/curriculum/:courseId" element={<LazyRoute><CourseOverview /></LazyRoute>} />
+        <Route path="/curriculum/:courseId/:lessonId" element={<LazyRoute><LessonView /></LazyRoute>} />
+        <Route path="/history" element={<AuthLazyRoute><HistoryPage /></AuthLazyRoute>} />
+        <Route path="/profile" element={<AuthLazyRoute><ProfilePage /></AuthLazyRoute>} />
+        <Route path="/pricing" element={<LazyRoute><PricingPage /></LazyRoute>} />
+        <Route path="/coaching" element={<AuthLazyRoute><CoachingPage /></AuthLazyRoute>} />
       </Routes>
     </>
   );
