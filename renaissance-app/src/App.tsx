@@ -9,6 +9,7 @@ import { DashboardSection } from './components/Dashboard/DashboardSection';
 import { AboutSection } from './components/About/AboutSection';
 import { QuickPulseOverlay, loadSavedResult } from './components/QuickPulse/QuickPulseOverlay';
 import { DeepDiveOverlay, loadSavedDeepDiveResult } from './components/DeepDive/DeepDiveOverlay';
+import { LlmMirrorOverlay } from './components/LlmMirror/LlmMirrorOverlay';
 import { ErrorBoundary } from './components/common/ErrorBoundary';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { SubscriptionProvider } from './contexts/SubscriptionContext';
@@ -108,6 +109,7 @@ function HomePage() {
   const [assessmentMode, setAssessmentMode] = useState<AssessmentMode>('quick');
   const [qpOpen, setQpOpen] = useState(false);
   const [ddOpen, setDdOpen] = useState(false);
+  const [mirrorOpen, setMirrorOpen] = useState(false);
   const [activeArchetype, setActiveArchetype] = useState<ArchetypeKey>('strategist');
   const location = useLocation();
   const navigate = useNavigate();
@@ -140,11 +142,19 @@ function HomePage() {
     setDdOpen(true);
   }, []);
 
+  const handleStartMirror = useCallback(() => {
+    setMirrorOpen(true);
+  }, []);
+
   const handleAssessmentComplete = useCallback((result: AssessmentResult) => {
     setActiveArchetype(result.archetype.key);
   }, []);
 
   const handleDeepDiveComplete = useCallback((result: AssessmentResult) => {
+    setActiveArchetype(result.archetype.key);
+  }, []);
+
+  const handleMirrorComplete = useCallback((result: AssessmentResult) => {
     setActiveArchetype(result.archetype.key);
   }, []);
 
@@ -222,6 +232,7 @@ function HomePage() {
             onSelectMode={setAssessmentMode}
             onStartQuickPulse={handleStartAssessment}
             onStartDeepDive={handleStartDeepDive}
+            onStartMirror={handleStartMirror}
           />
           <ArchetypesSection
             activeArchetype={activeArchetype}
@@ -245,6 +256,11 @@ function HomePage() {
         isOpen={ddOpen}
         onClose={() => setDdOpen(false)}
         onComplete={handleDeepDiveComplete}
+      />
+      <LlmMirrorOverlay
+        isOpen={mirrorOpen}
+        onClose={() => setMirrorOpen(false)}
+        onComplete={handleMirrorComplete}
       />
     </>
   );

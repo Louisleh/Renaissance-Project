@@ -11,6 +11,7 @@ interface AssessmentSectionProps {
   onSelectMode: (mode: AssessmentMode) => void;
   onStartQuickPulse: () => void;
   onStartDeepDive: () => void;
+  onStartMirror: () => void;
 }
 
 export function AssessmentSection({
@@ -18,6 +19,7 @@ export function AssessmentSection({
   onSelectMode,
   onStartQuickPulse,
   onStartDeepDive,
+  onStartMirror,
 }: AssessmentSectionProps) {
   const { user } = useAuth();
   const { hasAccess, openPricing } = useSubscription();
@@ -115,6 +117,7 @@ export function AssessmentSection({
                         openPricing();
                       }
                     }
+                    if (card.key === 'mirror') onStartMirror();
                   }}
                 >
                   {card.key === 'deep' && !hasAccess('deep_dive')
