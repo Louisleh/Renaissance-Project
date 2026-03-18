@@ -1,0 +1,325 @@
+.cur-page {
+  padding: 4rem 0 6rem;
+}
+
+.cur-hero,
+.cur-courses-section {
+  position: relative;
+  z-index: 1;
+}
+
+.cur-hero-copy {
+  max-width: 760px;
+  margin-bottom: 2rem;
+}
+
+.cur-hero-copy h1 {
+  margin-bottom: 1rem;
+}
+
+.cur-hero-subtitle {
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.cur-summary-card,
+.cur-comparison-card,
+.cur-banner,
+.cur-course-card,
+.cur-empty {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.cur-empty {
+  max-width: 720px;
+  margin: 6rem auto;
+  text-align: center;
+}
+
+.cur-empty h2 {
+  margin-bottom: 1rem;
+}
+
+.cur-empty .lede {
+  margin: 0 auto 2rem;
+}
+
+.cur-summary-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.cur-summary-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cur-summary-head h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.cur-summary-head p,
+.cur-summary-meta,
+.cur-course-card p,
+.cur-banner p,
+.cur-courses-head .lede {
+  color: var(--muted);
+}
+
+.cur-summary-meta {
+  display: grid;
+  gap: 0.25rem;
+  text-align: right;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.cur-card-kicker {
+  color: var(--gold);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.cur-progress-track {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(212, 175, 55, 0.1);
+  overflow: hidden;
+}
+
+.cur-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--gold);
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.22);
+  transition: width 0.35s ease;
+}
+
+.cur-comparison-card,
+.cur-banner {
+  margin-top: 1.5rem;
+}
+
+.cur-comparison-card h3,
+.cur-banner h3 {
+  margin: 0.4rem 0 1rem;
+}
+
+.cur-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.cur-comparison-item {
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1rem;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.cur-comparison-label {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.cur-comparison-item strong {
+  font-family: var(--heading-font);
+  font-size: 1.1rem;
+}
+
+.cur-comparison-delta {
+  width: fit-content;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.cur-comparison-delta.is-positive {
+  background: rgba(212, 175, 55, 0.14);
+  color: var(--gold);
+}
+
+.cur-comparison-delta.is-negative {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--muted);
+}
+
+.cur-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.cur-courses-section {
+  padding-top: 3rem;
+}
+
+.cur-courses-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cur-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.cur-course-card {
+  display: grid;
+  gap: 1rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.cur-course-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.cur-course-card.is-locked {
+  opacity: 0.5;
+}
+
+.cur-course-top,
+.cur-progress-meta,
+.cur-course-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.cur-course-order {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font-family: var(--heading-font);
+}
+
+.cur-priority-badge {
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.cur-priority-high {
+  background: rgba(212, 175, 55, 0.16);
+  color: #0d0d0d;
+  font-weight: 700;
+}
+
+.cur-priority-medium {
+  border: 1px solid var(--border);
+  color: var(--gold);
+}
+
+.cur-priority-low {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+}
+
+.cur-course-card h3 {
+  font-size: 1.35rem;
+}
+
+.cur-course-meta,
+.cur-progress-meta,
+.cur-prereq-copy,
+.cur-lock-copy {
+  font-size: 0.86rem;
+}
+
+.cur-progress-meta {
+  color: var(--muted);
+}
+
+.cur-course-copy {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.cur-lock-copy {
+  color: var(--gold);
+}
+
+.cur-prereq-copy {
+  color: var(--muted-strong);
+}
+
+.cur-course-button {
+  justify-content: center;
+}
+
+.cur-course-button:disabled {
+  pointer-events: none;
+}
+
+@media (max-width: 960px) {
+  .cur-comparison-grid,
+  .cur-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .cur-page {
+    padding-top: 2.5rem;
+  }
+
+  .cur-summary-head,
+  .cur-banner,
+  .cur-courses-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cur-summary-meta {
+    text-align: left;
+  }
+
+  .cur-comparison-grid,
+  .cur-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .cur-summary-card,
+  .cur-comparison-card,
+  .cur-banner,
+  .cur-course-card,
+  .cur-empty {
+    padding: 1.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cur-progress-fill,
+  .cur-course-card {
+    transition: none;
+  }
+}

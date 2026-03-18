@@ -1,0 +1,80 @@
+.archetype-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.archetype-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.8rem;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.archetype-card:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+  transform: translateY(-3px);
+}
+
+.archetype-card.is-active {
+  border-color: var(--gold);
+  box-shadow: 0 0 28px rgba(212, 175, 55, 0.12);
+}
+
+.archetype-desc {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 0.8rem 0;
+}
+
+.archetype-score {
+  font-size: 0.78rem;
+  color: var(--muted-strong);
+  letter-spacing: 0.08em;
+}
+
+.spotlight-shell {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.spotlight-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.spotlight-card small {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.spotlight-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.spotlight-card strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--heading-font);
+}
+
+.spotlight-card p {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 640px) {
+  .archetype-grid { grid-template-columns: 1fr; }
+  .spotlight-shell { grid-template-columns: 1fr; }
+}

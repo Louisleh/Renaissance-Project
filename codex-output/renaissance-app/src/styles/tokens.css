@@ -1,0 +1,16 @@
+:root {
+  --bg: #0d0d0d;
+  --bg-deep: #090909;
+  --panel: rgba(22, 21, 18, 0.88);
+  --gold: #d4af37;
+  --gold-strong: #b5952f;
+  --text: #e6e6e6;
+  --muted: #bcb4a3;
+  --muted-strong: #8c8577;
+  --border: rgba(212, 175, 55, 0.2);
+  --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  --heading-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --body-font: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --container: min(1180px, calc(100vw - 2rem));
+  --nav-height: 78px;
+}

@@ -1,0 +1,219 @@
+.lesson-page {
+  padding: 4rem 0 6rem;
+}
+
+.lesson-empty,
+.lesson-shell,
+.lesson-complete-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.lesson-empty {
+  max-width: 720px;
+  margin: 6rem auto;
+  text-align: center;
+}
+
+.lesson-empty h2 {
+  margin-bottom: 1rem;
+}
+
+.lesson-empty .lede {
+  margin: 0 auto 2rem;
+}
+
+.lesson-topbar {
+  margin-bottom: 1rem;
+}
+
+.lesson-back {
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.lesson-back:hover,
+.lesson-back:focus-visible {
+  color: var(--text);
+}
+
+.lesson-progress-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--muted);
+}
+
+.lesson-progress-track {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(212, 175, 55, 0.1);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.lesson-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--gold);
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.22);
+  transition: width 0.35s ease;
+}
+
+.lesson-shell h1 {
+  margin-bottom: 1.5rem;
+}
+
+.lesson-card-kicker {
+  color: var(--gold);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.lesson-body {
+  display: grid;
+  gap: 1rem;
+}
+
+.lesson-body-paragraph,
+.lesson-prompt-box p,
+.lesson-takeaway p,
+.lesson-complete-card p {
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.lesson-body-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+  display: grid;
+  gap: 0.55rem;
+}
+
+.lesson-prompt-box,
+.lesson-takeaway,
+.lesson-notes {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 14px;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.lesson-prompt-box {
+  box-shadow: inset 0 0 0 1px rgba(212, 175, 55, 0.08);
+}
+
+.lesson-prompt-box p {
+  margin-top: 0.6rem;
+}
+
+.lesson-takeaway p {
+  margin-top: 0.6rem;
+}
+
+.lesson-notes textarea {
+  width: 100%;
+  min-height: 180px;
+  margin-top: 0.75rem;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.26);
+  color: var(--text);
+  padding: 1rem;
+  resize: vertical;
+}
+
+.lesson-reading {
+  margin-top: 1.5rem;
+  color: var(--muted);
+}
+
+.lesson-reading strong {
+  color: var(--text);
+}
+
+.lesson-complete-card {
+  margin-top: 1.5rem;
+}
+
+.lesson-complete-card h2 {
+  margin: 0.45rem 0 0.75rem;
+}
+
+.lesson-complete-actions {
+  margin-top: 1.25rem;
+}
+
+.lesson-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.lesson-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+
+.lesson-actions .ghost-button:disabled,
+.lesson-actions .hero-button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.lesson-complete-action.is-success {
+  animation: lessonCompletePulse 0.7s ease;
+}
+
+@keyframes lessonCompletePulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 640px) {
+  .lesson-page {
+    padding-top: 2.5rem;
+  }
+
+  .lesson-empty,
+  .lesson-shell,
+  .lesson-complete-card {
+    padding: 1.4rem;
+  }
+
+  .lesson-progress-row,
+  .lesson-actions,
+  .lesson-actions-right {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lesson-back,
+  .lesson-progress-fill,
+  .lesson-complete-action.is-success {
+    transition: none;
+    animation: none;
+  }
+}

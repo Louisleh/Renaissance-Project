@@ -1,0 +1,4195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renaissance Skills — Map Your Cross-Domain Profile</title>
+  <meta name="description" content="Renaissance Skills is an assessment and development platform that maps your cross-domain skill distribution, assigns a Renaissance archetype, and builds a personalized growth path for the AI era.">
+  <meta property="og:title" content="Renaissance Skills — Map Your Cross-Domain Profile">
+  <meta property="og:description" content="Profile your cross-domain fluency, discover your Renaissance archetype, and build a personalized growth path for the AI era.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Renaissance Skills">
+  <meta name="twitter:description" content="Map your cross-domain skill profile. Discover your Renaissance archetype.">
+  <meta name="theme-color" content="#0d0d0d">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='none' stroke='%23d4af37' stroke-width='4'/><circle cx='50' cy='50' r='25' fill='none' stroke='%23d4af37' stroke-width='2' opacity='.5'/><circle cx='50' cy='50' r='8' fill='%23d4af37'/></svg>">
+  <style>
+    :root {
+      --bg: #0d0d0d;
+      --bg-deep: #090909;
+      --panel: rgba(22, 21, 18, 0.88);
+      --gold: #d4af37;
+      --gold-strong: #b5952f;
+      --text: #e6e6e6;
+      --muted: #bcb4a3;
+      --muted-strong: #8c8577;
+      --border: rgba(212, 175, 55, 0.2);
+      --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+      --heading-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --body-font: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      --container: min(1180px, calc(100vw - 2rem));
+      --nav-height: 78px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: auto;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: var(--body-font);
+      background:
+        radial-gradient(circle at top, rgba(212, 175, 55, 0.09), transparent 28%),
+        radial-gradient(circle at 20% 15%, rgba(212, 175, 55, 0.06), transparent 24%),
+        linear-gradient(180deg, var(--bg-deep) 0%, var(--bg) 40%, #0f0e0a 100%);
+      min-height: 100vh;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::before {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: radial-gradient(circle at center, black 46%, transparent 100%);
+      opacity: 0.18;
+    }
+
+    body::after {
+      background:
+        radial-gradient(circle at 50% 12%, rgba(212, 175, 55, 0.08), transparent 24%),
+        radial-gradient(circle at 80% 40%, rgba(212, 175, 55, 0.04), transparent 22%),
+        radial-gradient(circle at 18% 60%, rgba(212, 175, 55, 0.04), transparent 18%);
+      animation: ambientShift 18s linear infinite alternate;
+      opacity: 0.8;
+    }
+
+    @keyframes ambientShift {
+      from {
+        transform: translateY(0) scale(1);
+      }
+      to {
+        transform: translateY(-24px) scale(1.03);
+      }
+    }
+
+    /* ── Hero entrance & ambient animations ── */
+    @keyframes heroFadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes heroScaleIn {
+      from { opacity: 0; transform: scale(0.85); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes heroPulseRing {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50%      { transform: scale(1.08); opacity: 0.2; }
+    }
+    @keyframes heroGlowPulse {
+      0%, 100% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.2), 0 0 80px rgba(212, 175, 55, 0.08); }
+      50%      { box-shadow: 0 0 60px rgba(212, 175, 55, 0.35), 0 0 120px rgba(212, 175, 55, 0.15); }
+    }
+    @keyframes heroFloat {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-8px); }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    @keyframes archCardEnter {
+      from { opacity: 0; transform: translateY(30px) scale(0.9); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes ctaGlow {
+      0%, 100% { box-shadow: 0 16px 40px rgba(0,0,0,0.38), 0 0 28px rgba(212,175,55,0.2); }
+      50%      { box-shadow: 0 16px 50px rgba(0,0,0,0.45), 0 0 50px rgba(212,175,55,0.35), 0 0 80px rgba(212,175,55,0.12); }
+    }
+
+    ::selection {
+      background: rgba(212, 175, 55, 0.28);
+      color: var(--text);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: 0;
+      background: none;
+      color: inherit;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    main,
+    header,
+    footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      width: var(--container);
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 6.5rem 0;
+      position: relative;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.16), transparent);
+      opacity: 0.7;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.75rem;
+      color: var(--gold);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 36px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    .eyebrow::after {
+      content: "";
+      width: 36px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: var(--heading-font);
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 5.7rem);
+      line-height: 0.98;
+    }
+
+    h2 {
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      line-height: 1.05;
+    }
+
+    h3 {
+      font-size: clamp(1.35rem, 2vw, 1.9rem);
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .lede {
+      font-size: 1.06rem;
+      color: var(--muted);
+      max-width: 70ch;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.025);
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .pill::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 16px rgba(212, 175, 55, 0.8);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(34px);
+      transition: opacity 0.85s ease, transform 0.85s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(180deg, rgba(9, 9, 9, 0.9), rgba(9, 9, 9, 0.56));
+      border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+    }
+
+    .nav {
+      min-height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-family: var(--heading-font);
+      letter-spacing: 0.06em;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      position: relative;
+      background:
+        radial-gradient(circle at center, rgba(212, 175, 55, 0.15), transparent 60%),
+        linear-gradient(145deg, rgba(212, 175, 55, 0.1), rgba(255, 255, 255, 0.02));
+      box-shadow: inset 0 0 22px rgba(212, 175, 55, 0.08), 0 0 30px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+    }
+
+    .brand-mark::before,
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+    }
+
+    .brand-mark::before {
+      width: 72%;
+      height: 72%;
+    }
+
+    .brand-mark::after {
+      width: 32%;
+      height: 32%;
+      background: rgba(212, 175, 55, 0.2);
+      box-shadow: 0 0 18px rgba(212, 175, 55, 0.6);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .nav-link {
+      position: relative;
+      color: var(--muted);
+      font-family: var(--heading-font);
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding-bottom: 0.3rem;
+      transition: color 0.25s ease;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      transform: scaleX(0.25);
+      transform-origin: center;
+      opacity: 0;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible,
+    .nav-link.is-active {
+      color: var(--text);
+    }
+
+    .nav-link:hover::after,
+    .nav-link:focus-visible::after,
+    .nav-link.is-active::after {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+
+    .nav-cta {
+      padding: 0.78rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.18), rgba(212, 175, 55, 0.05));
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-cta:hover,
+    .nav-cta:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.38), 0 0 24px rgba(212, 175, 55, 0.18);
+    }
+
+    .hero {
+      padding-top: 2rem;
+      padding-bottom: 0;
+      min-height: calc(100vh - var(--nav-height));
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-shell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+    }
+
+    /* Hero Top Bar */
+    .hero-top {
+      text-align: center;
+      margin-bottom: 1rem;
+      animation: heroFadeUp 1s ease-out 0.2s both;
+    }
+
+    .hero-brand-title {
+      font-family: var(--heading-font);
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .hero-brand-sub {
+      font-size: 0.78rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--muted-strong);
+      margin-top: 0.3rem;
+    }
+
+    .hero-headline {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      animation: heroFadeUp 1s ease-out 0.4s both;
+    }
+
+    .hero-headline h1 {
+      font-size: clamp(2.2rem, 5.5vw, 4.5rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.05;
+      background: linear-gradient(
+        90deg,
+        #a8862a 0%, #d4af37 25%, #f5e6b8 50%, #d4af37 75%, #a8862a 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 6s linear infinite;
+    }
+
+    /* Central Stage */
+    .hero-center {
+      position: relative;
+      width: min(100%, 1200px);
+      flex: 1;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: heroScaleIn 1.4s ease-out 0.5s both;
+    }
+
+    /* Constellation background */
+    .hero-constellation {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .hero-constellation svg {
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    /* Central Vitruvian figure */
+    .hero-figure-wrap {
+      position: relative;
+      width: min(420px, 50vw);
+      aspect-ratio: 1;
+      z-index: 2;
+      animation: heroScaleIn 1.2s ease-out 0.6s both;
+    }
+
+    .hero-figure-circle {
+      position: absolute;
+      inset: -8%;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      animation: heroPulseRing 4s ease-in-out infinite;
+    }
+
+    .hero-figure-circle::before {
+      content: "";
+      position: absolute;
+      inset: -12%;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.08);
+      animation: heroPulseRing 4s ease-in-out 1s infinite;
+    }
+
+    .hero-figure-square {
+      display: none;
+    }
+
+    .hero-figure-svg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border-radius: 50%;
+      animation: heroGlowPulse 4s ease-in-out infinite;
+    }
+
+    .hero-vitruvian-img {
+      width: 110%;
+      height: 110%;
+      object-fit: cover;
+      filter: drop-shadow(0 0 50px rgba(212, 175, 55, 0.3)) drop-shadow(0 0 100px rgba(212, 175, 55, 0.1));
+      animation: heroFloat 6s ease-in-out infinite;
+    }
+
+    /* Radar overlay on figure */
+    .hero-radar-overlay {
+      position: absolute;
+      inset: 2%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-radar-overlay svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Skill Labels - floating around center, behind archetype cards */
+    .hero-skill-labels {
+      position: absolute;
+      inset: 5% 8%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-skill-label {
+      position: absolute;
+      font-family: var(--heading-font);
+      font-size: clamp(0.7rem, 1.3vw, 1.05rem);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+      pointer-events: auto;
+      cursor: default;
+      transition: color 0.25s ease, text-shadow 0.25s ease;
+    }
+
+    .hero-skill-label:hover {
+      color: var(--text);
+      text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    }
+
+    .hero-skill-label::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+
+    /* Archetype corner cards */
+    .hero-archetypes {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-arch-card {
+      position: absolute;
+      width: clamp(140px, 16vw, 200px);
+      pointer-events: auto;
+      text-align: center;
+      cursor: pointer;
+      padding: 1rem 0.5rem 0.8rem;
+      border-radius: 16px;
+      background: rgba(18, 16, 12, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.12);
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      animation: archCardEnter 0.8s ease-out both;
+    }
+
+    .hero-arch-card--tl { top: 0; left: 0; animation-delay: 0.8s; }
+    .hero-arch-card--tr { top: 0; right: 0; animation-delay: 1.0s; }
+    .hero-arch-card--bl { bottom: 2rem; left: 0; animation-delay: 1.2s; }
+    .hero-arch-card--br { bottom: 2rem; right: 0; animation-delay: 1.4s; }
+
+    .hero-arch-card:hover {
+      transform: scale(1.08) translateY(-4px);
+      border-color: rgba(212, 175, 55, 0.35);
+      box-shadow: 0 8px 32px rgba(212, 175, 55, 0.12), 0 0 0 1px rgba(212, 175, 55, 0.08);
+    }
+
+    .hero-arch-icon {
+      width: clamp(80px, 10vw, 120px);
+      height: clamp(80px, 10vw, 120px);
+      margin: 0 auto 0.5rem;
+      border-radius: 50%;
+      border: 2px solid rgba(212, 175, 55, 0.25);
+      background: rgba(212, 175, 55, 0.05);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.15), inset 0 0 20px rgba(212, 175, 55, 0.05);
+      transition: border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .hero-arch-card:hover .hero-arch-icon {
+      border-color: rgba(212, 175, 55, 0.5);
+      box-shadow: 0 0 40px rgba(212, 175, 55, 0.25), inset 0 0 20px rgba(212, 175, 55, 0.08);
+    }
+
+    .hero-arch-icon svg,
+    .hero-arch-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      opacity: 0.88;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .hero-arch-card:hover .hero-arch-img {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    .hero-arch-name {
+      font-family: var(--heading-font);
+      font-size: clamp(0.7rem, 1vw, 0.9rem);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-arch-desc {
+      font-size: clamp(0.6rem, 0.8vw, 0.75rem);
+      color: var(--muted-strong);
+      line-height: 1.4;
+    }
+
+    /* Connection lines from archetypes to center */
+    .hero-connections {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-connections svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* CTA area */
+    .hero-cta-area {
+      text-align: center;
+      padding: 1.5rem 0;
+      z-index: 4;
+      animation: heroFadeUp 1s ease-out 1.4s both;
+    }
+
+    .hero-cta-sub {
+      margin-top: 0.6rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    /* Bottom info bar */
+    .hero-info-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 1.5rem 0 2rem;
+      border-top: 1px solid rgba(212, 175, 55, 0.1);
+      animation: heroFadeUp 1s ease-out 1.6s both;
+    }
+
+    .hero-info-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      text-align: center;
+    }
+
+    .hero-info-icon {
+      width: 36px;
+      height: 36px;
+      color: var(--gold);
+      opacity: 0.7;
+    }
+
+    .hero-info-title {
+      font-family: var(--heading-font);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero-info-desc {
+      font-size: 0.78rem;
+      color: var(--muted-strong);
+    }
+
+    .hero-actions {
+      margin-top: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero-archetypes {
+        display: none;
+      }
+      .hero-center {
+        min-height: 400px;
+        justify-content: center;
+      }
+      .hero-figure-wrap {
+        width: min(320px, 70vw);
+        margin: 0 auto;
+      }
+      .hero-skill-labels {
+        inset: 5% 5%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-center {
+        min-height: 350px;
+      }
+      .hero-figure-wrap {
+        width: min(280px, 80vw);
+        margin: 0 auto;
+      }
+      .hero-skill-labels {
+        inset: 2% 0%;
+      }
+      .hero-info-bar {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero-button,
+    .ghost-button,
+    .assessment-button,
+    .copy-button,
+    .tab-button {
+      border-radius: 999px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .hero-button {
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, var(--gold), var(--gold-strong));
+      color: #14110a;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.38), 0 0 28px rgba(212, 175, 55, 0.2);
+      animation: ctaGlow 3s ease-in-out infinite;
+    }
+
+    .hero-button:hover,
+    .hero-button:focus-visible,
+    .assessment-button:hover,
+    .assessment-button:focus-visible,
+    .copy-button:hover,
+    .copy-button:focus-visible,
+    .tab-button:hover,
+    .tab-button:focus-visible {
+      transform: translateY(-2px);
+    }
+
+    .ghost-button {
+      padding: 0.95rem 1.35rem;
+      border: 1px solid rgba(212, 175, 55, 0.24);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+    }
+
+    .radar-svg {
+      overflow: visible;
+      filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.1));
+    }
+
+    .radar-axis,
+    .radar-ring-line {
+      fill: none;
+      stroke: rgba(212, 175, 55, 0.18);
+      stroke-width: 0.8;
+      vector-effect: non-scaling-stroke;
+    }
+
+    .radar-ring-line {
+      stroke: rgba(212, 175, 55, 0.1);
+    }
+
+    .radar-glow {
+      vector-effect: non-scaling-stroke;
+    }
+
+    .radar-shape {
+      vector-effect: non-scaling-stroke;
+    }
+
+    .dashboard-card,
+    .assessment-card,
+    .console-card,
+    .archetype-card,
+    .spotlight-card,
+    .summary-card,
+    .growth-card,
+    .timeline-card,
+    .about-card,
+    .future-card {
+      border-radius: 26px;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+        var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .dashboard-card {
+      padding: 1.2rem 1.3rem;
+      display: grid;
+      gap: 0.45rem;
+      min-height: 122px;
+    }
+
+    .dashboard-card strong {
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .dashboard-card span {
+      font-family: var(--heading-font);
+      font-size: clamp(1.55rem, 3vw, 2rem);
+    }
+
+    .dashboard-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .section-head {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 2.4rem;
+    }
+
+    .section-head h2 {
+      max-width: 52ch;
+    }
+
+    .section-head .lede {
+      max-width: 62ch;
+    }
+
+    .section + .section {
+      border-top: 1px solid rgba(212, 175, 55, 0.06);
+    }
+
+    .assessment-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .assessment-card {
+      position: relative;
+      padding: 1.5rem;
+      display: grid;
+      gap: 1rem;
+      overflow: hidden;
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .assessment-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -20% -40% auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.15), transparent 68%);
+      filter: blur(10px);
+      opacity: 0.55;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .assessment-card:hover::before {
+      opacity: 0.85;
+      transform: scale(1.2);
+    }
+
+    .assessment-card:hover,
+    .assessment-card:focus-within,
+    .assessment-card.is-selected {
+      transform: translateY(-6px);
+      border-color: rgba(239, 211, 104, 0.5);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.4), 0 0 40px rgba(212, 175, 55, 0.15);
+    }
+
+    .assessment-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .assessment-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      background: linear-gradient(145deg, rgba(212, 175, 55, 0.14), rgba(255, 255, 255, 0.02));
+      color: #f0de9b;
+      box-shadow: inset 0 0 18px rgba(212, 175, 55, 0.08), 0 0 20px rgba(212, 175, 55, 0.08);
+      transition: box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .assessment-card:hover .assessment-icon {
+      border-color: rgba(212, 175, 55, 0.45);
+      box-shadow: inset 0 0 18px rgba(212, 175, 55, 0.12), 0 0 30px rgba(212, 175, 55, 0.15);
+    }
+
+    .assessment-meta {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.73rem;
+    }
+
+    .assessment-copy {
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .assessment-copy p {
+      color: var(--muted);
+    }
+
+    .assessment-list {
+      display: grid;
+      gap: 0.5rem;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .assessment-list div {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .assessment-list div::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.75);
+      box-shadow: 0 0 14px rgba(212, 175, 55, 0.42);
+    }
+
+    .assessment-button {
+      justify-self: start;
+      padding: 0.78rem 1.1rem;
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .assessment-button.is-active {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.07));
+      border-color: rgba(239, 211, 104, 0.45);
+    }
+
+    .assessment-console {
+      margin-top: 1.6rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      gap: 1.2rem;
+      align-items: stretch;
+    }
+
+    .console-card,
+    .summary-card,
+    .spotlight-card,
+    .about-card,
+    .future-card {
+      padding: 1.5rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .console-card h3,
+    .summary-card h3,
+    .spotlight-card h3,
+    .about-card h3,
+    .future-card h3 {
+      font-size: 1.3rem;
+    }
+
+    .console-kicker {
+      color: var(--muted);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.76rem;
+    }
+
+    .console-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    .console-stat {
+      padding: 0.9rem 1rem;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(212, 175, 55, 0.12);
+      display: grid;
+      gap: 0.28rem;
+    }
+
+    .console-stat strong {
+      font-size: 1.45rem;
+      font-family: var(--heading-font);
+    }
+
+    .console-stat span {
+      color: var(--muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .prompt-panel {
+      display: grid;
+      gap: 0.85rem;
+      align-content: start;
+    }
+
+    .prompt-panel textarea {
+      width: 100%;
+      min-height: 260px;
+      border-radius: 20px;
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      background: rgba(0, 0, 0, 0.26);
+      color: var(--text);
+      padding: 1rem;
+      resize: vertical;
+      box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .copy-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .copy-button {
+      padding: 0.78rem 1.1rem;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.84rem;
+    }
+
+    .copy-status {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .archetype-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .archetype-card {
+      padding: 1.35rem;
+      display: grid;
+      gap: 0.85rem;
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .archetype-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(circle at 50% 120%, rgba(212, 175, 55, 0.08), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .archetype-card:hover::after,
+    .archetype-card.is-active::after {
+      opacity: 1;
+    }
+
+    .archetype-card:hover,
+    .archetype-card:focus-visible,
+    .archetype-card.is-active {
+      transform: translateY(-6px);
+      border-color: rgba(239, 211, 104, 0.5);
+      box-shadow: 0 24px 44px rgba(0, 0, 0, 0.35), 0 0 40px rgba(212, 175, 55, 0.12);
+    }
+
+    .archetype-tag {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      padding: 0.42rem 0.72rem;
+      border-radius: 999px;
+      background: rgba(212, 175, 55, 0.12);
+      color: #efd368;
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .archetype-desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .archetype-score {
+      margin-top: auto;
+      color: var(--text);
+      font-size: 0.92rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .spotlight-shell {
+      margin-top: 1.2rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    .spotlight-card {
+      transition: border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .spotlight-card:hover {
+      border-color: rgba(212, 175, 55, 0.3);
+      box-shadow: var(--shadow), 0 0 30px rgba(212, 175, 55, 0.06);
+    }
+
+    .spotlight-card small {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.72rem;
+    }
+
+    .spotlight-card strong {
+      font-family: var(--heading-font);
+      font-size: 1.2rem;
+    }
+
+    .dashboard-shell {
+      display: grid;
+      grid-template-columns: minmax(290px, 0.86fr) minmax(0, 1.14fr);
+      gap: 1.2rem;
+      align-items: start;
+    }
+
+    .summary-card {
+      position: sticky;
+      top: calc(var(--nav-height) + 1rem);
+    }
+
+    .balance-value {
+      font-family: var(--heading-font);
+      font-size: clamp(3.1rem, 8vw, 4.5rem);
+      line-height: 0.92;
+    }
+
+    .scorebars {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .scorebar {
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .scorebar-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .scorebar-track {
+      height: 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, 0.08);
+    }
+
+    .scorebar-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.9));
+      box-shadow: 0 0 18px rgba(212, 175, 55, 0.22);
+      transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .weakness-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .weakness-chip {
+      padding: 0.55rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .dashboard-main {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .tab-row {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .tab-button {
+      padding: 0.88rem 1.15rem;
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      background: rgba(255, 255, 255, 0.025);
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+    }
+
+    .tab-button.is-active {
+      color: #14110a;
+      background: linear-gradient(135deg, #e2c869, var(--gold));
+      border-color: rgba(239, 211, 104, 0.48);
+    }
+
+    .panel-stack {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .panel {
+      display: none;
+    }
+
+    .panel.is-active {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .growth-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .growth-card,
+    .timeline-card {
+      padding: 1.3rem;
+      display: grid;
+      gap: 0.75rem;
+      min-height: 230px;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .growth-card:hover,
+    .timeline-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 175, 55, 0.3);
+      box-shadow: var(--shadow), 0 0 30px rgba(212, 175, 55, 0.08);
+    }
+
+    .growth-meta,
+    .timeline-phase {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.72rem;
+    }
+
+    .growth-card p,
+    .timeline-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .growth-foot,
+    .timeline-foot {
+      margin-top: auto;
+      color: #efd368;
+      font-size: 0.88rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .timeline-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .timeline-card {
+      position: relative;
+      grid-template-columns: 92px 1fr;
+      align-items: start;
+      min-height: unset;
+    }
+
+    .timeline-card::before {
+      content: "";
+      position: absolute;
+      left: 45px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, rgba(212, 175, 55, 0.35), rgba(212, 175, 55, 0.03));
+      opacity: 0.8;
+    }
+
+    .timeline-index {
+      position: relative;
+      z-index: 1;
+      width: 92px;
+      display: grid;
+      justify-items: center;
+      gap: 0.45rem;
+    }
+
+    .timeline-index strong {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, rgba(212, 175, 55, 0.22), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      color: #efd368;
+      font-family: var(--heading-font);
+      box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.08);
+    }
+
+    .timeline-content {
+      display: grid;
+      gap: 0.72rem;
+    }
+
+    .future-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .future-card {
+      min-height: 210px;
+      align-content: start;
+    }
+
+    .future-card .placeholder {
+      margin-top: auto;
+      padding: 0.9rem 1rem;
+      border-radius: 18px;
+      border: 1px dashed rgba(212, 175, 55, 0.26);
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .about-card {
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 175, 55, 0.3);
+      box-shadow: var(--shadow), 0 0 30px rgba(212, 175, 55, 0.06);
+    }
+
+    .about-card p {
+      color: var(--muted);
+    }
+
+    .about-card ul {
+      margin: 0;
+      padding-left: 1.2rem;
+      color: var(--muted);
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    footer {
+      padding: 1.5rem 0 3rem;
+      color: var(--muted-strong);
+      font-size: 0.88rem;
+    }
+
+    .footer-row {
+      border-top: 1px solid rgba(212, 175, 55, 0.12);
+      padding-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1100px) {
+      .assessment-grid,
+      .archetype-grid,
+      .about-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .dashboard-shell,
+      .assessment-console {
+        grid-template-columns: 1fr;
+      }
+
+      .summary-card {
+        position: relative;
+        top: auto;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .spotlight-shell,
+      .future-grid,
+      .growth-grid,
+      .console-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .assessment-grid,
+      .archetype-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-card {
+        grid-template-columns: 70px 1fr;
+      }
+
+      .timeline-card::before {
+        left: 33px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 100;
+      padding: 0.75rem 1.2rem;
+      background: var(--gold);
+      color: #14110a;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 0 0 8px 0;
+    }
+
+    .skip-link:focus {
+      left: 0;
+    }
+
+    .mobile-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      background: rgba(255, 255, 255, 0.03);
+      place-items: center;
+      color: var(--muted);
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .mobile-toggle:hover,
+    .mobile-toggle:focus-visible {
+      color: var(--text);
+      border-color: rgba(212, 175, 55, 0.45);
+    }
+
+    .mobile-toggle svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 19;
+      background: rgba(9, 9, 9, 0.96);
+      backdrop-filter: blur(24px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .mobile-menu.is-open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .mobile-menu .nav-link {
+      font-size: 1.4rem;
+      letter-spacing: 0.1em;
+      padding: 0.5rem 0;
+    }
+
+    .mobile-menu .nav-link::after {
+      display: none;
+    }
+
+    .mobile-menu-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      transition: color 0.2s ease;
+    }
+
+    .mobile-menu-close:hover,
+    .mobile-menu-close:focus-visible {
+      color: var(--text);
+    }
+
+    @media (max-width: 640px) {
+      :root {
+        --container: min(100vw - 1.2rem, 100%);
+      }
+
+      .nav {
+        padding: 0.8rem 0;
+        justify-content: space-between;
+      }
+
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .mobile-toggle {
+        display: grid;
+      }
+
+      .section {
+        padding: 5rem 0;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-button,
+      .ghost-button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .timeline-card {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-card::before,
+      .timeline-index {
+        display: none;
+      }
+
+      .copy-row {
+        align-items: start;
+      }
+    }
+    /* ── Quick Pulse Assessment Overlay ── */
+
+    .qp-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      background: var(--bg);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .qp-overlay.is-open {
+      display: block;
+    }
+
+    .qp-container {
+      width: min(720px, calc(100vw - 2rem));
+      margin: 0 auto;
+      padding: 2rem 0 4rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .qp-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+      margin-bottom: 2rem;
+    }
+
+    .qp-header-brand {
+      font-family: var(--heading-font);
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .qp-close {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      background: rgba(255, 255, 255, 0.03);
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .qp-close:hover,
+    .qp-close:focus-visible {
+      color: var(--text);
+      border-color: rgba(212, 175, 55, 0.45);
+    }
+
+    /* Screens */
+    .qp-screen {
+      display: none;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    .qp-screen.is-active {
+      display: flex;
+    }
+
+    /* Intro Screen */
+    .qp-intro {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 1.5rem;
+    }
+
+    .qp-intro h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .qp-intro-body {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 52ch;
+      line-height: 1.65;
+    }
+
+    .qp-intro-bullets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+    }
+
+    .qp-intro-bullets .pill {
+      font-size: 0.85rem;
+    }
+
+    .qp-intro-note {
+      color: var(--muted-strong);
+      font-size: 0.88rem;
+      font-style: italic;
+    }
+
+    .qp-start-btn {
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, var(--gold), var(--gold-strong));
+      color: #14110a;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      border-radius: 999px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.38), 0 0 28px rgba(212, 175, 55, 0.2);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .qp-start-btn:hover,
+    .qp-start-btn:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.42), 0 0 36px rgba(212, 175, 55, 0.28);
+    }
+
+    .qp-back-link {
+      color: var(--muted);
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .qp-back-link:hover {
+      color: var(--text);
+    }
+
+    /* Progress Bar */
+    .qp-progress {
+      margin-bottom: 2rem;
+    }
+
+    .qp-progress-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.6rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+    }
+
+    .qp-progress-track {
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(212, 175, 55, 0.08);
+      overflow: hidden;
+    }
+
+    .qp-progress-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.4), var(--gold));
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+      transition: width 0.35s ease;
+    }
+
+    /* Question Card */
+    .qp-question-card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .qp-prompt {
+      font-family: var(--heading-font);
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      line-height: 1.3;
+    }
+
+    .qp-options {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .qp-option {
+      text-align: left;
+      padding: 1rem 1.2rem;
+      border-radius: 18px;
+      border: 1px solid rgba(212, 175, 55, 0.16);
+      background: rgba(255, 255, 255, 0.025);
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.5;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .qp-option:hover,
+    .qp-option:focus-visible {
+      border-color: rgba(212, 175, 55, 0.35);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .qp-option.is-selected {
+      border-color: rgba(239, 211, 104, 0.55);
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.14), rgba(212, 175, 55, 0.06));
+      color: var(--text);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 0 0 20px rgba(212, 175, 55, 0.08);
+    }
+
+    .qp-option.is-selected::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.7);
+      margin-right: 0.6rem;
+      vertical-align: middle;
+    }
+
+    /* Navigation Buttons */
+    .qp-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-top: auto;
+      padding-top: 2rem;
+    }
+
+    .qp-nav-btn {
+      padding: 0.85rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .qp-btn-back {
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+    }
+
+    .qp-btn-back:hover {
+      color: var(--text);
+      border-color: rgba(212, 175, 55, 0.35);
+    }
+
+    .qp-btn-next {
+      background: linear-gradient(135deg, var(--gold), var(--gold-strong));
+      color: #14110a;
+      font-weight: 700;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(212, 175, 55, 0.15);
+    }
+
+    .qp-btn-next:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35), 0 0 28px rgba(212, 175, 55, 0.22);
+    }
+
+    .qp-btn-next:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Calculating Screen */
+    .qp-calculating {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .qp-calc-spinner {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 3px solid rgba(212, 175, 55, 0.15);
+      border-top-color: var(--gold);
+      animation: qpSpin 0.8s linear infinite;
+    }
+
+    @keyframes qpSpin {
+      to { transform: rotate(360deg); }
+    }
+
+    .qp-calc-text {
+      font-family: var(--heading-font);
+      font-size: 1.4rem;
+      color: var(--muted);
+    }
+
+    /* Results Screen */
+    .qp-results {
+      gap: 2.5rem;
+    }
+
+    .qp-results-header {
+      text-align: center;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .qp-results-header h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .qp-results-confidence {
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-style: italic;
+    }
+
+    .qp-archetype-result {
+      text-align: center;
+      padding: 2rem;
+      border-radius: 26px;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      background:
+        radial-gradient(circle at top, rgba(212, 175, 55, 0.08), transparent 50%),
+        var(--panel);
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .qp-archetype-result .archetype-tag {
+      justify-self: center;
+    }
+
+    .qp-archetype-result h3 {
+      font-size: 1.8rem;
+    }
+
+    .qp-archetype-result p {
+      color: var(--muted);
+      max-width: 50ch;
+      margin: 0 auto;
+    }
+
+    .qp-archetype-confidence {
+      color: var(--muted-strong);
+      font-size: 0.82rem;
+    }
+
+    /* Results Radar */
+    .qp-radar-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .qp-radar-wrap {
+      aspect-ratio: 1;
+      max-width: 380px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .qp-radar-wrap svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .qp-domain-list {
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .qp-domain-row {
+      display: grid;
+      gap: 0.3rem;
+    }
+
+    .qp-domain-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .qp-domain-name {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .qp-domain-score {
+      font-family: var(--heading-font);
+      font-size: 1rem;
+    }
+
+    .qp-domain-level {
+      font-size: 0.75rem;
+      color: var(--muted-strong);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .qp-domain-bar {
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(212, 175, 55, 0.06);
+      overflow: hidden;
+    }
+
+    .qp-domain-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.3), rgba(212, 175, 55, 0.85));
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.15);
+      transition: width 0.6s ease;
+    }
+
+    /* Strengths / Growth */
+    .qp-sg-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .qp-sg-card {
+      padding: 1.3rem;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+    }
+
+    .qp-sg-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .qp-sg-list {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .qp-sg-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .qp-sg-item::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .qp-strength-item::before {
+      background: var(--gold);
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+    }
+
+    .qp-growth-item::before {
+      background: rgba(212, 175, 55, 0.35);
+    }
+
+    /* Balance */
+    .qp-balance-row {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+    }
+
+    .qp-balance-number {
+      font-family: var(--heading-font);
+      font-size: 3.5rem;
+      line-height: 1;
+      color: var(--gold);
+    }
+
+    .qp-balance-info {
+      display: grid;
+      gap: 0.3rem;
+    }
+
+    .qp-balance-info h4 {
+      font-size: 1.1rem;
+    }
+
+    .qp-balance-info p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* Recommended Modules */
+    .qp-modules {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .qp-modules h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .qp-module-card {
+      padding: 1rem 1.2rem;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .qp-module-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(212, 175, 55, 0.12);
+      color: var(--gold);
+      font-family: var(--heading-font);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .qp-module-info {
+      display: grid;
+      gap: 0.15rem;
+    }
+
+    .qp-module-name {
+      font-size: 0.95rem;
+    }
+
+    .qp-module-domain {
+      font-size: 0.78rem;
+      color: var(--muted-strong);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Results Actions */
+    .qp-results-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      padding-top: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .qp-radar-section,
+      .qp-sg-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .qp-balance-row {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .qp-results-actions {
+        flex-direction: column;
+      }
+
+      .qp-results-actions button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#home">Skip to content</a>
+  <header class="nav-wrap">
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Renaissance Skills</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#assessment">Assessment</a>
+        <a class="nav-link" href="#development">Development</a>
+        <a class="nav-link" href="#about">About</a>
+      </nav>
+      <button class="nav-cta" id="navGetStarted">Get Started</button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="4" y1="7" x2="20" y2="7"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="6" y1="6" x2="18" y2="18"/>
+        <line x1="18" y1="6" x2="6" y2="18"/>
+      </svg>
+    </button>
+    <a class="nav-link" href="#home" data-mobile-link>Home</a>
+    <a class="nav-link" href="#assessment" data-mobile-link>Assessment</a>
+    <a class="nav-link" href="#development" data-mobile-link>Development</a>
+    <a class="nav-link" href="#about" data-mobile-link>About</a>
+  </div>
+
+  <!-- Quick Pulse Assessment Overlay -->
+  <div class="qp-overlay" id="qpOverlay" role="dialog" aria-label="Quick Pulse Assessment" aria-modal="true">
+    <div class="qp-container">
+      <div class="qp-header">
+        <span class="qp-header-brand">Quick Pulse</span>
+        <button class="qp-close" id="qpClose" aria-label="Close assessment">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Screen 1: Intro -->
+      <div class="qp-screen is-active" id="qpIntroScreen">
+        <div class="qp-intro">
+          <div class="eyebrow">The Quick Pulse</div>
+          <h2 id="qpIntroHeadline">Map your Renaissance baseline</h2>
+          <p class="qp-intro-body" id="qpIntroBody">This short assessment estimates how your strengths are distributed across eight cross-domain capabilities. You will get an archetype, a skill profile, and recommended next steps.</p>
+          <div class="qp-intro-bullets" id="qpIntroBullets"></div>
+          <p class="qp-intro-note">Your result is a directional baseline — not a definitive measurement.</p>
+          <button class="qp-start-btn" id="qpStartBtn">Start Quick Pulse</button>
+          <button class="qp-back-link" id="qpBackToModes">Back to Assessment Modes</button>
+        </div>
+      </div>
+
+      <!-- Screen 2/3: Question Flow -->
+      <div class="qp-screen" id="qpQuestionScreen">
+        <div class="qp-progress" aria-live="polite">
+          <div class="qp-progress-info">
+            <span id="qpQuestionCounter">Question 1 of 10</span>
+            <span id="qpProgressPct">10%</span>
+          </div>
+          <div class="qp-progress-track">
+            <div class="qp-progress-fill" id="qpProgressFill" style="width: 10%"></div>
+          </div>
+        </div>
+        <div class="qp-question-card">
+          <p class="qp-prompt" id="qpPrompt"></p>
+          <div class="qp-options" id="qpOptions" role="radiogroup"></div>
+          <div class="qp-nav">
+            <button class="qp-nav-btn qp-btn-back" id="qpBack">Back</button>
+            <button class="qp-nav-btn qp-btn-next" id="qpNext" disabled>Next</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen 4: Calculating -->
+      <div class="qp-screen" id="qpCalcScreen">
+        <div class="qp-calculating">
+          <div class="qp-calc-spinner" aria-hidden="true"></div>
+          <p class="qp-calc-text">Mapping your Renaissance profile...</p>
+        </div>
+      </div>
+
+      <!-- Screen 5: Results -->
+      <div class="qp-screen" id="qpResultsScreen">
+        <div class="qp-results">
+          <div class="qp-results-header">
+            <div class="eyebrow">Your Renaissance Profile</div>
+            <h2>Assessment Complete</h2>
+            <p class="qp-results-confidence">Directional baseline — Quick Pulse v1</p>
+          </div>
+
+          <div class="qp-archetype-result" id="qpArchetypeResult"></div>
+
+          <div class="qp-radar-section">
+            <div class="qp-radar-wrap">
+              <svg id="qpRadarSvg" viewBox="-200 -200 400 400"></svg>
+            </div>
+            <div class="qp-domain-list" id="qpDomainList"></div>
+          </div>
+
+          <div class="qp-sg-grid">
+            <div class="qp-sg-card">
+              <h4>Top Strengths</h4>
+              <div class="qp-sg-list" id="qpStrengthsList"></div>
+            </div>
+            <div class="qp-sg-card">
+              <h4>Growth Domains</h4>
+              <div class="qp-sg-list" id="qpGrowthList"></div>
+            </div>
+          </div>
+
+          <div class="qp-balance-row" id="qpBalanceRow"></div>
+
+          <div class="qp-modules" id="qpModules">
+            <h4>Recommended Starter Modules</h4>
+          </div>
+
+          <div class="qp-results-actions">
+            <button class="hero-button" id="qpViewDev">View Development Path</button>
+            <button class="ghost-button" id="qpRetake">Retake Quick Pulse</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="section hero" id="home">
+      <div class="container hero-shell">
+
+        <!-- Brand title -->
+        <div class="hero-top reveal">
+          <div class="hero-brand-title">Renaissance Skills</div>
+          <div class="hero-brand-sub">Empower Your Potential | Unlock Your Genius</div>
+        </div>
+
+        <!-- Main headline -->
+        <div class="hero-headline reveal">
+          <h1>Recover Your Full Potential</h1>
+        </div>
+
+        <!-- Central composition -->
+        <div class="hero-center">
+
+          <!-- Constellation background -->
+          <div class="hero-constellation" aria-hidden="true">
+            <svg id="heroConstellationSvg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice"></svg>
+          </div>
+
+          <!-- Connection lines -->
+          <div class="hero-connections" aria-hidden="true">
+            <svg id="heroConnectionsSvg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice"></svg>
+          </div>
+
+          <!-- 4 Archetype cards in corners -->
+          <div class="hero-archetypes" aria-hidden="true">
+            <div class="hero-arch-card hero-arch-card--tl" data-scroll-target="#archetypes">
+              <div class="hero-arch-icon">
+                <img src="assets/the-polymath-4k.png" alt="The Polymath" class="hero-arch-img" />
+              </div>
+              <div class="hero-arch-name">The Polymath</div>
+              <div class="hero-arch-desc">Balanced skill distribution across all domains</div>
+            </div>
+
+            <div class="hero-arch-card hero-arch-card--tr" data-scroll-target="#archetypes">
+              <div class="hero-arch-icon">
+                <img src="assets/the-strategist-4k.png" alt="The Strategist" class="hero-arch-img" />
+              </div>
+              <div class="hero-arch-name">The Strategist</div>
+              <div class="hero-arch-desc">High analytical skills and strategic thinking</div>
+            </div>
+
+            <div class="hero-arch-card hero-arch-card--bl" data-scroll-target="#archetypes">
+              <div class="hero-arch-icon">
+                <img src="assets/the-leader-4k.png" alt="The Leader" class="hero-arch-img" />
+              </div>
+              <div class="hero-arch-name">The Leader</div>
+              <div class="hero-arch-desc">High interpersonal skills and adaptive coordination</div>
+            </div>
+
+            <div class="hero-arch-card hero-arch-card--br" data-scroll-target="#archetypes">
+              <div class="hero-arch-icon">
+                <img src="assets/the-builder-4k.png" alt="The Builder" class="hero-arch-img" />
+              </div>
+              <div class="hero-arch-name">The Builder</div>
+              <div class="hero-arch-desc">High execution and technical implementation skills</div>
+            </div>
+          </div>
+
+          <!-- Central Vitruvian figure -->
+          <div class="hero-figure-wrap">
+            <div class="hero-figure-circle"></div>
+            <div class="hero-figure-square"></div>
+
+            <!-- Radar overlay -->
+            <div class="hero-radar-overlay">
+              <svg class="radar-svg" viewBox="-190 -190 380 380" aria-hidden="true">
+                <g id="radarRings"></g>
+                <g id="radarAxes"></g>
+                <polygon id="radarGlow" class="radar-glow" points="" fill="rgba(212,175,55,0.06)" stroke="rgba(212,175,55,0.18)" stroke-width="1.5"></polygon>
+                <polygon id="radarShape" class="radar-shape" points="" fill="rgba(212,175,55,0.1)" stroke="rgba(239,211,104,0.7)" stroke-width="1.5"></polygon>
+                <g id="radarDots"></g>
+              </svg>
+            </div>
+
+            <!-- Vitruvian Man Image -->
+            <div class="hero-figure-svg">
+              <img src="assets/Main%20Hero%20image%20Vetruvian.png" alt="Vitruvian Man — Renaissance Skills" class="hero-vitruvian-img" />
+            </div>
+          </div>
+
+          <!-- Floating skill labels -->
+          <div class="hero-skill-labels" id="heroSkillLabels"></div>
+        </div>
+
+        <!-- CTA -->
+        <div class="hero-cta-area reveal">
+          <button class="hero-button" id="heroAssessmentButton">Start Your Individual Assessment</button>
+          <p class="hero-cta-sub">Discover Your Unique Skill Profile</p>
+        </div>
+
+        <!-- Bottom info bar -->
+        <div class="hero-info-bar reveal">
+          <div class="hero-info-item">
+            <svg class="hero-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <circle cx="12" cy="12" r="9"/><path d="M12 7V12L15 14"/><path d="M8 2L4 5M16 2L20 5"/>
+            </svg>
+            <span class="hero-info-title">How It Works</span>
+            <span class="hero-info-desc">Map your unique skill profile in minutes</span>
+          </div>
+          <div class="hero-info-item">
+            <svg class="hero-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+              <path d="M12 2L15 8.5L22 9.5L17 14.5L18 21.5L12 18.5L6 21.5L7 14.5L2 9.5L9 8.5Z"/>
+            </svg>
+            <span class="hero-info-title">Platform Benefits</span>
+            <span class="hero-info-desc">Discover your unique development path</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="assessment">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Tri-Modal Assessment</div>
+          <h2>Choose the depth, privacy model, and speed that matches your context.</h2>
+          <p class="lede">
+            Each pathway produces a Renaissance profile, identifies weak domains, and feeds a tailored development sequence.
+            The difference is how much evidence you want and how you want to supply it.
+          </p>
+        </div>
+
+        <div class="assessment-grid">
+          <article class="assessment-card reveal" data-assessment-card="quick">
+            <div class="assessment-top">
+              <div class="assessment-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 3V12L18 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="assessment-meta">10 Questions • 3 Minutes</div>
+            </div>
+            <div class="assessment-copy">
+              <h3>The Quick Pulse</h3>
+              <p>Immediate onboarding for users who want a fast directional profile and actionable next steps.</p>
+            </div>
+            <div class="assessment-list">
+              <div>Rapid multiple-choice baseline</div>
+              <div>Best for first-time exploration</div>
+              <div>Instantly recommends a growth focus</div>
+            </div>
+            <button class="assessment-button" data-assessment="quick">Select Method</button>
+          </article>
+
+          <article class="assessment-card reveal" data-assessment-card="deep">
+            <div class="assessment-top">
+              <div class="assessment-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 4.5H19V19.5H5V4.5Z" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M8 8H16M8 12H16M8 16H13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="assessment-meta">Scenario-Based • High Accuracy</div>
+            </div>
+            <div class="assessment-copy">
+              <h3>The Deep Dive</h3>
+              <p>Detailed evaluation for users who want richer signal, stronger archetype precision, and nuanced blind-spot mapping.</p>
+            </div>
+            <div class="assessment-list">
+              <div>Multi-scenario reasoning prompts</div>
+              <div>Higher confidence archetype assignment</div>
+              <div>Sharper curriculum sequencing</div>
+            </div>
+            <button class="assessment-button" data-assessment="deep">Select Method</button>
+          </article>
+
+          <article class="assessment-card reveal" data-assessment-card="mirror">
+            <div class="assessment-top">
+              <div class="assessment-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 3C8 3 4.5 6 4.5 10C4.5 13.1 6.7 15.8 9.7 16.7L10.3 21L14 17.4H14.2C18.5 17.4 21.5 14.2 21.5 10C21.5 6 18 3 14 3H12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M8 9H16M8 12H14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="assessment-meta">Private LLM Workflow</div>
+            </div>
+            <div class="assessment-copy">
+              <h3>The LLM Mirror</h3>
+              <p>Generate a privacy-preserving prompt for a local LLM to infer your skill distribution from your own conversations.</p>
+            </div>
+            <div class="assessment-list">
+              <div>No chat history sent to the platform</div>
+              <div>Paste back only the summary output</div>
+              <div>Designed for synthesis from real behavior</div>
+            </div>
+            <button class="assessment-button" data-assessment="mirror">Select Method</button>
+          </article>
+        </div>
+
+        <div class="assessment-console reveal">
+          <section class="console-card" aria-live="polite">
+            <div class="console-kicker">Assessment Preview</div>
+            <h3 id="consoleTitle">The Quick Pulse</h3>
+            <p id="consoleDescription">
+              Rapid onboarding for professionals who want a crisp baseline of strengths, imbalances, and immediate growth priorities.
+            </p>
+            <div class="console-stats">
+              <div class="console-stat">
+                <strong id="consoleDuration">03</strong>
+                <span>Minutes</span>
+              </div>
+              <div class="console-stat">
+                <strong id="consoleConfidence">Directional</strong>
+                <span>Signal Type</span>
+              </div>
+              <div class="console-stat">
+                <strong id="consoleArchetype">Strategist</strong>
+                <span>Likely Archetype</span>
+              </div>
+            </div>
+            <div class="pill" id="consoleSummaryPill">Immediate baseline with fast calibration.</div>
+          </section>
+
+          <section class="console-card prompt-panel" aria-live="polite">
+            <div class="console-kicker">Private LLM Generator</div>
+            <h3 id="promptTitle">Preview Output</h3>
+            <p id="promptDescription">
+              Select “The LLM Mirror” to generate a prompt that can be pasted into your own local model for a privacy-first synthesis.
+            </p>
+            <textarea id="mirrorPrompt" readonly>Choose The LLM Mirror to generate your prompt.</textarea>
+            <div class="copy-row">
+              <button class="copy-button" id="copyPromptButton">Copy Prompt</button>
+              <span class="copy-status" id="copyStatus">Prompt updates when The LLM Mirror is selected.</span>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="archetypes">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Archetype Profiling</div>
+          <h2>Four dominant operating modes for how broad capability turns into action.</h2>
+          <p class="lede">
+            Archetypes do not lock a user into identity. They simply name the strongest visible pattern so the platform can
+            counterbalance it with deliberate synthesis training.
+          </p>
+        </div>
+
+        <div class="archetype-grid">
+          <button class="archetype-card reveal" data-archetype="polymath">
+            <span class="archetype-tag">The Polymath</span>
+            <h3>The Polymath</h3>
+            <p class="archetype-desc">Broad conceptual reach with unusually strong pattern transfer across domains.</p>
+            <div class="archetype-score">High breadth • Strategic synthesis</div>
+          </button>
+
+          <button class="archetype-card reveal" data-archetype="strategist">
+            <span class="archetype-tag">The Strategist</span>
+            <h3>The Strategist</h3>
+            <p class="archetype-desc">Sees systems, allocates effort well, and connects decisions to long-range leverage.</p>
+            <div class="archetype-score">High foresight • Scenario fluency</div>
+          </button>
+
+          <button class="archetype-card reveal" data-archetype="builder">
+            <span class="archetype-tag">The Builder</span>
+            <h3>The Builder</h3>
+            <p class="archetype-desc">Execution-heavy profile with strong technical momentum and tangible output capacity.</p>
+            <div class="archetype-score">High execution • Technical force</div>
+          </button>
+
+          <button class="archetype-card reveal" data-archetype="leader">
+            <span class="archetype-tag">The Leader</span>
+            <h3>The Leader</h3>
+            <p class="archetype-desc">Coordinates people, meaning, and adaptation under uncertainty with unusual clarity.</p>
+            <div class="archetype-score">High influence • Adaptive range</div>
+          </button>
+        </div>
+
+        <div class="spotlight-shell reveal" aria-live="polite">
+          <section class="spotlight-card">
+            <small>Archetype Spotlight</small>
+            <h3 id="spotlightTitle">The Strategist</h3>
+            <p id="spotlightDescription">
+              Designs coherent paths through complexity and naturally links decisions to second-order effects.
+            </p>
+          </section>
+          <section class="spotlight-card">
+            <small>Signature Strength</small>
+            <strong id="spotlightStrength">Systems pattern recognition</strong>
+            <p id="spotlightStrengthCopy">Excels at seeing how distinct domains influence one another before others notice the connection.</p>
+          </section>
+          <section class="spotlight-card">
+            <small>Balancing Move</small>
+            <strong id="spotlightBalance">Increase technical and data fluency</strong>
+            <p id="spotlightBalanceCopy">Without stronger evidence handling, strategic insight risks remaining abstract rather than operational.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="development">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Development & Curriculum</div>
+          <h2>Translate the assessment into targeted growth and a sequenced synthesis roadmap.</h2>
+          <p class="lede">
+            The dashboard below simulates what users see after profiling: weak areas become visible, micro-courses are prioritized,
+            and a cross-domain order of operations turns breadth into durable capability.
+          </p>
+        </div>
+
+        <div class="dashboard-shell">
+          <aside class="summary-card reveal" aria-live="polite">
+            <div class="console-kicker">Post-Assessment Dashboard</div>
+            <h3 id="summaryTitle">Quick Pulse Summary</h3>
+            <p id="summaryCopy">A fast readout focused on giving you the shortest path from imbalance to functional breadth.</p>
+            <div class="balance-value" id="balanceValue">68</div>
+            <div class="pill" id="balancePill">Balance Index • Moderate asymmetry with high upside</div>
+            <div class="scorebars" id="scorebars"></div>
+            <div>
+              <div class="console-kicker">Priority Domains</div>
+              <div class="weakness-list" id="weaknessList"></div>
+            </div>
+          </aside>
+
+          <div class="dashboard-main">
+            <div class="tab-row reveal">
+              <button class="tab-button is-active" data-tab="growth">Targeted Growth</button>
+              <button class="tab-button" data-tab="path">AI-Optimized Synthesis Path</button>
+            </div>
+
+            <div class="panel-stack">
+              <section class="panel is-active reveal" id="growthPanel" aria-live="polite">
+                <div class="growth-grid" id="growthGrid"></div>
+              </section>
+
+              <section class="panel reveal" id="pathPanel" aria-live="polite">
+                <div class="timeline-grid" id="timelineGrid"></div>
+              </section>
+            </div>
+
+            <div class="future-grid reveal">
+              <section class="future-card">
+                <div class="console-kicker">Recommended Reading</div>
+                <h3 id="readingTitle">Foundational Inputs</h3>
+                <p id="readingCopy">Curated books and essays will surface here to reinforce weak domains and deepen cross-domain reasoning.</p>
+                <div class="placeholder" id="readingPlaceholder">Placeholder: systems thinking, history, broad sciences, and decision-making texts.</div>
+              </section>
+              <section class="future-card">
+                <div class="console-kicker">1-on-1 Coaching</div>
+                <h3 id="coachingTitle">Coaching Layer</h3>
+                <p id="coachingCopy">A future premium layer for guided accountability, curriculum pacing, and synthesis coaching.</p>
+                <div class="placeholder" id="coachingPlaceholder">Placeholder: book a coaching session once expert matching is enabled.</div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">About The Platform</div>
+          <h2>Built on the belief that AI rewards orchestration more than narrow repetition.</h2>
+          <p class="lede">
+            The industrial logic of specialization produced immense efficiency. The AI era changes the winning profile:
+            users who can connect abstractions, systems, people, and tools become disproportionately valuable.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <section class="about-card reveal">
+            <h3>Product Thesis</h3>
+            <p>
+              Renaissance Skills is designed to expose lopsided development early, translate it into a living skill graph, and
+              make weak-domain training feel as concrete as professional upskilling in a single discipline.
+            </p>
+          </section>
+          <section class="about-card reveal">
+            <h3>Who It Serves</h3>
+            <ul>
+              <li>Specialists exposed to automation risk</li>
+              <li>Students building resilient, non-fragile career profiles</li>
+              <li>Generalists who want a more formal synthesis framework</li>
+            </ul>
+          </section>
+          <section class="about-card reveal">
+            <h3>Phase Two</h3>
+            <ul>
+              <li>Affiliate reading layers and foundational libraries</li>
+              <li>Coaching integrations and accountability loops</li>
+              <li>Expanded diagnostics for longitudinal growth tracking</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>&copy; 2026 Renaissance Skills</span>
+    </div>
+  </footer>
+
+  <script>
+    const assessments = {
+      quick: {
+        title: "The Quick Pulse",
+        shortTitle: "Quick Pulse",
+        duration: "03",
+        signal: "Directional",
+        archetype: "strategist",
+        archetypeDisplay: "Strategist",
+        summary: "Immediate baseline with fast calibration.",
+        description: "Rapid onboarding for professionals who want a crisp baseline of strengths, imbalances, and immediate growth priorities.",
+        heroCopy: "Rapid onboarding for fast baseline visibility.",
+        profile: {
+          "Leadership": 64,
+          "Creativity": 72,
+          "Strategy": 79,
+          "Tech Proficiency": 55,
+          "Problem Solving": 82,
+          "Critical Thinking": 76,
+          "Adaptability": 69,
+          "Data Analysis": 52
+        },
+        growth: [
+          {
+            meta: "Priority 01 • Data Analysis",
+            title: "Evidence Before Intuition",
+            copy: "Translate qualitative judgment into measurable signals, simple experiments, and repeatable decision criteria.",
+            foot: "4 micro-lessons • 90 minutes"
+          },
+          {
+            meta: "Priority 02 • Tech Proficiency",
+            title: "Tool Fluency for Non-Specialists",
+            copy: "Build the technical literacy needed to collaborate with AI systems, automation tools, and product teams.",
+            foot: "5 micro-lessons • 2 hours"
+          },
+          {
+            meta: "Priority 03 • Adaptability",
+            title: "Operating in Unfinished Environments",
+            copy: "Learn how to change plans quickly without losing strategic coherence when evidence shifts.",
+            foot: "3 scenarios • 70 minutes"
+          },
+          {
+            meta: "Priority 04 • Leadership",
+            title: "Influence Through Clarity",
+            copy: "Strengthen narrative framing so strategic insight can move teams rather than remain personally obvious.",
+            foot: "4 exercises • 80 minutes"
+          }
+        ],
+        path: [
+          {
+            phase: "Phase I",
+            title: "Stabilize the weakest evidence systems",
+            copy: "Begin with data literacy so interpretation, prioritization, and tradeoffs are grounded in more than instinct.",
+            foot: "Unlocks stronger strategic calibration"
+          },
+          {
+            phase: "Phase II",
+            title: "Add technical interface fluency",
+            copy: "Learn enough tools and workflows to turn judgment into implementation leverage across product and AI environments.",
+            foot: "Converts insight into execution"
+          },
+          {
+            phase: "Phase III",
+            title: "Stress-test adaptability under change",
+            copy: "Use short simulations to practice decision updates when constraints, inputs, or goals shift unexpectedly.",
+            foot: "Builds resilient response range"
+          },
+          {
+            phase: "Phase IV",
+            title: "Elevate communication and influence",
+            copy: "Close the loop by expressing synthesis in a way that can align collaborators, stakeholders, and teams.",
+            foot: "Turns private clarity into collective movement"
+          }
+        ],
+        reading: "Placeholder: practical statistics, systems thinking, product judgment, and adaptive decision-making.",
+        coaching: "Placeholder: a coach would help convert strategy into consistent weekly execution."
+      },
+      deep: {
+        title: "The Deep Dive",
+        shortTitle: "Deep Dive",
+        duration: "18",
+        signal: "High Fidelity",
+        archetype: "polymath",
+        archetypeDisplay: "Polymath",
+        summary: "Scenario-based assessment with richer confidence.",
+        description: "Detailed evaluation for users who want stronger archetype precision, more nuanced blind-spot mapping, and a more deliberate growth sequence.",
+        heroCopy: "Detailed mapping with higher-confidence profiling.",
+        profile: {
+          "Leadership": 76,
+          "Creativity": 85,
+          "Strategy": 88,
+          "Tech Proficiency": 69,
+          "Problem Solving": 90,
+          "Critical Thinking": 84,
+          "Adaptability": 80,
+          "Data Analysis": 66
+        },
+        growth: [
+          {
+            meta: "Priority 01 • Tech Proficiency",
+            title: "From Conceptual Range to Build Capacity",
+            copy: "Extend conceptual intelligence into direct technical execution so synthesis can materialize faster.",
+            foot: "6 micro-lessons • 2.5 hours"
+          },
+          {
+            meta: "Priority 02 • Data Analysis",
+            title: "Quantitative Backbone",
+            copy: "Sharpen numerical reasoning so broad insight is supported by rigorous evidence handling and experiment design.",
+            foot: "4 labs • 2 hours"
+          },
+          {
+            meta: "Priority 03 • Leadership",
+            title: "Lead Through Translation",
+            copy: "Convert cross-domain complexity into shared language that helps others move with confidence.",
+            foot: "3 case studies • 75 minutes"
+          },
+          {
+            meta: "Priority 04 • Focus Discipline",
+            title: "Selective Depth Drills",
+            copy: "Practice going narrow on demand without losing the broad perspective that defines the profile.",
+            foot: "5 exercises • 95 minutes"
+          }
+        ],
+        path: [
+          {
+            phase: "Phase I",
+            title: "Increase technical embodiment",
+            copy: "Reinforce technical build skills first so wide-ranging cognition gains a faster path to concrete artifacts.",
+            foot: "Prevents abstraction bottlenecks"
+          },
+          {
+            phase: "Phase II",
+            title: "Add quantitative rigor",
+            copy: "Introduce stronger analytics to create a firmer bridge between synthesis, evidence, and prioritization.",
+            foot: "Improves confidence under complexity"
+          },
+          {
+            phase: "Phase III",
+            title: "Practice translation for teams",
+            copy: "Focus on turning multi-domain insights into clear framing for collaborators with narrower vantage points.",
+            foot: "Broadens impact radius"
+          },
+          {
+            phase: "Phase IV",
+            title: "Alternate breadth with deliberate depth",
+            copy: "Use periodic depth sprints to ensure range remains paired with tactical credibility.",
+            foot: "Creates a more durable Polymath profile"
+          }
+        ],
+        reading: "Placeholder: systems theory, broad science, history of technology, and quantitative reasoning.",
+        coaching: "Placeholder: a coach would help convert broad capability into a sharper operating cadence."
+      },
+      mirror: {
+        title: "The LLM Mirror",
+        shortTitle: "LLM Mirror",
+        duration: "Private",
+        signal: "Behavioral",
+        archetype: "leader",
+        archetypeDisplay: "Leader",
+        summary: "Privacy-first synthesis from your own conversational history.",
+        description: "Generate a prompt for a local LLM, paste in your own chat history privately, and return only the summarized profile to produce a skill graph.",
+        heroCopy: "Private synthesis from real conversational behavior.",
+        profile: {
+          "Leadership": 82,
+          "Creativity": 73,
+          "Strategy": 75,
+          "Tech Proficiency": 63,
+          "Problem Solving": 71,
+          "Critical Thinking": 78,
+          "Adaptability": 89,
+          "Data Analysis": 58
+        },
+        growth: [
+          {
+            meta: "Priority 01 • Data Analysis",
+            title: "Make Adaptation Measurable",
+            copy: "Pair situational flexibility with evidence handling so pivots are guided by data rather than solely by instinct.",
+            foot: "4 labs • 85 minutes"
+          },
+          {
+            meta: "Priority 02 • Tech Proficiency",
+            title: "Operational Tool Literacy",
+            copy: "Strengthen the ability to use technical systems directly when coordinating people, work, and AI-supported processes.",
+            foot: "5 modules • 2 hours"
+          },
+          {
+            meta: "Priority 03 • Strategic Framing",
+            title: "From Adaptation to Architecture",
+            copy: "Turn high responsiveness into more explicit strategic models and clearer sequencing decisions.",
+            foot: "3 frameworks • 75 minutes"
+          },
+          {
+            meta: "Priority 04 • Creativity",
+            title: "Creative Expansion Sessions",
+            copy: "Stretch imaginative range so leadership and adaptability produce more surprising, high-upside solution spaces.",
+            foot: "4 prompts • 60 minutes"
+          }
+        ],
+        path: [
+          {
+            phase: "Phase I",
+            title: "Ground judgment in stronger evidence",
+            copy: "Start by increasing quantitative fluency so highly adaptive decisions have a stronger signal base.",
+            foot: "Stabilizes rapid pivots"
+          },
+          {
+            phase: "Phase II",
+            title: "Expand technical touchpoints",
+            copy: "Develop enough direct technical literacy to operate with less dependence on translation layers.",
+            foot: "Improves execution autonomy"
+          },
+          {
+            phase: "Phase III",
+            title: "Strengthen strategic architecture",
+            copy: "Formalize how goals, constraints, and tradeoffs are structured so leadership becomes more reproducible.",
+            foot: "Makes instinct legible"
+          },
+          {
+            phase: "Phase IV",
+            title: "Broaden idea generation",
+            copy: "Add creative drills that increase range and allow leadership to steer toward more original outcomes.",
+            foot: "Completes the synthesis loop"
+          }
+        ],
+        reading: "Placeholder: decision science, measurement, communication under uncertainty, and creative strategy.",
+        coaching: "Placeholder: a coach would help convert adaptive leadership into a disciplined skill graph."
+      }
+    };
+
+    const archetypes = {
+      polymath: {
+        title: "The Polymath",
+        description: "Builds unusual insight by carrying meaningful fluency across multiple disciplines at once.",
+        strength: "Cross-domain pattern transfer",
+        strengthCopy: "Quickly spots structural similarities between ideas, industries, and systems that appear unrelated on the surface.",
+        balance: "Practice selective technical depth",
+        balanceCopy: "Breadth becomes more defensible when at least one execution-heavy domain can anchor the synthesis."
+      },
+      strategist: {
+        title: "The Strategist",
+        description: "Designs coherent paths through complexity and naturally links decisions to second-order effects.",
+        strength: "Systems pattern recognition",
+        strengthCopy: "Excels at seeing how distinct domains influence one another before others notice the connection.",
+        balance: "Increase technical and data fluency",
+        balanceCopy: "Without stronger evidence handling, strategic insight risks remaining abstract rather than operational."
+      },
+      builder: {
+        title: "The Builder",
+        description: "Moves from idea to artifact quickly and tends to learn through making rather than pure abstraction.",
+        strength: "Execution momentum",
+        strengthCopy: "Creates tangible progress rapidly and can transform conceptual ambiguity into working systems.",
+        balance: "Expand historical and strategic range",
+        balanceCopy: "Execution improves when grounded in broader context, longer time horizons, and higher-level synthesis."
+      },
+      leader: {
+        title: "The Leader",
+        description: "Coordinates people, priorities, and adaptation with high social signal and strong situational response.",
+        strength: "Influence under uncertainty",
+        strengthCopy: "Maintains coherence across moving constraints and can mobilize others even when the environment remains fluid.",
+        balance: "Deepen evidence-backed reasoning",
+        balanceCopy: "Leadership compounds when paired with stronger data, sharper models, and more deliberate technical literacy."
+      }
+    };
+
+    const skillOrder = [
+      "Leadership",
+      "Creativity",
+      "Strategy",
+      "Tech Proficiency",
+      "Problem Solving",
+      "Critical Thinking",
+      "Adaptability",
+      "Data Analysis"
+    ];
+
+    const skillDescriptions = {
+      "Leadership": "Your ability to align people, frame direction, and convert insight into coordinated movement.",
+      "Creativity": "The range and originality of ideas you can generate when the problem is ambiguous or underdefined.",
+      "Strategy": "How well you design long-range paths, sequence tradeoffs, and identify leverage in complex systems.",
+      "Tech Proficiency": "Your practical fluency with tools, digital systems, and technical workflows that amplify capability.",
+      "Problem Solving": "Your strength in decomposing complexity, locating constraints, and producing workable solutions.",
+      "Critical Thinking": "The rigor of your reasoning, including skepticism, evidence handling, and logical coherence.",
+      "Adaptability": "Your ability to update behavior, plans, and assumptions as environments change.",
+      "Data Analysis": "Your capacity to interpret evidence, quantify uncertainty, and ground decisions in signal rather than narrative."
+    };
+
+    const state = {
+      assessment: "quick",
+      tab: "growth",
+      spotlight: "strategist",
+      pinnedSkill: "Data Analysis"
+    };
+
+    const navLinks = [...document.querySelectorAll(".nav-link")];
+    const assessmentButtons = [...document.querySelectorAll("[data-assessment]")];
+    const assessmentCards = [...document.querySelectorAll("[data-assessment-card]")];
+    const archetypeCards = [...document.querySelectorAll("[data-archetype]")];
+    const tabButtons = [...document.querySelectorAll("[data-tab]")];
+    const radarRings = document.getElementById("radarRings");
+    const radarAxes = document.getElementById("radarAxes");
+    const radarShape = document.getElementById("radarShape");
+    const radarGlow = document.getElementById("radarGlow");
+    const radarDots = document.getElementById("radarDots");
+
+    const consoleTitle = document.getElementById("consoleTitle");
+    const consoleDescription = document.getElementById("consoleDescription");
+    const consoleDuration = document.getElementById("consoleDuration");
+    const consoleConfidence = document.getElementById("consoleConfidence");
+    const consoleArchetype = document.getElementById("consoleArchetype");
+    const consoleSummaryPill = document.getElementById("consoleSummaryPill");
+
+    const promptTitle = document.getElementById("promptTitle");
+    const promptDescription = document.getElementById("promptDescription");
+    const mirrorPrompt = document.getElementById("mirrorPrompt");
+    const copyPromptButton = document.getElementById("copyPromptButton");
+    const copyStatus = document.getElementById("copyStatus");
+
+    const spotlightTitle = document.getElementById("spotlightTitle");
+    const spotlightDescription = document.getElementById("spotlightDescription");
+    const spotlightStrength = document.getElementById("spotlightStrength");
+    const spotlightStrengthCopy = document.getElementById("spotlightStrengthCopy");
+    const spotlightBalance = document.getElementById("spotlightBalance");
+    const spotlightBalanceCopy = document.getElementById("spotlightBalanceCopy");
+
+    const summaryTitle = document.getElementById("summaryTitle");
+    const summaryCopy = document.getElementById("summaryCopy");
+    const balanceValue = document.getElementById("balanceValue");
+    const balancePill = document.getElementById("balancePill");
+    const scorebars = document.getElementById("scorebars");
+    const weaknessList = document.getElementById("weaknessList");
+    const growthGrid = document.getElementById("growthGrid");
+    const timelineGrid = document.getElementById("timelineGrid");
+    const growthPanel = document.getElementById("growthPanel");
+    const pathPanel = document.getElementById("pathPanel");
+    const readingTitle = document.getElementById("readingTitle");
+    const readingCopy = document.getElementById("readingCopy");
+    const readingPlaceholder = document.getElementById("readingPlaceholder");
+    const coachingTitle = document.getElementById("coachingTitle");
+    const coachingCopy = document.getElementById("coachingCopy");
+    const coachingPlaceholder = document.getElementById("coachingPlaceholder");
+
+    const scrollTargets = [...document.querySelectorAll("[data-scroll-target], .nav-link")];
+
+    function buildRadarScaffold() {
+      const ringScales = [1, 0.8, 0.6, 0.4, 0.2];
+      radarRings.innerHTML = ringScales.map((scale) => {
+        return `<polygon class="radar-ring-line" points="${polygonPoints(skillOrder.map(() => scale * 100))}"></polygon>`;
+      }).join("");
+
+      radarAxes.innerHTML = skillOrder.map((_, index) => {
+        const point = polarPoint(index, 100);
+        return `<line class="radar-axis" x1="0" y1="0" x2="${point.x}" y2="${point.y}"></line>`;
+      }).join("");
+    }
+
+    function polarPoint(index, value) {
+      const radius = 160;
+      const angle = ((-90 + index * (360 / skillOrder.length)) * Math.PI) / 180;
+      const scaled = radius * (value / 100);
+      return {
+        x: Math.cos(angle) * scaled,
+        y: Math.sin(angle) * scaled
+      };
+    }
+
+    function polygonPoints(values, expand = 1) {
+      return values.map((value, index) => {
+        const point = polarPoint(index, Math.min(100, value * expand));
+        return `${point.x.toFixed(2)},${point.y.toFixed(2)}`;
+      }).join(" ");
+    }
+
+    function getCurrentAssessment() {
+      return assessments[state.assessment];
+    }
+
+    function getWeakestDomains(profile, count = 3) {
+      return Object.entries(profile)
+        .sort((a, b) => a[1] - b[1])
+        .slice(0, count)
+        .map(([name]) => name);
+    }
+
+    function getBalanceIndex(profile) {
+      const values = Object.values(profile);
+      const average = values.reduce((sum, value) => sum + value, 0) / values.length;
+      const spread = Math.max(...values) - Math.min(...values);
+      return Math.max(0, Math.round(average - spread * 0.35));
+    }
+
+    function renderHeroSkillLabels() {
+      const labelsEl = document.getElementById("heroSkillLabels");
+      if (!labelsEl) return;
+      // Positions for 8 labels radiating around the center figure
+      const positions = [
+        { skill: "Leadership",       left: "18%", top: "5%" },
+        { skill: "Creativity",       left: "72%", top: "5%" },
+        { skill: "Strategy",         left: "82%", top: "30%" },
+        { skill: "Tech Proficiency", left: "10%", top: "80%" },
+        { skill: "Problem Solving",  left: "8%",  top: "48%" },
+        { skill: "Critical Thinking",left: "80%", top: "55%" },
+        { skill: "Adaptability",     left: "30%", top: "95%" },
+        { skill: "Data Analysis",    left: "64%", top: "95%" }
+      ];
+
+      labelsEl.innerHTML = positions.map(p => {
+        return `<span class="hero-skill-label" style="left:${p.left};top:${p.top}">${p.skill}</span>`;
+      }).join("");
+    }
+
+    function buildHeroConstellation() {
+      const svg = document.getElementById("heroConstellationSvg");
+      if (!svg) return;
+      let lines = "";
+      // Random constellation lines
+      const stars = [];
+      for (let i = 0; i < 60; i++) {
+        const x = Math.random() * 1200;
+        const y = Math.random() * 600;
+        const r = Math.random() * 1.5 + 0.5;
+        stars.push({ x, y });
+        lines += `<circle cx="${x}" cy="${y}" r="${r}" fill="rgba(212,175,55,${Math.random() * 0.4 + 0.1})"/>`;
+      }
+      // Connect some nearby stars
+      for (let i = 0; i < stars.length; i++) {
+        for (let j = i + 1; j < stars.length; j++) {
+          const dist = Math.hypot(stars[i].x - stars[j].x, stars[i].y - stars[j].y);
+          if (dist < 120 && Math.random() > 0.6) {
+            lines += `<line x1="${stars[i].x}" y1="${stars[i].y}" x2="${stars[j].x}" y2="${stars[j].y}" stroke="rgba(212,175,55,0.08)" stroke-width="0.5"/>`;
+          }
+        }
+      }
+      // Subtle arc decorations
+      lines += `<circle cx="600" cy="300" r="250" fill="none" stroke="rgba(212,175,55,0.06)" stroke-width="0.5"/>`;
+      lines += `<circle cx="600" cy="300" r="280" fill="none" stroke="rgba(212,175,55,0.04)" stroke-width="0.5" stroke-dasharray="4 8"/>`;
+      svg.innerHTML = lines;
+    }
+
+    function buildHeroConnections() {
+      const svg = document.getElementById("heroConnectionsSvg");
+      if (!svg) return;
+      // Subtle connection arcs from corners toward center
+      svg.innerHTML = `
+        <line x1="100" y1="80" x2="480" y2="250" stroke="rgba(212,175,55,0.06)" stroke-width="0.5" stroke-dasharray="3 6"/>
+        <line x1="1100" y1="80" x2="720" y2="250" stroke="rgba(212,175,55,0.06)" stroke-width="0.5" stroke-dasharray="3 6"/>
+        <line x1="100" y1="480" x2="480" y2="350" stroke="rgba(212,175,55,0.06)" stroke-width="0.5" stroke-dasharray="3 6"/>
+        <line x1="1100" y1="480" x2="720" y2="350" stroke="rgba(212,175,55,0.06)" stroke-width="0.5" stroke-dasharray="3 6"/>
+      `;
+    }
+
+    function renderRadar() {
+      const assessment = getCurrentAssessment();
+      const values = skillOrder.map((skill) => assessment.profile[skill]);
+      if (radarShape) radarShape.setAttribute("points", polygonPoints(values));
+      if (radarGlow) radarGlow.setAttribute("points", polygonPoints(values, 1.08));
+
+      if (radarDots) {
+        radarDots.innerHTML = skillOrder.map((skill, index) => {
+          const point = polarPoint(index, assessment.profile[skill]);
+          return `<circle class="radar-dot" cx="${point.x}" cy="${point.y}" r="4" fill="#f3dd91" stroke="rgba(13,13,13,0.6)" stroke-width="1.5" style="filter:drop-shadow(0 0 6px rgba(212,175,55,0.4))"></circle>`;
+        }).join("");
+      }
+    }
+
+    function updateHero() {
+      const assessment = getCurrentAssessment();
+      if (!assessment.profile[state.pinnedSkill]) {
+        state.pinnedSkill = getWeakestDomains(assessment.profile, 1)[0];
+      }
+      renderRadar();
+    }
+
+    function updateAssessmentSection() {
+      const assessment = getCurrentAssessment();
+
+      assessmentCards.forEach((card) => {
+        card.classList.toggle("is-selected", card.dataset.assessmentCard === state.assessment);
+      });
+
+      assessmentButtons.forEach((button) => {
+        button.classList.toggle("is-active", button.dataset.assessment === state.assessment);
+        button.textContent = button.dataset.assessment === state.assessment ? "Selected" : "Select Method";
+      });
+
+      consoleTitle.textContent = assessment.title;
+      consoleDescription.textContent = assessment.description;
+      consoleDuration.textContent = assessment.duration;
+      consoleConfidence.textContent = assessment.signal;
+      consoleArchetype.textContent = assessment.archetypeDisplay;
+      consoleSummaryPill.textContent = assessment.summary;
+
+      if (state.assessment === "mirror") {
+        promptTitle.textContent = "LLM Mirror Prompt";
+        promptDescription.textContent = "Paste this into your private local LLM, along with your own chat history or notes, then return only the summary output to the platform.";
+        mirrorPrompt.value = buildMirrorPrompt();
+        copyStatus.textContent = "Ready to copy into your private local model.";
+      } else {
+        promptTitle.textContent = "Preview Output";
+        promptDescription.textContent = 'Select “The LLM Mirror” to generate a prompt that can be pasted into your own local model for a privacy-first synthesis.';
+        mirrorPrompt.value = "Choose The LLM Mirror to generate your prompt.";
+        copyStatus.textContent = "Prompt updates when The LLM Mirror is selected.";
+      }
+    }
+
+    function buildMirrorPrompt() {
+      return [
+        "You are evaluating my cross-domain skill distribution for a platform called Renaissance Skills.",
+        "Use the chat history or notes I provide as evidence. Do not flatter or generalize without signal.",
+        "",
+        "Rate me from 0 to 100 in these eight domains:",
+        "1. leadership - Ability to align people, create clarity, and move decisions forward",
+        "2. creativity - Ability to generate novel approaches, ideas, and reframings",
+        "3. strategy - Ability to sequence action, model tradeoffs, and see leverage",
+        "4. tech_proficiency - Practical fluency with tools, systems, and technical workflows",
+        "5. problem_solving - Ability to decompose complexity and get to workable solutions",
+        "6. critical_thinking - Ability to question assumptions, weigh evidence, and reason rigorously",
+        "7. adaptability - Ability to adjust plans and behavior under changing conditions",
+        "8. data_analysis - Ability to use evidence, measurement, and quantitative signal",
+        "",
+        "For each domain, also assign a confidence level (low, medium, high) based on how much evidence you found.",
+        "",
+        "Then determine:",
+        "- My top 3 strongest domains (highest scores)",
+        "- My 3 weakest growth domains (lowest scores)",
+        "- My primary archetype from: polymath, strategist, builder, leader",
+        "- A confidence value for the archetype between 0.35 and 0.85",
+        "- A balance index from 0-100 reflecting how even my profile is (higher = more balanced)",
+        "- 3 recommended starter modules mapped from my weakest domains",
+        "",
+        "Return your response as JSON in exactly this format:",
+        "{",
+        '  "assessment_id": "llm_mirror_v1",',
+        '  "assessment_name": "The LLM Mirror",',
+        '  "scores": {',
+        '    "leadership": 0,',
+        '    "creativity": 0,',
+        '    "strategy": 0,',
+        '    "tech_proficiency": 0,',
+        '    "problem_solving": 0,',
+        '    "critical_thinking": 0,',
+        '    "adaptability": 0,',
+        '    "data_analysis": 0',
+        "  },",
+        '  "confidence_per_domain": {',
+        '    "leadership": "medium",',
+        '    "creativity": "medium"',
+        '    // ... all 8 domains',
+        "  },",
+        '  "levels": {',
+        '    "leadership": "Functional",',
+        '    // Use: Emerging (0-44), Developing (45-59), Functional (60-74), Strong (75-89), Signature (90-100)',
+        "  },",
+        '  "top_strengths": ["domain_key", "domain_key", "domain_key"],',
+        '  "growth_domains": ["domain_key", "domain_key", "domain_key"],',
+        '  "archetype": {',
+        '    "key": "strategist",',
+        '    "label": "The Strategist",',
+        '    "confidence": 0.68',
+        "  },",
+        '  "balance_index": 68,',
+        '  "recommended_modules": [',
+        '    "Module name for weakest domain",',
+        '    "Module name for second weakest",',
+        '    "Module name for third weakest"',
+        "  ],",
+        '  "evidence_notes": "Brief summary of what evidence supported the assessment"',
+        "}"
+      ].join("\n");
+    }
+
+    function updateSpotlight(archetypeKey) {
+      state.spotlight = archetypeKey;
+      const info = archetypes[archetypeKey];
+
+      spotlightTitle.textContent = info.title;
+      spotlightDescription.textContent = info.description;
+      spotlightStrength.textContent = info.strength;
+      spotlightStrengthCopy.textContent = info.strengthCopy;
+      spotlightBalance.textContent = info.balance;
+      spotlightBalanceCopy.textContent = info.balanceCopy;
+
+      archetypeCards.forEach((card) => {
+        card.classList.toggle("is-active", card.dataset.archetype === archetypeKey);
+      });
+    }
+
+    function renderSummary() {
+      const assessment = getCurrentAssessment();
+      const balance = getBalanceIndex(assessment.profile);
+      const weakest = getWeakestDomains(assessment.profile);
+
+      summaryTitle.textContent = `${assessment.shortTitle} Summary`;
+      summaryCopy.textContent = assessment.description;
+      balanceValue.textContent = balance;
+      balancePill.textContent = `Balance Index • ${balance >= 75 ? "Strong breadth with manageable gaps" : "Moderate asymmetry with high upside"}`;
+
+      const strongest = [...skillOrder].sort((a, b) => assessment.profile[b] - assessment.profile[a])[0];
+      const highlightedSkills = [...weakest, strongest].slice(0, 4);
+
+      scorebars.innerHTML = highlightedSkills.map((skill) => {
+        const value = assessment.profile[skill];
+        return `
+          <div class="scorebar">
+            <div class="scorebar-head">
+              <span>${skill}</span>
+              <strong>${value}</strong>
+            </div>
+            <div class="scorebar-track">
+              <div class="scorebar-fill" style="width:${value}%"></div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      weaknessList.innerHTML = weakest.map((skill) => `<span class="weakness-chip">${skill}</span>`).join("");
+
+      growthGrid.innerHTML = assessment.growth.map((item) => {
+        return `
+          <article class="growth-card">
+            <div class="growth-meta">${item.meta}</div>
+            <h3>${item.title}</h3>
+            <p>${item.copy}</p>
+            <div class="growth-foot">${item.foot}</div>
+          </article>
+        `;
+      }).join("");
+
+      timelineGrid.innerHTML = assessment.path.map((item, index) => {
+        return `
+          <article class="timeline-card">
+            <div class="timeline-index">
+              <strong>0${index + 1}</strong>
+              <span class="timeline-phase">${item.phase}</span>
+            </div>
+            <div class="timeline-content">
+              <h3>${item.title}</h3>
+              <p>${item.copy}</p>
+              <div class="timeline-foot">${item.foot}</div>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      readingTitle.textContent = "Recommended Reading";
+      readingCopy.textContent = "Foundational books and essays will reinforce your weakest domains while increasing synthesis range.";
+      readingPlaceholder.textContent = assessment.reading;
+      coachingTitle.textContent = "Book a Coaching Session";
+      coachingCopy.textContent = "Future coaching helps users turn assessment signal into weekly execution, accountability, and reflection.";
+      coachingPlaceholder.textContent = assessment.coaching;
+    }
+
+    function updateTabUI() {
+      tabButtons.forEach((button) => {
+        button.classList.toggle("is-active", button.dataset.tab === state.tab);
+      });
+
+      growthPanel.classList.toggle("is-active", state.tab === "growth");
+      pathPanel.classList.toggle("is-active", state.tab === "path");
+    }
+
+    function applyAssessment(key) {
+      state.assessment = key;
+      state.pinnedSkill = getWeakestDomains(assessments[key].profile, 1)[0];
+      updateHero();
+      updateAssessmentSection();
+      updateSpotlight(assessments[key].archetype);
+      renderSummary();
+      updateTabUI();
+    }
+
+    function smoothScrollTo(selector) {
+      const target = document.querySelector(selector);
+      if (!target) {
+        return;
+      }
+      const top = target.getBoundingClientRect().top + window.scrollY - 84;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+
+    scrollTargets.forEach((element) => {
+      element.addEventListener("click", (event) => {
+        const targetSelector = element.dataset.scrollTarget || element.getAttribute("href");
+        if (!targetSelector || !targetSelector.startsWith("#")) {
+          return;
+        }
+        event.preventDefault();
+        smoothScrollTo(targetSelector);
+      });
+    });
+
+    // Hero CTA and Nav "Get Started" are handled by hookQuickPulseTriggers()
+
+    assessmentButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        applyAssessment(button.dataset.assessment);
+      });
+    });
+
+    archetypeCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        updateSpotlight(card.dataset.archetype);
+      });
+    });
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        state.tab = button.dataset.tab;
+        updateTabUI();
+      });
+    });
+
+    copyPromptButton.addEventListener("click", async () => {
+      if (state.assessment !== "mirror") {
+        copyStatus.textContent = "Select The LLM Mirror before copying.";
+        return;
+      }
+
+      try {
+        await navigator.clipboard.writeText(mirrorPrompt.value);
+        copyStatus.textContent = "Prompt copied. Paste it into your private local model.";
+      } catch (error) {
+        const textArea = document.createElement("textarea");
+        textArea.value = mirrorPrompt.value;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+          document.execCommand("copy");
+          copyStatus.textContent = "Prompt copied.";
+        } catch (err) {
+          copyStatus.textContent = "Could not copy. Please select the prompt text and copy manually.";
+        }
+        document.body.removeChild(textArea);
+      }
+    });
+
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileToggle = document.getElementById("mobileToggle");
+    const mobileMenuClose = document.getElementById("mobileMenuClose");
+
+    function openMobileMenu() {
+      mobileMenu.classList.add("is-open");
+      mobileMenuClose.focus();
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove("is-open");
+      mobileToggle.focus();
+      document.body.style.overflow = "";
+    }
+
+    mobileToggle.addEventListener("click", openMobileMenu);
+    mobileMenuClose.addEventListener("click", closeMobileMenu);
+
+    [...document.querySelectorAll("[data-mobile-link]")].forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        closeMobileMenu();
+        const target = link.getAttribute("href");
+        if (target) smoothScrollTo(target);
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && mobileMenu.classList.contains("is-open")) {
+        closeMobileMenu();
+      }
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.18
+    });
+
+    document.querySelectorAll(".reveal").forEach((element) => {
+      revealObserver.observe(element);
+    });
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+        navLinks.forEach((link) => {
+          link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
+        });
+      });
+    }, {
+      rootMargin: "-45% 0px -45% 0px",
+      threshold: 0
+    });
+
+    ["home", "assessment", "development", "about"].forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) {
+        sectionObserver.observe(section);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      renderRadar();
+    });
+
+    buildRadarScaffold();
+    renderHeroSkillLabels();
+    buildHeroConstellation();
+    buildHeroConnections();
+    applyAssessment("quick");
+
+    // ── Quick Pulse Assessment Engine ──
+
+    const qpModuleData = {
+      "module_id": "quick_pulse_v1",
+      "module_name": "The Quick Pulse",
+      "version": 1,
+      "estimated_minutes": 4,
+      "question_count": 10,
+      "confidence_label": "Directional baseline",
+      "intro": {
+        "headline": "Map your Renaissance baseline",
+        "body": "This short assessment estimates how your strengths are distributed across eight cross-domain capabilities. You will get an archetype, a skill profile, and recommended next steps.",
+        "bullets": ["10 questions", "3\u20134 minutes", "Immediate results", "Best used as a first-pass baseline"]
+      },
+      "domains": [
+        {"key": "leadership", "label": "Leadership"},
+        {"key": "creativity", "label": "Creativity"},
+        {"key": "strategy", "label": "Strategy"},
+        {"key": "tech_proficiency", "label": "Tech Proficiency"},
+        {"key": "problem_solving", "label": "Problem Solving"},
+        {"key": "critical_thinking", "label": "Critical Thinking"},
+        {"key": "adaptability", "label": "Adaptability"},
+        {"key": "data_analysis", "label": "Data Analysis"}
+      ],
+      "levels": [
+        {"label": "Emerging", "min": 0, "max": 44},
+        {"label": "Developing", "min": 45, "max": 59},
+        {"label": "Functional", "min": 60, "max": 74},
+        {"label": "Strong", "min": 75, "max": 89},
+        {"label": "Signature", "min": 90, "max": 100}
+      ],
+      "starter_module_map": {
+        "leadership": "Influence Through Clarity",
+        "creativity": "Cross-Domain Idea Generation",
+        "strategy": "Systems Mapping and Leverage",
+        "tech_proficiency": "Tool Fluency for Non-Specialists",
+        "problem_solving": "Constraint Decomposition",
+        "critical_thinking": "Assumption Testing",
+        "adaptability": "Operating Under Change",
+        "data_analysis": "Evidence Before Intuition"
+      },
+      "archetypes": [
+        {"key": "polymath", "label": "The Polymath", "description": "A broad, balanced synthesizer with unusual pattern transfer across domains."},
+        {"key": "strategist", "label": "The Strategist", "description": "A systems-oriented thinker who links evidence, tradeoffs, and long-range direction."},
+        {"key": "builder", "label": "The Builder", "description": "An execution-heavy profile that turns ideas into tools, systems, and outputs."},
+        {"key": "leader", "label": "The Leader", "description": "A people-and-direction profile that creates clarity and adapts well under uncertainty."}
+      ],
+      "questions": [
+        {"id":"qp_01","prompt":"You are starting a new project with vague goals and incomplete context. What do you do first?","options":[{"id":"a","label":"Map the outcome, constraints, and likely tradeoffs before acting.","weights":{"strategy":3,"critical_thinking":1}},{"id":"b","label":"Open the relevant tools and build a rough prototype to learn by doing.","weights":{"tech_proficiency":3,"problem_solving":1}},{"id":"c","label":"Talk to the key people involved and align on expectations and ownership.","weights":{"leadership":3,"adaptability":1}},{"id":"d","label":"Generate several unconventional ways the problem could be framed before choosing a path.","weights":{"creativity":3,"strategy":1}}]},
+        {"id":"qp_02","prompt":"A team is stuck between two competing approaches. Which move sounds most like you?","options":[{"id":"a","label":"Facilitate a decision, get alignment, and assign a clear owner.","weights":{"leadership":3,"strategy":1}},{"id":"b","label":"Compare the assumptions, evidence, and downside risks in each option.","weights":{"critical_thinking":3,"data_analysis":1}},{"id":"c","label":"Run a quick test, simulation, or demo so reality can decide faster.","weights":{"problem_solving":3,"tech_proficiency":1}},{"id":"d","label":"Reframe the problem so the team can see a third option they have not considered.","weights":{"creativity":3,"adaptability":1}}]},
+        {"id":"qp_03","prompt":"You notice a workflow is repetitive, frustrating, and error-prone. What is your instinct?","options":[{"id":"a","label":"Automate it, template it, or simplify it through tooling.","weights":{"tech_proficiency":3,"problem_solving":1}},{"id":"b","label":"Measure where time and errors are actually occurring before changing anything.","weights":{"data_analysis":3,"critical_thinking":1}},{"id":"c","label":"Clarify roles, expectations, and handoffs so the team operates more smoothly.","weights":{"leadership":3,"adaptability":1}},{"id":"d","label":"Redesign the process from first principles rather than patching it.","weights":{"strategy":3,"creativity":1}}]},
+        {"id":"qp_04","prompt":"You need to learn a new domain fast. Which approach feels most natural?","options":[{"id":"a","label":"Jump into a real tool or project and learn through direct experimentation.","weights":{"tech_proficiency":3,"adaptability":1}},{"id":"b","label":"Study the underlying concepts and models before trying to apply them.","weights":{"critical_thinking":3,"strategy":1}},{"id":"c","label":"Talk to experienced people and synthesize what actually works from their patterns.","weights":{"leadership":3,"adaptability":1}},{"id":"d","label":"Explore adjacent fields first so you can import surprising analogies and ideas.","weights":{"creativity":3,"strategy":1}}]},
+        {"id":"qp_05","prompt":"You need to persuade skeptical stakeholders to support a recommendation. What do you lean on most?","options":[{"id":"a","label":"A clear narrative about priorities, tradeoffs, and long-term direction.","weights":{"leadership":3,"strategy":1}},{"id":"b","label":"The evidence, benchmark data, and the logic behind the recommendation.","weights":{"data_analysis":3,"critical_thinking":1}},{"id":"c","label":"A concrete demo, workflow, or working proof that shows it can be done.","weights":{"tech_proficiency":3,"problem_solving":1}},{"id":"d","label":"An original framing or analogy that makes the opportunity suddenly obvious.","weights":{"creativity":3,"leadership":1}}]},
+        {"id":"qp_06","prompt":"The situation changes mid-project and your original plan no longer fits. What do you do?","options":[{"id":"a","label":"Adjust scope fast and keep momentum with the best workable version.","weights":{"adaptability":3,"problem_solving":1}},{"id":"b","label":"Pause long enough to re-check assumptions and verify what signal is still reliable.","weights":{"critical_thinking":3,"data_analysis":1}},{"id":"c","label":"Realign the people involved around the next most important decision.","weights":{"leadership":3,"strategy":1}},{"id":"d","label":"Explore alternate directions others may be missing and choose the strongest pivot.","weights":{"creativity":3,"adaptability":1}}]},
+        {"id":"qp_07","prompt":"How do you usually know a solution actually worked?","options":[{"id":"a","label":"People are aligned, confusion is lower, and execution becomes smoother.","weights":{"leadership":3,"adaptability":1}},{"id":"b","label":"The metrics improved against a baseline or expected outcome.","weights":{"data_analysis":3,"critical_thinking":1}},{"id":"c","label":"The system became faster, cleaner, or more reliable in practice.","weights":{"tech_proficiency":3,"problem_solving":1}},{"id":"d","label":"It opened up a stronger long-term path or strategic option than before.","weights":{"strategy":3,"creativity":1}}]},
+        {"id":"qp_08","prompt":"You hear a bold claim in a meeting or article. What is your first instinct?","options":[{"id":"a","label":"Probe the assumptions, evidence quality, and hidden incentives behind it.","weights":{"critical_thinking":3,"data_analysis":1}},{"id":"b","label":"Map the second-order effects and how it changes the broader system.","weights":{"strategy":3,"critical_thinking":1}},{"id":"c","label":"See how you would test it in practice or build a small version of it.","weights":{"problem_solving":3,"tech_proficiency":1}},{"id":"d","label":"Connect it to patterns from completely different fields and see what transfers.","weights":{"creativity":3,"strategy":1}}]},
+        {"id":"qp_09","prompt":"A capable colleague is struggling with a new assignment. How do you tend to help?","options":[{"id":"a","label":"Clarify priorities, remove blockers, and help them regain momentum.","weights":{"leadership":3,"adaptability":1}},{"id":"b","label":"Give them a framework for making tradeoffs and choosing among options.","weights":{"strategy":3,"critical_thinking":1}},{"id":"c","label":"Create a checklist, template, or tool that makes the work easier to execute.","weights":{"tech_proficiency":3,"problem_solving":1}},{"id":"d","label":"Brainstorm alternate approaches with them until a more original path appears.","weights":{"creativity":3,"leadership":1}}]},
+        {"id":"qp_10","prompt":"At the end of a project, what kind of reflection feels most useful?","options":[{"id":"a","label":"Review the evidence, signal quality, mistakes, and what the team missed.","weights":{"critical_thinking":3,"data_analysis":1}},{"id":"b","label":"Capture the repeatable system or playbook so the next round starts stronger.","weights":{"strategy":3,"tech_proficiency":1}},{"id":"c","label":"Reflect on how coordination, ownership, and decision-making worked across people.","weights":{"leadership":3,"adaptability":1}},{"id":"d","label":"Identify the most surprising ideas worth exploring further next time.","weights":{"creativity":3,"strategy":1}}]}
+      ]
+    };
+
+    // ── Scoring Engine (pure functions) ──
+
+    function qpComputeRawScores(responses, questions) {
+      const raw = {};
+      qpModuleData.domains.forEach(d => { raw[d.key] = 0; });
+
+      responses.forEach(resp => {
+        const question = questions.find(q => q.id === resp.question_id);
+        if (!question) return;
+        const option = question.options.find(o => o.id === resp.option_id);
+        if (!option || !option.weights) return;
+        Object.entries(option.weights).forEach(([domain, weight]) => {
+          if (domain in raw) raw[domain] += weight;
+        });
+      });
+
+      return raw;
+    }
+
+    function qpComputeMaxPossible(questions) {
+      const maxes = {};
+      qpModuleData.domains.forEach(d => { maxes[d.key] = 0; });
+
+      questions.forEach(q => {
+        const domainMax = {};
+        q.options.forEach(opt => {
+          if (!opt.weights) return;
+          Object.entries(opt.weights).forEach(([domain, weight]) => {
+            if (!(domain in domainMax)) domainMax[domain] = 0;
+            domainMax[domain] = Math.max(domainMax[domain], weight);
+          });
+        });
+        Object.entries(domainMax).forEach(([domain, val]) => {
+          if (domain in maxes) maxes[domain] += val;
+        });
+      });
+
+      return maxes;
+    }
+
+    function qpNormalize(raw, maxPossible) {
+      const normalized = {};
+      Object.keys(raw).forEach(domain => {
+        const maxVal = maxPossible[domain] || 0;
+        if (maxVal === 0) { normalized[domain] = 20; return; }
+        normalized[domain] = Math.min(100, Math.max(0, Math.round(20 + (raw[domain] / maxVal) * 80)));
+      });
+      return normalized;
+    }
+
+    function qpGetLevel(score) {
+      for (const level of qpModuleData.levels) {
+        if (score >= level.min && score <= level.max) return level.label;
+      }
+      return "Emerging";
+    }
+
+    function qpComputeLevels(scores) {
+      const levels = {};
+      Object.entries(scores).forEach(([domain, score]) => {
+        levels[domain] = qpGetLevel(score);
+      });
+      return levels;
+    }
+
+    function qpComputeArchetype(scores) {
+      const s = scores;
+      const domainsAbove60 = Object.values(s).filter(v => v >= 60).length;
+      const breadthBonus = domainsAbove60 >= 6 ? 5 : 0;
+
+      const clusters = {
+        leader:     s.leadership * 0.45 + s.adaptability * 0.25 + s.strategy * 0.20 + s.creativity * 0.10,
+        strategist: s.strategy * 0.40 + s.critical_thinking * 0.30 + s.data_analysis * 0.20 + s.leadership * 0.10,
+        builder:    s.tech_proficiency * 0.35 + s.problem_solving * 0.35 + s.data_analysis * 0.20 + s.adaptability * 0.10,
+        polymath:   s.creativity * 0.25 + s.strategy * 0.20 + s.critical_thinking * 0.20 + s.adaptability * 0.15 + s.leadership * 0.10 + s.problem_solving * 0.10 + breadthBonus
+      };
+
+      const sorted = Object.entries(clusters).sort((a, b) => b[1] - a[1]);
+      const topKey = sorted[0][0];
+      const topScore = sorted[0][1];
+      const secondScore = sorted[1][1];
+
+      const spread = Math.max(...Object.values(s)) - Math.min(...Object.values(s));
+      let chosenKey = topKey;
+      if (topKey !== "polymath" && clusters.polymath >= topScore - 3 && spread < 30) {
+        chosenKey = "polymath";
+      }
+
+      const chosenScore = clusters[chosenKey];
+      const nextBest = chosenKey === topKey ? secondScore : topScore;
+      const confidence = Math.min(0.85, Math.max(0.35, (chosenScore - nextBest) / 15));
+
+      const archInfo = qpModuleData.archetypes.find(a => a.key === chosenKey);
+      return {
+        key: chosenKey,
+        label: archInfo ? archInfo.label : chosenKey,
+        description: archInfo ? archInfo.description : "",
+        confidence: Math.round(confidence * 100) / 100
+      };
+    }
+
+    function qpComputeBalanceIndex(scores) {
+      const values = Object.values(scores);
+      const avg = values.reduce((a, b) => a + b, 0) / values.length;
+      const spread = Math.max(...values) - Math.min(...values);
+      return Math.max(0, Math.min(100, Math.round(avg - spread * 0.35)));
+    }
+
+    function qpGetTopStrengths(scores, count) {
+      return Object.entries(scores).sort((a, b) => b[1] - a[1]).slice(0, count).map(([k]) => k);
+    }
+
+    function qpGetGrowthDomains(scores, count) {
+      return Object.entries(scores).sort((a, b) => a[1] - b[1]).slice(0, count).map(([k]) => k);
+    }
+
+    function qpGetRecommendedModules(growthDomains) {
+      return growthDomains.map(d => qpModuleData.starter_module_map[d] || d);
+    }
+
+    function qpDomainLabel(key) {
+      const d = qpModuleData.domains.find(dom => dom.key === key);
+      return d ? d.label : key;
+    }
+
+    function qpComputeFullResult(responses) {
+      const questions = qpModuleData.questions;
+      const raw = qpComputeRawScores(responses, questions);
+      const maxPossible = qpComputeMaxPossible(questions);
+      const scores = qpNormalize(raw, maxPossible);
+      const levels = qpComputeLevels(scores);
+      const archetype = qpComputeArchetype(scores);
+      const balanceIndex = qpComputeBalanceIndex(scores);
+      const topStrengths = qpGetTopStrengths(scores, 3);
+      const growthDomains = qpGetGrowthDomains(scores, 3);
+      const recommendedModules = qpGetRecommendedModules(growthDomains);
+
+      return {
+        assessment_id: "quick_pulse_v1",
+        assessment_name: "The Quick Pulse",
+        completed_at: new Date().toISOString(),
+        response_count: responses.length,
+        responses: responses,
+        scores: scores,
+        levels: levels,
+        top_strengths: topStrengths,
+        growth_domains: growthDomains,
+        archetype: archetype,
+        balance_index: balanceIndex,
+        recommended_modules: recommendedModules
+      };
+    }
+
+    // ── Quick Pulse UI State ──
+
+    const qpState = {
+      currentQuestion: 0,
+      answers: {},
+      result: null
+    };
+
+    const qpOverlay = document.getElementById("qpOverlay");
+    const qpCloseBtn = document.getElementById("qpClose");
+    const qpIntroScreen = document.getElementById("qpIntroScreen");
+    const qpQuestionScreen = document.getElementById("qpQuestionScreen");
+    const qpCalcScreen = document.getElementById("qpCalcScreen");
+    const qpResultsScreen = document.getElementById("qpResultsScreen");
+
+    const qpStartBtn = document.getElementById("qpStartBtn");
+    const qpBackToModes = document.getElementById("qpBackToModes");
+    const qpBack = document.getElementById("qpBack");
+    const qpNext = document.getElementById("qpNext");
+    const qpPrompt = document.getElementById("qpPrompt");
+    const qpOptions = document.getElementById("qpOptions");
+    const qpQuestionCounter = document.getElementById("qpQuestionCounter");
+    const qpProgressPct = document.getElementById("qpProgressPct");
+    const qpProgressFill = document.getElementById("qpProgressFill");
+
+    function qpShowScreen(screen) {
+      [qpIntroScreen, qpQuestionScreen, qpCalcScreen, qpResultsScreen].forEach(s => s.classList.remove("is-active"));
+      screen.classList.add("is-active");
+    }
+
+    function qpOpen() {
+      qpOverlay.classList.add("is-open");
+      document.body.style.overflow = "hidden";
+
+      // Populate intro from module data
+      document.getElementById("qpIntroHeadline").textContent = qpModuleData.intro.headline;
+      document.getElementById("qpIntroBody").textContent = qpModuleData.intro.body;
+      const bulletsEl = document.getElementById("qpIntroBullets");
+      bulletsEl.innerHTML = qpModuleData.intro.bullets.map(b => `<span class="pill">${b}</span>`).join("");
+
+      qpShowScreen(qpIntroScreen);
+    }
+
+    function qpClose() {
+      qpOverlay.classList.remove("is-open");
+      document.body.style.overflow = "";
+    }
+
+    function qpReset() {
+      qpState.currentQuestion = 0;
+      qpState.answers = {};
+      qpState.result = null;
+    }
+
+    function qpRenderQuestion() {
+      const q = qpModuleData.questions[qpState.currentQuestion];
+      const total = qpModuleData.questions.length;
+      const num = qpState.currentQuestion + 1;
+      const pct = Math.round((num / total) * 100);
+
+      qpQuestionCounter.textContent = `Question ${num} of ${total}`;
+      qpProgressPct.textContent = `${pct}%`;
+      qpProgressFill.style.width = `${pct}%`;
+
+      qpPrompt.textContent = q.prompt;
+
+      const selectedId = qpState.answers[q.id] || null;
+      qpOptions.innerHTML = q.options.map(opt => {
+        const selected = opt.id === selectedId ? " is-selected" : "";
+        return `<button class="qp-option${selected}" data-option-id="${opt.id}" role="radio" aria-checked="${opt.id === selectedId}">${opt.label}</button>`;
+      }).join("");
+
+      [...qpOptions.querySelectorAll(".qp-option")].forEach(btn => {
+        btn.addEventListener("click", () => {
+          qpState.answers[q.id] = btn.dataset.optionId;
+          qpRenderQuestion();
+        });
+      });
+
+      qpNext.disabled = !selectedId;
+
+      const isLast = qpState.currentQuestion === total - 1;
+      qpNext.textContent = isLast ? "See My Results" : "Next";
+      qpBack.style.visibility = qpState.currentQuestion === 0 ? "hidden" : "visible";
+    }
+
+    // ── Results Radar (standalone for results view) ──
+
+    function qpBuildResultsRadar(scores) {
+      const svg = document.getElementById("qpRadarSvg");
+      const domainKeys = qpModuleData.domains.map(d => d.key);
+      const radius = 160;
+      const count = domainKeys.length;
+
+      function polar(index, value) {
+        const angle = ((-90 + index * (360 / count)) * Math.PI) / 180;
+        const scaled = radius * (value / 100);
+        return { x: Math.cos(angle) * scaled, y: Math.sin(angle) * scaled };
+      }
+
+      function polyPoints(values) {
+        return values.map((v, i) => {
+          const p = polar(i, Math.min(100, v));
+          return `${p.x.toFixed(2)},${p.y.toFixed(2)}`;
+        }).join(" ");
+      }
+
+      const ringScales = [1, 0.8, 0.6, 0.4, 0.2];
+      const ringsHtml = ringScales.map(s => {
+        const pts = polyPoints(domainKeys.map(() => s * 100));
+        return `<polygon fill="none" stroke="rgba(212,175,55,0.14)" stroke-width="1" points="${pts}"/>`;
+      }).join("");
+
+      const axesHtml = domainKeys.map((_, i) => {
+        const p = polar(i, 100);
+        return `<line x1="0" y1="0" x2="${p.x}" y2="${p.y}" stroke="rgba(212,175,55,0.24)" stroke-width="1"/>`;
+      }).join("");
+
+      const labelsHtml = domainKeys.map((key, i) => {
+        const p = polar(i, 118);
+        const label = qpDomainLabel(key);
+        const anchor = Math.abs(p.x) < 10 ? "middle" : p.x > 0 ? "start" : "end";
+        return `<text x="${p.x}" y="${p.y}" fill="#bcb4a3" font-size="11" text-anchor="${anchor}" dominant-baseline="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">${label}</text>`;
+      }).join("");
+
+      const values = domainKeys.map(k => scores[k] || 20);
+      const shapePoints = polyPoints(values);
+      const glowPoints = polyPoints(values.map(v => Math.min(100, v * 1.08)));
+
+      const dotsHtml = domainKeys.map((k, i) => {
+        const p = polar(i, scores[k] || 20);
+        return `<circle cx="${p.x}" cy="${p.y}" r="5" fill="#f3dd91" stroke="rgba(13,13,13,0.8)" stroke-width="2" filter="url(#qpDotGlow)"/>`;
+      }).join("");
+
+      svg.innerHTML = `
+        <defs><filter id="qpDotGlow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+        ${ringsHtml}
+        ${axesHtml}
+        <polygon fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.22)" stroke-width="2" points="${glowPoints}"/>
+        <polygon fill="rgba(212,175,55,0.14)" stroke="rgba(239,211,104,0.92)" stroke-width="2" points="${shapePoints}"/>
+        ${dotsHtml}
+        ${labelsHtml}
+      `;
+    }
+
+    // ── Render Results ──
+
+    function qpRenderResults(result) {
+      // Archetype
+      const archEl = document.getElementById("qpArchetypeResult");
+      archEl.innerHTML = `
+        <span class="archetype-tag">${result.archetype.label}</span>
+        <h3>${result.archetype.label}</h3>
+        <p>${result.archetype.description}</p>
+        <p class="qp-archetype-confidence">Confidence: ${Math.round(result.archetype.confidence * 100)}%</p>
+      `;
+
+      // Radar
+      qpBuildResultsRadar(result.scores);
+
+      // Domain list
+      const domainListEl = document.getElementById("qpDomainList");
+      const domainKeys = qpModuleData.domains.map(d => d.key);
+      domainListEl.innerHTML = domainKeys.map(key => {
+        const score = result.scores[key];
+        const level = result.levels[key];
+        return `
+          <div class="qp-domain-row">
+            <div class="qp-domain-head">
+              <span class="qp-domain-name">${qpDomainLabel(key)}</span>
+              <span><span class="qp-domain-score">${score}</span> <span class="qp-domain-level">${level}</span></span>
+            </div>
+            <div class="qp-domain-bar"><div class="qp-domain-fill" style="width:${score}%"></div></div>
+          </div>
+        `;
+      }).join("");
+
+      // Strengths
+      const strengthsEl = document.getElementById("qpStrengthsList");
+      strengthsEl.innerHTML = result.top_strengths.map(key => {
+        return `<div class="qp-sg-item qp-strength-item">${qpDomainLabel(key)} — ${result.scores[key]} (${result.levels[key]})</div>`;
+      }).join("");
+
+      // Growth
+      const growthEl = document.getElementById("qpGrowthList");
+      growthEl.innerHTML = result.growth_domains.map(key => {
+        return `<div class="qp-sg-item qp-growth-item">${qpDomainLabel(key)} — ${result.scores[key]} (${result.levels[key]})</div>`;
+      }).join("");
+
+      // Balance
+      const balanceEl = document.getElementById("qpBalanceRow");
+      const balanceDesc = result.balance_index >= 75
+        ? "Strong breadth with manageable gaps."
+        : result.balance_index >= 55
+          ? "Moderate asymmetry with meaningful upside."
+          : "Significant specialization — focused development will help.";
+      balanceEl.innerHTML = `
+        <div class="qp-balance-number">${result.balance_index}</div>
+        <div class="qp-balance-info">
+          <h4>Balance Index</h4>
+          <p>${balanceDesc}</p>
+        </div>
+      `;
+
+      // Modules
+      const modulesEl = document.getElementById("qpModules");
+      const moduleCards = result.recommended_modules.map((mod, i) => {
+        const domainKey = result.growth_domains[i];
+        return `
+          <div class="qp-module-card">
+            <div class="qp-module-num">${i + 1}</div>
+            <div class="qp-module-info">
+              <span class="qp-module-name">${mod}</span>
+              <span class="qp-module-domain">${qpDomainLabel(domainKey)}</span>
+            </div>
+          </div>
+        `;
+      }).join("");
+      modulesEl.innerHTML = `<h4>Recommended Starter Modules</h4>${moduleCards}`;
+    }
+
+    // ── Wire results into main page dashboard ──
+
+    function qpApplyToMainPage(result) {
+      // Build a profile object in the format the existing page expects
+      const profile = {};
+      qpModuleData.domains.forEach(d => {
+        profile[d.label] = result.scores[d.key];
+      });
+
+      // Update the quick assessment data with real scores
+      assessments.quick.profile = profile;
+      assessments.quick.archetype = result.archetype.key;
+      assessments.quick.archetypeDisplay = result.archetype.label.replace("The ", "");
+
+      // Build growth items from result
+      assessments.quick.growth = result.growth_domains.map((domainKey, i) => ({
+        meta: `Priority 0${i + 1} \u2022 ${qpDomainLabel(domainKey)}`,
+        title: result.recommended_modules[i],
+        copy: `Strengthen your ${qpDomainLabel(domainKey).toLowerCase()} to build a more balanced Renaissance profile.`,
+        foot: `Starter module \u2022 ${qpDomainLabel(domainKey)}`
+      }));
+
+      // Update path based on growth domains
+      assessments.quick.path = result.growth_domains.map((domainKey, i) => ({
+        phase: `Phase ${["I","II","III","IV"][i] || (i + 1)}`,
+        title: `Develop ${qpDomainLabel(domainKey).toLowerCase()}`,
+        copy: `Focus on ${result.recommended_modules[i]} to raise your ${qpDomainLabel(domainKey).toLowerCase()} from ${result.levels[domainKey]} toward Functional or Strong.`,
+        foot: `Targets ${qpDomainLabel(domainKey)} domain`
+      }));
+
+      // Re-apply to refresh hero, dashboard, etc.
+      applyAssessment("quick");
+    }
+
+    // ── localStorage Persistence ──
+
+    const QP_STORAGE_KEY = "renaissance_quick_pulse_result";
+
+    function qpSaveResult(result) {
+      try {
+        localStorage.setItem(QP_STORAGE_KEY, JSON.stringify(result));
+      } catch (e) { /* storage full or unavailable */ }
+    }
+
+    function qpLoadResult() {
+      try {
+        const stored = localStorage.getItem(QP_STORAGE_KEY);
+        return stored ? JSON.parse(stored) : null;
+      } catch (e) { return null; }
+    }
+
+    // ── Event Wiring ──
+
+    qpCloseBtn.addEventListener("click", qpClose);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && qpOverlay.classList.contains("is-open")) qpClose();
+    });
+
+    qpBackToModes.addEventListener("click", qpClose);
+
+    qpStartBtn.addEventListener("click", () => {
+      qpReset();
+      qpShowScreen(qpQuestionScreen);
+      qpRenderQuestion();
+    });
+
+    qpBack.addEventListener("click", () => {
+      if (qpState.currentQuestion > 0) {
+        qpState.currentQuestion--;
+        qpRenderQuestion();
+      }
+    });
+
+    qpNext.addEventListener("click", () => {
+      const q = qpModuleData.questions[qpState.currentQuestion];
+      if (!qpState.answers[q.id]) return;
+
+      if (qpState.currentQuestion < qpModuleData.questions.length - 1) {
+        qpState.currentQuestion++;
+        qpRenderQuestion();
+      } else {
+        // Submit — show calculating then results
+        qpShowScreen(qpCalcScreen);
+        setTimeout(() => {
+          const responses = Object.entries(qpState.answers).map(([qid, oid]) => ({
+            question_id: qid,
+            option_id: oid
+          }));
+          const result = qpComputeFullResult(responses);
+          qpState.result = result;
+
+          qpSaveResult(result);
+          qpRenderResults(result);
+          qpApplyToMainPage(result);
+          qpShowScreen(qpResultsScreen);
+        }, 900);
+      }
+    });
+
+    // View Development Path — close overlay and scroll to dashboard
+    document.getElementById("qpViewDev").addEventListener("click", () => {
+      qpClose();
+      smoothScrollTo("#development");
+    });
+
+    // Retake
+    document.getElementById("qpRetake").addEventListener("click", () => {
+      qpReset();
+      qpShowScreen(qpQuestionScreen);
+      qpRenderQuestion();
+    });
+
+    // Hook into existing page buttons to open Quick Pulse
+    function hookQuickPulseTriggers() {
+      // Hero CTA button
+      const heroBtn = document.getElementById("heroAssessmentButton");
+      if (heroBtn) heroBtn.addEventListener("click", () => qpOpen());
+
+      // Nav "Get Started" button
+      const navGetStarted = document.getElementById("navGetStarted");
+      if (navGetStarted) navGetStarted.addEventListener("click", () => qpOpen());
+
+      // Quick Pulse "Select Method" button
+      assessmentButtons.forEach(btn => {
+        if (btn.dataset.assessment === "quick") {
+          btn.addEventListener("click", () => qpOpen());
+        }
+      });
+    }
+
+    hookQuickPulseTriggers();
+
+    // Restore previous result on load
+    (function qpRestoreOnLoad() {
+      const saved = qpLoadResult();
+      if (saved && saved.scores) {
+        qpState.result = saved;
+        qpApplyToMainPage(saved);
+      }
+    })();
+  </script>
+</body>
+</html>

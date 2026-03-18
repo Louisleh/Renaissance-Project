@@ -1,0 +1,687 @@
+.dd-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  background: rgba(9, 9, 9, 0.96);
+  backdrop-filter: blur(20px);
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  animation: ddFadeIn 0.3s ease;
+}
+
+@keyframes ddFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.dd-container {
+  width: min(820px, calc(100vw - 2rem));
+  padding: 2rem 0 3rem;
+  outline: none;
+}
+
+.dd-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dd-header-brand {
+  font-family: var(--heading-font);
+  font-size: 0.88rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.dd-close {
+  color: var(--muted);
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.dd-close:hover,
+.dd-close:focus-visible {
+  color: var(--text);
+  transform: rotate(90deg);
+}
+
+.dd-screen {
+  display: none;
+}
+
+.dd-screen.is-active {
+  display: block;
+}
+
+.dd-screen-enter,
+.dd-results-enter {
+  animation: ddScreenEnter 0.35s ease both;
+}
+
+@keyframes ddScreenEnter {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dd-intro {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dd-intro h2 {
+  margin-bottom: 1rem;
+}
+
+.dd-intro-body,
+.dd-intro-note,
+.dd-results-confidence,
+.dd-archetype-result p,
+.dd-intelligence-card p,
+.dd-intel-section p,
+.dd-domain-level,
+.dd-balance-info p,
+.dd-curriculum-rationale,
+.dd-curriculum-time,
+.dd-curriculum-deps,
+.dd-compare-label,
+.dd-scenario-context p {
+  color: var(--muted);
+}
+
+.dd-intro-body {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.dd-intro-bullets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dd-intro-note {
+  font-size: 0.84rem;
+  margin-bottom: 2rem;
+}
+
+.dd-start-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem 2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-strong));
+  color: #0d0d0d;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.38), 0 0 28px rgba(212, 175, 55, 0.2);
+  transition: all 0.3s ease;
+}
+
+.dd-start-btn:hover,
+.dd-start-btn:focus-visible {
+  transform: translateY(-3px);
+}
+
+.dd-back-link {
+  display: block;
+  margin: 1rem auto 0;
+  color: var(--muted);
+  transition: all 0.3s ease;
+}
+
+.dd-back-link:hover,
+.dd-back-link:focus-visible {
+  color: var(--text);
+}
+
+.dd-progress {
+  margin-bottom: 1.4rem;
+}
+
+.dd-progress-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.dd-progress-track,
+.dd-domain-bar,
+.dd-curriculum-track {
+  height: 5px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.dd-progress-fill,
+.dd-domain-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-strong));
+  border-radius: inherit;
+  transition: all 0.3s ease;
+}
+
+.dd-scenario-context,
+.dd-question-card,
+.dd-archetype-result,
+.dd-intelligence-card,
+.dd-sg-card,
+.dd-compare-section,
+.dd-curriculum-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.dd-scenario-context {
+  padding: 1.2rem 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.dd-scenario-kicker {
+  color: var(--gold);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 0.4rem;
+}
+
+.dd-question-card {
+  padding: 2.2rem 1.9rem;
+}
+
+.dd-slide-in {
+  animation: ddSlideIn 0.35s ease both;
+}
+
+.dd-slide-out-forward {
+  animation: ddSlideOutLeft 0.2s ease both;
+}
+
+.dd-slide-out-back {
+  animation: ddSlideOutRight 0.2s ease both;
+}
+
+@keyframes ddSlideIn {
+  from { opacity: 0; transform: translateX(24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes ddSlideOutLeft {
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0; transform: translateX(-24px); }
+}
+
+@keyframes ddSlideOutRight {
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0; transform: translateX(24px); }
+}
+
+.dd-prompt {
+  font-family: var(--heading-font);
+  font-size: clamp(1.12rem, 2vw, 1.4rem);
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.dd-options {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.dd-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  width: 100%;
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  text-align: left;
+  color: var(--muted);
+  transition: all 0.3s ease;
+}
+
+.dd-option:hover,
+.dd-option:focus-visible {
+  color: var(--text);
+  border-color: rgba(212, 175, 55, 0.35);
+  transform: translateX(4px);
+}
+
+.dd-option.is-selected {
+  color: var(--text);
+  border-color: var(--gold);
+  background: rgba(212, 175, 55, 0.08);
+  transform: translateX(4px);
+}
+
+.dd-option-letter {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.dd-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.dd-nav-btn {
+  padding: 0.85rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.dd-btn-next {
+  background: linear-gradient(135deg, var(--gold), var(--gold-strong));
+  color: #0d0d0d;
+  font-weight: 700;
+}
+
+.dd-btn-back {
+  color: var(--muted);
+}
+
+.dd-nav-btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.dd-calculating {
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.dd-calc-ring {
+  margin-bottom: 1rem;
+}
+
+.dd-calc-arc {
+  animation: ddCalcSpin 1.4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes ddCalcSpin {
+  0% { stroke-dashoffset: 200; transform: rotate(0deg); }
+  50% { stroke-dashoffset: 120; transform: rotate(180deg); }
+  100% { stroke-dashoffset: 200; transform: rotate(360deg); }
+}
+
+.dd-calc-text {
+  font-family: var(--heading-font);
+  font-size: 1.2rem;
+}
+
+.dd-calc-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 0.7rem;
+}
+
+.dd-calc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.25;
+  animation: ddDotPulse 1.2s ease-in-out infinite;
+}
+
+.dd-calc-dot:nth-child(2) { animation-delay: 0.15s; }
+.dd-calc-dot:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes ddDotPulse {
+  0%, 100% { opacity: 0.2; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-3px); }
+}
+
+.dd-results {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.dd-results-header {
+  text-align: center;
+}
+
+.dd-archetype-result,
+.dd-intelligence-card,
+.dd-compare-section {
+  padding: 1.5rem;
+}
+
+.dd-archetype-result h3,
+.dd-intelligence-card h4,
+.dd-compare-section h4,
+.dd-curriculum h4 {
+  margin-bottom: 0.6rem;
+}
+
+.dd-archetype-confidence {
+  font-size: 0.84rem;
+}
+
+.dd-intel-section + .dd-intel-section {
+  margin-top: 1rem;
+}
+
+.dd-intel-section h5 {
+  margin: 0 0 0.35rem;
+  color: var(--gold);
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.dd-radar-section {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.dd-domain-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.dd-domain-row {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.dd-domain-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.dd-domain-name {
+  font-size: 0.9rem;
+}
+
+.dd-domain-score {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.dd-domain-level {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.dd-compare-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+  margin-bottom: 1rem;
+}
+
+.dd-compare-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.dd-compare-item {
+  padding: 0.95rem;
+  border-radius: 14px;
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  background: rgba(255, 255, 255, 0.02);
+  display: grid;
+  gap: 0.25rem;
+}
+
+.dd-compare-item strong {
+  font-family: var(--heading-font);
+}
+
+.dd-compare-delta {
+  width: fit-content;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.dd-compare-delta.is-positive {
+  background: rgba(212, 175, 55, 0.14);
+  color: var(--gold);
+}
+
+.dd-compare-delta.is-negative {
+  background: rgba(255, 255, 255, 0.06);
+  color: #d9a69a;
+}
+
+.dd-compare-delta.is-neutral {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+}
+
+.dd-sg-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.dd-sg-card {
+  padding: 1.4rem;
+}
+
+.dd-sg-list {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.dd-sg-item {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  color: var(--muted);
+}
+
+.dd-sg-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dd-sg-strength-dot {
+  background: var(--gold);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+}
+
+.dd-sg-growth-dot {
+  background: #d9a69a;
+}
+
+.dd-balance-row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.dd-balance-number {
+  font-family: var(--heading-font);
+  font-size: 3.5rem;
+  color: var(--gold);
+  min-width: 90px;
+  text-align: center;
+}
+
+.dd-curriculum {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.dd-curriculum-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.2rem;
+}
+
+.dd-curriculum-order {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.dd-curriculum-info {
+  display: grid;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.dd-curriculum-name {
+  font-family: var(--heading-font);
+  font-size: 1.08rem;
+}
+
+.dd-curriculum-domain {
+  color: var(--gold);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.dd-priority-badge {
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.dd-priority-high {
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--gold);
+}
+
+.dd-priority-medium {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+}
+
+.dd-priority-low {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted-strong);
+}
+
+.dd-results-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .dd-radar-section,
+  .dd-sg-grid,
+  .dd-compare-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dd-balance-row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .dd-container {
+    width: min(100vw - 1rem, 100%);
+  }
+
+  .dd-question-card,
+  .dd-scenario-context,
+  .dd-archetype-result,
+  .dd-intelligence-card,
+  .dd-sg-card,
+  .dd-compare-section,
+  .dd-curriculum-card,
+  .dd-balance-row {
+    padding: 1.2rem;
+  }
+
+  .dd-nav,
+  .dd-domain-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dd-nav-btn,
+  .dd-results-actions .hero-button,
+  .dd-results-actions .ghost-button,
+  .dd-start-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dd-overlay,
+  .dd-screen-enter,
+  .dd-results-enter,
+  .dd-slide-in,
+  .dd-slide-out-forward,
+  .dd-slide-out-back,
+  .dd-calc-arc,
+  .dd-calc-dot,
+  .dd-close,
+  .dd-back-link,
+  .dd-start-btn,
+  .dd-progress-fill,
+  .dd-domain-fill,
+  .dd-option,
+  .dd-nav-btn {
+    animation: none !important;
+    transition: none !important;
+  }
+}

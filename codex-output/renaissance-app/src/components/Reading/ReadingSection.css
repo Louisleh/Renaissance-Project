@@ -1,0 +1,73 @@
+.reading-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.reading-head {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.reading-head p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.reading-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.reading-card {
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.2rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.reading-domain {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+}
+
+.reading-author,
+.reading-description,
+.reading-disclosure {
+  color: var(--muted);
+}
+
+.reading-description.is-muted {
+  color: var(--muted-strong);
+}
+
+.reading-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.reading-links a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.reading-upgrade {
+  justify-self: start;
+}
+
+.reading-disclosure {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .reading-grid {
+    grid-template-columns: 1fr;
+  }
+}
