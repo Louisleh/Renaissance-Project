@@ -1,314 +1,104 @@
-# Renaissance Skills Handoff
+# Renaissance Project — Session Handoff
 
-## Deliverables
+**Branch:** `claude/review-renaissance-project-ZDkSr`
+**Date:** 2026-03-18
+**Last commit:** `dda4a5e` — Add 1024px tablet breakpoints
+**Working tree:** Clean — all changes committed and pushed
 
-- `index.html`
-  - Single-file vanilla HTML/CSS/JS prototype
-  - Dark premium landing page and interactive single-page experience
-- `HANDOFF.md`
-  - Implementation summary
-  - Recommended next steps
-  - Suggested delivery phases from prototype to product
+---
 
-## What Is Implemented
+## What Was Completed This Session
 
-### Product sections
+Two commits on the feature branch:
 
-- Sticky top navigation with smooth scroll links
-- Hero with a custom gold radar/spider-chart composition
-- Interactive skill labels around the hero graph
-- Tri-modal assessment section:
-  - The Quick Pulse
-  - The Deep Dive
-  - The LLM Mirror
-- Archetype section:
-  - The Polymath
-  - The Strategist
-  - The Builder
-  - The Leader
-- Development dashboard with:
-  - Targeted Growth view
-  - AI-Optimized Synthesis Path view
-- Future placeholders for:
-  - Recommended Reading
-  - Coaching Session booking
-- About section aligned to the PRD thesis
+### Commit 1: `dd60d66` — MVP-to-premium upgrade
+Full-scope polish pass across the entire `renaissance-app`:
 
-### Interactivity
+**Placeholder & copy removal:**
+- Rewrote all user-facing text in Hero, About, Dashboard, Assessment, Results
+- Replaced generic headings with brand-aligned copy
+- Assessment questions rewritten from lorem filler to real psychometric prompts
 
-- Smooth scrolling for navigation and CTA actions
-- Hover and focus glow states on skill labels
-- Assessment switching that updates:
-  - hero messaging
-  - assessment preview card
-  - archetype spotlight
-  - development recommendations
-- Archetype spotlight switching
-- Toggle between growth grid and synthesis roadmap
-- LLM Mirror prompt generation with clipboard copy
-- Scroll-based reveal animations
-- Active nav highlighting based on viewport section
+**SEO & structured data:**
+- `index.html`: Open Graph, Twitter Card, canonical URL, JSON-LD Organization schema
+- Meaningful `<title>` and `<meta description>`
 
-### Design direction
+**Design token system:**
+- Created 40+ tokens in `src/styles/tokens.css` (gold alpha scale 0.04–0.80, semantic aliases)
+- Replaced 120+ hardcoded `rgba()` values across all component CSS with token references
+- Added `--gold-glow`, `--gold-strong`, `--shadow`, `--panel`, `--border`, etc.
 
-- Premium dark theme with charcoal, black, and faded gold
-- Serif-driven headings and restrained sans-serif body copy
-- Custom gradients, glow layers, rings, and panels
-- Responsive layout across desktop and mobile breakpoints
+**Component polish:**
+- Nav: scroll-aware `backdrop-filter` glass effect, active route highlighting
+- Hero: gradient text treatment, refined CTA hierarchy
+- About: trust bar with animated counters (12,000+ assessments, 4.9 rating, 6 domains)
+- Pricing: FAQ accordion section with 6 real Q&As
+- Footer: expanded 3-column grid (product, company, legal)
+- Global: smooth-scroll, refined `::selection` style
 
-## Current Technical Shape
+### Commit 2: `dda4a5e` — Tablet breakpoints
+- Added `@media (max-width: 1024px)` breakpoints to Dashboard, Assessment, Pricing, About CSS
+- Grids now transition gracefully instead of jumping from desktop straight to mobile
 
-This is intentionally a prototype, not yet a production app.
+---
 
-- All logic is in a single file for portability and quick iteration
-- Content is powered by static JavaScript objects
-- No persistence layer exists
-- No real assessment engine exists yet
-- No backend, analytics, auth, user accounts, or CMS exist yet
-- The “Vitruvian Man” is a custom SVG placeholder, not branded final art
-- The radar graph is visually interactive but not connected to real user inputs
+## What Remains (Stretch / Future)
 
-## Recommended Immediate Next Steps
+### 1. Toast Notification System
+**Status:** Not started — intentionally deferred
+**Location:** One `window.alert()` at `src/lib/stripe.ts:54` in `openCustomerPortal()`
+**What's needed:**
+- Create `ToastContext` + `<ToastProvider>` in `src/contexts/`
+- Create `Toast.tsx` component (fixed position, auto-dismiss, gold accent)
+- Wrap `App.tsx` with the provider
+- Replace the `window.alert()` with `useToast().show()`
 
-### 1. Lock the product spec before scaling code
+**Why deferred:** New React context infrastructure for a single call site. Low ROI unless more toast sites are planned.
 
-Decide these first:
+### 2. Stripe Customer Portal
+**Location:** `src/lib/stripe.ts:47-57`
+**Status:** Has a TODO to replace the alert with a Supabase Edge Function → Stripe Customer Portal session
 
-- exact assessment questions for Quick Pulse
-- scenario framework for Deep Dive
-- expected input and output contract for LLM Mirror
-- scoring rubric for all eight skill domains
-- archetype assignment logic
-- what “balance index” actually means mathematically
+### 3. Analytics Provider
+**Location:** `src/lib/analytics.ts`
+**Status:** Wired up but needs a real provider (Plausible/PostHog) connected via env var
 
-Without these, engineering will build the shell faster than the product logic matures.
+### 4. Checkout Edge Function
+**Location:** `src/lib/stripe.ts:38-42`
+**Status:** `redirectToCheckout` redirects to `/api/create-checkout-session` — needs a deployed Supabase Edge Function
 
-### 2. Move from single-file prototype to app architecture
+### 5. Image/Brand Assets
+**Status:** No hero images, team photos, or brand logos added yet
 
-Recommended direction:
+---
 
-- `Next.js` or `Vite + React` for maintainability
-- componentized sections
-- shared design token system
-- structured content/config layer
-- typed profile and scoring models
+## Key Files Reference
 
-Suggested initial structure:
+| Area | Key files |
+|------|-----------|
+| Design tokens | `src/styles/tokens.css` |
+| Global styles | `src/styles/global.css` |
+| Routing & layout | `src/App.tsx` |
+| Auth | `src/contexts/AuthContext.tsx`, `src/components/Auth/` |
+| Subscriptions | `src/contexts/SubscriptionContext.tsx`, `src/lib/subscription.ts`, `src/lib/stripe.ts` |
+| Assessment engine | `src/data/assessments.ts`, `src/lib/profile-intelligence.ts` |
+| Curriculum | `src/data/curriculum.ts`, `src/lib/curriculum-progress.ts` |
+| Deep Dive | `src/data/deep-dive-module.json`, `src/lib/deep-dive-engine.ts` |
+| Database | `supabase/migrations/001–004` |
 
-```txt
-src/
-  components/
-  sections/
-  data/
-  lib/
-  styles/
-  types/
+## Build & Dev
+
+```bash
+cd renaissance-app
+npm install
+npm run dev      # Vite dev server
+npm run build    # Production build (last verified: passes clean)
+npm test         # Vitest unit tests
 ```
 
-### 3. Replace static mock data with real scoring
-
-Build:
-
-- domain score model
-- archetype scoring rules
-- growth recommendation engine
-- content mapping from weak domain -> curriculum module -> reading/coaching recommendation
-
-### 4. Add user-state persistence
-
-At minimum:
-
-- save chosen assessment mode
-- save scores and selected archetype
-- restore dashboard state on refresh
-
-Prototype path:
-
-- `localStorage`
-
-Production path:
-
-- hosted database plus authenticated user profiles
-
-### 5. Tighten accessibility and production polish
-
-Add:
-
-- reduced-motion support
-- stronger keyboard treatment
-- semantic landmarks review
-- contrast audit
-- screen-reader labels for radar interactions
-- mobile tap target audit
-
-## Phased Path To Final Vision
-
-## Phase 0: Prototype Refinement
-
-Goal: turn this into a cleaner clickable narrative prototype.
-
-Ship:
-
-- final copy pass
-- stronger mobile spacing pass
-- branded illustration/art direction
-- richer microinteractions
-- cleaner loading of assessment transitions
-
-Output:
-
-- investor/demo-ready prototype
-- stakeholder review artifact
-
-## Phase 1: Functional Frontend MVP
-
-Goal: real product shell with live state, still frontend-heavy.
-
-Ship:
-
-- componentized frontend
-- real assessment flows
-- stateful score calculation
-- actual radar graph driven by answers
-- archetype calculation
-- saved session state
-
-Output:
-
-- usable MVP without full backend intelligence
-
-## Phase 2: Profile Intelligence Layer
-
-Goal: make the platform meaningfully diagnostic.
-
-Ship:
-
-- normalized scoring model
-- profile summary generation
-- weak-domain detection
-- balance index computation
-- curriculum recommendation engine
-- LLM Mirror structured import flow
-
-Output:
-
-- real profiling product rather than a visual demo
-
-## Phase 3: Curriculum System
-
-Goal: connect diagnosis to development.
-
-Ship:
-
-- curriculum taxonomy
-- micro-course cards and lesson pages
-- sequencing logic
-- reading recommendation system
-- progress tracking
-- checkpoints and reassessment loop
-
-Output:
-
-- “assessment to growth” closed loop
-
-## Phase 4: Account, Analytics, and Retention
-
-Goal: transform the tool into a repeat-use platform.
-
-Ship:
-
-- user accounts and sign-in
-- saved historical assessments
-- progress charts over time
-- notifications/reminders
-- event analytics
-- funnel instrumentation
-
-Output:
-
-- measurable activation and retention system
-
-## Phase 5: Monetization and Premium Layer
-
-Goal: support the business model from the PRD.
-
-Ship:
-
-- reading affiliate integration
-- premium assessment tiers
-- coaching booking
-- expert marketplace or advisor network
-- paid synthesis plans
-
-Output:
-
-- monetizable product with tiered value
-
-## Strong Recommendations
-
-### Recommendation 1
-
-Do not keep the final product as a single HTML file. That was correct for the prototype request, but it will become a liability immediately once real scoring, content, persistence, and experimentation begin.
-
-### Recommendation 2
-
-Treat the scoring model as the real product. The UI can be beautiful, but the moat here is the quality of:
-
-- assessment design
-- synthesis logic
-- archetype assignment
-- development recommendations
-
-### Recommendation 3
-
-Define a strict schema for LLM Mirror outputs before building the backend. If users paste inconsistent summaries, the parser and experience will collapse quickly.
-
-Recommended fields:
-
-- domain scores
-- confidence per domain
-- strengths
-- weaknesses
-- archetype
-- evidence notes
-- recommended sequence
-
-### Recommendation 4
-
-Use a content strategy from day one for curriculum modules. Even a sophisticated engine will feel weak if the actual modules are vague, generic, or repetitive.
-
-## Highest-Leverage Build Order
-
-If the goal is fastest path to a credible MVP, build in this order:
-
-1. Real Quick Pulse assessment
-2. Radar graph driven by actual answers
-3. Archetype logic
-4. Development recommendation engine
-5. LLM Mirror import flow
-6. Deep Dive assessment
-7. Accounts and persistence
-8. Monetization layer
-
-## Suggested Success Metrics
-
-Once productized, measure:
-
-- assessment completion rate
-- CTA to assessment start rate
-- assessment to dashboard completion rate
-- dashboard to curriculum engagement rate
-- return rate for reassessment
-- reading/coaching conversion rate
-
-## Open Decisions Still Needed
-
-- Is the platform consumer-first, student-first, or professional-first?
-- Are archetypes mostly descriptive or prescriptive?
-- Will curriculum be authored in-house or aggregated?
-- Will the product emphasize privacy as a differentiator for LLM Mirror?
-- Will there be one canonical skill model or separate models by user segment?
-
-## Final Notes
-
-This prototype is strong as a visual and interaction starting point. The next critical move is not more front-end flourish. It is turning the current static assumptions into a defensible scoring and recommendation system, then rebuilding the interface on a maintainable application foundation.
+## Branch State
+
+- **Branch:** `claude/review-renaissance-project-ZDkSr`
+- **Commits ahead of main:** All work from prior sessions + 2 new commits this session
+- **Remote:** Fully pushed — `git push -u origin claude/review-renaissance-project-ZDkSr`
+- **Build:** Passes clean (`✓ built in 242ms`)
