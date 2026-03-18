@@ -1,0 +1,128 @@
+.hist-page {
+  padding: 4rem 0 6rem;
+}
+
+.hist-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.hist-panel,
+.hist-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.hist-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hist-card-copy {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.hist-card-kicker {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+}
+
+.hist-card-copy p,
+.hist-panel-copy {
+  color: var(--muted);
+}
+
+.hist-card-chart {
+  display: grid;
+  place-items: center;
+}
+
+.hist-strengths {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hist-chip {
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 0.88rem;
+}
+
+.hist-chart-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.hist-chart {
+  width: 100%;
+  height: auto;
+}
+
+.hist-axis-label {
+  fill: var(--muted-strong);
+  font-size: 12px;
+  font-family: var(--body-font);
+}
+
+.hist-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hist-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hist-legend-item.is-active {
+  color: var(--text);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.hist-legend-swatch {
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+}
+
+@media (max-width: 640px) {
+  .hist-page {
+    padding: 3rem 0 5rem;
+  }
+
+  .hist-panel,
+  .hist-card {
+    padding: 1.35rem;
+  }
+
+  .hist-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hist-legend-item {
+    transition: none;
+  }
+}

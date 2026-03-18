@@ -1,0 +1,1430 @@
+{
+  "module_id": "deep_dive_v1",
+  "module_name": "The Deep Dive",
+  "version": 1,
+  "estimated_minutes": 18,
+  "confidence_label": "High Fidelity",
+  "intro": {
+    "headline": "Pressure-test how you think under real constraints",
+    "body": "The Deep Dive uses longer, scenario-based questions and targeted follow-up probes to build a more confident picture of how you reason, adapt, and execute across domains.",
+    "bullets": [
+      "18 minutes",
+      "Scenario-based prompts",
+      "Adaptive follow-up questions",
+      "Higher-confidence profile output"
+    ]
+  },
+  "domains": [
+    {
+      "key": "leadership",
+      "label": "Leadership",
+      "description": "Ability to align people, create clarity, and move decisions forward."
+    },
+    {
+      "key": "creativity",
+      "label": "Creativity",
+      "description": "Ability to generate novel approaches, ideas, and reframings."
+    },
+    {
+      "key": "strategy",
+      "label": "Strategy",
+      "description": "Ability to sequence action, model tradeoffs, and see leverage."
+    },
+    {
+      "key": "tech_proficiency",
+      "label": "Tech Proficiency",
+      "description": "Practical fluency with tools, systems, and technical workflows."
+    },
+    {
+      "key": "problem_solving",
+      "label": "Problem Solving",
+      "description": "Ability to decompose complexity and get to workable solutions."
+    },
+    {
+      "key": "critical_thinking",
+      "label": "Critical Thinking",
+      "description": "Ability to question assumptions, weigh evidence, and reason rigorously."
+    },
+    {
+      "key": "adaptability",
+      "label": "Adaptability",
+      "description": "Ability to adjust plans and behavior under changing conditions."
+    },
+    {
+      "key": "data_analysis",
+      "label": "Data Analysis",
+      "description": "Ability to use evidence, measurement, and quantitative signal."
+    }
+  ],
+  "levels": [
+    {
+      "label": "Emerging",
+      "min": 0,
+      "max": 44
+    },
+    {
+      "label": "Developing",
+      "min": 45,
+      "max": 59
+    },
+    {
+      "label": "Functional",
+      "min": 60,
+      "max": 74
+    },
+    {
+      "label": "Strong",
+      "min": 75,
+      "max": 89
+    },
+    {
+      "label": "Signature",
+      "min": 90,
+      "max": 100
+    }
+  ],
+  "starter_module_map": {
+    "leadership": "Influence Through Clarity",
+    "creativity": "Cross-Domain Idea Generation",
+    "strategy": "Systems Mapping and Leverage",
+    "tech_proficiency": "Tool Fluency for Non-Specialists",
+    "problem_solving": "Constraint Decomposition",
+    "critical_thinking": "Assumption Testing",
+    "adaptability": "Operating Under Change",
+    "data_analysis": "Evidence Before Intuition"
+  },
+  "archetypes": [
+    {
+      "key": "polymath",
+      "label": "The Polymath",
+      "description": "A broad, balanced synthesizer with unusual pattern transfer across domains."
+    },
+    {
+      "key": "strategist",
+      "label": "The Strategist",
+      "description": "A systems-oriented thinker who links evidence, tradeoffs, and long-range direction."
+    },
+    {
+      "key": "builder",
+      "label": "The Builder",
+      "description": "An execution-heavy profile that turns ideas into tools, systems, and outputs."
+    },
+    {
+      "key": "leader",
+      "label": "The Leader",
+      "description": "A people-and-direction profile that creates clarity and adapts well under uncertainty."
+    }
+  ],
+  "core_questions": [
+    {
+      "id": "dd_core_leadership_01",
+      "prompt": "A cross-functional initiative is drifting because product, operations, and finance each define success differently. What is your first move?",
+      "options": [
+        {
+          "id": "dd_core_leadership_01_a",
+          "label": "Convene the key leads, define one outcome statement, and make tradeoffs explicit before assigning owners.",
+          "weights": {
+            "leadership": 4,
+            "strategy": 2
+          }
+        },
+        {
+          "id": "dd_core_leadership_01_b",
+          "label": "Interview each team separately to understand incentives, then tailor the plan to reduce resistance.",
+          "weights": {
+            "leadership": 3,
+            "adaptability": 2
+          }
+        },
+        {
+          "id": "dd_core_leadership_01_c",
+          "label": "Model the operational bottlenecks first so the team debates constraints instead of opinions.",
+          "weights": {
+            "problem_solving": 2,
+            "critical_thinking": 2,
+            "leadership": 1
+          }
+        },
+        {
+          "id": "dd_core_leadership_01_d",
+          "label": "Draft a proposal yourself, circulate it asynchronously, and refine it once objections appear.",
+          "weights": {
+            "leadership": 2,
+            "tech_proficiency": 1,
+            "adaptability": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "dd_core_creativity_01",
+      "prompt": "Your team’s product has plateaued. Incremental improvements are no longer moving customer behavior. How do you open up better options?",
+      "options": [
+        {
+          "id": "dd_core_creativity_01_a",
+          "label": "Study analogous products in unrelated industries and import the structural ideas that could transfer.",
+          "weights": {
+            "creativity": 4,
+            "strategy": 1
+          }
+        },
+        {
+          "id": "dd_core_creativity_01_b",
+          "label": "Run a structured ideation sprint where constraints are deliberately reversed one by one.",
+          "weights": {
+            "creativity": 3,
+            "problem_solving": 1,
+            "adaptability": 1
+          }
+        },
+        {
+          "id": "dd_core_creativity_01_c",
+          "label": "Interview power users to uncover hidden workarounds and design from the behaviors already emerging.",
+          "weights": {
+            "creativity": 2,
+            "data_analysis": 1,
+            "leadership": 1
+          }
+        },
+        {
+          "id": "dd_core_creativity_01_d",
+          "label": "Set measurable targets first and keep exploring only the ideas that can be defended with near-term evidence.",
+          "weights": {
+            "critical_thinking": 2,
+            "data_analysis": 2,
+            "creativity": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "dd_core_strategy_01",
+      "prompt": "Your team has three promising project directions but resources for only one. The data is incomplete and every choice creates second-order effects. What do you do?",
+      "options": [
+        {
+          "id": "dd_core_strategy_01_a",
+          "label": "Map second-order consequences, dependency chains, and risk-adjusted upside before sequencing the decision.",
+          "weights": {
+            "strategy": 4,
+            "critical_thinking": 2
+          }
+        },
+        {
+          "id": "dd_core_strategy_01_b",
+          "label": "Run short experiments on all three options, then commit only once early evidence shifts the odds.",
+          "weights": {
+            "strategy": 3,
+            "data_analysis": 2
+          }
+        },
+        {
+          "id": "dd_core_strategy_01_c",
+          "label": "Prioritize the option that strengthens the team’s long-term capabilities, even if it is not the easiest short-term win.",
+          "weights": {
+            "strategy": 3,
+            "leadership": 1,
+            "adaptability": 1
+          }
+        },
+        {
+          "id": "dd_core_strategy_01_d",
+          "label": "Choose the option with the lowest implementation friction so you can build momentum and iterate later.",
+          "weights": {
+            "problem_solving": 2,
+            "tech_proficiency": 2,
+            "strategy": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "dd_core_tech_01",
+      "prompt": "A high-value workflow depends on several brittle manual steps between tools. You are not the primary engineer, but the work is clearly fragile. How do you respond?",
+      "options": [
+        {
+          "id": "dd_core_tech_01_a",
+          "label": "Trace the data flow, identify the interfaces, and outline where automation or system handoffs would remove fragility.",
+          "weights": {
+            "tech_proficiency": 4,
+            "problem_solving": 2
+          }
+        },
+        {
+          "id": "dd_core_tech_01_b",
+          "label": "Ask the engineers to explain the architecture and translate the business need into their language before proposing changes.",
+          "weights": {
+            "tech_proficiency": 3,
+            "leadership": 1,
+            "adaptability": 1
+          }
+        },
+        {
+          "id": "dd_core_tech_01_c",
+          "label": "Measure failure points first so the team knows which technical problem is actually worth solving.",
+          "weights": {
+            "data_analysis": 2,
+            "critical_thinking": 2,
+            "tech_proficiency": 1
+          }
+        },
+        {
+          "id": "dd_core_tech_01_d",
+          "label": "Prototype a low-risk workaround in existing tools so the team can learn before asking for deeper technical changes.",
+          "weights": {
+            "tech_proficiency": 2,
+            "adaptability": 2,
+            "problem_solving": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "dd_core_problem_solving_01",
+      "prompt": "A customer-facing problem has resurfaced three times despite previous fixes. What is your instinctive approach?",
+      "options": [
+        {
+          "id": "dd_core_problem_solving_01_a",
+          "label": "Reframe the issue as a system failure, identify the governing constraint, and test interventions at that point.",
+          "weights": {
+            "problem_solving": 4,
+            "strategy": 1
+          }
+        },
+        {
+          "id": "dd_core_problem_solving_01_b",
+          "label": "Break the problem into stages, isolate the exact failure mode, and rule out likely causes one by one.",
+          "weights": {
+            "problem_solving": 3,
+            "critical_thinking": 2
+          }
+        },
+        {
+          "id": "dd_core_problem_solving_01_c",
+          "label": "Talk to the people closest to the issue, map where coordination breaks down, and redesign the process around handoffs.",
+          "weights": {
+            "problem_solving": 2,
+            "leadership": 2,
+            "adaptability": 1
+          }
+        },
+        {
+          "id": "dd_core_problem_solving_01_d",
+          "label": "Create a quick workaround first so the user pain drops immediately, then investigate root causes after stability returns.",
+          "weights": {
+            "problem_solving": 2,
+            "adaptability": 2,
+            "tech_proficiency": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "dd_core_critical_thinking_01",
+      "prompt": "A senior stakeholder presents a confident recommendation backed by a polished deck. Several claims feel too neat. What do you do next?",
+      "options": [
+        {
+          "id": "dd_core_critical_thinking_01_a",
+          "label": "Separate claims from evidence, test the assumptions underneath them, and ask what would change the conclusion.",
+          "weights": {
+            "critical_thinking": 4,
+            "data_analysis": 1
+          }
+        },
+        {
+          "id": "dd_core_critical_thinking_01_b",
+          "label": "Look for missing counterexamples and failure modes before deciding whether the recommendation is robust.",
+          "weights": {
+            "critical_thinking": 3,
+            "strategy": 1,
+            "problem_solving": 1
+          }
+        },
+        {
+          "id": "dd_core_critical_thinking_01_c",
+          "label": "Ask for the raw evidence and rebuild the logic yourself to see whether the story holds under scrutiny.",
+          "weights": {
+            "critical_thinking": 3,
+            "data_analysis": 2
+          }
+        },
+        {
+          "id": "dd_core_critical_thinking_01_d",
+          "label": "Accept the proposal provisionally but design checkpoints so reality can challenge it quickly if needed.",
+          "weights": {
+            "adaptability": 2,
+            "critical_thinking": 2,
+            "strategy": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "dd_core_adaptability_01",
+      "prompt": "A major external change invalidates part of your quarterly plan two weeks before launch. What is your next move?",
+      "options": [
+        {
+          "id": "dd_core_adaptability_01_a",
+          "label": "Preserve the core objective, cut nonessential scope, and re-sequence around the new constraints immediately.",
+          "weights": {
+            "adaptability": 4,
+            "strategy": 1
+          }
+        },
+        {
+          "id": "dd_core_adaptability_01_b",
+          "label": "Create fast alignment across the team so people know what changed, what did not, and where decisions now sit.",
+          "weights": {
+            "adaptability": 3,
+            "leadership": 2
+          }
+        },
+        {
+          "id": "dd_core_adaptability_01_c",
+          "label": "Run a rapid risk review, identify the most unstable assumptions, and redesign around the ones most likely to break next.",
+          "weights": {
+            "adaptability": 2,
+            "critical_thinking": 2,
+            "problem_solving": 1
+          }
+        },
+        {
+          "id": "dd_core_adaptability_01_d",
+          "label": "Build temporary workarounds so the team can keep shipping while you figure out the better long-term response.",
+          "weights": {
+            "adaptability": 2,
+            "tech_proficiency": 2,
+            "problem_solving": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "dd_core_data_01",
+      "prompt": "A dashboard shows a sharp performance increase after a recent product change. The team wants to declare success. What do you do?",
+      "options": [
+        {
+          "id": "dd_core_data_01_a",
+          "label": "Check whether the metric reflects the behavior you actually care about, then compare against a baseline and plausible confounders.",
+          "weights": {
+            "data_analysis": 4,
+            "critical_thinking": 2
+          }
+        },
+        {
+          "id": "dd_core_data_01_b",
+          "label": "Break the uplift by segment and context before accepting the story the aggregate number suggests.",
+          "weights": {
+            "data_analysis": 3,
+            "strategy": 1,
+            "problem_solving": 1
+          }
+        },
+        {
+          "id": "dd_core_data_01_c",
+          "label": "Treat the signal as promising but provisional, and design a cleaner experiment before rolling the change out wider.",
+          "weights": {
+            "data_analysis": 3,
+            "adaptability": 1,
+            "strategy": 1
+          }
+        },
+        {
+          "id": "dd_core_data_01_d",
+          "label": "Use the momentum to align stakeholders while you continue validating the signal in the background.",
+          "weights": {
+            "leadership": 2,
+            "data_analysis": 1,
+            "adaptability": 1
+          }
+        }
+      ]
+    }
+  ],
+  "probe_questions": {
+    "leadership": [
+      {
+        "id": "dd_probe_leadership_01",
+        "prompt": "A strong individual contributor resists a team decision they did not help shape. Which response best matches you?",
+        "options": [
+          {
+            "id": "dd_probe_leadership_01_a",
+            "label": "Acknowledge the concern, restate the decision logic, and clarify where dissent can still improve execution.",
+            "weights": {
+              "leadership": 4,
+              "adaptability": 1
+            }
+          },
+          {
+            "id": "dd_probe_leadership_01_b",
+            "label": "Invite them into a narrower decision they can own so resistance turns into responsibility.",
+            "weights": {
+              "leadership": 3,
+              "problem_solving": 1
+            }
+          },
+          {
+            "id": "dd_probe_leadership_01_c",
+            "label": "Let the result decide; if the team sees the plan work, alignment will follow.",
+            "weights": {
+              "leadership": 1,
+              "problem_solving": 2
+            }
+          },
+          {
+            "id": "dd_probe_leadership_01_d",
+            "label": "Escalate the issue quickly so the disagreement cannot slow momentum.",
+            "weights": {
+              "leadership": 1,
+              "adaptability": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "dd_probe_leadership_02",
+        "prompt": "You need to delegate a workstream that matters but cannot receive much of your attention. What do you emphasize most?",
+        "options": [
+          {
+            "id": "dd_probe_leadership_02_a",
+            "label": "Outcome, decision boundaries, and the earliest checkpoint where drift would still be cheap to fix.",
+            "weights": {
+              "leadership": 4,
+              "strategy": 1
+            }
+          },
+          {
+            "id": "dd_probe_leadership_02_b",
+            "label": "The exact process you would follow so execution quality remains consistent.",
+            "weights": {
+              "leadership": 2,
+              "tech_proficiency": 1
+            }
+          },
+          {
+            "id": "dd_probe_leadership_02_c",
+            "label": "The metrics you want reported back so you can intervene only when signal deteriorates.",
+            "weights": {
+              "leadership": 2,
+              "data_analysis": 2
+            }
+          },
+          {
+            "id": "dd_probe_leadership_02_d",
+            "label": "The relationships they must manage so political friction does not surprise the team later.",
+            "weights": {
+              "leadership": 3,
+              "adaptability": 1
+            }
+          }
+        ]
+      }
+    ],
+    "creativity": [
+      {
+        "id": "dd_probe_creativity_01",
+        "prompt": "You are asked for fresh ideas in a domain you do not know deeply. How do you avoid producing generic answers?",
+        "options": [
+          {
+            "id": "dd_probe_creativity_01_a",
+            "label": "Translate the problem into its deeper structure, then borrow patterns from unrelated fields with the same structure.",
+            "weights": {
+              "creativity": 4,
+              "strategy": 1
+            }
+          },
+          {
+            "id": "dd_probe_creativity_01_b",
+            "label": "Generate many options quickly, then use explicit criteria to filter them only after divergence is complete.",
+            "weights": {
+              "creativity": 3,
+              "critical_thinking": 1
+            }
+          },
+          {
+            "id": "dd_probe_creativity_01_c",
+            "label": "Ask domain experts for edge cases and build around the unusual constraints they reveal.",
+            "weights": {
+              "creativity": 2,
+              "leadership": 1,
+              "adaptability": 1
+            }
+          },
+          {
+            "id": "dd_probe_creativity_01_d",
+            "label": "Look for whatever has worked before and add a small twist rather than risking a larger reframing.",
+            "weights": {
+              "creativity": 1,
+              "adaptability": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "dd_probe_creativity_02",
+        "prompt": "A team says a constraint makes the goal impossible. What is the most creative next move?",
+        "options": [
+          {
+            "id": "dd_probe_creativity_02_a",
+            "label": "Reframe the definition of success so the learning objective survives even if the original format cannot.",
+            "weights": {
+              "creativity": 4,
+              "adaptability": 1
+            }
+          },
+          {
+            "id": "dd_probe_creativity_02_b",
+            "label": "List which parts of the constraint are truly fixed and which only feel fixed because of habit.",
+            "weights": {
+              "creativity": 3,
+              "critical_thinking": 1
+            }
+          },
+          {
+            "id": "dd_probe_creativity_02_c",
+            "label": "Search for a partner, tool, or distribution model that changes the constraint instead of accepting it.",
+            "weights": {
+              "creativity": 2,
+              "tech_proficiency": 1,
+              "leadership": 1
+            }
+          },
+          {
+            "id": "dd_probe_creativity_02_d",
+            "label": "Accept the constraint and optimize within it; reframing usually costs too much time.",
+            "weights": {
+              "creativity": 1,
+              "problem_solving": 1
+            }
+          }
+        ]
+      }
+    ],
+    "strategy": [
+      {
+        "id": "dd_probe_strategy_01",
+        "prompt": "A decision looks attractive in the short term but could weaken an important capability later. How do you handle that tension?",
+        "options": [
+          {
+            "id": "dd_probe_strategy_01_a",
+            "label": "Model the near-term gain against the capability cost and decide only after comparing second-order effects explicitly.",
+            "weights": {
+              "strategy": 4,
+              "critical_thinking": 1
+            }
+          },
+          {
+            "id": "dd_probe_strategy_01_b",
+            "label": "Choose the path that preserves option value, even if it looks slightly slower right now.",
+            "weights": {
+              "strategy": 3,
+              "adaptability": 1
+            }
+          },
+          {
+            "id": "dd_probe_strategy_01_c",
+            "label": "Take the short-term gain but add checkpoints to reverse course if the downstream cost grows.",
+            "weights": {
+              "strategy": 2,
+              "data_analysis": 1,
+              "adaptability": 1
+            }
+          },
+          {
+            "id": "dd_probe_strategy_01_d",
+            "label": "Back the simpler move first; too much future-planning usually delays execution.",
+            "weights": {
+              "strategy": 1,
+              "problem_solving": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "dd_probe_strategy_02",
+        "prompt": "You inherit a chaotic portfolio of initiatives. Where do you begin?",
+        "options": [
+          {
+            "id": "dd_probe_strategy_02_a",
+            "label": "Map dependencies, identify leverage points, and sequence the work so one move improves several others.",
+            "weights": {
+              "strategy": 4,
+              "problem_solving": 1
+            }
+          },
+          {
+            "id": "dd_probe_strategy_02_b",
+            "label": "Cut low-value work first so the team regains attention and strategic decisions can improve afterward.",
+            "weights": {
+              "strategy": 3,
+              "leadership": 1
+            }
+          },
+          {
+            "id": "dd_probe_strategy_02_c",
+            "label": "Stabilize one critical workstream end-to-end before trying to optimize the whole portfolio.",
+            "weights": {
+              "strategy": 2,
+              "adaptability": 1,
+              "problem_solving": 1
+            }
+          },
+          {
+            "id": "dd_probe_strategy_02_d",
+            "label": "Ask each owner for their plan and aggregate the best pieces into a single roadmap.",
+            "weights": {
+              "strategy": 1,
+              "leadership": 1
+            }
+          }
+        ]
+      }
+    ],
+    "tech_proficiency": [
+      {
+        "id": "dd_probe_tech_01",
+        "prompt": "A team uses the word \"API\" constantly and business decisions depend on it. What does strong non-engineering tech fluency look like here?",
+        "options": [
+          {
+            "id": "dd_probe_tech_01_a",
+            "label": "Understand what systems exchange, where the boundaries are, and how those interfaces constrain the business workflow.",
+            "weights": {
+              "tech_proficiency": 4,
+              "strategy": 1
+            }
+          },
+          {
+            "id": "dd_probe_tech_01_b",
+            "label": "Learn enough terminology to ask precise questions and avoid translating everything through a single engineer.",
+            "weights": {
+              "tech_proficiency": 3,
+              "leadership": 1
+            }
+          },
+          {
+            "id": "dd_probe_tech_01_c",
+            "label": "Focus on the customer outcome; technical details matter only if they surface as visible problems.",
+            "weights": {
+              "tech_proficiency": 1,
+              "adaptability": 1
+            }
+          },
+          {
+            "id": "dd_probe_tech_01_d",
+            "label": "Build a simple diagram of the flow and use it to spot where handoffs, latency, or missing data create friction.",
+            "weights": {
+              "tech_proficiency": 3,
+              "problem_solving": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "dd_probe_tech_02",
+        "prompt": "You suspect AI could remove repetitive work from a team. What is the best first step?",
+        "options": [
+          {
+            "id": "dd_probe_tech_02_a",
+            "label": "Document the workflow, inputs, outputs, and error patterns first so you know where AI could responsibly assist.",
+            "weights": {
+              "tech_proficiency": 4,
+              "data_analysis": 1
+            }
+          },
+          {
+            "id": "dd_probe_tech_02_b",
+            "label": "Prototype one narrow use case with clear review steps rather than proposing a broad transformation.",
+            "weights": {
+              "tech_proficiency": 3,
+              "adaptability": 1
+            }
+          },
+          {
+            "id": "dd_probe_tech_02_c",
+            "label": "Wait for the tooling landscape to settle; premature experimentation usually creates noise.",
+            "weights": {
+              "tech_proficiency": 1,
+              "critical_thinking": 1
+            }
+          },
+          {
+            "id": "dd_probe_tech_02_d",
+            "label": "Translate the workflow into technical requirements so specialists can tell you which parts are realistic to automate.",
+            "weights": {
+              "tech_proficiency": 2,
+              "leadership": 1,
+              "problem_solving": 1
+            }
+          }
+        ]
+      }
+    ],
+    "problem_solving": [
+      {
+        "id": "dd_probe_problem_solving_01",
+        "prompt": "Two symptoms look unrelated, but you suspect they share a root cause. What is your approach?",
+        "options": [
+          {
+            "id": "dd_probe_problem_solving_01_a",
+            "label": "Map the system, test where the flows intersect, and look for one constraint capable of producing both symptoms.",
+            "weights": {
+              "problem_solving": 4,
+              "strategy": 1
+            }
+          },
+          {
+            "id": "dd_probe_problem_solving_01_b",
+            "label": "Trace both issues separately until they converge on the same failure mechanism or prove they do not.",
+            "weights": {
+              "problem_solving": 3,
+              "critical_thinking": 1
+            }
+          },
+          {
+            "id": "dd_probe_problem_solving_01_c",
+            "label": "Interview the operators closest to the work because they often know where the hidden coupling lives.",
+            "weights": {
+              "problem_solving": 2,
+              "leadership": 1,
+              "adaptability": 1
+            }
+          },
+          {
+            "id": "dd_probe_problem_solving_01_d",
+            "label": "Fix the more painful symptom first; common causes can be investigated later if the second issue persists.",
+            "weights": {
+              "problem_solving": 1,
+              "adaptability": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "dd_probe_problem_solving_02",
+        "prompt": "A proposed solution works in theory but keeps failing in practice. Where do you look first?",
+        "options": [
+          {
+            "id": "dd_probe_problem_solving_02_a",
+            "label": "At the assumptions about the real environment, because practical failure usually means the problem framing was incomplete.",
+            "weights": {
+              "problem_solving": 3,
+              "critical_thinking": 2
+            }
+          },
+          {
+            "id": "dd_probe_problem_solving_02_b",
+            "label": "At the interfaces and handoffs, because implementation breaks where ownership or context is lost.",
+            "weights": {
+              "problem_solving": 3,
+              "leadership": 1
+            }
+          },
+          {
+            "id": "dd_probe_problem_solving_02_c",
+            "label": "At whether the team explored enough alternatives before locking onto this solution path.",
+            "weights": {
+              "problem_solving": 2,
+              "creativity": 1,
+              "strategy": 1
+            }
+          },
+          {
+            "id": "dd_probe_problem_solving_02_d",
+            "label": "At whether the rollout moved too slowly and lost momentum rather than whether the design itself was weak.",
+            "weights": {
+              "problem_solving": 1,
+              "adaptability": 1
+            }
+          }
+        ]
+      }
+    ],
+    "critical_thinking": [
+      {
+        "id": "dd_probe_critical_thinking_01",
+        "prompt": "A metric supports your preferred conclusion, but the sample is small and the timing is suspicious. How do you think about it?",
+        "options": [
+          {
+            "id": "dd_probe_critical_thinking_01_a",
+            "label": "Treat it as weak evidence, ask what else could explain the result, and avoid strong claims until the signal stabilizes.",
+            "weights": {
+              "critical_thinking": 4,
+              "data_analysis": 1
+            }
+          },
+          {
+            "id": "dd_probe_critical_thinking_01_b",
+            "label": "Use it as one input but seek disconfirming evidence before letting it drive a decision.",
+            "weights": {
+              "critical_thinking": 3,
+              "strategy": 1
+            }
+          },
+          {
+            "id": "dd_probe_critical_thinking_01_c",
+            "label": "Take the evidence as directionally useful if the downside of acting is small.",
+            "weights": {
+              "critical_thinking": 2,
+              "adaptability": 1
+            }
+          },
+          {
+            "id": "dd_probe_critical_thinking_01_d",
+            "label": "If it matches your prior belief and the team needs momentum, it is probably enough to move forward.",
+            "weights": {
+              "critical_thinking": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "dd_probe_critical_thinking_02",
+        "prompt": "You and a colleague interpret the same evidence differently. What helps you resolve the disagreement best?",
+        "options": [
+          {
+            "id": "dd_probe_critical_thinking_02_a",
+            "label": "Surface the hidden assumptions each of you is using and identify which one the evidence actually speaks to.",
+            "weights": {
+              "critical_thinking": 4,
+              "leadership": 1
+            }
+          },
+          {
+            "id": "dd_probe_critical_thinking_02_b",
+            "label": "Define what evidence would change each position; if none would, the disagreement is not really about evidence.",
+            "weights": {
+              "critical_thinking": 3,
+              "data_analysis": 1
+            }
+          },
+          {
+            "id": "dd_probe_critical_thinking_02_c",
+            "label": "Time-box the debate and run the cheapest test that could reduce uncertainty.",
+            "weights": {
+              "critical_thinking": 2,
+              "problem_solving": 1,
+              "adaptability": 1
+            }
+          },
+          {
+            "id": "dd_probe_critical_thinking_02_d",
+            "label": "Defer to whichever interpretation comes from the more experienced person.",
+            "weights": {
+              "critical_thinking": 1
+            }
+          }
+        ]
+      }
+    ],
+    "adaptability": [
+      {
+        "id": "dd_probe_adaptability_01",
+        "prompt": "Halfway through a plan, new information invalidates your strongest assumption. What is the healthiest reaction?",
+        "options": [
+          {
+            "id": "dd_probe_adaptability_01_a",
+            "label": "Update the model quickly, preserve the underlying objective, and explain the change clearly so the team can pivot without confusion.",
+            "weights": {
+              "adaptability": 4,
+              "leadership": 1
+            }
+          },
+          {
+            "id": "dd_probe_adaptability_01_b",
+            "label": "Pause briefly, identify which decisions are now wrong, and restart only the parts of the plan affected by the new signal.",
+            "weights": {
+              "adaptability": 3,
+              "problem_solving": 1
+            }
+          },
+          {
+            "id": "dd_probe_adaptability_01_c",
+            "label": "Keep the current plan alive while collecting more evidence; fast pivots can also create avoidable chaos.",
+            "weights": {
+              "adaptability": 2,
+              "critical_thinking": 1
+            }
+          },
+          {
+            "id": "dd_probe_adaptability_01_d",
+            "label": "Commit harder to the original plan unless the new information becomes overwhelming.",
+            "weights": {
+              "adaptability": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "dd_probe_adaptability_02",
+        "prompt": "You are moving between several contexts in one day and quality is slipping. What adjustment is most like you?",
+        "options": [
+          {
+            "id": "dd_probe_adaptability_02_a",
+            "label": "Reduce context switching by batching similar decisions and building deliberate reset points between modes of work.",
+            "weights": {
+              "adaptability": 4,
+              "strategy": 1
+            }
+          },
+          {
+            "id": "dd_probe_adaptability_02_b",
+            "label": "Create lightweight checklists so each context has a faster re-entry ramp and less cognitive residue.",
+            "weights": {
+              "adaptability": 3,
+              "tech_proficiency": 1
+            }
+          },
+          {
+            "id": "dd_probe_adaptability_02_c",
+            "label": "Accept the volatility and rely on improvisation; too much structure makes change harder.",
+            "weights": {
+              "adaptability": 1,
+              "creativity": 1
+            }
+          },
+          {
+            "id": "dd_probe_adaptability_02_d",
+            "label": "Hand off the noisiest work temporarily so you can stabilize the most fragile commitments first.",
+            "weights": {
+              "adaptability": 2,
+              "leadership": 1,
+              "problem_solving": 1
+            }
+          }
+        ]
+      }
+    ],
+    "data_analysis": [
+      {
+        "id": "dd_probe_data_01",
+        "prompt": "A team keeps citing one headline metric, but you suspect it hides the real dynamics. What do you do?",
+        "options": [
+          {
+            "id": "dd_probe_data_01_a",
+            "label": "Break the metric into components and segments until you can see which behavior is actually driving the aggregate.",
+            "weights": {
+              "data_analysis": 4,
+              "critical_thinking": 1
+            }
+          },
+          {
+            "id": "dd_probe_data_01_b",
+            "label": "Ask whether the metric is a good proxy at all before spending more time analyzing it.",
+            "weights": {
+              "data_analysis": 3,
+              "strategy": 1
+            }
+          },
+          {
+            "id": "dd_probe_data_01_c",
+            "label": "Look for leading indicators around the metric so you can detect change before the headline number moves.",
+            "weights": {
+              "data_analysis": 3,
+              "adaptability": 1
+            }
+          },
+          {
+            "id": "dd_probe_data_01_d",
+            "label": "Use the headline metric for alignment and worry about deeper analysis only if the trend reverses.",
+            "weights": {
+              "data_analysis": 1,
+              "leadership": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "dd_probe_data_02",
+        "prompt": "You can only run one small experiment before making a larger decision. What distinguishes a strong experiment design?",
+        "options": [
+          {
+            "id": "dd_probe_data_02_a",
+            "label": "It isolates a meaningful variable, defines the decision threshold in advance, and uses a metric tied to the real outcome.",
+            "weights": {
+              "data_analysis": 4,
+              "critical_thinking": 1
+            }
+          },
+          {
+            "id": "dd_probe_data_02_b",
+            "label": "It is cheap, fast, and directional enough to update the next decision even if it is not perfect science.",
+            "weights": {
+              "data_analysis": 3,
+              "adaptability": 1
+            }
+          },
+          {
+            "id": "dd_probe_data_02_c",
+            "label": "It gets stakeholder buy-in first so everyone trusts the conclusion when the numbers arrive.",
+            "weights": {
+              "data_analysis": 2,
+              "leadership": 2
+            }
+          },
+          {
+            "id": "dd_probe_data_02_d",
+            "label": "It produces a number the team can point to, even if the exact variable being tested is still messy.",
+            "weights": {
+              "data_analysis": 1,
+              "problem_solving": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "dd_scenario_01",
+      "title": "AI Workflow Rollout",
+      "context": "Your organization wants to introduce AI support into a critical operations workflow. Leaders want speed, operators worry about quality drift, and the underlying process is not documented well enough for easy automation.",
+      "questions": [
+        {
+          "id": "dd_scenario_01_q1",
+          "prompt": "What is the highest-leverage first step?",
+          "options": [
+            {
+              "id": "dd_scenario_01_q1_a",
+              "label": "Document the workflow, error patterns, and review checkpoints before introducing any AI-assisted step.",
+              "weights": {
+                "tech_proficiency": 3,
+                "data_analysis": 2,
+                "problem_solving": 1
+              }
+            },
+            {
+              "id": "dd_scenario_01_q1_b",
+              "label": "Pilot one narrow use case with clear human review and use the result to build credibility for expansion.",
+              "weights": {
+                "adaptability": 2,
+                "tech_proficiency": 2,
+                "leadership": 1
+              }
+            },
+            {
+              "id": "dd_scenario_01_q1_c",
+              "label": "Start with the loudest stakeholder concerns so the rollout does not get blocked politically.",
+              "weights": {
+                "leadership": 3,
+                "adaptability": 1,
+                "strategy": 1
+              }
+            },
+            {
+              "id": "dd_scenario_01_q1_d",
+              "label": "Wait until the tooling is more mature; operational workflows are too sensitive for early experimentation.",
+              "weights": {
+                "critical_thinking": 1,
+                "adaptability": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "dd_scenario_01_q2",
+          "prompt": "The pilot saves time, but error rates rise slightly. How do you interpret the result?",
+          "options": [
+            {
+              "id": "dd_scenario_01_q2_a",
+              "label": "Treat it as a promising but incomplete result and redesign the pilot around quality thresholds before expanding.",
+              "weights": {
+                "data_analysis": 3,
+                "critical_thinking": 2,
+                "strategy": 1
+              }
+            },
+            {
+              "id": "dd_scenario_01_q2_b",
+              "label": "Keep the pilot running but narrow the use case until the quality problem is constrained.",
+              "weights": {
+                "adaptability": 2,
+                "problem_solving": 2,
+                "tech_proficiency": 1
+              }
+            },
+            {
+              "id": "dd_scenario_01_q2_c",
+              "label": "Share the mixed result transparently and align on the tradeoff the organization is willing to make.",
+              "weights": {
+                "leadership": 3,
+                "strategy": 1,
+                "critical_thinking": 1
+              }
+            },
+            {
+              "id": "dd_scenario_01_q2_d",
+              "label": "If the time savings are large enough, push forward and fix quality later through training.",
+              "weights": {
+                "tech_proficiency": 1,
+                "adaptability": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dd_scenario_02",
+      "title": "New Market Entry",
+      "context": "A company sees signs of demand in a new market, but the signal is patchy. Sales wants to move fast, finance wants tighter evidence, and product knows the current offering is not a clean fit.",
+      "questions": [
+        {
+          "id": "dd_scenario_02_q1",
+          "prompt": "How would you make the first decision?",
+          "options": [
+            {
+              "id": "dd_scenario_02_q1_a",
+              "label": "Design a staged entry with clear learning goals so each step buys better evidence for the next.",
+              "weights": {
+                "strategy": 3,
+                "data_analysis": 2,
+                "adaptability": 1
+              }
+            },
+            {
+              "id": "dd_scenario_02_q1_b",
+              "label": "Interview prospective customers deeply to understand where the offering fits and where it breaks.",
+              "weights": {
+                "creativity": 2,
+                "leadership": 2,
+                "problem_solving": 1
+              }
+            },
+            {
+              "id": "dd_scenario_02_q1_c",
+              "label": "Map the second-order consequences of entry, including distraction cost and capability gains, before committing.",
+              "weights": {
+                "strategy": 3,
+                "critical_thinking": 2
+              }
+            },
+            {
+              "id": "dd_scenario_02_q1_d",
+              "label": "Send a small team immediately; imperfect information is normal and action reveals more than planning.",
+              "weights": {
+                "adaptability": 2,
+                "leadership": 1,
+                "problem_solving": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "dd_scenario_02_q2",
+          "prompt": "Early customer conversations are positive, but product usage data stays weak. What do you conclude?",
+          "options": [
+            {
+              "id": "dd_scenario_02_q2_a",
+              "label": "Interest is not the same as adoption; find the activation constraint before expanding investment.",
+              "weights": {
+                "data_analysis": 3,
+                "problem_solving": 2,
+                "critical_thinking": 1
+              }
+            },
+            {
+              "id": "dd_scenario_02_q2_b",
+              "label": "The value proposition is probably mispositioned; reframe the offer around the strongest use case emerging in interviews.",
+              "weights": {
+                "creativity": 2,
+                "strategy": 2,
+                "adaptability": 1
+              }
+            },
+            {
+              "id": "dd_scenario_02_q2_c",
+              "label": "Bring sales, product, and finance into one review so the organization can interpret the mixed signal together.",
+              "weights": {
+                "leadership": 3,
+                "critical_thinking": 1,
+                "strategy": 1
+              }
+            },
+            {
+              "id": "dd_scenario_02_q2_d",
+              "label": "Usage data lags; keep pushing acquisition and wait for behavior to catch up.",
+              "weights": {
+                "adaptability": 1,
+                "leadership": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dd_scenario_03",
+      "title": "Reorganization Under Pressure",
+      "context": "A reorganization merges two teams with different cultures, tools, and performance histories. Morale is uneven, accountability is fuzzy, and key people might leave if the transition feels chaotic.",
+      "questions": [
+        {
+          "id": "dd_scenario_03_q1",
+          "prompt": "What deserves the earliest attention?",
+          "options": [
+            {
+              "id": "dd_scenario_03_q1_a",
+              "label": "Clarify the new operating model, decision rights, and what success now looks like before redesigning everything else.",
+              "weights": {
+                "leadership": 3,
+                "strategy": 2,
+                "adaptability": 1
+              }
+            },
+            {
+              "id": "dd_scenario_03_q1_b",
+              "label": "Map where the teams overlap, where they conflict, and which interfaces are most likely to break first.",
+              "weights": {
+                "problem_solving": 2,
+                "leadership": 2,
+                "strategy": 1
+              }
+            },
+            {
+              "id": "dd_scenario_03_q1_c",
+              "label": "Find the few people whose trust the rest of the organization will follow and win them early.",
+              "weights": {
+                "leadership": 3,
+                "adaptability": 1
+              }
+            },
+            {
+              "id": "dd_scenario_03_q1_d",
+              "label": "Preserve existing workflows for a while; too much change at once is the bigger risk.",
+              "weights": {
+                "adaptability": 2,
+                "leadership": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "dd_scenario_03_q2",
+          "prompt": "Two months in, metrics are flat but qualitative feedback says the merged team is clearer and faster. How do you respond?",
+          "options": [
+            {
+              "id": "dd_scenario_03_q2_a",
+              "label": "Treat the qualitative signal as useful but temporary; identify leading indicators that should move before core metrics do.",
+              "weights": {
+                "data_analysis": 3,
+                "critical_thinking": 2
+              }
+            },
+            {
+              "id": "dd_scenario_03_q2_b",
+              "label": "Keep reinforcing the new operating rhythm while checking whether measurement lag is hiding real progress.",
+              "weights": {
+                "leadership": 2,
+                "adaptability": 2,
+                "data_analysis": 1
+              }
+            },
+            {
+              "id": "dd_scenario_03_q2_c",
+              "label": "Run a focused diagnostic on the bottleneck that still prevents the clarity gains from turning into output gains.",
+              "weights": {
+                "problem_solving": 3,
+                "strategy": 1,
+                "critical_thinking": 1
+              }
+            },
+            {
+              "id": "dd_scenario_03_q2_d",
+              "label": "If morale improved, assume performance will eventually follow and avoid over-analyzing the lag.",
+              "weights": {
+                "leadership": 1,
+                "adaptability": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dd_scenario_04",
+      "title": "Data Platform Migration",
+      "context": "A company must migrate to a new data platform before a contract deadline. The old system is unstable, the new system is only partially configured, and every shortcut risks compounding future maintenance costs.",
+      "questions": [
+        {
+          "id": "dd_scenario_04_q1",
+          "prompt": "How do you structure the migration plan?",
+          "options": [
+            {
+              "id": "dd_scenario_04_q1_a",
+              "label": "Sequence the migration by dependency and business criticality so the riskiest interfaces are stabilized first.",
+              "weights": {
+                "strategy": 3,
+                "tech_proficiency": 2,
+                "problem_solving": 1
+              }
+            },
+            {
+              "id": "dd_scenario_04_q1_b",
+              "label": "Define a minimal viable migration, keep the architecture legible, and avoid shortcuts that create hidden debt.",
+              "weights": {
+                "tech_proficiency": 3,
+                "critical_thinking": 2
+              }
+            },
+            {
+              "id": "dd_scenario_04_q1_c",
+              "label": "Create a shared command center so engineering, analytics, and business stakeholders can surface issues quickly.",
+              "weights": {
+                "leadership": 3,
+                "adaptability": 1,
+                "tech_proficiency": 1
+              }
+            },
+            {
+              "id": "dd_scenario_04_q1_d",
+              "label": "Move the easiest workloads first to show progress and reduce anxiety before tackling harder dependencies.",
+              "weights": {
+                "adaptability": 2,
+                "tech_proficiency": 1,
+                "leadership": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "dd_scenario_04_q2",
+          "prompt": "Mid-migration, one team wants to skip validation to hit the deadline. What do you do?",
+          "options": [
+            {
+              "id": "dd_scenario_04_q2_a",
+              "label": "Make the risk explicit, define what validation cannot be skipped, and re-scope lower-value work instead.",
+              "weights": {
+                "critical_thinking": 2,
+                "leadership": 2,
+                "strategy": 1
+              }
+            },
+            {
+              "id": "dd_scenario_04_q2_b",
+              "label": "Negotiate a narrower validated release that preserves trust in the migration while keeping the deadline in sight.",
+              "weights": {
+                "adaptability": 2,
+                "strategy": 2,
+                "leadership": 1
+              }
+            },
+            {
+              "id": "dd_scenario_04_q2_c",
+              "label": "Use the existing defect data to show which skipped checks create the highest downstream cost.",
+              "weights": {
+                "data_analysis": 3,
+                "critical_thinking": 2
+              }
+            },
+            {
+              "id": "dd_scenario_04_q2_d",
+              "label": "Accept the shortcut temporarily; reliability can be improved after the contract risk is gone.",
+              "weights": {
+                "adaptability": 1,
+                "tech_proficiency": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

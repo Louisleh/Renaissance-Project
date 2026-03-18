@@ -1,0 +1,501 @@
+{
+  "module_id": "quick_pulse_v1",
+  "module_name": "The Quick Pulse",
+  "version": 1,
+  "estimated_minutes": 4,
+  "question_count": 10,
+  "confidence_label": "Directional baseline",
+  "intro": {
+    "headline": "Map your Renaissance baseline",
+    "body": "This short assessment estimates how your strengths are distributed across eight cross-domain capabilities. You will get an archetype, a skill profile, and recommended next steps.",
+    "bullets": [
+      "10 questions",
+      "3-4 minutes",
+      "Immediate results",
+      "Best used as a first-pass baseline"
+    ]
+  },
+  "domains": [
+    {
+      "key": "leadership",
+      "label": "Leadership",
+      "description": "Ability to align people, create clarity, and move decisions forward."
+    },
+    {
+      "key": "creativity",
+      "label": "Creativity",
+      "description": "Ability to generate novel approaches, ideas, and reframings."
+    },
+    {
+      "key": "strategy",
+      "label": "Strategy",
+      "description": "Ability to sequence action, model tradeoffs, and see leverage."
+    },
+    {
+      "key": "tech_proficiency",
+      "label": "Tech Proficiency",
+      "description": "Practical fluency with tools, systems, and technical workflows."
+    },
+    {
+      "key": "problem_solving",
+      "label": "Problem Solving",
+      "description": "Ability to decompose complexity and get to workable solutions."
+    },
+    {
+      "key": "critical_thinking",
+      "label": "Critical Thinking",
+      "description": "Ability to question assumptions, weigh evidence, and reason rigorously."
+    },
+    {
+      "key": "adaptability",
+      "label": "Adaptability",
+      "description": "Ability to adjust plans and behavior under changing conditions."
+    },
+    {
+      "key": "data_analysis",
+      "label": "Data Analysis",
+      "description": "Ability to use evidence, measurement, and quantitative signal."
+    }
+  ],
+  "levels": [
+    {
+      "label": "Emerging",
+      "min": 0,
+      "max": 44
+    },
+    {
+      "label": "Developing",
+      "min": 45,
+      "max": 59
+    },
+    {
+      "label": "Functional",
+      "min": 60,
+      "max": 74
+    },
+    {
+      "label": "Strong",
+      "min": 75,
+      "max": 89
+    },
+    {
+      "label": "Signature",
+      "min": 90,
+      "max": 100
+    }
+  ],
+  "starter_module_map": {
+    "leadership": "Influence Through Clarity",
+    "creativity": "Cross-Domain Idea Generation",
+    "strategy": "Systems Mapping and Leverage",
+    "tech_proficiency": "Tool Fluency for Non-Specialists",
+    "problem_solving": "Constraint Decomposition",
+    "critical_thinking": "Assumption Testing",
+    "adaptability": "Operating Under Change",
+    "data_analysis": "Evidence Before Intuition"
+  },
+  "archetypes": [
+    {
+      "key": "polymath",
+      "label": "The Polymath",
+      "description": "A broad, balanced synthesizer with unusual pattern transfer across domains."
+    },
+    {
+      "key": "strategist",
+      "label": "The Strategist",
+      "description": "A systems-oriented thinker who links evidence, tradeoffs, and long-range direction."
+    },
+    {
+      "key": "builder",
+      "label": "The Builder",
+      "description": "An execution-heavy profile that turns ideas into tools, systems, and outputs."
+    },
+    {
+      "key": "leader",
+      "label": "The Leader",
+      "description": "A people-and-direction profile that creates clarity and adapts well under uncertainty."
+    }
+  ],
+  "questions": [
+    {
+      "id": "qp_01",
+      "prompt": "You are starting a new project with vague goals and incomplete context. What do you do first?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Map the outcome, constraints, and likely tradeoffs before acting.",
+          "weights": {
+            "strategy": 3,
+            "critical_thinking": 1
+          }
+        },
+        {
+          "id": "b",
+          "label": "Open the relevant tools and build a rough prototype to learn by doing.",
+          "weights": {
+            "tech_proficiency": 3,
+            "problem_solving": 1
+          }
+        },
+        {
+          "id": "c",
+          "label": "Talk to the key people involved and align on expectations and ownership.",
+          "weights": {
+            "leadership": 3,
+            "adaptability": 1
+          }
+        },
+        {
+          "id": "d",
+          "label": "Generate several unconventional ways the problem could be framed before choosing a path.",
+          "weights": {
+            "creativity": 3,
+            "strategy": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "qp_02",
+      "prompt": "A team is stuck between two competing approaches. Which move sounds most like you?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Facilitate a decision, get alignment, and assign a clear owner.",
+          "weights": {
+            "leadership": 3,
+            "strategy": 1
+          }
+        },
+        {
+          "id": "b",
+          "label": "Compare the assumptions, evidence, and downside risks in each option.",
+          "weights": {
+            "critical_thinking": 3,
+            "data_analysis": 1
+          }
+        },
+        {
+          "id": "c",
+          "label": "Run a quick test, simulation, or demo so reality can decide faster.",
+          "weights": {
+            "problem_solving": 3,
+            "tech_proficiency": 1
+          }
+        },
+        {
+          "id": "d",
+          "label": "Reframe the problem so the team can see a third option they have not considered.",
+          "weights": {
+            "creativity": 3,
+            "adaptability": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "qp_03",
+      "prompt": "You notice a workflow is repetitive, frustrating, and error-prone. What is your instinct?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Automate it, template it, or simplify it through tooling.",
+          "weights": {
+            "tech_proficiency": 3,
+            "problem_solving": 1
+          }
+        },
+        {
+          "id": "b",
+          "label": "Measure where time and errors are actually occurring before changing anything.",
+          "weights": {
+            "data_analysis": 3,
+            "critical_thinking": 1
+          }
+        },
+        {
+          "id": "c",
+          "label": "Clarify roles, expectations, and handoffs so the team operates more smoothly.",
+          "weights": {
+            "leadership": 3,
+            "adaptability": 1
+          }
+        },
+        {
+          "id": "d",
+          "label": "Redesign the process from first principles rather than patching it.",
+          "weights": {
+            "strategy": 3,
+            "creativity": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "qp_04",
+      "prompt": "You need to learn a new domain fast. Which approach feels most natural?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Jump into a real tool or project and learn through direct experimentation.",
+          "weights": {
+            "tech_proficiency": 3,
+            "adaptability": 1
+          }
+        },
+        {
+          "id": "b",
+          "label": "Study the underlying concepts and models before trying to apply them.",
+          "weights": {
+            "critical_thinking": 3,
+            "strategy": 1
+          }
+        },
+        {
+          "id": "c",
+          "label": "Talk to experienced people and synthesize what actually works from their patterns.",
+          "weights": {
+            "leadership": 3,
+            "adaptability": 1
+          }
+        },
+        {
+          "id": "d",
+          "label": "Explore adjacent fields first so you can import surprising analogies and ideas.",
+          "weights": {
+            "creativity": 3,
+            "strategy": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "qp_05",
+      "prompt": "You need to persuade skeptical stakeholders to support a recommendation. What do you lean on most?",
+      "options": [
+        {
+          "id": "a",
+          "label": "A clear narrative about priorities, tradeoffs, and long-term direction.",
+          "weights": {
+            "leadership": 3,
+            "strategy": 1
+          }
+        },
+        {
+          "id": "b",
+          "label": "The evidence, benchmark data, and the logic behind the recommendation.",
+          "weights": {
+            "data_analysis": 3,
+            "critical_thinking": 1
+          }
+        },
+        {
+          "id": "c",
+          "label": "A concrete demo, workflow, or working proof that shows it can be done.",
+          "weights": {
+            "tech_proficiency": 3,
+            "problem_solving": 1
+          }
+        },
+        {
+          "id": "d",
+          "label": "An original framing or analogy that makes the opportunity suddenly obvious.",
+          "weights": {
+            "creativity": 3,
+            "leadership": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "qp_06",
+      "prompt": "The situation changes mid-project and your original plan no longer fits. What do you do?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Adjust scope fast and keep momentum with the best workable version.",
+          "weights": {
+            "adaptability": 3,
+            "problem_solving": 1
+          }
+        },
+        {
+          "id": "b",
+          "label": "Pause long enough to re-check assumptions and verify what signal is still reliable.",
+          "weights": {
+            "critical_thinking": 3,
+            "data_analysis": 1
+          }
+        },
+        {
+          "id": "c",
+          "label": "Realign the people involved around the next most important decision.",
+          "weights": {
+            "leadership": 3,
+            "strategy": 1
+          }
+        },
+        {
+          "id": "d",
+          "label": "Explore alternate directions others may be missing and choose the strongest pivot.",
+          "weights": {
+            "creativity": 3,
+            "adaptability": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "qp_07",
+      "prompt": "How do you usually know a solution actually worked?",
+      "options": [
+        {
+          "id": "a",
+          "label": "People are aligned, confusion is lower, and execution becomes smoother.",
+          "weights": {
+            "leadership": 3,
+            "adaptability": 1
+          }
+        },
+        {
+          "id": "b",
+          "label": "The metrics improved against a baseline or expected outcome.",
+          "weights": {
+            "data_analysis": 3,
+            "critical_thinking": 1
+          }
+        },
+        {
+          "id": "c",
+          "label": "The system became faster, cleaner, or more reliable in practice.",
+          "weights": {
+            "tech_proficiency": 3,
+            "problem_solving": 1
+          }
+        },
+        {
+          "id": "d",
+          "label": "It opened up a stronger long-term path or strategic option than before.",
+          "weights": {
+            "strategy": 3,
+            "creativity": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "qp_08",
+      "prompt": "You hear a bold claim in a meeting or article. What is your first instinct?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Probe the assumptions, evidence quality, and hidden incentives behind it.",
+          "weights": {
+            "critical_thinking": 3,
+            "data_analysis": 1
+          }
+        },
+        {
+          "id": "b",
+          "label": "Map the second-order effects and how it changes the broader system.",
+          "weights": {
+            "strategy": 3,
+            "critical_thinking": 1
+          }
+        },
+        {
+          "id": "c",
+          "label": "See how you would test it in practice or build a small version of it.",
+          "weights": {
+            "problem_solving": 3,
+            "tech_proficiency": 1
+          }
+        },
+        {
+          "id": "d",
+          "label": "Connect it to patterns from completely different fields and see what transfers.",
+          "weights": {
+            "creativity": 3,
+            "strategy": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "qp_09",
+      "prompt": "A capable colleague is struggling with a new assignment. How do you tend to help?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Clarify priorities, remove blockers, and help them regain momentum.",
+          "weights": {
+            "leadership": 3,
+            "adaptability": 1
+          }
+        },
+        {
+          "id": "b",
+          "label": "Give them a framework for making tradeoffs and choosing among options.",
+          "weights": {
+            "strategy": 3,
+            "critical_thinking": 1
+          }
+        },
+        {
+          "id": "c",
+          "label": "Create a checklist, template, or tool that makes the work easier to execute.",
+          "weights": {
+            "tech_proficiency": 3,
+            "problem_solving": 1
+          }
+        },
+        {
+          "id": "d",
+          "label": "Brainstorm alternate approaches with them until a more original path appears.",
+          "weights": {
+            "creativity": 3,
+            "leadership": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "qp_10",
+      "prompt": "At the end of a project, what kind of reflection feels most useful?",
+      "options": [
+        {
+          "id": "a",
+          "label": "Review the evidence, signal quality, mistakes, and what the team missed.",
+          "weights": {
+            "critical_thinking": 3,
+            "data_analysis": 1
+          }
+        },
+        {
+          "id": "b",
+          "label": "Capture the repeatable system or playbook so the next round starts stronger.",
+          "weights": {
+            "strategy": 3,
+            "tech_proficiency": 1
+          }
+        },
+        {
+          "id": "c",
+          "label": "Reflect on how coordination, ownership, and decision-making worked across people.",
+          "weights": {
+            "leadership": 3,
+            "adaptability": 1
+          }
+        },
+        {
+          "id": "d",
+          "label": "Identify the most surprising ideas worth exploring further next time.",
+          "weights": {
+            "creativity": 3,
+            "strategy": 1
+          }
+        }
+      ]
+    }
+  ]
+}

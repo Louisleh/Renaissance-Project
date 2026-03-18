@@ -1,0 +1,149 @@
+.prof-page {
+  padding: 4rem 0 6rem;
+}
+
+.prof-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.prof-panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 1rem;
+}
+
+.prof-panel-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+}
+
+.prof-kicker {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+}
+
+.prof-archetype-badge {
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--gold);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.prof-label,
+.prof-field-label,
+.prof-muted,
+.prof-latest p,
+.prof-message {
+  color: var(--muted);
+}
+
+.prof-inline-edit {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.prof-input {
+  flex: 1 1 auto;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  padding: 0.9rem 1rem;
+}
+
+.prof-field {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.prof-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.prof-stat {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.prof-stat span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.prof-stat strong {
+  font-family: var(--heading-font);
+  font-size: 1.7rem;
+}
+
+.prof-latest {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 1rem;
+}
+
+.prof-danger-panel {
+  margin-top: 1rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.prof-danger-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.prof-danger-button {
+  min-height: 48px;
+  padding: 0.9rem 1.1rem;
+  border: 0;
+  border-radius: 999px;
+  background: #8b2020;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .prof-page {
+    padding: 3rem 0 5rem;
+  }
+
+  .prof-grid,
+  .prof-danger-panel,
+  .prof-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .prof-panel {
+    padding: 1.35rem;
+  }
+
+  .prof-inline-edit {
+    flex-direction: column;
+  }
+
+  .prof-danger-actions {
+    justify-content: stretch;
+  }
+
+  .prof-danger-actions > * {
+    width: 100%;
+  }
+}
