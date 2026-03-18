@@ -62,7 +62,7 @@
   width: 100%;
   padding: 1rem 1.1rem;
   border-radius: 14px;
-  border: 1px solid rgba(212, 175, 55, 0.14);
+  border: 1px solid var(--gold-14);
   background: rgba(255, 255, 255, 0.02);
   text-align: left;
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
@@ -71,17 +71,17 @@
 .cur-lesson-item:hover,
 .cur-lesson-item:focus-visible {
   transform: translateY(-2px);
-  border-color: rgba(212, 175, 55, 0.32);
-  background: rgba(212, 175, 55, 0.05);
+  border-color: var(--gold-32);
+  background: var(--gold-5);
 }
 
 .cur-lesson-item.is-current {
-  border-color: rgba(212, 175, 55, 0.36);
-  background: rgba(212, 175, 55, 0.08);
+  border-color: var(--gold-36);
+  background: var(--gold-8);
 }
 
 .cur-lesson-item.is-complete {
-  border-color: rgba(212, 175, 55, 0.24);
+  border-color: var(--gold-24);
 }
 
 .cur-lesson-status {
@@ -98,7 +98,7 @@
 .cur-lesson-status.is-current,
 .cur-lesson-status.is-complete {
   color: var(--gold);
-  border-color: rgba(212, 175, 55, 0.36);
+  border-color: var(--gold-36);
 }
 
 .cur-lesson-copy {

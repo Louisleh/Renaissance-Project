@@ -42,7 +42,7 @@
 }
 
 .coaching-card.is-active {
-  border-color: rgba(212, 175, 55, 0.45);
+  border-color: var(--gold-45);
 }
 
 .coaching-list {

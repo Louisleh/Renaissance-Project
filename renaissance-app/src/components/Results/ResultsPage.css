@@ -44,7 +44,7 @@
   gap: 2rem;
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(212, 175, 55, 0.08);
+  border-top: 1px solid var(--gold-8);
 }
 
 .results-narrative-detail h4 {

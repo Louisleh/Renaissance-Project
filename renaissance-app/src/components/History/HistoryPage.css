@@ -97,7 +97,7 @@
 
 .hist-legend-item.is-active {
   color: var(--text);
-  border-color: rgba(212, 175, 55, 0.4);
+  border-color: var(--gold-40);
 }
 
 .hist-legend-swatch {

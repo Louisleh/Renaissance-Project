@@ -94,7 +94,7 @@ export function ProfilePage() {
   };
 
   const handleCancelSubscription = async () => {
-    const confirmed = window.confirm('Open the subscription management placeholder to cancel your current plan?');
+    const confirmed = window.confirm('Open subscription management to modify your current plan?');
     if (!confirmed) {
       return;
     }
@@ -223,7 +223,7 @@ export function ProfilePage() {
             <p className="prof-muted">
               {tier === 'free'
                 ? 'Upgrade to unlock Deep Dive, full curriculum access, and longitudinal tracking.'
-                : 'Use the customer portal placeholder until the Stripe portal backend is connected.'}
+                : 'Subscription management will be available shortly. Contact support@renaissanceskills.com for billing changes.'}
             </p>
           </div>
           <div className="prof-danger-actions">

@@ -1,4 +1,5 @@
 :root {
+  /* ── Core Palette ── */
   --bg: #0d0d0d;
   --bg-deep: #090909;
   --panel: rgba(22, 21, 18, 0.88);
@@ -6,11 +7,68 @@
   --gold-strong: #b5952f;
   --text: #e6e6e6;
   --muted: #bcb4a3;
-  --muted-strong: #8c8577;
+  --muted-strong: #a09889; /* bumped from #8c8577 for WCAG AA 4.5:1 */
   --border: rgba(212, 175, 55, 0.2);
-  --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+
+  /* ── Semantic State Colors ── */
+  --danger: #e8715a;
+  --danger-6: rgba(220, 80, 60, 0.06);
+  --danger-8: rgba(220, 80, 60, 0.08);
+  --danger-12: rgba(220, 80, 60, 0.12);
+  --danger-15: rgba(220, 80, 60, 0.15);
+  --danger-25: rgba(220, 80, 60, 0.25);
+  --danger-30: rgba(220, 80, 60, 0.30);
+  --danger-40: rgba(220, 80, 60, 0.40);
+  --danger-60: rgba(220, 80, 60, 0.60);
+  --danger-70: rgba(220, 80, 60, 0.70);
+  --danger-bg: var(--danger-8);
+  --danger-border: var(--danger-25);
+  --success: #5ab88a;
+  --success-bg: rgba(90, 184, 138, 0.08);
+  --warning: #d4a84b;
+
+  /* ── Gold Alpha Scale ── */
+  --gold-4: rgba(212, 175, 55, 0.04);
+  --gold-5: rgba(212, 175, 55, 0.05);
+  --gold-6: rgba(212, 175, 55, 0.06);
+  --gold-8: rgba(212, 175, 55, 0.08);
+  --gold-9: rgba(212, 175, 55, 0.09);
+  --gold-10: rgba(212, 175, 55, 0.10);
+  --gold-12: rgba(212, 175, 55, 0.12);
+  --gold-14: rgba(212, 175, 55, 0.14);
+  --gold-15: rgba(212, 175, 55, 0.15);
+  --gold-16: rgba(212, 175, 55, 0.16);
+  --gold-18: rgba(212, 175, 55, 0.18);
+  --gold-20: rgba(212, 175, 55, 0.20);
+  --gold-22: rgba(212, 175, 55, 0.22);
+  --gold-24: rgba(212, 175, 55, 0.24);
+  --gold-25: rgba(212, 175, 55, 0.25);
+  --gold-28: rgba(212, 175, 55, 0.28);
+  --gold-30: rgba(212, 175, 55, 0.30);
+  --gold-32: rgba(212, 175, 55, 0.32);
+  --gold-35: rgba(212, 175, 55, 0.35);
+  --gold-36: rgba(212, 175, 55, 0.36);
+  --gold-40: rgba(212, 175, 55, 0.40);
+  --gold-45: rgba(212, 175, 55, 0.45);
+  --gold-50: rgba(212, 175, 55, 0.50);
+  --gold-60: rgba(212, 175, 55, 0.60);
+  --gold-80: rgba(212, 175, 55, 0.80);
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 30px 80px rgba(0, 0, 0, 0.45);
+  --shadow-gold: 0 0 28px rgba(212, 175, 55, 0.2);
+  --shadow: var(--shadow-lg);
+
+  /* ── Focus ── */
+  --focus-ring: 0 0 0 2px var(--bg), 0 0 0 4px var(--gold);
+
+  /* ── Typography ── */
   --heading-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --body-font: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  /* ── Layout ── */
   --container: min(1180px, calc(100vw - 2rem));
   --nav-height: 78px;
 }

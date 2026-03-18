@@ -9,6 +9,7 @@ import { DashboardSection } from './components/Dashboard/DashboardSection';
 import { AboutSection } from './components/About/AboutSection';
 import { QuickPulseOverlay, loadSavedResult } from './components/QuickPulse/QuickPulseOverlay';
 import { DeepDiveOverlay, loadSavedDeepDiveResult } from './components/DeepDive/DeepDiveOverlay';
+import { LlmMirrorOverlay } from './components/LlmMirror/LlmMirrorOverlay';
 import { ErrorBoundary } from './components/common/ErrorBoundary';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { SubscriptionProvider } from './contexts/SubscriptionContext';
@@ -53,9 +54,30 @@ function AppFrame({
       <Nav onGetStarted={onGetStarted} onOpenAuth={() => setAuthOpen(true)} />
       {children}
       <footer>
-        <div className="container footer-row">
-          <span>Renaissance Skills</span>
-          <span>Vite + React + TypeScript</span>
+        <div className="container footer-grid">
+          <div className="footer-brand">
+            <strong>Renaissance Skills</strong>
+            <span>Cross-domain skill assessment and development for the AI era.</span>
+          </div>
+          <div className="footer-col">
+            <span className="footer-heading">Product</span>
+            <a href="/#assessment">Assessment</a>
+            <a href="/curriculum">Curriculum</a>
+            <a href="/pricing">Pricing</a>
+          </div>
+          <div className="footer-col">
+            <span className="footer-heading">Account</span>
+            <a href="/profile">Profile</a>
+            <a href="/history">History</a>
+            <a href="/coaching">Coaching</a>
+          </div>
+          <div className="footer-col">
+            <span className="footer-heading">Support</span>
+            <a href="mailto:support@renaissanceskills.com">Contact</a>
+          </div>
+        </div>
+        <div className="container footer-bottom">
+          <span>&copy; 2026 Renaissance Skills. All rights reserved.</span>
         </div>
       </footer>
       <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} />
@@ -108,6 +130,7 @@ function HomePage() {
   const [assessmentMode, setAssessmentMode] = useState<AssessmentMode>('quick');
   const [qpOpen, setQpOpen] = useState(false);
   const [ddOpen, setDdOpen] = useState(false);
+  const [mirrorOpen, setMirrorOpen] = useState(false);
   const [activeArchetype, setActiveArchetype] = useState<ArchetypeKey>('strategist');
   const location = useLocation();
   const navigate = useNavigate();
@@ -140,11 +163,19 @@ function HomePage() {
     setDdOpen(true);
   }, []);
 
+  const handleStartMirror = useCallback(() => {
+    setMirrorOpen(true);
+  }, []);
+
   const handleAssessmentComplete = useCallback((result: AssessmentResult) => {
     setActiveArchetype(result.archetype.key);
   }, []);
 
   const handleDeepDiveComplete = useCallback((result: AssessmentResult) => {
+    setActiveArchetype(result.archetype.key);
+  }, []);
+
+  const handleMirrorComplete = useCallback((result: AssessmentResult) => {
     setActiveArchetype(result.archetype.key);
   }, []);
 
@@ -222,6 +253,7 @@ function HomePage() {
             onSelectMode={setAssessmentMode}
             onStartQuickPulse={handleStartAssessment}
             onStartDeepDive={handleStartDeepDive}
+            onStartMirror={handleStartMirror}
           />
           <ArchetypesSection
             activeArchetype={activeArchetype}
@@ -245,6 +277,11 @@ function HomePage() {
         isOpen={ddOpen}
         onClose={() => setDdOpen(false)}
         onComplete={handleDeepDiveComplete}
+      />
+      <LlmMirrorOverlay
+        isOpen={mirrorOpen}
+        onClose={() => setMirrorOpen(false)}
+        onComplete={handleMirrorComplete}
       />
     </>
   );

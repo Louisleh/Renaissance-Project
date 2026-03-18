@@ -91,7 +91,7 @@ export function ReadingSection({
               </div>
             ) : (
               <button className="ghost-button reading-upgrade" onClick={openPricing}>
-                Unlock curated reading
+                See full reading list
               </button>
             )}
           </article>
