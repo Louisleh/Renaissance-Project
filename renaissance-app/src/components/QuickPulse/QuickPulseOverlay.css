@@ -830,9 +830,78 @@
   padding-top: 1rem;
 }
 
+/* ── Clickable Domain Rows ── */
+
+.qp-domain-clickable {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0.5rem 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s, transform 0.15s;
+  position: relative;
+}
+
+.qp-domain-clickable:hover {
+  background: rgba(212, 175, 55, 0.06);
+  transform: translateX(4px);
+}
+
+.qp-domain-clickable:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.qp-domain-explore {
+  font-size: 0.72rem;
+  color: var(--gold);
+  opacity: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+  position: absolute;
+  right: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.qp-domain-clickable:hover .qp-domain-explore {
+  opacity: 1;
+}
+
+/* ── LLM Mirror Section ── */
+
+.qp-llm-mirror {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 2rem;
+}
+
+.qp-llm-mirror h4 {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.qp-llm-mirror p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+/* Stagger 8 for new action row */
+.qp-stagger-8 { animation: qpStagger 0.5s ease 0.8s both; }
+
 @media (max-width: 640px) {
   .qp-radar-section { grid-template-columns: 1fr; }
   .qp-sg-grid { grid-template-columns: 1fr; }
   .qp-balance-row { flex-direction: column; text-align: center; }
   .qp-share-scores { grid-template-columns: repeat(2, 1fr); }
+  .qp-domain-explore { display: none; }
 }

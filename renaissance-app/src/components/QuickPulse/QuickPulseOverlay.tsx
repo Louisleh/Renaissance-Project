@@ -13,6 +13,8 @@ import { RadarChart } from '../RadarChart/RadarChart';
 import { UpgradeGate } from '../common/UpgradeGate';
 import { computeFullResult, domainLabel } from '../../lib/scoring';
 import { generateProfileIntelligence } from '../../lib/profile-intelligence';
+import { generateLlmMirrorPrompt } from '../../lib/llm-mirror';
+import { generateResultsPdf } from '../../lib/pdf-export';
 import {
   trackAssessmentCompleted,
   trackAssessmentQuestionAnswered,
@@ -27,10 +29,21 @@ import {
 } from '../../lib/data-sync';
 import { useAnimatedCounter } from '../../hooks/useAnimatedCounter';
 import moduleData from '../../data/quick-pulse-module.json';
-import type { QuickPulseModule, AssessmentResult, QuestionResponse, ProfileIntelligence } from '../../types';
+import type { QuickPulseModule, AssessmentResult, QuestionResponse, ProfileIntelligence, DomainKey } from '../../types';
 import './QuickPulseOverlay.css';
 
 const qpData = moduleData as unknown as QuickPulseModule;
+
+const domainCourseMap: Record<DomainKey, string> = {
+  leadership: 'leadership_influence',
+  creativity: 'creativity_cross_domain',
+  strategy: 'strategy_systems',
+  tech_proficiency: 'tech_fluency',
+  problem_solving: 'problem_solving_constraints',
+  critical_thinking: 'critical_thinking_assumptions',
+  adaptability: 'adaptability_change',
+  data_analysis: 'data_evidence',
+};
 
 interface QuickPulseOverlayProps {
   isOpen: boolean;
@@ -378,7 +391,17 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
                 </div>
                 <div className="qp-domain-list">
                   {qpData.domains.map((d, i) => (
-                    <div key={d.key} className="qp-domain-row" style={{ animationDelay: `${0.3 + i * 0.08}s` }}>
+                    <button
+                      key={d.key}
+                      className="qp-domain-row qp-domain-clickable"
+                      style={{ animationDelay: `${0.3 + i * 0.08}s` }}
+                      onClick={() => {
+                        void trackCtaClick('domain_drill', 'quick_pulse_results', user?.id ?? null);
+                        onClose();
+                        navigate(`/curriculum/${domainCourseMap[d.key]}`);
+                      }}
+                      title={`${d.description} — Click to explore ${d.label} course`}
+                    >
                       <div className="qp-domain-head">
                         <span className="qp-domain-name">{d.label}</span>
                         <span>
@@ -395,7 +418,8 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
                           } as CSSProperties}
                         />
                       </div>
-                    </div>
+                      <span className="qp-domain-explore">Explore →</span>
+                    </button>
                   ))}
                 </div>
               </div>
@@ -500,8 +524,26 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
                 </div>
               </UpgradeGate>
 
+              {/* LLM Mirror */}
+              <div className="qp-llm-mirror qp-stagger-7">
+                <h4>LLM Mirror</h4>
+                <p>Copy a personalized prompt to run in your own LLM (ChatGPT, Claude, etc.) for a deeper self-reflection based on your profile.</p>
+                <button
+                  className="ghost-button"
+                  onClick={() => {
+                    const prompt = generateLlmMirrorPrompt(result, intelligence);
+                    void navigator.clipboard.writeText(prompt);
+                    void trackCtaClick('copy_llm_mirror', 'quick_pulse_results', user?.id ?? null);
+                    const btn = document.querySelector('.qp-llm-copy-btn') as HTMLButtonElement | null;
+                    if (btn) { btn.textContent = 'Copied!'; setTimeout(() => { btn.textContent = 'Copy LLM Prompt'; }, 2000); }
+                  }}
+                >
+                  <span className="qp-llm-copy-btn">Copy LLM Prompt</span>
+                </button>
+              </div>
+
               {/* Actions */}
-              <div className="qp-results-actions qp-stagger-7">
+              <div className="qp-results-actions qp-stagger-8">
                 <button className="hero-button" onClick={() => { onClose(); setTimeout(() => document.getElementById('development')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100); }}>
                   View Development Path
                 </button>
@@ -514,6 +556,15 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
                   }}
                 >
                   View Curriculum
+                </button>
+                <button
+                  className="ghost-button"
+                  onClick={() => {
+                    void trackCtaClick('download_pdf', 'quick_pulse_results', user?.id ?? null);
+                    generateResultsPdf(result, intelligence, qpData.domains);
+                  }}
+                >
+                  Download PDF
                 </button>
                 <button className="ghost-button" onClick={() => { reset(); setScreen('question'); }}>
                   Retake Quick Pulse
