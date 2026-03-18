@@ -1,4 +1,6 @@
 import { useMemo, useEffect, useRef } from 'react';
+import { useAuth } from '../../contexts/AuthContext';
+import { trackCtaClick } from '../../lib/analytics';
 import { RadarChart } from '../RadarChart/RadarChart';
 import { skillOrder } from '../../data/assessments';
 import './Hero.css';
@@ -9,6 +11,7 @@ interface HeroProps {
 }
 
 export function Hero({ profile, onStartAssessment }: HeroProps) {
+  const { user } = useAuth();
   const constellationRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
@@ -89,7 +92,13 @@ export function Hero({ profile, onStartAssessment }: HeroProps) {
         </div>
 
         <div className="hero-cta-area reveal">
-          <button className="hero-button" onClick={onStartAssessment}>
+          <button
+            className="hero-button"
+            onClick={() => {
+              void trackCtaClick('start_assessment', 'hero', user?.id ?? null);
+              onStartAssessment();
+            }}
+          >
             Start Your Individual Assessment
           </button>
           <p className="hero-cta-sub">Discover Your Unique Skill Profile</p>

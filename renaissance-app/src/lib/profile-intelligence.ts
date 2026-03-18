@@ -1,8 +1,6 @@
 import type {
   DomainKey,
   DomainScores,
-  DomainLevels,
-  LevelLabel,
   ArchetypeKey,
   AssessmentResult,
   ProfileNarrative,
@@ -11,7 +9,7 @@ import type {
   CurriculumRecommendation,
   ProfileIntelligence,
 } from '../types';
-import { computeClusterScores, getLevel } from './scoring';
+import { computeClusterScores } from './scoring';
 
 // ── Profile Type Detection ──
 
@@ -48,7 +46,6 @@ const profileTypeDescriptions: Record<ProfileType, string> = {
 export function generateNarrative(result: AssessmentResult): ProfileNarrative {
   const { archetype, scores, top_strengths, growth_domains, levels } = result;
   const profileType = detectProfileType(scores);
-  const domains = Object.entries(scores) as [DomainKey, number][];
 
   // Summary: 2-3 sentences combining archetype + profile shape
   const archetypeNarr = archetypeNarratives[archetype.key];

@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import './RadarChart.css';
 
 interface RadarChartProps {
@@ -14,31 +14,31 @@ export function RadarChart({ labels, values, size = 380, showLabels = true, anim
   const count = labels.length;
   const half = size / 2;
 
-  const polar = (index: number, value: number) => {
+  const polar = useCallback((index: number, value: number) => {
     const angle = ((-90 + index * (360 / count)) * Math.PI) / 180;
     const scaled = radius * (value / 100);
     return { x: Math.cos(angle) * scaled, y: Math.sin(angle) * scaled };
-  };
+  }, [count]);
 
-  const polyPoints = (vals: number[]) =>
+  const polyPoints = useCallback((vals: number[]) =>
     vals.map((v, i) => {
       const p = polar(i, Math.min(100, v));
       return `${p.x.toFixed(2)},${p.y.toFixed(2)}`;
-    }).join(' ');
+    }).join(' '), [polar]);
 
-  const ringScales = [1, 0.8, 0.6, 0.4, 0.2];
+  const ringScales = useMemo(() => [1, 0.8, 0.6, 0.4, 0.2] as const, []);
 
   const ringsHtml = useMemo(() =>
     ringScales.map((s, i) => {
       const pts = polyPoints(labels.map(() => s * 100));
       return <polygon key={i} fill="none" stroke="rgba(212,175,55,0.14)" strokeWidth="1" points={pts} />;
-    }), [labels.length]);
+    }), [labels, polyPoints, ringScales]);
 
   const axesHtml = useMemo(() =>
     labels.map((_, i) => {
       const p = polar(i, 100);
       return <line key={i} x1="0" y1="0" x2={p.x} y2={p.y} stroke="rgba(212,175,55,0.24)" strokeWidth="1" />;
-    }), [labels.length]);
+    }), [labels, polar]);
 
   const shapePoints = polyPoints(values);
   const glowPoints = polyPoints(values.map(v => Math.min(100, v * 1.08)));

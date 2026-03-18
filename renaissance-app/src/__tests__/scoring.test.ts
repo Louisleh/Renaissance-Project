@@ -4,7 +4,6 @@ import {
   computeMaxPossible,
   normalize,
   getLevel,
-  computeLevels,
   computeClusterScores,
   computeArchetype,
   computeBalanceIndex,
@@ -13,7 +12,7 @@ import {
   getRecommendedModules,
   computeFullResult,
 } from '../lib/scoring';
-import type { DomainKey, DomainScores, QuestionResponse } from '../types';
+import type { DomainScores, QuestionResponse } from '../types';
 import moduleData from '../data/quick-pulse-module.json';
 import type { QuickPulseModule } from '../types';
 
@@ -142,7 +141,7 @@ describe('Scoring Engine', () => {
         tech_proficiency: 25, problem_solving: 40,
         critical_thinking: 80, adaptability: 35, data_analysis: 20,
       };
-      const clusters2 = computeClusterScores(narrow); // only 3 domains >= 60
+      computeClusterScores(narrow); // only 3 domains >= 60
 
       // The balanced profile should have breadth bonus on polymath
       const polymathWithoutBonus =
