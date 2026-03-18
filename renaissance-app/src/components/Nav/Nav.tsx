@@ -1,14 +1,22 @@
 import { useState, useCallback } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
+import { useSubscription } from '../../contexts/SubscriptionContext';
+import { trackCtaClick } from '../../lib/analytics';
+import { UserMenu } from '../Auth/UserMenu';
 import './Nav.css';
 
 interface NavProps {
   onGetStarted: () => void;
+  onOpenAuth: () => void;
 }
 
-export function Nav({ onGetStarted }: NavProps) {
+export function Nav({ onGetStarted, onOpenAuth }: NavProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { isAuthenticated, signOut, user } = useAuth();
+  const { tier } = useSubscription();
   const location = useLocation();
+  const navigate = useNavigate();
 
   const closeMobile = useCallback(() => {
     setMobileOpen(false);
@@ -23,10 +31,11 @@ export function Nav({ onGetStarted }: NavProps) {
   const isHome = location.pathname === '/';
 
   const navItems = [
-    { label: 'Home', href: '#home', to: '/' },
-    { label: 'Assessment', href: '#assessment', to: '/#assessment' },
-    { label: 'Development', href: '#development', to: '/#development' },
-    { label: 'About', href: '#about', to: '/#about' },
+    { label: 'Home', hash: '#home', to: '/' },
+    { label: 'Assessment', hash: '#assessment', to: '/#assessment' },
+    { label: 'Development', hash: '#development', to: '/#development' },
+    { label: 'About', hash: '#about', to: '/#about' },
+    { label: 'Pricing', hash: null, to: '/pricing' },
   ];
 
   const scrollTo = (hash: string) => {
@@ -51,11 +60,16 @@ export function Nav({ onGetStarted }: NavProps) {
             {navItems.map(item => (
               <a
                 key={item.label}
-                href={item.href}
+                href={item.hash ?? item.to}
                 className="nav-link"
                 onClick={(e) => {
                   e.preventDefault();
-                  if (isHome) scrollTo(item.href);
+                  if (item.hash && isHome) {
+                    scrollTo(item.hash);
+                    return;
+                  }
+
+                  navigate(item.to);
                 }}
               >
                 {item.label}
@@ -63,9 +77,26 @@ export function Nav({ onGetStarted }: NavProps) {
             ))}
           </div>
 
-          <button className="nav-cta" onClick={onGetStarted}>
-            Get Started
-          </button>
+          <div className="nav-actions">
+            {isAuthenticated && tier === 'free' && (
+              <Link className="nav-upgrade-badge" to="/pricing">
+                Upgrade
+              </Link>
+            )}
+            {isAuthenticated ? (
+              <UserMenu />
+            ) : (
+              <button
+                className="nav-cta"
+                onClick={() => {
+                  void trackCtaClick('sign_in', 'nav', user?.id ?? null);
+                  onOpenAuth();
+                }}
+              >
+                Sign In
+              </button>
+            )}
+          </div>
 
           <button
             className="mobile-toggle"
@@ -95,20 +126,77 @@ export function Nav({ onGetStarted }: NavProps) {
           {navItems.map(item => (
             <a
               key={item.label}
-              href={item.href}
+              href={item.hash ?? item.to}
               className="mobile-menu-link"
               onClick={(e) => {
                 e.preventDefault();
                 closeMobile();
-                setTimeout(() => scrollTo(item.href), 100);
+                if (item.hash && isHome) {
+                  setTimeout(() => scrollTo(item.hash), 100);
+                  return;
+                }
+
+                navigate(item.to);
               }}
             >
               {item.label}
             </a>
           ))}
-          <button className="hero-button mobile-menu-cta" onClick={() => { closeMobile(); onGetStarted(); }}>
-            Start Assessment
-          </button>
+          {isAuthenticated ? (
+            <>
+              <button
+                className="mobile-menu-link mobile-menu-action"
+                onClick={() => {
+                  closeMobile();
+                  navigate('/profile');
+                }}
+              >
+                My Profile
+              </button>
+              <button
+                className="mobile-menu-link mobile-menu-action"
+                onClick={() => {
+                  closeMobile();
+                  navigate('/history');
+                }}
+              >
+                Assessment History
+              </button>
+              <button
+                className="hero-button mobile-menu-cta"
+                onClick={async () => {
+                  closeMobile();
+                  await signOut();
+                  navigate('/');
+                }}
+              >
+                Sign Out
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                className="hero-button mobile-menu-cta"
+                onClick={() => {
+                  closeMobile();
+                  void trackCtaClick('start_assessment', 'mobile_nav', user?.id ?? null);
+                  onGetStarted();
+                }}
+              >
+                Start Assessment
+              </button>
+              <button
+                className="ghost-button mobile-menu-auth"
+                onClick={() => {
+                  closeMobile();
+                  void trackCtaClick('sign_in', 'mobile_nav', user?.id ?? null);
+                  onOpenAuth();
+                }}
+              >
+                Sign In
+              </button>
+            </>
+          )}
         </div>
       </div>
     </>

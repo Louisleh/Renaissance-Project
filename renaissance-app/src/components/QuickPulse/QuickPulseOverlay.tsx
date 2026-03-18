@@ -1,7 +1,30 @@
-import { useState, useCallback, useEffect, useRef } from 'react';
+import {
+  useState,
+  useCallback,
+  useEffect,
+  useRef,
+  type CSSProperties,
+  type KeyboardEvent as ReactKeyboardEvent,
+} from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
+import { useSubscription } from '../../contexts/SubscriptionContext';
 import { RadarChart } from '../RadarChart/RadarChart';
+import { UpgradeGate } from '../common/UpgradeGate';
 import { computeFullResult, domainLabel } from '../../lib/scoring';
 import { generateProfileIntelligence } from '../../lib/profile-intelligence';
+import {
+  trackAssessmentCompleted,
+  trackAssessmentQuestionAnswered,
+  trackAssessmentStarted,
+  trackCtaClick,
+  trackReassessmentTriggered,
+} from '../../lib/analytics';
+import {
+  loadAssessmentResult,
+  loadCurriculumProgress,
+  saveAssessmentResult,
+} from '../../lib/data-sync';
 import { useAnimatedCounter } from '../../hooks/useAnimatedCounter';
 import moduleData from '../../data/quick-pulse-module.json';
 import type { QuickPulseModule, AssessmentResult, QuestionResponse, ProfileIntelligence } from '../../types';
@@ -17,17 +40,17 @@ interface QuickPulseOverlayProps {
 
 type Screen = 'intro' | 'question' | 'calculating' | 'results';
 
-const QP_STORAGE_KEY = 'renaissance_quick_pulse_result';
-
-function saveResult(result: AssessmentResult) {
-  try { localStorage.setItem(QP_STORAGE_KEY, JSON.stringify(result)); } catch {}
+// eslint-disable-next-line react-refresh/only-export-components
+export function loadSavedResult(): AssessmentResult | null {
+  return loadAssessmentResult('quick_pulse');
 }
 
-export function loadSavedResult(): AssessmentResult | null {
-  try {
-    const stored = localStorage.getItem(QP_STORAGE_KEY);
-    return stored ? JSON.parse(stored) : null;
-  } catch { return null; }
+function getElapsedMs(startedAt: number): number {
+  const now = typeof window !== 'undefined' && typeof window.performance !== 'undefined'
+    ? window.performance.now()
+    : Date.now();
+
+  return Math.max(0, Math.round(now - startedAt));
 }
 
 // Animated score display
@@ -41,7 +64,15 @@ function AnimatedBalance({ value }: { value: number }) {
   return <div className="qp-balance-number">{animated}</div>;
 }
 
+function getSummaryPreview(summary: string): string {
+  const sentences = summary.split('. ');
+  return sentences[0]?.endsWith('.') ? sentences[0] : `${sentences[0] ?? summary}.`;
+}
+
 export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOverlayProps) {
+  const navigate = useNavigate();
+  const { user } = useAuth();
+  const { hasAccess } = useSubscription();
   const [screen, setScreen] = useState<Screen>('intro');
   const [currentQ, setCurrentQ] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -51,6 +82,7 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
   const [isTransitioning, setIsTransitioning] = useState(false);
   const questionCardRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const questionStartedAtRef = useRef(0);
 
   const total = qpData.questions.length;
   const question = qpData.questions[currentQ];
@@ -68,7 +100,7 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
     if (isOpen) {
       document.body.style.overflow = 'hidden';
       // Focus the container when opened
-      setTimeout(() => containerRef.current?.focus(), 100);
+      window.setTimeout(() => containerRef.current?.focus(), 100);
     } else {
       document.body.style.overflow = '';
     }
@@ -98,13 +130,45 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
     setAnswers(prev => ({ ...prev, [questionId]: optionId }));
   };
 
+  useEffect(() => {
+    if (screen !== 'question') {
+      return;
+    }
+
+    questionStartedAtRef.current = typeof window !== 'undefined' && typeof window.performance !== 'undefined'
+      ? window.performance.now()
+      : Date.now();
+  }, [currentQ, screen]);
+
+  const handleStart = () => {
+    const progress = loadCurriculumProgress();
+    const previousResult = loadSavedResult();
+
+    void trackAssessmentStarted('quick_pulse', user?.id ?? null);
+
+    if (progress?.reassessment_available && previousResult) {
+      void trackReassessmentTriggered(previousResult.assessment_id, user?.id ?? null);
+    }
+
+    reset();
+    setScreen('question');
+  };
+
   const handleNext = () => {
     if (!answers[question.id]) return;
+
+    void trackAssessmentQuestionAnswered(
+      'quick_pulse',
+      currentQ + 1,
+      getElapsedMs(questionStartedAtRef.current),
+      user?.id ?? null
+    );
+
     if (currentQ < total - 1) {
       transitionToQuestion(currentQ + 1, 'forward');
     } else {
       setScreen('calculating');
-      setTimeout(() => {
+      window.setTimeout(() => {
         const responses: QuestionResponse[] = Object.entries(answers).map(([qid, oid]) => ({
           question_id: qid,
           option_id: oid,
@@ -113,7 +177,8 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
         const intel = generateProfileIntelligence(r);
         setResult(r);
         setIntelligence(intel);
-        saveResult(r);
+        void saveAssessmentResult('quick_pulse', r, intel, user?.id ?? null);
+        void trackAssessmentCompleted('quick_pulse', r.archetype.key, r.balance_index, user?.id ?? null);
         onComplete(r, intel);
         setScreen('results');
       }, 900);
@@ -125,7 +190,7 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
   };
 
   // Keyboard navigation within options
-  const handleOptionKeyDown = (e: React.KeyboardEvent, optionId: string) => {
+  const handleOptionKeyDown = (e: ReactKeyboardEvent, optionId: string) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       selectAnswer(question.id, optionId);
@@ -161,7 +226,7 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
                 ))}
               </div>
               <p className="qp-intro-note">Your result is a directional baseline — not a definitive measurement.</p>
-              <button className="qp-start-btn" onClick={() => { reset(); setScreen('question'); }}>
+              <button className="qp-start-btn" onClick={handleStart}>
                 Start Quick Pulse
               </button>
               <button className="qp-back-link" onClick={onClose}>
@@ -273,15 +338,32 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
               {/* Profile Intelligence Narrative */}
               <div className="qp-intelligence-card qp-stagger-2">
                 <h4>Profile Analysis</h4>
-                <p>{intelligence.narrative.summary}</p>
-                <div className="qp-intel-section">
-                  <h5>Archetype Rationale</h5>
-                  <p>{intelligence.archetype_breakdown.rationale}</p>
-                </div>
-                <div className="qp-intel-section">
-                  <h5>Growth Priority</h5>
-                  <p>{intelligence.narrative.growth_priority}</p>
-                </div>
+                <p>{hasAccess('full_intelligence') ? intelligence.narrative.summary : getSummaryPreview(intelligence.narrative.summary)}</p>
+                {hasAccess('full_intelligence') ? (
+                  <>
+                    <div className="qp-intel-section">
+                      <h5>Archetype Rationale</h5>
+                      <p>{intelligence.archetype_breakdown.rationale}</p>
+                    </div>
+                    <div className="qp-intel-section">
+                      <h5>Growth Priority</h5>
+                      <p>{intelligence.narrative.growth_priority}</p>
+                    </div>
+                  </>
+                ) : (
+                  <UpgradeGate feature="full_intelligence">
+                    <div>
+                      <div className="qp-intel-section">
+                        <h5>Archetype Rationale</h5>
+                        <p>{intelligence.archetype_breakdown.rationale}</p>
+                      </div>
+                      <div className="qp-intel-section">
+                        <h5>Growth Priority</h5>
+                        <p>{intelligence.narrative.growth_priority}</p>
+                      </div>
+                    </div>
+                  </UpgradeGate>
+                )}
               </div>
 
               {/* Radar */}
@@ -310,7 +392,7 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
                           style={{
                             '--bar-width': `${result.scores[d.key]}%`,
                             animationDelay: `${0.4 + i * 0.1}s`,
-                          } as React.CSSProperties}
+                          } as CSSProperties}
                         />
                       </div>
                     </div>
@@ -399,27 +481,39 @@ export function QuickPulseOverlay({ isOpen, onClose, onComplete }: QuickPulseOve
               </div>
 
               {/* Shareable Profile Summary */}
-              <div className="qp-share-card qp-stagger-7">
-                <div className="qp-share-inner">
-                  <div className="qp-share-brand">Renaissance Skills</div>
-                  <div className="qp-share-archetype">{result.archetype.label}</div>
-                  <div className="qp-share-scores">
-                    {qpData.domains.map(d => (
-                      <div key={d.key} className="qp-share-score-item">
-                        <span>{d.label}</span>
-                        <strong>{result.scores[d.key]}</strong>
-                      </div>
-                    ))}
+              <UpgradeGate feature="shareable_card">
+                <div className="qp-share-card qp-stagger-7">
+                  <div className="qp-share-inner">
+                    <div className="qp-share-brand">Renaissance Skills</div>
+                    <div className="qp-share-archetype">{result.archetype.label}</div>
+                    <div className="qp-share-scores">
+                      {qpData.domains.map(d => (
+                        <div key={d.key} className="qp-share-score-item">
+                          <span>{d.label}</span>
+                          <strong>{result.scores[d.key]}</strong>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="qp-share-balance">Balance: {result.balance_index}</div>
+                    <div className="qp-share-footer">renaissanceskills.com</div>
                   </div>
-                  <div className="qp-share-balance">Balance: {result.balance_index}</div>
-                  <div className="qp-share-footer">renaissanceskills.com</div>
                 </div>
-              </div>
+              </UpgradeGate>
 
               {/* Actions */}
               <div className="qp-results-actions qp-stagger-7">
                 <button className="hero-button" onClick={() => { onClose(); setTimeout(() => document.getElementById('development')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100); }}>
                   View Development Path
+                </button>
+                <button
+                  className="ghost-button"
+                  onClick={() => {
+                    void trackCtaClick('view_curriculum', 'quick_pulse_results', user?.id ?? null);
+                    onClose();
+                    navigate('/curriculum');
+                  }}
+                >
+                  View Curriculum
                 </button>
                 <button className="ghost-button" onClick={() => { reset(); setScreen('question'); }}>
                   Retake Quick Pulse

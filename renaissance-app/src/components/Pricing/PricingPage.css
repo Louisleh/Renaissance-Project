@@ -1,0 +1,134 @@
+.pricing-page {
+  padding: 4rem 0 6rem;
+}
+
+.pricing-status,
+.pricing-subtitle,
+.pricing-footnote,
+.pricing-features,
+.pricing-error {
+  color: var(--muted);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.pricing-card {
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  padding: 1.6rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.pricing-card--pro {
+  border-color: rgba(212, 175, 55, 0.45);
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.12), rgba(22, 21, 18, 0.88));
+}
+
+.pricing-card--premium {
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.18), rgba(22, 21, 18, 0.92));
+}
+
+.pricing-card.is-current {
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.28), var(--shadow);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.4rem 0.65rem;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #171208;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.pricing-tier {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  color: var(--gold);
+}
+
+.pricing-features {
+  margin: 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.pricing-button {
+  min-height: 46px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.pricing-button--pro {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.08));
+}
+
+.pricing-button--premium {
+  background: linear-gradient(135deg, var(--gold), var(--gold-strong));
+  color: #171208;
+  font-weight: 700;
+}
+
+.pricing-button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.pricing-footnote {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.pricing-embed {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.pricing-embed-copy {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.pricing-embed-frame {
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.pricing-error {
+  margin-top: 1rem;
+  color: #f4c9c9;
+}
+
+@media (max-width: 640px) {
+  .pricing-page {
+    padding: 3rem 0 5rem;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,4 +1,9 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
+import { useSubscription } from '../../contexts/SubscriptionContext';
+import { trackCtaClick } from '../../lib/analytics';
+import { ReadingSection } from '../Reading/ReadingSection';
 import type { AssessmentModeConfig } from '../../types';
 import './DashboardSection.css';
 
@@ -10,6 +15,8 @@ interface DashboardSectionProps {
 
 export function DashboardSection({ assessment, balanceIndex, weakestDomains }: DashboardSectionProps) {
   const [tab, setTab] = useState<'growth' | 'path'>('growth');
+  const { user } = useAuth();
+  const { hasAccess } = useSubscription();
 
   const strongest = Object.entries(assessment.profile)
     .sort(([, a], [, b]) => b - a)[0]?.[0];
@@ -108,16 +115,29 @@ export function DashboardSection({ assessment, balanceIndex, weakestDomains }: D
 
             <div className="future-grid reveal">
               <section className="future-card">
-                <div className="console-kicker">Recommended Reading</div>
-                <h3>Foundational Inputs</h3>
-                <p>Curated books and essays will surface here to reinforce weak domains and deepen cross-domain reasoning.</p>
-                <div className="placeholder">{assessment.reading}</div>
+                <ReadingSection
+                  title="Recommended Reading"
+                  description="Use books to deepen the weakest parts of your profile and widen the pattern library you bring into future assessments."
+                  maxItems={4}
+                />
               </section>
               <section className="future-card">
                 <div className="console-kicker">1-on-1 Coaching</div>
                 <h3>Coaching Layer</h3>
-                <p>A future premium layer for guided accountability, curriculum pacing, and synthesis coaching.</p>
-                <div className="placeholder">{assessment.coaching}</div>
+                <p>
+                  Premium coaching turns your assessment and curriculum into a concrete 30-day execution loop with
+                  external accountability.
+                </p>
+                <Link
+                  className="ghost-button cur-dashboard-link"
+                  to={hasAccess('coaching') ? '/coaching' : '/pricing'}
+                  onClick={() => {
+                    void trackCtaClick('open_coaching', 'dashboard_section', user?.id ?? null);
+                  }}
+                >
+                  {hasAccess('coaching') ? 'Book Coaching' : 'Unlock Coaching'}
+                </Link>
+                <div className="cur-dashboard-support">{assessment.coaching}</div>
               </section>
             </div>
           </div>

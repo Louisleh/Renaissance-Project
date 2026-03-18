@@ -195,8 +195,19 @@
   font-style: italic;
 }
 
+.cur-dashboard-link {
+  justify-content: center;
+  width: fit-content;
+}
+
+.cur-dashboard-support {
+  font-size: 0.82rem;
+  color: var(--muted-strong);
+}
+
 @media (max-width: 768px) {
   .dashboard-shell { grid-template-columns: 1fr; }
   .summary-card { position: static; }
   .future-grid { grid-template-columns: 1fr; }
+  .cur-dashboard-link { width: 100%; }
 }

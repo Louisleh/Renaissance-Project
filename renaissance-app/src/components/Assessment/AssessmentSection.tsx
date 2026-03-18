@@ -1,17 +1,29 @@
-import type { AssessmentMode, AssessmentModeConfig } from '../../types';
+import type { ReactNode } from 'react';
+import { useAuth } from '../../contexts/AuthContext';
+import { useSubscription } from '../../contexts/SubscriptionContext';
+import type { AssessmentMode } from '../../types';
 import { assessmentModes } from '../../data/assessments';
+import { trackCtaClick } from '../../lib/analytics';
 import './AssessmentSection.css';
 
 interface AssessmentSectionProps {
   currentMode: AssessmentMode;
   onSelectMode: (mode: AssessmentMode) => void;
   onStartQuickPulse: () => void;
+  onStartDeepDive: () => void;
 }
 
-export function AssessmentSection({ currentMode, onSelectMode, onStartQuickPulse }: AssessmentSectionProps) {
+export function AssessmentSection({
+  currentMode,
+  onSelectMode,
+  onStartQuickPulse,
+  onStartDeepDive,
+}: AssessmentSectionProps) {
+  const { user } = useAuth();
+  const { hasAccess, openPricing } = useSubscription();
   const current = assessmentModes[currentMode];
 
-  const cards: { key: AssessmentMode; icon: JSX.Element; meta: string }[] = [
+  const cards: { key: AssessmentMode; icon: ReactNode; meta: string }[] = [
     {
       key: 'quick',
       meta: '10 Questions \u2022 3 Minutes',
@@ -93,11 +105,23 @@ export function AssessmentSection({ currentMode, onSelectMode, onStartQuickPulse
                 <button
                   className={`assessment-button ${isSelected ? 'is-active' : ''}`}
                   onClick={() => {
+                    void trackCtaClick(`select_${card.key}`, 'assessment_section', user?.id ?? null);
                     onSelectMode(card.key);
                     if (card.key === 'quick') onStartQuickPulse();
+                    if (card.key === 'deep') {
+                      if (hasAccess('deep_dive')) {
+                        onStartDeepDive();
+                      } else {
+                        openPricing();
+                      }
+                    }
                   }}
                 >
-                  {isSelected ? 'Selected' : 'Select Method'}
+                  {card.key === 'deep' && !hasAccess('deep_dive')
+                    ? 'Unlock Pro'
+                    : isSelected
+                      ? 'Selected'
+                      : 'Select Method'}
                 </button>
               </article>
             );
