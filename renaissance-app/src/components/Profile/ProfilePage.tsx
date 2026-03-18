@@ -11,6 +11,7 @@ import {
 } from '../../lib/data-sync';
 import { getCompletionStats } from '../../lib/curriculum-progress';
 import { openCustomerPortal } from '../../lib/stripe';
+import { useToast } from '../../contexts/ToastContext';
 import type { AssessmentHistoryEntry, CurriculumProgress, UserProfile } from '../../types';
 import './ProfilePage.css';
 
@@ -18,6 +19,7 @@ export function ProfilePage() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const { subscription, tier, openPricing } = useSubscription();
+  const toast = useToast();
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [history, setHistory] = useState<AssessmentHistoryEntry[]>([]);
   const [progress, setProgress] = useState<CurriculumProgress | null>(null);
@@ -99,7 +101,10 @@ export function ProfilePage() {
       return;
     }
 
-    await openCustomerPortal(subscription.stripe_customer_id ?? 'unknown-customer');
+    const { error } = await openCustomerPortal(subscription.stripe_customer_id ?? 'unknown-customer');
+    if (error) {
+      toast.show(error, 'info');
+    }
   };
 
   if (loading) {
@@ -235,7 +240,10 @@ export function ProfilePage() {
               <>
                 <button
                   className="ghost-button"
-                  onClick={() => void openCustomerPortal(subscription.stripe_customer_id ?? 'unknown-customer')}
+                  onClick={async () => {
+                    const { error } = await openCustomerPortal(subscription.stripe_customer_id ?? 'unknown-customer');
+                    if (error) toast.show(error, 'info');
+                  }}
                 >
                   Manage Subscription
                 </button>

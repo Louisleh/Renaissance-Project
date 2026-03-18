@@ -13,12 +13,17 @@ import { LlmMirrorOverlay } from './components/LlmMirror/LlmMirrorOverlay';
 import { ErrorBoundary } from './components/common/ErrorBoundary';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { SubscriptionProvider } from './contexts/SubscriptionContext';
+import { ToastProvider } from './contexts/ToastContext';
 import { trackPageView } from './lib/analytics';
+import { initPostHog } from './lib/posthog';
 import { computeBalanceIndex } from './lib/scoring';
 import { assessmentModes } from './data/assessments';
 import type { AssessmentMode, AssessmentResult, ArchetypeKey, DomainScores } from './types';
 import './components/common/ErrorBoundary.css';
 import './styles/global.css';
+
+// Initialize PostHog analytics (no-op if VITE_POSTHOG_KEY is not set)
+initPostHog();
 
 // Lazy-loaded route components — split into separate chunks
 const ResultsPage = lazy(() => import('./components/Results/ResultsPage').then(m => ({ default: m.ResultsPage })));
@@ -331,7 +336,9 @@ export default function App() {
     <ErrorBoundary>
       <AuthProvider>
         <SubscriptionProvider>
-          <AppRoutes />
+          <ToastProvider>
+            <AppRoutes />
+          </ToastProvider>
         </SubscriptionProvider>
       </AuthProvider>
     </ErrorBoundary>

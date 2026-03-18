@@ -1,5 +1,6 @@
 import { loadStripe } from '@stripe/stripe-js';
 import type { User } from '@supabase/supabase-js';
+import { isSupabaseConfigured, supabase } from './supabase';
 import type { SubscriptionTier } from '../types';
 
 const stripePublicKey = import.meta.env.VITE_STRIPE_PUBLIC_KEY as string | undefined;
@@ -7,6 +8,7 @@ const stripeProPriceId = import.meta.env.VITE_STRIPE_PRO_PRICE_ID as string | un
 const stripePremiumPriceId = import.meta.env.VITE_STRIPE_PREMIUM_PRICE_ID as string | undefined;
 export const stripePricingTableId = (import.meta.env.VITE_STRIPE_PRICING_TABLE_ID as string | undefined) ?? null;
 const calendlyUrl = import.meta.env.VITE_CALENDLY_URL as string | undefined;
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string | undefined;
 
 export const stripePromise = stripePublicKey ? loadStripe(stripePublicKey) : null;
 export const isStripeConfigured = Boolean(stripePublicKey);
@@ -21,6 +23,36 @@ function getPriceId(tier: Exclude<SubscriptionTier, 'free'>): string | null {
   return stripePremiumPriceId ?? null;
 }
 
+async function callEdgeFunction(
+  functionName: string,
+  body: Record<string, unknown>
+): Promise<{ data: Record<string, unknown> | null; error: string | null }> {
+  if (!isSupabaseConfigured || !supabase || !supabaseUrl) {
+    return { data: null, error: 'Supabase is not configured.' };
+  }
+
+  const { data: sessionData } = await supabase.auth.getSession();
+  const accessToken = sessionData?.session?.access_token;
+
+  const res = await fetch(`${supabaseUrl}/functions/v1/${functionName}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      ...(accessToken ? { Authorization: `Bearer ${accessToken}` } : {}),
+      apikey: import.meta.env.VITE_SUPABASE_ANON_KEY as string,
+    },
+    body: JSON.stringify(body),
+  });
+
+  const json = await res.json();
+
+  if (!res.ok) {
+    return { data: null, error: json.error || `Edge function returned ${res.status}` };
+  }
+
+  return { data: json, error: null };
+}
+
 export async function redirectToCheckout(
   tier: Exclude<SubscriptionTier, 'free'>,
   user: User | null
@@ -32,26 +64,38 @@ export async function redirectToCheckout(
     return { error: new Error('Stripe Checkout is not configured.') };
   }
 
-  // Stripe v8+ no longer supports client-side redirectToCheckout.
-  // In production, create a Checkout Session via a Supabase Edge Function
-  // and redirect to the returned URL. For now, open a placeholder.
-  const params = new URLSearchParams({
-    price: priceId,
+  const { data, error } = await callEdgeFunction('create-checkout-session', {
+    price_id: priceId,
     mode: 'subscription',
+    success_url: `${window.location.origin}/profile?checkout=success`,
+    cancel_url: `${window.location.origin}/pricing?checkout=cancelled`,
   });
-  window.location.href = `/api/create-checkout-session?${params.toString()}`;
 
+  if (error || !data?.url) {
+    return { error: new Error(error ?? 'Failed to create checkout session.') };
+  }
+
+  window.location.href = data.url as string;
   return { error: null };
 }
 
-export async function openCustomerPortal(customerId: string): Promise<void> {
+export async function openCustomerPortal(
+  customerId: string
+): Promise<{ error: string | null }> {
   if (typeof window === 'undefined') {
-    return;
+    return { error: null };
   }
 
-  // TODO: replace this with a Supabase Edge Function that creates a Stripe Customer Portal session.
-  void customerId;
-  window.alert(
-    'Subscription management is launching soon. For immediate changes, contact support@renaissanceskills.com.'
-  );
+  const { data, error } = await callEdgeFunction('create-portal-session', {
+    customer_id: customerId,
+  });
+
+  if (error || !data?.url) {
+    return {
+      error: error ?? 'Unable to open subscription management. Please contact support@renaissanceskills.com.',
+    };
+  }
+
+  window.location.href = data.url as string;
+  return { error: null };
 }
