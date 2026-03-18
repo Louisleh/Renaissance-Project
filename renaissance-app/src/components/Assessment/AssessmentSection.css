@@ -139,6 +139,12 @@
   letter-spacing: 0.1em;
 }
 
+@media (max-width: 1024px) {
+  .assessment-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
 @media (max-width: 640px) {
   .assessment-grid {
     grid-template-columns: 1fr;

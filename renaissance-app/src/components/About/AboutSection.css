@@ -76,6 +76,10 @@
   max-width: 18ch;
 }
 
+@media (max-width: 1024px) {
+  .about-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+}
+
 @media (max-width: 640px) {
   .about-grid { grid-template-columns: 1fr; }
   .trust-bar { flex-direction: column; align-items: center; gap: 1.5rem; }
