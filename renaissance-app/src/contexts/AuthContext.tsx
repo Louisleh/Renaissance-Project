@@ -9,6 +9,7 @@ import {
 import type { Session, User } from '@supabase/supabase-js';
 import { trackSignIn, trackSignOut } from '../lib/analytics';
 import { syncOnSignIn } from '../lib/data-sync';
+import { identifyUser, resetUser } from '../lib/posthog';
 import { isSupabaseConfigured, supabase } from '../lib/supabase';
 
 interface AuthState {
@@ -93,6 +94,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setLoading(true);
         await syncOnSignIn(nextSession.user.id);
 
+        identifyUser(nextSession.user.id, { email: nextSession.user.email });
+
         if (shouldTrackSignIn) {
           const method = consumePendingAuthMethod(nextSession.user);
           await trackSignIn(method, nextSession.user.id);
@@ -120,6 +123,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     } = supabase.auth.onAuthStateChange((event, nextSession) => {
       if (event === 'SIGNED_OUT') {
         clearPendingAuthMethod();
+        resetUser();
         setSession(null);
         setUser(null);
         setLoading(false);

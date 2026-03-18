@@ -3,6 +3,7 @@ import {
   loadProgress as loadLocalCurriculumProgress,
   saveProgress as saveLocalCurriculumProgress,
 } from './curriculum-progress';
+import { captureEvent } from './posthog';
 import { isSupabaseConfigured, supabase } from './supabase';
 import type {
   AssessmentHistoryEntry,
@@ -342,6 +343,9 @@ export async function trackEvent(
   eventData: Record<string, unknown> = {},
   userId?: string | null
 ): Promise<void> {
+  // Forward to PostHog regardless of Supabase state
+  captureEvent(eventName, eventData);
+
   if (!isSupabaseConfigured || !supabase || !userId) {
     return;
   }
