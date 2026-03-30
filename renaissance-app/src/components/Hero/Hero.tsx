@@ -3,14 +3,23 @@ import { useAuth } from '../../contexts/AuthContext';
 import { trackCtaClick } from '../../lib/analytics';
 import { RadarChart } from '../RadarChart/RadarChart';
 import { skillOrder } from '../../data/assessments';
+import type { ArchetypeKey } from '../../types';
 import './Hero.css';
 
 interface HeroProps {
   profile: Record<string, number>;
   onStartAssessment: () => void;
+  onSelectArchetype?: (key: ArchetypeKey) => void;
 }
 
-export function Hero({ profile, onStartAssessment }: HeroProps) {
+const heroArchetypes: { key: ArchetypeKey; label: string; desc: string; img: string; position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' }[] = [
+  { key: 'polymath', label: 'The Polymath', desc: 'Balanced skill distribution across all domains', img: '/assets/the-polymath-4k.png', position: 'top-left' },
+  { key: 'strategist', label: 'The Strategist', desc: 'High analytical skills and strategic thinking', img: '/assets/the-strategist-4k.png', position: 'top-right' },
+  { key: 'leader', label: 'The Leader', desc: 'High interpersonal skills and adaptive coordination', img: '/assets/the-leader-4k.png', position: 'bottom-left' },
+  { key: 'builder', label: 'The Builder', desc: 'High execution and technical implementation skills', img: '/assets/the-builder-4k.png', position: 'bottom-right' },
+];
+
+export function Hero({ profile, onStartAssessment, onSelectArchetype }: HeroProps) {
   const { user } = useAuth();
   const constellationRef = useRef<SVGSVGElement>(null);
 
@@ -89,6 +98,27 @@ export function Hero({ profile, onStartAssessment }: HeroProps) {
               </span>
             ))}
           </div>
+
+          {heroArchetypes.map(a => (
+            <button
+              key={a.key}
+              className={`hero-archetype-card hero-archetype-${a.position}`}
+              onClick={() => {
+                onSelectArchetype?.(a.key);
+                const el = document.getElementById('archetypes');
+                if (el) {
+                  const top = el.getBoundingClientRect().top + window.scrollY - 84;
+                  window.scrollTo({ top, behavior: 'smooth' });
+                }
+              }}
+            >
+              <div className="hero-archetype-img-wrap">
+                <img src={a.img} alt={a.label} />
+              </div>
+              <span className="hero-archetype-label">{a.label}</span>
+              <span className="hero-archetype-desc">{a.desc}</span>
+            </button>
+          ))}
         </div>
 
         <div className="hero-cta-area reveal">

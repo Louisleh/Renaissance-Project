@@ -247,7 +247,7 @@ function HomePage() {
     <>
       <AppFrame onGetStarted={handleStartAssessment}>
         <main id="main-content">
-          <Hero profile={profile} onStartAssessment={handleStartAssessment} />
+          <Hero profile={profile} onStartAssessment={handleStartAssessment} onSelectArchetype={setActiveArchetype} />
           <AssessmentSection
             currentMode={assessmentMode}
             onSelectMode={setAssessmentMode}
