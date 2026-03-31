@@ -136,6 +136,10 @@
   transform: translateY(-1px);
 }
 
+.auth-container:focus-visible {
+  outline: none;
+}
+
 .auth-submit.is-loading,
 .auth-google.is-loading {
   opacity: 0.75;

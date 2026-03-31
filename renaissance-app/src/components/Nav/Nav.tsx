@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { useSubscription } from '../../contexts/SubscriptionContext';
@@ -13,38 +13,137 @@ interface NavProps {
 
 export function Nav({ onGetStarted, onOpenAuth }: NavProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
   const { isAuthenticated, signOut, user } = useAuth();
   const { tier } = useSubscription();
   const location = useLocation();
   const navigate = useNavigate();
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const lastFocusRef = useRef<HTMLElement | null>(null);
+
+  const navItems = [
+    { label: 'Assessment', section: 'assessment', hash: '#assessment', to: '/#assessment' },
+    { label: 'Archetypes', section: 'archetypes', hash: '#archetypes', to: '/#archetypes' },
+    { label: 'Development', section: 'development', hash: '#development', to: '/#development' },
+    { label: 'About', section: 'about', hash: '#about', to: '/#about' },
+    { label: 'Pricing', section: 'pricing', hash: null, to: '/pricing' },
+  ] as const;
 
   const closeMobile = useCallback(() => {
     setMobileOpen(false);
     document.body.style.overflow = '';
+    window.setTimeout(() => lastFocusRef.current?.focus(), 0);
   }, []);
 
   const openMobile = useCallback(() => {
+    lastFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     setMobileOpen(true);
     document.body.style.overflow = 'hidden';
   }, []);
 
-  const isHome = location.pathname === '/';
-
-  const navItems = [
-    { label: 'Home', hash: '#home', to: '/' },
-    { label: 'Assessment', hash: '#assessment', to: '/#assessment' },
-    { label: 'Development', hash: '#development', to: '/#development' },
-    { label: 'About', hash: '#about', to: '/#about' },
-    { label: 'Pricing', hash: null, to: '/pricing' },
-  ];
-
   const scrollTo = (hash: string) => {
     const el = document.querySelector(hash);
-    if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 84;
-      window.scrollTo({ top, behavior: 'smooth' });
+    if (!el) {
+      return;
     }
+
+    const top = el.getBoundingClientRect().top + window.scrollY - 84;
+    window.scrollTo({ top, behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    if (location.pathname === '/pricing') {
+      setActiveSection('pricing');
+      return;
+    }
+
+    if (location.pathname === '/curriculum' || location.pathname === '/coaching' || location.pathname === '/history' || location.pathname === '/profile') {
+      setActiveSection('development');
+      return;
+    }
+
+    if (location.pathname !== '/') {
+      setActiveSection('home');
+      return;
+    }
+
+    const sections = ['home', 'assessment', 'archetypes', 'development', 'about'] as const;
+    const hash = location.hash.replace('#', '');
+    if (sections.includes(hash as (typeof sections)[number])) {
+      setActiveSection(hash);
+    }
+
+    const observed = sections
+      .map(section => document.getElementById(section))
+      .filter((element): element is HTMLElement => Boolean(element));
+
+    if (observed.length === 0) {
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((left, right) => right.intersectionRatio - left.intersectionRatio)[0];
+
+      if (visible?.target instanceof HTMLElement) {
+        setActiveSection(visible.target.id);
+      }
+    }, { threshold: [0.2, 0.35, 0.5], rootMargin: '-18% 0px -52% 0px' });
+
+    observed.forEach(element => observer.observe(element));
+    return () => observer.disconnect();
+  }, [location.hash, location.pathname]);
+
+  useEffect(() => {
+    if (!mobileOpen) {
+      return;
+    }
+
+    const focusableSelector = 'button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])';
+
+    const focusFirst = () => {
+      const focusables = mobileMenuRef.current?.querySelectorAll<HTMLElement>(focusableSelector);
+      focusables?.[0]?.focus();
+    };
+
+    window.setTimeout(focusFirst, 0);
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeMobile();
+        return;
+      }
+
+      if (event.key !== 'Tab') {
+        return;
+      }
+
+      const focusables = Array.from(mobileMenuRef.current?.querySelectorAll<HTMLElement>(focusableSelector) ?? [])
+        .filter(element => !element.hasAttribute('disabled'));
+
+      if (focusables.length === 0) {
+        return;
+      }
+
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [closeMobile, mobileOpen]);
+
+  const isHome = location.pathname === '/';
 
   return (
     <>
@@ -61,7 +160,8 @@ export function Nav({ onGetStarted, onOpenAuth }: NavProps) {
               <a
                 key={item.label}
                 href={item.hash ?? item.to}
-                className="nav-link"
+                className={`nav-link${activeSection === item.section ? ' is-active' : ''}`}
+                aria-current={activeSection === item.section ? (item.section === 'pricing' ? 'page' : 'location') : undefined}
                 onClick={(e) => {
                   e.preventDefault();
                   if (item.hash && isHome) {
@@ -110,10 +210,27 @@ export function Nav({ onGetStarted, onOpenAuth }: NavProps) {
             </svg>
           </button>
         </nav>
+
+        <div className="mobile-persistent-cta">
+          <button
+            className="mobile-persistent-cta-btn"
+            onClick={() => {
+              void trackCtaClick('start_assessment', 'mobile_persistent_nav', user?.id ?? null);
+              onGetStarted();
+            }}
+          >
+            Start Assessment
+          </button>
+        </div>
       </header>
 
-      {/* Mobile Menu */}
-      <div className={`mobile-menu ${mobileOpen ? 'is-open' : ''}`}>
+      <div
+        className={`mobile-menu ${mobileOpen ? 'is-open' : ''}`}
+        ref={mobileMenuRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Navigation menu"
+      >
         <div className="mobile-menu-header">
           <span className="brand">Renaissance Skills</span>
           <button className="mobile-menu-close" onClick={closeMobile} aria-label="Close menu">
@@ -127,7 +244,8 @@ export function Nav({ onGetStarted, onOpenAuth }: NavProps) {
             <a
               key={item.label}
               href={item.hash ?? item.to}
-              className="mobile-menu-link"
+              className={`mobile-menu-link${activeSection === item.section ? ' is-active' : ''}`}
+              aria-current={activeSection === item.section ? (item.section === 'pricing' ? 'page' : 'location') : undefined}
               onClick={(e) => {
                 e.preventDefault();
                 closeMobile();

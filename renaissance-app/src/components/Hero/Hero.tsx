@@ -17,8 +17,10 @@ export function Hero({ profile, onStartAssessment }: HeroProps) {
   useEffect(() => {
     const svg = constellationRef.current;
     if (!svg) return;
+
     const stars: { x: number; y: number }[] = [];
     let lines = '';
+
     for (let i = 0; i < 60; i++) {
       const x = Math.random() * 1200;
       const y = Math.random() * 600;
@@ -26,6 +28,7 @@ export function Hero({ profile, onStartAssessment }: HeroProps) {
       stars.push({ x, y });
       lines += `<circle cx="${x}" cy="${y}" r="${r}" fill="rgba(212,175,55,${Math.random() * 0.4 + 0.1})"/>`;
     }
+
     for (let i = 0; i < stars.length; i++) {
       for (let j = i + 1; j < stars.length; j++) {
         const dist = Math.hypot(stars[i].x - stars[j].x, stars[i].y - stars[j].y);
@@ -34,24 +37,22 @@ export function Hero({ profile, onStartAssessment }: HeroProps) {
         }
       }
     }
+
     lines += `<circle cx="600" cy="300" r="250" fill="none" stroke="rgba(212,175,55,0.06)" stroke-width="0.5"/>`;
     svg.innerHTML = lines;
   }, []);
 
-  const radarValues = useMemo(() =>
-    skillOrder.map(s => profile[s] ?? 50),
-    [profile]
-  );
+  const radarValues = useMemo(() => skillOrder.map(s => profile[s] ?? 50), [profile]);
 
   const skillPositions = [
-    { skill: "Leadership", left: "32%", top: "8%" },
-    { skill: "Creativity", left: "62%", top: "8%" },
-    { skill: "Strategy", left: "72%", top: "32%" },
-    { skill: "Tech Proficiency", left: "28%", top: "78%" },
-    { skill: "Problem Solving", left: "26%", top: "52%" },
-    { skill: "Critical Thinking", left: "70%", top: "58%" },
-    { skill: "Adaptability", left: "35%", top: "92%" },
-    { skill: "Data Analysis", left: "60%", top: "92%" },
+    { skill: 'Leadership', left: '32%', top: '8%' },
+    { skill: 'Creativity', left: '62%', top: '8%' },
+    { skill: 'Strategy', left: '72%', top: '32%' },
+    { skill: 'Tech Proficiency', left: '28%', top: '78%' },
+    { skill: 'Problem Solving', left: '26%', top: '52%' },
+    { skill: 'Critical Thinking', left: '70%', top: '58%' },
+    { skill: 'Adaptability', left: '35%', top: '92%' },
+    { skill: 'Data Analysis', left: '60%', top: '92%' },
   ];
 
   return (
@@ -59,11 +60,14 @@ export function Hero({ profile, onStartAssessment }: HeroProps) {
       <div className="container hero-shell">
         <div className="hero-top reveal">
           <div className="hero-brand-title">Renaissance Skills</div>
-          <div className="hero-brand-sub">Diagnose Skill Imbalances | Build Durable Breadth</div>
+          <div className="hero-brand-sub">See your strengths, gaps, and next move in one pass.</div>
         </div>
 
         <div className="hero-headline reveal">
           <h1>Map What You're Made Of</h1>
+          <p className="hero-value-prop">
+            A short assessment turns scattered signals into a clear skill profile, ranked weak points, and a next-step plan you can use immediately.
+          </p>
         </div>
 
         <div className="hero-center">
@@ -101,7 +105,7 @@ export function Hero({ profile, onStartAssessment }: HeroProps) {
           >
             Start Your Individual Assessment
           </button>
-          <p className="hero-cta-sub">3 minutes to your 8-domain skill graph</p>
+          <p className="hero-cta-sub">10 questions • 3 minutes • 8 domains • one clear next step</p>
         </div>
 
         <div className="hero-info-bar reveal">
@@ -110,14 +114,14 @@ export function Hero({ profile, onStartAssessment }: HeroProps) {
               <circle cx="12" cy="12" r="9" /><path d="M12 7V12L15 14" /><path d="M8 2L4 5M16 2L20 5" />
             </svg>
             <span className="hero-info-title">How It Works</span>
-            <span className="hero-info-desc">Answer 10 questions, get scored on 8 domains</span>
+            <span className="hero-info-desc">Answer 10 questions, get a score across 8 domains</span>
           </div>
           <div className="hero-info-item">
             <svg className="hero-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
               <path d="M12 2L15 8.5L22 9.5L17 14.5L18 21.5L12 18.5L6 21.5L7 14.5L2 9.5L9 8.5Z" />
             </svg>
-            <span className="hero-info-title">Platform Benefits</span>
-            <span className="hero-info-desc">Prioritized curriculum based on your weakest domains</span>
+            <span className="hero-info-title">What You Get</span>
+            <span className="hero-info-desc">A ranked growth plan based on your weakest domains</span>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AuthModal } from '../Auth/AuthModal';
 import { useAuth } from '../../contexts/AuthContext';
 import { useSubscription } from '../../contexts/SubscriptionContext';
@@ -59,9 +60,18 @@ const plans: PlanCard[] = [
   },
 ];
 
+function escapeHtml(value: string | undefined): string {
+  return (value ?? '')
+    .replaceAll('&', '&amp;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;');
+}
+
 function getButtonLabel(currentTier: SubscriptionTier, tier: SubscriptionTier): string {
   if (tier === 'free') {
-    return currentTier === 'free' ? 'Current Plan' : 'Included';
+    return 'Start Quick Pulse';
   }
 
   if (currentTier === tier) {
@@ -72,6 +82,7 @@ function getButtonLabel(currentTier: SubscriptionTier, tier: SubscriptionTier): 
 }
 
 export function PricingPage() {
+  const navigate = useNavigate();
   const { user, isAuthenticated } = useAuth();
   const { tier, subscription } = useSubscription();
   const [authOpen, setAuthOpen] = useState(false);
@@ -95,13 +106,17 @@ export function PricingPage() {
     document.body.appendChild(script);
   }, []);
 
+  const startQuickPulse = useCallback(() => {
+    navigate('/', { state: { openQuickPulse: true } });
+  }, [navigate]);
+
   const statusCopy = useMemo(() => {
     if (!isStripeConfigured) {
       return 'Stripe is not configured in this environment. All premium features are unlocked for development.';
     }
 
     if (tier === 'free') {
-      return 'All plans include unlimited Quick Pulse assessments. Cancel anytime.';
+      return 'Free includes Quick Pulse. Most users move to Pro for Deep Dive and the full curriculum.';
     }
 
     return subscription.current_period_end
@@ -138,23 +153,33 @@ export function PricingPage() {
       <div className="container">
         <div className="section-head">
           <div className="eyebrow">Pricing</div>
-          <h1>Invest in the Full Diagnostic</h1>
-          <p className="lede">The free tier gives you a directional baseline. Pro unlocks scenario-based assessment, the complete 8-course curriculum, and longitudinal tracking.</p>
+          <h1>Choose the path that matches how much depth you need.</h1>
+          <p className="lede">
+            Start free if you want a quick baseline. Move to Pro for the full assessment and curriculum.
+            Premium adds coaching for users who want accountability and implementation support.
+          </p>
+        </div>
+
+        <div className="pricing-decision-banner">
+          <div className="eyebrow">Recommended path</div>
+          <h2>Most users should start with Pro.</h2>
+          <p>
+            Free gives you the baseline. Pro unlocks the higher-confidence assessment and the complete learning path.
+            Premium is for the smaller group that wants coaching on top.
+          </p>
         </div>
 
         <p className="pricing-status">{statusCopy}</p>
 
         <div className="pricing-grid">
           {plans.map((plan) => {
-            const isCurrent = !isStripeConfigured
-              ? plan.tier === 'premium'
-              : tier === plan.tier || (!isAuthenticated && plan.tier === 'free');
-            const disabled = plan.tier === 'free' || isCurrent || !isStripeConfigured;
+            const isCurrent = tier === plan.tier;
+            const disabled = plan.tier !== 'free' && (isCurrent || pendingTier === plan.tier);
 
             return (
               <article
                 key={plan.tier}
-                className={`pricing-card pricing-card--${plan.tier}${plan.badge ? ' has-badge' : ''}${isCurrent ? ' is-current' : ''}`}
+                className={`pricing-card pricing-card--${plan.tier}${plan.badge ? ' has-badge' : ''}${isCurrent ? ' is-current' : ''}${plan.tier === 'pro' ? ' is-featured' : ''}`}
               >
                 {plan.badge && <span className="pricing-badge">{plan.badge}</span>}
                 <div className="pricing-tier">{plan.tier}</div>
@@ -167,18 +192,25 @@ export function PricingPage() {
                 </ul>
                 <button
                   className={`pricing-button pricing-button--${plan.tier}`}
-                  disabled={disabled || pendingTier === plan.tier}
+                  disabled={disabled}
                   onClick={() => {
+                    if (plan.tier === 'free') {
+                      startQuickPulse();
+                      return;
+                    }
+
                     if (plan.tier === 'pro' || plan.tier === 'premium') {
                       void handleUpgrade(plan.tier);
                     }
                   }}
                 >
-                  {pendingTier === plan.tier
-                    ? 'Redirecting…'
-                    : !isStripeConfigured && plan.tier !== 'free'
-                      ? 'Unlocked in Dev'
-                      : getButtonLabel(tier, plan.tier)}
+                  {plan.tier === 'free'
+                    ? 'Start Quick Pulse'
+                    : pendingTier === plan.tier
+                      ? 'Redirecting…'
+                      : !isStripeConfigured
+                        ? 'Unlocked in Dev'
+                        : getButtonLabel(tier, plan.tier)}
                 </button>
               </article>
             );
@@ -216,21 +248,24 @@ export function PricingPage() {
         </section>
 
         {stripePricingTableId && isStripeConfigured && (
-          <section className="pricing-embed">
-            <div className="pricing-embed-copy">
-              <div className="eyebrow">Stripe Pricing Table</div>
-              <h2>Alternate checkout surface</h2>
-              <p className="pricing-status">
-                If you prefer managing plans from Stripe Dashboard configuration, the pricing table below opens the same Stripe Checkout flow.
-              </p>
-            </div>
-            <div
-              className="pricing-embed-frame"
-              dangerouslySetInnerHTML={{
-                __html: `<stripe-pricing-table pricing-table-id="${stripePricingTableId}" publishable-key="${import.meta.env.VITE_STRIPE_PUBLIC_KEY}"${user?.email ? ` customer-email="${user.email}"` : ''}></stripe-pricing-table>`,
-              }}
-            />
-          </section>
+          <details className="pricing-embed-disclosure">
+            <summary>Prefer Stripe's checkout table? Open the alternate checkout surface.</summary>
+            <section className="pricing-embed">
+              <div className="pricing-embed-copy">
+                <div className="eyebrow">Stripe Pricing Table</div>
+                <h2>Alternate checkout surface</h2>
+                <p className="pricing-status">
+                  If you prefer managing plans from Stripe Dashboard configuration, the pricing table below opens the same Stripe Checkout flow.
+                </p>
+              </div>
+              <div
+                className="pricing-embed-frame"
+                dangerouslySetInnerHTML={{
+                  __html: `<stripe-pricing-table pricing-table-id="${escapeHtml(stripePricingTableId)}" publishable-key="${escapeHtml(import.meta.env.VITE_STRIPE_PUBLIC_KEY)}"${user?.email ? ` customer-email="${escapeHtml(user.email)}"` : ''}></stripe-pricing-table>`,
+                }}
+              />
+            </section>
+          </details>
         )}
       </div>
 
