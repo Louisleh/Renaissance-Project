@@ -87,12 +87,13 @@ export function LlmMirrorOverlay({ isOpen, onClose, onComplete }: LlmMirrorOverl
     return () => document.removeEventListener('keydown', handleKey);
   }, [isOpen, onClose]);
 
-  const handleCopyPrompt = () => {
+  const handleCopyPrompt = async () => {
     const prompt = generateMirrorAnalysisPrompt();
-    void navigator.clipboard.writeText(prompt);
+    await navigator.clipboard.writeText(prompt);
     void trackCtaClick('copy_mirror_prompt', 'llm_mirror', user?.id ?? null);
     setPromptCopied(true);
     setTimeout(() => setPromptCopied(false), 2500);
+    return true;
   };
 
   const handleImport = () => {
@@ -180,7 +181,18 @@ export function LlmMirrorOverlay({ isOpen, onClose, onComplete }: LlmMirrorOverl
                   </div>
                 </div>
               </div>
-              <button className="lm-start-btn" onClick={() => setScreen('prompt')}>
+              <button
+                className="lm-start-btn"
+                onClick={async () => {
+                  try {
+                    await handleCopyPrompt();
+                    setScreen('prompt');
+                  } catch (error) {
+                    console.error('Failed to copy LLM mirror prompt', error);
+                    setPromptCopied(false);
+                  }
+                }}
+              >
                 Copy the Analysis Prompt
               </button>
               <button className="lm-back-link" onClick={onClose}>

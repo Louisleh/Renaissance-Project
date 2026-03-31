@@ -6,10 +6,10 @@ export function AboutSection() {
       <div className="container">
         <div className="section-head reveal">
           <div className="eyebrow">About The Platform</div>
-          <h2>Built on the belief that AI rewards orchestration more than narrow repetition.</h2>
+          <h2>Built for people who want a clearer read on their skills, not more noise.</h2>
           <p className="lede">
-            The industrial logic of specialization produced immense efficiency. The AI era changes the winning profile:
-            users who can connect abstractions, systems, people, and tools become disproportionately valuable.
+            Renaissance Skills turns a short assessment into a domain graph, a ranked weak-point map, and a next-step plan.
+            The goal is simple: help people see what to improve and what to do next.
           </p>
         </div>
 
@@ -17,24 +17,22 @@ export function AboutSection() {
           <section className="about-card reveal">
             <h3>Product Thesis</h3>
             <p>
-              Renaissance Skills is designed to expose lopsided development early, translate it into a living skill graph, and
-              make weak-domain training feel as concrete as professional upskilling in a single discipline.
+              We expose lopsided development early, translate it into a living skill graph, and keep the next best move visible.
             </p>
           </section>
           <section className="about-card reveal">
             <h3>Who It Serves</h3>
             <ul>
-              <li>Specialists exposed to automation risk</li>
-              <li>Students building resilient, non-fragile career profiles</li>
-              <li>Generalists who want a more formal synthesis framework</li>
+              <li>People changing roles or planning their next career step</li>
+              <li>Students building a stronger, more resilient skill profile</li>
+              <li>Generalists who want a clearer framework for synthesis and growth</li>
             </ul>
           </section>
           <section className="about-card reveal">
             <h3>Built for the AI Transition</h3>
             <p>
-              Renaissance Skills draws on research in cross-domain skill development, adaptive expertise,
-              and professional resilience. The platform is designed for a world where AI handles routine
-              execution and humans who connect disciplines become disproportionately valuable.
+              When AI handles more routine execution, the advantage goes to people who can connect disciplines,
+              compare evidence, and make better calls across systems.
             </p>
           </section>
         </div>
@@ -42,11 +40,11 @@ export function AboutSection() {
         <div className="trust-bar reveal">
           <div className="trust-stat">
             <strong>8</strong>
-            <span>Professional domains assessed</span>
+            <span>Core professional domains scored</span>
           </div>
           <div className="trust-stat">
             <strong>3</strong>
-            <span>Assessment modes including privacy-first LLM analysis</span>
+            <span>Assessment modes, including privacy-first LLM analysis</span>
           </div>
           <div className="trust-stat">
             <strong>40+</strong>

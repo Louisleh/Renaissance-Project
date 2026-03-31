@@ -87,6 +87,17 @@ button:disabled {
   cursor: not-allowed;
 }
 
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  box-shadow: var(--focus-ring);
+}
+
 input:not([type="checkbox"]):not([type="radio"]),
 textarea {
   background: var(--panel);
@@ -365,5 +376,9 @@ footer {
 @media (max-width: 640px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  body {
+    padding-bottom: 5rem;
   }
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { archetypeInfo } from '../../data/assessments';
 import type { ArchetypeKey } from '../../types';
 import './ArchetypesSection.css';
@@ -10,6 +10,11 @@ interface ArchetypesSectionProps {
 
 export function ArchetypesSection({ activeArchetype, onSelectArchetype }: ArchetypesSectionProps) {
   const [spotlight, setSpotlight] = useState<ArchetypeKey>(activeArchetype);
+
+  useEffect(() => {
+    setSpotlight(activeArchetype);
+  }, [activeArchetype]);
+
   const info = archetypeInfo[spotlight];
   const keys: ArchetypeKey[] = ['polymath', 'strategist', 'builder', 'leader'];
 

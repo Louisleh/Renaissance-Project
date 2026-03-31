@@ -2,6 +2,25 @@
   padding: 4rem 0 6rem;
 }
 
+.pricing-decision-banner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid var(--gold-20);
+  border-radius: 18px;
+  background: linear-gradient(180deg, var(--gold-10), rgba(255, 255, 255, 0.03));
+  box-shadow: var(--shadow);
+}
+
+.pricing-decision-banner h2 {
+  margin-bottom: 0.5rem;
+}
+
+.pricing-decision-banner p {
+  color: var(--muted);
+  max-width: 70ch;
+}
+
 .pricing-status,
 .pricing-subtitle,
 .pricing-footnote,
@@ -41,6 +60,11 @@
   box-shadow: 0 0 0 1px var(--gold-28), var(--shadow);
 }
 
+.pricing-card.is-featured {
+  transform: translateY(-4px);
+  border-color: var(--gold-45);
+}
+
 .pricing-badge {
   position: absolute;
   top: 1rem;
@@ -76,6 +100,12 @@
   background: rgba(255, 255, 255, 0.04);
 }
 
+.pricing-button--free {
+  background: linear-gradient(135deg, var(--gold), var(--gold-strong));
+  color: #171208;
+  font-weight: 700;
+}
+
 .pricing-button--pro {
   background: linear-gradient(135deg, var(--gold-20), var(--gold-8));
 }
@@ -99,10 +129,36 @@
   margin-top: 1.5rem;
 }
 
-.pricing-embed {
+.pricing-embed-disclosure {
   margin-top: 2rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.pricing-embed-disclosure summary {
+  list-style: none;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.pricing-embed-disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+.pricing-embed-disclosure[open] summary {
+  border-bottom: 1px solid var(--border);
+}
+
+.pricing-embed {
+  margin-top: 0;
   display: grid;
   gap: 1rem;
+  padding: 1rem 1.25rem 1.25rem;
 }
 
 .pricing-embed-copy {
@@ -191,6 +247,10 @@
 @media (max-width: 640px) {
   .pricing-page {
     padding: 3rem 0 5rem;
+  }
+
+  .pricing-decision-banner {
+    padding: 1.15rem 1.15rem;
   }
 
   .pricing-grid {

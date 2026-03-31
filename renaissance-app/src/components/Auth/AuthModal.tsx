@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type FormEvent } from 'react';
+import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react';
 import { isSupabaseConfigured } from '../../lib/supabase';
 import { useAuth } from '../../contexts/AuthContext';
 import './AuthModal.css';
@@ -18,42 +18,76 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const [submitMethod, setSubmitMethod] = useState<SubmitMethod>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
+
+  const focusFirstElement = () => {
+    const focusables = containerRef.current?.querySelectorAll<HTMLElement>(
+      'button:not([disabled]), a[href], input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    );
+    focusables?.[0]?.focus() ?? closeButtonRef.current?.focus() ?? containerRef.current?.focus();
+  };
 
   useEffect(() => {
     if (!isOpen) {
+      previousFocusRef.current?.focus();
       return;
     }
 
+    previousFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     document.body.style.overflow = 'hidden';
-
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isOpen]);
-
-  useEffect(() => {
-    if (!isOpen) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setError(null);
-       
-      setSuccess(false);
-       
-      setSubmitMethod(null);
-      return;
-    }
+    window.setTimeout(focusFirstElement, 0);
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
+        event.preventDefault();
         onClose();
+        return;
+      }
+
+      if (event.key !== 'Tab') {
+        return;
+      }
+
+      const focusables = Array.from(
+        containerRef.current?.querySelectorAll<HTMLElement>(
+          'button:not([disabled]), a[href], input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        ) ?? []
+      ).filter((element) => !element.hasAttribute('disabled'));
+
+      if (focusables.length === 0) {
+        return;
+      }
+
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', handleKeyDown);
+    };
   }, [isOpen, onClose]);
 
   useEffect(() => {
-    if (isAuthenticated && isOpen) {
+    if (!isOpen) {
+      setError(null);
+      setSuccess(false);
+      setSubmitMethod(null);
+      return;
+    }
+
+    if (isAuthenticated) {
       onClose();
     }
   }, [isAuthenticated, isOpen, onClose]);
@@ -110,9 +144,19 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
   }
 
   return (
-    <div className="auth-overlay" role="dialog" aria-modal="true" aria-label="Sign in">
-      <div className="auth-container">
-        <button className="auth-close" onClick={onClose} aria-label="Close sign in dialog">
+    <div
+      className="auth-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="auth-title"
+      onMouseDown={(event) => {
+        if (event.target === event.currentTarget) {
+          onClose();
+        }
+      }}
+    >
+      <div className="auth-container" ref={containerRef} tabIndex={-1}>
+        <button className="auth-close" onClick={onClose} aria-label="Close sign in dialog" ref={closeButtonRef}>
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
             <line x1="6" y1="6" x2="18" y2="18" />
             <line x1="18" y1="6" x2="6" y2="18" />
@@ -140,7 +184,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
 
         <div className="auth-copy">
           <div className="eyebrow">Accounts & Sync</div>
-          <h2>{copy.title}</h2>
+          <h2 id="auth-title">{copy.title}</h2>
           <p>{copy.body}</p>
         </div>
 
