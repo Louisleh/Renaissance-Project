@@ -1,0 +1,1134 @@
+[
+  {
+    "id": "biology:acetylcholine",
+    "type": "standard",
+    "concept": "Acetylcholine",
+    "domain": "Biology",
+    "oneliner": "A neurotransmitter critical for muscle contraction, attention, and memory. Depleted in Alzheimer's disease.",
+    "whyItMatters": "Nicotine mimics it (why smoking temporarily improves focus). Cholinesterase inhibitors are the main Alzheimer's drugs.",
+    "analogy": "The brain's attention and muscle-activation chemical — nicotine and Alzheimer's drugs both target it."
+  },
+  {
+    "id": "biology:adaptive-vs-innate-immunity",
+    "type": "standard",
+    "concept": "Adaptive vs Innate Immunity",
+    "domain": "Biology",
+    "oneliner": "Innate: immediate, non-specific (skin, inflammation). Adaptive: slower, specific, develops memory (antibodies, T-cells).",
+    "whyItMatters": "Innate is the first responder. Adaptive is the special forces that develops targeted weapons and remembers enemies.",
+    "analogy": "Innate = generic security guards on patrol. Adaptive = detectives who study specific criminals and build a file."
+  },
+  {
+    "id": "biology:allostasis",
+    "type": "standard",
+    "concept": "Allostasis",
+    "domain": "Biology",
+    "oneliner": "The process of achieving stability through change — your body actively adjusting systems to meet anticipated demands.",
+    "whyItMatters": "Unlike homeostasis (maintaining a set point), allostasis predicts and prepares. Your body raises cortisol before you wake up.",
+    "analogy": "Homeostasis is a thermostat. Allostasis is a thermostat that reads the weather forecast and pre-adjusts."
+  },
+  {
+    "id": "biology:amino-acids",
+    "type": "standard",
+    "concept": "Amino Acids",
+    "domain": "Biology",
+    "oneliner": "The 20 building blocks of proteins — their sequence determines protein shape and function.",
+    "whyItMatters": "Your body can make 11 of them. The other 9 ('essential') must come from food. That's why protein quality matters.",
+    "analogy": "Letters of the protein alphabet — 20 letters combining into words (proteins) of thousands of letters."
+  },
+  {
+    "id": "biology:ampk",
+    "type": "standard",
+    "concept": "AMPK",
+    "domain": "Biology",
+    "oneliner": "An enzyme activated by energy depletion — triggers fat burning, autophagy, and glucose uptake. Activated by exercise, fasting, and metformin.",
+    "whyItMatters": "It's the body's fuel gauge. When energy runs low, AMPK flips the switch from storage to burning mode.",
+    "analogy": "Your body's low-battery mode — when energy drops, AMPK activates every energy-saving and fat-burning program available."
+  },
+  {
+    "id": "biology:anabolic-vs-catabolic",
+    "type": "standard",
+    "concept": "Anabolic vs Catabolic",
+    "domain": "Biology",
+    "oneliner": "Anabolic: building up complex molecules from simpler ones (muscle growth). Catabolic: breaking down molecules for energy.",
+    "whyItMatters": "Eating protein triggers anabolism. Fasting triggers catabolism. Exercise triggers both — breaking down glycogen while building muscle.",
+    "analogy": "Anabolic = construction crew building. Catabolic = demolition crew recycling materials for energy."
+  },
+  {
+    "id": "biology:anaerobic-vs-aerobic",
+    "type": "standard",
+    "concept": "Anaerobic vs Aerobic",
+    "domain": "Biology",
+    "oneliner": "Aerobic: energy production using oxygen (sustained effort). Anaerobic: without oxygen (short intense bursts).",
+    "whyItMatters": "Aerobic = jogging (fat burning, endurance). Anaerobic = sprinting (glycogen, power). Training both optimizes different systems.",
+    "analogy": "Aerobic is a diesel engine — efficient, long-running. Anaerobic is a rocket booster — explosive but burns out fast."
+  },
+  {
+    "id": "biology:angiogenesis",
+    "type": "standard",
+    "concept": "Angiogenesis",
+    "domain": "Biology",
+    "oneliner": "The formation of new blood vessels from existing ones — essential for growth, healing, and unfortunately cancer.",
+    "whyItMatters": "Tumors can't grow beyond 1-2mm without angiogenesis. Anti-angiogenic drugs starve tumors by cutting their blood supply.",
+    "analogy": "Cancer's supply line — tumors build their own highway system, and cutting it off is one way to fight them."
+  },
+  {
+    "id": "biology:antibiotic-resistance",
+    "type": "standard",
+    "concept": "Antibiotic Resistance",
+    "domain": "Biology",
+    "oneliner": "Bacteria evolving to survive antibiotics through natural selection — driven by overuse.",
+    "whyItMatters": "WHO calls it one of the greatest threats to global health. Minor infections could kill again.",
+    "analogy": "Bacteria speedrunning evolution while we slowly develop new drugs."
+  },
+  {
+    "id": "biology:antibiotics-in-livestock",
+    "type": "application",
+    "concept": "Antibiotics in Livestock",
+    "domain": "Biology",
+    "problem": "A farming industry uses low-dose antibiotics in animal feed to promote faster growth and prevent disease in crowded conditions.",
+    "firstOrder": "Animals grow faster, reducing costs. Disease outbreaks in crowded facilities decrease. Meat prices drop for consumers. Farm profitability increases.",
+    "secondOrder": "Antibiotic-resistant bacteria evolve in animal guts and transfer to human pathogens via the food chain and environment. Resistant infections kill 1.2M people annually worldwide. The cheap meat subsidy is financed by a health debt that compounds across generations.",
+    "lesson": "Distributed costs and concentrated benefits create systems that are locally optimal but globally catastrophic. The second-order cost (resistance) is borne by different people than the first-order benefit (cheap meat) — that disconnect is why the problem persists.",
+    "level": "intermediate"
+  },
+  {
+    "id": "biology:antibodies",
+    "type": "standard",
+    "concept": "Antibodies",
+    "domain": "Biology",
+    "oneliner": "Y-shaped proteins that lock onto specific pathogens and mark them for destruction.",
+    "whyItMatters": "How vaccines work — pre-building antibodies for threats not yet encountered. Basis of most diagnostic tests.",
+    "analogy": "Custom-made handcuffs that only fit one specific criminal."
+  },
+  {
+    "id": "biology:apoptosis",
+    "type": "standard",
+    "concept": "Apoptosis",
+    "domain": "Biology",
+    "oneliner": "Programmed cell death — cells deliberately self-destruct when damaged or no longer needed.",
+    "whyItMatters": "Without it, damaged cells accumulate as cancer. Your body kills billions of its own cells daily on purpose.",
+    "analogy": "Controlled demolition — tearing down old buildings so the city stays functional."
+  },
+  {
+    "id": "biology:atp",
+    "type": "standard",
+    "concept": "ATP",
+    "domain": "Biology",
+    "oneliner": "Adenosine triphosphate — the universal energy currency of all living cells.",
+    "whyItMatters": "Your body produces and recycles roughly your own body weight in ATP every single day.",
+    "analogy": "Cash — cells earn it from food and spend it on everything."
+  },
+  {
+    "id": "biology:autophagy",
+    "type": "standard",
+    "concept": "Autophagy",
+    "domain": "Biology",
+    "oneliner": "Cells breaking down and recycling their own damaged components — cellular self-cleaning.",
+    "whyItMatters": "Fasting triggers autophagy. Thought to slow aging and reduce cancer risk. Won 2016 Nobel Prize.",
+    "analogy": "Marie Kondo for cells — if a component no longer functions, it gets recycled."
+  },
+  {
+    "id": "biology:banning-single-use-plastics",
+    "type": "application",
+    "concept": "Banning Single-Use Plastics",
+    "domain": "Biology",
+    "problem": "A country bans single-use plastic bags to reduce ocean pollution.",
+    "firstOrder": "Plastic bag litter decreases. Marine life faces fewer choking hazards. Public awareness of pollution increases.",
+    "secondOrder": "Consumers switch to 'reusable' cotton bags that have 100x the carbon footprint per bag. Paper bag production increases deforestation. Thicker 'multi-use' plastic bags are used once and discarded, creating more plastic waste per bag. The visible problem (litter) decreases while the invisible problem (carbon footprint) may increase.",
+    "lesson": "Solving visible problems can create invisible ones. Life-cycle analysis, not gut reaction, should drive environmental policy. The environmentally 'obvious' choice isn't always the environmentally optimal one.",
+    "level": "intermediate"
+  },
+  {
+    "id": "biology:basal-metabolic-rate",
+    "type": "standard",
+    "concept": "Basal Metabolic Rate",
+    "domain": "Biology",
+    "oneliner": "The calories your body burns at complete rest — the energy cost of just staying alive.",
+    "whyItMatters": "It accounts for 60-75% of daily energy expenditure. Muscle mass, age, and thyroid function drive it.",
+    "analogy": "Your body's idle fuel consumption — what it costs just to keep the engine running with no activity."
+  },
+  {
+    "id": "biology:bdnf",
+    "type": "standard",
+    "concept": "BDNF",
+    "domain": "Biology",
+    "oneliner": "Brain-Derived Neurotrophic Factor — a protein promoting neuron growth. 'Miracle-Gro for the brain.'",
+    "whyItMatters": "Exercise dramatically increases BDNF. One of the strongest arguments for why physical activity improves cognition.",
+    "analogy": "Fertilizer for brain cells — more of it means your neural garden grows thicker."
+  },
+  {
+    "id": "biology:bioavailability",
+    "type": "standard",
+    "concept": "Bioavailability",
+    "domain": "Biology",
+    "oneliner": "The proportion of a substance that enters circulation and can have an active effect when introduced to the body.",
+    "whyItMatters": "A drug with 100% bioavailability reaches the bloodstream intact. Many nutrients have low bioavailability without specific co-factors.",
+    "analogy": "Not what you eat but what you absorb — the body's intake efficiency rating for every substance."
+  },
+  {
+    "id": "biology:biofilm",
+    "type": "standard",
+    "concept": "Biofilm",
+    "domain": "Biology",
+    "oneliner": "A community of microorganisms attached to a surface, encased in a protective matrix — 1000x more resistant to antibiotics.",
+    "whyItMatters": "Dental plaque, infected medical devices, and chronic wounds all involve biofilms. A major challenge in medicine.",
+    "analogy": "A bacterial fortress — individual bacteria are vulnerable, but in a biofilm they're surrounded by armor."
+  },
+  {
+    "id": "biology:blood-brain-barrier",
+    "type": "standard",
+    "concept": "Blood-Brain Barrier",
+    "domain": "Biology",
+    "oneliner": "A highly selective membrane separating blood from brain tissue — blocks most substances from entering the brain.",
+    "whyItMatters": "It protects the brain from toxins and pathogens but also makes delivering drugs to the brain extremely difficult.",
+    "analogy": "The brain's VIP entrance — almost nothing gets past security, which is great for protection but terrible for drug delivery."
+  },
+  {
+    "id": "biology:cell-membrane",
+    "type": "standard",
+    "concept": "Cell Membrane",
+    "domain": "Biology",
+    "oneliner": "A selective barrier surrounding every cell — controls what enters and exits using a phospholipid bilayer.",
+    "whyItMatters": "It's why cells can maintain different internal chemistry from their environment. No membrane, no life.",
+    "analogy": "The cell's bouncer — decides who gets in, who gets out, and who's on the VIP list."
+  },
+  {
+    "id": "biology:chronobiology",
+    "type": "standard",
+    "concept": "Chronobiology",
+    "domain": "Biology",
+    "oneliner": "The study of biological rhythms — circadian (daily), ultradian (shorter), infradian (longer like menstrual cycles).",
+    "whyItMatters": "It influences when to take medications, when to exercise, and when cognitive performance peaks.",
+    "analogy": "The science of your body's clocks — you're not just one clock, you're an orchestra of rhythms."
+  },
+  {
+    "id": "biology:circadian-rhythm",
+    "type": "standard",
+    "concept": "Circadian Rhythm",
+    "domain": "Biology",
+    "oneliner": "The internal 24-hour biological clock regulating sleep, hormones, digestion, and temperature.",
+    "whyItMatters": "Disrupting it increases risk of obesity, depression, and cardiovascular disease.",
+    "analogy": "Your body's operating system scheduler — it expects consistent timing."
+  },
+  {
+    "id": "biology:collagen",
+    "type": "standard",
+    "concept": "Collagen",
+    "domain": "Biology",
+    "oneliner": "The most abundant protein in the body — provides structural support in skin, bones, tendons, cartilage.",
+    "whyItMatters": "It's why skin wrinkles with age (collagen breaks down), why bone broth is trendy, and why scars form.",
+    "analogy": "The body's rebar — the structural protein holding everything together, from skin to skeleton."
+  },
+  {
+    "id": "biology:commensal-bacteria",
+    "type": "standard",
+    "concept": "Commensal Bacteria",
+    "domain": "Biology",
+    "oneliner": "Microorganisms living on/in the body that benefit from the host without causing harm — and often provide benefits.",
+    "whyItMatters": "They synthesize vitamins, aid digestion, train the immune system, and protect against pathogens.",
+    "analogy": "Friendly tenants who pay rent in vitamins, immune training, and pathogen defense."
+  },
+  {
+    "id": "biology:connectome",
+    "type": "standard",
+    "concept": "Connectome",
+    "domain": "Biology",
+    "oneliner": "A comprehensive map of neural connections in a brain — the 'wiring diagram' of consciousness.",
+    "whyItMatters": "The Human Connectome Project is mapping the brain's structural connections. A complete connectome could revolutionize neuroscience.",
+    "analogy": "The brain's circuit diagram — every wire, every connection, mapped in three dimensions."
+  },
+  {
+    "id": "biology:convergent-evolution",
+    "type": "standard",
+    "concept": "Convergent Evolution",
+    "domain": "Biology",
+    "oneliner": "Unrelated species independently evolving similar solutions to the same problem — eyes evolved independently 40+ times.",
+    "whyItMatters": "Proves that some designs are universally optimal for specific constraints. Wings evolved in insects, birds, bats, and pterosaurs independently. When you see the same solution across unrelated domains, you've found a deep constraint.",
+    "analogy": "Like three teams in a hackathon independently building similar apps — the convergence reveals the problem's inherent structure, not collaboration.",
+    "level": "intermediate"
+  },
+  {
+    "id": "biology:cortisol",
+    "type": "standard",
+    "concept": "Cortisol",
+    "domain": "Biology",
+    "oneliner": "The primary stress hormone. Useful in short bursts, destructive when chronically elevated.",
+    "whyItMatters": "Chronic cortisol suppresses immunity, increases belly fat, impairs memory, raises blood pressure.",
+    "analogy": "The fire alarm — essential in emergencies, maddening if it never shuts off."
+  },
+  {
+    "id": "biology:creatine",
+    "type": "standard",
+    "concept": "Creatine",
+    "domain": "Biology",
+    "oneliner": "A molecule stored in muscles that rapidly regenerates ATP during high-intensity exercise — also supports brain energy.",
+    "whyItMatters": "One of the most studied and effective supplements. Improves strength, power, and emerging evidence supports cognitive benefits.",
+    "analogy": "A turbocharger for muscle cells — providing instant energy for explosive efforts."
+  },
+  {
+    "id": "biology:crispr",
+    "type": "standard",
+    "concept": "CRISPR",
+    "domain": "Biology",
+    "oneliner": "A gene-editing technology that cuts, pastes, and modifies DNA sequences with unprecedented precision.",
+    "whyItMatters": "Could eliminate genetic diseases, create drought-resistant crops, or design human embryos. The biggest biotech breakthrough of the century.",
+    "analogy": "Find-and-replace for genetic code — Ctrl+H for DNA."
+  },
+  {
+    "id": "biology:crispr-gene-editing",
+    "type": "standard",
+    "concept": "CRISPR Gene Editing",
+    "domain": "Biology",
+    "oneliner": "A precise molecular tool that can cut, edit, and replace specific DNA sequences — the 'find and replace' function for genetics.",
+    "whyItMatters": "Enables disease cure (sickle cell), crop improvement, and potentially human enhancement. Also raises profound ethical questions about designer babies and ecological interventions. The technology is ahead of the governance.",
+    "analogy": "Like a word processor for DNA — you can search for a specific sequence, delete it, and type in a replacement with unprecedented precision.",
+    "level": "intermediate"
+  },
+  {
+    "id": "biology:cytokines",
+    "type": "standard",
+    "concept": "Cytokines",
+    "domain": "Biology",
+    "oneliner": "Signaling proteins coordinating the immune response — some promote inflammation, others suppress it.",
+    "whyItMatters": "A 'cytokine storm' — when the immune system overreacts — is what kills in severe COVID and other infections.",
+    "analogy": "The immune system's text messages — coordinating the response, but too many at once cause chaos."
+  },
+  {
+    "id": "biology:dna",
+    "type": "standard",
+    "concept": "DNA",
+    "domain": "Biology",
+    "oneliner": "The molecular instruction manual encoding all living organisms — a double helix of nucleotide base pairs.",
+    "whyItMatters": "Every cell runs on the same source code. Understanding DNA = understanding inheritance, cancer, and CRISPR.",
+    "analogy": "The master blueprint stored in every office of a massive corporation — same doc, different departments read different chapters."
+  },
+  {
+    "id": "biology:dopamine",
+    "type": "standard",
+    "concept": "Dopamine",
+    "domain": "Biology",
+    "oneliner": "A neurotransmitter associated with reward prediction and motivation — not pleasure but anticipation.",
+    "whyItMatters": "Drives habit formation and addiction. Your phone is an engineered dopamine delivery device.",
+    "analogy": "Not the reward itself — it's the craving that makes you open the fridge when you're not hungry."
+  },
+  {
+    "id": "biology:endocrine-system",
+    "type": "standard",
+    "concept": "Endocrine System",
+    "domain": "Biology",
+    "oneliner": "The network of glands (thyroid, adrenals, pituitary, etc.) that produce hormones regulating body functions.",
+    "whyItMatters": "It coordinates growth, metabolism, reproduction, and stress response. Endocrine disruptors in plastics are a growing health concern.",
+    "analogy": "The body's broadcast system — glands are radio towers, hormones are signals, organs are receivers tuned to specific frequencies."
+  },
+  {
+    "id": "biology:endoplasmic-reticulum",
+    "type": "standard",
+    "concept": "Endoplasmic Reticulum",
+    "domain": "Biology",
+    "oneliner": "A network of membranes in cells where proteins are folded and lipids are synthesized — rough (with ribosomes) and smooth (without).",
+    "whyItMatters": "It's the cell's manufacturing floor. Rough ER makes proteins for export. Smooth ER makes lipids and detoxifies.",
+    "analogy": "The cell's assembly line — rough ER builds protein products, smooth ER manufactures fats and cleans up toxins."
+  },
+  {
+    "id": "biology:endorphins",
+    "type": "standard",
+    "concept": "Endorphins",
+    "domain": "Biology",
+    "oneliner": "The body's natural painkillers — opioid peptides released during exercise, excitement, pain, and orgasm.",
+    "whyItMatters": "They produce 'runner's high,' reduce perception of pain, and create feelings of euphoria. The body's own morphine.",
+    "analogy": "Your body's private pharmacy — dispensing its own opioids during exercise, laughter, and pain."
+  },
+  {
+    "id": "biology:enzymes",
+    "type": "standard",
+    "concept": "Enzymes",
+    "domain": "Biology",
+    "oneliner": "Biological catalysts — proteins that speed up chemical reactions in cells without being consumed.",
+    "whyItMatters": "Without enzymes, digestion would take weeks, and most biological processes wouldn't happen at body temperature.",
+    "analogy": "Molecular machines — each one built for one specific job, working millions of times faster than the uncatalyzed reaction."
+  },
+  {
+    "id": "biology:epigenetics",
+    "type": "standard",
+    "concept": "Epigenetics",
+    "domain": "Biology",
+    "oneliner": "Heritable changes in gene expression without altering the DNA sequence — genes switched on or off by environment.",
+    "whyItMatters": "Your lifestyle can change which genes are active, and those changes can pass to your children.",
+    "analogy": "DNA is the piano — epigenetics decides which keys get played."
+  },
+  {
+    "id": "biology:fascia",
+    "type": "standard",
+    "concept": "Fascia",
+    "domain": "Biology",
+    "oneliner": "The connective tissue web that surrounds and connects every muscle, bone, nerve, and organ in the body.",
+    "whyItMatters": "It transmits force across the body, affects flexibility and pain. Myofascial release targets this tissue.",
+    "analogy": "The body's internal cling wrap — a continuous web holding everything in place and transmitting tension throughout."
+  },
+  {
+    "id": "biology:gaba",
+    "type": "standard",
+    "concept": "GABA",
+    "domain": "Biology",
+    "oneliner": "The brain's primary inhibitory neurotransmitter — calms neural activity. Alcohol, benzodiazepines, and sleep all involve GABA.",
+    "whyItMatters": "Low GABA = anxiety, insomnia, seizures. It's the chemical brake pedal of the nervous system.",
+    "analogy": "The brain's chill pill — it tells neurons to quiet down."
+  },
+  {
+    "id": "biology:gene-expression",
+    "type": "standard",
+    "concept": "Gene Expression",
+    "domain": "Biology",
+    "oneliner": "The process by which information from a gene is used to create a functional product (usually a protein).",
+    "whyItMatters": "Not all genes are active at all times. A liver cell and a neuron have identical DNA but express different genes.",
+    "analogy": "Every cell has the complete cookbook but each only opens to the recipes it needs."
+  },
+  {
+    "id": "biology:genetic-code",
+    "type": "standard",
+    "concept": "Genetic Code",
+    "domain": "Biology",
+    "oneliner": "The set of rules mapping DNA triplets (codons) to amino acids — essentially the programming language of life.",
+    "whyItMatters": "It's nearly universal across all life on Earth, from bacteria to humans — strong evidence of common ancestry.",
+    "analogy": "Life's Rosetta Stone — three-letter words that translate between the language of DNA and the language of proteins."
+  },
+  {
+    "id": "biology:genetic-drift",
+    "type": "standard",
+    "concept": "Genetic Drift",
+    "domain": "Biology",
+    "oneliner": "Random changes in gene frequency in a population — not driven by selection, just chance.",
+    "whyItMatters": "In small populations, random events can dramatically change genetic makeup. It's why isolated populations develop unique traits.",
+    "analogy": "A deck of cards getting shuffled — not because any card is better, just randomness changing what's on top."
+  },
+  {
+    "id": "biology:gluconeogenesis",
+    "type": "standard",
+    "concept": "Gluconeogenesis",
+    "domain": "Biology",
+    "oneliner": "The metabolic process of producing glucose from non-carbohydrate sources — amino acids, glycerol, lactate.",
+    "whyItMatters": "It's why you don't die when you skip carbs — your liver manufactures glucose from protein and fat.",
+    "analogy": "Your liver's backup generator — making fuel from alternative sources when the main supply runs out."
+  },
+  {
+    "id": "biology:glycemic-index",
+    "type": "standard",
+    "concept": "Glycemic Index",
+    "domain": "Biology",
+    "oneliner": "A ranking of carbohydrates by how quickly they raise blood sugar — high GI (white bread) vs. low GI (lentils).",
+    "whyItMatters": "Low-GI foods provide sustained energy. High-GI foods spike insulin. Relevant for diabetes management and athletic performance.",
+    "analogy": "A speedometer for how fast food turns into blood sugar — fast (sugar) vs. slow (whole grains)."
+  },
+  {
+    "id": "biology:glycogen",
+    "type": "standard",
+    "concept": "Glycogen",
+    "domain": "Biology",
+    "oneliner": "The body's stored form of glucose — packed in liver and muscles for quick energy.",
+    "whyItMatters": "Marathon runners 'hit the wall' when glycogen depletes. Carb-loading before endurance events maximizes glycogen stores.",
+    "analogy": "Your body's quick-access energy reserves — like cash in your wallet versus savings in the bank (fat)."
+  },
+  {
+    "id": "biology:glymphatic-system",
+    "type": "standard",
+    "concept": "Glymphatic System",
+    "domain": "Biology",
+    "oneliner": "The brain's waste-clearing system — most active during sleep, flushing out metabolic waste including amyloid-beta.",
+    "whyItMatters": "It's a major reason sleep deprivation is so damaging. Without it, toxic proteins accumulate in the brain.",
+    "analogy": "The brain's nighttime cleaning crew — they only work when you're asleep."
+  },
+  {
+    "id": "biology:golgi-apparatus",
+    "type": "standard",
+    "concept": "Golgi Apparatus",
+    "domain": "Biology",
+    "oneliner": "The cell's packaging and distribution center — modifies, sorts, and ships proteins to their final destinations.",
+    "whyItMatters": "Without it, proteins would be made but never delivered. Like producing goods but having no logistics.",
+    "analogy": "The cell's post office — stamps packages with addresses, sorts them, and sends them where they need to go."
+  },
+  {
+    "id": "biology:gut-permeability",
+    "type": "standard",
+    "concept": "Gut Permeability",
+    "domain": "Biology",
+    "oneliner": "The controlled passage of substances through the intestinal lining — 'leaky gut' is increased permeability.",
+    "whyItMatters": "Compromised gut barrier may contribute to autoimmune conditions, food sensitivities, and systemic inflammation.",
+    "analogy": "The intestinal wall as a selective gate — when the gate gets leaky, things that shouldn't enter the bloodstream do."
+  },
+  {
+    "id": "biology:gut-brain-axis",
+    "type": "standard",
+    "concept": "Gut-Brain Axis",
+    "domain": "Biology",
+    "oneliner": "The bidirectional communication network between the GI tract and central nervous system, via the vagus nerve.",
+    "whyItMatters": "Your gut sends signals to your brain affecting mood, anxiety, cognition. 'Gut feeling' is literal.",
+    "analogy": "A two-way highway between belly and brain — traffic flows both directions."
+  },
+  {
+    "id": "biology:heat-shock-proteins",
+    "type": "standard",
+    "concept": "Heat Shock Proteins",
+    "domain": "Biology",
+    "oneliner": "Proteins produced in response to heat stress that protect cells from damage and help refold damaged proteins.",
+    "whyItMatters": "Activated by sauna, exercise, and fever. They may contribute to longevity and cellular resilience.",
+    "analogy": "Your cells' emergency repair crew — summoned by stress to prevent and fix protein damage."
+  },
+  {
+    "id": "biology:hemoglobin",
+    "type": "standard",
+    "concept": "Hemoglobin",
+    "domain": "Biology",
+    "oneliner": "The iron-containing protein in red blood cells that carries oxygen from lungs to tissues and returns CO2.",
+    "whyItMatters": "It gives blood its red color. Sickle cell disease is a hemoglobin mutation. Carbon monoxide poisoning works by displacing oxygen from hemoglobin.",
+    "analogy": "A molecular oxygen taxi — picks up O2 at the lungs, drops it off at cells, picks up CO2 for the return trip."
+  },
+  {
+    "id": "biology:herd-immunity",
+    "type": "standard",
+    "concept": "Herd Immunity",
+    "domain": "Biology",
+    "oneliner": "When enough of a population is immune (via vaccination or infection) that disease can't spread effectively, protecting the unvaccinated.",
+    "whyItMatters": "The threshold varies by disease (measles needs ~95%). It protects those who can't be vaccinated — infants, immunocompromised.",
+    "analogy": "A firebreak — enough immune people stop the chain of transmission, even if some individuals aren't protected."
+  },
+  {
+    "id": "biology:homeostasis",
+    "type": "standard",
+    "concept": "Homeostasis",
+    "domain": "Biology",
+    "oneliner": "The body's ability to maintain stable internal conditions despite external changes.",
+    "whyItMatters": "Why you shiver, sweat, and feel hungry. Most diseases involve homeostasis failure.",
+    "analogy": "A thermostat — constantly sensing and adjusting to keep things in the sweet spot."
+  },
+  {
+    "id": "biology:horizontal-gene-transfer",
+    "type": "standard",
+    "concept": "Horizontal Gene Transfer",
+    "domain": "Biology",
+    "oneliner": "Organisms swap genes directly across species, bypassing parent-to-offspring inheritance — evolution's shortcut that breaks the tree of life.",
+    "whyItMatters": "Bacteria share antibiotic resistance genes like files on a network. This horizontal transfer is why resistance spreads so fast — evolution isn't just vertical (parent to child), it's peer-to-peer.",
+    "analogy": "Like open-source code where any developer can copy a useful function from any project — not limited to inheriting from your 'parent' project.",
+    "level": "intermediate"
+  },
+  {
+    "id": "biology:hormones",
+    "type": "standard",
+    "concept": "Hormones",
+    "domain": "Biology",
+    "oneliner": "Chemical messengers produced by glands that regulate growth, metabolism, mood, and reproduction via the bloodstream.",
+    "whyItMatters": "They control puberty, stress response, hunger, sleep, and sex drive. Hormone imbalances underlie many chronic conditions.",
+    "analogy": "The body's email system — slow but powerful messages sent to distant organs telling them what to do."
+  },
+  {
+    "id": "biology:hpa-axis",
+    "type": "standard",
+    "concept": "HPA Axis",
+    "domain": "Biology",
+    "oneliner": "Hypothalamic-Pituitary-Adrenal axis — the neuroendocrine system controlling the stress response.",
+    "whyItMatters": "Chronic activation leads to elevated cortisol, suppressed immunity, anxiety, and metabolic dysfunction.",
+    "analogy": "Your body's stress alarm system — three glands in a cascade that decides how stressed you should be."
+  },
+  {
+    "id": "biology:immune-system",
+    "type": "standard",
+    "concept": "Immune System",
+    "domain": "Biology",
+    "oneliner": "A multi-layered defense network that identifies and destroys pathogens — from skin barriers to killer cells.",
+    "whyItMatters": "Why you recover from flu, why transplants get rejected, why autoimmune diseases exist. It learns and adapts.",
+    "analogy": "A military with border patrol, rapid response, intelligence agencies, and a most-wanted database."
+  },
+  {
+    "id": "biology:inflammation",
+    "type": "standard",
+    "concept": "Inflammation",
+    "domain": "Biology",
+    "oneliner": "The immune response to injury — acute inflammation heals; chronic inflammation destroys.",
+    "whyItMatters": "Chronic low-grade inflammation linked to heart disease, cancer, Alzheimer's, depression.",
+    "analogy": "Acute = fire department responding. Chronic = fire department that never leaves and starts breaking things."
+  },
+  {
+    "id": "biology:insulin",
+    "type": "standard",
+    "concept": "Insulin",
+    "domain": "Biology",
+    "oneliner": "A hormone produced by the pancreas that regulates blood sugar by signaling cells to absorb glucose.",
+    "whyItMatters": "Insulin resistance is the precursor to type 2 diabetes, affects 1 in 3 adults, and is linked to metabolic syndrome.",
+    "analogy": "The key that unlocks cell doors to let sugar in — when the locks get rusty (resistance), sugar piles up in the blood."
+  },
+  {
+    "id": "biology:ketosis",
+    "type": "standard",
+    "concept": "Ketosis",
+    "domain": "Biology",
+    "oneliner": "A metabolic state where the body burns fat for fuel instead of glucose, producing ketone bodies.",
+    "whyItMatters": "The basis of ketogenic diets. The brain can run on ketones. Evolved as a survival mechanism during fasting.",
+    "analogy": "Switching fuel sources — like a hybrid car running on battery (fat) when it runs out of gas (glucose)."
+  },
+  {
+    "id": "biology:lactate-threshold",
+    "type": "standard",
+    "concept": "Lactate Threshold",
+    "domain": "Biology",
+    "oneliner": "The exercise intensity at which lactate accumulates faster than it can be cleared — the point where you 'hit the wall.'",
+    "whyItMatters": "Training at or near this threshold improves endurance performance. It's NOT caused by lactic acid 'buildup' — that's a myth.",
+    "analogy": "The RPM where your engine starts producing exhaust faster than the catalytic converter can handle."
+  },
+  {
+    "id": "biology:lipids",
+    "type": "standard",
+    "concept": "Lipids",
+    "domain": "Biology",
+    "oneliner": "A class of molecules including fats, oils, waxes, and steroids — essential for cell membranes, energy storage, and hormones.",
+    "whyItMatters": "Cell membranes are lipid bilayers. Steroid hormones (testosterone, estrogen, cortisol) are all lipids.",
+    "analogy": "Biology's Swiss army knife molecule — structural material, energy reserve, and chemical messenger all in one."
+  },
+  {
+    "id": "biology:lipoproteins-ldl-hdl",
+    "type": "standard",
+    "concept": "Lipoproteins (LDL/HDL)",
+    "domain": "Biology",
+    "oneliner": "Particles transporting cholesterol through blood. LDL ('bad') deposits in arteries. HDL ('good') removes it.",
+    "whyItMatters": "The LDL/HDL ratio is a key cardiovascular risk marker. Statins work by lowering LDL.",
+    "analogy": "Delivery trucks (LDL) that sometimes crash and spill cargo in your arteries vs. garbage trucks (HDL) that clean it up."
+  },
+  {
+    "id": "biology:lymphatic-system",
+    "type": "standard",
+    "concept": "Lymphatic System",
+    "domain": "Biology",
+    "oneliner": "A network of vessels and nodes that drains excess fluid, transports immune cells, and filters pathogens.",
+    "whyItMatters": "It's your body's sewage and security system combined. No pump — it relies on muscle movement to circulate.",
+    "analogy": "The body's drainage system and surveillance network — cleaning up fluid while patrolling for threats."
+  },
+  {
+    "id": "biology:melatonin",
+    "type": "standard",
+    "concept": "Melatonin",
+    "domain": "Biology",
+    "oneliner": "A hormone produced by the pineal gland in response to darkness, signaling the body to prepare for sleep.",
+    "whyItMatters": "Blue light from screens suppresses melatonin. It's why phone use before bed disrupts sleep architecture.",
+    "analogy": "Your brain's dimmer switch — darkness turns it up, light turns it down."
+  },
+  {
+    "id": "biology:metabolic-rate-scaling",
+    "type": "standard",
+    "concept": "Metabolic Rate Scaling",
+    "domain": "Biology",
+    "oneliner": "Metabolic rate scales with body mass to the 3/4 power — larger animals are more energy-efficient per unit mass, but slower.",
+    "whyItMatters": "West and Brown showed this scaling law governs lifespan, heart rate, and growth across all organisms. Large companies, like large animals, are more efficient but slower to adapt. Size imposes metabolic constraints.",
+    "analogy": "Like a big ship that uses less fuel per ton of cargo but can't change direction quickly — efficiency and agility trade off at every scale.",
+    "level": "advanced"
+  },
+  {
+    "id": "biology:metabolism",
+    "type": "standard",
+    "concept": "Metabolism",
+    "domain": "Biology",
+    "oneliner": "The sum of all chemical reactions in the body that convert food into energy and building materials.",
+    "whyItMatters": "It determines how many calories you burn at rest, how you process nutrients, and why it slows with age.",
+    "analogy": "Your body's operating budget — income (food) minus expenses (energy) determines savings (fat) or deficit (weight loss)."
+  },
+  {
+    "id": "biology:methylation",
+    "type": "standard",
+    "concept": "Methylation",
+    "domain": "Biology",
+    "oneliner": "Adding a methyl group to DNA — a key epigenetic mechanism that can silence gene expression.",
+    "whyItMatters": "It's influenced by diet (folate, B12), stress, and toxins. Aberrant methylation is implicated in cancer and aging.",
+    "analogy": "A molecular mute button — slapping a chemical tag on a gene to turn its volume down."
+  },
+  {
+    "id": "biology:microbiome",
+    "type": "standard",
+    "concept": "Microbiome",
+    "domain": "Biology",
+    "oneliner": "Trillions of bacteria, fungi, and viruses living in your body that profoundly affect health, mood, and immunity.",
+    "whyItMatters": "Your gut bacteria influence mood, weight, and decision-making. You have more microbial cells than human cells.",
+    "analogy": "A rainforest ecosystem inside you — diverse is healthy, monoculture is trouble."
+  },
+  {
+    "id": "biology:microbiota-gut-brain-axis",
+    "type": "standard",
+    "concept": "Microbiota-Gut-Brain Axis",
+    "domain": "Biology",
+    "oneliner": "The three-way communication system between gut bacteria, the intestinal nervous system, and the brain.",
+    "whyItMatters": "Gut bacteria produce neurotransmitters, influence immune function, and may contribute to depression and anxiety.",
+    "analogy": "A conference call between your gut bugs, your belly brain, and your head brain — all three shape your mood."
+  },
+  {
+    "id": "biology:microglial-cells",
+    "type": "standard",
+    "concept": "Microglial Cells",
+    "domain": "Biology",
+    "oneliner": "The brain's resident immune cells — they prune unnecessary synapses, fight infection, and clean up debris.",
+    "whyItMatters": "They sculpt neural circuits during development and may be involved in Alzheimer's, depression, and neurodegeneration.",
+    "analogy": "The brain's janitor and security guard rolled into one — cleaning up mess and fighting off invaders."
+  },
+  {
+    "id": "biology:micronutrient-deficiency",
+    "type": "standard",
+    "concept": "Micronutrient Deficiency",
+    "domain": "Biology",
+    "oneliner": "Insufficient intake of essential vitamins and minerals — affecting ~2 billion people globally. 'Hidden hunger.'",
+    "whyItMatters": "Iron deficiency alone affects 30% of the world's population. Vitamin D deficiency is epidemic in northern latitudes.",
+    "analogy": "The hunger you can't see — bellies full but bodies starving for the trace elements they need."
+  },
+  {
+    "id": "biology:micronutrients",
+    "type": "standard",
+    "concept": "Micronutrients",
+    "domain": "Biology",
+    "oneliner": "Vitamins and minerals needed in small amounts but essential for biological function — iron, zinc, vitamin D, B12, etc.",
+    "whyItMatters": "Deficiencies cause specific diseases: scurvy (C), rickets (D), anemia (iron). Billions worldwide are deficient.",
+    "analogy": "The trace ingredients your body can't function without — needed in tiny amounts but absolutely critical."
+  },
+  {
+    "id": "biology:microrna",
+    "type": "standard",
+    "concept": "MicroRNA",
+    "domain": "Biology",
+    "oneliner": "Tiny RNA molecules that regulate gene expression by silencing specific genes — discovered in the 1990s.",
+    "whyItMatters": "They fine-tune protein production across the body and are being explored as diagnostics and therapeutics for cancer.",
+    "analogy": "Volume knobs on individual genes — they don't turn genes off completely, they dial them up or down."
+  },
+  {
+    "id": "biology:mitochondria",
+    "type": "standard",
+    "concept": "Mitochondria",
+    "domain": "Biology",
+    "oneliner": "Organelles that convert nutrients into ATP energy. They have their own DNA, inherited only from your mother.",
+    "whyItMatters": "Why exercise improves energy, why aging happens. Endurance athletes have more of them.",
+    "analogy": "The power plants inside every cell — more of them = more energy capacity."
+  },
+  {
+    "id": "biology:mitosis-vs-meiosis",
+    "type": "standard",
+    "concept": "Mitosis vs Meiosis",
+    "domain": "Biology",
+    "oneliner": "Mitosis: cell division producing identical copies. Meiosis: division producing sex cells with half the DNA.",
+    "whyItMatters": "Mitosis is why cuts heal. Meiosis is why siblings aren't clones. When either goes wrong: cancer or genetic disorders.",
+    "analogy": "Mitosis = photocopying. Meiosis = shuffling two decks and dealing out half."
+  },
+  {
+    "id": "biology:mrna",
+    "type": "standard",
+    "concept": "mRNA",
+    "domain": "Biology",
+    "oneliner": "Messenger RNA — the temporary copy of a gene that carries instructions from DNA to ribosomes for protein synthesis.",
+    "whyItMatters": "The basis of Moderna and Pfizer COVID vaccines. The molecule that turned molecular biology into a household word.",
+    "analogy": "A disposable work order — copied from the master blueprint, used once to build a protein, then recycled."
+  },
+  {
+    "id": "biology:mutation",
+    "type": "standard",
+    "concept": "Mutation",
+    "domain": "Biology",
+    "oneliner": "A change in DNA sequence — can be harmful, neutral, or beneficial. The raw material for evolution.",
+    "whyItMatters": "Most mutations do nothing. Some cause disease. Rarely, one provides an advantage that natural selection favors.",
+    "analogy": "A typo in the instruction manual — usually meaningless, occasionally catastrophic, very rarely an improvement."
+  },
+  {
+    "id": "biology:myelin",
+    "type": "standard",
+    "concept": "Myelin",
+    "domain": "Biology",
+    "oneliner": "The fatty insulating sheath around nerve fibers that dramatically speeds electrical signal transmission.",
+    "whyItMatters": "Multiple sclerosis destroys myelin. Myelination isn't complete until your mid-20s — partly why teen brains are impulsive.",
+    "analogy": "Insulation on electrical wiring — without it, signals leak, slow down, and short-circuit."
+  },
+  {
+    "id": "biology:natural-selection",
+    "type": "standard",
+    "concept": "Natural Selection",
+    "domain": "Biology",
+    "oneliner": "Organisms with traits better suited to their environment survive and reproduce more, passing those traits on.",
+    "whyItMatters": "Explains antibiotic resistance, peacock tails, and human psychology. The most powerful algorithm in nature.",
+    "analogy": "A/B testing running for 4 billion years with no product manager."
+  },
+  {
+    "id": "biology:neuroplasticity",
+    "type": "standard",
+    "concept": "Neuroplasticity",
+    "domain": "Biology",
+    "oneliner": "The brain's ability to reorganize by forming new neural connections throughout life.",
+    "whyItMatters": "Why stroke victims relearn skills, why meditation changes brain structure, why habits rewire your brain.",
+    "analogy": "The brain is not hardware — it's clay that reshapes based on what you repeatedly do."
+  },
+  {
+    "id": "biology:neurotransmitter-reuptake",
+    "type": "standard",
+    "concept": "Neurotransmitter Reuptake",
+    "domain": "Biology",
+    "oneliner": "The process of recycling neurotransmitters from the synaptic cleft back into the neuron that released them.",
+    "whyItMatters": "SSRIs block serotonin reuptake, keeping more serotonin active. It's the mechanism behind most antidepressants.",
+    "analogy": "The brain's recycling bin — collecting used chemical messengers to be cleaned and reused."
+  },
+  {
+    "id": "biology:neurotransmitters",
+    "type": "standard",
+    "concept": "Neurotransmitters",
+    "domain": "Biology",
+    "oneliner": "Chemical messengers (dopamine, serotonin, GABA) that transmit signals between neurons.",
+    "whyItMatters": "They govern mood, motivation, sleep, addiction. Every psychiatric drug modifies neurotransmitter levels.",
+    "analogy": "The postal service of the brain — different chemicals carry different types of mail."
+  },
+  {
+    "id": "biology:nitric-oxide",
+    "type": "standard",
+    "concept": "Nitric Oxide",
+    "domain": "Biology",
+    "oneliner": "A signaling molecule that relaxes blood vessels, improving blood flow. Viagra works by enhancing its effects.",
+    "whyItMatters": "Exercise increases it. It improves cardiovascular function, immune response, and cognitive performance.",
+    "analogy": "The molecule that opens blood vessel highways — more of it means better flow everywhere."
+  },
+  {
+    "id": "biology:nucleus",
+    "type": "standard",
+    "concept": "Nucleus",
+    "domain": "Biology",
+    "oneliner": "The cell's command center containing DNA — surrounded by a double membrane with nuclear pores.",
+    "whyItMatters": "It's what makes a cell eukaryotic. Bacteria lack nuclei (prokaryotic). The nucleus stores and protects the genetic code.",
+    "analogy": "The cell's head office — where the master blueprints are stored and copied."
+  },
+  {
+    "id": "biology:osmosis",
+    "type": "standard",
+    "concept": "Osmosis",
+    "domain": "Biology",
+    "oneliner": "The movement of water across a semipermeable membrane from low solute concentration to high concentration.",
+    "whyItMatters": "It's why you get thirsty after eating salty food, why IV fluids must be carefully balanced, and how plant roots absorb water.",
+    "analogy": "Water flowing toward the saltier side to even things out — nature's attempt to balance concentration."
+  },
+  {
+    "id": "biology:oxidative-stress",
+    "type": "standard",
+    "concept": "Oxidative Stress",
+    "domain": "Biology",
+    "oneliner": "Imbalance between free radicals and antioxidants — damages cells, proteins, and DNA.",
+    "whyItMatters": "Linked to aging, cancer, heart disease, and neurodegeneration. Exercise produces controlled oxidative stress that strengthens defenses.",
+    "analogy": "Molecular rust — free radicals corrode your cells, and antioxidants are the rust inhibitor."
+  },
+  {
+    "id": "biology:parasympathetic-vs-sympathetic",
+    "type": "standard",
+    "concept": "Parasympathetic vs Sympathetic",
+    "domain": "Biology",
+    "oneliner": "Two branches of the autonomic nervous system: sympathetic activates fight-or-flight; parasympathetic activates rest-and-digest.",
+    "whyItMatters": "Chronic stress keeps the sympathetic system dominant, suppressing recovery. Breathwork and cold exposure activate parasympathetic.",
+    "analogy": "The gas pedal (sympathetic) and the brake pedal (parasympathetic) of your nervous system."
+  },
+  {
+    "id": "biology:pcr-polymerase-chain-reaction",
+    "type": "standard",
+    "concept": "PCR (Polymerase Chain Reaction)",
+    "domain": "Biology",
+    "oneliner": "A technique to rapidly amplify tiny amounts of DNA into millions of copies — revolutionized molecular biology.",
+    "whyItMatters": "It's how COVID tests work, how forensic evidence is analyzed, and how ancient DNA is studied. Invented 1983, Nobel 1993.",
+    "analogy": "A molecular Xerox machine — takes a single DNA fragment and makes billions of copies in hours."
+  },
+  {
+    "id": "biology:peristalsis",
+    "type": "standard",
+    "concept": "Peristalsis",
+    "domain": "Biology",
+    "oneliner": "Rhythmic muscle contractions pushing food through the digestive tract — involuntary wave-like movement.",
+    "whyItMatters": "It's why you can eat upside down. The digestive system has its own nervous system (enteric) controlling it.",
+    "analogy": "A conveyor belt of muscle squeezes — moving food through your system like toothpaste through a tube."
+  },
+  {
+    "id": "biology:permaculture-principles",
+    "type": "standard",
+    "concept": "Permaculture Principles",
+    "domain": "Biology",
+    "oneliner": "Designing agricultural systems that mimic natural ecosystems — polyculture, closed nutrient loops, and working with nature rather than against it.",
+    "whyItMatters": "Mollison's insight: monoculture fights nature (requiring pesticides, fertilizers, irrigation); permaculture cooperates with it (using companion planting, natural pest control, water harvesting). Design with the system, not against it.",
+    "analogy": "Like building a team where each person's strengths complement others' weaknesses — the system is self-supporting rather than requiring constant management.",
+    "level": "foundational"
+  },
+  {
+    "id": "biology:phenotype-vs-genotype",
+    "type": "standard",
+    "concept": "Phenotype vs Genotype",
+    "domain": "Biology",
+    "oneliner": "Genotype: your genetic code. Phenotype: the observable traits that result from genes + environment.",
+    "whyItMatters": "Identical twins have the same genotype but can have different phenotypes due to environment and epigenetics.",
+    "analogy": "Genotype is the recipe. Phenotype is the dish — same recipe, different kitchens, slightly different results."
+  },
+  {
+    "id": "biology:phenotypic-plasticity",
+    "type": "standard",
+    "concept": "Phenotypic Plasticity",
+    "domain": "Biology",
+    "oneliner": "The ability of one genotype to produce different phenotypes depending on the environment — the same genes, different outcomes.",
+    "whyItMatters": "A single caterpillar species can become green or brown depending on season. Same DNA, different expression. In organizations: the same person performs differently in different cultures. Environment is the variable.",
+    "analogy": "Like a chameleon changing color — the genetic blueprint is fixed, but the expression adapts to context.",
+    "level": "intermediate"
+  },
+  {
+    "id": "biology:photosynthesis",
+    "type": "standard",
+    "concept": "Photosynthesis",
+    "domain": "Biology",
+    "oneliner": "Plants converting sunlight, water, and CO2 into glucose and oxygen — the foundation of almost all food chains.",
+    "whyItMatters": "Why life on Earth exists. Solar panels are humanity's attempt to replicate what leaves do naturally.",
+    "analogy": "A solar-powered factory that turns air and water into food, with oxygen as exhaust."
+  },
+  {
+    "id": "biology:placebo-effect",
+    "type": "standard",
+    "concept": "Placebo Effect",
+    "domain": "Biology",
+    "oneliner": "Measurable physiological improvement from a treatment with no active ingredient — powered by belief.",
+    "whyItMatters": "Not fake — placebos trigger real neurochemical changes. Reveals how deeply mind and body connect.",
+    "analogy": "Your brain's ability to write its own prescription — belief as medicine."
+  },
+  {
+    "id": "biology:prions",
+    "type": "standard",
+    "concept": "Prions",
+    "domain": "Biology",
+    "oneliner": "Misfolded proteins that cause other proteins to misfold — infectious agents with no DNA or RNA. Cause mad cow disease.",
+    "whyItMatters": "They're nearly indestructible — survive cooking, radiation, and sterilization. No cure exists for prion diseases.",
+    "analogy": "A single domino that, once it falls wrong, makes every domino it touches fall the same wrong way — self-propagating error."
+  },
+  {
+    "id": "biology:proprioception",
+    "type": "standard",
+    "concept": "Proprioception",
+    "domain": "Biology",
+    "oneliner": "Your sense of body position and movement without looking — the 'sixth sense' allowing coordinated movement.",
+    "whyItMatters": "It's why you can touch your nose with your eyes closed. Impaired by alcohol, which is why cops test it.",
+    "analogy": "Your body's internal GPS — constantly tracking where every limb is in space."
+  },
+  {
+    "id": "biology:protein-synthesis",
+    "type": "standard",
+    "concept": "Protein Synthesis",
+    "domain": "Biology",
+    "oneliner": "The process of cells building proteins from amino acids, guided by instructions encoded in DNA via RNA.",
+    "whyItMatters": "Proteins do almost everything in your body — enzymes, antibodies, structural support, signaling. This is how they're made.",
+    "analogy": "The assembly line: DNA is the blueprint, RNA is the foreman, ribosomes are the workers, amino acids are the parts."
+  },
+  {
+    "id": "biology:proteomics",
+    "type": "standard",
+    "concept": "Proteomics",
+    "domain": "Biology",
+    "oneliner": "The large-scale study of proteins — their structures, functions, and interactions. The natural successor to genomics.",
+    "whyItMatters": "DNA tells you the recipe; proteomics tells you what's actually being cooked. More complex and arguably more informative than genomics.",
+    "analogy": "If genomics reads the cookbook, proteomics photographs every dish actually being served in the kitchen."
+  },
+  {
+    "id": "biology:r-k-selection-theory",
+    "type": "standard",
+    "concept": "r/K Selection Theory",
+    "domain": "Biology",
+    "oneliner": "Species face a trade-off: produce many offspring with minimal investment (r-strategy: rabbits) or few offspring with heavy investment (K-strategy: elephants).",
+    "whyItMatters": "Applies to business strategy: launch many cheap experiments (r-strategy startups) vs. invest deeply in fewer bets (K-strategy enterprise). Neither is superior — the environment determines which wins.",
+    "analogy": "Like scattering 1000 seeds vs. planting 10 seedlings in rich soil — the first strategy wins in unpredictable environments, the second in stable ones.",
+    "level": "intermediate"
+  },
+  {
+    "id": "biology:rem-sleep",
+    "type": "standard",
+    "concept": "REM Sleep",
+    "domain": "Biology",
+    "oneliner": "Rapid Eye Movement sleep — the phase where most dreaming occurs, critical for memory consolidation and emotional processing.",
+    "whyItMatters": "Cutting REM sleep impairs learning, increases anxiety, and may contribute to neurodegeneration. It cycles ~every 90 minutes.",
+    "analogy": "Your brain's nightly maintenance mode — defragmenting memories, processing emotions, running mental simulations."
+  },
+  {
+    "id": "biology:ribosomes",
+    "type": "standard",
+    "concept": "Ribosomes",
+    "domain": "Biology",
+    "oneliner": "Cellular machines that read mRNA and assemble amino acids into proteins — the protein factories of the cell.",
+    "whyItMatters": "Every cell has millions of them. Without ribosomes, DNA is just an unread book.",
+    "analogy": "The 3D printers of biology — reading molecular blueprints and building proteins atom by atom."
+  },
+  {
+    "id": "biology:rna",
+    "type": "standard",
+    "concept": "RNA",
+    "domain": "Biology",
+    "oneliner": "The messenger molecule that reads DNA instructions and carries them to protein-building machinery.",
+    "whyItMatters": "mRNA vaccines work by sending synthetic messages to your cells. RNA is the critical intermediary between code and function.",
+    "analogy": "A work order copied from the blueprint and carried to the factory floor."
+  },
+  {
+    "id": "biology:sarcopenia",
+    "type": "standard",
+    "concept": "Sarcopenia",
+    "domain": "Biology",
+    "oneliner": "Age-related loss of muscle mass and strength — begins around 30 and accelerates after 60.",
+    "whyItMatters": "It's the primary driver of frailty in older adults. Resistance training is the most effective countermeasure.",
+    "analogy": "Your muscles slowly evaporating with age — unless you actively resist, which is why strength training is non-negotiable."
+  },
+  {
+    "id": "biology:senescence",
+    "type": "standard",
+    "concept": "Senescence",
+    "domain": "Biology",
+    "oneliner": "When cells permanently stop dividing but don't die — they accumulate with age and secrete inflammatory molecules.",
+    "whyItMatters": "Senescent cells contribute to aging, chronic inflammation, and age-related diseases. Senolytics aim to clear them.",
+    "analogy": "Zombie cells — they're not dead, they're not working, and they're poisoning the neighborhood."
+  },
+  {
+    "id": "biology:serotonin",
+    "type": "standard",
+    "concept": "Serotonin",
+    "domain": "Biology",
+    "oneliner": "A neurotransmitter regulating mood, sleep, and digestion — most of it is in your gut, not your brain.",
+    "whyItMatters": "Low serotonin linked to depression. SSRIs work by keeping more serotonin available.",
+    "analogy": "The mood thermostat — keeps emotional temperature stable."
+  },
+  {
+    "id": "biology:stem-cells",
+    "type": "standard",
+    "concept": "Stem Cells",
+    "domain": "Biology",
+    "oneliner": "Undifferentiated cells that can develop into any specialized cell type — the body's raw material.",
+    "whyItMatters": "Why a fertilized egg becomes a full human, and why regenerative medicine is promising.",
+    "analogy": "Blank Lego pieces that can become any part of any structure."
+  },
+  {
+    "id": "biology:synaptic-pruning",
+    "type": "standard",
+    "concept": "Synaptic Pruning",
+    "domain": "Biology",
+    "oneliner": "The brain eliminating weak or unused neural connections — peaks in adolescence, shaping the adult brain.",
+    "whyItMatters": "'Use it or lose it' is literal. The teenage brain is under construction, which explains much of adolescent behavior.",
+    "analogy": "Your brain's ruthless editor — cutting connections that aren't earning their keep to make the remaining ones faster."
+  },
+  {
+    "id": "biology:telomerase",
+    "type": "standard",
+    "concept": "Telomerase",
+    "domain": "Biology",
+    "oneliner": "The enzyme that rebuilds telomeres — active in stem cells and cancer cells but not most adult cells.",
+    "whyItMatters": "If we could activate it safely, we might slow aging. Cancer hijacks it for immortality. It's the key to both longevity and malignancy.",
+    "analogy": "The molecular fountain of youth — cancer figured out how to use it, and researchers are trying to copy the trick safely."
+  },
+  {
+    "id": "biology:telomeres",
+    "type": "standard",
+    "concept": "Telomeres",
+    "domain": "Biology",
+    "oneliner": "Protective caps on chromosome ends that shorten with each cell division — a molecular aging clock.",
+    "whyItMatters": "When too short, cells stop dividing or die. Stress and poor sleep accelerate shortening.",
+    "analogy": "The plastic tips on shoelaces — once they wear off, everything unravels."
+  },
+  {
+    "id": "biology:tendon-vs-ligament",
+    "type": "standard",
+    "concept": "Tendon vs Ligament",
+    "domain": "Biology",
+    "oneliner": "Tendons connect muscle to bone (enabling movement). Ligaments connect bone to bone (stabilizing joints).",
+    "whyItMatters": "ACL tears are ligament injuries (stability). Achilles tears are tendon injuries (movement). Different structure, different healing.",
+    "analogy": "Tendons are the ropes that let muscles pull bones. Ligaments are the straps that keep bones from pulling apart."
+  },
+  {
+    "id": "biology:the-antibiotic-dilemma",
+    "type": "scenario",
+    "concept": "The Antibiotic Dilemma",
+    "domain": "Biology",
+    "scenario": "A doctor prescribes antibiotics for a mild infection that would likely resolve on its own. The patient feels better and credits the antibiotic. Meanwhile, the unnecessary use contributes to antibiotic resistance that threatens future patients globally.",
+    "relevantConcepts": [
+      "Tragedy of the Commons",
+      "Externalities",
+      "Natural Selection",
+      "Short-termism"
+    ],
+    "domains": [
+      "Biology",
+      "Economics",
+      "Systems Thinking"
+    ],
+    "explanation": "Individual rationality (patient wants fast recovery, doctor avoids liability) creates collective irrationality (antibiotic resistance). Natural selection among bacteria rewards resistance. Each prescription is a tiny externality that compounds globally. This is the tragedy of the commons applied to microbiology.",
+    "level": "foundational"
+  },
+  {
+    "id": "biology:the-wellness-industrial-complex",
+    "type": "scenario",
+    "concept": "The Wellness Industrial Complex",
+    "domain": "Biology",
+    "scenario": "A wellness company markets supplements with 'clinically studied ingredients.' Each ingredient has one small positive study. But the combination has never been tested, the dosages differ from the studies, and the positive studies were all funded by ingredient suppliers.",
+    "relevantConcepts": [
+      "Placebo/Nocebo Effect",
+      "Publication Bias",
+      "Confirmation Bias",
+      "Appeal to Authority"
+    ],
+    "domains": [
+      "Biology",
+      "Psychology",
+      "Philosophy"
+    ],
+    "explanation": "Each claim is technically defensible but the composite picture is misleading. Publication bias ensures only positive studies exist. Supplier funding creates conflict of interest. 'Clinically studied' ≠ 'clinically proven.' The consumer applies the halo effect across the whole product from fragments of evidence about individual parts.",
+    "level": "intermediate"
+  },
+  {
+    "id": "biology:thermoregulation",
+    "type": "standard",
+    "concept": "Thermoregulation",
+    "domain": "Biology",
+    "oneliner": "The body's mechanisms for maintaining core temperature — sweating, shivering, vasodilation, vasoconstriction.",
+    "whyItMatters": "Humans can survive extreme environments because of thermoregulation. Heat stroke and hypothermia are its failure modes.",
+    "analogy": "Your body's HVAC system — heating, cooling, and ventilation to maintain 37°C regardless of outside conditions."
+  },
+  {
+    "id": "biology:trophic-cascade",
+    "type": "standard",
+    "concept": "Trophic Cascade",
+    "domain": "Biology",
+    "oneliner": "Removing or adding a top predator triggers cascading changes through the entire food web — wolves change rivers.",
+    "whyItMatters": "Reintroducing wolves to Yellowstone reduced elk overgrazing, which restored vegetation, which stabilized riverbanks, which changed the physical geography. Small changes at the top cascade through entire systems.",
+    "analogy": "Like removing the CEO and watching the entire org structure reshape — the effects cascade down every level and into unexpected domains.",
+    "level": "intermediate"
+  },
+  {
+    "id": "biology:type-1-vs-type-2-diabetes",
+    "type": "standard",
+    "concept": "Type 1 vs Type 2 Diabetes",
+    "domain": "Biology",
+    "oneliner": "Type 1: autoimmune destruction of insulin-producing cells. Type 2: cells become resistant to insulin.",
+    "whyItMatters": "Type 1 is genetic/autoimmune (~10%). Type 2 is largely lifestyle-driven (~90%) and increasingly epidemic.",
+    "analogy": "Type 1: the factory is destroyed. Type 2: the factory works but nobody's listening to it."
+  },
+  {
+    "id": "biology:vagus-nerve",
+    "type": "standard",
+    "concept": "Vagus Nerve",
+    "domain": "Biology",
+    "oneliner": "The longest cranial nerve — connecting the brain to the gut, heart, lungs, and other organs. Key to the parasympathetic system.",
+    "whyItMatters": "Stimulating it reduces inflammation, anxiety, and heart rate. Cold showers, deep breathing, and singing activate it.",
+    "analogy": "The body's information superhighway — connecting brain to body and enabling the rest-and-digest response."
+  },
+  {
+    "id": "biology:virus-vs-bacterium",
+    "type": "standard",
+    "concept": "Virus vs Bacterium",
+    "domain": "Biology",
+    "oneliner": "Bacteria are living single-celled organisms. Viruses are non-living genetic code that hijack cells to replicate.",
+    "whyItMatters": "Antibiotics kill bacteria but do nothing to viruses. This is why your doctor won't prescribe antibiotics for a cold.",
+    "analogy": "Bacteria are tiny squatters. Viruses are instruction manuals that trick your factories into copying them."
+  },
+  {
+    "id": "biology:vo2-max",
+    "type": "standard",
+    "concept": "VO2 Max",
+    "domain": "Biology",
+    "oneliner": "The maximum rate your body can consume oxygen during exercise — gold standard of cardiovascular fitness.",
+    "whyItMatters": "One of the strongest predictors of all-cause mortality. Even small improvements significantly reduce death risk.",
+    "analogy": "Your engine's horsepower — how much work your body can sustain at peak output."
+  },
+  {
+    "id": "biology:zoonosis",
+    "type": "standard",
+    "concept": "Zoonosis",
+    "domain": "Biology",
+    "oneliner": "Diseases that jump from animals to humans — COVID, Ebola, rabies, HIV all originated in animals.",
+    "whyItMatters": "75% of emerging infectious diseases are zoonotic. Deforestation and wildlife trade increase spillover risk.",
+    "analogy": "Viruses crossing the species barrier — like a computer virus jumping from Mac to PC when the systems connect."
+  }
+]

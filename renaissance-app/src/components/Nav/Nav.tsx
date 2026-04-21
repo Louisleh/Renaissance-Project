@@ -1,9 +1,11 @@
-import { useState, useCallback, useEffect, useRef } from 'react';
+import { useState, useCallback, useEffect, useRef, useMemo } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { useSubscription } from '../../contexts/SubscriptionContext';
 import { trackCtaClick } from '../../lib/analytics';
 import { UserMenu } from '../Auth/UserMenu';
+import { loadCardStates } from '../../lib/srs/card-state-store';
+import { countDueCards } from '../../lib/srs/scheduler';
 import './Nav.css';
 
 interface NavProps {
@@ -21,12 +23,15 @@ export function Nav({ onGetStarted, onOpenAuth }: NavProps) {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const lastFocusRef = useRef<HTMLElement | null>(null);
 
+  const dueCount = useMemo(() => countDueCards(loadCardStates()), [location.pathname]);
+
   const navItems = [
-    { label: 'Assessment', section: 'assessment', hash: '#assessment', to: '/#assessment' },
-    { label: 'Archetypes', section: 'archetypes', hash: '#archetypes', to: '/#archetypes' },
-    { label: 'Development', section: 'development', hash: '#development', to: '/#development' },
-    { label: 'About', section: 'about', hash: '#about', to: '/#about' },
-    { label: 'Pricing', section: 'pricing', hash: null, to: '/pricing' },
+    { label: 'Today', section: 'study', hash: null, to: '/study', badge: dueCount > 0 ? dueCount : null },
+    { label: 'Journey', section: 'journey', hash: null, to: '/journey', badge: null },
+    { label: 'Assessment', section: 'assessment', hash: '#assessment', to: '/#assessment', badge: null },
+    { label: 'Archetypes', section: 'archetypes', hash: '#archetypes', to: '/#archetypes', badge: null },
+    { label: 'About', section: 'about', hash: '#about', to: '/#about', badge: null },
+    { label: 'Pricing', section: 'pricing', hash: null, to: '/pricing', badge: null },
   ] as const;
 
   const closeMobile = useCallback(() => {
@@ -54,6 +59,16 @@ export function Nav({ onGetStarted, onOpenAuth }: NavProps) {
   useEffect(() => {
     if (location.pathname === '/pricing') {
       setActiveSection('pricing');
+      return;
+    }
+
+    if (location.pathname === '/study') {
+      setActiveSection('study');
+      return;
+    }
+
+    if (location.pathname === '/journey') {
+      setActiveSection('journey');
       return;
     }
 
@@ -173,6 +188,9 @@ export function Nav({ onGetStarted, onOpenAuth }: NavProps) {
                 }}
               >
                 {item.label}
+                {item.badge != null && (
+                  <span className="nav-link-badge" aria-label={`${item.badge} due`}>{item.badge}</span>
+                )}
               </a>
             ))}
           </div>
@@ -258,6 +276,9 @@ export function Nav({ onGetStarted, onOpenAuth }: NavProps) {
               }}
             >
               {item.label}
+              {item.badge != null && (
+                <span className="nav-link-badge" aria-label={`${item.badge} due`}>{item.badge}</span>
+              )}
             </a>
           ))}
           {isAuthenticated ? (

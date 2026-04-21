@@ -71,4 +71,9 @@
   /* ── Layout ── */
   --container: min(1180px, calc(100vw - 2rem));
   --nav-height: 78px;
+
+  /* ── Progression Rings ── */
+  --ring-inactive: rgba(212, 175, 55, 0.12);
+  --ring-active: rgba(212, 175, 55, 0.45);
+  --ring-mastered: #d4af37;
 }

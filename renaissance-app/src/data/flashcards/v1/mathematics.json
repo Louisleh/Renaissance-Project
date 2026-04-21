@@ -1,0 +1,870 @@
+[
+  {
+    "id": "mathematics:amdahl-s-law",
+    "type": "standard",
+    "concept": "Amdahl's Law",
+    "domain": "Mathematics",
+    "oneliner": "The maximum speedup from parallelization is limited by the sequential portion of the task.",
+    "whyItMatters": "If 10% of a task can't be parallelized, throwing 1000 processors at it only gives a 10x speedup, not 1000x.",
+    "analogy": "You can add more cooks, but someone still has to decide the menu — the serial bottleneck limits parallel gains."
+  },
+  {
+    "id": "mathematics:arrow-s-impossibility-theorem",
+    "type": "standard",
+    "concept": "Arrow's Impossibility Theorem",
+    "domain": "Mathematics",
+    "oneliner": "No voting system with three or more choices can simultaneously satisfy all fairness criteria — perfect democracy is mathematically impossible.",
+    "whyItMatters": "Every election system has trade-offs: ranked choice, approval voting, plurality — none is universally fair. Understanding this prevents naive faith in procedural solutions.",
+    "analogy": "Like trying to rank pizza toppings for a group — there's no method that always respects everyone's preferences simultaneously.",
+    "level": "advanced"
+  },
+  {
+    "id": "mathematics:axiom",
+    "type": "standard",
+    "concept": "Axiom",
+    "domain": "Mathematics",
+    "oneliner": "A statement accepted as true without proof — the starting assumptions from which all theorems are derived.",
+    "whyItMatters": "Euclid's axioms built geometry. Changing one axiom (parallel postulate) created entirely new geometries. Axioms are choices, not truths.",
+    "analogy": "The agreed-upon rules before the game starts — everything else follows from these, but these themselves are assumed, not proven."
+  },
+  {
+    "id": "mathematics:bayes-rule-applications",
+    "type": "standard",
+    "concept": "Bayes' Rule Applications",
+    "domain": "Mathematics",
+    "oneliner": "Updating the probability of a hypothesis as you gather evidence — the mathematical formula for changing your mind correctly.",
+    "whyItMatters": "Medical diagnosis, spam filtering, and criminal forensics all depend on Bayes' rule. Without it, a 95%-accurate test for a rare disease will mostly produce false positives. Base rates matter.",
+    "analogy": "Like adjusting your GPS prediction as you get closer to the destination — each new data point makes the estimate more precise.",
+    "level": "intermediate"
+  },
+  {
+    "id": "mathematics:bayesian-thinking",
+    "type": "standard",
+    "concept": "Bayesian Thinking",
+    "domain": "Mathematics",
+    "oneliner": "Updating beliefs proportionally to evidence strength, starting from a prior probability.",
+    "whyItMatters": "How rational people should change their minds. Strong prior + weak evidence = small update.",
+    "analogy": "Changing your mind the right amount — not too much (overreaction) and not too little (stubbornness)."
+  },
+  {
+    "id": "mathematics:bayesian-vs-frequentist-statistics",
+    "type": "standard",
+    "concept": "Bayesian vs Frequentist Statistics",
+    "domain": "Mathematics",
+    "oneliner": "Frequentists define probability as long-run frequency; Bayesians define it as degree of belief updated by evidence.",
+    "whyItMatters": "The difference matters: 'Is this drug effective?' (frequentist: significance test) vs. 'How much should I update my belief?' (Bayesian: posterior probability).",
+    "analogy": "Like two weather forecasters — one says 'it rained 30% of similar days' while the other says 'given today's clouds, I'm 30% confident it'll rain.'",
+    "level": "intermediate"
+  },
+  {
+    "id": "mathematics:benford-s-law",
+    "type": "standard",
+    "concept": "Benford's Law",
+    "domain": "Mathematics",
+    "oneliner": "In many real-world datasets, the leading digit is more likely to be 1 (~30%) than 9 (~5%).",
+    "whyItMatters": "It's used to detect fraud — fabricated financial data doesn't follow Benford's Law. Tax authorities use it.",
+    "analogy": "Nature's favorite digit is 1 — a strange statistical pattern that catches liars."
+  },
+  {
+    "id": "mathematics:benford-s-law-applications",
+    "type": "standard",
+    "concept": "Benford's Law Applications",
+    "domain": "Mathematics",
+    "oneliner": "In naturally occurring datasets, the digit 1 appears as the leading digit ~30% of the time, with higher digits progressively rarer.",
+    "whyItMatters": "Used to detect fraud in financial statements, election results, and scientific data. Fabricated numbers rarely follow this distribution because humans expect uniformity.",
+    "analogy": "Like a fingerprint on natural data — real numbers follow this pattern, forged ones don't.",
+    "level": "intermediate"
+  },
+  {
+    "id": "mathematics:binomial-distribution",
+    "type": "standard",
+    "concept": "Binomial Distribution",
+    "domain": "Mathematics",
+    "oneliner": "The probability distribution of the number of successes in a fixed number of independent yes/no trials.",
+    "whyItMatters": "Flipping coins, quality control sampling, election polling — anything counting successes in repeated independent trials.",
+    "analogy": "The math of 'how many heads in 10 flips?' — simple question, elegant answer, universal applicability."
+  },
+  {
+    "id": "mathematics:birthday-paradox",
+    "type": "standard",
+    "concept": "Birthday Paradox",
+    "domain": "Mathematics",
+    "oneliner": "In a group of just 23 people, there's a 50% chance two share a birthday — humans drastically underestimate coincidence probabilities.",
+    "whyItMatters": "Demonstrates why hash collisions happen sooner than expected, why duplicate bugs appear in codebases, and why 'impossible' coincidences are actually likely.",
+    "analogy": "Like shuffling two small decks of cards — a match feels surprising but is statistically inevitable.",
+    "level": "foundational"
+  },
+  {
+    "id": "mathematics:boolean-logic",
+    "type": "standard",
+    "concept": "Boolean Logic",
+    "domain": "Mathematics",
+    "oneliner": "A system where values are only TRUE or FALSE. AND, OR, NOT operations. George Boole, 1847.",
+    "whyItMatters": "It's the foundation of digital computing. Every computer circuit implements Boolean logic at the hardware level.",
+    "analogy": "The binary language of computers — every calculation, no matter how complex, reduces to true/false decisions."
+  },
+  {
+    "id": "mathematics:category-theory-basics",
+    "type": "standard",
+    "concept": "Category Theory Basics",
+    "domain": "Mathematics",
+    "oneliner": "The mathematics of structure-preserving maps — studying relationships between objects rather than the objects themselves.",
+    "whyItMatters": "Called 'the mathematics of mathematics.' Category theory reveals when two apparently different problems have the same structure, enabling solutions to transfer between domains.",
+    "analogy": "Like a universal translator that works not by knowing every language, but by understanding the grammar that all languages share.",
+    "level": "advanced"
+  },
+  {
+    "id": "mathematics:cellular-automata",
+    "type": "standard",
+    "concept": "Cellular Automata",
+    "domain": "Mathematics",
+    "oneliner": "Simple local rules applied to a grid produce complex global behavior — complexity emerges from simplicity without central control.",
+    "whyItMatters": "Conway's Game of Life demonstrates that rich, unpredictable behavior doesn't require rich rules. Models traffic flow, urban growth, and biological pattern formation.",
+    "analogy": "Like a marching band where each member only watches their neighbors — no conductor, yet complex patterns form.",
+    "level": "intermediate"
+  },
+  {
+    "id": "mathematics:central-limit-theorem",
+    "type": "standard",
+    "concept": "Central Limit Theorem",
+    "domain": "Mathematics",
+    "oneliner": "The mean of many random samples will be normally distributed, regardless of the population's original distribution.",
+    "whyItMatters": "It's why polling works, why averages are useful, and why the bell curve appears everywhere.",
+    "analogy": "No matter how weird the original data, averages from large samples always form a nice bell curve."
+  },
+  {
+    "id": "mathematics:combinatorics",
+    "type": "standard",
+    "concept": "Combinatorics",
+    "domain": "Mathematics",
+    "oneliner": "The mathematics of counting, arranging, and combining objects — how many ways can things be organized?",
+    "whyItMatters": "It underpins cryptography, probability, and algorithm design. How many passwords are possible? Combinatorics answers that.",
+    "analogy": "The math of possibilities — how many different ways can you arrange a deck of cards? More than atoms in the universe."
+  },
+  {
+    "id": "mathematics:compound-effect",
+    "type": "standard",
+    "concept": "Compound Effect",
+    "domain": "Mathematics",
+    "oneliner": "Small consistent actions accumulating into massive results over time — the mathematical basis of habit formation.",
+    "whyItMatters": "1% better daily = 37x better annually. 1% worse daily = nearly zero. Tiny margins, enormous outcomes.",
+    "analogy": "The math of marginal improvement — imperceptible daily gains becoming dramatic annual transformations."
+  },
+  {
+    "id": "mathematics:compound-interest",
+    "type": "standard",
+    "concept": "Compound Interest",
+    "domain": "Mathematics",
+    "oneliner": "Interest on principal AND accumulated interest — exponential growth over time.",
+    "whyItMatters": "Why starting to invest early matters more than investing more later. The most powerful force in finance.",
+    "analogy": "A snowball rolling downhill — grows faster the bigger it gets, and time is the hill."
+  },
+  {
+    "id": "mathematics:computational-irreducibility",
+    "type": "standard",
+    "concept": "Computational Irreducibility",
+    "domain": "Mathematics",
+    "oneliner": "Some systems can't be predicted without running the full simulation — there's no shortcut to knowing what happens next.",
+    "whyItMatters": "Wolfram's insight from cellular automata: some simple rules produce behavior that can only be discovered by running them step by step. No equation summarizes the outcome. Prediction requires simulation.",
+    "analogy": "Like a game of chess where the only way to know who wins is to play every move — no formula can skip to the answer.",
+    "level": "advanced"
+  },
+  {
+    "id": "mathematics:confidence-interval",
+    "type": "standard",
+    "concept": "Confidence Interval",
+    "domain": "Mathematics",
+    "oneliner": "A range of values likely to contain the true population parameter — typically 95% confidence.",
+    "whyItMatters": "A 95% CI of [40, 60] means: if we repeated this study 100 times, 95 of those intervals would contain the true value.",
+    "analogy": "Not 'the answer is between 40 and 60' but 'we're 95% confident the answer is between 40 and 60' — subtle but critical."
+  },
+  {
+    "id": "mathematics:convexity",
+    "type": "standard",
+    "concept": "Convexity",
+    "domain": "Mathematics",
+    "oneliner": "A function or set where any line between two points stays inside — no dips or bumps. Convex optimization always finds the global best.",
+    "whyItMatters": "Most successful ML optimization works because the problem is convex or approximately convex.",
+    "analogy": "A bowl shape — roll a marble anywhere inside and it always finds the bottom. No misleading local dips."
+  },
+  {
+    "id": "mathematics:correlation-vs-causation",
+    "type": "standard",
+    "concept": "Correlation vs Causation",
+    "domain": "Mathematics",
+    "oneliner": "Correlation means things move together. Causation means one actually causes the other. The first doesn't prove the second.",
+    "whyItMatters": "Ice cream sales and drowning correlate (both increase in summer). Ice cream doesn't cause drowning.",
+    "analogy": "Two clocks showing the same time doesn't mean one sets the other — they might share the same power source."
+  },
+  {
+    "id": "mathematics:covariance-and-correlation-coefficient",
+    "type": "standard",
+    "concept": "Covariance and Correlation Coefficient",
+    "domain": "Mathematics",
+    "oneliner": "Covariance: whether two variables move together. Correlation coefficient: standardized covariance from -1 to +1.",
+    "whyItMatters": "A correlation of +1 = perfect positive relationship. 0 = no relationship. -1 = perfect inverse. It doesn't imply causation.",
+    "analogy": "A ruler for measuring how tightly two things move together — and in which direction."
+  },
+  {
+    "id": "mathematics:curse-of-dimensionality",
+    "type": "standard",
+    "concept": "Curse of Dimensionality",
+    "domain": "Mathematics",
+    "oneliner": "As the number of dimensions grows, the volume of the space increases so fast that data becomes impossibly sparse.",
+    "whyItMatters": "Why machine learning struggles with too many features, why A/B tests fail with too many variants, and why simple models often beat complex ones.",
+    "analogy": "Like searching for a specific grain of sand on a beach that doubles in size with each new attribute you track.",
+    "level": "intermediate"
+  },
+  {
+    "id": "mathematics:curse-of-recursion",
+    "type": "standard",
+    "concept": "Curse of Recursion",
+    "domain": "Mathematics",
+    "oneliner": "Self-referential definitions can be powerful (fractals, recursion) or dangerous (infinite loops, paradoxes) — the same mechanism creates and destroys.",
+    "whyItMatters": "Understanding when self-reference is productive (recursive algorithms, compound interest) vs. destructive (circular reasoning, infinite regress) is a core thinking skill.",
+    "analogy": "Like a mirror facing a mirror — the infinite reflection can be beautiful or disorienting depending on what you're trying to see.",
+    "level": "foundational"
+  },
+  {
+    "id": "mathematics:decision-trees",
+    "type": "standard",
+    "concept": "Decision Trees",
+    "domain": "Mathematics",
+    "oneliner": "A tree-like model of decisions and their possible consequences — mapping out all paths before choosing one.",
+    "whyItMatters": "Used in machine learning, game theory, and business strategy. Making the decision tree explicit reveals options you'd miss intuitively and forces you to assign probabilities to outcomes.",
+    "analogy": "Like a choose-your-own-adventure book where you can see all endings before picking a page — the tree shows what each choice costs.",
+    "level": "foundational"
+  },
+  {
+    "id": "mathematics:differential-equations",
+    "type": "standard",
+    "concept": "Differential Equations",
+    "domain": "Mathematics",
+    "oneliner": "Equations relating a function to its rates of change — modeling anything that evolves over time.",
+    "whyItMatters": "They describe population growth, radioactive decay, disease spread, financial markets, and orbital mechanics.",
+    "analogy": "The math of change over time — whenever something is growing, decaying, or oscillating, differential equations describe it."
+  },
+  {
+    "id": "mathematics:dimensional-analysis",
+    "type": "standard",
+    "concept": "Dimensional Analysis",
+    "domain": "Mathematics",
+    "oneliner": "Checking equations by verifying that units on both sides match — a powerful error-catching technique.",
+    "whyItMatters": "If your answer is in meters per second squared and you expected meters, something went wrong. Units don't lie.",
+    "analogy": "The mathematical spell-checker — if the units don't balance, the equation is wrong, period."
+  },
+  {
+    "id": "mathematics:eigenvector",
+    "type": "standard",
+    "concept": "Eigenvector",
+    "domain": "Mathematics",
+    "oneliner": "A vector that doesn't change direction when a linear transformation is applied — it only scales.",
+    "whyItMatters": "Google's PageRank algorithm is essentially finding the dominant eigenvector of the web's link matrix.",
+    "analogy": "The direction that survives transformation — everything else rotates and shifts, but eigenvectors just stretch."
+  },
+  {
+    "id": "mathematics:entropy-information-theory",
+    "type": "standard",
+    "concept": "Entropy (Information Theory)",
+    "domain": "Mathematics",
+    "oneliner": "Shannon's measure of information content and uncertainty — the average surprise per message.",
+    "whyItMatters": "It defines data compression limits, encryption strength, and communication channel capacity.",
+    "analogy": "The average amount of surprise in a message — highly predictable = low entropy, shocking = high entropy."
+  },
+  {
+    "id": "mathematics:ergodic-theorem",
+    "type": "standard",
+    "concept": "Ergodic Theorem",
+    "domain": "Mathematics",
+    "oneliner": "For ergodic systems, the time average equals the ensemble average — one long observation tells you what many parallel observations would.",
+    "whyItMatters": "Crucial distinction: Russian roulette is non-ergodic (time average ≠ ensemble average). Many financial models wrongly assume ergodicity, confusing what's true on average with what's true for individuals.",
+    "analogy": "Like testing a restaurant by eating there 100 times vs. asking 100 people who ate there once — same answer only if the restaurant is consistent.",
+    "level": "advanced"
+  },
+  {
+    "id": "mathematics:ergodic-vs-non-ergodic",
+    "type": "standard",
+    "concept": "Ergodic vs Non-Ergodic",
+    "domain": "Mathematics",
+    "oneliner": "Ergodic: time average equals ensemble average. Non-ergodic: what happens to the average person doesn't predict what happens to one person over time.",
+    "whyItMatters": "Financial returns are non-ergodic — the average return across 1000 investors ≠ one investor's return over 1000 years. Ruin is absorbing.",
+    "analogy": "Russian roulette has a great ensemble average (5/6 survive). Terrible time average (play enough and you die). The distinction matters enormously."
+  },
+  {
+    "id": "mathematics:euler-s-formula-for-polyhedra",
+    "type": "standard",
+    "concept": "Euler's Formula for Polyhedra",
+    "domain": "Mathematics",
+    "oneliner": "Vertices minus edges plus faces equals 2 for any convex polyhedron — a relationship so fundamental it constrains all 3D shapes.",
+    "whyItMatters": "Shows that structure has invariants: no matter how complex the shape, V − E + F = 2. Finding the invariant in any system reveals its deep constraints.",
+    "analogy": "Like a budget equation — no matter how you rearrange spending, income minus expenses plus savings must balance.",
+    "level": "intermediate"
+  },
+  {
+    "id": "mathematics:expected-value",
+    "type": "standard",
+    "concept": "Expected Value",
+    "domain": "Mathematics",
+    "oneliner": "The probability-weighted average of all possible outcomes. The long-run average result of a repeated decision.",
+    "whyItMatters": "It's how to evaluate bets, investments, and any decision under uncertainty. Positive expected value = take the bet.",
+    "analogy": "If you played this game a million times, what would your average result be?"
+  },
+  {
+    "id": "mathematics:exponential-growth",
+    "type": "standard",
+    "concept": "Exponential Growth",
+    "domain": "Mathematics",
+    "oneliner": "Growth rate proportional to current size — doubling times remain constant as absolute numbers explode.",
+    "whyItMatters": "Why pandemics spread fast early, why compound interest is powerful, why humans underestimate exponential trends.",
+    "analogy": "The lily pad riddle: half-covered on day 29, fully covered on day 30. Most action happens at the end."
+  },
+  {
+    "id": "mathematics:fermi-estimation",
+    "type": "standard",
+    "concept": "Fermi Estimation",
+    "domain": "Mathematics",
+    "oneliner": "Making rough calculations with limited data by breaking problems into smaller, estimatable components.",
+    "whyItMatters": "'How many piano tuners are in Chicago?' Start with population, estimate piano ownership, tuning frequency, tuner capacity.",
+    "analogy": "Napkin math that gets you within an order of magnitude — close enough to make decisions, fast enough to be useful."
+  },
+  {
+    "id": "mathematics:fibonacci-sequence",
+    "type": "standard",
+    "concept": "Fibonacci Sequence",
+    "domain": "Mathematics",
+    "oneliner": "1, 1, 2, 3, 5, 8, 13, 21... each number is the sum of the two before it. The ratio converges to the golden ratio.",
+    "whyItMatters": "Appears in sunflower spirals, pinecone patterns, and tree branching. Nature's growth algorithm.",
+    "analogy": "The universe's favorite counting pattern — add the last two numbers to get the next one, forever."
+  },
+  {
+    "id": "mathematics:fixed-point-theorem",
+    "type": "standard",
+    "concept": "Fixed-Point Theorem",
+    "domain": "Mathematics",
+    "oneliner": "Under certain conditions, every continuous function has a point that maps to itself — some things are guaranteed to stay put.",
+    "whyItMatters": "Brouwer's theorem proves equilibria must exist in economics, guarantees solutions to equations, and shows that stirring a cup of coffee always leaves one molecule unmoved.",
+    "analogy": "Like crumpling a map and placing it on the ground — at least one point on the map sits directly above its real location.",
+    "level": "advanced"
+  },
+  {
+    "id": "mathematics:fourier-transform",
+    "type": "standard",
+    "concept": "Fourier Transform",
+    "domain": "Mathematics",
+    "oneliner": "Decomposing any signal into its constituent frequencies — the mathematical equivalent of separating white light into a rainbow.",
+    "whyItMatters": "It's used in audio processing, image compression (JPEG), medical imaging, and telecommunications.",
+    "analogy": "A prism for any signal — breaking it into its frequency components so you can analyze each one separately."
+  },
+  {
+    "id": "mathematics:fractals",
+    "type": "standard",
+    "concept": "Fractals",
+    "domain": "Mathematics",
+    "oneliner": "Geometric shapes that are self-similar at every scale — coastlines, broccoli, blood vessels, snowflakes.",
+    "whyItMatters": "Mandelbrot showed that nature's complexity follows fractal geometry, not Euclidean. Zoom in and you see the same pattern.",
+    "analogy": "Zoom into a coastline and it looks the same at every scale — nature's signature geometry of infinite complexity."
+  },
+  {
+    "id": "mathematics:game-theory",
+    "type": "standard",
+    "concept": "Game Theory",
+    "domain": "Mathematics",
+    "oneliner": "Mathematical study of strategic decisions where outcomes depend on others' choices.",
+    "whyItMatters": "Explains arms races, pricing competition, evolutionary strategies, and rational cooperation.",
+    "analogy": "The math of 'I know that you know that I know' — strategy when your outcome depends on others."
+  },
+  {
+    "id": "mathematics:godel-s-incompleteness-theorems",
+    "type": "standard",
+    "concept": "Gödel's Incompleteness Theorems",
+    "domain": "Mathematics",
+    "oneliner": "Any consistent mathematical system complex enough to include arithmetic contains true statements it cannot prove.",
+    "whyItMatters": "It proved that mathematics has inherent limits — there will always be truths we can state but never prove.",
+    "analogy": "Math's existential crisis — discovering that even perfect logic has blind spots it can never illuminate."
+  },
+  {
+    "id": "mathematics:gradient-descent",
+    "type": "standard",
+    "concept": "Gradient Descent",
+    "domain": "Mathematics",
+    "oneliner": "An optimization algorithm that iteratively adjusts parameters by moving in the direction that reduces error most steeply.",
+    "whyItMatters": "It's how neural networks learn — the fundamental training algorithm behind all modern AI.",
+    "analogy": "Finding the bottom of a valley while blindfolded — take small steps in the steepest downhill direction."
+  },
+  {
+    "id": "mathematics:graph-theory",
+    "type": "standard",
+    "concept": "Graph Theory",
+    "domain": "Mathematics",
+    "oneliner": "The mathematical study of networks — nodes connected by edges. Underpins social networks, logistics, computer science.",
+    "whyItMatters": "It models the internet, disease spread, supply chains, and social connections. Euler invented it in 1736.",
+    "analogy": "The mathematics of connections — who knows whom, what links to what, how things flow through networks."
+  },
+  {
+    "id": "mathematics:halting-problem",
+    "type": "standard",
+    "concept": "Halting Problem",
+    "domain": "Mathematics",
+    "oneliner": "Turing proved it's impossible to build a general algorithm that determines whether any program will finish or run forever.",
+    "whyItMatters": "It established fundamental limits on what computers can do. Some problems are provably unsolvable by any algorithm.",
+    "analogy": "There's no universal 'will this program crash?' detector — some questions are mathematically impossible to answer in general."
+  },
+  {
+    "id": "mathematics:infinity",
+    "type": "standard",
+    "concept": "Infinity",
+    "domain": "Mathematics",
+    "oneliner": "Not a number but a concept — different sizes of infinity exist. Countable (integers) vs uncountable (real numbers).",
+    "whyItMatters": "Cantor proved there are more real numbers between 0 and 1 than there are integers in all of existence. Mind-bending.",
+    "analogy": "A hotel with infinite rooms can always accommodate one more guest — but some infinities are bigger than others."
+  },
+  {
+    "id": "mathematics:information-geometry",
+    "type": "standard",
+    "concept": "Information Geometry",
+    "domain": "Mathematics",
+    "oneliner": "Statistical models form a geometric space where distance between points represents how distinguishable two probability distributions are.",
+    "whyItMatters": "Unifies statistics and geometry. The Fisher information metric measures how much data you need to tell two hypotheses apart — it quantifies statistical power geometrically.",
+    "analogy": "Like placing every possible model on a map where nearby models look similar and distant ones look different — distance IS discriminability.",
+    "level": "advanced"
+  },
+  {
+    "id": "mathematics:isomorphism",
+    "type": "standard",
+    "concept": "Isomorphism",
+    "domain": "Mathematics",
+    "oneliner": "A structure-preserving mapping between two systems — proving they are fundamentally the same thing in different clothing.",
+    "whyItMatters": "When two problems are isomorphic, solving one solves both. The Renaissance thinker's skill is recognizing isomorphisms across domains — seeing that the supply chain problem IS the network flow problem.",
+    "analogy": "Like two songs in different keys that have the same melody — the notes are different but the structure is identical.",
+    "level": "advanced"
+  },
+  {
+    "id": "mathematics:kolmogorov-complexity",
+    "type": "standard",
+    "concept": "Kolmogorov Complexity",
+    "domain": "Mathematics",
+    "oneliner": "The shortest program that can produce a given output — a measure of how compressible (and thus how random) something is.",
+    "whyItMatters": "If data can be described more briefly, it has structure. If it can't be compressed, it's random. This is the mathematical foundation of Occam's Razor.",
+    "analogy": "Like asking 'what's the shortest recipe for this dish?' — a simple pattern has a short recipe, genuine randomness doesn't.",
+    "level": "advanced"
+  },
+  {
+    "id": "mathematics:law-of-large-numbers",
+    "type": "standard",
+    "concept": "Law of Large Numbers",
+    "domain": "Mathematics",
+    "oneliner": "As sample size increases, the sample mean converges to the true population mean.",
+    "whyItMatters": "It's why casinos always win long-term, why insurance works, and why anecdotes aren't data.",
+    "analogy": "Flip a coin 10 times and anything can happen. Flip it 10 million times and you'll get almost exactly 50/50."
+  },
+  {
+    "id": "mathematics:linear-algebra",
+    "type": "standard",
+    "concept": "Linear Algebra",
+    "domain": "Mathematics",
+    "oneliner": "The mathematics of vectors, matrices, and linear transformations — the backbone of machine learning and 3D graphics.",
+    "whyItMatters": "Every Google search, every AI model, every video game uses linear algebra. It's the workhorse of applied mathematics.",
+    "analogy": "The math that taught computers to see, search, and learn — matrices are the language AI thinks in."
+  },
+  {
+    "id": "mathematics:logarithmic-scale",
+    "type": "standard",
+    "concept": "Logarithmic Scale",
+    "domain": "Mathematics",
+    "oneliner": "A scale where each step represents multiplication (not addition) — useful for data spanning many orders of magnitude.",
+    "whyItMatters": "The Richter scale, decibels, and pH are all logarithmic. A magnitude 7 earthquake is 10x a magnitude 6.",
+    "analogy": "A zoom lens for data — lets you see both the ant and the elephant in the same picture."
+  },
+  {
+    "id": "mathematics:lorenz-attractor",
+    "type": "standard",
+    "concept": "Lorenz Attractor",
+    "domain": "Mathematics",
+    "oneliner": "A set of chaotic solutions to simplified weather equations that form a butterfly-shaped pattern — chaos with structure.",
+    "whyItMatters": "Lorenz's 1963 discovery launched chaos theory. The attractor shows that chaotic systems aren't random — they're bounded and patterned, just unpredictable in detail. The butterfly shape is the 'strange attractor' of weather.",
+    "analogy": "Like a ball bouncing inside a bowl — you can't predict exactly where it'll be, but you know it stays in the bowl. The bowl is the attractor.",
+    "level": "advanced"
+  },
+  {
+    "id": "mathematics:markov-chain",
+    "type": "standard",
+    "concept": "Markov Chain",
+    "domain": "Mathematics",
+    "oneliner": "A model where the next state depends only on the current state, not the history — memoryless transitions.",
+    "whyItMatters": "Used in Google's PageRank, weather prediction, speech recognition, and financial modeling.",
+    "analogy": "A system with no memory — where you go next depends only on where you are now, not how you got here."
+  },
+  {
+    "id": "mathematics:markov-property",
+    "type": "standard",
+    "concept": "Markov Property",
+    "domain": "Mathematics",
+    "oneliner": "The future state depends only on the present state, not on the sequence of events that preceded it — the past is irrelevant given the present.",
+    "whyItMatters": "Simplifies modeling of queues, weather, stock prices, and game AI. But real-world systems often violate Markov: trauma affects behavior, debt limits choices, and reputation shapes interactions.",
+    "analogy": "Like a GPS that only knows your current location, not how you got there — the next direction depends solely on where you are now.",
+    "level": "intermediate"
+  },
+  {
+    "id": "mathematics:martingale-theory",
+    "type": "standard",
+    "concept": "Martingale Theory",
+    "domain": "Mathematics",
+    "oneliner": "A martingale is a sequence where the best prediction of the next value is the current value — the mathematical formalization of a fair game.",
+    "whyItMatters": "Foundation of modern financial mathematics. If stock prices are martingales, no trading strategy has a systematic edge — the efficient market hypothesis in math.",
+    "analogy": "Like a random walk where your best guess of where you'll be next step is where you are now.",
+    "level": "advanced"
+  },
+  {
+    "id": "mathematics:mathematical-induction",
+    "type": "standard",
+    "concept": "Mathematical Induction",
+    "domain": "Mathematics",
+    "oneliner": "Proving something is true for all cases by proving the base case and then proving that if it's true for any case, it's true for the next.",
+    "whyItMatters": "The most powerful proof technique in mathematics. Shows how establishing a domino effect (base case + inductive step) can prove infinite claims from finite effort.",
+    "analogy": "Like dominoes: prove the first one falls, prove each falling domino knocks over the next, and you've proved all infinitely many fall.",
+    "level": "intermediate"
+  },
+  {
+    "id": "mathematics:monte-carlo-simulation",
+    "type": "standard",
+    "concept": "Monte Carlo Simulation",
+    "domain": "Mathematics",
+    "oneliner": "Using random sampling to estimate complex outcomes — run thousands of scenarios and observe the distribution.",
+    "whyItMatters": "Used in finance (risk modeling), physics (particle behavior), engineering (reliability), and AI training.",
+    "analogy": "Instead of solving an impossible equation, roll the dice 10,000 times and see what happens on average."
+  },
+  {
+    "id": "mathematics:monte-carlo-tree-search",
+    "type": "standard",
+    "concept": "Monte Carlo Tree Search",
+    "domain": "Mathematics",
+    "oneliner": "A search algorithm that uses random sampling to explore decision trees, focusing computation on the most promising branches.",
+    "whyItMatters": "Powered AlphaGo's victory over Lee Sedol. When the decision space is too large to search exhaustively, intelligent random sampling finds good-enough answers in bounded time.",
+    "analogy": "Like exploring a maze by randomly trying paths but remembering which directions led closer to the exit — randomness guided by memory.",
+    "level": "advanced"
+  },
+  {
+    "id": "mathematics:moving-average",
+    "type": "standard",
+    "concept": "Moving Average",
+    "domain": "Mathematics",
+    "oneliner": "The average of a data series over a rolling window — smoothing out short-term fluctuations to reveal trends.",
+    "whyItMatters": "Stock traders use 50-day and 200-day moving averages. When they cross, it signals trend changes.",
+    "analogy": "A smoothing filter for noisy data — averaging the recent past to see which direction things are heading."
+  },
+  {
+    "id": "mathematics:nash-equilibrium",
+    "type": "standard",
+    "concept": "Nash Equilibrium",
+    "domain": "Mathematics",
+    "oneliner": "When no player can improve their outcome by unilaterally changing strategy. Named after John Nash.",
+    "whyItMatters": "The foundational solution concept in game theory. Not necessarily optimal, just stable.",
+    "analogy": "Everyone is stuck — not because it's optimal, but because no one can improve alone."
+  },
+  {
+    "id": "mathematics:network-theory",
+    "type": "standard",
+    "concept": "Network Theory",
+    "domain": "Mathematics",
+    "oneliner": "The mathematical study of graphs — nodes and edges — applied to social networks, biology, infrastructure.",
+    "whyItMatters": "Six degrees of separation, epidemic modeling, internet architecture, supply chain vulnerability — all network theory.",
+    "analogy": "The math of connections — understanding any system by mapping who connects to whom and how."
+  },
+  {
+    "id": "mathematics:normal-distribution",
+    "type": "standard",
+    "concept": "Normal Distribution",
+    "domain": "Mathematics",
+    "oneliner": "The bell curve — most values cluster around the mean with predictable proportions at each standard deviation.",
+    "whyItMatters": "IQ, height, measurement errors follow this pattern. Foundation of statistical inference.",
+    "analogy": "Nature's favorite shape — most things cluster in the middle, fewer at the extremes."
+  },
+  {
+    "id": "mathematics:optimal-transport-theory",
+    "type": "standard",
+    "concept": "Optimal Transport Theory",
+    "domain": "Mathematics",
+    "oneliner": "Given a pile of sand and a hole to fill, what's the cheapest way to move the sand? — the mathematics of efficient redistribution.",
+    "whyItMatters": "Monge's 1781 problem now drives machine learning (Wasserstein distance), logistics optimization, and even image generation. Moving distributions efficiently is a universal problem.",
+    "analogy": "Like a moving company figuring out the cheapest plan to relocate furniture from old offices to new ones — the math of matching supply to demand in space.",
+    "level": "advanced"
+  },
+  {
+    "id": "mathematics:p-vs-np",
+    "type": "standard",
+    "concept": "P vs NP",
+    "domain": "Mathematics",
+    "oneliner": "The biggest unsolved problem in computer science: are problems easy to verify also easy to solve?",
+    "whyItMatters": "If P=NP, most encryption breaks overnight. A $1M Millennium Prize awaits the solution.",
+    "analogy": "Can you solve a Sudoku as fast as you can check one? If yes, the world fundamentally changes."
+  },
+  {
+    "id": "mathematics:pareto-principle",
+    "type": "standard",
+    "concept": "Pareto Principle",
+    "domain": "Mathematics",
+    "oneliner": "~80% of effects come from ~20% of causes. Not a law but a frequently observed pattern.",
+    "whyItMatters": "20% of customers generate 80% of revenue. 20% of bugs cause 80% of crashes. Focus on the vital few.",
+    "analogy": "The universe's built-in prioritization — most output from a small fraction of input."
+  },
+  {
+    "id": "mathematics:pigeonhole-principle",
+    "type": "standard",
+    "concept": "Pigeonhole Principle",
+    "domain": "Mathematics",
+    "oneliner": "If you put n+1 items into n containers, at least one container must hold more than one item.",
+    "whyItMatters": "Deceptively simple but proves powerful results: in any 13 people, at least 2 share a birth month.",
+    "analogy": "If you have 11 socks and 10 drawers, at least one drawer has two socks — obvious but mathematically profound."
+  },
+  {
+    "id": "mathematics:power-law",
+    "type": "standard",
+    "concept": "Power Law",
+    "domain": "Mathematics",
+    "oneliner": "A small number of items account for a disproportionate share — the 80/20 rule is a rough version.",
+    "whyItMatters": "Describes wealth distribution, city sizes, earthquake magnitudes, word frequencies.",
+    "analogy": "The universe's unfair distribution — a few get most of the resources, attention, and impact."
+  },
+  {
+    "id": "mathematics:prime-numbers",
+    "type": "standard",
+    "concept": "Prime Numbers",
+    "domain": "Mathematics",
+    "oneliner": "Numbers divisible only by 1 and themselves — 2, 3, 5, 7, 11... The 'atoms' of multiplication.",
+    "whyItMatters": "They're the foundation of modern encryption (RSA). No efficient algorithm can factor large numbers into primes.",
+    "analogy": "The atoms of arithmetic — every number is built from them, and their distribution is one of math's deepest mysteries."
+  },
+  {
+    "id": "mathematics:prisoner-s-dilemma",
+    "type": "standard",
+    "concept": "Prisoner's Dilemma",
+    "domain": "Mathematics",
+    "oneliner": "Two rational individuals might not cooperate even when it benefits both — because betrayal is individually optimal.",
+    "whyItMatters": "Explains arms races, price wars, environmental destruction, and why trust is hard to build.",
+    "analogy": "Two partners in crime who'd both be better off staying quiet — but neither trusts the other."
+  },
+  {
+    "id": "mathematics:probability",
+    "type": "standard",
+    "concept": "Probability",
+    "domain": "Mathematics",
+    "oneliner": "The framework for quantifying uncertainty — from 0 (impossible) to 1 (certain).",
+    "whyItMatters": "Governs insurance, gambling, weather, medical testing, and every decision under uncertainty.",
+    "analogy": "A number measuring how surprised you should be if something happens."
+  },
+  {
+    "id": "mathematics:queueing-theory",
+    "type": "standard",
+    "concept": "Queueing Theory",
+    "domain": "Mathematics",
+    "oneliner": "The mathematical study of waiting lines — how arrival rates, service rates, and queue structure determine wait times.",
+    "whyItMatters": "Applies to customer service, network traffic, hospital capacity, and CI/CD pipelines. A system at 90% utilization has dramatically longer waits than one at 80%.",
+    "analogy": "Like a highway where adding 10% more cars doesn't slow traffic 10% — it can cause a complete standstill.",
+    "level": "intermediate"
+  },
+  {
+    "id": "mathematics:ramsey-theory",
+    "type": "standard",
+    "concept": "Ramsey Theory",
+    "domain": "Mathematics",
+    "oneliner": "Complete disorder is impossible — any sufficiently large structure must contain an orderly sub-structure.",
+    "whyItMatters": "Proves that patterns are inevitable at scale. In any large enough group, cliques form; in any long enough sequence, repetitions appear. Order emerges from chaos mathematically.",
+    "analogy": "Like a party of six where you're guaranteed to find either three mutual friends or three mutual strangers — you can't avoid structure.",
+    "level": "advanced"
+  },
+  {
+    "id": "mathematics:regression-analysis",
+    "type": "standard",
+    "concept": "Regression Analysis",
+    "domain": "Mathematics",
+    "oneliner": "Statistical technique for modeling the relationship between variables — predicting outcomes from inputs.",
+    "whyItMatters": "It's the workhorse of data science, economics, and social science. Linear regression is the simplest; many variants exist.",
+    "analogy": "The mathematical crystal ball — finding the equation that best predicts Y from X."
+  },
+  {
+    "id": "mathematics:regression-to-the-mean",
+    "type": "standard",
+    "concept": "Regression to the Mean",
+    "domain": "Mathematics",
+    "oneliner": "Extreme observations tend to be followed by more moderate ones — statistics, not causation.",
+    "whyItMatters": "Why the 'Sports Illustrated curse' exists, why miracle cures seem to work, why coaches think yelling helps (bad performance → yelling → improvement was regression, not causation). It's the single most confused-with-causation phenomenon in everyday reasoning, from medicine to management to sports.",
+    "analogy": "After an unusually hot day, tomorrow is probably closer to average — extremes are rare by definition."
+  },
+  {
+    "id": "mathematics:root-cause-analysis",
+    "type": "standard",
+    "concept": "Root Cause Analysis",
+    "domain": "Mathematics",
+    "oneliner": "Systematic process of identifying the fundamental cause of a problem rather than addressing symptoms.",
+    "whyItMatters": "The '5 Whys' technique: keep asking why until you reach the root cause, not a surface symptom.",
+    "analogy": "Treating the disease instead of the symptom — asking 'why' enough times to find what's actually broken."
+  },
+  {
+    "id": "mathematics:selection-bias",
+    "type": "standard",
+    "concept": "Selection Bias",
+    "domain": "Mathematics",
+    "oneliner": "Systematic error from non-random sampling — the sample doesn't represent the population.",
+    "whyItMatters": "Online polls overrepresent internet users. Voluntary surveys overrepresent people with strong opinions. Hospital data overrepresent the sick.",
+    "analogy": "Asking only the people at the gym whether they exercise regularly — and concluding everyone does."
+  },
+  {
+    "id": "mathematics:set-theory",
+    "type": "standard",
+    "concept": "Set Theory",
+    "domain": "Mathematics",
+    "oneliner": "The mathematical study of collections of objects. Foundation of modern mathematics — Cantor proved there are different sizes of infinity.",
+    "whyItMatters": "It underpins all of modern math, logic, and computer science. Zermelo-Fraenkel axioms are math's constitution.",
+    "analogy": "The study of putting things in boxes — and discovering that some infinities are bigger than others."
+  },
+  {
+    "id": "mathematics:simpson-s-paradox",
+    "type": "standard",
+    "concept": "Simpson's Paradox",
+    "domain": "Mathematics",
+    "oneliner": "A trend that appears in different groups reverses when the groups are combined — statistics lying by aggregation.",
+    "whyItMatters": "A treatment can be better for men AND women individually, but worse for the combined population. It's real and common.",
+    "analogy": "Each individual story says one thing. Combine them and the opposite appears — the data equivalent of an optical illusion."
+  },
+  {
+    "id": "mathematics:singular-value-decomposition",
+    "type": "standard",
+    "concept": "Singular Value Decomposition",
+    "domain": "Mathematics",
+    "oneliner": "Any matrix can be decomposed into three simpler matrices that reveal its fundamental structure — rotation, scaling, rotation.",
+    "whyItMatters": "Powers recommendation engines, image compression, and natural language processing. SVD finds the hidden dimensions in data — Netflix recommendations rely on it.",
+    "analogy": "Like X-raying a painting to see which pigments were layered where — decomposing complexity into its constituent signals.",
+    "level": "intermediate"
+  },
+  {
+    "id": "mathematics:spectral-analysis",
+    "type": "standard",
+    "concept": "Spectral Analysis",
+    "domain": "Mathematics",
+    "oneliner": "Decomposing a complex signal into its constituent frequencies — revealing hidden periodic patterns invisible in the time domain.",
+    "whyItMatters": "Powers audio processing, stock market cycle detection, brain imaging, and climate analysis. Many systems that look random in time have clear structure in frequency.",
+    "analogy": "Like a prism splitting white light into a rainbow — the individual colors were always there, but you needed the right tool to see them.",
+    "level": "intermediate"
+  },
+  {
+    "id": "mathematics:stable-matching-problem",
+    "type": "standard",
+    "concept": "Stable Matching Problem",
+    "domain": "Mathematics",
+    "oneliner": "The Gale-Shapley algorithm guarantees a stable match between two groups where no pair would prefer to swap — the math of fair pairing.",
+    "whyItMatters": "Used for medical residency matching, school choice, and kidney exchange. Won Roth and Shapley the Nobel. Proves that stable solutions exist and can be computed.",
+    "analogy": "Like a dance where partners propose and accept until everyone is paired with no couple who'd rather switch — guaranteed to converge.",
+    "level": "intermediate"
+  },
+  {
+    "id": "mathematics:standard-deviation",
+    "type": "standard",
+    "concept": "Standard Deviation",
+    "domain": "Mathematics",
+    "oneliner": "How spread out values are from the mean. Low SD = clustered. High SD = dispersed.",
+    "whyItMatters": "In finance, it's a proxy for risk/volatility. In science, it defines confidence intervals.",
+    "analogy": "The average distance from average — tells you whether data whispers or screams."
+  },
+  {
+    "id": "mathematics:standard-error",
+    "type": "standard",
+    "concept": "Standard Error",
+    "domain": "Mathematics",
+    "oneliner": "The standard deviation of a sampling distribution — measures the precision of a sample statistic.",
+    "whyItMatters": "It shrinks with larger samples. It's the basis for confidence intervals and hypothesis testing.",
+    "analogy": "How much your sample's average might differ from the true average — smaller sample = bigger error."
+  },
+  {
+    "id": "mathematics:statistical-significance",
+    "type": "standard",
+    "concept": "Statistical Significance",
+    "domain": "Mathematics",
+    "oneliner": "The probability that an observed result isn't due to chance — typically p &lt; 0.05 (5% chance of random occurrence).",
+    "whyItMatters": "The gatekeeper of scientific publishing. A p-value of 0.05 means there's a 1-in-20 chance the result is random noise.",
+    "analogy": "The statistical version of 'I'm pretty sure this isn't a coincidence' — 95% confident, but not certain."
+  },
+  {
+    "id": "mathematics:stochastic-process",
+    "type": "standard",
+    "concept": "Stochastic Process",
+    "domain": "Mathematics",
+    "oneliner": "A mathematical model of random evolution over time — stock prices, particle diffusion, population dynamics.",
+    "whyItMatters": "Every financial model, weather forecast, and queuing theory is built on stochastic processes.",
+    "analogy": "The mathematics of randomness unfolding through time — not predicting what will happen, but what might."
+  },
+  {
+    "id": "mathematics:taylor-series",
+    "type": "standard",
+    "concept": "Taylor Series",
+    "domain": "Mathematics",
+    "oneliner": "Approximating any smooth function as an infinite sum of polynomial terms — local linear approximation extended to arbitrary precision.",
+    "whyItMatters": "It's how calculators compute sine and cosine, how physics simplifies complex equations, and how error bounds are established.",
+    "analogy": "Approximating any curve with straight-line pieces — the more pieces you use, the more accurate the approximation."
+  },
+  {
+    "id": "mathematics:the-reproducibility-paradox",
+    "type": "scenario",
+    "concept": "The Reproducibility Paradox",
+    "domain": "Mathematics",
+    "scenario": "A machine learning model achieves state-of-the-art results on a benchmark. Other labs can't reproduce the results. The original team eventually reveals the result depended on a specific random seed and unreported hyperparameter choices.",
+    "relevantConcepts": [
+      "Falsifiability",
+      "P-hacking",
+      "Overfitting",
+      "Publication Bias"
+    ],
+    "domains": [
+      "Mathematics",
+      "Philosophy",
+      "Technology"
+    ],
+    "explanation": "Benchmark optimization creates the same problems as p-hacking in science: enough exploration of the parameter space will find a configuration that looks exceptional but doesn't generalize. The result is technically reproducible (same seed = same output) but scientifically irreproducible (different seed = different result). Robust results must survive variation, not depend on it.",
+    "level": "advanced"
+  },
+  {
+    "id": "mathematics:topology",
+    "type": "standard",
+    "concept": "Topology",
+    "domain": "Mathematics",
+    "oneliner": "The study of properties preserved when shapes are stretched, twisted, or deformed — but not torn or glued.",
+    "whyItMatters": "A coffee mug and a donut are topologically identical (both have one hole). It's the most abstract branch of geometry.",
+    "analogy": "The mathematics where a coffee mug IS a donut — because both have exactly one hole."
+  },
+  {
+    "id": "mathematics:traveling-salesman-problem",
+    "type": "standard",
+    "concept": "Traveling Salesman Problem",
+    "domain": "Mathematics",
+    "oneliner": "Finding the shortest route visiting all cities exactly once — simple to state, effectively impossible to solve optimally at scale.",
+    "whyItMatters": "The canonical NP-hard problem. With 20 cities there are 60 quadrillion possible routes. Teaches that some problems require 'good enough' solutions because perfect solutions are computationally intractable.",
+    "analogy": "Like trying to plan the most efficient errand run — with 3 stops it's easy, with 30 stops even a supercomputer would struggle to find the best route.",
+    "level": "intermediate"
+  },
+  {
+    "id": "mathematics:type-i-and-type-ii-errors",
+    "type": "standard",
+    "concept": "Type I and Type II Errors",
+    "domain": "Mathematics",
+    "oneliner": "Type I: false positive (seeing something that isn't there). Type II: false negative (missing something that is).",
+    "whyItMatters": "Cancer screening: Type I = unnecessary biopsy. Type II = missed cancer. You can't minimize both simultaneously.",
+    "analogy": "The alarm that cries wolf (Type I) vs. the alarm that sleeps through the break-in (Type II) — reducing one increases the other."
+  },
+  {
+    "id": "mathematics:variance",
+    "type": "standard",
+    "concept": "Variance",
+    "domain": "Mathematics",
+    "oneliner": "The average of squared deviations from the mean — a measure of how spread out data is.",
+    "whyItMatters": "Standard deviation is the square root of variance. High variance = unpredictable. Low variance = consistent.",
+    "analogy": "How scattered the data is around the average — small variance means clustered, large variance means all over the place."
+  },
+  {
+    "id": "mathematics:zipf-s-law",
+    "type": "standard",
+    "concept": "Zipf's Law",
+    "domain": "Mathematics",
+    "oneliner": "In any natural corpus, the frequency of a word is inversely proportional to its rank — the 2nd most common word appears half as often as the 1st.",
+    "whyItMatters": "It describes word frequencies, city populations, income distribution, and website traffic. The 80/20 rule's cousin.",
+    "analogy": "Language's power law — a tiny number of words do most of the work, while most words are rarely used."
+  }
+]

@@ -1,0 +1,983 @@
+[
+  {
+    "id": "economics:adverse-selection",
+    "type": "standard",
+    "concept": "Adverse Selection",
+    "domain": "Economics",
+    "oneliner": "When one party's hidden information leads to market distortion — the informed party benefits at the uninformed party's expense.",
+    "whyItMatters": "It's why health insurance markets struggle: sick people are more likely to buy insurance, driving up premiums for everyone.",
+    "analogy": "A market where the sellers know more than the buyers — and the buyers know the sellers know more."
+  },
+  {
+    "id": "economics:antifragile-portfolio",
+    "type": "standard",
+    "concept": "Antifragile Portfolio",
+    "domain": "Economics",
+    "oneliner": "An investment strategy designed to benefit from volatility rather than just survive it — small controlled losses, large uncapped gains.",
+    "whyItMatters": "The barbell strategy: combine ultra-safe assets with small high-risk/high-reward bets. Avoid the middle. Inspired by Taleb.",
+    "analogy": "An investment approach that wants chaos — small bets that lose a little in calm times but win big in upheaval."
+  },
+  {
+    "id": "economics:antitrust",
+    "type": "standard",
+    "concept": "Antitrust",
+    "domain": "Economics",
+    "oneliner": "Laws preventing monopolies, cartels, and anti-competitive practices to protect market competition.",
+    "whyItMatters": "Sherman Act (1890), Standard Oil breakup, Microsoft case, current Big Tech scrutiny.",
+    "analogy": "The referee ensuring no single player can rig the game — keeping markets competitive."
+  },
+  {
+    "id": "economics:arbitrage",
+    "type": "standard",
+    "concept": "Arbitrage",
+    "domain": "Economics",
+    "oneliner": "Profiting from price differences for the same asset in different markets — buying low in one, selling high in another.",
+    "whyItMatters": "In efficient markets, arbitrage opportunities disappear quickly. Their existence means the market isn't perfectly efficient.",
+    "analogy": "Buying a dollar bill for 95 cents — the market's way of correcting pricing errors, and the trader's free lunch."
+  },
+  {
+    "id": "economics:asymmetric-information",
+    "type": "standard",
+    "concept": "Asymmetric Information",
+    "domain": "Economics",
+    "oneliner": "When one party in a transaction has more information than the other — creating market distortions.",
+    "whyItMatters": "It explains why used car markets are full of lemons, why insurance has adverse selection, and why warranties exist.",
+    "analogy": "A poker game where one player can see everyone's cards — the information advantage distorts every decision."
+  },
+  {
+    "id": "economics:bank-run",
+    "type": "standard",
+    "concept": "Bank Run",
+    "domain": "Economics",
+    "oneliner": "When depositors simultaneously withdraw funds fearing bank insolvency — creating the very insolvency they fear.",
+    "whyItMatters": "It's a self-fulfilling prophecy. Deposit insurance (FDIC) was created specifically to prevent bank runs.",
+    "analogy": "Fear creating the outcome it fears — everyone runs for the exit simultaneously, and the building collapses."
+  },
+  {
+    "id": "economics:behavioral-economics",
+    "type": "standard",
+    "concept": "Behavioral Economics",
+    "domain": "Economics",
+    "oneliner": "People don't make rational decisions — psychology, biases, and emotions systematically distort economic choices. Thaler, Kahneman.",
+    "whyItMatters": "It bridges economics and psychology. Won Nobel Prizes. Explains why people overspend, undersave, and panic-sell.",
+    "analogy": "Economics with actual humans instead of perfectly rational robots."
+  },
+  {
+    "id": "economics:cantillon-effect",
+    "type": "standard",
+    "concept": "Cantillon Effect",
+    "domain": "Economics",
+    "oneliner": "New money entering an economy doesn't affect all prices equally — those closest to the money source benefit first.",
+    "whyItMatters": "When central banks print money, banks and financial institutions benefit before regular people feel the effects.",
+    "analogy": "Fresh money is like a drop of ink in water — it colors the area near the drop first, spreading gradually outward."
+  },
+  {
+    "id": "economics:carbon-tax-implementation",
+    "type": "application",
+    "concept": "Carbon Tax Implementation",
+    "domain": "Economics",
+    "problem": "A country implements a carbon tax of $50 per ton of CO2 to incentivize green energy transition.",
+    "firstOrder": "Fossil fuel costs rise. Renewable energy becomes more competitive. Emissions decrease in the taxed country. Government revenue increases.",
+    "secondOrder": "Carbon-intensive industries relocate to countries without carbon taxes (carbon leakage), potentially increasing global emissions. Energy costs hit low-income households hardest (regressive impact). The revenue creates political dependency — the government now has incentive to NOT reduce emissions (the Laffer Curve of carbon).",
+    "lesson": "Unilateral carbon pricing can relocate rather than reduce emissions. Effective climate policy requires either global coordination or border adjustment mechanisms. The design details matter more than the principle.",
+    "level": "advanced"
+  },
+  {
+    "id": "economics:central-bank-independence",
+    "type": "standard",
+    "concept": "Central Bank Independence",
+    "domain": "Economics",
+    "oneliner": "The principle that monetary policy should be insulated from political pressure — technocrats, not politicians, should set rates.",
+    "whyItMatters": "It's why the Fed chair isn't elected. Political pressure leads to inflationary money printing before elections.",
+    "analogy": "Keeping the economy's thermostat away from politicians who'd crank the heat before every election."
+  },
+  {
+    "id": "economics:central-banking",
+    "type": "standard",
+    "concept": "Central Banking",
+    "domain": "Economics",
+    "oneliner": "Institutions (Fed, ECB) controlling monetary policy — interest rates and money supply to stabilize the economy.",
+    "whyItMatters": "Most powerful economic actors. Decisions affect mortgages, employment, stocks, currencies.",
+    "analogy": "The economy's thermostat operator — rates up to cool inflation, down to warm growth."
+  },
+  {
+    "id": "economics:coase-theorem",
+    "type": "standard",
+    "concept": "Coase Theorem",
+    "domain": "Economics",
+    "oneliner": "If property rights are clear and transaction costs are zero, parties will negotiate to the efficient outcome regardless of initial allocation.",
+    "whyItMatters": "Reveals that externalities persist not because of greed but because of transaction costs. Reducing friction (legal, informational, social) unlocks better deals.",
+    "analogy": "Like neighbors negotiating noise levels — if talking were free and easy, they'd find the right balance without needing laws.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:comparative-advantage",
+    "type": "standard",
+    "concept": "Comparative Advantage",
+    "domain": "Economics",
+    "oneliner": "Specializing in what you produce most efficiently relative to others — even if you're worse at everything.",
+    "whyItMatters": "Foundation of international trade. Even if you're faster at mowing AND taxes, hire the lawn service if your time is worth more on taxes.",
+    "analogy": "Not 'what are you best at?' but 'what costs you the least?' — specialize in lowest opportunity cost."
+  },
+  {
+    "id": "economics:conspicuous-consumption",
+    "type": "standard",
+    "concept": "Conspicuous Consumption",
+    "domain": "Economics",
+    "oneliner": "Spending on luxury goods primarily to display wealth and social status — Thorstein Veblen's concept.",
+    "whyItMatters": "It explains why people buy $5,000 handbags, why luxury brands can charge 10x for equivalent quality.",
+    "analogy": "Buying things to show you can afford them — the purchase IS the point, not the product."
+  },
+  {
+    "id": "economics:coordination-failure",
+    "type": "standard",
+    "concept": "Coordination Failure",
+    "domain": "Economics",
+    "oneliner": "Everyone would benefit from a different equilibrium, but no individual can get there alone — rational individual choices produce collective irrationality.",
+    "whyItMatters": "Explains why industries stay on inferior standards, why cities have traffic jams, and why adopting new technology requires critical mass.",
+    "analogy": "Like a crowd wanting to leave a party but nobody wants to be the first to say goodbye.",
+    "level": "foundational"
+  },
+  {
+    "id": "economics:creative-class",
+    "type": "standard",
+    "concept": "Creative Class",
+    "domain": "Economics",
+    "oneliner": "Richard Florida's theory that economic growth comes from attracting creative professionals — tech, arts, science.",
+    "whyItMatters": "Cities compete for talent by offering culture, tolerance, and quality of life. Criticized for gentrification.",
+    "analogy": "Economic development theory that says cities don't attract talent with tax breaks — they attract it with coffee shops and bike lanes."
+  },
+  {
+    "id": "economics:creative-destruction",
+    "type": "standard",
+    "concept": "Creative Destruction",
+    "domain": "Economics",
+    "oneliner": "Schumpeter: innovation destroys old industries while creating new ones — the engine of capitalist progress.",
+    "whyItMatters": "Cars killed horses. Smartphones killed Kodak. AI is reshaping knowledge work.",
+    "analogy": "The economy's immune system — kills weak cells to make room for healthy new ones."
+  },
+  {
+    "id": "economics:crowding-out",
+    "type": "standard",
+    "concept": "Crowding Out",
+    "domain": "Economics",
+    "oneliner": "Government borrowing competing with private borrowing, raising interest rates and reducing private investment.",
+    "whyItMatters": "It's the conservative argument against deficit spending — government borrows, rates rise, businesses invest less.",
+    "analogy": "The government and businesses reaching for the same pool of lendable money — more for one means less for the other."
+  },
+  {
+    "id": "economics:currency-peg",
+    "type": "standard",
+    "concept": "Currency Peg",
+    "domain": "Economics",
+    "oneliner": "A country fixing its currency's exchange rate to another currency (usually USD) rather than letting it float.",
+    "whyItMatters": "China did this for decades to keep exports cheap. It stabilizes trade but limits monetary policy independence.",
+    "analogy": "Handcuffing your currency to someone else's — stable but you lose the ability to adjust independently."
+  },
+  {
+    "id": "economics:deadweight-loss",
+    "type": "standard",
+    "concept": "Deadweight Loss",
+    "domain": "Economics",
+    "oneliner": "The economic inefficiency caused by taxes, price controls, or monopolies — value that's destroyed, not transferred.",
+    "whyItMatters": "It's the triangle on supply-demand diagrams that represents transactions that should happen but don't.",
+    "analogy": "The economic equivalent of food going to waste — value that should exist but was destroyed by market distortion."
+  },
+  {
+    "id": "economics:debt-to-gdp-ratio",
+    "type": "standard",
+    "concept": "Debt-to-GDP Ratio",
+    "domain": "Economics",
+    "oneliner": "A country's total government debt divided by its GDP — a measure of fiscal sustainability.",
+    "whyItMatters": "Japan's is ~260%. The US is ~120%. There's no agreed 'danger zone' but higher ratios mean more interest burden.",
+    "analogy": "How much a country owes relative to how much it earns — like comparing your mortgage to your annual salary."
+  },
+  {
+    "id": "economics:deflationary-spiral",
+    "type": "standard",
+    "concept": "Deflationary Spiral",
+    "domain": "Economics",
+    "oneliner": "Falling prices lead to delayed spending, which leads to less production, layoffs, more falling prices — a vicious cycle.",
+    "whyItMatters": "It's why central banks fear deflation as much as inflation. Japan experienced this for decades.",
+    "analogy": "An economic whirlpool — each round of falling prices makes the next round worse."
+  },
+  {
+    "id": "economics:diminishing-returns",
+    "type": "standard",
+    "concept": "Diminishing Returns",
+    "domain": "Economics",
+    "oneliner": "Each additional unit of input produces progressively less additional output — the 10th employee adds less than the 1st.",
+    "whyItMatters": "It limits growth, explains why diversification matters, and why all-you-can-eat buffets are profitable.",
+    "analogy": "The first scoop of ice cream is heaven. The tenth makes you sick. Same input, decreasing joy."
+  },
+  {
+    "id": "economics:dutch-auction",
+    "type": "standard",
+    "concept": "Dutch Auction",
+    "domain": "Economics",
+    "oneliner": "An auction starting at a high price that decreases until someone accepts — used for IPOs, bonds, and flowers.",
+    "whyItMatters": "Google used a Dutch auction for its IPO. It prevents underpricing because buyers reveal their true valuation.",
+    "analogy": "A descending price game of chicken — the price drops until someone blinks and says 'I'll take it.'"
+  },
+  {
+    "id": "economics:dutch-book-argument",
+    "type": "standard",
+    "concept": "Dutch Book Argument",
+    "domain": "Economics",
+    "oneliner": "If your beliefs are inconsistent, someone can construct a series of bets that guarantee you lose money — coherence is a survival requirement.",
+    "whyItMatters": "Foundational for Bayesian reasoning and rational decision-making. Inconsistent probabilities aren't just wrong — they're exploitable.",
+    "analogy": "Like having a hole in your armor you don't know about — any opponent who finds it will strike there every time.",
+    "level": "advanced"
+  },
+  {
+    "id": "economics:dutch-disease",
+    "type": "standard",
+    "concept": "Dutch Disease",
+    "domain": "Economics",
+    "oneliner": "When a natural resource boom makes other sectors uncompetitive — the currency appreciates, killing manufacturing exports.",
+    "whyItMatters": "Named after Netherlands' natural gas discovery. Explains why resource-rich countries often have weak manufacturing.",
+    "analogy": "Striking oil and accidentally destroying your factory sector — getting rich in one area while getting poor in every other."
+  },
+  {
+    "id": "economics:efficient-market-hypothesis",
+    "type": "standard",
+    "concept": "Efficient Market Hypothesis",
+    "domain": "Economics",
+    "oneliner": "Asset prices reflect all available information, making it impossible to consistently beat the market.",
+    "whyItMatters": "If true, active management is pointless — just buy index funds. Critics point to bubbles as obvious counterexamples.",
+    "analogy": "The stock market is a crowd that's already processed all the news — you can't consistently outsmart everyone."
+  },
+  {
+    "id": "economics:endowment-effect",
+    "type": "standard",
+    "concept": "Endowment Effect",
+    "domain": "Economics",
+    "oneliner": "People value things more simply because they own them — selling price exceeds buying price for the same item.",
+    "whyItMatters": "Thaler showed ownership inflates perceived value by 2-3x. Drives sunk cost thinking, retention bias in portfolios, and reluctance to abandon failing projects.",
+    "analogy": "Like a child who won't share a toy but wouldn't have wanted it from a shelf — possession itself creates attachment.",
+    "level": "foundational"
+  },
+  {
+    "id": "economics:externalities",
+    "type": "standard",
+    "concept": "Externalities",
+    "domain": "Economics",
+    "oneliner": "Costs or benefits affecting parties not in the transaction. Pollution = negative. Education = positive.",
+    "whyItMatters": "Markets fail when externalities aren't priced. Carbon emissions are cheap because the atmosphere doesn't invoice.",
+    "analogy": "Side effects of economic activity — a factory makes widgets AND pollutes the river for free."
+  },
+  {
+    "id": "economics:fiscal-policy",
+    "type": "standard",
+    "concept": "Fiscal Policy",
+    "domain": "Economics",
+    "oneliner": "Government's use of spending and taxation to influence the economy — distinct from monetary policy (central bank).",
+    "whyItMatters": "Stimulus checks, infrastructure spending, tax cuts — these are fiscal tools. They're politically controlled, unlike monetary policy.",
+    "analogy": "The government's checkbook and tax code — spending to stimulate, taxing to cool down."
+  },
+  {
+    "id": "economics:free-college-tuition",
+    "type": "application",
+    "concept": "Free College Tuition",
+    "domain": "Economics",
+    "problem": "A government eliminates college tuition to increase educational access.",
+    "firstOrder": "More students enroll, especially from low-income families. Student debt decreases.",
+    "secondOrder": "Demand surges but supply (professors, facilities) is fixed, so quality drops or admission becomes more competitive. Taxpayers who don't attend college subsidize those who do. Credential inflation accelerates as more people hold degrees, shifting the floor without raising the ceiling.",
+    "lesson": "Removing the price signal doesn't remove scarcity — it shifts the rationing mechanism from money to something else (grades, connections, luck). Second-order thinking asks: what replaces the old constraint?",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:gdp",
+    "type": "standard",
+    "concept": "GDP",
+    "domain": "Economics",
+    "oneliner": "Gross Domestic Product — total monetary value of goods/services produced in a country per period.",
+    "whyItMatters": "Standard measure of economic size, widely criticized for ignoring inequality, sustainability, and unpaid work.",
+    "analogy": "A country's economic scoreboard — useful but incomplete, like judging health by weight alone."
+  },
+  {
+    "id": "economics:giffen-good",
+    "type": "standard",
+    "concept": "Giffen Good",
+    "domain": "Economics",
+    "oneliner": "A theoretical good where demand INCREASES as price rises — violating normal demand logic. Extremely rare.",
+    "whyItMatters": "Possibly observed with staple foods in extreme poverty — as bread prices rise, people can't afford meat and buy MORE bread.",
+    "analogy": "An economic unicorn — so rare it might not exist in practice, but the theory teaches you about poverty traps."
+  },
+  {
+    "id": "economics:gini-coefficient",
+    "type": "standard",
+    "concept": "Gini Coefficient",
+    "domain": "Economics",
+    "oneliner": "A measure of inequality from 0 (perfect equality) to 1 (one person has everything).",
+    "whyItMatters": "It quantifies how unequally income or wealth is distributed. The US Gini is ~0.39; Scandinavia ~0.25; South Africa ~0.63.",
+    "analogy": "An inequality thermometer — the higher the number, the wider the gap between rich and poor."
+  },
+  {
+    "id": "economics:goodhart-s-law-in-economics",
+    "type": "standard",
+    "concept": "Goodhart's Law in Economics",
+    "domain": "Economics",
+    "oneliner": "When a measure becomes a target, it ceases to be a good measure — optimizing the metric corrupts the metric.",
+    "whyItMatters": "GDP targeting leads to activities that inflate GDP without improving welfare. KPI-driven orgs game the numbers. The map replaces the territory.",
+    "analogy": "Like students studying for the test instead of learning the subject — the score goes up but understanding doesn't.",
+    "level": "foundational"
+  },
+  {
+    "id": "economics:gresham-s-law",
+    "type": "standard",
+    "concept": "Gresham's Law",
+    "domain": "Economics",
+    "oneliner": "Bad money drives out good — when two currencies circulate, people hoard the valuable one and spend the debased one.",
+    "whyItMatters": "It's why people spent clipped coins and hoarded full-weight ones. Applies metaphorically: bad behavior drives out good.",
+    "analogy": "People spend the fake stuff and hide the real stuff — in currency and in life."
+  },
+  {
+    "id": "economics:hedonic-pricing",
+    "type": "standard",
+    "concept": "Hedonic Pricing",
+    "domain": "Economics",
+    "oneliner": "Complex goods are bundles of attributes, each with an implicit price — you can extract the value of each attribute from market data.",
+    "whyItMatters": "How economists value things without explicit markets: clean air (via housing prices near pollution), safety (via wage differentials for dangerous jobs).",
+    "analogy": "Like reverse-engineering a recipe from the price menu — if pepperoni pizza costs $2 more than cheese, pepperoni is 'worth' $2.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:incentives",
+    "type": "standard",
+    "concept": "Incentives",
+    "domain": "Economics",
+    "oneliner": "Rewards and penalties motivating behavior. Get them right and systems work. Get them wrong: perverse outcomes.",
+    "whyItMatters": "Munger: 'Show me the incentive, I'll show you the outcome.' Misaligned incentives explain most dysfunction.",
+    "analogy": "The invisible strings pulling behavior — people do what you pay them to do, not what you tell them."
+  },
+  {
+    "id": "economics:inflation",
+    "type": "standard",
+    "concept": "Inflation",
+    "domain": "Economics",
+    "oneliner": "General price increase and purchasing power decrease over time.",
+    "whyItMatters": "Moderate (2%) considered healthy. Hyperinflation destroys economies. Deflation equally dangerous.",
+    "analogy": "Money slowly losing weight — the same dollar buys a little less each year."
+  },
+  {
+    "id": "economics:k-shaped-recovery",
+    "type": "standard",
+    "concept": "K-Shaped Recovery",
+    "domain": "Economics",
+    "oneliner": "An economic recovery where different segments diverge sharply — some soar while others sink, widening inequality.",
+    "whyItMatters": "COVID exposed this: tech workers thrived remotely while service workers lost jobs. Aggregate statistics mask distributional reality.",
+    "analogy": "Like a forked road after a storm — one lane is freshly paved, the other is still flooded.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:keynesian-beauty-contest",
+    "type": "standard",
+    "concept": "Keynesian Beauty Contest",
+    "domain": "Economics",
+    "oneliner": "To win, you don't pick what YOU think is beautiful — you pick what you think OTHERS will pick. Rational behavior means predicting others' predictions.",
+    "whyItMatters": "Keynes' metaphor for stock markets: prices reflect what investors think other investors will think, creating infinite regression. The market isn't pricing value — it's pricing expectations of expectations.",
+    "analogy": "Like voting for the restaurant you think your friends will choose, not the one you actually want — the game is about predicting others, not expressing preference.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:keynesian-economics",
+    "type": "standard",
+    "concept": "Keynesian Economics",
+    "domain": "Economics",
+    "oneliner": "Government should actively manage demand through spending and taxation to smooth economic cycles. John Maynard Keynes.",
+    "whyItMatters": "Justified deficit spending during recessions. 'In the long run, we are all dead.' Dominated post-WWII policy.",
+    "analogy": "The government as economic shock absorber — spending when people won't, pulling back when they overspend."
+  },
+  {
+    "id": "economics:laffer-curve",
+    "type": "standard",
+    "concept": "Laffer Curve",
+    "domain": "Economics",
+    "oneliner": "The theoretical relationship between tax rates and revenue — at some point, higher rates reduce revenue because people stop working or evade.",
+    "whyItMatters": "Supply-siders used it to justify tax cuts. The debate is where the peak is — not whether the curve exists.",
+    "analogy": "Too little tax = no revenue. Too much tax = no revenue (everyone quits or cheats). Somewhere in between is optimal."
+  },
+  {
+    "id": "economics:lemon-market",
+    "type": "standard",
+    "concept": "Lemon Market",
+    "domain": "Economics",
+    "oneliner": "When buyers can't distinguish quality, bad products drive out good ones — Akerlof's insight that information asymmetry destroys markets.",
+    "whyItMatters": "Used cars, health insurance, freelance marketplaces — anywhere quality is hidden, sellers of quality can't compete. Solutions: warranties, reputation systems, certification.",
+    "analogy": "Like a fruit stand where you can't taste before buying — sellers who invest in quality can't prove it, so everyone sells lemons.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:liquidity",
+    "type": "standard",
+    "concept": "Liquidity",
+    "domain": "Economics",
+    "oneliner": "How quickly an asset can be converted to cash without significant price reduction.",
+    "whyItMatters": "Cash is perfectly liquid. Real estate is illiquid. Liquidity crises happen when everyone tries to sell at once.",
+    "analogy": "How fast you can turn something into spendable money — cash is instant, a house takes months."
+  },
+  {
+    "id": "economics:making-college-free-for-stem-only",
+    "type": "application",
+    "concept": "Making College Free for STEM Only",
+    "domain": "Economics",
+    "problem": "A government offers free tuition exclusively for STEM degrees to boost tech competitiveness.",
+    "firstOrder": "STEM enrollment surges. Tech workforce grows. Innovation pipeline strengthens. Country becomes more competitive in AI, biotech, and engineering.",
+    "secondOrder": "Humanities and social sciences lose students and funding, hollowing out the skills (communication, ethics, critical thinking) that STEM workers need. STEM graduates flood the market, depressing wages in the very fields the policy was meant to strengthen. Students who would have thrived in other fields choose STEM for the subsidy, creating mediocre engineers instead of excellent teachers, writers, or designers.",
+    "lesson": "Subsidizing one field is implicitly taxing every other field. The second-order workforce effect is a glut in STEM and a shortage in everything else. The most innovative companies need both STEM and humanities — Apple famously stood at the intersection.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:marginal-thinking",
+    "type": "standard",
+    "concept": "Marginal Thinking",
+    "domain": "Economics",
+    "oneliner": "Decisions based on additional benefit vs. additional cost of one more unit — not averages or totals.",
+    "whyItMatters": "Why airlines sell last-minute seats cheap, why the first bite of pizza beats the fifth.",
+    "analogy": "Not 'is this worth doing?' but 'is the NEXT one worth doing?' — evaluate at the edge."
+  },
+  {
+    "id": "economics:market-failure",
+    "type": "standard",
+    "concept": "Market Failure",
+    "domain": "Economics",
+    "oneliner": "When free markets don't allocate resources efficiently — due to externalities, public goods, information asymmetry, or monopoly.",
+    "whyItMatters": "It's the economic justification for government intervention. Every regulation is theoretically addressing a market failure.",
+    "analogy": "When the invisible hand drops the ball — markets are powerful but they have blind spots."
+  },
+  {
+    "id": "economics:mechanism-design",
+    "type": "standard",
+    "concept": "Mechanism Design",
+    "domain": "Economics",
+    "oneliner": "Reverse game theory — instead of analyzing existing games, you design the rules to produce the outcome you want.",
+    "whyItMatters": "Won Hurwicz, Maskin, and Myerson the Nobel. Applies to auction design, voting systems, platform incentives — anywhere you set the rules others play by.",
+    "analogy": "Like being the game developer instead of the player — you choose the rules that make cooperation the winning strategy.",
+    "level": "advanced"
+  },
+  {
+    "id": "economics:mercantilism",
+    "type": "standard",
+    "concept": "Mercantilism",
+    "domain": "Economics",
+    "oneliner": "The pre-Adam Smith economic theory that national wealth is measured by gold reserves and trade surpluses.",
+    "whyItMatters": "Smith's 'Wealth of Nations' dismantled it. But mercantilist impulses (trade wars, tariffs) persist today.",
+    "analogy": "The economic philosophy that wealth is a fixed pie — if you get more, I get less. Trade is zero-sum."
+  },
+  {
+    "id": "economics:middle-income-trap",
+    "type": "standard",
+    "concept": "Middle-Income Trap",
+    "domain": "Economics",
+    "oneliner": "Countries that industrialize to middle-income status often stall because they can't compete on wages (too high) or innovation (too low).",
+    "whyItMatters": "Explains why many developing nations plateau. The strategies that got you from poor to middle don't work from middle to rich — you need a new playbook.",
+    "analogy": "Like a runner who masters the 100m but can't transition to the marathon — speed doesn't equal endurance.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:minimum-wage-increase",
+    "type": "application",
+    "concept": "Minimum Wage Increase",
+    "domain": "Economics",
+    "problem": "A city raises the minimum wage by 40% to reduce poverty.",
+    "firstOrder": "Low-wage workers earn more. Consumer spending increases in working-class neighborhoods. Poverty rate dips.",
+    "secondOrder": "Businesses automate roles that are now more expensive than machines. Small businesses with thin margins close or reduce hours. Hiring of inexperienced workers drops as the cost of 'taking a chance' rises. Prices rise, partially offsetting wage gains for the very workers the policy was designed to help.",
+    "lesson": "The first-order effect helps current employees; the second-order effect hurts future ones. Policy debates that only discuss first-order effects are incomplete by design.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:monetarism",
+    "type": "standard",
+    "concept": "Monetarism",
+    "domain": "Economics",
+    "oneliner": "The money supply is the primary driver of economic activity and inflation. Milton Friedman.",
+    "whyItMatters": "'Inflation is always and everywhere a monetary phenomenon.' Influenced central banking's focus on money supply control.",
+    "analogy": "The economy runs on money like a car runs on fuel — too little stalls it, too much overheats it."
+  },
+  {
+    "id": "economics:monopsony",
+    "type": "standard",
+    "concept": "Monopsony",
+    "domain": "Economics",
+    "oneliner": "A market with many sellers but only one buyer — the buyer has disproportionate power. Mirror of monopoly.",
+    "whyItMatters": "Amazon's relationship with publishers. Walmart with suppliers. The military with defense contractors.",
+    "analogy": "Monopoly's mirror twin — instead of one seller controlling price, one buyer does."
+  },
+  {
+    "id": "economics:monopsony-power",
+    "type": "standard",
+    "concept": "Monopsony Power",
+    "domain": "Economics",
+    "oneliner": "When a single buyer dominates a market, they can suppress prices below competitive levels — the mirror image of monopoly.",
+    "whyItMatters": "Amazon in retail, Walmart in rural labor markets, hospital chains in nursing. Monopsony depresses wages and supplier prices without the visibility of monopoly pricing.",
+    "analogy": "Like being the only restaurant in town that buys from local farmers — you set the price, and they take it or lose everything.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:moral-hazard",
+    "type": "standard",
+    "concept": "Moral Hazard",
+    "domain": "Economics",
+    "oneliner": "Taking more risk because you don't bear the full consequences — costs borne by someone else.",
+    "whyItMatters": "Why insured drivers are reckless, bailed-out banks took excess risk, all-you-can-eat buffets exist.",
+    "analogy": "Gambling with someone else's money — upside is yours, downside is theirs."
+  },
+  {
+    "id": "economics:moral-suasion",
+    "type": "standard",
+    "concept": "Moral Suasion",
+    "domain": "Economics",
+    "oneliner": "Central banks influencing behavior through persuasion rather than policy changes — jawboning.",
+    "whyItMatters": "Fed chair speeches move markets before any actual policy change. Expectations management is a policy tool.",
+    "analogy": "The central bank clearing its throat loudly — sometimes just the threat of action is more powerful than acting."
+  },
+  {
+    "id": "economics:network-effects",
+    "type": "standard",
+    "concept": "Network Effects",
+    "domain": "Economics",
+    "oneliner": "A product becomes more valuable as more people use it — each user increases value for all.",
+    "whyItMatters": "Why social networks, payment systems, and languages tend toward monopoly. The moat behind Facebook, Visa, English.",
+    "analogy": "A telephone is useless alone. With a billion users, indispensable. Each new user makes yours more valuable."
+  },
+  {
+    "id": "economics:opportunity-cost",
+    "type": "standard",
+    "concept": "Opportunity Cost",
+    "domain": "Economics",
+    "oneliner": "The value of the next-best alternative you give up when choosing. Every decision has one.",
+    "whyItMatters": "The most important concept in economics. Choosing a meeting isn't free — the cost is whatever else you'd have done.",
+    "analogy": "The ghost of the path not taken — every yes is a no to something else."
+  },
+  {
+    "id": "economics:opportunity-zone",
+    "type": "standard",
+    "concept": "Opportunity Zone",
+    "domain": "Economics",
+    "oneliner": "A designated area where investments receive tax advantages — created to spur development in distressed communities.",
+    "whyItMatters": "US Opportunity Zones (2017 Tax Act) attracted capital but critics say benefits went to developers, not residents.",
+    "analogy": "Tax breaks with a zip code — investing in designated areas gets you tax advantages, but who actually benefits is debated."
+  },
+  {
+    "id": "economics:opportunity-zone-economics",
+    "type": "standard",
+    "concept": "Opportunity Zone Economics",
+    "domain": "Economics",
+    "oneliner": "Tax incentives for investing in underserved areas — designed to redirect capital toward communities that markets have neglected.",
+    "whyItMatters": "Theory: capital gains deferrals attract investment to poor areas. Reality: much investment goes to zones that were already gentrifying. Incentive design must account for who can access the incentive, not just who should.",
+    "analogy": "Like dropping food aid in areas where only people with trucks can reach it — the aid exists, but the delivery mechanism determines who benefits.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:ostrom-s-principles",
+    "type": "standard",
+    "concept": "Ostrom's Principles",
+    "domain": "Economics",
+    "oneliner": "Elinor Ostrom's eight rules for successfully managing shared resources without privatization or government control.",
+    "whyItMatters": "Won the Nobel by disproving the inevitability of the tragedy of the commons. Communities CAN self-govern fisheries, forests, and irrigation — if they follow specific design principles around boundaries, monitoring, and graduated sanctions.",
+    "analogy": "Like a co-op building where residents collectively manage shared spaces — it works with clear rules, fair enforcement, and collective decision-making.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:paradox-of-thrift",
+    "type": "standard",
+    "concept": "Paradox of Thrift",
+    "domain": "Economics",
+    "oneliner": "If everyone saves more during a recession, total spending drops, making the recession worse.",
+    "whyItMatters": "Individual rationality (save during uncertainty) creates collective irrationality (economy contracts further).",
+    "analogy": "Everyone doing the smart thing simultaneously makes everyone worse off — rational individuals, irrational outcome."
+  },
+  {
+    "id": "economics:phillips-curve",
+    "type": "standard",
+    "concept": "Phillips Curve",
+    "domain": "Economics",
+    "oneliner": "The historical inverse relationship between unemployment and inflation — lower unemployment tends to mean higher inflation.",
+    "whyItMatters": "Central banks use it (with caveats) to guide monetary policy. The relationship broke down in the 1970s stagflation.",
+    "analogy": "The economy's tradeoff dial — turn unemployment down and inflation tends to go up, and vice versa."
+  },
+  {
+    "id": "economics:prebisch-singer-hypothesis",
+    "type": "standard",
+    "concept": "Prebisch-Singer Hypothesis",
+    "domain": "Economics",
+    "oneliner": "Commodity prices decline relative to manufactured goods over time, trapping commodity-exporting nations in permanent trade disadvantage.",
+    "whyItMatters": "Explains post-colonial economic structure: nations that export raw materials subsidize nations that export finished products. Breaking this pattern requires industrialization.",
+    "analogy": "Like selling flour while buying bread — the value added in processing always flows to the processor.",
+    "level": "advanced"
+  },
+  {
+    "id": "economics:predatory-pricing",
+    "type": "standard",
+    "concept": "Predatory Pricing",
+    "domain": "Economics",
+    "oneliner": "Selling below cost to drive competitors out, then raising prices once you have monopoly power.",
+    "whyItMatters": "The playbook of tech platform subsidies: lose money per ride/delivery until competitors die, then extract monopoly rents. Short-term consumer benefit, long-term market damage.",
+    "analogy": "Like a new restaurant giving away free meals until every other restaurant on the block closes — then tripling prices.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:price-elasticity",
+    "type": "standard",
+    "concept": "Price Elasticity",
+    "domain": "Economics",
+    "oneliner": "How much demand changes when price changes. Elastic: demand shifts a lot (luxury goods). Inelastic: barely shifts (insulin, gas).",
+    "whyItMatters": "It determines pricing strategy. If your product is inelastic, you can raise prices without losing customers.",
+    "analogy": "How sensitive your customers are to price changes — some will leave over a penny, others won't flinch at 50%."
+  },
+  {
+    "id": "economics:principal-agent-problem",
+    "type": "standard",
+    "concept": "Principal-Agent Problem",
+    "domain": "Economics",
+    "oneliner": "When someone (agent) acts on behalf of another (principal) but has different incentives.",
+    "whyItMatters": "CEOs vs shareholders, politicians vs voters, real estate agents vs homeowners. Misaligned incentives everywhere.",
+    "analogy": "Hiring someone to watch your house who benefits from a longer, more expensive renovation."
+  },
+  {
+    "id": "economics:prisoner-s-dilemma-iterated",
+    "type": "standard",
+    "concept": "Prisoner's Dilemma (Iterated)",
+    "domain": "Economics",
+    "oneliner": "When the prisoner's dilemma is played repeatedly, cooperation becomes rational because reputation and retaliation matter.",
+    "whyItMatters": "Axelrod's tournaments showed 'tit for tat' (cooperate first, then mirror the other player) consistently wins.",
+    "analogy": "The one-shot game says betray. The repeated game says cooperate — because you'll see each other again."
+  },
+  {
+    "id": "economics:purchasing-power",
+    "type": "standard",
+    "concept": "Purchasing Power",
+    "domain": "Economics",
+    "oneliner": "The quantity of goods and services that can be bought with a unit of currency — the real value of money.",
+    "whyItMatters": "$100 in 1980 had the purchasing power of ~$370 today. Nominal wages mean nothing without adjusting for purchasing power.",
+    "analogy": "What your money can actually buy — the real score, not the nominal number on the paycheck."
+  },
+  {
+    "id": "economics:purchasing-power-parity",
+    "type": "standard",
+    "concept": "Purchasing Power Parity",
+    "domain": "Economics",
+    "oneliner": "The theory that exchange rates should adjust so that identical goods cost the same in different countries.",
+    "whyItMatters": "The Big Mac Index uses it — if a Big Mac costs $5 in the US and $3 in Mexico, the peso is undervalued.",
+    "analogy": "A hamburger should cost the same everywhere after converting currencies — the gap reveals over/undervalued currencies."
+  },
+  {
+    "id": "economics:quantitative-easing",
+    "type": "standard",
+    "concept": "Quantitative Easing",
+    "domain": "Economics",
+    "oneliner": "Central banks buying government bonds and other assets to inject money directly into the financial system.",
+    "whyItMatters": "Used massively after 2008 and during COVID. Critics worry it inflates asset prices and widens wealth inequality.",
+    "analogy": "The central bank's emergency money printer — not literally, but effectively flooding the system with cash."
+  },
+  {
+    "id": "economics:quantitative-easing-after-a-crisis",
+    "type": "application",
+    "concept": "Quantitative Easing After a Crisis",
+    "domain": "Economics",
+    "problem": "A central bank floods the economy with money (QE) to prevent a recession after a financial crisis.",
+    "firstOrder": "Interest rates drop. Borrowing becomes cheap. Asset prices recover. Banks stabilize. Immediate economic collapse is averted.",
+    "secondOrder": "Asset owners (already wealthy) benefit disproportionately, widening inequality. Zombie companies survive on cheap debt, reducing productivity growth. Savers are punished with negative real returns. When QE eventually ends, markets are addicted to cheap money, and withdrawal creates its own crisis.",
+    "lesson": "Emergency medicine has side effects. QE solved the acute crisis but created chronic conditions. Second-order thinking weighs not just 'did it work?' but 'what did it cost, and who pays later?'",
+    "level": "advanced"
+  },
+  {
+    "id": "economics:rational-expectations",
+    "type": "standard",
+    "concept": "Rational Expectations",
+    "domain": "Economics",
+    "oneliner": "The theory that people make economic decisions based on all available information and correct models of the economy.",
+    "whyItMatters": "It challenged Keynesian economics by arguing that government policy can't systematically fool people.",
+    "analogy": "People aren't stupid — they learn the government's playbook and adjust, making the plays less effective each time."
+  },
+  {
+    "id": "economics:regulatory-capture",
+    "type": "standard",
+    "concept": "Regulatory Capture",
+    "domain": "Economics",
+    "oneliner": "When a regulatory agency serves the interests of the industry it's supposed to regulate.",
+    "whyItMatters": "The revolving door between Wall Street and the SEC, between oil companies and the EPA.",
+    "analogy": "The watchdog becoming the pet — the agency that's supposed to police the industry starts working for it."
+  },
+  {
+    "id": "economics:reinsurance",
+    "type": "standard",
+    "concept": "Reinsurance",
+    "domain": "Economics",
+    "oneliner": "Insurance for insurance companies — spreading the risk of catastrophic events across a global network so no single entity bears the full cost.",
+    "whyItMatters": "Without reinsurance, a single hurricane could bankrupt every insurer in a region. The principle: when individual risks are correlated (everyone in Florida faces the same hurricane), you must spread to uncorrelated global risk pools.",
+    "analogy": "Like a safety net under a safety net — the first catches normal falls, the second catches the net itself.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:remote-work-mandate",
+    "type": "application",
+    "concept": "Remote Work Mandate",
+    "domain": "Economics",
+    "problem": "A company mandates full remote work to cut office costs by 40%.",
+    "firstOrder": "Immediate savings on rent, utilities, and office maintenance. Employees save commute time.",
+    "secondOrder": "Collaboration weakens as informal hallway interactions vanish. New hires onboard slower without osmotic learning. Company culture fragments into silos. Top talent in high-cost cities is now competing with global candidates willing to work for less.",
+    "lesson": "Cost savings are visible and immediate; cultural erosion is invisible and delayed. The second-order effects compound over years and are much harder to reverse than the first-order savings.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:rent-seeking",
+    "type": "standard",
+    "concept": "Rent-Seeking",
+    "domain": "Economics",
+    "oneliner": "Gaining wealth by manipulating the economic or political environment rather than creating new value.",
+    "whyItMatters": "Lobbying for favorable regulations, patent trolling, and regulatory capture are all rent-seeking.",
+    "analogy": "Making money by changing the rules of the game rather than playing it better."
+  },
+  {
+    "id": "economics:reserve-currency",
+    "type": "standard",
+    "concept": "Reserve Currency",
+    "domain": "Economics",
+    "oneliner": "A currency held in large quantities by central banks worldwide — currently the US dollar (~60% of global reserves).",
+    "whyItMatters": "It gives the issuing country enormous privilege: cheaper borrowing, global influence, sanctions power.",
+    "analogy": "The world's favorite savings account currency — everyone holds it, which means the issuer can borrow cheaply forever."
+  },
+  {
+    "id": "economics:revealed-preference",
+    "type": "standard",
+    "concept": "Revealed Preference",
+    "domain": "Economics",
+    "oneliner": "What people actually choose reveals their true preferences more reliably than what they say they prefer.",
+    "whyItMatters": "Samuelson's insight: ignore surveys, watch behavior. People say they value work-life balance but choose higher-paying jobs. Actions are the real data.",
+    "analogy": "Like judging a diet by what's in someone's shopping cart, not what they say they eat.",
+    "level": "foundational"
+  },
+  {
+    "id": "economics:seigniorage",
+    "type": "standard",
+    "concept": "Seigniorage",
+    "domain": "Economics",
+    "oneliner": "The profit a government makes by issuing currency that costs less to produce than its face value.",
+    "whyItMatters": "Explains why governments historically debased coinage, why central banks benefit from money creation, and the hidden taxation of inflation.",
+    "analogy": "Like a casino printing its own chips — each chip costs pennies to make but buys dollars of value at the tables.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:shadow-banking",
+    "type": "standard",
+    "concept": "Shadow Banking",
+    "domain": "Economics",
+    "oneliner": "Financial intermediation outside regulated banking — hedge funds, money markets, repo markets, structured products.",
+    "whyItMatters": "It was the hidden risk that caused the 2008 crisis. Same functions as banks but without the regulations or safety nets.",
+    "analogy": "The financial system's unregulated twin — doing banking without being a bank, and without the rules."
+  },
+  {
+    "id": "economics:stagflation",
+    "type": "standard",
+    "concept": "Stagflation",
+    "domain": "Economics",
+    "oneliner": "The combination of high inflation AND high unemployment — supposedly impossible under standard Keynesian theory.",
+    "whyItMatters": "It plagued the 1970s US economy and proved that economic theory was incomplete. No easy policy solution exists.",
+    "analogy": "The economic equivalent of your car overheating while going uphill in the wrong gear — everything wrong simultaneously."
+  },
+  {
+    "id": "economics:sticky-prices",
+    "type": "standard",
+    "concept": "Sticky Prices",
+    "domain": "Economics",
+    "oneliner": "Prices adjust slowly to changes in supply and demand because of menu costs, contracts, and psychological resistance.",
+    "whyItMatters": "Explains why monetary policy works (money isn't neutral in the short run) and why deflation is dangerous (wages resist downward adjustment).",
+    "analogy": "Like turning a large ship — the rudder moves immediately, but the ship takes time to change course.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:supply-and-demand",
+    "type": "standard",
+    "concept": "Supply and Demand",
+    "domain": "Economics",
+    "oneliner": "Price determined by intersection of what sellers provide and what buyers want.",
+    "whyItMatters": "Explains why concert tickets cost more than pens, housing prices vary by city, minimum wages are debated.",
+    "analogy": "The invisible negotiation in every market — buyers and sellers finding the agree price."
+  },
+  {
+    "id": "economics:the-cobra-effect",
+    "type": "scenario",
+    "concept": "The Cobra Effect",
+    "domain": "Economics",
+    "scenario": "A city government offers a bounty for each dead cobra to reduce the snake population. Cobra numbers initially drop, then spike as people start breeding cobras for the bounty. When the program is cancelled, breeders release their now-worthless cobras.",
+    "relevantConcepts": [
+      "Goodhart's Law",
+      "Incentives",
+      "Unintended Consequences",
+      "Feedback Loops"
+    ],
+    "domains": [
+      "Economics",
+      "Systems Thinking"
+    ],
+    "explanation": "Classic perverse incentive: the measure (dead cobras) diverged from the goal (fewer cobras). Goodhart's Law in action — optimizing the metric created a new, worse problem. Effective policy design must model behavioral responses, not just direct effects.",
+    "level": "foundational"
+  },
+  {
+    "id": "economics:the-gentrification-spiral",
+    "type": "scenario",
+    "concept": "The Gentrification Spiral",
+    "domain": "Economics",
+    "scenario": "Artists move to a cheap neighborhood, creating cultural appeal. Cafes and galleries follow. Property values rise. Developers build luxury units. Original artists and residents can no longer afford to live there. The neighborhood's appeal is destroyed by its own success.",
+    "relevantConcepts": [
+      "Feedback Loops",
+      "Creative Destruction",
+      "Tragedy of the Commons",
+      "Emergent Properties"
+    ],
+    "domains": [
+      "Economics",
+      "Systems Thinking",
+      "Art & Architecture"
+    ],
+    "explanation": "A positive feedback loop where cultural capital attracts financial capital, which destroys cultural capital. The emergent property (neighborhood character) can't be preserved by the market forces that discovered it. This is the tragedy of the commons applied to cultural ecosystems.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:the-metric-maze",
+    "type": "scenario",
+    "concept": "The Metric Maze",
+    "domain": "Economics",
+    "scenario": "A tech company ties engineering bonuses to lines of code written. Verbose, redundant code surges. Code quality drops. When they switch to bugs-fixed, engineers start writing bugs to fix later. When they switch to uptime, no one ships new features.",
+    "relevantConcepts": [
+      "Goodhart's Law",
+      "Principal-Agent Problem",
+      "Incentives",
+      "Campbell's Law"
+    ],
+    "domains": [
+      "Economics",
+      "Systems Thinking",
+      "Technology"
+    ],
+    "explanation": "Each metric becomes a target that's gamed, corrupting the measure. The deeper problem is that engineering quality is multidimensional and can't be captured by a single number. Effective measurement systems use balanced scorecards and qualitative assessment alongside quantitative metrics.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:the-reputation-laundry",
+    "type": "scenario",
+    "concept": "The Reputation Laundry",
+    "domain": "Economics",
+    "scenario": "A company with a poor environmental record acquires a beloved sustainable brand. Consumer trust transfers to the parent company without any actual change in practices. Environmental NGOs protest, but consumer behavior doesn't change.",
+    "relevantConcepts": [
+      "Signaling Theory",
+      "Asymmetric Information",
+      "Halo Effect",
+      "Brand Equity"
+    ],
+    "domains": [
+      "Economics",
+      "Psychology",
+      "Systems Thinking"
+    ],
+    "explanation": "Brand trust is a transferable asset. Acquisition launders reputation by exploiting consumers' reliance on brand signals rather than investigating practices. The Halo effect means the good brand's glow covers the parent's shadows. Solving this requires transparency infrastructure, not just better consumer education.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:time-inconsistency-problem",
+    "type": "standard",
+    "concept": "Time Inconsistency Problem",
+    "domain": "Economics",
+    "oneliner": "Optimal policies announced today become suboptimal to follow through on tomorrow, creating a credibility gap.",
+    "whyItMatters": "Central banks promise low inflation but face pressure to stimulate. Governments promise fiscal discipline but spend before elections. The solution is credible commitment mechanisms.",
+    "analogy": "Like a dieter who plans to eat healthy tomorrow but always finds a reason to cheat when tomorrow arrives.",
+    "level": "advanced"
+  },
+  {
+    "id": "economics:tobin-tax",
+    "type": "standard",
+    "concept": "Tobin Tax",
+    "domain": "Economics",
+    "oneliner": "A small tax on financial transactions designed to reduce speculative trading and market volatility.",
+    "whyItMatters": "Proposed by James Tobin to stabilize currency markets. Proponents say it curbs speculation. Critics say it reduces liquidity.",
+    "analogy": "A speed bump for financial markets — slowing down the fastest traders to reduce instability."
+  },
+  {
+    "id": "economics:tragedy-of-the-commons",
+    "type": "standard",
+    "concept": "Tragedy of the Commons",
+    "domain": "Economics",
+    "oneliner": "Shared resources get depleted when individuals act in self-interest — each takes more than sustainable.",
+    "whyItMatters": "Explains overfishing, traffic congestion, climate change. Solutions: privatization, regulation, community governance.",
+    "analogy": "A shared fridge at work — everyone takes, nobody restocks, eventually empty."
+  },
+  {
+    "id": "economics:trickle-down-economics",
+    "type": "standard",
+    "concept": "Trickle-Down Economics",
+    "domain": "Economics",
+    "oneliner": "The theory that benefits to the wealthy eventually 'trickle down' to everyone through investment and job creation.",
+    "whyItMatters": "Widely debated. Proponents say tax cuts for the rich boost growth. Critics say the evidence shows wealth concentrates, not trickles.",
+    "analogy": "Filling the top glass and hoping it overflows to the glasses below — the debate is whether it actually does."
+  },
+  {
+    "id": "economics:trilemma-of-international-finance",
+    "type": "standard",
+    "concept": "Trilemma of International Finance",
+    "domain": "Economics",
+    "oneliner": "A country can have at most two of: fixed exchange rate, free capital flows, independent monetary policy. Never all three.",
+    "whyItMatters": "The 'impossible trinity' forces every nation to choose. China restricts capital flows; the US floats its currency; the Eurozone sacrifices national monetary policy.",
+    "analogy": "Like a three-legged stool where you can only build two legs — you must choose which two and accept the wobble.",
+    "level": "advanced"
+  },
+  {
+    "id": "economics:universal-basic-income",
+    "type": "application",
+    "concept": "Universal Basic Income",
+    "domain": "Economics",
+    "problem": "A government provides every citizen with $1,000/month unconditionally to reduce poverty and simplify welfare.",
+    "firstOrder": "Poverty decreases. Bureaucratic welfare administration costs drop. People have more freedom to pursue education, caregiving, or entrepreneurship.",
+    "secondOrder": "Inflation may erode purchasing power if production doesn't scale with demand. Labor supply for unpleasant but necessary jobs may drop, increasing wages (good for workers, bad for consumers). Social meaning tied to 'earning a living' is disrupted, creating identity crises for some. Tax burden shifts dramatically.",
+    "lesson": "UBI solves the administrative problem of welfare but introduces macroeconomic and cultural second-order effects. The economic question is tractable; the identity question — what is work for? — is not.",
+    "level": "advanced"
+  },
+  {
+    "id": "economics:veblen-good",
+    "type": "standard",
+    "concept": "Veblen Good",
+    "domain": "Economics",
+    "oneliner": "A luxury good where demand increases as price increases — the high price IS the point. Status signaling.",
+    "whyItMatters": "Rolex watches, designer handbags, expensive wine. People buy them BECAUSE they're expensive, not despite it.",
+    "analogy": "A product whose value is its price tag — if it got cheaper, fewer people would want it."
+  },
+  {
+    "id": "economics:velocity-of-money",
+    "type": "standard",
+    "concept": "Velocity of Money",
+    "domain": "Economics",
+    "oneliner": "How many times a unit of currency changes hands in a given period — a measure of economic activity.",
+    "whyItMatters": "High velocity = money circulating actively (healthy economy). Low velocity = money being hoarded (recession signal).",
+    "analogy": "How fast money moves through the economy — like water flow vs. stagnant pools."
+  },
+  {
+    "id": "economics:vickrey-auction",
+    "type": "standard",
+    "concept": "Vickrey Auction",
+    "domain": "Economics",
+    "oneliner": "A sealed-bid auction where the highest bidder wins but pays the second-highest bid — making honest bidding the optimal strategy.",
+    "whyItMatters": "Eliminates the winner's curse and strategic underbidding. Used by Google for ad auctions. Mechanism design at its finest: change the rules so truth-telling is self-interested.",
+    "analogy": "Like a negotiation where you benefit from being honest because the system protects you from overpaying.",
+    "level": "advanced"
+  },
+  {
+    "id": "economics:winner-s-curse",
+    "type": "standard",
+    "concept": "Winner's Curse",
+    "domain": "Economics",
+    "oneliner": "The winner of a competitive auction has likely overpaid — winning itself is evidence of overestimation.",
+    "whyItMatters": "Applies to acquisitions, talent bidding wars, and contract negotiations. If you beat all competitors, ask: what do they know that I don't?",
+    "analogy": "Like winning a jar-of-jelly-beans guessing contest — the closest guess wins, but the winner's guess is almost always too high.",
+    "level": "intermediate"
+  },
+  {
+    "id": "economics:yield-curve",
+    "type": "standard",
+    "concept": "Yield Curve",
+    "domain": "Economics",
+    "oneliner": "A graph of bond yields vs. maturity — normally upward-sloping (longer = higher yield). Inversion signals recession.",
+    "whyItMatters": "An inverted yield curve has predicted every US recession since 1955 with only one false positive.",
+    "analogy": "The economy's crystal ball — when short-term rates exceed long-term rates, trouble is coming."
+  }
+]

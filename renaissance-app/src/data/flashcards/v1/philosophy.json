@@ -1,0 +1,922 @@
+[
+  {
+    "id": "philosophy:absurdism",
+    "type": "standard",
+    "concept": "Absurdism",
+    "domain": "Philosophy",
+    "oneliner": "Camus' position: the world is meaningless AND we should embrace life anyway — neither despair nor false hope.",
+    "whyItMatters": "Unlike nihilism (there's no meaning) or existentialism (create your own), absurdism says: acknowledge the absurdity and live fully despite it.",
+    "analogy": "Imagine Sisyphus happy — pushing the boulder knowing it'll roll back, and finding joy in the pushing itself."
+  },
+  {
+    "id": "philosophy:ad-hominem",
+    "type": "standard",
+    "concept": "Ad Hominem",
+    "domain": "Philosophy",
+    "oneliner": "Attacking the person making an argument rather than the argument itself.",
+    "whyItMatters": "'You can't talk about health, you're overweight.' The speaker's character doesn't invalidate their logic.",
+    "analogy": "Shooting the messenger instead of reading the message."
+  },
+  {
+    "id": "philosophy:ahimsa",
+    "type": "standard",
+    "concept": "Ahimsa",
+    "domain": "Philosophy",
+    "oneliner": "Non-harm as the highest ethical principle — extending moral consideration to all sentient beings.",
+    "whyItMatters": "Foundation of Jain, Hindu, and Buddhist ethics. Gandhi operationalized it politically. It reframes ethics from 'what should I do?' to 'what harm should I avoid?'",
+    "analogy": "Like the Hippocratic oath applied to all of life — first, do no harm, then figure out how to help.",
+    "level": "foundational"
+  },
+  {
+    "id": "philosophy:al-farabi-s-virtuous-city",
+    "type": "standard",
+    "concept": "Al-Farabi's Virtuous City",
+    "domain": "Philosophy",
+    "oneliner": "A just society requires philosopher-leaders who align governance with truth — the Islamic parallel to Plato's Republic.",
+    "whyItMatters": "Al-Farabi synthesized Greek philosophy with Islamic thought, arguing that political leadership requires both wisdom and moral character.",
+    "analogy": "Like an orchestra needing both a great conductor and great musicians — leadership sets the direction, but virtue must be distributed.",
+    "level": "advanced"
+  },
+  {
+    "id": "philosophy:appeal-to-authority",
+    "type": "standard",
+    "concept": "Appeal to Authority",
+    "domain": "Philosophy",
+    "oneliner": "Using an expert's opinion as proof — valid when relevant expertise, fallacious when the authority is unqualified.",
+    "whyItMatters": "A physicist's opinion on physics matters. A physicist's opinion on nutrition doesn't carry special weight.",
+    "analogy": "Using someone's credentials in one area to validate claims in a completely different area."
+  },
+  {
+    "id": "philosophy:aztec-teotl-monism",
+    "type": "standard",
+    "concept": "Aztec Teotl Monism",
+    "domain": "Philosophy",
+    "oneliner": "Reality is a single dynamic force (teotl) expressing itself in complementary opposites — not good vs evil, but balance vs imbalance.",
+    "whyItMatters": "Mesoamerican metaphysics framed the universe as continuous process, not static categories. Disruption isn't destruction — it's teotl rebalancing.",
+    "analogy": "Like a spinning top — the motion itself creates the stability. Stop spinning and it falls.",
+    "level": "advanced"
+  },
+  {
+    "id": "philosophy:banning-anonymous-social-media",
+    "type": "application",
+    "concept": "Banning Anonymous Social Media",
+    "domain": "Philosophy",
+    "problem": "A government requires real-name verification for all social media accounts to reduce cyberbullying and misinformation.",
+    "firstOrder": "Cyberbullying accountability increases. Bot and fake account operations become harder. Online discourse becomes more civil. People think twice before posting.",
+    "secondOrder": "Whistleblowers, dissidents, and domestic abuse survivors lose their safe communication channels. LGBTQ+ youth in hostile families lose anonymous support communities. Authoritarian governments gain a turnkey surveillance tool. Self-censorship increases, but so does conformity — the 'civility' is actually silence.",
+    "lesson": "Anonymity enables both the worst (harassment) and the best (dissent, vulnerability, freedom) of online behavior. Banning anonymity is a second-order weapon against vulnerable populations who need it most. The harassment problem requires targeted solutions, not architectural ones.",
+    "level": "advanced"
+  },
+  {
+    "id": "philosophy:categorical-imperative",
+    "type": "standard",
+    "concept": "Categorical Imperative",
+    "domain": "Philosophy",
+    "oneliner": "Kant: act only by rules you could will to be universal laws. Treat people as ends, never merely as means.",
+    "whyItMatters": "The philosophical backbone of human rights and dignity. What if everyone did what you're about to do?",
+    "analogy": "The golden rule with teeth — not 'be nice' but 'only act in ways that work if everyone did the same.'"
+  },
+  {
+    "id": "philosophy:compatibilism",
+    "type": "standard",
+    "concept": "Compatibilism",
+    "domain": "Philosophy",
+    "oneliner": "The position that free will and determinism are compatible — you can be determined AND free.",
+    "whyItMatters": "The dominant view among philosophers. 'Free' means acting according to your own desires, even if those desires are determined.",
+    "analogy": "You're free if you do what you want — even if what you want is itself caused by prior events."
+  },
+  {
+    "id": "philosophy:confucian-rectification-of-names",
+    "type": "standard",
+    "concept": "Confucian Rectification of Names",
+    "domain": "Philosophy",
+    "oneliner": "Social disorder begins when words no longer match reality — a ruler who doesn't rule, a father who doesn't parent.",
+    "whyItMatters": "Confucius argued that precise language is the foundation of good governance. When job titles, metrics, or labels drift from what they describe, dysfunction follows.",
+    "analogy": "Like a map that no longer matches the terrain — the more you rely on it, the more lost you get.",
+    "level": "intermediate"
+  },
+  {
+    "id": "philosophy:consequentialism",
+    "type": "standard",
+    "concept": "Consequentialism",
+    "domain": "Philosophy",
+    "oneliner": "Judging actions solely by their outcomes — the ends justify the means. Utilitarianism is the most common form.",
+    "whyItMatters": "It says a lie that saves a life is morally good. Critics say it can justify terrible acts if the outcome is positive enough.",
+    "analogy": "Scorecard ethics — only the final result matters, not how you got there."
+  },
+  {
+    "id": "philosophy:constraints-and-freedom",
+    "type": "connection",
+    "concept": "Constraints and Freedom",
+    "domain": "Philosophy",
+    "conceptA": "Formal Constraints",
+    "domainA": "Art & Architecture",
+    "conceptB": "Bounded Rationality",
+    "domainB": "Economics",
+    "connection": "Artists have long known that constraints enhance creativity — sonnets have 14 lines, haiku has 17 syllables, architecture has gravity. Herbert Simon showed the same in economics: bounded rationality (limited information, time, and compute) produces satisficing rather than optimizing, which is often more creative and robust.",
+    "insight": "Twitter's 280-character limit, the three-act structure, and a startup's limited budget all channel creativity by removing infinite choice. The paradox: total freedom paralyzes (paradox of choice); constraints liberate by narrowing the search space.",
+    "prompt": "Why do some of the most creative works emerge from the tightest constraints? How is writing a haiku structurally similar to making a business decision with incomplete information?"
+  },
+  {
+    "id": "philosophy:daoism-s-uncarved-block-pu",
+    "type": "standard",
+    "concept": "Daoism's Uncarved Block (Pu)",
+    "domain": "Philosophy",
+    "oneliner": "The natural, unprocessed state holds the most potential — over-refinement destroys original simplicity.",
+    "whyItMatters": "Argues that complexity, specialization, and 'improvement' can destroy the adaptability of the original. In product terms: the MVP often has more potential than the overbuilt v3.",
+    "analogy": "Like a block of marble before the sculptor — every cut removes possibilities. The uncarved block contains all possible statues.",
+    "level": "foundational"
+  },
+  {
+    "id": "philosophy:deontology",
+    "type": "standard",
+    "concept": "Deontology",
+    "domain": "Philosophy",
+    "oneliner": "Ethics based on rules and duties rather than consequences — some actions are right or wrong regardless of outcome. Kant.",
+    "whyItMatters": "It says lying is always wrong, even if it would save a life. Intention and duty matter more than results.",
+    "analogy": "Moral rules with no exceptions — the ethical equivalent of 'the law is the law.'"
+  },
+  {
+    "id": "philosophy:dependent-origination",
+    "type": "standard",
+    "concept": "Dependent Origination",
+    "domain": "Philosophy",
+    "oneliner": "Nothing arises independently — every phenomenon exists only in relation to causes and conditions.",
+    "whyItMatters": "Central to Buddhist philosophy, this dissolves the notion of fixed essences. Applied to systems thinking, it means every 'root cause' is itself caused.",
+    "analogy": "Like a knot that exists only because of the rope and the pulling — remove either and the knot vanishes, yet the rope remains.",
+    "level": "intermediate"
+  },
+  {
+    "id": "philosophy:determinism-vs-free-will",
+    "type": "standard",
+    "concept": "Determinism vs Free Will",
+    "domain": "Philosophy",
+    "oneliner": "Determinism: every event caused by prior events and natural laws. Free will: we genuinely choose our actions.",
+    "whyItMatters": "If determinism is true, moral responsibility gets complicated. If free will is true, where does it come from in a physical brain?",
+    "analogy": "Are you the driver or just a passenger who thinks they're steering?"
+  },
+  {
+    "id": "philosophy:dharma-duty-cosmic-order",
+    "type": "standard",
+    "concept": "Dharma (Duty/Cosmic Order)",
+    "domain": "Philosophy",
+    "oneliner": "The right action depends on who you are, where you are, and what the situation requires — ethics are contextual.",
+    "whyItMatters": "Hindu concept where moral duty is role-specific, not universal. A leader's dharma differs from a student's. Challenges one-size-fits-all ethical frameworks.",
+    "analogy": "Like a doctor and a soldier facing the same wounded person — their duties pull in different directions, and both can be right.",
+    "level": "intermediate"
+  },
+  {
+    "id": "philosophy:dialectics",
+    "type": "standard",
+    "concept": "Dialectics",
+    "domain": "Philosophy",
+    "oneliner": "Hegel's method: thesis + antithesis → synthesis. Ideas evolve through contradiction and resolution.",
+    "whyItMatters": "Marx applied it to history (dialectical materialism). It's a framework for understanding how ideas and societies evolve through conflict.",
+    "analogy": "Intellectual judo — instead of defeating an opposing idea, you absorb it into a higher-level truth."
+  },
+  {
+    "id": "philosophy:dualism",
+    "type": "standard",
+    "concept": "Dualism",
+    "domain": "Philosophy",
+    "oneliner": "The view that mind and body are fundamentally different substances — Descartes' 'I think therefore I am.'",
+    "whyItMatters": "It created the mind-body problem: if mind is non-physical, how does it interact with the physical brain?",
+    "analogy": "Ghost in the machine — the idea that 'you' are a soul driving a body like a pilot in a mech suit."
+  },
+  {
+    "id": "philosophy:emergence-and-reductionism",
+    "type": "connection",
+    "concept": "Emergence and Reductionism",
+    "domain": "Philosophy",
+    "conceptA": "Reductionism",
+    "domainA": "Philosophy",
+    "conceptB": "Emergence",
+    "domainB": "Systems Thinking",
+    "connection": "Reductionism says complex phenomena can be explained by their parts. Emergence says some properties only exist at the system level and cannot be predicted from parts alone. The tension between these views is the central debate in philosophy of science.",
+    "insight": "You can know everything about individual water molecules and still not predict wetness. You can know everything about individual neurons and still not predict consciousness. Emergence doesn't reject reductionism — it identifies its limits. The most productive science lives in the tension between the two.",
+    "prompt": "Can you predict a traffic jam from understanding how a single car works? What does this tell you about the limits of reductionism for understanding economies, brains, or ecosystems?"
+  },
+  {
+    "id": "philosophy:emergent-properties",
+    "type": "standard",
+    "concept": "Emergent Properties",
+    "domain": "Philosophy",
+    "oneliner": "Properties that arise from complex systems but aren't present in individual components — consciousness from neurons, wetness from H2O molecules.",
+    "whyItMatters": "It's the key puzzle of consciousness: how does subjective experience emerge from neurons? No one knows.",
+    "analogy": "The whole being more than the sum of its parts — individual water molecules aren't wet, but a glass of water is."
+  },
+  {
+    "id": "philosophy:empirical-vs-normative",
+    "type": "standard",
+    "concept": "Empirical vs Normative",
+    "domain": "Philosophy",
+    "oneliner": "Empirical: what IS (descriptive, testable). Normative: what SHOULD BE (prescriptive, value-laden).",
+    "whyItMatters": "Confusing the two is one of the most common reasoning errors. Science is empirical. Ethics is normative.",
+    "analogy": "'People DO steal' is empirical. 'People SHOULDN'T steal' is normative. They require completely different types of arguments."
+  },
+  {
+    "id": "philosophy:empiricism-vs-rationalism",
+    "type": "standard",
+    "concept": "Empiricism vs Rationalism",
+    "domain": "Philosophy",
+    "oneliner": "Empiricism: knowledge from experience (Locke, Hume). Rationalism: knowledge from reason (Descartes, Leibniz).",
+    "whyItMatters": "This debate shaped the scientific method. Science is empiricist, math is rationalist, most knowledge uses both.",
+    "analogy": "Empiricism = trust your eyes. Rationalism = trust your logic. Science says: use both, verify with data."
+  },
+  {
+    "id": "philosophy:epistemic-bubbles-vs-echo-chambers",
+    "type": "standard",
+    "concept": "Epistemic Bubbles vs Echo Chambers",
+    "domain": "Philosophy",
+    "oneliner": "Bubbles: you don't hear other views (fixable by exposure). Chambers: you're taught to distrust other views (much harder to fix).",
+    "whyItMatters": "Echo chambers are epistemically worse because people inside them have reasons (however bad) to reject outside information.",
+    "analogy": "A bubble pops when you encounter reality. An echo chamber has built-in armor against outside information."
+  },
+  {
+    "id": "philosophy:epistemic-closure",
+    "type": "standard",
+    "concept": "Epistemic Closure",
+    "domain": "Philosophy",
+    "oneliner": "The principle that if you know P, and know that P implies Q, then you know Q — foundational in epistemology.",
+    "whyItMatters": "It seems obvious but creates paradoxes. If you know you have hands, and having hands means you're not a brain in a vat...",
+    "analogy": "The logical conveyor belt of knowledge — if you know the premises, you must accept the conclusion."
+  },
+  {
+    "id": "philosophy:epistemological-humility",
+    "type": "standard",
+    "concept": "Epistemological Humility",
+    "domain": "Philosophy",
+    "oneliner": "Acknowledging the limits of your own knowledge and the possibility that you're wrong.",
+    "whyItMatters": "The antidote to intellectual arrogance. The smartest people hold their beliefs with appropriate uncertainty.",
+    "analogy": "Knowing the boundaries of your own map — and being honest about where the 'here be dragons' zones are."
+  },
+  {
+    "id": "philosophy:epistemological-relativism",
+    "type": "standard",
+    "concept": "Epistemological Relativism",
+    "domain": "Philosophy",
+    "oneliner": "The view that knowledge claims are always relative to cultural, historical, or personal context — no view from nowhere.",
+    "whyItMatters": "Challenges the idea of objective truth. Taken to extremes, it undermines science. Moderated, it promotes intellectual humility.",
+    "analogy": "There's no God's-eye view — everyone sees from somewhere, and where you stand shapes what you see."
+  },
+  {
+    "id": "philosophy:epistemology",
+    "type": "standard",
+    "concept": "Epistemology",
+    "domain": "Philosophy",
+    "oneliner": "The study of knowledge — what can we know, how do we know it, and what justifies belief.",
+    "whyItMatters": "Every scientific method and legal standard of evidence flows from this. The foundation of rational inquiry.",
+    "analogy": "Philosophy's quality control — checking whether what we think we know actually holds up."
+  },
+  {
+    "id": "philosophy:ethics-and-evolution",
+    "type": "connection",
+    "concept": "Ethics and Evolution",
+    "domain": "Philosophy",
+    "conceptA": "Trolley Problem",
+    "domainA": "Philosophy",
+    "conceptB": "Kin Selection",
+    "domainB": "Biology",
+    "connection": "The trolley problem tests whether people favor utilitarian (save more lives) or deontological (don't actively kill) reasoning. Evolutionary biology suggests our moral intuitions evolved through kin selection and reciprocal altruism — we feel differently about harming family vs strangers because evolution shaped our moral hardware.",
+    "insight": "Moral philosophy asks 'what should we do?' Evolution asks 'why do we feel what we feel?' The trolley problem's emotional pull (it feels wrong to push someone) may be an evolved response optimized for small-group survival, not for modern ethical dilemmas. Understanding the evolutionary origin of moral intuitions doesn't settle ethics, but it explains why moral philosophy is hard.",
+    "prompt": "Why does pushing someone off a bridge feel worse than flipping a switch, even when the outcome is identical? What does kin selection predict about who we'd sacrifice?"
+  },
+  {
+    "id": "philosophy:existentialism",
+    "type": "standard",
+    "concept": "Existentialism",
+    "domain": "Philosophy",
+    "oneliner": "Existence precedes essence — you aren't born with purpose; you must create your own meaning. Sartre, Camus, Kierkegaard.",
+    "whyItMatters": "Rejects predetermined roles, insists on radical personal responsibility. Terrifying and liberating.",
+    "analogy": "No instruction manual for your life — you're writing it as you go."
+  },
+  {
+    "id": "philosophy:false-dichotomy",
+    "type": "standard",
+    "concept": "False Dichotomy",
+    "domain": "Philosophy",
+    "oneliner": "Presenting only two options when more exist — 'you're either with us or against us.'",
+    "whyItMatters": "Most political debates are built on false dichotomies. Reality usually has more than two options.",
+    "analogy": "Pretending there are only two doors when there are actually ten — forcing a choice that doesn't need to be forced."
+  },
+  {
+    "id": "philosophy:falsifiability",
+    "type": "standard",
+    "concept": "Falsifiability",
+    "domain": "Philosophy",
+    "oneliner": "Popper's criterion: a theory is scientific only if it can be proven wrong. If nothing could disprove it, it's not science.",
+    "whyItMatters": "It distinguishes science from pseudoscience. 'God works in mysterious ways' is unfalsifiable. 'Water boils at 100°C' is falsifiable.",
+    "analogy": "The test of intellectual honesty — if you can't specify what would prove you wrong, your belief isn't a theory, it's a religion."
+  },
+  {
+    "id": "philosophy:frantz-fanon-s-decolonization",
+    "type": "standard",
+    "concept": "Frantz Fanon's Decolonization",
+    "domain": "Philosophy",
+    "oneliner": "True liberation requires dismantling not just political control but the psychological internalization of the colonizer's worldview.",
+    "whyItMatters": "Fanon argued that colonized peoples adopt the colonizer's values, seeing themselves through alien eyes. Applies to any system where the dominated internalize the dominant framework.",
+    "analogy": "Like a prisoner who builds their own cage from habit — physical freedom means nothing if the mental walls remain.",
+    "level": "advanced"
+  },
+  {
+    "id": "philosophy:hermeneutics",
+    "type": "standard",
+    "concept": "Hermeneutics",
+    "domain": "Philosophy",
+    "oneliner": "The theory of interpretation — understanding a text (or situation) requires understanding the context that produced it.",
+    "whyItMatters": "Gadamer showed that all understanding is interpretation shaped by the interpreter's horizon. In data analysis: raw numbers don't speak for themselves.",
+    "analogy": "Like reading a letter — the words are the same, but the meaning changes completely depending on who wrote it and why.",
+    "level": "intermediate"
+  },
+  {
+    "id": "philosophy:ibn-khaldun-s-asabiyyah",
+    "type": "standard",
+    "concept": "Ibn Khaldun's Asabiyyah",
+    "domain": "Philosophy",
+    "oneliner": "Group solidarity is the engine of political power — civilizations rise on cohesion and fall when it erodes.",
+    "whyItMatters": "14th-century North African thinker who anticipated sociology by 400 years. Asabiyyah explains why startups beat incumbents and why empires decay from within.",
+    "analogy": "Like a rope made of many strands — strong when twisted together, useless when each strand pulls apart.",
+    "level": "intermediate"
+  },
+  {
+    "id": "philosophy:ikigai",
+    "type": "standard",
+    "concept": "Ikigai",
+    "domain": "Philosophy",
+    "oneliner": "Your reason for being — the intersection of what you love, what you're good at, what the world needs, and what you can be paid for.",
+    "whyItMatters": "Japanese concept for a life worth living. Unlike Western 'passion' advice, ikigai requires all four dimensions — passion without skill or market is just a hobby.",
+    "analogy": "Like the sweet spot on a Venn diagram of four circles — miss any one and the balance tips.",
+    "level": "foundational"
+  },
+  {
+    "id": "philosophy:is-ought-problem",
+    "type": "standard",
+    "concept": "Is-Ought Problem",
+    "domain": "Philosophy",
+    "oneliner": "Hume's observation that you cannot derive moral 'ought' statements from factual 'is' statements.",
+    "whyItMatters": "'Humans are selfish' doesn't mean 'humans ought to be selfish.' Facts and values are different categories.",
+    "analogy": "You can't get from a description of the world to a prescription for the world — maps don't generate directions."
+  },
+  {
+    "id": "philosophy:just-war-theory",
+    "type": "standard",
+    "concept": "Just War Theory",
+    "domain": "Philosophy",
+    "oneliner": "The ethical framework defining when war is morally justified (jus ad bellum) and what conduct is acceptable during war (jus in bello).",
+    "whyItMatters": "It requires legitimate authority, just cause, proportionality, and last resort. Applied to every modern conflict.",
+    "analogy": "The rules for when killing is morally permitted — even war has ethical boundaries."
+  },
+  {
+    "id": "philosophy:language-and-power",
+    "type": "connection",
+    "concept": "Language and Power",
+    "domain": "Philosophy",
+    "conceptA": "Sapir-Whorf Hypothesis",
+    "domainA": "Cognitive Science",
+    "conceptB": "Discourse Analysis",
+    "domainB": "Philosophy",
+    "connection": "Sapir-Whorf says language shapes thought. Foucault's discourse analysis says language shapes power — controlling the vocabulary controls what can be thought. Both identify language not as a neutral medium but as an active force structuring perception and possibility.",
+    "insight": "When a government renames 'torture' as 'enhanced interrogation,' they're exploiting Sapir-Whorf at the political level. When a company calls layoffs 'right-sizing,' they're controlling discourse. Understanding both the cognitive and political dimensions of language gives you a complete picture of how words shape reality.",
+    "prompt": "Why does it matter whether a conflict is called a 'war' or a 'police action'? How does the Sapir-Whorf hypothesis explain why this isn't just semantics?"
+  },
+  {
+    "id": "philosophy:legalism-han-feizi",
+    "type": "standard",
+    "concept": "Legalism (Han Feizi)",
+    "domain": "Philosophy",
+    "oneliner": "People respond to incentives, not morality — design systems with clear rules and consequences, not appeals to virtue.",
+    "whyItMatters": "Chinese Legalism is the philosophical ancestor of mechanism design and incentive engineering. It assumes self-interest and builds from there.",
+    "analogy": "Like a well-designed traffic system — it doesn't rely on drivers being good people, just on clear signals and consistent enforcement.",
+    "level": "intermediate"
+  },
+  {
+    "id": "philosophy:legalizing-all-drugs",
+    "type": "application",
+    "concept": "Legalizing All Drugs",
+    "domain": "Philosophy",
+    "problem": "A country fully legalizes all drugs, following Portugal's decriminalization model but going further with legal sales.",
+    "firstOrder": "Drug-related incarceration drops. Overdose deaths decrease as quality-controlled drugs replace street versions. Tax revenue from sales funds treatment. Criminal cartels lose their business model.",
+    "secondOrder": "Consumption increases as social stigma and access barriers fall. Corporate marketing of addictive substances creates a 'Big Tobacco 2.0' problem. Drug tourism strains local services. International pressure from neighboring countries that haven't legalized. Regulatory capture as the industry lobbies to weaken health protections.",
+    "lesson": "The harm of prohibition (incarceration, overdoses, cartels) is well-documented. The harm of commercialization (marketing addictive substances) is also well-documented. The second-order insight: decriminalization and legalization are very different policies with very different second-order effects.",
+    "level": "advanced"
+  },
+  {
+    "id": "philosophy:libertarianism",
+    "type": "standard",
+    "concept": "Libertarianism",
+    "domain": "Philosophy",
+    "oneliner": "The political philosophy prioritizing individual freedom — minimal government, maximum personal autonomy.",
+    "whyItMatters": "Ranges from classical liberalism to anarcho-capitalism. Core question: how much freedom should you sacrifice for collective benefit?",
+    "analogy": "The political philosophy that starts from 'leave me alone' and works outward."
+  },
+  {
+    "id": "philosophy:logical-fallacies",
+    "type": "standard",
+    "concept": "Logical Fallacies",
+    "domain": "Philosophy",
+    "oneliner": "Errors in reasoning that undermine argument validity — ad hominem, straw man, false dichotomy, appeal to authority.",
+    "whyItMatters": "Recognizing them is the single most useful critical thinking skill. They're everywhere in politics, media, and business.",
+    "analogy": "The cheat codes of bad argumentation — learn to spot them and most persuasion attempts fall apart."
+  },
+  {
+    "id": "philosophy:maat-egyptian-ethics",
+    "type": "standard",
+    "concept": "Maat (Egyptian Ethics)",
+    "domain": "Philosophy",
+    "oneliner": "Truth, justice, balance, and cosmic order — the ancient Egyptian principle that ethics and physics share the same foundation.",
+    "whyItMatters": "Predates Greek philosophy by millennia. Maat tied personal conduct to universal order — lying wasn't just wrong, it disrupted the cosmos.",
+    "analogy": "Like a gyroscope maintaining stability — when Maat is upheld, society stays balanced; when violated, everything wobbles.",
+    "level": "intermediate"
+  },
+  {
+    "id": "philosophy:marxism",
+    "type": "standard",
+    "concept": "Marxism",
+    "domain": "Philosophy",
+    "oneliner": "Marx's framework: history is driven by class struggle between those who own production and those who labor.",
+    "whyItMatters": "Whether you agree or not, it's one of the most influential analytical frameworks in history. It shaped the 20th century more than any other philosophy.",
+    "analogy": "A lens that sees every social arrangement as a power relationship between owners and workers."
+  },
+  {
+    "id": "philosophy:materialism-physicalism",
+    "type": "standard",
+    "concept": "Materialism/Physicalism",
+    "domain": "Philosophy",
+    "oneliner": "Everything that exists is physical matter and energy — including consciousness. The dominant view in modern science.",
+    "whyItMatters": "If true, consciousness must emerge from brain activity. The 'hard problem' is explaining how subjective experience arises from neurons.",
+    "analogy": "There is no ghost — the machine IS the ghost. Consciousness is what brains do."
+  },
+  {
+    "id": "philosophy:maya-illusion",
+    "type": "standard",
+    "concept": "Maya (Illusion)",
+    "domain": "Philosophy",
+    "oneliner": "The perceived world is not ultimate reality — our senses construct a convincing but incomplete picture.",
+    "whyItMatters": "Hindu and Buddhist concept that parallels Plato's cave and modern neuroscience on constructed perception. Questioning the reliability of experience is the first step to deeper understanding.",
+    "analogy": "Like mistaking a rope for a snake in dim light — the fear is real, but the snake never was.",
+    "level": "intermediate"
+  },
+  {
+    "id": "philosophy:mimetic-desire",
+    "type": "standard",
+    "concept": "Mimetic Desire",
+    "domain": "Philosophy",
+    "oneliner": "We want things because other people want them — desire is imitative, not autonomous. René Girard's insight into the social construction of wanting.",
+    "whyItMatters": "Explains hype cycles, fashion, FOMO, and why rivalries intensify as competitors become more similar. You don't want the job, the partner, or the product — you want what your model of success wants.",
+    "analogy": "Like children who only want a toy when another child picks it up — the desire is borrowed from the other, not generated internally.",
+    "level": "intermediate"
+  },
+  {
+    "id": "philosophy:modal-logic",
+    "type": "standard",
+    "concept": "Modal Logic",
+    "domain": "Philosophy",
+    "oneliner": "A system of logic dealing with necessity and possibility — 'it must be true' vs. 'it could be true.'",
+    "whyItMatters": "It formalizes reasoning about what's necessary, possible, and contingent. Essential in computer science, linguistics, and metaphysics.",
+    "analogy": "Logic that handles 'maybe' and 'must' — not just what IS true, but what COULD or MUST be true."
+  },
+  {
+    "id": "philosophy:moral-luck",
+    "type": "standard",
+    "concept": "Moral Luck",
+    "domain": "Philosophy",
+    "oneliner": "When moral judgment depends on factors outside the agent's control — drunk drivers judged differently if someone dies vs. not.",
+    "whyItMatters": "Two equally reckless drivers — one hits a child, one doesn't. Same action, radically different moral judgment.",
+    "analogy": "The ethics of outcome vs. intent — you did the same wrong thing, but luck determined whether anyone got hurt."
+  },
+  {
+    "id": "philosophy:moral-relativism",
+    "type": "standard",
+    "concept": "Moral Relativism",
+    "domain": "Philosophy",
+    "oneliner": "The view that moral judgments are not universally valid but relative to cultural, social, or personal circumstances.",
+    "whyItMatters": "It challenges the idea of universal human rights. If morality is relative, who decides what's acceptable?",
+    "analogy": "There's no universal rulebook — each culture wrote its own, and none is objectively more 'correct.'"
+  },
+  {
+    "id": "philosophy:nagarjuna-s-tetralemma",
+    "type": "standard",
+    "concept": "Nagarjuna's Tetralemma",
+    "domain": "Philosophy",
+    "oneliner": "A proposition can be true, false, both true and false, or neither — four-valued logic that transcends binary thinking.",
+    "whyItMatters": "Goes beyond Western true/false dichotomy. Many real-world propositions ('Is this strategy working?') genuinely occupy the 'both' or 'neither' positions.",
+    "analogy": "Like asking whether light is a wave or particle — the honest answer is 'both and neither', depending on how you look.",
+    "level": "advanced"
+  },
+  {
+    "id": "philosophy:naturalistic-fallacy",
+    "type": "standard",
+    "concept": "Naturalistic Fallacy",
+    "domain": "Philosophy",
+    "oneliner": "Assuming that what IS natural is what OUGHT to be — conflating natural with good.",
+    "whyItMatters": "Arsenic is natural. Cancer is natural. 'Natural' doesn't mean 'good' or 'right.'",
+    "analogy": "Poison ivy is natural. Vaccines are artificial. Nature doesn't have a moral compass."
+  },
+  {
+    "id": "philosophy:negritude",
+    "type": "standard",
+    "concept": "Negritude",
+    "domain": "Philosophy",
+    "oneliner": "The affirmation of African identity, culture, and heritage as intrinsically valuable — not measured against European standards.",
+    "whyItMatters": "Philosophical movement by Cesaire and Senghor that reclaimed Black consciousness from colonial frameworks. Any group defined by others must eventually define itself.",
+    "analogy": "Like recalibrating a scale that was rigged — before you can weigh anything fairly, you fix the instrument.",
+    "level": "intermediate"
+  },
+  {
+    "id": "philosophy:nihilism",
+    "type": "standard",
+    "concept": "Nihilism",
+    "domain": "Philosophy",
+    "oneliner": "Life has no inherent meaning, purpose, or value. Often misunderstood as despair — can also be liberating.",
+    "whyItMatters": "Nietzsche warned about it and proposed overcoming it through self-creation. The void existentialism tries to fill.",
+    "analogy": "The universe doesn't care — either terrifying or the ultimate permission slip."
+  },
+  {
+    "id": "philosophy:observation-and-reality",
+    "type": "connection",
+    "concept": "Observation and Reality",
+    "domain": "Philosophy",
+    "conceptA": "Empiricism",
+    "domainA": "Philosophy",
+    "conceptB": "Theory-Laden Observation",
+    "domainB": "Cognitive Science",
+    "connection": "Empiricism claims knowledge comes from observation. But cognitive science shows that observation is theory-laden — what you see depends on what you already know (schemas, predictions, priors). Pure observation without interpretation is impossible.",
+    "insight": "Kuhn's paradigm shifts happen because scientists literally see different things when they change frameworks. A trained radiologist sees tumors where a layperson sees gray blobs. This doesn't invalidate empiricism — it deepens it. The question becomes: how do we build reliable knowledge when observation itself is constructed?",
+    "prompt": "Two economists look at the same GDP data and reach opposite conclusions. Is one of them being irrational, or are they seeing through different theoretical lenses?"
+  },
+  {
+    "id": "philosophy:occam-vs-hanlon",
+    "type": "standard",
+    "concept": "Occam vs Hanlon",
+    "domain": "Philosophy",
+    "oneliner": "Occam's Razor: prefer the simpler explanation. Hanlon's Razor: never attribute to malice what is adequately explained by incompetence.",
+    "whyItMatters": "Together they form a powerful filter: most conspiracies are just incompetence, and most complex explanations are wrong.",
+    "analogy": "Two philosophical razors — one cuts away complexity, the other cuts away paranoia."
+  },
+  {
+    "id": "philosophy:occam-s-razor",
+    "type": "standard",
+    "concept": "Occam's Razor",
+    "domain": "Philosophy",
+    "oneliner": "Among competing explanations, the simplest (fewest assumptions) is most likely correct.",
+    "whyItMatters": "Not a law — a heuristic. Invaluable in science, debugging, and business. But simplicity isn't always truth.",
+    "analogy": "When you hear hoofbeats, think horses not zebras — unless you're in Africa."
+  },
+  {
+    "id": "philosophy:ontology",
+    "type": "standard",
+    "concept": "Ontology",
+    "domain": "Philosophy",
+    "oneliner": "The study of what exists — what kinds of things are real? Do abstract objects exist? Do possibilities?",
+    "whyItMatters": "It underpins every scientific and philosophical framework. Whether you believe numbers 'exist' shapes your entire worldview.",
+    "analogy": "Philosophy's inventory — making a list of everything that actually exists and arguing about what counts."
+  },
+  {
+    "id": "philosophy:panopticon",
+    "type": "standard",
+    "concept": "Panopticon",
+    "domain": "Philosophy",
+    "oneliner": "Bentham's prison design where inmates could always be watched without knowing when — internalized surveillance.",
+    "whyItMatters": "Foucault used it as a metaphor for modern surveillance society. Relevant to social media, CCTV, and data collection.",
+    "analogy": "The architectural version of 'assume the camera is always on' — behavior changes when you think you're being watched."
+  },
+  {
+    "id": "philosophy:panopticon-effect-in-digital-surveillance",
+    "type": "standard",
+    "concept": "Panopticon Effect in Digital Surveillance",
+    "domain": "Philosophy",
+    "oneliner": "When people know they might be watched, they internalize the watcher and self-police — the architecture of observation becomes the mechanism of control.",
+    "whyItMatters": "Bentham designed the panopticon prison; Foucault showed its principle extends to all modern institutions. Social media, workplace monitoring, and smart cities all create digital panopticons where the awareness of possible observation shapes behavior.",
+    "analogy": "Like a speed camera that changes driving behavior even when it is not recording — the possibility of observation is enough.",
+    "level": "intermediate"
+  },
+  {
+    "id": "philosophy:pascal-s-wager",
+    "type": "standard",
+    "concept": "Pascal's Wager",
+    "domain": "Philosophy",
+    "oneliner": "It's rational to believe in God because the potential payoff (eternal life) outweighs the cost (minor lifestyle changes).",
+    "whyItMatters": "The first formal use of decision theory. Critics note it assumes a specific God and ignores other possibilities.",
+    "analogy": "A cost-benefit analysis of faith — the potential upside of believing is infinite, the downside of not believing is also infinite."
+  },
+  {
+    "id": "philosophy:phenomenal-consciousness",
+    "type": "standard",
+    "concept": "Phenomenal Consciousness",
+    "domain": "Philosophy",
+    "oneliner": "The subjective experience of being aware — the 'what it's like' aspect of consciousness. Distinct from access consciousness.",
+    "whyItMatters": "The hard problem: why does physical brain activity produce subjective experience? Nobody knows.",
+    "analogy": "The mystery of inner experience — why does processing information FEEL like something?"
+  },
+  {
+    "id": "philosophy:phenomenology",
+    "type": "standard",
+    "concept": "Phenomenology",
+    "domain": "Philosophy",
+    "oneliner": "The study of conscious experience from the first-person perspective — what it's like to experience something. Husserl, Heidegger.",
+    "whyItMatters": "It influenced psychology, psychiatry, and AI research (the 'hard problem of consciousness').",
+    "analogy": "Instead of studying what the world IS, study what it's LIKE to experience the world."
+  },
+  {
+    "id": "philosophy:philosophy-of-mind",
+    "type": "standard",
+    "concept": "Philosophy of Mind",
+    "domain": "Philosophy",
+    "oneliner": "The study of consciousness, mental states, and their relationship to the physical brain.",
+    "whyItMatters": "The 'hard problem': why does subjective experience exist at all? Why isn't the brain just a computer with no inner life?",
+    "analogy": "The deepest question in philosophy: why is there something it's LIKE to be you?"
+  },
+  {
+    "id": "philosophy:pragmatism",
+    "type": "standard",
+    "concept": "Pragmatism",
+    "domain": "Philosophy",
+    "oneliner": "Truth is what works — ideas should be judged by their practical consequences, not abstract correctness. William James, Dewey.",
+    "whyItMatters": "The most American philosophy. It influenced education, law, and public policy. If it works, it's true enough.",
+    "analogy": "Philosophy with a job — ideas aren't true or false in the abstract, they're useful or useless."
+  },
+  {
+    "id": "philosophy:principle-of-charity",
+    "type": "standard",
+    "concept": "Principle of Charity",
+    "domain": "Philosophy",
+    "oneliner": "Interpret others' arguments in the strongest possible version before critiquing — steel-man, don't straw-man.",
+    "whyItMatters": "It produces better arguments, better understanding, and more productive disagreements.",
+    "analogy": "Always fight the strongest version of your opponent's argument — it makes your counter-argument better."
+  },
+  {
+    "id": "philosophy:process-philosophy-whitehead",
+    "type": "standard",
+    "concept": "Process Philosophy (Whitehead)",
+    "domain": "Philosophy",
+    "oneliner": "Reality is made of events and processes, not things — a 'rock' is a slow event, not a static object.",
+    "whyItMatters": "Whitehead replaced substance metaphysics with process metaphysics. In a world of continuous change, static models always lag behind reality.",
+    "analogy": "Like a river — you can name it and point to it, but it's never the same water twice. The river IS the flowing.",
+    "level": "advanced"
+  },
+  {
+    "id": "philosophy:qualia",
+    "type": "standard",
+    "concept": "Qualia",
+    "domain": "Philosophy",
+    "oneliner": "The subjective, conscious quality of an experience — what it's LIKE to see red, taste coffee, feel pain.",
+    "whyItMatters": "The central puzzle of consciousness. You can describe a wavelength of light, but not what red-ness feels like to you.",
+    "analogy": "The 'what it's like' of experience — the part of seeing red that a colorblind person can never access through description alone."
+  },
+  {
+    "id": "philosophy:rawls-veil-of-ignorance",
+    "type": "standard",
+    "concept": "Rawls' Veil of Ignorance",
+    "domain": "Philosophy",
+    "oneliner": "Design society's rules without knowing what position you'll hold in it — you might be rich, poor, disabled, or minority.",
+    "whyItMatters": "Rawls argued this would produce just institutions because self-interest becomes fairness when you don't know your position.",
+    "analogy": "Design the game before you know which player you'll be — suddenly you want fair rules."
+  },
+  {
+    "id": "philosophy:reductionism-vs-holism",
+    "type": "standard",
+    "concept": "Reductionism vs Holism",
+    "domain": "Philosophy",
+    "oneliner": "Reductionism: understand the whole by studying parts. Holism: the whole has properties that parts alone don't explain.",
+    "whyItMatters": "Physics is reductionist (everything is particles). Ecology is holistic (ecosystems can't be understood by studying individual species).",
+    "analogy": "Taking a watch apart to understand it (reductionism) vs. watching it tick (holism) — both useful, neither complete."
+  },
+  {
+    "id": "philosophy:semiotics",
+    "type": "standard",
+    "concept": "Semiotics",
+    "domain": "Philosophy",
+    "oneliner": "The study of signs and symbols and their meaning — how we create and interpret significance from arbitrary representations.",
+    "whyItMatters": "Saussure and Peirce showed that language, images, and gestures are systems of signs where meaning is socially constructed. Understanding semiotics is understanding how communication actually works.",
+    "analogy": "Like reading a map's legend — the symbols are arbitrary (a triangle doesn't 'look like' a mountain), but once you know the code, meaning flows.",
+    "level": "intermediate"
+  },
+  {
+    "id": "philosophy:ship-of-theseus",
+    "type": "standard",
+    "concept": "Ship of Theseus",
+    "domain": "Philosophy",
+    "oneliner": "If you replace every plank of a ship one by one, is it still the same ship? The classic identity puzzle.",
+    "whyItMatters": "It applies to cells in your body (replaced every 7 years), to companies, to brands, and to personal identity.",
+    "analogy": "You replace every cell in your body over years — are you the same person? If so, what makes you 'you'?"
+  },
+  {
+    "id": "philosophy:simone-de-beauvoir-s-ethics-of-ambiguity",
+    "type": "standard",
+    "concept": "Simone de Beauvoir's Ethics of Ambiguity",
+    "domain": "Philosophy",
+    "oneliner": "Freedom is the foundation of all values, but my freedom depends on others being free too — ethics requires mutual liberation.",
+    "whyItMatters": "Bridges existentialist individual freedom with social responsibility. You can't be truly free in a system that oppresses others, because oppression limits what freedom can mean.",
+    "analogy": "Like a jazz ensemble — each musician needs freedom to improvise, but that freedom only works when everyone respects and responds to each other.",
+    "level": "intermediate"
+  },
+  {
+    "id": "philosophy:slippery-slope",
+    "type": "standard",
+    "concept": "Slippery Slope",
+    "domain": "Philosophy",
+    "oneliner": "Arguing that one action will inevitably lead to extreme consequences without evidence for the chain.",
+    "whyItMatters": "'If we allow X, next they'll demand Y, then Z.' Sometimes valid (genuine causal chains), usually not.",
+    "analogy": "Claiming the first domino guarantees all 100 will fall — without proving the dominoes are actually touching."
+  },
+  {
+    "id": "philosophy:social-contract",
+    "type": "standard",
+    "concept": "Social Contract",
+    "domain": "Philosophy",
+    "oneliner": "The theory that political authority derives from an agreement among individuals to form a society. Hobbes, Locke, Rousseau.",
+    "whyItMatters": "It's the philosophical basis for democracy, constitutions, and the legitimacy of government.",
+    "analogy": "The invisible handshake — you get protection and services; in return, you follow the rules and pay taxes."
+  },
+  {
+    "id": "philosophy:solipsism",
+    "type": "standard",
+    "concept": "Solipsism",
+    "domain": "Philosophy",
+    "oneliner": "The idea that only your own mind is certain to exist — everything else might be an illusion.",
+    "whyItMatters": "It's philosophically irrefutable but practically useless. No one actually lives as a solipsist.",
+    "analogy": "The ultimate narcissism — what if you're the only real person and everyone else is a figment of your imagination?"
+  },
+  {
+    "id": "philosophy:stoicism",
+    "type": "standard",
+    "concept": "Stoicism",
+    "domain": "Philosophy",
+    "oneliner": "Control your response to events, not the events themselves. Epictetus, Marcus Aurelius, Seneca.",
+    "whyItMatters": "Modern renaissance via Silicon Valley and military. Core: distinguish what you control from what you don't.",
+    "analogy": "The original operating system for mental toughness — focus on inputs, accept outputs."
+  },
+  {
+    "id": "philosophy:straw-man",
+    "type": "standard",
+    "concept": "Straw Man",
+    "domain": "Philosophy",
+    "oneliner": "Misrepresenting someone's argument to make it easier to attack.",
+    "whyItMatters": "'You want gun regulation? So you want to confiscate all weapons from law-abiding citizens?'",
+    "analogy": "Building a scarecrow version of your opponent's argument and victoriously defeating it."
+  },
+  {
+    "id": "philosophy:sunyata-emptiness",
+    "type": "standard",
+    "concept": "Sunyata (Emptiness)",
+    "domain": "Philosophy",
+    "oneliner": "All phenomena lack inherent, independent existence — things are 'empty' of fixed essence.",
+    "whyItMatters": "Nagarjuna's central insight: emptiness isn't nihilism, it's radical interdependence. Nothing has a permanent, standalone identity — including emptiness itself.",
+    "analogy": "Like a wave in the ocean — you can point to it and name it, but it has no existence apart from the water.",
+    "level": "advanced"
+  },
+  {
+    "id": "philosophy:tabula-rasa",
+    "type": "standard",
+    "concept": "Tabula Rasa",
+    "domain": "Philosophy",
+    "oneliner": "Locke's idea that humans are born as blank slates — all knowledge comes from experience, not innate ideas.",
+    "whyItMatters": "It influenced education theory, psychology, and political philosophy. Nature vs. nurture debates trace back here.",
+    "analogy": "The mind as a whiteboard at birth — every word written on it comes from experience."
+  },
+  {
+    "id": "philosophy:the-cassandra-complex",
+    "type": "scenario",
+    "concept": "The Cassandra Complex",
+    "domain": "Philosophy",
+    "scenario": "A risk analyst at a bank warns that mortgage-backed securities are dangerously overvalued. She's ignored because her warning contradicts the profitable consensus. Three years later, the 2008 crisis proves her right.",
+    "relevantConcepts": [
+      "Groupthink",
+      "Normalcy Bias",
+      "Epistemic Closure",
+      "Confirmation Bias"
+    ],
+    "domains": [
+      "Philosophy",
+      "Psychology",
+      "Economics"
+    ],
+    "explanation": "Cassandra's curse: accurate predictions that are systematically ignored because they threaten the profitable status quo. Epistemic closure in the group means inconvenient truths are filtered out. The system's incentive structure punishes bearers of bad news.",
+    "level": "advanced"
+  },
+  {
+    "id": "philosophy:the-constitutional-crisis",
+    "type": "scenario",
+    "concept": "The Constitutional Crisis",
+    "domain": "Philosophy",
+    "scenario": "A democratically elected leader uses their mandate to weaken judicial independence, restrict press freedom, and change election rules — each step technically legal under the existing constitution.",
+    "relevantConcepts": [
+      "Social Contract",
+      "Paradox of Tolerance",
+      "Slippery Slope",
+      "Democratic Backsliding"
+    ],
+    "domains": [
+      "Philosophy",
+      "History & Geopolitics",
+      "Systems Thinking"
+    ],
+    "explanation": "Democracy's vulnerability: the system's own mechanisms can be used to dismantle it. The paradox of tolerance (Popper) warns that unlimited tolerance includes tolerating the intolerant. Each step is legal, but the trajectory is autocratic. Constitutional design must include anti-capture mechanisms — not just rules, but rules about how rules can be changed.",
+    "level": "advanced"
+  },
+  {
+    "id": "philosophy:the-trolley-problem",
+    "type": "standard",
+    "concept": "The Trolley Problem",
+    "domain": "Philosophy",
+    "oneliner": "A thought experiment: do you pull a lever to divert a trolley, killing one person to save five?",
+    "whyItMatters": "It illustrates the tension between utilitarian and deontological ethics. Used in AI ethics for autonomous vehicles.",
+    "analogy": "The philosophy stress test — simple enough for a child, unsolvable enough for a professor."
+  },
+  {
+    "id": "philosophy:the-trolley-problem-at-scale",
+    "type": "scenario",
+    "concept": "The Trolley Problem at Scale",
+    "domain": "Philosophy",
+    "scenario": "An autonomous vehicle must choose between swerving into a wall (killing the passenger) or continuing straight (killing a pedestrian). The manufacturer must program this decision in advance for millions of vehicles. How do you encode ethics into an algorithm?",
+    "relevantConcepts": [
+      "The Trolley Problem",
+      "Utilitarianism",
+      "Deontology",
+      "Mechanism Design"
+    ],
+    "domains": [
+      "Philosophy",
+      "Technology",
+      "Economics"
+    ],
+    "explanation": "Individual trolley problems are thought experiments; at scale, they become engineering requirements. Utilitarian calculation (minimize total harm) conflicts with deontological rights (never use someone as a means). The real challenge: who decides, and can the public accept algorithmic moral reasoning?",
+    "level": "advanced"
+  },
+  {
+    "id": "philosophy:thought-experiment",
+    "type": "standard",
+    "concept": "Thought Experiment",
+    "domain": "Philosophy",
+    "oneliner": "A hypothetical scenario used to explore concepts without physical testing — the trolley problem, the veil of ignorance.",
+    "whyItMatters": "They've driven breakthroughs in physics (Einstein's elevator), ethics (trolley problem), and political philosophy (Rawls' veil).",
+    "analogy": "The philosopher's laboratory — no equipment needed, just imagination and rigorous logic."
+  },
+  {
+    "id": "philosophy:trolley-variants",
+    "type": "standard",
+    "concept": "Trolley Variants",
+    "domain": "Philosophy",
+    "oneliner": "Extensions of the trolley problem exploring moral intuitions — the fat man, the surgeon, the loop.",
+    "whyItMatters": "Each variant isolates a different moral principle. The fat man variant asks: is it okay to actively push someone to save five?",
+    "analogy": "Moral philosophy's stress test battery — same structure, different variables, revealing which principles people actually follow."
+  },
+  {
+    "id": "philosophy:ubuntu-philosophy",
+    "type": "standard",
+    "concept": "Ubuntu Philosophy",
+    "domain": "Philosophy",
+    "oneliner": "I am because we are — personhood is constituted through communal relationships, not individual autonomy.",
+    "whyItMatters": "Challenges Western individualism at the root. In African Ubuntu, moral standing comes from how you contribute to community, not from isolated rationality.",
+    "analogy": "Like a single instrument that only becomes music when played in an ensemble — the instrument exists alone, but its purpose requires others.",
+    "level": "intermediate"
+  },
+  {
+    "id": "philosophy:ubuntu-restorative-justice",
+    "type": "standard",
+    "concept": "Ubuntu Restorative Justice",
+    "domain": "Philosophy",
+    "oneliner": "Justice restores relationships rather than punishing individuals — the goal is reintegration, not retribution.",
+    "whyItMatters": "Applied famously in South Africa's Truth and Reconciliation Commission. In organizations: addressing harm through accountability and repair is more sustainable than punishment.",
+    "analogy": "Like mending a torn net — punishment cuts the damaged thread out, restorative justice weaves it back in.",
+    "level": "intermediate"
+  },
+  {
+    "id": "philosophy:utilitarianism",
+    "type": "standard",
+    "concept": "Utilitarianism",
+    "domain": "Philosophy",
+    "oneliner": "The right action maximizes total well-being for the greatest number. Bentham, Mill.",
+    "whyItMatters": "The moral logic behind cost-benefit analysis and public health policy. Critics: it can justify terrible things for 'greater good.'",
+    "analogy": "Moral math — add happiness, subtract suffering, pick the highest score."
+  },
+  {
+    "id": "philosophy:virtue-ethics",
+    "type": "standard",
+    "concept": "Virtue Ethics",
+    "domain": "Philosophy",
+    "oneliner": "Morality is about character and virtues (courage, temperance, justice, wisdom) rather than rules or outcomes. Aristotle.",
+    "whyItMatters": "Instead of asking 'what should I do?' it asks 'what kind of person should I be?' Character over compliance.",
+    "analogy": "Don't follow a moral GPS — develop the navigation skills to find the right path yourself."
+  },
+  {
+    "id": "philosophy:wu-wei",
+    "type": "standard",
+    "concept": "Wu Wei",
+    "domain": "Philosophy",
+    "oneliner": "Effortless action — achieving results by aligning with natural patterns rather than forcing outcomes.",
+    "whyItMatters": "Daoist concept that reframes effectiveness: the best intervention often looks like non-intervention. Directly relevant to leadership, system design, and avoiding over-engineering.",
+    "analogy": "Like water finding its path downhill — it doesn't plan a route, yet it always reaches the sea.",
+    "level": "foundational"
+  },
+  {
+    "id": "philosophy:yin-yang-complementarity",
+    "type": "standard",
+    "concept": "Yin-Yang Complementarity",
+    "domain": "Philosophy",
+    "oneliner": "Opposites are interdependent and generate each other — neither exists without the other.",
+    "whyItMatters": "Pre-dates and parallels Hegel's dialectics by millennia. Any system that eliminates one pole destabilizes — competition needs cooperation, structure needs flexibility.",
+    "analogy": "Like inhaling and exhaling — you can't do only one. Each creates the condition for the other.",
+    "level": "foundational"
+  }
+]

@@ -5,6 +5,9 @@ import {
 } from './curriculum-progress';
 import { captureEvent } from './posthog';
 import { isSupabaseConfigured, supabase } from './supabase';
+import { CARD_STATES_KEY, syncCardStatesOnSignIn, clearLocalCardStates } from './srs/card-state-store';
+import { REVIEW_LOG_KEY, flushUnsyncedReviews, clearLocalReviewLog } from './srs/review-log';
+import { COMMONPLACE_KEY, syncCommonplaceOnSignIn, clearLocalCommonplace } from './progression/commonplace';
 import type {
   AssessmentHistoryEntry,
   AssessmentResult,
@@ -336,6 +339,10 @@ export async function syncOnSignIn(userId: string): Promise<void> {
         { onConflict: 'user_id' }
       );
   }
+
+  await syncCardStatesOnSignIn(userId);
+  await flushUnsyncedReviews(userId);
+  await syncCommonplaceOnSignIn(userId);
 }
 
 export async function trackEvent(
@@ -423,6 +430,12 @@ export function clearLocalUserData(): void {
   clearLocalStorageKey(ASSESSMENT_STORAGE_KEYS.deep_dive);
   clearLocalStorageKey(ASSESSMENT_STORAGE_KEYS.llm_mirror);
   clearLocalStorageKey(CURRICULUM_PROGRESS_KEY);
+  clearLocalStorageKey(CARD_STATES_KEY);
+  clearLocalStorageKey(REVIEW_LOG_KEY);
+  clearLocalStorageKey(COMMONPLACE_KEY);
+  clearLocalCardStates();
+  clearLocalReviewLog();
+  clearLocalCommonplace();
 }
 
 export async function deleteUserData(userId: string): Promise<void> {
@@ -430,6 +443,11 @@ export async function deleteUserData(userId: string): Promise<void> {
     await supabase.from('analytics_events').delete().eq('user_id', userId);
     await supabase.from('curriculum_progress').delete().eq('user_id', userId);
     await supabase.from('assessments').delete().eq('user_id', userId);
+    await supabase.from('card_states').delete().eq('user_id', userId);
+    await supabase.from('card_reviews').delete().eq('user_id', userId);
+    await supabase.from('study_days').delete().eq('user_id', userId);
+    await supabase.from('user_achievements').delete().eq('user_id', userId);
+    await supabase.from('commonplace_entries').delete().eq('user_id', userId);
     await supabase
       .from('profiles')
       .update({

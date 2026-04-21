@@ -1,0 +1,1151 @@
+[
+  {
+    "id": "systems-thinking:accumulation-bias",
+    "type": "standard",
+    "concept": "Accumulation Bias",
+    "domain": "Systems Thinking",
+    "oneliner": "The human tendency to underestimate how stocks accumulate over time — failing to grasp exponential growth, compound interest, or gradual environmental damage.",
+    "whyItMatters": "People understand flows intuitively but misjudge stocks. CO2 keeps accumulating even after emissions flatten. Debt grows even when spending slows. Understanding stock-flow dynamics is the foundation of systems literacy and connects to compound growth in economics and mathematics.",
+    "analogy": "Filling a swimming pool with a garden hose — people watch the flow rate and forget the pool is getting fuller every minute."
+  },
+  {
+    "id": "systems-thinking:addiction-at-every-scale",
+    "type": "connection",
+    "concept": "Addiction at Every Scale",
+    "domain": "Systems Thinking",
+    "conceptA": "Dopamine",
+    "domainA": "Biology",
+    "conceptB": "Intermittent Reinforcement",
+    "domainB": "Psychology",
+    "connection": "Dopamine spikes highest not from rewards themselves but from unpredictable rewards. Intermittent reinforcement (variable-ratio schedules) exploits this — slot machines, social media notifications, and loot boxes all trigger dopamine through uncertainty.",
+    "insight": "The neuroscience (dopamine) and the psychology (reinforcement schedules) and the technology (engagement algorithms) form a single system. Understanding any one layer without the others gives an incomplete picture of modern attention capture.",
+    "prompt": "Why is checking your phone 'one more time' structurally identical to pulling a slot machine lever? What's the dopamine pattern in both?"
+  },
+  {
+    "id": "systems-thinking:antifragility",
+    "type": "standard",
+    "concept": "Antifragility",
+    "domain": "Systems Thinking",
+    "oneliner": "Things that gain from disorder, stress, and volatility — beyond resilient (which just survives). Nassim Taleb's concept.",
+    "whyItMatters": "Muscles get stronger from stress. Immune systems improve from exposure. Some systems NEED volatility.",
+    "analogy": "Not just surviving the storm but growing stronger because of it — the opposite of fragile isn't sturdy, it's antifragile."
+  },
+  {
+    "id": "systems-thinking:attention-as-currency",
+    "type": "connection",
+    "concept": "Attention as Currency",
+    "domain": "Systems Thinking",
+    "conceptA": "Selective Attention",
+    "domainA": "Cognitive Science",
+    "conceptB": "Attention Economy",
+    "domainB": "Technology",
+    "connection": "Cognitive science shows attention is a finite, filterable resource. The attention economy treats human attention as the scarce commodity that platforms compete to capture. The biology constrains the economics — there's a hard neurological ceiling on available attention.",
+    "insight": "Herbert Simon predicted it in 1971: 'a wealth of information creates a poverty of attention.' Every app competes for a biologically fixed resource. Understanding the cognitive limits (selective attention, cognitive load) explains why the attention economy trends toward outrage and addiction — these bypass the filter.",
+    "prompt": "Why does clickbait work despite everyone claiming to hate it? What cognitive mechanism does it exploit, and why can't willpower alone overcome it?"
+  },
+  {
+    "id": "systems-thinking:attractors",
+    "type": "standard",
+    "concept": "Attractors",
+    "domain": "Systems Thinking",
+    "oneliner": "States or patterns that a system gravitates toward over time — fixed points, cycles, or strange attractors that define the system's long-run behavioral repertoire.",
+    "whyItMatters": "A pendulum's attractor is stillness. An economy's attractor might be a boom-bust cycle. Addiction has a basin of attraction that's easy to fall into and hard to escape. Changing a system's behavior often means shifting its attractor, not fighting its current state.",
+    "analogy": "A marble in a bowl — no matter where you place it, it rolls to the bottom. The bottom is the attractor. To change where the marble rests, reshape the bowl."
+  },
+  {
+    "id": "systems-thinking:autopoiesis",
+    "type": "standard",
+    "concept": "Autopoiesis",
+    "domain": "Systems Thinking",
+    "oneliner": "A system that continuously produces and maintains itself — its outputs become its own inputs for self-renewal. Coined by Maturana and Varela for living systems.",
+    "whyItMatters": "Every living cell is autopoietic — it builds the machinery that builds itself. The concept extends to organizations that maintain their own culture, and to ecosystems that create the conditions for their own persistence. It's the formal definition of what makes something 'alive' vs merely complicated.",
+    "analogy": "A candle flame — it consumes wax to produce heat that melts more wax that feeds the flame. The flame maintains itself through its own process."
+  },
+  {
+    "id": "systems-thinking:beauty-and-function",
+    "type": "connection",
+    "concept": "Beauty and Function",
+    "domain": "Systems Thinking",
+    "conceptA": "Golden Ratio",
+    "domainA": "Art & Architecture",
+    "conceptB": "Fibonacci Sequence",
+    "domainB": "Mathematics",
+    "connection": "The Fibonacci sequence (1, 1, 2, 3, 5, 8, 13...) converges on the golden ratio (1.618...). This ratio appears in sunflower spirals, nautilus shells, and classical architecture — mathematics generating aesthetic form through biological growth algorithms.",
+    "insight": "The connection isn't mystical — it's algorithmic. Fibonacci patterns in plants are optimal packing solutions evolved by natural selection. Artists discovered the same ratios because human visual perception responds to mathematically efficient structures. Evolution and aesthetics converge on the same math.",
+    "prompt": "Why do sunflower seeds arrange in Fibonacci spirals? Is the Parthenon beautiful because it uses the golden ratio, or does it use the golden ratio because that pattern feels beautiful — and what's the difference?"
+  },
+  {
+    "id": "systems-thinking:bias-and-historical-narrative",
+    "type": "connection",
+    "concept": "Bias and Historical Narrative",
+    "domain": "Systems Thinking",
+    "conceptA": "Survivorship Bias",
+    "domainA": "Mathematics",
+    "conceptB": "Historical Materialism",
+    "domainB": "History & Geopolitics",
+    "connection": "Survivorship bias means we study what succeeded and ignore what failed, leading to distorted conclusions. History as taught is survivorship bias at civilizational scale — we study empires that lasted, philosophies that survived, and technologies that won.",
+    "insight": "The 'great man' theory of history is survivorship bias applied to leaders. For every Edison there were thousands of equally talented inventors whose work didn't survive. Understanding this transforms how you read history — always ask 'what didn't make it into the record?'",
+    "prompt": "If we only study successful companies, what do we conclude about risk-taking? How does this parallel studying only surviving ancient texts?"
+  },
+  {
+    "id": "systems-thinking:black-swan",
+    "type": "standard",
+    "concept": "Black Swan",
+    "domain": "Systems Thinking",
+    "oneliner": "A rare, unpredictable event with massive impact that people rationalize in hindsight. Nassim Taleb's framework.",
+    "whyItMatters": "9/11, COVID, the 2008 financial crisis. We can't predict them, but we can build systems that survive them.",
+    "analogy": "The event you can't see coming that changes everything — and everyone claims they saw it coming after."
+  },
+  {
+    "id": "systems-thinking:boundary-analysis",
+    "type": "standard",
+    "concept": "Boundary Analysis",
+    "domain": "Systems Thinking",
+    "oneliner": "The deliberate choice of what to include inside and exclude outside 'the system' you're analyzing — every system boundary is a modeling decision, not a fact.",
+    "whyItMatters": "Drawing the boundary too narrowly hides root causes (treating symptoms). Drawing it too widely makes the problem intractable. Every policy debate is partly a boundary argument — is homelessness a housing problem, a mental health problem, or an economic system problem?",
+    "analogy": "Cropping a photo — what you leave out changes the story as much as what you leave in.",
+    "level": "foundational"
+  },
+  {
+    "id": "systems-thinking:building-a-sea-wall",
+    "type": "application",
+    "concept": "Building a Sea Wall",
+    "domain": "Systems Thinking",
+    "problem": "A coastal city builds a massive sea wall to protect against rising sea levels and storm surges.",
+    "firstOrder": "Flooding decreases. Property values in protected areas stabilize. Insurance costs drop. Citizens feel safe.",
+    "secondOrder": "Development intensifies behind the wall because it 'feels safe,' dramatically increasing the stakes if the wall fails. Wetlands that provided natural flood absorption are paved over. The wall disrupts sediment flow, eroding unprotected neighboring coastline. When a storm exceeds design capacity, the damage is catastrophic because everything is concentrated in the 'protected' zone.",
+    "lesson": "Hard infrastructure creates a levee effect: the protection encourages the very concentration of value that makes failure catastrophic. Natural systems (wetlands, barriers) degrade gracefully; engineered systems fail suddenly.",
+    "level": "intermediate"
+  },
+  {
+    "id": "systems-thinking:campbell-s-law",
+    "type": "standard",
+    "concept": "Campbell's Law",
+    "domain": "Systems Thinking",
+    "oneliner": "The more a social indicator is used for decision-making, the more subject to corruption it becomes — and the more it distorts the process it was meant to monitor.",
+    "whyItMatters": "School test scores, crime statistics, hospital waiting times — any metric that's rewarded will be gamed.",
+    "analogy": "Goodhart's Law's older, angrier cousin — metrics corrupt the very processes they're supposed to measure."
+  },
+  {
+    "id": "systems-thinking:catalysts-and-enablers",
+    "type": "connection",
+    "concept": "Catalysts and Enablers",
+    "domain": "Systems Thinking",
+    "conceptA": "Catalysis",
+    "domainA": "Chemistry",
+    "conceptB": "Platform Economics",
+    "domainB": "Economics",
+    "connection": "A catalyst lowers the activation energy for a reaction without being consumed — it makes things happen that wouldn't otherwise. A platform (Uber, Airbnb) lowers the activation energy for transactions between buyers and sellers without producing the service itself.",
+    "insight": "Platforms are economic catalysts: they don't create supply or demand, they lower the barrier between them. Understanding catalysis in chemistry gives you a precise vocabulary for why platforms create value — and why removing the platform (catalyst) stops the reaction even though the reactants are still there.",
+    "prompt": "Why does removing Uber from a city reduce rides even though the drivers and passengers still exist? What's the chemical parallel?"
+  },
+  {
+    "id": "systems-thinking:causal-loop-diagram",
+    "type": "standard",
+    "concept": "Causal Loop Diagram",
+    "domain": "Systems Thinking",
+    "oneliner": "A map showing how variables in a system influence each other through reinforcing (+) and balancing (-) loops.",
+    "whyItMatters": "Drawing the loops makes hidden dynamics visible. You can't fix a system you can't see. Used in business strategy, public health, and climate modeling to find where interventions actually work.",
+    "analogy": "A wiring diagram for cause and effect — follow the arrows to see why cutting one wire might blow a fuse somewhere else.",
+    "level": "foundational"
+  },
+  {
+    "id": "systems-thinking:causal-loop-diagrams",
+    "type": "standard",
+    "concept": "Causal Loop Diagrams",
+    "domain": "Systems Thinking",
+    "oneliner": "Visual maps showing how variables in a system cause and reinforce each other through feedback loops.",
+    "whyItMatters": "Making causal relationships explicit reveals circular causation that linear thinking misses. You can't fix a reinforcing loop by addressing one variable — you need to see the whole loop.",
+    "analogy": "Like a wiring diagram for a circuit — without it, you can't tell why the light flickers because you can't see which connections feed back into which.",
+    "level": "foundational"
+  },
+  {
+    "id": "systems-thinking:chesterton-s-fence",
+    "type": "standard",
+    "concept": "Chesterton's Fence",
+    "domain": "Systems Thinking",
+    "oneliner": "Don't remove a rule or institution until you understand why it was created — the original reason may still be valid.",
+    "whyItMatters": "Before dismantling a regulation, understand the problem it solved. Reforms fail when they ignore this.",
+    "analogy": "Don't tear down a fence until you know why it was built — it might be holding back something dangerous."
+  },
+  {
+    "id": "systems-thinking:complex-adaptive-systems",
+    "type": "standard",
+    "concept": "Complex Adaptive Systems",
+    "domain": "Systems Thinking",
+    "oneliner": "Systems composed of many interacting agents that adapt their behavior based on local rules and feedback — producing emergent patterns no one designed.",
+    "whyItMatters": "Cities, immune systems, stock markets, and ant colonies are all complex adaptive systems. They can't be controlled top-down, only influenced. Understanding CAS explains why central planning fails and why bottom-up innovation works — connecting biology, economics, and organizational theory.",
+    "analogy": "A flock of starlings murmurating — no leader, no choreography, just three local rules per bird producing breathtaking collective patterns."
+  },
+  {
+    "id": "systems-thinking:compression-and-abstraction",
+    "type": "connection",
+    "concept": "Compression and Abstraction",
+    "domain": "Systems Thinking",
+    "conceptA": "Data Compression",
+    "domainA": "Technology",
+    "conceptB": "Abstraction",
+    "domainB": "Philosophy",
+    "connection": "Data compression removes redundancy to represent information in fewer bits. Philosophical abstraction removes specifics to represent concepts in fewer words. Both are lossy processes — compressing an image loses pixels; abstracting 'justice' loses nuance.",
+    "insight": "Every concept, model, and theory is a compression of reality. The question is always: what was lost in compression? A JPEG removes detail you probably won't notice. A political slogan removes detail you definitely should notice. The skill is knowing what level of compression fits the task.",
+    "prompt": "When a complex policy becomes a three-word slogan, what's been 'compressed out'? How is this the same tradeoff as choosing image quality settings?"
+  },
+  {
+    "id": "systems-thinking:constraint-mapping",
+    "type": "standard",
+    "concept": "Constraint Mapping",
+    "domain": "Systems Thinking",
+    "oneliner": "Identifying and classifying the constraints that bound a system's behavior — governing constraints (laws, physics), enabling constraints (guidelines, culture), and no constraints (open space for innovation).",
+    "whyItMatters": "Eliyahu Goldratt's Theory of Constraints showed that a system's throughput is limited by its tightest bottleneck. Improving anything other than the constraint is waste. Finding the binding constraint is the single highest-leverage diagnostic act in any system.",
+    "analogy": "A chain breaks at its weakest link — strengthening the other links doesn't make the chain stronger."
+  },
+  {
+    "id": "systems-thinking:cooperation-failure-patterns",
+    "type": "connection",
+    "concept": "Cooperation Failure Patterns",
+    "domain": "Systems Thinking",
+    "conceptA": "Prisoner's Dilemma",
+    "domainA": "Mathematics",
+    "conceptB": "Arms Race",
+    "domainB": "History & Geopolitics",
+    "connection": "The Prisoner's Dilemma explains why rational individual actors fail to cooperate even when cooperation benefits everyone. Arms races are iterated prisoner's dilemmas between nations — each side arms because the other might, producing mutually destructive escalation.",
+    "insight": "The Cold War, trade wars, price wars, and environmental destruction all follow the same game-theoretic structure. Axelrod showed that in iterated games, 'tit for tat' (cooperate first, then mirror) is the winning strategy. The solution to arms races and market failures is the same: change the game from one-shot to repeated.",
+    "prompt": "Why do fishing boats overfish even when they know the fishery will collapse? How does this map to the Prisoner's Dilemma — and what would 'tit for tat' look like for fishing policy?"
+  },
+  {
+    "id": "systems-thinking:cynefin-framework",
+    "type": "standard",
+    "concept": "Cynefin Framework",
+    "domain": "Systems Thinking",
+    "oneliner": "Dave Snowden's decision framework distinguishing five domains: Clear (best practice), Complicated (expert analysis), Complex (probe-sense-respond), Chaotic (act-sense-respond), and Confused (not yet categorized).",
+    "whyItMatters": "The biggest decision-making failure is applying a Clear-domain approach (follow the procedure) to a Complex-domain problem (run experiments). Connects systems thinking to management — most organizational dysfunction comes from mismatching the response to the domain.",
+    "analogy": "A doctor's toolkit — a broken arm (Clear) needs a cast, a mystery illness (Complex) needs tests and hypotheses, a cardiac arrest (Chaotic) needs immediate action. Wrong tool, wrong outcome."
+  },
+  {
+    "id": "systems-thinking:defunding-the-police",
+    "type": "application",
+    "concept": "Defunding the Police",
+    "domain": "Systems Thinking",
+    "problem": "A city redirects 30% of police funding to social services, mental health response, and community programs.",
+    "firstOrder": "More mental health professionals respond to crises. Social workers handle homelessness and addiction. Community trust in public safety increases in some neighborhoods.",
+    "secondOrder": "Remaining officers are stretched thinner, response times increase for violent crime. Officers demoralized by the reframing leave for other jurisdictions, creating a staffing crisis. The social services aren't yet built to handle the volume, creating a gap period. Political opponents frame any crime increase as proof of failure, making the policy hard to sustain.",
+    "lesson": "Transitions between systems are the most dangerous phase. The old system degrades before the new one is ready. Second-order thinking requires planning for the gap, not just the destination.",
+    "level": "advanced"
+  },
+  {
+    "id": "systems-thinking:delays-in-systems",
+    "type": "standard",
+    "concept": "Delays in Systems",
+    "domain": "Systems Thinking",
+    "oneliner": "Time lags between an action and its effect. Delays cause oscillation, overshoot, and policy resistance because feedback arrives too late to correct course.",
+    "whyItMatters": "A thermostat with a 10-minute delay swings between too hot and too cold. The same happens with economic policy, drug dosing, and hiring cycles. Impatience with delays is the #1 cause of system overshoot.",
+    "analogy": "A shower with old plumbing — you crank the hot handle, nothing happens, you crank more, then get scalded."
+  },
+  {
+    "id": "systems-thinking:determinism-and-prediction",
+    "type": "connection",
+    "concept": "Determinism and Prediction",
+    "domain": "Systems Thinking",
+    "conceptA": "Determinism",
+    "domainA": "Philosophy",
+    "conceptB": "Chaos Theory",
+    "domainB": "Systems Thinking",
+    "connection": "Laplace's demon imagined that a mind knowing every particle's position could predict the entire future (determinism). Chaos theory shows this is impossible in practice — deterministic systems can be unpredictable because tiny measurement errors amplify exponentially.",
+    "insight": "The universe can be fully deterministic and still fundamentally unpredictable. This resolves the apparent contradiction between 'everything follows laws' and 'the future is uncertain.' Determinism is about the rules; predictability is about what we can compute. Understanding this distinction is essential for both philosophy of science and practical forecasting.",
+    "prompt": "If weather is deterministic (governed by physics), why can't we predict it beyond 10 days? What does this tell you about the limits of data-driven prediction in any complex system?"
+  },
+  {
+    "id": "systems-thinking:emergence",
+    "type": "standard",
+    "concept": "Emergence",
+    "domain": "Systems Thinking",
+    "oneliner": "Complex behaviors arising from simple rules — flocking birds, consciousness from neurons, markets from individual trades.",
+    "whyItMatters": "It's why you can't predict traffic from studying one car, or an economy from studying one person.",
+    "analogy": "The whole being more than the sum of its parts — ants are dumb, ant colonies are brilliant."
+  },
+  {
+    "id": "systems-thinking:emergence-in-code-and-life",
+    "type": "connection",
+    "concept": "Emergence in Code and Life",
+    "domain": "Systems Thinking",
+    "conceptA": "Emergence",
+    "domainA": "Systems Thinking",
+    "conceptB": "Conway's Game of Life",
+    "domainB": "Mathematics",
+    "connection": "Conway's Game of Life demonstrates emergence computationally: four simple rules for cell birth/death produce gliders, oscillators, and even universal computers. No rule specifies these patterns — they emerge from interactions, exactly as consciousness might emerge from neurons or markets from traders.",
+    "insight": "The Game of Life is the clearest proof that simple rules can produce arbitrarily complex behavior. This makes emergence not mystical but mathematical — and raises the question: if a few rules on a grid can produce computation, what can 86 billion neurons produce?",
+    "prompt": "If no single cell in the Game of Life 'knows' it's part of a glider, how does the glider move? How is this the same question as 'how does consciousness arise from neurons?'"
+  },
+  {
+    "id": "systems-thinking:entropy-and-creativity",
+    "type": "connection",
+    "concept": "Entropy and Creativity",
+    "domain": "Systems Thinking",
+    "conceptA": "Entropy",
+    "domainA": "Chemistry",
+    "conceptB": "Creative Destruction",
+    "domainB": "Economics",
+    "connection": "Entropy drives systems toward disorder; creative destruction breaks old economic structures so new ones can form. Both describe the productive role of dissolution — without entropy, there would be no change; without creative destruction, there would be no innovation.",
+    "insight": "Schumpeter saw capitalism as an entropic process — old firms must decay for new ones to emerge, just as old stars must die for new elements to form. The death of Blockbuster made Netflix possible. The decay of old structures is the raw material for new ones.",
+    "prompt": "Why is the death of industries sometimes more economically valuable than their survival? How is a supernova creating heavy elements the same structural process as a market crash enabling startups?"
+  },
+  {
+    "id": "systems-thinking:equilibrium-across-domains",
+    "type": "connection",
+    "concept": "Equilibrium Across Domains",
+    "domain": "Systems Thinking",
+    "conceptA": "Chemical Equilibrium",
+    "domainA": "Chemistry",
+    "conceptB": "Nash Equilibrium",
+    "domainB": "Economics",
+    "connection": "Both describe stable states where opposing forces balance — neither side has incentive to change. Chemical reactions reach equilibrium when forward and reverse rates equalize; markets reach Nash equilibrium when no player can benefit by changing strategy alone.",
+    "insight": "Equilibrium is never 'nothing happening' — it's two opposing processes happening at equal rates. Understanding this prevents the mistake of seeing stability as stasis in economics, ecology, and organizational dynamics.",
+    "prompt": "When a market price stabilizes, what are the two opposing forces that balanced? When a chemical equilibrium shifts, what analogy does that have to a market shock?"
+  },
+  {
+    "id": "systems-thinking:evolution-and-algorithms",
+    "type": "connection",
+    "concept": "Evolution and Algorithms",
+    "domain": "Systems Thinking",
+    "conceptA": "Genetic Algorithm",
+    "domainA": "Technology",
+    "conceptB": "Natural Selection",
+    "domainB": "Biology",
+    "connection": "Genetic algorithms explicitly copy natural selection: generate a population of candidate solutions, evaluate fitness, select the best, cross-breed them with random mutation, repeat. The algorithm works because the principle is universal — variation + selection + inheritance = optimization.",
+    "insight": "Holland didn't just use evolution as a metaphor — he proved that the mathematical structure of natural selection is a general-purpose optimization engine. This means biological evolution, market competition, and genetic algorithms are all implementations of the same abstract process.",
+    "prompt": "If a genetic algorithm can design better antenna shapes than human engineers, what does that tell you about the 'intelligence' of natural selection over 4 billion years?"
+  },
+  {
+    "id": "systems-thinking:exponential-blindness",
+    "type": "connection",
+    "concept": "Exponential Blindness",
+    "domain": "Systems Thinking",
+    "conceptA": "Compound Interest",
+    "domainA": "Economics",
+    "conceptB": "Exponential Growth",
+    "domainB": "Biology",
+    "connection": "Both involve quantities that grow proportionally to their current size — money earns interest on interest; bacteria divide and each daughter divides again. Humans systematically underestimate both because our intuition is linear.",
+    "insight": "Einstein (apocryphally) called compound interest the eighth wonder of the world. The same math governs viral spread, technological improvement (Moore's Law), and debt spirals. Linear intuition in an exponential world is the most dangerous cognitive mismatch.",
+    "prompt": "If a pond's lily pads double daily and cover the pond on day 30, when is it half covered? Why does this surprise people — and what does that tell you about pandemic growth curves?"
+  },
+  {
+    "id": "systems-thinking:feedback-and-reinforcement",
+    "type": "connection",
+    "concept": "Feedback and Reinforcement",
+    "domain": "Systems Thinking",
+    "conceptA": "Feedback Loops",
+    "domainA": "Systems Thinking",
+    "conceptB": "Operant Conditioning",
+    "domainB": "Psychology",
+    "connection": "Positive feedback loops amplify behavior; negative feedback loops dampen it. Operant conditioning works the same way: reinforcement amplifies behavior, punishment dampens it. Skinner's box is a feedback loop with a rat inside.",
+    "insight": "Social media algorithms are feedback loops that reinforce engagement behavior — your clicks shape your feed, which shapes your clicks. Gamification, addiction, and habit formation are all feedback-conditioning hybrids. Understanding either concept deeply reveals the other.",
+    "prompt": "How is a slot machine a positive feedback loop? How is a thermostat like punishment in operant conditioning?"
+  },
+  {
+    "id": "systems-thinking:feedback-delay-compensation",
+    "type": "standard",
+    "concept": "Feedback Delay Compensation",
+    "domain": "Systems Thinking",
+    "oneliner": "The skill of acting based on the system's future state rather than its current state — accounting for delays between action and observable result.",
+    "whyItMatters": "Experienced pilots adjust for instrument lag. Good economic policymakers act before the recession hits official data. The ability to 'lead the target' rather than react to where the ball was separates novice from expert systems thinkers.",
+    "analogy": "Throwing a ball to where the runner will be, not where they are now."
+  },
+  {
+    "id": "systems-thinking:feedback-dominance",
+    "type": "standard",
+    "concept": "Feedback Dominance",
+    "domain": "Systems Thinking",
+    "oneliner": "In systems with multiple feedback loops, the loop that currently has the strongest influence 'dominates' system behavior — and dominance can shift suddenly as conditions change.",
+    "whyItMatters": "A startup's reinforcing growth loop dominates until it hits market saturation, when a balancing loop takes over. Understanding which loop is dominant right now — and what could shift dominance — is the core analytical skill of system dynamics.",
+    "analogy": "Two dogs pulling a sled — whichever pulls harder sets the direction. But the weaker dog is still pulling, and if the lead dog tires, the sled veers."
+  },
+  {
+    "id": "systems-thinking:feedback-loop",
+    "type": "standard",
+    "concept": "Feedback Loop",
+    "domain": "Systems Thinking",
+    "oneliner": "When a system's output feeds back as input — positive loops amplify (compound interest, viral growth), negative loops stabilize (thermostat).",
+    "whyItMatters": "Nearly every system uses them. Understanding feedback loops is understanding how things grow, stabilize, or spiral.",
+    "analogy": "A microphone near a speaker — the output becomes input, which becomes louder output, which becomes louder input."
+  },
+  {
+    "id": "systems-thinking:fitness-landscape",
+    "type": "standard",
+    "concept": "Fitness Landscape",
+    "domain": "Systems Thinking",
+    "oneliner": "A conceptual terrain where peaks represent high-performing strategies and valleys represent poor ones — organisms, companies, and ideas evolve by climbing peaks.",
+    "whyItMatters": "Local optima trap: you reach the top of your small hill but can't see the taller mountain without going downhill first. Explains why successful companies fail to innovate (they're stuck on a local peak) and why disruptive innovation comes from outsiders willing to descend first.",
+    "analogy": "Hiking in fog — you keep going uphill until you reach a summit, but you can't tell if it's the tallest peak or just the nearest one."
+  },
+  {
+    "id": "systems-thinking:five-whys",
+    "type": "standard",
+    "concept": "Five Whys",
+    "domain": "Systems Thinking",
+    "oneliner": "Asking 'why?' five times in succession to dig past symptoms to root causes — Toyota's simple but powerful diagnostic technique.",
+    "whyItMatters": "Most problems are treated at the symptom level because the first 'why' feels like the answer. Each subsequent 'why' goes deeper. By the fifth, you're usually at a systemic issue you can actually fix.",
+    "analogy": "Like peeling an onion — each layer reveals a deeper cause beneath, and the real problem is usually at the core.",
+    "level": "foundational"
+  },
+  {
+    "id": "systems-thinking:fragility-cascades",
+    "type": "connection",
+    "concept": "Fragility Cascades",
+    "domain": "Systems Thinking",
+    "conceptA": "Tight vs Loose Coupling",
+    "domainA": "Systems Thinking",
+    "conceptB": "Financial Contagion",
+    "domainB": "Economics",
+    "connection": "Perrow's tight coupling theory (nuclear plants, space shuttles) explains why some systems suffer catastrophic cascading failures. Financial contagion in 2008 followed the same pattern — tightly coupled banks transmitted shocks instantly through the network.",
+    "insight": "The 2008 crisis was a 'normal accident' in Perrow's framework: a tightly coupled, complex system where small failures cascade into systemic collapse. Understanding tight coupling in engineering gives you a precise framework for understanding — and preventing — financial crises.",
+    "prompt": "Why did Lehman Brothers' collapse crash the global economy? How is this the same failure mode as the Challenger disaster — and what does coupling tightness have to do with both?"
+  },
+  {
+    "id": "systems-thinking:goodhart-s-law",
+    "type": "standard",
+    "concept": "Goodhart's Law",
+    "domain": "Systems Thinking",
+    "oneliner": "When a measure becomes a target, it ceases to be a good measure. Any metric that's rewarded gets gamed.",
+    "whyItMatters": "KPIs, school test scores, policing quotas — optimize for the metric and you corrupt the thing it was measuring.",
+    "analogy": "The moment you reward the thermometer reading instead of actual temperature, people start holding lighters to thermometers."
+  },
+  {
+    "id": "systems-thinking:hierarchy-and-control",
+    "type": "connection",
+    "concept": "Hierarchy and Control",
+    "domain": "Systems Thinking",
+    "conceptA": "Hierarchy Theory",
+    "domainA": "Systems Thinking",
+    "conceptB": "Panopticon",
+    "domainB": "Philosophy",
+    "connection": "Hierarchy theory describes nested levels operating at different speeds. Foucault's Panopticon describes how hierarchical surveillance enables control without constant force. Both reveal that hierarchy isn't just organizational structure — it's a mechanism of power and stability.",
+    "insight": "Slow layers constrain fast layers (culture constrains fashion, laws constrain behavior). Surveillance hierarchies work the same way — the possibility of being watched constrains behavior without active monitoring. Understanding hierarchy as both systems structure and power structure integrates engineering and critical theory.",
+    "prompt": "How does a corporate hierarchy function like a Panopticon? When does hierarchical control become self-defeating (and what systems archetype does that trigger)?"
+  },
+  {
+    "id": "systems-thinking:hierarchy-theory",
+    "type": "standard",
+    "concept": "Hierarchy Theory",
+    "domain": "Systems Thinking",
+    "oneliner": "Complex systems organize into nested levels where each level operates at a different speed and scale — fast layers innovate, slow layers stabilize.",
+    "whyItMatters": "In ecosystems: individual organisms change fast, species evolve slowly, biomes shift over millennia. In culture: fashion changes monthly, governance changes over decades, deep values over centuries. Stewart Brand's 'pace layers' model uses this to explain why civilizations are stable despite constant surface turbulence.",
+    "analogy": "A building — the furniture moves daily, the interior layout changes yearly, the structure lasts decades, the foundation lasts centuries. Each layer has its own clock."
+  },
+  {
+    "id": "systems-thinking:iatrogenics",
+    "type": "standard",
+    "concept": "Iatrogenics",
+    "domain": "Systems Thinking",
+    "oneliner": "Harm caused by the healer — when intervention does more damage than the problem it's trying to solve.",
+    "whyItMatters": "Overprescription, unnecessary surgery, excessive regulation. Sometimes the best action is no action.",
+    "analogy": "The doctor causing the disease — when the cure is worse than the illness."
+  },
+  {
+    "id": "systems-thinking:iceberg-model",
+    "type": "standard",
+    "concept": "Iceberg Model",
+    "domain": "Systems Thinking",
+    "oneliner": "A framework showing four levels of understanding: events (what happened), patterns (what keeps happening), structures (what causes the patterns), and mental models (what assumptions sustain the structures).",
+    "whyItMatters": "Most people react to events ('the server crashed'). Pattern thinkers see trends ('it crashes every Monday'). Structural thinkers redesign the system. Mental model thinkers question the assumptions. Each level deeper gives more lasting solutions. The iceberg model is the core pedagogical tool of systems thinking education.",
+    "analogy": "An iceberg — the event is the tip visible above water. Below the surface: patterns, structures, and mental models, each deeper and harder to see but more influential.",
+    "level": "foundational"
+  },
+  {
+    "id": "systems-thinking:immune-systems-and-security",
+    "type": "connection",
+    "concept": "Immune Systems and Security",
+    "domain": "Systems Thinking",
+    "conceptA": "Adaptive Immunity",
+    "domainA": "Biology",
+    "conceptB": "Cybersecurity Defense",
+    "domainB": "Technology",
+    "connection": "The adaptive immune system remembers past pathogens and responds faster to reinfection. Modern cybersecurity uses the same pattern: intrusion detection systems build signatures of past attacks to recognize and block variants. Both are pattern-matching defense systems that learn from experience.",
+    "insight": "Vaccination is training the biological immune system with a safe sample. Penetration testing is training the digital immune system with a safe attack. The parallel extends to autoimmune disorders (false positives → blocking legitimate traffic) and immunodeficiency (no threat detection → vulnerability to everything).",
+    "prompt": "What's the cybersecurity equivalent of an autoimmune disease? What's the biological equivalent of a zero-day exploit?"
+  },
+  {
+    "id": "systems-thinking:information-and-disorder",
+    "type": "connection",
+    "concept": "Information and Disorder",
+    "domain": "Systems Thinking",
+    "conceptA": "Entropy",
+    "domainA": "Chemistry",
+    "conceptB": "Information Entropy",
+    "domainB": "Mathematics",
+    "connection": "Shannon deliberately borrowed the term 'entropy' from thermodynamics because the math is identical. Physical entropy measures the number of microstates consistent with a macrostate; information entropy measures uncertainty in a message. Both quantify disorder.",
+    "insight": "This isn't a metaphor — it's the same equation. The second law of thermodynamics and the limits of data compression are mathematically unified. Understanding entropy in one domain gives you genuine insight into the other.",
+    "prompt": "A perfectly ordered crystal has low entropy. A perfectly predictable message has low information entropy. What does 'surprise' mean in each domain?"
+  },
+  {
+    "id": "systems-thinking:intervention-points",
+    "type": "standard",
+    "concept": "Intervention Points",
+    "domain": "Systems Thinking",
+    "oneliner": "Strategic locations in a system where action produces the greatest effect per unit of effort — identified through mapping feedback loops, delays, and leverage points.",
+    "whyItMatters": "Effective change agents don't try to change everything — they find the one acupuncture point where pressure shifts the whole pattern. This is the applied, practical side of Meadows' leverage points theory. Connects to strategy (where to compete) and medicine (targeted therapy vs broad spectrum).",
+    "analogy": "Acupuncture — one needle at the right meridian point can relieve pain throughout the body."
+  },
+  {
+    "id": "systems-thinking:leverage-points",
+    "type": "standard",
+    "concept": "Leverage Points",
+    "domain": "Systems Thinking",
+    "oneliner": "Places in a system where a small change produces a large effect — Donella Meadows identified 12, from parameters (weak) to paradigm shifts (powerful).",
+    "whyItMatters": "People push on low-leverage points (tweaking numbers) and ignore high-leverage ones (changing goals or mental models). Meadows' hierarchy explains why some reforms transform systems and others barely register.",
+    "analogy": "A door hinge — tiny force at the hinge moves the entire door. Push the door at its edge and you strain; push at the hinge and it swings."
+  },
+  {
+    "id": "systems-thinking:limits-to-growth",
+    "type": "standard",
+    "concept": "Limits to Growth",
+    "domain": "Systems Thinking",
+    "oneliner": "A systems archetype where a reinforcing growth process hits a balancing constraint — growth slows, stops, or reverses unless the constraint is identified and addressed.",
+    "whyItMatters": "Every startup plateau, every fitness plateau, every population ceiling follows this structure. The constraint is rarely where people look — it's usually in a different part of the system. Resistance to growth is information about the system, not evidence of failure.",
+    "analogy": "A plant growing toward the window — it grows fast until it hits the glass. The solution isn't pushing harder; it's opening the window."
+  },
+  {
+    "id": "systems-thinking:lindy-effect",
+    "type": "standard",
+    "concept": "Lindy Effect",
+    "domain": "Systems Thinking",
+    "oneliner": "The longer something has survived, the longer it's likely to continue — applies to ideas, technologies, and books, not biological entities.",
+    "whyItMatters": "A book that's been in print for 100 years will likely remain in print another 100. A 1-year-old startup has no such assurance.",
+    "analogy": "Age as a quality signal for ideas — if it's survived this long, it'll probably survive longer. The opposite of planned obsolescence."
+  },
+  {
+    "id": "systems-thinking:mandatory-diversity-quotas",
+    "type": "application",
+    "concept": "Mandatory Diversity Quotas",
+    "domain": "Systems Thinking",
+    "problem": "A company implements mandatory diversity hiring quotas to address underrepresentation.",
+    "firstOrder": "Demographic diversity increases. Underrepresented groups gain access to opportunities. Public perception improves. Compliance metrics are met.",
+    "secondOrder": "Without inclusion infrastructure, new hires face hostile environments and leave quickly (revolving door). Existing employees question whether diverse hires 'earned' their positions, undermining the very people the policy aims to help. Performative compliance replaces genuine culture change. Companies optimize for the metric (headcount) rather than the goal (equitable belonging).",
+    "lesson": "Diversity without inclusion is a revolving door. Second-order thinking asks: what happens after they're hired? Quotas change who enters the building; culture change determines who stays.",
+    "level": "intermediate"
+  },
+  {
+    "id": "systems-thinking:maps-and-models",
+    "type": "connection",
+    "concept": "Maps and Models",
+    "domain": "Systems Thinking",
+    "conceptA": "Mental Models",
+    "domainA": "Systems Thinking",
+    "conceptB": "Map-Territory Distinction",
+    "domainB": "Philosophy",
+    "connection": "Korzybski's 'the map is not the territory' and Senge's 'mental models' describe the same insight: we navigate reality through simplified representations, and confusing the representation for reality causes systematic errors.",
+    "insight": "Every model omits features of reality. Every map distorts some aspect of the territory. The danger isn't having models — it's forgetting they're models. This connects philosophy (epistemology), systems thinking (modeling), and cognitive science (schema theory) into a unified warning about overconfidence.",
+    "prompt": "When a financial model fails during a crisis, is the model wrong or was reality always more complex than the model? How does this relate to Korzybski's insight?"
+  },
+  {
+    "id": "systems-thinking:matthew-effect",
+    "type": "standard",
+    "concept": "Matthew Effect",
+    "domain": "Systems Thinking",
+    "oneliner": "Success breeds more success — the rich get richer, the cited get more cited, the famous get more famous.",
+    "whyItMatters": "It explains inequality in science (cited papers get more citations), wealth (compound returns favor the wealthy), and fame.",
+    "analogy": "The universe's compounding inequality — advantages snowball, making initial differences grow exponentially."
+  },
+  {
+    "id": "systems-thinking:measurement-corruption",
+    "type": "connection",
+    "concept": "Measurement Corruption",
+    "domain": "Systems Thinking",
+    "conceptA": "Goodhart's Law",
+    "domainA": "Systems Thinking",
+    "conceptB": "Observer Effect",
+    "domainB": "Physics",
+    "connection": "In physics, measuring a quantum system changes it. In management, measuring a social system changes it. Both describe the impossibility of passive observation when the observer is coupled to the system.",
+    "insight": "The moment you tie rewards to a metric, people optimize for the metric rather than the goal. The moment you shine a photon on an electron, you change its momentum. Measurement is always intervention — the question is whether you account for your own distortion.",
+    "prompt": "How does publishing school rankings change school behavior? How is this structurally similar to Heisenberg's uncertainty principle?"
+  },
+  {
+    "id": "systems-thinking:mental-models",
+    "type": "standard",
+    "concept": "Mental Models",
+    "domain": "Systems Thinking",
+    "oneliner": "Internal representations of how the world works that shape perception, reasoning, and action — usually invisible to the person holding them, and often wrong in systematic ways.",
+    "whyItMatters": "Peter Senge identified mental models as the deepest leverage point for organizational change. You don't see the world as it is — you see it through your models. Two people looking at the same data reach different conclusions because their mental models filter differently. Making models explicit is the first step to improving them.",
+    "analogy": "Colored glasses you forgot you're wearing — everything looks tinted, but you think that's just what the world looks like."
+  },
+  {
+    "id": "systems-thinking:minsky-moment",
+    "type": "standard",
+    "concept": "Minsky Moment",
+    "domain": "Systems Thinking",
+    "oneliner": "The point when a prolonged period of stability leads to excessive risk-taking that triggers a sudden collapse.",
+    "whyItMatters": "Stability is destabilizing — the longer things are calm, the more leverage accumulates, the bigger the eventual crash.",
+    "analogy": "The longer the calm, the bigger the storm — stability breeds the complacency that creates the next crisis."
+  },
+  {
+    "id": "systems-thinking:murphy-s-law",
+    "type": "standard",
+    "concept": "Murphy's Law",
+    "domain": "Systems Thinking",
+    "oneliner": "Anything that can go wrong will go wrong — not pessimism but an engineering design principle.",
+    "whyItMatters": "It's why engineers build redundancy and failsafes. Assume failure and design for it.",
+    "analogy": "Plan for the worst case not because you're negative, but because you're responsible."
+  },
+  {
+    "id": "systems-thinking:network-power-laws",
+    "type": "connection",
+    "concept": "Network Power Laws",
+    "domain": "Systems Thinking",
+    "conceptA": "Network Effects",
+    "domainA": "Economics",
+    "conceptB": "Scale-Free Networks",
+    "domainB": "Systems Thinking",
+    "connection": "Network effects (a product becomes more valuable as more people use it) produce scale-free networks (a few nodes have vastly more connections than most). The economics creates the topology; the topology reinforces the economics.",
+    "insight": "Facebook, Google, and Amazon aren't monopolies by accident — network effects produce power-law distributions where winner-take-most is the natural outcome. The same math describes why a few airports become mega-hubs and why a few scientific papers get most citations.",
+    "prompt": "Why does the 10th million user on a social network matter more than the 10th user? How does this connect to preferential attachment in network science?"
+  },
+  {
+    "id": "systems-thinking:nonlinearity",
+    "type": "standard",
+    "concept": "Nonlinearity",
+    "domain": "Systems Thinking",
+    "oneliner": "When cause and effect are not proportional — small inputs can produce massive outputs, and large inputs can produce nothing. Most real systems are nonlinear.",
+    "whyItMatters": "Linear thinking is the default human mode: 'twice the effort, twice the result.' Reality rarely works this way. Drug dosage, exercise gains, marketing spend, and ecosystem stress all have nonlinear responses. The gap between linear expectation and nonlinear reality is where surprises live.",
+    "analogy": "A light switch vs a dimmer — the switch is nonlinear (a tiny push changes everything), the dimmer is linear (smooth proportional change)."
+  },
+  {
+    "id": "systems-thinking:oscillation",
+    "type": "standard",
+    "concept": "Oscillation",
+    "domain": "Systems Thinking",
+    "oneliner": "Regular swings between extremes caused by delayed negative feedback — the system overshoots in both directions because corrections arrive too late.",
+    "whyItMatters": "Boom-bust cycles in economics, predator-prey population swings in ecology, and the bullwhip effect in supply chains are all oscillation from delayed feedback. Shortening the delay or dampening the response reduces the swing.",
+    "analogy": "A pendulum — each swing is the system overcorrecting for the previous one. Friction (damping) is what eventually stops it."
+  },
+  {
+    "id": "systems-thinking:overshoot-and-collapse",
+    "type": "standard",
+    "concept": "Overshoot and Collapse",
+    "domain": "Systems Thinking",
+    "oneliner": "When growth exceeds carrying capacity due to delays in feedback, the system doesn't gently stabilize — it crashes past the limit and collapses.",
+    "whyItMatters": "Easter Island's deforestation, fishery collapses, dot-com bubbles, and pandemic hospital overwhelm all follow this pattern. The Limits to Growth model (1972) predicted it for resource economies. Recognizing overshoot before collapse is the most important systems skill.",
+    "analogy": "Driving a car toward a cliff in fog — by the time you see the edge, you're already going too fast to stop."
+  },
+  {
+    "id": "systems-thinking:overton-window",
+    "type": "standard",
+    "concept": "Overton Window",
+    "domain": "Systems Thinking",
+    "oneliner": "The range of ideas acceptable in mainstream public discourse at any given time — it shifts over time.",
+    "whyItMatters": "Same-sex marriage moved from radical to mainstream in 20 years. Ideas outside the window are dismissed regardless of merit.",
+    "analogy": "The spectrum of acceptable opinions — anything outside it is labeled 'extreme' regardless of its actual merit."
+  },
+  {
+    "id": "systems-thinking:panarchy",
+    "type": "standard",
+    "concept": "Panarchy",
+    "domain": "Systems Thinking",
+    "oneliner": "Gunderson and Holling's model of nested adaptive cycles — systems at every scale move through growth, conservation, release, and reorganization, with cross-scale interactions.",
+    "whyItMatters": "A forest fire (release phase) at the local scale can trigger reorganization at the regional scale. A financial crisis in one sector cascades across scales. Panarchy explains why systems are never truly stable — they're always somewhere in the adaptive cycle, and surprises come from cross-scale interactions.",
+    "analogy": "Russian nesting dolls, each spinning at its own speed — when the inner doll wobbles, the outer dolls feel it."
+  },
+  {
+    "id": "systems-thinking:paradox-of-efficiency",
+    "type": "connection",
+    "concept": "Paradox of Efficiency",
+    "domain": "Systems Thinking",
+    "conceptA": "Jevons Paradox",
+    "domainA": "Economics",
+    "conceptB": "Induced Demand",
+    "domainB": "Systems Thinking",
+    "connection": "Jevons observed that more efficient coal engines increased total coal consumption (cheaper per unit → more units used). Induced demand shows that wider highways attract more drivers. Both demonstrate that efficiency improvements in a system with elastic demand increase rather than decrease total consumption.",
+    "insight": "Energy efficiency, road capacity, bandwidth, and productivity tools all face the same paradox: making something cheaper or easier increases its total use. This is why efficiency alone cannot solve resource depletion — you need caps, not just efficiency. The same feedback loop operates at every scale.",
+    "prompt": "LED lights use 80% less energy than incandescent. Why hasn't total lighting energy dropped 80%? What's the structural similarity to adding lanes to a highway?"
+  },
+  {
+    "id": "systems-thinking:parkinson-s-law",
+    "type": "standard",
+    "concept": "Parkinson's Law",
+    "domain": "Systems Thinking",
+    "oneliner": "Work expands to fill the time available for its completion.",
+    "whyItMatters": "Give someone a week for a one-hour task and it'll take a week. Tight deadlines are often more productive than generous ones.",
+    "analogy": "The gas law of productivity — tasks expand to fill whatever container of time you give them."
+  },
+  {
+    "id": "systems-thinking:path-dependence",
+    "type": "standard",
+    "concept": "Path Dependence",
+    "domain": "Systems Thinking",
+    "oneliner": "Where you can go depends on where you've been — early choices constrain future options, even when objectively better alternatives exist.",
+    "whyItMatters": "QWERTY keyboards, VHS over Betamax, the width of railroad tracks. History isn't just context — it's a constraint. In careers, organizations, and technology, switching costs lock in early decisions. Understanding this prevents the fallacy that the best option always wins.",
+    "analogy": "A river carving a canyon — each year's flow deepens the channel, making it harder for water to choose a new path even if one is shorter."
+  },
+  {
+    "id": "systems-thinking:perverse-incentives",
+    "type": "standard",
+    "concept": "Perverse Incentives",
+    "domain": "Systems Thinking",
+    "oneliner": "When reward structures produce the opposite of the intended outcome — because agents optimize for the metric, not the goal, and the metric diverges from the goal.",
+    "whyItMatters": "The cobra effect (bounty on cobras → people breed cobras). Wells Fargo's cross-selling metrics → fake accounts. Hospital readmission penalties → patients refused admission. Perverse incentives are Goodhart's Law in action — and the most common failure mode of management by metrics.",
+    "analogy": "Paying firefighters per fire extinguished — and wondering why there are suddenly more fires."
+  },
+  {
+    "id": "systems-thinking:peter-principle",
+    "type": "standard",
+    "concept": "Peter Principle",
+    "domain": "Systems Thinking",
+    "oneliner": "People are promoted to their level of incompetence — good performance at one level doesn't predict success at the next.",
+    "whyItMatters": "A great engineer becomes a mediocre manager. The skills that earned promotion aren't the skills needed at the next level.",
+    "analogy": "Rising until you reach a job you can't do — and then staying there."
+  },
+  {
+    "id": "systems-thinking:phase-transitions-and-tipping-points",
+    "type": "connection",
+    "concept": "Phase Transitions and Tipping Points",
+    "domain": "Systems Thinking",
+    "conceptA": "Phase Transitions",
+    "domainA": "Physics",
+    "conceptB": "Tipping Points",
+    "domainB": "Systems Thinking",
+    "connection": "Phase transitions (ice → water → steam) involve gradual energy input producing sudden qualitative change. Social tipping points follow the same math: gradual pressure, then sudden regime shift. Both are examples of nonlinear threshold effects.",
+    "insight": "Gladwell popularized tipping points but the physics is deeper: near the transition, the system becomes maximally sensitive (critical slowing down). Social scientists now use the same mathematical tools physicists use for phase transitions to predict election shifts, disease outbreaks, and ecosystem collapse.",
+    "prompt": "Water at 99°C looks exactly like water at 90°C. What's the social equivalent of 'one more degree' causing a complete phase change?"
+  },
+  {
+    "id": "systems-thinking:policy-resistance",
+    "type": "standard",
+    "concept": "Policy Resistance",
+    "domain": "Systems Thinking",
+    "oneliner": "When multiple actors in a system each pull toward their own goals, well-intentioned interventions get neutralized because the system pushes back to maintain its equilibrium.",
+    "whyItMatters": "Drug wars that increase prices and profits, attracting more dealers. Road widening that attracts more drivers (induced demand). Rent control that reduces housing supply. Most policy failures aren't bad ideas — they're ideas that ignored the system's compensating feedback loops.",
+    "analogy": "Pushing a beach ball underwater — it pops back up somewhere else with equal force."
+  },
+  {
+    "id": "systems-thinking:power-laws",
+    "type": "standard",
+    "concept": "Power Laws",
+    "domain": "Systems Thinking",
+    "oneliner": "Distributions where a few items account for most of the effect — the 'long tail' pattern found in earthquakes, wealth, city sizes, word frequencies, and web traffic.",
+    "whyItMatters": "Normal distributions (bell curves) are the exception in complex systems, not the rule. Power laws mean extreme events are far more likely than Gaussian models predict. The 2008 financial crisis, pandemic superspreaders, and viral content all follow power law distributions that conventional risk models miss.",
+    "analogy": "A few giant boulders and millions of pebbles — if you only measured the average rock size, you'd completely miss the boulders that reshape the landscape."
+  },
+  {
+    "id": "systems-thinking:prediction-and-control",
+    "type": "connection",
+    "concept": "Prediction and Control",
+    "domain": "Systems Thinking",
+    "conceptA": "Predictive Processing",
+    "domainA": "Cognitive Science",
+    "conceptB": "Control Theory",
+    "domainB": "Technology",
+    "connection": "The brain generates predictions and corrects based on error signals (predictive processing). Engineering control systems generate setpoints and correct based on error signals (PID controllers). Both are feedback control systems that minimize the gap between expected and actual states.",
+    "insight": "A thermostat, a cruise control system, and your visual cortex all implement the same algorithm: predict → compare → correct. The mathematical framework (control theory) unifies neuroscience and engineering. This is why robotics and neuroscience increasingly share vocabulary.",
+    "prompt": "When you reach for a cup and your hand overshoots slightly then corrects, what's the control theory term for that correction? How is this the same as a thermostat oscillating around its setpoint?"
+  },
+  {
+    "id": "systems-thinking:principal-of-least-effort",
+    "type": "standard",
+    "concept": "Principal of Least Effort",
+    "domain": "Systems Thinking",
+    "oneliner": "Organisms, including humans, naturally gravitate toward the path requiring the least energy.",
+    "whyItMatters": "It explains why UX matters, why defaults are powerful, and why convenience beats quality in most consumer choices.",
+    "analogy": "Water flows downhill and so do humans — design for laziness and you design for reality."
+  },
+  {
+    "id": "systems-thinking:red-queen-effect",
+    "type": "standard",
+    "concept": "Red Queen Effect",
+    "domain": "Systems Thinking",
+    "oneliner": "You have to keep running just to stay in the same place — competitive environments where everyone improves so relative position stays constant.",
+    "whyItMatters": "Businesses must innovate continuously or fall behind. Evolution is an arms race. Cybersecurity is perpetual.",
+    "analogy": "Running as fast as you can just to not lose ground — because everyone else is running too."
+  },
+  {
+    "id": "systems-thinking:redundancy-and-reliability",
+    "type": "connection",
+    "concept": "Redundancy and Reliability",
+    "domain": "Systems Thinking",
+    "conceptA": "Redundancy",
+    "domainA": "Technology",
+    "conceptB": "Biodiversity",
+    "domainB": "Biology",
+    "connection": "Engineering builds redundant systems (backup servers, dual engines) so failure of one component doesn't crash the whole. Biodiversity is nature's redundancy — multiple species filling similar roles so ecosystem function survives individual extinctions.",
+    "insight": "The principle is identical: functional overlap creates resilience. Monoculture agriculture is like a single-server architecture — efficient until the one point of failure hits. Both engineering and ecology converge on the same design pattern for survivability.",
+    "prompt": "Why did the Irish Potato Famine devastate Ireland (monoculture) while diverse-crop regions survived? What's the server architecture equivalent?"
+  },
+  {
+    "id": "systems-thinking:requisite-simplicity",
+    "type": "standard",
+    "concept": "Requisite Simplicity",
+    "domain": "Systems Thinking",
+    "oneliner": "A model should be as simple as possible but no simpler — Colander's principle that the right level of complexity matches the question being asked, not the system being modeled.",
+    "whyItMatters": "Over-complex models are as dangerous as over-simple ones — they give false precision and obscure the key dynamics. A three-variable model that captures the right feedback loop beats a 50-variable model that hides it. Einstein's razor applied to systems modeling.",
+    "analogy": "A subway map vs a satellite photo of the city — the map is 'wrong' (not geographically accurate) but far more useful for navigating."
+  },
+  {
+    "id": "systems-thinking:requisite-variety",
+    "type": "standard",
+    "concept": "Requisite Variety",
+    "domain": "Systems Thinking",
+    "oneliner": "Ashby's Law: a controller must have at least as many response options as the system has disturbance modes. Only variety can absorb variety.",
+    "whyItMatters": "A thermostat with only 'on' and 'off' can't maintain precise temperature. A manager with one leadership style can't handle diverse teams. Explains why simple rules fail in complex environments — you need a repertoire as varied as the challenges you face.",
+    "analogy": "A goalkeeper who can only dive left will be destroyed by any striker who notices. You need as many moves as your opponent has shots."
+  },
+  {
+    "id": "systems-thinking:resilience",
+    "type": "standard",
+    "concept": "Resilience",
+    "domain": "Systems Thinking",
+    "oneliner": "A system's ability to absorb disturbance and reorganize while retaining its essential function — distinct from robustness (resistance to change) and antifragility (improvement from stress).",
+    "whyItMatters": "Efficiency and resilience trade off. Just-in-time supply chains are efficient but fragile. Ecosystems with biodiversity are resilient. The 2020 pandemic revealed how many systems optimized for efficiency at the cost of resilience.",
+    "analogy": "A willow tree bends in the storm and springs back; an oak tree resists until it snaps. Resilience is the willow strategy."
+  },
+  {
+    "id": "systems-thinking:resistance-to-disturbance",
+    "type": "connection",
+    "concept": "Resistance to Disturbance",
+    "domain": "Systems Thinking",
+    "conceptA": "Le Chatelier's Principle",
+    "domainA": "Chemistry",
+    "conceptB": "Homeostasis",
+    "domainB": "Biology",
+    "connection": "Both describe systems that resist disturbance by shifting to counteract change. A chemical equilibrium shifts to absorb added reactant; a body adjusts heart rate, sweating, and hormone levels to maintain temperature.",
+    "insight": "The same principle governs chemical equilibria and your body temperature. Resistance to disruption is a universal system property — and explains why organizational change is so hard (organizations are homeostatic too).",
+    "prompt": "What happens when you add heat to a system at equilibrium? What happens when you add stress to a person in psychological homeostasis? How are the responses structurally similar?"
+  },
+  {
+    "id": "systems-thinking:robustness-fragility-tradeoff",
+    "type": "standard",
+    "concept": "Robustness-Fragility Tradeoff",
+    "domain": "Systems Thinking",
+    "oneliner": "Systems that are robust to one class of disturbances become fragile to another — you can't be robust to everything simultaneously. Optimizing for known risks creates vulnerability to unknown ones.",
+    "whyItMatters": "The internet is robust to random node failures but fragile to targeted attacks on hubs. A levee system is robust to normal floods but catastrophically fragile to a 500-year event. Every engineering and policy choice implicitly makes this tradeoff — the question is whether you made it consciously.",
+    "analogy": "A medieval castle — walls are robust against ground assault but fragile against aerial bombardment. Every defense creates a new vulnerability."
+  },
+  {
+    "id": "systems-thinking:satisficing",
+    "type": "standard",
+    "concept": "Satisficing",
+    "domain": "Systems Thinking",
+    "oneliner": "Choosing an option that meets minimum criteria rather than seeking the optimal choice. Herbert Simon coined it.",
+    "whyItMatters": "Maximizers (seeking the best) are often less happy than satisficers (seeking good enough). Perfect is the enemy of good.",
+    "analogy": "Choosing 'good enough' instead of hunting for 'the best' — and being happier for it."
+  },
+  {
+    "id": "systems-thinking:satisficing-vs-optimizing",
+    "type": "standard",
+    "concept": "Satisficing vs Optimizing",
+    "domain": "Systems Thinking",
+    "oneliner": "Herbert Simon's insight that in complex environments, seeking the optimal solution is computationally impossible — effective agents find solutions that are 'good enough' given constraints.",
+    "whyItMatters": "Optimization assumes you can model all variables. In complex systems, you can't. Satisficing — setting a threshold and taking the first option that meets it — is not lazy thinking, it's the rational strategy when information is incomplete and time is scarce. Connects to bounded rationality in economics and heuristics in cognitive science.",
+    "analogy": "Apartment hunting in a hot market — if you optimize, the apartment is gone. If you satisfice ('meets my three must-haves'), you get housed."
+  },
+  {
+    "id": "systems-thinking:scale-free-networks",
+    "type": "standard",
+    "concept": "Scale-Free Networks",
+    "domain": "Systems Thinking",
+    "oneliner": "Networks where most nodes have few connections but a few hubs have enormous numbers — the internet, social networks, airline routes.",
+    "whyItMatters": "They're robust against random failures but vulnerable to targeted attacks on hubs. Explains epidemic superspreaders.",
+    "analogy": "An airport network — remove a random small airport and nothing happens; remove a hub and the system collapses."
+  },
+  {
+    "id": "systems-thinking:second-order-effects",
+    "type": "standard",
+    "concept": "Second-Order Effects",
+    "domain": "Systems Thinking",
+    "oneliner": "The consequences of consequences — the indirect, often unintended results that follow from an action.",
+    "whyItMatters": "Cobra bounties in India led to cobra breeding. Banning drugs created cartels. Most policy failures are second-order.",
+    "analogy": "Pulling a thread and being surprised when the whole sweater unravels — first-order thinking is lazy, second-order is where wisdom lives."
+  },
+  {
+    "id": "systems-thinking:selection-pressure-everywhere",
+    "type": "connection",
+    "concept": "Selection Pressure Everywhere",
+    "domain": "Systems Thinking",
+    "conceptA": "Natural Selection",
+    "domainA": "Biology",
+    "conceptB": "Creative Destruction",
+    "domainB": "Economics",
+    "connection": "Both are evolutionary pruning mechanisms — variants compete for limited resources, and those that fit the environment survive while others are eliminated. Nature selects organisms; markets select firms.",
+    "insight": "Schumpeter explicitly modeled creative destruction on Darwinian selection. The same dynamic operates in technology (standards wars), culture (meme selection), and science (competing theories). Selection is the universal pattern of adaptation.",
+    "prompt": "What happens when selection pressure is removed — in biology (no predators) and in economics (monopoly)? Why do both systems stagnate?"
+  },
+  {
+    "id": "systems-thinking:self-organization-across-scales",
+    "type": "connection",
+    "concept": "Self-Organization Across Scales",
+    "domain": "Systems Thinking",
+    "conceptA": "Crystallization",
+    "domainA": "Chemistry",
+    "conceptB": "Spontaneous Order",
+    "domainB": "Economics",
+    "connection": "Crystals form without a blueprint — molecules self-organize into precise geometric structures based on local interactions. Hayek's spontaneous order describes how markets self-organize into efficient price structures without central planning. Both are self-organization from local rules.",
+    "insight": "No one designs a crystal's lattice; no one designs market prices. Both emerge from agents following simple local rules (molecules minimizing energy; traders maximizing utility). Understanding self-organization explains why some of the most ordered systems in nature and economics were never designed.",
+    "prompt": "How does a snowflake 'know' to be hexagonal? How does a market 'know' what a barrel of oil should cost? What's the common principle?"
+  },
+  {
+    "id": "systems-thinking:sensemaking",
+    "type": "standard",
+    "concept": "Sensemaking",
+    "domain": "Systems Thinking",
+    "oneliner": "The process of creating meaning from ambiguous, conflicting information — retrospective interpretation that frames 'what is going on here?' before deciding 'what should we do?'",
+    "whyItMatters": "Karl Weick showed that in complex situations, people act first and then make sense of what happened — rationality is retrospective. In crises, the organization that makes sense fastest wins. Sensemaking connects systems thinking to organizational psychology and decision science.",
+    "analogy": "Looking at a magic eye image — staring harder doesn't work. You have to relax your focus and let the pattern emerge."
+  },
+  {
+    "id": "systems-thinking:sensitive-dependence-on-initial-conditions",
+    "type": "standard",
+    "concept": "Sensitive Dependence on Initial Conditions",
+    "domain": "Systems Thinking",
+    "oneliner": "In chaotic systems, tiny differences in starting conditions produce wildly different outcomes — Lorenz's 'butterfly effect' formalized as mathematical chaos.",
+    "whyItMatters": "Weather beyond ~10 days, turbulent fluids, and three-body gravitational problems are all chaotically sensitive. This doesn't mean 'random' — it means deterministic but unpredictable. It sets hard limits on forecasting and explains why identical-seeming startups have radically different fates.",
+    "analogy": "Two billiard balls launched 0.001 degrees apart — after enough bounces, one is in the corner pocket and the other is on the floor."
+  },
+  {
+    "id": "systems-thinking:shifting-the-burden",
+    "type": "standard",
+    "concept": "Shifting the Burden",
+    "domain": "Systems Thinking",
+    "oneliner": "A systems archetype where a quick fix relieves symptoms, weakening the capacity for a fundamental solution — creating dependency on the fix.",
+    "whyItMatters": "Painkillers instead of physical therapy. Bailouts instead of structural reform. Technical debt instead of refactoring. The symptomatic solution works fast, so you use it again, and the fundamental solution atrophies from disuse. This is the structure of addiction at every scale.",
+    "analogy": "Using a crutch after a sprain — helpful short-term, but if you never do rehab, your leg weakens and you need the crutch permanently."
+  },
+  {
+    "id": "systems-thinking:signals-and-deception",
+    "type": "connection",
+    "concept": "Signals and Deception",
+    "domain": "Systems Thinking",
+    "conceptA": "Signaling Theory",
+    "domainA": "Economics",
+    "conceptB": "Mimicry",
+    "domainB": "Biology",
+    "connection": "In economics, Spence showed that education is partly a costly signal of ability (signaling theory). In biology, mimicry is a deceptive signal — harmless species evolve to look dangerous. Both describe systems where signals can be honest or manipulated.",
+    "insight": "A peacock's tail, a Harvard degree, and a luxury watch are all costly signals. Their value comes from being hard to fake. When signals become cheap to produce (diploma mills, counterfeit goods), the system breaks down — exactly as Batesian mimicry breaks down when mimics outnumber models.",
+    "prompt": "Why do expensive weddings function like a peacock's tail? What happens to the signal when everyone can fake it?"
+  },
+  {
+    "id": "systems-thinking:stock-and-flow",
+    "type": "standard",
+    "concept": "Stock and Flow",
+    "domain": "Systems Thinking",
+    "oneliner": "Stocks are accumulations (water in a bathtub, money in a bank). Flows are the rates that fill or drain them (income vs spending, births vs deaths).",
+    "whyItMatters": "Most people confuse stocks with flows — they see a large national debt (stock) without comparing it to GDP growth (flow). Misreading the relationship leads to panic or complacency in economics, ecology, and personal finance.",
+    "analogy": "A bathtub with the tap running and the drain open. The water level (stock) only rises if inflow exceeds outflow.",
+    "level": "foundational"
+  },
+  {
+    "id": "systems-thinking:stocks-and-flows",
+    "type": "standard",
+    "concept": "Stocks and Flows",
+    "domain": "Systems Thinking",
+    "oneliner": "Stocks are accumulations (water in a bathtub); flows are the rates that fill or drain them (faucet, drain). Most system behavior comes from stock-flow dynamics.",
+    "whyItMatters": "People systematically confuse stocks and flows: 'emissions dropped this year' doesn't mean atmospheric CO2 dropped (the stock keeps rising if inflow exceeds outflow). Understanding this distinction prevents the most common reasoning errors about accumulation.",
+    "analogy": "Like a bank account: your salary (flow in) and spending (flow out) determine the balance (stock). A raise doesn't help if spending rises faster.",
+    "level": "foundational"
+  },
+  {
+    "id": "systems-thinking:streetlight-effect",
+    "type": "standard",
+    "concept": "Streetlight Effect",
+    "domain": "Systems Thinking",
+    "oneliner": "Searching for something where it's easy to look rather than where it's likely to be.",
+    "whyItMatters": "A man looks for his keys under the streetlight, not where he dropped them, because 'the light is better here.'",
+    "analogy": "Researching what's measurable rather than what matters — because the data is available, not because it's relevant."
+  },
+  {
+    "id": "systems-thinking:stress-induced-strengthening",
+    "type": "connection",
+    "concept": "Stress-Induced Strengthening",
+    "domain": "Systems Thinking",
+    "conceptA": "Antifragility",
+    "domainA": "Systems Thinking",
+    "conceptB": "Hormesis",
+    "domainB": "Biology",
+    "connection": "Hormesis is the biological observation that low doses of a stressor improve function (exercise, fasting, small toxin exposure). Antifragility is Taleb's generalization: some systems don't just resist stress, they need it to grow.",
+    "insight": "Muscles grow from micro-tears. Immune systems strengthen from pathogen exposure. Organizations innovate under competitive pressure. The same principle operates across biology, psychology (post-traumatic growth), and economics. Systems that are shielded from stress become fragile.",
+    "prompt": "Why do children raised in sterile environments develop more allergies? How is this the same pattern as companies that fail after years of monopoly protection?"
+  },
+  {
+    "id": "systems-thinking:symmetry-breaking",
+    "type": "connection",
+    "concept": "Symmetry Breaking",
+    "domain": "Systems Thinking",
+    "conceptA": "Symmetry Breaking",
+    "domainA": "Physics",
+    "conceptB": "Institutional Path Dependence",
+    "domainB": "History & Geopolitics",
+    "connection": "In physics, a symmetric system becomes asymmetric when a phase transition 'breaks' the symmetry (a ball balanced on a hill must fall to one side). In institutions, early random events break the symmetry of possible outcomes, locking in a particular path.",
+    "insight": "QWERTY, driving on the left/right, and the dominance of the US dollar are all broken symmetries — the initial choice was arbitrary but once made, switching costs lock it in. The same math describes how a uniform universe developed galaxies and why identical startups diverge.",
+    "prompt": "When the first few countries adopted the metric system, what symmetry was breaking? Why is it so hard for the US to switch now — and how is this the same physics as a magnet cooling past its Curie temperature?"
+  },
+  {
+    "id": "systems-thinking:system-archetypes",
+    "type": "standard",
+    "concept": "System Archetypes",
+    "domain": "Systems Thinking",
+    "oneliner": "Recurring patterns of behavior in systems — 'fixes that backfire,' 'limits to growth,' 'shifting the burden,' 'tragedy of the commons.'",
+    "whyItMatters": "Senge identified ~10 archetypes that recur across industries, organizations, and ecosystems. Recognizing which archetype you're in tells you what will happen next and what interventions work.",
+    "analogy": "Like plot structures in storytelling — there are only a few basic patterns, but they repeat endlessly in different settings.",
+    "level": "intermediate"
+  },
+  {
+    "id": "systems-thinking:system-dynamics",
+    "type": "standard",
+    "concept": "System Dynamics",
+    "domain": "Systems Thinking",
+    "oneliner": "Jay Forrester's methodology for modeling complex systems using stocks, flows, feedback loops, and delays — simulated on computers to test policy interventions before implementing them.",
+    "whyItMatters": "The Limits to Growth (1972), one of the most influential models in history, used system dynamics. It's now applied in supply chain management, epidemiology, and urban planning. The discipline that turns 'everything is connected' from a platitude into a quantitative tool.",
+    "analogy": "A flight simulator for policy — you crash the simulated economy 50 times before touching the real controls.",
+    "level": "intermediate"
+  },
+  {
+    "id": "systems-thinking:systems-archetypes",
+    "type": "standard",
+    "concept": "Systems Archetypes",
+    "domain": "Systems Thinking",
+    "oneliner": "Recurring structural patterns in systems — like 'Shifting the Burden,' 'Limits to Growth,' and 'Tragedy of the Commons' — that produce predictable dysfunctional behavior.",
+    "whyItMatters": "Once you recognize the archetype, you know the trap. 'Shifting the Burden' explains addiction, technical debt, and corporate bailouts. 'Limits to Growth' explains every growth plateau. Pattern recognition beats ad-hoc firefighting.",
+    "analogy": "Plot templates in storytelling — once you know 'hero's journey' you see it everywhere. Systems have their own recurring plots."
+  },
+  {
+    "id": "systems-thinking:the-heisenberg-manager",
+    "type": "scenario",
+    "concept": "The Heisenberg Manager",
+    "domain": "Systems Thinking",
+    "scenario": "Every time a CEO visits the factory floor, productivity spikes temporarily. They conclude morale is fine. In reality, workers perform differently when observed. The act of measuring changes the measurement.",
+    "relevantConcepts": [
+      "Observer Effect",
+      "Hawthorne Effect",
+      "Goodhart's Law",
+      "Survivorship Bias"
+    ],
+    "domains": [
+      "Systems Thinking",
+      "Physics",
+      "Psychology"
+    ],
+    "explanation": "The Hawthorne effect (performance changes under observation) makes management-by-walking-around unreliable as a measurement tool. Genuine insight requires observing unobserved behavior — anonymous surveys, lagging indicators, or structural analysis rather than direct observation.",
+    "level": "intermediate"
+  },
+  {
+    "id": "systems-thinking:the-innovation-antibodies",
+    "type": "scenario",
+    "concept": "The Innovation Antibodies",
+    "domain": "Systems Thinking",
+    "scenario": "A large corporation acquires a successful startup. Within 18 months, the startup's best people have left, its products have been absorbed into the corporate roadmap, and innovation has stalled. The acquisition destroyed the very thing it was trying to buy.",
+    "relevantConcepts": [
+      "Emergence",
+      "Tight vs Loose Coupling",
+      "Creative Destruction",
+      "Antifragility"
+    ],
+    "domains": [
+      "Systems Thinking",
+      "Economics",
+      "Technology"
+    ],
+    "explanation": "The startup's innovation was emergent from its culture, autonomy, and speed — properties that can't survive integration into a tightly coupled bureaucracy. The acquiring company tried to buy a system property by buying the components, but emergence isn't transferable that way.",
+    "level": "advanced"
+  },
+  {
+    "id": "systems-thinking:the-paradox-of-efficiency",
+    "type": "scenario",
+    "concept": "The Paradox of Efficiency",
+    "domain": "Systems Thinking",
+    "scenario": "A hospital optimizes every department for maximum efficiency — zero slack, no idle beds, no spare staff. When a flu epidemic hits, the system collapses because there's no capacity to absorb the surge.",
+    "relevantConcepts": [
+      "Antifragility",
+      "Redundancy",
+      "Efficiency vs Resilience",
+      "Black Swan"
+    ],
+    "domains": [
+      "Systems Thinking",
+      "Economics",
+      "Biology"
+    ],
+    "explanation": "Maximum efficiency and maximum resilience are opposing goals. Slack, redundancy, and 'waste' are actually insurance against volatility. Systems optimized for normal conditions are fragile to abnormal ones. The right question isn't 'how efficient?' but 'efficient at what cost to resilience?'",
+    "level": "intermediate"
+  },
+  {
+    "id": "systems-thinking:the-premature-scaling-trap",
+    "type": "scenario",
+    "concept": "The Premature Scaling Trap",
+    "domain": "Systems Thinking",
+    "scenario": "A startup with 100 paying customers hires 50 engineers, leases an expensive office, and builds enterprise-grade infrastructure. Customer growth stalls. They burn through funding maintaining systems built for scale they haven't achieved.",
+    "relevantConcepts": [
+      "Premature Optimization",
+      "YAGNI",
+      "Feedback Loops",
+      "Sunk Cost Fallacy"
+    ],
+    "domains": [
+      "Systems Thinking",
+      "Technology",
+      "Economics"
+    ],
+    "explanation": "Premature scaling builds the machine before confirming demand. The infrastructure becomes a fixed cost that demands growth to justify itself, creating pressure that distorts product decisions. The sunk cost fallacy then prevents pivoting. The paradox: building for scale can prevent you from reaching it.",
+    "level": "intermediate"
+  },
+  {
+    "id": "systems-thinking:the-thermostat-paradox",
+    "type": "scenario",
+    "concept": "The Thermostat Paradox",
+    "domain": "Systems Thinking",
+    "scenario": "A company's quality metrics have been stable for three years. Management concludes the quality team isn't adding value and cuts the budget. Within six months, quality collapses. The team's success made it look unnecessary.",
+    "relevantConcepts": [
+      "Homeostasis",
+      "Feedback Loops",
+      "Survivorship Bias",
+      "Preventive Maintenance"
+    ],
+    "domains": [
+      "Systems Thinking",
+      "Economics"
+    ],
+    "explanation": "The quality team was the negative feedback loop maintaining homeostasis. Stable metrics weren't evidence of unnecessary effort — they were evidence of effective effort. This is the prevention paradox: successful prevention is invisible because the problem never occurs.",
+    "level": "intermediate"
+  },
+  {
+    "id": "systems-thinking:tight-vs-loose-coupling",
+    "type": "standard",
+    "concept": "Tight vs Loose Coupling",
+    "domain": "Systems Thinking",
+    "oneliner": "Tightly coupled systems transmit shocks instantly with no buffer (nuclear plants, financial markets). Loosely coupled systems have slack that absorbs disruption (modular software, federal governments).",
+    "whyItMatters": "Charles Perrow showed that tightly coupled + complex = inevitable accidents ('normal accidents'). Financial contagion, cascading blackouts, and supply chain collapses all stem from tight coupling. Adding slack costs efficiency but prevents catastrophe.",
+    "analogy": "Dominoes vs billiard balls on a table. Dominoes are tightly coupled — one tips, all fall. Billiard balls are loosely coupled — one hit doesn't cascade predictably."
+  },
+  {
+    "id": "systems-thinking:tipping-points",
+    "type": "standard",
+    "concept": "Tipping Points",
+    "domain": "Systems Thinking",
+    "oneliner": "Thresholds where a small additional change triggers a dramatic, often irreversible shift in system behavior — like ice melting or social movements igniting.",
+    "whyItMatters": "Climate tipping points, viral content, bank runs, and revolutions all follow the same pattern: gradual pressure, sudden snap. The danger is that you can't see the threshold until you've crossed it. Connects to phase transitions in physics and critical mass in sociology.",
+    "analogy": "Bending a plastic ruler — it flexes, flexes, flexes, then snaps. The last millimeter of pressure did all the 'damage' but every prior millimeter made it possible."
+  },
+  {
+    "id": "systems-thinking:transparency-radical-policy",
+    "type": "application",
+    "concept": "Transparency Radical Policy",
+    "domain": "Systems Thinking",
+    "problem": "A company publishes all salaries, performance reviews, and meeting notes to build trust through radical transparency.",
+    "firstOrder": "Pay inequity is exposed and corrected. Meetings become more productive as notes are public. Trust increases as hidden agendas become harder to maintain.",
+    "secondOrder": "Employees self-censor in meetings knowing everything is recorded. Honest feedback becomes private (DMs, hallway conversations), moving the real discourse underground. Salary transparency triggers envy and retention issues — people who were happy at $100k become unhappy when they learn a peer makes $105k. Hiring negotiations become rigid.",
+    "lesson": "Transparency solves information asymmetry but creates new behavioral distortions. People optimize for how they appear in the transparent record, not for genuine communication. Selective transparency may be more effective than total transparency.",
+    "level": "intermediate"
+  },
+  {
+    "id": "systems-thinking:unintended-consequences",
+    "type": "standard",
+    "concept": "Unintended Consequences",
+    "domain": "Systems Thinking",
+    "oneliner": "Outcomes of purposeful action that were not foreseen or intended — often arising because interventions in complex systems trigger feedback loops the designer didn't model.",
+    "whyItMatters": "The cobra effect (bounty on cobras → people breed cobras), Prohibition (banned alcohol → organized crime), antibiotics (killed bacteria → resistant superbugs). Every intervention in a complex system produces unintended effects. The question isn't whether, but where.",
+    "analogy": "Pulling one thread in a sweater to fix a snag — and unraveling the whole sleeve."
+  },
+  {
+    "id": "systems-thinking:wicked-problems",
+    "type": "standard",
+    "concept": "Wicked Problems",
+    "domain": "Systems Thinking",
+    "oneliner": "Problems with no definitive formulation, no stopping rule, and no right/wrong answers — only better or worse interventions. Coined by Rittel and Webber (1973).",
+    "whyItMatters": "Climate change, poverty, healthcare reform, and urban planning are all wicked. Tame problems have clear definitions and testable solutions; wicked problems are unique, interlinked, and change shape when you intervene. Treating a wicked problem as tame guarantees failure.",
+    "analogy": "Trying to untangle a knot that retangles itself every time you pull a strand — and the knot is different every time you look at it."
+  }
+]

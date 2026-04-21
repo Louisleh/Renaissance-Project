@@ -1,0 +1,827 @@
+[
+  {
+    "id": "chemistry:acids-and-bases",
+    "type": "standard",
+    "concept": "Acids and Bases",
+    "domain": "Chemistry",
+    "oneliner": "Acids donate protons (H+), bases accept them. They neutralize each other into water and salt.",
+    "whyItMatters": "Stomach acid digests food. Your body carefully regulates acid-base balance — deviation means death.",
+    "analogy": "Acids are givers (of protons), bases are takers. When they meet, they cancel out."
+  },
+  {
+    "id": "chemistry:activation-energy",
+    "type": "standard",
+    "concept": "Activation Energy",
+    "domain": "Chemistry",
+    "oneliner": "The minimum energy required to start a chemical reaction — the energy barrier that must be overcome.",
+    "whyItMatters": "Catalysts work by lowering activation energy. A match provides activation energy for combustion.",
+    "analogy": "The hill you must push the boulder over before it rolls downhill on its own — catalysts make the hill shorter."
+  },
+  {
+    "id": "chemistry:allotropy",
+    "type": "standard",
+    "concept": "Allotropy",
+    "domain": "Chemistry",
+    "oneliner": "The same element existing in different structural forms — oxygen as O2 (breathable) vs O3 (toxic ozone), carbon as diamond vs graphite vs graphene.",
+    "whyItMatters": "Same atoms, radically different properties depending on arrangement. In organizations: the same people arranged differently produce entirely different outcomes.",
+    "analogy": "Like the same letters rearranged into different words — 'listen' and 'silent' use identical letters but mean opposite things.",
+    "level": "foundational"
+  },
+  {
+    "id": "chemistry:alloys",
+    "type": "standard",
+    "concept": "Alloys",
+    "domain": "Chemistry",
+    "oneliner": "Mixtures of metals designed to have better properties than pure metals — steel, bronze, brass, titanium alloys.",
+    "whyItMatters": "Pure metals are rarely useful alone. Steel built civilization. Alloy design is materials engineering.",
+    "analogy": "A cocktail — mixing ingredients creates something better than any component alone."
+  },
+  {
+    "id": "chemistry:anode-vs-cathode",
+    "type": "standard",
+    "concept": "Anode vs Cathode",
+    "domain": "Chemistry",
+    "oneliner": "Anode: electrode where oxidation occurs (electrons leave). Cathode: where reduction occurs (electrons arrive).",
+    "whyItMatters": "Essential for understanding batteries, electrolysis, and electroplating. 'An Ox, Red Cat' is the mnemonic.",
+    "analogy": "The departure gate (anode) and arrival gate (cathode) for electrons — they always flow from anode to cathode."
+  },
+  {
+    "id": "chemistry:atoms",
+    "type": "standard",
+    "concept": "Atoms",
+    "domain": "Chemistry",
+    "oneliner": "The basic unit of matter — a nucleus of protons and neutrons orbited by electrons. Mostly empty space.",
+    "whyItMatters": "If the nucleus were a marble at center field, the nearest electron would be in the parking lot.",
+    "analogy": "The Lego bricks of reality — a few simple types combine into infinite complexity."
+  },
+  {
+    "id": "chemistry:buffer-solution",
+    "type": "standard",
+    "concept": "Buffer Solution",
+    "domain": "Chemistry",
+    "oneliner": "A solution that resists changes in pH when small amounts of acid or base are added.",
+    "whyItMatters": "Your blood is a buffer (pH 7.35-7.45). Without buffering, a glass of orange juice could kill you.",
+    "analogy": "A chemical shock absorber — acid comes in, base comes in, the pH barely budges."
+  },
+  {
+    "id": "chemistry:buffer-solutions",
+    "type": "standard",
+    "concept": "Buffer Solutions",
+    "domain": "Chemistry",
+    "oneliner": "Solutions that resist changes in pH when small amounts of acid or base are added — chemical stability through anticipatory chemistry.",
+    "whyItMatters": "Blood is a buffer (pH 7.35-7.45). Buffers work by having reserves ready to neutralize disturbances. In organizations: resilience comes from maintained reserves, not just reactive capacity.",
+    "analogy": "Like a savings account for chemical stability — small withdrawals (acid/base additions) barely change the balance because reserves absorb the shock.",
+    "level": "intermediate"
+  },
+  {
+    "id": "chemistry:carbon",
+    "type": "standard",
+    "concept": "Carbon",
+    "domain": "Chemistry",
+    "oneliner": "Element #6 — backbone of all organic chemistry. Forms four bonds and creates incredibly diverse structures.",
+    "whyItMatters": "Carbon's versatility is why life is carbon-based. Diamonds, graphite, carbon fiber, and CO2 are all carbon.",
+    "analogy": "The most social element — connects with everything and forms the most complex relationships."
+  },
+  {
+    "id": "chemistry:catalyst",
+    "type": "standard",
+    "concept": "Catalyst",
+    "domain": "Chemistry",
+    "oneliner": "A substance that speeds up reactions without being consumed — lowers the activation energy needed.",
+    "whyItMatters": "Enzymes in your body, catalytic converters in cars, industrial fertilizer production — all catalysts.",
+    "analogy": "A matchmaker who introduces people at a party without becoming part of the couple."
+  },
+  {
+    "id": "chemistry:catalytic-converter",
+    "type": "standard",
+    "concept": "Catalytic Converter",
+    "domain": "Chemistry",
+    "oneliner": "A device in car exhaust systems using platinum, palladium, and rhodium catalysts to convert toxic emissions into less harmful gases.",
+    "whyItMatters": "It reduces CO, NOx, and hydrocarbons. Theft is common because the precious metals inside are worth hundreds of dollars.",
+    "analogy": "A chemical cleanup crew in your exhaust pipe — turning poison into relatively harmless gases."
+  },
+  {
+    "id": "chemistry:catalytic-cycle",
+    "type": "standard",
+    "concept": "Catalytic Cycle",
+    "domain": "Chemistry",
+    "oneliner": "A catalyst participates in a reaction and is regenerated at the end — it enables transformation without being consumed by it.",
+    "whyItMatters": "Catalysts make the industrially impossible economically viable. In organizations: a good manager is a catalyst — they accelerate the team's reactions without being used up in the process.",
+    "analogy": "Like a matchmaker who introduces couples but never gets married themselves — always available for the next introduction.",
+    "level": "intermediate"
+  },
+  {
+    "id": "chemistry:chelate-effect",
+    "type": "standard",
+    "concept": "Chelate Effect",
+    "domain": "Chemistry",
+    "oneliner": "Chelating agents bind more tightly than equivalent monodentate ligands — entropy drives the stability.",
+    "whyItMatters": "It's why EDTA is so effective at trapping metals and why biological systems use chelates extensively.",
+    "analogy": "Multi-armed molecular handcuffs — each arm grabs the metal from a different angle, making escape impossible."
+  },
+  {
+    "id": "chemistry:chelation",
+    "type": "standard",
+    "concept": "Chelation",
+    "domain": "Chemistry",
+    "oneliner": "A compound binding tightly to a metal ion, effectively trapping it — used in medicine for heavy metal poisoning.",
+    "whyItMatters": "EDTA chelates lead and mercury. Hemoglobin chelates iron. It's how the body handles and medicine removes toxic metals.",
+    "analogy": "A molecular claw that grabs metal ions and won't let go — useful when those metals are where they shouldn't be."
+  },
+  {
+    "id": "chemistry:chemical-bond",
+    "type": "standard",
+    "concept": "Chemical Bond",
+    "domain": "Chemistry",
+    "oneliner": "The force holding atoms together — ionic (electron transfer), covalent (electron sharing), or metallic.",
+    "whyItMatters": "Bonds determine if something is gas, liquid, or solid, strong or weak, conductive or insulating.",
+    "analogy": "The handshake between atoms — some share equally, others take from the other."
+  },
+  {
+    "id": "chemistry:chemical-equilibrium",
+    "type": "standard",
+    "concept": "Chemical Equilibrium",
+    "domain": "Chemistry",
+    "oneliner": "When forward and reverse reactions occur at equal rates — concentrations stabilize but reactions never actually stop.",
+    "whyItMatters": "It's dynamic, not static. Le Chatelier's principle says disturbing equilibrium causes the system to push back.",
+    "analogy": "A tug-of-war where both sides are equally strong — the rope doesn't move, but everyone's still pulling."
+  },
+  {
+    "id": "chemistry:chemical-equilibrium-dynamics",
+    "type": "standard",
+    "concept": "Chemical Equilibrium Dynamics",
+    "domain": "Chemistry",
+    "oneliner": "At equilibrium, forward and reverse reactions occur at equal rates — the system looks static but is dynamically active.",
+    "whyItMatters": "A 'balanced' team, market, or ecosystem isn't at rest — it's in constant dynamic motion that nets to zero change. Stability is achieved through perpetual motion, not stillness.",
+    "analogy": "Like running on a treadmill — you're working hard but staying in the same place. The effort maintains the position.",
+    "level": "intermediate"
+  },
+  {
+    "id": "chemistry:chemical-kinetics",
+    "type": "standard",
+    "concept": "Chemical Kinetics",
+    "domain": "Chemistry",
+    "oneliner": "The study of reaction rates — how fast reactions occur and what factors speed them up or slow them down.",
+    "whyItMatters": "Temperature, concentration, catalysts, and surface area all affect rate. Understanding kinetics = controlling reactions.",
+    "analogy": "The speedometer of chemistry — not just whether a reaction happens, but how fast."
+  },
+  {
+    "id": "chemistry:chirality",
+    "type": "standard",
+    "concept": "Chirality",
+    "domain": "Chemistry",
+    "oneliner": "Mirror-image molecules that can't be superimposed — same atoms, same bonds, but one heals and the other harms.",
+    "whyItMatters": "Thalidomide's tragedy: one enantiomer treated morning sickness, the mirror caused birth defects. Handedness matters in drug design, materials science, and origin-of-life research.",
+    "analogy": "Like left and right gloves — identical in every measurement, but one doesn't fit on the wrong hand.",
+    "level": "intermediate"
+  },
+  {
+    "id": "chemistry:chromatography",
+    "type": "standard",
+    "concept": "Chromatography",
+    "domain": "Chemistry",
+    "oneliner": "Separating mixtures based on different rates of movement through a medium — used for analysis and purification.",
+    "whyItMatters": "How drug testing works, how food contaminants are detected, how forensic labs analyze evidence.",
+    "analogy": "A molecular race — different molecules run at different speeds through the same track, separating by speed."
+  },
+  {
+    "id": "chemistry:colloidal-suspension",
+    "type": "standard",
+    "concept": "Colloidal Suspension",
+    "domain": "Chemistry",
+    "oneliner": "A mixture where tiny particles (1-1000 nm) are dispersed throughout another substance without dissolving.",
+    "whyItMatters": "Milk, fog, paint, and blood are all colloids. They behave differently from true solutions and simple mixtures.",
+    "analogy": "Particles too small to see but too big to dissolve — suspended in limbo between mixed and separated."
+  },
+  {
+    "id": "chemistry:combustion",
+    "type": "standard",
+    "concept": "Combustion",
+    "domain": "Chemistry",
+    "oneliner": "A rapid exothermic reaction between a fuel and oxygen, producing heat, light, CO2, and water.",
+    "whyItMatters": "It powers cars, heats homes, and generates most electricity. Also the source of most anthropogenic CO2.",
+    "analogy": "Controlled fire — the chemical reaction that powered civilization and is now overheating the planet."
+  },
+  {
+    "id": "chemistry:coordination-chemistry",
+    "type": "standard",
+    "concept": "Coordination Chemistry",
+    "domain": "Chemistry",
+    "oneliner": "Metal ions surrounded by ligand molecules form complex structures with emergent properties — the whole is different from the parts.",
+    "whyItMatters": "Hemoglobin's ability to carry oxygen depends on iron's coordination chemistry. Catalysts, MRI contrast agents, and photovoltaics all rely on metal-ligand interactions.",
+    "analogy": "Like a celebrity (metal) surrounded by an entourage (ligands) — the entourage changes how the celebrity behaves in public.",
+    "level": "intermediate"
+  },
+  {
+    "id": "chemistry:corrosion",
+    "type": "standard",
+    "concept": "Corrosion",
+    "domain": "Chemistry",
+    "oneliner": "The gradual destruction of materials (usually metals) by chemical reaction with their environment — rusting is the most familiar.",
+    "whyItMatters": "It costs the global economy hundreds of billions annually. Preventing it is a core engineering challenge.",
+    "analogy": "Entropy attacking your infrastructure — metals slowly returning to their natural ore state."
+  },
+  {
+    "id": "chemistry:covalent-bond",
+    "type": "standard",
+    "concept": "Covalent Bond",
+    "domain": "Chemistry",
+    "oneliner": "A chemical bond where atoms share electrons. The strongest type of chemical bond in most cases.",
+    "whyItMatters": "It holds together the molecules of life — DNA, proteins, sugars. Most organic chemistry is covalent bonding.",
+    "analogy": "A partnership where both atoms invest and both benefit — shared custody of electrons."
+  },
+  {
+    "id": "chemistry:crystallography",
+    "type": "standard",
+    "concept": "Crystallography",
+    "domain": "Chemistry",
+    "oneliner": "The study of atomic arrangements in crystalline solids — determining 3D molecular structures using X-ray diffraction.",
+    "whyItMatters": "It revealed the structure of DNA (Rosalind Franklin), proteins, and drugs. Critical for pharmaceutical design.",
+    "analogy": "Taking a molecular mugshot — shooting X-rays at crystals to see how atoms are arranged inside."
+  },
+  {
+    "id": "chemistry:distillation",
+    "type": "standard",
+    "concept": "Distillation",
+    "domain": "Chemistry",
+    "oneliner": "Separating mixtures by boiling point differences — heating until one component evaporates, then condensing it.",
+    "whyItMatters": "How we purify water, produce spirits, refine petroleum, and separate industrial chemicals.",
+    "analogy": "Sorting by stubbornness — the most eager to evaporate leaves first, gets caught, and collected separately."
+  },
+  {
+    "id": "chemistry:electrochemistry",
+    "type": "standard",
+    "concept": "Electrochemistry",
+    "domain": "Chemistry",
+    "oneliner": "The study of chemical reactions that produce or consume electricity — batteries, fuel cells, corrosion, electroplating.",
+    "whyItMatters": "Every battery, every rusting car, and every nerve impulse in your body is electrochemistry.",
+    "analogy": "The intersection of chemistry and electricity — where electron flow becomes useful work."
+  },
+  {
+    "id": "chemistry:electrolysis",
+    "type": "standard",
+    "concept": "Electrolysis",
+    "domain": "Chemistry",
+    "oneliner": "Using electricity to drive non-spontaneous reactions — splitting compounds apart.",
+    "whyItMatters": "How we produce aluminum, chlorine, and green hydrogen. Critical for future clean energy.",
+    "analogy": "Using electricity as a crowbar to pry molecules apart."
+  },
+  {
+    "id": "chemistry:electrolyte",
+    "type": "standard",
+    "concept": "Electrolyte",
+    "domain": "Chemistry",
+    "oneliner": "A substance that conducts electricity when dissolved in water — dissociating into ions. Sodium, potassium, calcium.",
+    "whyItMatters": "Your nervous system runs on electrolytes. Muscle cramps, heart arrhythmias, and dehydration are all electrolyte problems.",
+    "analogy": "The minerals that make your body's electrical system work — without them, signals don't transmit."
+  },
+  {
+    "id": "chemistry:electronegativity",
+    "type": "standard",
+    "concept": "Electronegativity",
+    "domain": "Chemistry",
+    "oneliner": "How strongly an atom attracts shared electrons in a bond. Fluorine is the most electronegative.",
+    "whyItMatters": "Determines bond type, molecular polarity, and reactivity. Why water is polar and oil isn't.",
+    "analogy": "How possessive an atom is in a relationship — some share equally, others hog the electrons."
+  },
+  {
+    "id": "chemistry:emulsion",
+    "type": "standard",
+    "concept": "Emulsion",
+    "domain": "Chemistry",
+    "oneliner": "A mixture of two immiscible liquids (like oil and water) stabilized by an emulsifier.",
+    "whyItMatters": "Milk, mayonnaise, salad dressing, and skin lotions are all emulsions. The emulsifier keeps them from separating.",
+    "analogy": "Oil and water being forced to play nice — with a molecular peacekeeper preventing them from splitting."
+  },
+  {
+    "id": "chemistry:endocrine-disruptors",
+    "type": "standard",
+    "concept": "Endocrine Disruptors",
+    "domain": "Chemistry",
+    "oneliner": "Chemicals that interfere with hormonal systems — BPA, phthalates, PFAS. Found in plastics, pesticides, and consumer products.",
+    "whyItMatters": "They're linked to reproductive issues, obesity, cancer, and developmental problems. A growing public health concern.",
+    "analogy": "Chemical imposters mimicking your hormones — tricking your body's messaging system with false signals."
+  },
+  {
+    "id": "chemistry:enthalpy",
+    "type": "standard",
+    "concept": "Enthalpy",
+    "domain": "Chemistry",
+    "oneliner": "The total heat content of a system — changes in enthalpy tell you whether a reaction releases or absorbs heat.",
+    "whyItMatters": "Negative ΔH = exothermic (releases heat). Positive ΔH = endothermic (absorbs heat).",
+    "analogy": "The energy price tag of a reaction — negative means it pays you (heat out), positive means you pay (heat in)."
+  },
+  {
+    "id": "chemistry:entropy",
+    "type": "standard",
+    "concept": "Entropy",
+    "domain": "Chemistry",
+    "oneliner": "A measure of disorder in a system. The Second Law says entropy always increases in isolated systems.",
+    "whyItMatters": "It's why ice melts, rooms get messy, and energy dissipates. It defines the arrow of time in physics, the limits of information compression in mathematics, and the spontaneity of chemical reactions. Entropy is one of the deepest cross-domain concepts — connecting thermodynamics, cosmology, and information theory.",
+    "analogy": "The universe's tendency to shuffle the deck — order requires constant energy input."
+  },
+  {
+    "id": "chemistry:entropy-of-mixing",
+    "type": "standard",
+    "concept": "Entropy of Mixing",
+    "domain": "Chemistry",
+    "oneliner": "When two substances mix, entropy increases — the mixed state is more disordered and thermodynamically favored.",
+    "whyItMatters": "It's why gases spontaneously mix, why you can't unmix cream from coffee, and why separation requires energy.",
+    "analogy": "The universe's preference for mixing — combining things is natural, separating them takes work."
+  },
+  {
+    "id": "chemistry:equilibrium-constant",
+    "type": "standard",
+    "concept": "Equilibrium Constant",
+    "domain": "Chemistry",
+    "oneliner": "A number expressing the ratio of products to reactants at equilibrium — large K favors products, small K favors reactants.",
+    "whyItMatters": "It tells you which direction a reaction naturally goes and how far. It changes with temperature but not with concentration.",
+    "analogy": "The reaction's natural resting point — a high number means it strongly prefers to go forward."
+  },
+  {
+    "id": "chemistry:exothermic-vs-endothermic",
+    "type": "standard",
+    "concept": "Exothermic vs Endothermic",
+    "domain": "Chemistry",
+    "oneliner": "Exothermic: releases energy (combustion). Endothermic: absorbs energy (ice melting, photosynthesis).",
+    "whyItMatters": "Every reaction either gives off or absorbs energy. This determines spontaneity.",
+    "analogy": "Exothermic = spending savings. Endothermic = depositing into savings."
+  },
+  {
+    "id": "chemistry:fluorescence",
+    "type": "standard",
+    "concept": "Fluorescence",
+    "domain": "Chemistry",
+    "oneliner": "A substance absorbing light at one wavelength and re-emitting it at a longer wavelength — glowing under UV light.",
+    "whyItMatters": "It's how highlighter pens glow, how biological markers work in microscopy, and how crime scene evidence is detected.",
+    "analogy": "Absorbing invisible light and spitting out visible light — matter converting one color of light into another."
+  },
+  {
+    "id": "chemistry:galvanic-cell",
+    "type": "standard",
+    "concept": "Galvanic Cell",
+    "domain": "Chemistry",
+    "oneliner": "A device that converts chemical energy to electrical energy through spontaneous redox reactions — a battery.",
+    "whyItMatters": "Every disposable battery is a galvanic cell. Understanding them means understanding how portable power works.",
+    "analogy": "A chemistry experiment that produces electricity — two metals, a salt bridge, and electrons flowing from the more reactive to the less."
+  },
+  {
+    "id": "chemistry:gibbs-free-energy",
+    "type": "standard",
+    "concept": "Gibbs Free Energy",
+    "domain": "Chemistry",
+    "oneliner": "The energy available to do useful work — determines whether a reaction is spontaneous. ΔG = ΔH - TΔS.",
+    "whyItMatters": "If ΔG is negative, the reaction happens spontaneously. If positive, it needs energy input.",
+    "analogy": "The ultimate spontaneity test — combines energy and entropy to tell you whether a reaction will happen on its own."
+  },
+  {
+    "id": "chemistry:green-chemistry",
+    "type": "standard",
+    "concept": "Green Chemistry",
+    "domain": "Chemistry",
+    "oneliner": "Designing chemical products and processes that minimize hazardous substances — prevention over cleanup.",
+    "whyItMatters": "The 12 principles of green chemistry guide sustainable manufacturing. It's chemistry trying to clean up its own mess.",
+    "analogy": "Chemistry that considers the hangover before the party — designing reactions to produce less waste from the start."
+  },
+  {
+    "id": "chemistry:green-chemistry-principles",
+    "type": "standard",
+    "concept": "Green Chemistry Principles",
+    "domain": "Chemistry",
+    "oneliner": "Designing chemical processes that minimize waste, toxicity, and energy use from the start rather than cleaning up afterward.",
+    "whyItMatters": "Prevention beats remediation. The 12 principles of green chemistry parallel lean manufacturing: design out waste rather than managing it.",
+    "analogy": "Like planning a meal with zero food waste — it's easier to buy exactly what you need than to compost what's left.",
+    "level": "foundational"
+  },
+  {
+    "id": "chemistry:half-life",
+    "type": "standard",
+    "concept": "Half-Life",
+    "domain": "Chemistry",
+    "oneliner": "The time for half of a radioactive substance to decay. Ranges from fractions of a second to billions of years.",
+    "whyItMatters": "Carbon-14: 5,730 years (dating ancient things). Uranium-238: 4.5 billion years (dating the Earth). Iodine-131: 8 days (medical imaging).",
+    "analogy": "The substance's expiration date — not when it's ALL gone, but when half of it has transformed."
+  },
+  {
+    "id": "chemistry:hard-vs-soft-water",
+    "type": "standard",
+    "concept": "Hard vs Soft Water",
+    "domain": "Chemistry",
+    "oneliner": "Hard water contains dissolved calcium and magnesium. Soft water doesn't. Hardness affects soap performance and pipe scaling.",
+    "whyItMatters": "Hard water leaves mineral deposits (limescale). Water softeners replace calcium with sodium via ion exchange.",
+    "analogy": "Water with dissolved rock in it — invisible minerals that scale your pipes and resist your soap."
+  },
+  {
+    "id": "chemistry:hydrogen-bond",
+    "type": "standard",
+    "concept": "Hydrogen Bond",
+    "domain": "Chemistry",
+    "oneliner": "A weak attraction between a hydrogen bonded to an electronegative atom and another electronegative atom. Individually weak, collectively powerful.",
+    "whyItMatters": "Hydrogen bonds give water its unusual properties, hold DNA's double helix together, and fold proteins into shape.",
+    "analogy": "The weakest handshake in chemistry — but when millions do it at once, they can hold a double helix together."
+  },
+  {
+    "id": "chemistry:ionic-bond",
+    "type": "standard",
+    "concept": "Ionic Bond",
+    "domain": "Chemistry",
+    "oneliner": "A bond formed when one atom transfers electrons to another, creating oppositely charged ions that attract.",
+    "whyItMatters": "Table salt (NaCl) is ionically bonded. Ionic compounds dissolve in water and conduct electricity when dissolved.",
+    "analogy": "A transaction, not a partnership — one atom takes the electron, creating a creditor and debtor that stick together."
+  },
+  {
+    "id": "chemistry:isomers",
+    "type": "standard",
+    "concept": "Isomers",
+    "domain": "Chemistry",
+    "oneliner": "Molecules with the same chemical formula but different structural arrangements — same atoms, different shapes.",
+    "whyItMatters": "Thalidomide: one isomer cured morning sickness, the mirror image caused birth defects. Shape matters enormously.",
+    "analogy": "Same ingredients, different recipes — identical atoms arranged differently create substances with completely different properties."
+  },
+  {
+    "id": "chemistry:isotopes",
+    "type": "standard",
+    "concept": "Isotopes",
+    "domain": "Chemistry",
+    "oneliner": "Atoms of the same element with different neutron counts. Same chemistry, different mass, sometimes radioactive.",
+    "whyItMatters": "Carbon-14 dating, medical imaging, nuclear reactors — all use isotope properties.",
+    "analogy": "Siblings — same family name, same personality, different weights."
+  },
+  {
+    "id": "chemistry:latent-heat",
+    "type": "standard",
+    "concept": "Latent Heat",
+    "domain": "Chemistry",
+    "oneliner": "Energy absorbed or released during a phase change without temperature change — ice absorbing heat while melting at 0°C.",
+    "whyItMatters": "It's why sweating cools you (evaporation absorbs heat) and why steam burns worse than boiling water (condensation releases extra heat).",
+    "analogy": "Hidden energy — the heat going into breaking molecular bonds rather than raising temperature."
+  },
+  {
+    "id": "chemistry:le-chatelier-s-principle",
+    "type": "standard",
+    "concept": "Le Chatelier's Principle",
+    "domain": "Chemistry",
+    "oneliner": "When a system at equilibrium is disturbed, it shifts to partially counteract the disturbance.",
+    "whyItMatters": "Used to optimize industrial chemical production. Add more reactant → more product. Raise temperature → depends on the reaction.",
+    "analogy": "A balancing scale that, when you add weight to one side, automatically shifts to compensate."
+  },
+  {
+    "id": "chemistry:le-chatelier-s-principle-applications",
+    "type": "standard",
+    "concept": "Le Chatelier's Principle (Applications)",
+    "domain": "Chemistry",
+    "oneliner": "When a system at equilibrium is disturbed, it shifts to counteract the disturbance — systems resist change by adapting.",
+    "whyItMatters": "Add pressure: the reaction shifts toward fewer gas molecules. Raise temperature: it favors endothermic direction. The principle is universal — markets, ecosystems, and organizations all counteract disruption.",
+    "analogy": "Like a seesaw that adds weight to the lighter side when you push one end down — the system automatically rebalances.",
+    "level": "foundational"
+  },
+  {
+    "id": "chemistry:maillard-reaction",
+    "type": "standard",
+    "concept": "Maillard Reaction",
+    "domain": "Chemistry",
+    "oneliner": "The chemical reaction between amino acids and sugars when heated — producing the complex flavors of browned food.",
+    "whyItMatters": "It's why seared steak, toasted bread, and roasted coffee taste the way they do. Not caramelization — that's sugar alone.",
+    "analogy": "The chemistry of deliciousness — the reason browning makes everything taste better."
+  },
+  {
+    "id": "chemistry:mass-spectrometry",
+    "type": "standard",
+    "concept": "Mass Spectrometry",
+    "domain": "Chemistry",
+    "oneliner": "An analytical technique identifying molecules by measuring their mass-to-charge ratio after ionization.",
+    "whyItMatters": "Used in drug testing, forensics, protein identification, and space exploration (Mars rovers carry mass spectrometers).",
+    "analogy": "A molecular scale — weighing individual molecules to figure out what they are."
+  },
+  {
+    "id": "chemistry:molarity",
+    "type": "standard",
+    "concept": "Molarity",
+    "domain": "Chemistry",
+    "oneliner": "A measure of concentration — moles of solute per liter of solution. The standard unit in chemistry.",
+    "whyItMatters": "It standardizes how scientists describe and reproduce solutions. Essential for lab work, medicine dosing, and industry.",
+    "analogy": "The recipe's precision — not just 'some salt in water' but exactly how much per liter."
+  },
+  {
+    "id": "chemistry:mole-avogadro-s-number",
+    "type": "standard",
+    "concept": "Mole (Avogadro's Number)",
+    "domain": "Chemistry",
+    "oneliner": "6.022 × 10²³ — the number of atoms in a quantity of substance equal to its atomic mass in grams.",
+    "whyItMatters": "It bridges the atomic world and the human-scale world. One mole of water = 18 grams = a tablespoon.",
+    "analogy": "A 'dozen' for atoms — except instead of 12, it's 602 billion trillion."
+  },
+  {
+    "id": "chemistry:nanotechnology",
+    "type": "standard",
+    "concept": "Nanotechnology",
+    "domain": "Chemistry",
+    "oneliner": "Engineering materials and devices at the nanometer scale (1-100 nm) — where quantum effects start to matter.",
+    "whyItMatters": "Properties change dramatically at nanoscale. Gold nanoparticles are red, not gold. Carbon nanotubes are stronger than steel.",
+    "analogy": "Building with atoms the way we currently build with bricks — same materials, radically different properties at tiny scale."
+  },
+  {
+    "id": "chemistry:nuclear-magnetic-resonance",
+    "type": "standard",
+    "concept": "Nuclear Magnetic Resonance",
+    "domain": "Chemistry",
+    "oneliner": "Atomic nuclei in magnetic fields absorb and re-emit electromagnetic radiation — basis of MRI and molecular structure determination.",
+    "whyItMatters": "MRI machines use it to image soft tissue. Chemists use it to determine molecular structure.",
+    "analogy": "Making atoms sing in a magnetic field — their song tells you what molecule they're part of and where they sit."
+  },
+  {
+    "id": "chemistry:organic-vs-inorganic",
+    "type": "standard",
+    "concept": "Organic vs Inorganic",
+    "domain": "Chemistry",
+    "oneliner": "Organic: carbon-based compounds (life, drugs). Inorganic: everything else (metals, minerals, salts).",
+    "whyItMatters": "Pharmaceutical chemistry is organic. Materials science is often inorganic. The distinction shapes entire industries.",
+    "analogy": "Organic = chemistry of life and things that were alive. Inorganic = rocks, metals, minerals."
+  },
+  {
+    "id": "chemistry:oxidation-states",
+    "type": "standard",
+    "concept": "Oxidation States",
+    "domain": "Chemistry",
+    "oneliner": "The hypothetical charge an atom would have if all bonds were ionic — a bookkeeping tool for tracking electron transfer.",
+    "whyItMatters": "Essential for balancing redox equations and predicting chemical behavior. Iron can be +2 or +3. Carbon ranges from -4 to +4.",
+    "analogy": "Electron accounting — tracking who has whose electrons, even in relationships that share."
+  },
+  {
+    "id": "chemistry:oxidation-reduction",
+    "type": "standard",
+    "concept": "Oxidation-Reduction",
+    "domain": "Chemistry",
+    "oneliner": "Reactions involving electron transfer. Oxidation = losing electrons. Reduction = gaining. Always occur together.",
+    "whyItMatters": "Rusting, burning, breathing, batteries, and photosynthesis are all redox reactions.",
+    "analogy": "A transaction — one side pays (oxidation), the other receives (reduction)."
+  },
+  {
+    "id": "chemistry:oxidizing-vs-reducing-agent",
+    "type": "standard",
+    "concept": "Oxidizing vs Reducing Agent",
+    "domain": "Chemistry",
+    "oneliner": "An oxidizing agent gains electrons (gets reduced). A reducing agent loses electrons (gets oxidized). They're the two partners in every redox reaction.",
+    "whyItMatters": "Bleach is an oxidizing agent. Vitamin C is a reducing agent. Understanding this means understanding corrosion, metabolism, and batteries.",
+    "analogy": "In every electron transaction, one partner gives (reducing agent) and the other takes (oxidizing agent)."
+  },
+  {
+    "id": "chemistry:periodic-table",
+    "type": "standard",
+    "concept": "Periodic Table",
+    "domain": "Chemistry",
+    "oneliner": "The organizing framework of all 118 known elements, arranged by atomic number and grouped by chemical properties.",
+    "whyItMatters": "It predicted undiscovered elements. Understanding it means understanding what everything in the universe is made of.",
+    "analogy": "The alphabet of matter — 118 letters that combine to form every substance that exists."
+  },
+  {
+    "id": "chemistry:ph-scale",
+    "type": "standard",
+    "concept": "pH Scale",
+    "domain": "Chemistry",
+    "oneliner": "A 0-14 scale measuring acidity/basicity. 7 is neutral. Each step is 10x. Below 7 = acidic, above = basic.",
+    "whyItMatters": "Your blood must stay between 7.35-7.45 or you die. Cooking, agriculture, and industry all depend on pH.",
+    "analogy": "A ruler measuring how aggressive a liquid is — lemon juice (2) vs. bleach (13)."
+  },
+  {
+    "id": "chemistry:phase-diagram",
+    "type": "standard",
+    "concept": "Phase Diagram",
+    "domain": "Chemistry",
+    "oneliner": "A graph showing which state of matter is stable at different temperatures and pressures — with critical and triple points.",
+    "whyItMatters": "The triple point is where solid, liquid, and gas coexist simultaneously. Critical point is where liquid and gas become indistinguishable.",
+    "analogy": "A map of matter's personality — telling you whether it'll be solid, liquid, or gas given the temperature and pressure."
+  },
+  {
+    "id": "chemistry:photocatalysis",
+    "type": "standard",
+    "concept": "Photocatalysis",
+    "domain": "Chemistry",
+    "oneliner": "Using light to accelerate chemical reactions via a catalyst — splitting water, degrading pollutants, self-cleaning surfaces.",
+    "whyItMatters": "Titanium dioxide on building surfaces breaks down pollutants in sunlight. Could enable solar-powered hydrogen production.",
+    "analogy": "Sunlight-powered chemistry — using photons to drive reactions that would otherwise need heat or electricity."
+  },
+  {
+    "id": "chemistry:polymer-chemistry",
+    "type": "standard",
+    "concept": "Polymer Chemistry",
+    "domain": "Chemistry",
+    "oneliner": "The science of creating materials from repeating molecular units — from DNA and silk to nylon and kevlar.",
+    "whyItMatters": "Nearly everything in modern life involves polymers: clothing, packaging, electronics, medicine. Understanding polymerization is understanding how simple units create complex materials with emergent properties.",
+    "analogy": "Like a paper clip chain — each clip is simple and weak, but linked together they form something long, flexible, and strong.",
+    "level": "intermediate"
+  },
+  {
+    "id": "chemistry:polymerization",
+    "type": "standard",
+    "concept": "Polymerization",
+    "domain": "Chemistry",
+    "oneliner": "The process of joining monomers into polymer chains — addition (chain growth) or condensation (step growth).",
+    "whyItMatters": "It's how plastics, nylon, polyester, and synthetic rubber are made. Understanding it means understanding materials manufacturing.",
+    "analogy": "Connecting train cars — each monomer is a car, and the process determines whether you get a freight train or a bullet train."
+  },
+  {
+    "id": "chemistry:polymers",
+    "type": "standard",
+    "concept": "Polymers",
+    "domain": "Chemistry",
+    "oneliner": "Long chain molecules of repeating units. DNA, proteins, plastics, rubber, and cellulose are all polymers.",
+    "whyItMatters": "Modern civilization runs on synthetic polymers (plastics). Understanding them means understanding materials and environmental crisis.",
+    "analogy": "A chain necklace — each link is simple, but strung together they create entirely new properties."
+  },
+  {
+    "id": "chemistry:polymorphism-chemistry",
+    "type": "standard",
+    "concept": "Polymorphism (Chemistry)",
+    "domain": "Chemistry",
+    "oneliner": "The same chemical compound can crystallize into different structures with different properties — diamond and graphite are both pure carbon.",
+    "whyItMatters": "Critical in pharmaceuticals: the wrong crystal form of a drug may not dissolve properly. Same ingredients, different arrangements, completely different outcomes.",
+    "analogy": "Like the same Lego bricks assembled into different models — the pieces are identical, but the structures behave very differently.",
+    "level": "intermediate"
+  },
+  {
+    "id": "chemistry:precipitation-reaction",
+    "type": "standard",
+    "concept": "Precipitation Reaction",
+    "domain": "Chemistry",
+    "oneliner": "When two soluble substances mix and form an insoluble solid (precipitate) that falls out of solution.",
+    "whyItMatters": "It's how water treatment removes heavy metals, how kidney stones form, and how many qualitative tests work.",
+    "analogy": "Two dissolved things meeting and creating something that refuses to stay dissolved — solid crystals raining out of solution."
+  },
+  {
+    "id": "chemistry:racemization",
+    "type": "standard",
+    "concept": "Racemization",
+    "domain": "Chemistry",
+    "oneliner": "The conversion of optically pure molecules into a mixture of mirror-image forms — important in pharmaceuticals and dating.",
+    "whyItMatters": "Amino acid racemization is used to date fossils. In drugs, one mirror form can be therapeutic while the other is toxic (thalidomide).",
+    "analogy": "A molecule slowly becoming its own mirror image — like a left glove gradually mixing with right gloves."
+  },
+  {
+    "id": "chemistry:radioactive-decay",
+    "type": "standard",
+    "concept": "Radioactive Decay",
+    "domain": "Chemistry",
+    "oneliner": "Unstable atomic nuclei losing energy by emitting radiation — alpha, beta, or gamma. Each has a characteristic half-life.",
+    "whyItMatters": "Carbon-14 dating, nuclear medicine, nuclear power, and nuclear weapons all depend on understanding decay.",
+    "analogy": "Atoms that can't hold themselves together — slowly falling apart at a statistically predictable rate."
+  },
+  {
+    "id": "chemistry:reaction-kinetics",
+    "type": "standard",
+    "concept": "Reaction Kinetics",
+    "domain": "Chemistry",
+    "oneliner": "The study of how fast reactions occur and what factors control the rate — thermodynamics says if, kinetics says when.",
+    "whyItMatters": "A reaction can be favorable but take centuries (diamond to graphite). Understanding rate determines whether a process is practical or just theoretically possible.",
+    "analogy": "Like knowing the destination but not how long the drive takes — the route, traffic, and speed all matter as much as the endpoint.",
+    "level": "foundational"
+  },
+  {
+    "id": "chemistry:redox-reactions",
+    "type": "standard",
+    "concept": "Redox Reactions",
+    "domain": "Chemistry",
+    "oneliner": "Reactions where electrons transfer between substances — oxidation (losing electrons) always paired with reduction (gaining them).",
+    "whyItMatters": "Powers batteries, corrosion, photosynthesis, and cellular respiration. Every energy transformation in biology is fundamentally a redox reaction. No electron is lost — every oxidation funds a reduction.",
+    "analogy": "Like a seesaw — one side goes up only because the other goes down. The electron is the fulcrum of chemistry.",
+    "level": "foundational"
+  },
+  {
+    "id": "chemistry:reduction-potential",
+    "type": "standard",
+    "concept": "Reduction Potential",
+    "domain": "Chemistry",
+    "oneliner": "A measure of a substance's tendency to gain electrons — higher potential means it's a stronger oxidizing agent.",
+    "whyItMatters": "It determines which direction redox reactions go spontaneously. Fluorine has the highest reduction potential.",
+    "analogy": "A ranking of molecular greediness — which substances grab electrons most aggressively."
+  },
+  {
+    "id": "chemistry:sacrificial-anode",
+    "type": "standard",
+    "concept": "Sacrificial Anode",
+    "domain": "Chemistry",
+    "oneliner": "Attaching a more reactive metal to a structure so it corrodes first, protecting the structure — deliberate sacrifice to preserve what matters.",
+    "whyItMatters": "Ships, bridges, and pipelines all use sacrificial anodes. The principle: protect the critical by letting the replaceable absorb the damage. In teams: buffer roles that absorb organizational friction.",
+    "analogy": "Like a bodyguard who takes the hit so the VIP doesn't — the sacrifice is by design, not accident.",
+    "level": "foundational"
+  },
+  {
+    "id": "chemistry:saponification",
+    "type": "standard",
+    "concept": "Saponification",
+    "domain": "Chemistry",
+    "oneliner": "The chemical reaction making soap — fats or oils reacting with a strong base (lye) to produce soap and glycerol.",
+    "whyItMatters": "It's one of the oldest chemical processes humans use. Every bar of soap involves this reaction.",
+    "analogy": "Fat + lye = soap. Humanity's oldest chemistry experiment — turning grease into cleanliness."
+  },
+  {
+    "id": "chemistry:semiconductors",
+    "type": "standard",
+    "concept": "Semiconductors",
+    "domain": "Chemistry",
+    "oneliner": "Materials whose conductivity falls between conductors and insulators — and can be precisely controlled.",
+    "whyItMatters": "Every chip, solar cell, and LED is built on semiconductors. The foundation of the digital age.",
+    "analogy": "A valve for electricity — not fully on, not fully off, but precisely adjustable."
+  },
+  {
+    "id": "chemistry:solubility",
+    "type": "standard",
+    "concept": "Solubility",
+    "domain": "Chemistry",
+    "oneliner": "How much of a substance can dissolve in a solvent. Depends on temperature, pressure, and molecular compatibility.",
+    "whyItMatters": "It determines drug delivery, ocean chemistry, pollution behavior, and why oil and water don't mix.",
+    "analogy": "How well two substances get along — some mix perfectly, others refuse to associate."
+  },
+  {
+    "id": "chemistry:solubility-rules",
+    "type": "standard",
+    "concept": "Solubility Rules",
+    "domain": "Chemistry",
+    "oneliner": "Predictable patterns for which substances dissolve in which solvents — 'like dissolves like' is the foundational principle.",
+    "whyItMatters": "Polar solvents dissolve polar solutes; nonpolar dissolves nonpolar. This principle extends: people bond with similar people, ideas spread in receptive cultures, solutions work in compatible systems.",
+    "analogy": "Like trying to mix oil and water — compatibility isn't about effort, it's about structural match.",
+    "level": "foundational"
+  },
+  {
+    "id": "chemistry:spectroscopy",
+    "type": "standard",
+    "concept": "Spectroscopy",
+    "domain": "Chemistry",
+    "oneliner": "Analyzing materials by examining how they interact with electromagnetic radiation — absorption, emission, scattering.",
+    "whyItMatters": "How astronomers know what stars are made of, how doctors analyze blood, how forensics identifies substances.",
+    "analogy": "Molecular fingerprinting — every substance absorbs and emits light in a unique, identifiable pattern."
+  },
+  {
+    "id": "chemistry:states-of-matter",
+    "type": "standard",
+    "concept": "States of Matter",
+    "domain": "Chemistry",
+    "oneliner": "Solid, liquid, gas, plasma. 99% of visible matter in the universe is plasma (stars).",
+    "whyItMatters": "Phase transitions require energy. Understanding states means understanding materials engineering.",
+    "analogy": "Different social arrangements of molecules — tightly packed, loosely mingling, or scattered across the room."
+  },
+  {
+    "id": "chemistry:stoichiometry",
+    "type": "standard",
+    "concept": "Stoichiometry",
+    "domain": "Chemistry",
+    "oneliner": "The math of chemical reactions — calculating exact quantities of reactants and products based on balanced equations.",
+    "whyItMatters": "It's how engineers scale lab reactions to industrial production and how pharmacists calculate drug formulations.",
+    "analogy": "The recipe math of chemistry — if you need 2 eggs per cake, how many eggs for 1000 cakes?"
+  },
+  {
+    "id": "chemistry:sublimation",
+    "type": "standard",
+    "concept": "Sublimation",
+    "domain": "Chemistry",
+    "oneliner": "A substance transitioning directly from solid to gas, skipping liquid — dry ice is the classic example.",
+    "whyItMatters": "Freeze-drying food uses sublimation. Mothballs sublimate. It's a phase transition that bypasses liquid.",
+    "analogy": "The solid equivalent of evaporation — disappearing into thin air without melting first."
+  },
+  {
+    "id": "chemistry:supercritical-fluid",
+    "type": "standard",
+    "concept": "Supercritical Fluid",
+    "domain": "Chemistry",
+    "oneliner": "A substance above its critical temperature and pressure — neither liquid nor gas, with properties of both.",
+    "whyItMatters": "Supercritical CO2 is used to decaffeinate coffee, extract essential oils, and dry-clean clothes without toxic solvents.",
+    "analogy": "A substance in the twilight zone between liquid and gas — dense enough to dissolve things, fluid enough to flow through anything."
+  },
+  {
+    "id": "chemistry:supramolecular-chemistry",
+    "type": "standard",
+    "concept": "Supramolecular Chemistry",
+    "domain": "Chemistry",
+    "oneliner": "Chemistry beyond the molecule — studying how molecules self-assemble into larger structures through non-covalent forces.",
+    "whyItMatters": "DNA's double helix, cell membranes, and drug delivery systems all depend on molecular self-assembly. The future of nanotechnology is built on these weak-but-strategic interactions.",
+    "analogy": "Like dancers who form patterns without choreography — each follows simple local rules, but the ensemble creates complex order.",
+    "level": "advanced"
+  },
+  {
+    "id": "chemistry:surface-tension",
+    "type": "standard",
+    "concept": "Surface Tension",
+    "domain": "Chemistry",
+    "oneliner": "The tendency of liquid surfaces to minimize area, caused by cohesive forces between molecules at the surface.",
+    "whyItMatters": "It's why water forms droplets, insects walk on water, and soap makes bubbles.",
+    "analogy": "The liquid's skin — molecules at the surface hold hands tighter because there's nothing above them to grab."
+  },
+  {
+    "id": "chemistry:titration",
+    "type": "standard",
+    "concept": "Titration",
+    "domain": "Chemistry",
+    "oneliner": "A technique for determining concentration by slowly adding a reagent of known concentration until the reaction completes.",
+    "whyItMatters": "Fundamental lab technique in analytical chemistry, quality control, and environmental testing.",
+    "analogy": "Slowly adding drops until the solution changes color — like filling a glass until it overflows, except you're measuring the exact amount."
+  },
+  {
+    "id": "chemistry:valence-electrons",
+    "type": "standard",
+    "concept": "Valence Electrons",
+    "domain": "Chemistry",
+    "oneliner": "The electrons in an atom's outermost shell — they determine chemical behavior and bonding.",
+    "whyItMatters": "Everything about how an element reacts comes down to its valence electrons. The periodic table is organized by them.",
+    "analogy": "The atom's social circle — only the outermost electrons participate in the chemistry of meeting other atoms."
+  }
+]

@@ -1,0 +1,875 @@
+[
+  {
+    "id": "psychology:abolishing-homework",
+    "type": "application",
+    "concept": "Abolishing Homework",
+    "domain": "Psychology",
+    "problem": "A school district eliminates all homework to reduce student stress and improve family time.",
+    "firstOrder": "Student stress decreases. Family relationships improve. Afternoons and evenings are freed for play, hobbies, and rest. Equity gaps from unequal home environments shrink.",
+    "secondOrder": "Students lose practice with independent learning and time management — skills crucial for college and careers. Parents who valued homework as structure now face entertainment demands. Achievement gaps may widen in subjects requiring repetitive practice (math, languages). Teachers must restructure curricula to cover all learning in class time.",
+    "lesson": "Homework isn't just about content — it's practice for self-directed learning. Eliminating it removes both the cost (stress) and the benefit (self-regulation skills). Second-order thinking asks: what hidden function was the thing you removed also serving?",
+    "level": "foundational"
+  },
+  {
+    "id": "psychology:anchoring-in-self-assessment",
+    "type": "standard",
+    "concept": "Anchoring in Self-Assessment",
+    "domain": "Psychology",
+    "oneliner": "Initial self-evaluations create anchors that bias all subsequent judgments of your own ability — first impressions of yourself stick.",
+    "whyItMatters": "If your first coding project failed, that anchor shapes your identity as 'not a coder' even after years of success. Recalibrating self-anchors requires deliberate evidence gathering.",
+    "analogy": "Like a thermostat set too low — you keep the room cold because you never thought to check the setting.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:asch-conformity-experiment",
+    "type": "standard",
+    "concept": "Asch Conformity Experiment",
+    "domain": "Psychology",
+    "oneliner": "Participants gave obviously wrong answers to match a group — 75% conformed at least once. Social pressure overrides perception.",
+    "whyItMatters": "You will deny what your own eyes tell you to avoid disagreeing with a group. Even smart, independent people do this.",
+    "analogy": "Seeing a short line and calling it long because everyone else did — social pressure literally rewiring your perception."
+  },
+  {
+    "id": "psychology:attachment-theory",
+    "type": "standard",
+    "concept": "Attachment Theory",
+    "domain": "Psychology",
+    "oneliner": "Early bonds with caregivers create models shaping all future relationships — secure, anxious, avoidant, disorganized. Bowlby.",
+    "whyItMatters": "Predicts relationship patterns, emotional regulation, career success. Your style formed before age 3.",
+    "analogy": "Your first relationship became the template for all others — the mold was cast before you could speak."
+  },
+  {
+    "id": "psychology:audience-effect",
+    "type": "standard",
+    "concept": "Audience Effect",
+    "domain": "Psychology",
+    "oneliner": "People perform simple tasks better and complex tasks worse when being watched — social presence amplifies dominant responses.",
+    "whyItMatters": "Zajonc's social facilitation theory explains why open offices help routine work but hurt creative work. The audience doesn't just observe — it changes the performance.",
+    "analogy": "Like a musician who plays scales perfectly in front of a crowd but fumbles a new piece — the spotlight locks you into your strongest habits.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:broaden-and-build-theory",
+    "type": "standard",
+    "concept": "Broaden-and-Build Theory",
+    "domain": "Psychology",
+    "oneliner": "Positive emotions broaden your awareness and encourage exploration; negative emotions narrow focus to immediate threats.",
+    "whyItMatters": "Fredrickson showed that positive emotions aren't just pleasant — they build lasting resources: skills, relationships, resilience. This is why psychological safety enables innovation.",
+    "analogy": "Like a camera lens — fear zooms in tight on the threat, while curiosity zooms out to see the whole landscape.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:bystander-effect",
+    "type": "standard",
+    "concept": "Bystander Effect",
+    "domain": "Psychology",
+    "oneliner": "More people present = less likely any individual helps. Responsibility diffuses across the group.",
+    "whyItMatters": "Why 'somebody call 911' fails — you must point to a specific person.",
+    "analogy": "Everyone assumes someone else will help — so nobody does."
+  },
+  {
+    "id": "psychology:cognitive-behavioral-therapy",
+    "type": "standard",
+    "concept": "Cognitive Behavioral Therapy",
+    "domain": "Psychology",
+    "oneliner": "A structured therapy approach changing negative thought patterns and behaviors — the most evidence-backed psychotherapy.",
+    "whyItMatters": "It works for depression, anxiety, PTSD, insomnia, and chronic pain. Based on the idea that thoughts drive feelings and behavior.",
+    "analogy": "Debugging your mental software — finding the faulty logic loops and rewriting them."
+  },
+  {
+    "id": "psychology:cognitive-dissonance",
+    "type": "standard",
+    "concept": "Cognitive Dissonance",
+    "domain": "Psychology",
+    "oneliner": "Mental discomfort from holding contradictory beliefs — resolved by changing beliefs, behavior, or rationalizing.",
+    "whyItMatters": "Why people justify bad decisions, why hazing increases loyalty, why cult members double down.",
+    "analogy": "Your brain can't hold two contradictory ideas — one has to go, usually the inconvenient one."
+  },
+  {
+    "id": "psychology:cognitive-dissonance-reduction",
+    "type": "standard",
+    "concept": "Cognitive Dissonance Reduction",
+    "domain": "Psychology",
+    "oneliner": "When behavior contradicts belief, people change the belief rather than the behavior — consistency feels more urgent than truth.",
+    "whyItMatters": "Festinger showed this drives post-purchase rationalization, cult loyalty, and why people defend bad decisions more strongly than good ones.",
+    "analogy": "Like adjusting the mirror instead of your posture — it's easier to change how you see yourself than how you act.",
+    "level": "foundational"
+  },
+  {
+    "id": "psychology:compassion-fatigue",
+    "type": "standard",
+    "concept": "Compassion Fatigue",
+    "domain": "Psychology",
+    "oneliner": "Chronic empathic engagement with suffering depletes emotional resources, leading to numbness, cynicism, and withdrawal.",
+    "whyItMatters": "Affects caregivers, activists, and anyone in helping roles. Sustainable impact requires managing empathic load, not just increasing effort.",
+    "analogy": "Like a battery drained from constant charging of other devices — you can't power others if you never recharge yourself.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:construal-level-theory",
+    "type": "standard",
+    "concept": "Construal Level Theory",
+    "domain": "Psychology",
+    "oneliner": "Psychological distance (in time, space, social closeness, or probability) determines whether you think abstractly or concretely about something.",
+    "whyItMatters": "Explains why long-term plans feel exciting but short-term execution feels tedious. The further away something is, the more idealized and abstract your mental representation.",
+    "analogy": "Like looking at a mountain range — from far away it's beautiful and simple; up close it's rocks, mud, and switchbacks.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:dark-triad",
+    "type": "standard",
+    "concept": "Dark Triad",
+    "domain": "Psychology",
+    "oneliner": "Three personality traits: narcissism (grandiosity), Machiavellianism (manipulation), psychopathy (callousness). Often co-occur.",
+    "whyItMatters": "They predict exploitative behavior in relationships, workplaces, and leadership. Roughly 1-4% of the population.",
+    "analogy": "The personality cluster most likely to charm you, use you, and feel nothing about it."
+  },
+  {
+    "id": "psychology:deindividuation",
+    "type": "standard",
+    "concept": "Deindividuation",
+    "domain": "Psychology",
+    "oneliner": "When personal identity is submerged in a group, normal moral restraints weaken and behavior becomes more extreme.",
+    "whyItMatters": "Explains mob behavior, online trolling, and why anonymity changes conduct. When 'I' becomes 'we' (or 'nobody'), accountability evaporates.",
+    "analogy": "Like wearing a mask at a masquerade — when no one knows who you are, you act in ways you never would unmasked.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:delayed-gratification",
+    "type": "standard",
+    "concept": "Delayed Gratification",
+    "domain": "Psychology",
+    "oneliner": "The ability to resist immediate rewards for larger future benefits — a key predictor of success.",
+    "whyItMatters": "It's trainable. Strategies: remove temptation, pre-commit, reframe (hot/cool system). Not just willpower.",
+    "analogy": "The ability to say 'not yet' to something good in order to get something better later."
+  },
+  {
+    "id": "psychology:depressive-realism",
+    "type": "standard",
+    "concept": "Depressive Realism",
+    "domain": "Psychology",
+    "oneliner": "Mildly depressed people often have more accurate perceptions of reality than non-depressed people, who tend toward optimistic distortions.",
+    "whyItMatters": "Challenges the assumption that positive thinking equals clear thinking. Sometimes the most accurate read of a situation is the pessimistic one.",
+    "analogy": "Like taking off rose-colored glasses — the view is less pleasant but more true.",
+    "level": "advanced"
+  },
+  {
+    "id": "psychology:dialectical-behavior-therapy",
+    "type": "standard",
+    "concept": "Dialectical Behavior Therapy",
+    "domain": "Psychology",
+    "oneliner": "Acceptance and change are both necessary — you must validate the current state while working to alter it.",
+    "whyItMatters": "Linehan's DBT resolves the paradox of 'accept yourself AND improve.' The synthesis: I am doing my best AND I can do better. Both are true simultaneously.",
+    "analogy": "Like a GPS that says 'you are here' without judgment, then calmly recalculates the route forward.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:diffusion-of-innovation",
+    "type": "standard",
+    "concept": "Diffusion of Innovation",
+    "domain": "Psychology",
+    "oneliner": "New ideas spread through populations in a predictable S-curve: innovators, early adopters, majority, laggards.",
+    "whyItMatters": "Rogers' model explains why early feedback is misleading (innovators love everything) and why crossing the chasm to the majority is the hardest growth phase.",
+    "analogy": "Like a campfire — it starts with kindling (innovators), then catches on small logs (early adopters), before igniting the main fuel (majority).",
+    "level": "foundational"
+  },
+  {
+    "id": "psychology:diffusion-of-responsibility",
+    "type": "standard",
+    "concept": "Diffusion of Responsibility",
+    "domain": "Psychology",
+    "oneliner": "In groups, each individual feels less personally responsible for action because they assume others will act — the engine behind the bystander effect.",
+    "whyItMatters": "Darley and Latané's research explains why 'someone should fix this' means no one does. The antidote: assign specific responsibility to specific people. Shared responsibility is diluted responsibility.",
+    "analogy": "Like a group email asking 'can someone handle this?' — everyone reads it, everyone assumes someone else will reply, and nothing happens.",
+    "level": "foundational"
+  },
+  {
+    "id": "psychology:dunbar-s-number",
+    "type": "standard",
+    "concept": "Dunbar's Number",
+    "domain": "Psychology",
+    "oneliner": "~150 — the cognitive limit on the number of stable social relationships a human can maintain.",
+    "whyItMatters": "It's why companies reorganize past 150 people, why military units are sized the way they are.",
+    "analogy": "Your brain's social bandwidth cap — you can't truly know more than about 150 people."
+  },
+  {
+    "id": "psychology:ego-depletion",
+    "type": "standard",
+    "concept": "Ego Depletion",
+    "domain": "Psychology",
+    "oneliner": "Self-control is a limited resource that gets depleted through use — willpower is like a muscle that fatigues.",
+    "whyItMatters": "Controversial but influential. It's why decisions deteriorate late in the day and why diets fail at night.",
+    "analogy": "Willpower as a battery — it drains through the day and needs recharging."
+  },
+  {
+    "id": "psychology:ego-depletion-debate",
+    "type": "standard",
+    "concept": "Ego Depletion Debate",
+    "domain": "Psychology",
+    "oneliner": "The contested theory that willpower is a finite resource that gets 'used up' — recent research suggests belief in depletion matters more than depletion itself.",
+    "whyItMatters": "Baumeister's original finding (willpower is like a muscle that fatigues) shaped a decade of self-help advice. Replication failures suggest the effect is weaker than claimed, or mediated by beliefs about willpower.",
+    "analogy": "Like arguing whether your phone battery drains faster because of actual usage or because you keep checking the percentage — both are real, and they interact.",
+    "level": "advanced"
+  },
+  {
+    "id": "psychology:elaboration-likelihood-model",
+    "type": "standard",
+    "concept": "Elaboration Likelihood Model",
+    "domain": "Psychology",
+    "oneliner": "Persuasion works via two routes: central (logical, evidence-based, lasting) or peripheral (superficial cues, temporary).",
+    "whyItMatters": "Strong arguments change minds durably. Celebrity endorsements change minds temporarily. Know which route your audience uses.",
+    "analogy": "Two paths to persuasion — the highway of logic (slow but lasting) or the shortcut of vibes (fast but fragile)."
+  },
+  {
+    "id": "psychology:emotional-contagion",
+    "type": "standard",
+    "concept": "Emotional Contagion",
+    "domain": "Psychology",
+    "oneliner": "Emotions spread between people like viruses — happiness, sadness, and anxiety are literally contagious.",
+    "whyItMatters": "One person's mood can shift an entire room. It's why toxic coworkers are so destructive and why laughter is infectious.",
+    "analogy": "Feelings as social viruses — you catch the mood of the people around you."
+  },
+  {
+    "id": "psychology:emotional-granularity",
+    "type": "standard",
+    "concept": "Emotional Granularity",
+    "domain": "Psychology",
+    "oneliner": "People who distinguish between finely differentiated emotions (irritated vs frustrated vs resentful) regulate them better than those with coarse categories (just 'bad').",
+    "whyItMatters": "Barrett's research shows emotional vocabulary literally changes emotional experience. If you only know 'angry,' you treat all negative arousal the same way. Nuance enables precision in response.",
+    "analogy": "Like an artist with 100 colors vs. one with 8 — the larger palette enables subtler, more accurate expression.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:emotional-intelligence",
+    "type": "standard",
+    "concept": "Emotional Intelligence",
+    "domain": "Psychology",
+    "oneliner": "The ability to recognize, understand, manage, and effectively use emotions — in yourself and others. Goleman.",
+    "whyItMatters": "It predicts leadership effectiveness, relationship quality, and life satisfaction — sometimes better than IQ.",
+    "analogy": "The intelligence that IQ tests miss — reading rooms, managing reactions, and connecting with people."
+  },
+  {
+    "id": "psychology:emotional-regulation-strategies",
+    "type": "standard",
+    "concept": "Emotional Regulation Strategies",
+    "domain": "Psychology",
+    "oneliner": "You can regulate emotions before they arise (situation selection, reappraisal) or after (suppression) — earlier strategies work better.",
+    "whyItMatters": "Gross's process model shows suppression backfires (increases physiological stress) while reappraisal genuinely reduces emotional intensity. Upstream beats downstream.",
+    "analogy": "Like diverting a river before it floods vs. sandbagging after — prevention is cheaper and more effective than damage control.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:explanatory-style",
+    "type": "standard",
+    "concept": "Explanatory Style",
+    "domain": "Psychology",
+    "oneliner": "How you habitually explain bad events to yourself — permanent vs temporary, pervasive vs specific, personal vs external — predicts depression and resilience.",
+    "whyItMatters": "Seligman's research shows pessimistic explanatory style ('everything is always my fault') predicts depression, while optimistic style ('this specific thing happened because of circumstances') predicts resilience.",
+    "analogy": "Like two sportscasters calling the same loss — one says 'they'll never win' (pessimistic), the other says 'tough game, they'll adjust' (optimistic). Same event, different story, different future.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:exposure-therapy",
+    "type": "standard",
+    "concept": "Exposure Therapy",
+    "domain": "Psychology",
+    "oneliner": "Gradually exposing someone to feared stimuli in a controlled setting — the most effective treatment for phobias and PTSD.",
+    "whyItMatters": "It works by creating new associations: the feared stimulus + safety = reduced fear. Evidence-based and highly effective.",
+    "analogy": "Rewiring fear by proving the feared thing is survivable — repeated safe exposure literally rebuilds the neural circuitry."
+  },
+  {
+    "id": "psychology:fundamental-attribution-error",
+    "type": "standard",
+    "concept": "Fundamental Attribution Error",
+    "domain": "Psychology",
+    "oneliner": "Attributing others' behavior to character while attributing your own to circumstances.",
+    "whyItMatters": "Explains most interpersonal conflict. You cut someone off because you're late; they cut you off because they're reckless. Stronger in individualist (Western) cultures — collectivist cultures attribute more to situation. Understanding this bias bridges psychology and cross-cultural studies.",
+    "analogy": "You judge yourself by intentions. You judge others by actions."
+  },
+  {
+    "id": "psychology:fundamental-needs-theory",
+    "type": "standard",
+    "concept": "Fundamental Needs Theory",
+    "domain": "Psychology",
+    "oneliner": "Beyond survival, humans have four fundamental needs: belonging, self-esteem, control, and meaningful existence.",
+    "whyItMatters": "When any fundamental need is threatened, people compensate — sometimes constructively (seeking community), sometimes destructively (aggression, extremism). Understanding which need is threatened predicts the response.",
+    "analogy": "Like a table with four legs — remove one and the whole thing tips toward the missing support.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:gamifying-education",
+    "type": "application",
+    "concept": "Gamifying Education",
+    "domain": "Psychology",
+    "problem": "A school replaces grades with points, badges, and leaderboards to increase student engagement.",
+    "firstOrder": "Engagement spikes. Students complete more assignments. Attendance improves. The system feels exciting and modern.",
+    "secondOrder": "Extrinsic motivation (points) crowds out intrinsic curiosity (overjustification effect). Students optimize for points, not understanding. Leaderboards create anxiety for lower-performing students. When gamification is removed, motivation crashes below baseline levels.",
+    "lesson": "Gamification borrows motivation from the future. It works short-term by hijacking reward circuits, but the debt comes due when the game stops being novel. Sustainable engagement requires meaning, not mechanics.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:groupthink",
+    "type": "standard",
+    "concept": "Groupthink",
+    "domain": "Psychology",
+    "oneliner": "When group cohesion overrides critical thinking — everyone agrees to avoid conflict, leading to terrible decisions.",
+    "whyItMatters": "Bay of Pigs, Challenger disaster, and most corporate failures involve groupthink. Diverse dissent prevents it.",
+    "analogy": "A room full of smart people collectively making a dumb decision because nobody wants to be the one to disagree."
+  },
+  {
+    "id": "psychology:growth-mindset",
+    "type": "standard",
+    "concept": "Growth Mindset",
+    "domain": "Psychology",
+    "oneliner": "Believing abilities can be developed (growth) leads to better outcomes than believing they're fixed. Dweck.",
+    "whyItMatters": "Changes how people respond to failure — as learning vs. proof of inadequacy.",
+    "analogy": "Your brain is a muscle, not a fixed container — struggle is exercise, not evidence of limitation."
+  },
+  {
+    "id": "psychology:halo-effect",
+    "type": "standard",
+    "concept": "Halo Effect",
+    "domain": "Psychology",
+    "oneliner": "A positive impression in one area influences judgment in unrelated areas — attractive people seem smarter, kinder, more trustworthy.",
+    "whyItMatters": "It distorts hiring, legal judgments, and product evaluations. First impressions create a glow that colors everything after.",
+    "analogy": "A single bright light that makes everything nearby look good — one great quality blinds you to flaws."
+  },
+  {
+    "id": "psychology:hyperbolic-discounting",
+    "type": "standard",
+    "concept": "Hyperbolic Discounting",
+    "domain": "Psychology",
+    "oneliner": "People strongly prefer smaller immediate rewards over larger future ones — with a steeper discount than rational models predict.",
+    "whyItMatters": "It's why people don't save for retirement, why diets fail, and why 'buy now pay later' is so effective.",
+    "analogy": "Your brain treating future-you like a stranger — heavily discounting anything that's not happening right now."
+  },
+  {
+    "id": "psychology:identity-fusion",
+    "type": "standard",
+    "concept": "Identity Fusion",
+    "domain": "Psychology",
+    "oneliner": "When personal and group identity merge so completely that threats to the group feel like threats to the self.",
+    "whyItMatters": "It explains extreme sacrifice for groups, radicalization, and why some people will die for a cause or a team.",
+    "analogy": "When 'we' and 'I' become indistinguishable — the group's honor becomes your honor, the group's enemies become yours."
+  },
+  {
+    "id": "psychology:implicit-association",
+    "type": "standard",
+    "concept": "Implicit Association",
+    "domain": "Psychology",
+    "oneliner": "Unconscious mental shortcuts link concepts together — these associations shape judgment faster than deliberate thought.",
+    "whyItMatters": "IAT research shows biases operate below awareness. Hiring decisions, risk assessments, and first impressions are all shaped by associations you didn't choose.",
+    "analogy": "Like autocomplete on your phone — it suggests words based on patterns you've absorbed, not words you'd consciously choose.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:impostor-syndrome",
+    "type": "standard",
+    "concept": "Impostor Syndrome",
+    "domain": "Psychology",
+    "oneliner": "The persistent belief that your success is undeserved and you'll be exposed as a fraud — despite evidence of competence.",
+    "whyItMatters": "Affects an estimated 70% of people at some point. More common among high achievers. Named by Clance and Imes in 1978.",
+    "analogy": "A broken success detector — no matter how much evidence of competence, the alarm keeps saying 'you don't belong here.'"
+  },
+  {
+    "id": "psychology:intermittent-reinforcement",
+    "type": "standard",
+    "concept": "Intermittent Reinforcement",
+    "domain": "Psychology",
+    "oneliner": "Rewards delivered on unpredictable schedules create the strongest, most persistent behaviors.",
+    "whyItMatters": "It's why slot machines are addictive, why toxic relationships are hard to leave, and why social media notifications are random.",
+    "analogy": "The most addictive reward pattern — you never know when the next hit is coming, so you never stop checking."
+  },
+  {
+    "id": "psychology:learned-helplessness",
+    "type": "standard",
+    "concept": "Learned Helplessness",
+    "domain": "Psychology",
+    "oneliner": "Repeated uncontrollable negative events lead to passive acceptance — even when escape becomes possible. Seligman.",
+    "whyItMatters": "Dogs that couldn't escape shocks stopped trying even when the door opened. A model for depression.",
+    "analogy": "Getting punched so many times you stop putting your hands up — even when the punching stops."
+  },
+  {
+    "id": "psychology:locus-of-control",
+    "type": "standard",
+    "concept": "Locus of Control",
+    "domain": "Psychology",
+    "oneliner": "Internal: believing you control outcomes. External: believing outcomes are determined by forces outside you.",
+    "whyItMatters": "Internal locus correlates with better health, more success, and less depression. It's partly trainable.",
+    "analogy": "Do you believe you're the driver or the passenger? The answer shapes everything from career to health."
+  },
+  {
+    "id": "psychology:mandatory-return-to-office",
+    "type": "application",
+    "concept": "Mandatory Return-to-Office",
+    "domain": "Psychology",
+    "problem": "A company mandates all employees return to the office 5 days a week after 3 years of successful remote work.",
+    "firstOrder": "In-person collaboration increases. Serendipitous encounters resume. Managers regain visibility into work habits. Office culture is restored.",
+    "secondOrder": "Top performers who chose the company for remote flexibility leave for competitors. Working parents, disabled employees, and those with long commutes are disproportionately affected — diversity decreases. Employees who stay are resentful, not re-engaged. The mandate signals distrust, damaging the psychological safety that remote work had built.",
+    "lesson": "Mandates solve the compliance problem but create a motivation problem. The employees who comply aren't the same as employees who are engaged. Second-order thinking asks: who leaves, and what does their departure cost?",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:marshmallow-test",
+    "type": "standard",
+    "concept": "Marshmallow Test",
+    "domain": "Psychology",
+    "oneliner": "Mischel's study: children who delayed gratification (waited for two marshmallows) had better life outcomes decades later.",
+    "whyItMatters": "Became the poster child for self-control research. Later critiques showed socioeconomic factors mattered more.",
+    "analogy": "Can you wait 15 minutes for double the reward? The answer correlates with — but doesn't determine — your future."
+  },
+  {
+    "id": "psychology:maslow-s-hierarchy",
+    "type": "standard",
+    "concept": "Maslow's Hierarchy",
+    "domain": "Psychology",
+    "oneliner": "Motivation pyramid: physiological, safety, belonging, esteem, self-actualization.",
+    "whyItMatters": "Lower needs must be met first. Can't pursue meaning while starving. Widely used, widely criticized.",
+    "analogy": "Can't think about life's purpose while running from a bear — survival first, philosophy later."
+  },
+  {
+    "id": "psychology:milgram-experiment",
+    "type": "standard",
+    "concept": "Milgram Experiment",
+    "domain": "Psychology",
+    "oneliner": "65% of ordinary people administered seemingly lethal shocks when instructed by an authority figure.",
+    "whyItMatters": "Revealed terrifying power of obedience. Designed to understand how Holocaust atrocities were carried out by ordinary people.",
+    "analogy": "Most people will do terrible things if someone in a lab coat says to — authority overrides conscience."
+  },
+  {
+    "id": "psychology:moral-disengagement",
+    "type": "standard",
+    "concept": "Moral Disengagement",
+    "domain": "Psychology",
+    "oneliner": "People use cognitive mechanisms to convince themselves that ethical standards don't apply to their specific situation.",
+    "whyItMatters": "Bandura identified eight mechanisms (euphemistic labeling, displacement of responsibility, etc.) that let otherwise good people justify harmful actions.",
+    "analogy": "Like turning down the volume on your conscience — the signal is still there, but you've learned not to hear it.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:narrative-identity",
+    "type": "standard",
+    "concept": "Narrative Identity",
+    "domain": "Psychology",
+    "oneliner": "The internalized story you tell about yourself — integrating past, present, and imagined future into a coherent self.",
+    "whyItMatters": "People with coherent, redemptive narratives tend to have better mental health than those with contamination narratives.",
+    "analogy": "You are the story you tell yourself about yourself — and that story shapes what you do next."
+  },
+  {
+    "id": "psychology:narrative-transportation",
+    "type": "standard",
+    "concept": "Narrative Transportation",
+    "domain": "Psychology",
+    "oneliner": "When absorbed in a story, people's real-world beliefs shift to match the story's worldview — fiction literally changes minds.",
+    "whyItMatters": "Green and Brock showed transported readers accept story-consistent claims even when they know the story is fictional. This is why storytelling outperforms data in persuasion.",
+    "analogy": "Like being carried downstream by a current — you don't notice the direction until you look up and realize you're somewhere new.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:negativity-bias",
+    "type": "standard",
+    "concept": "Negativity Bias",
+    "domain": "Psychology",
+    "oneliner": "Negative events have a greater impact on psychological states than positive events of equal magnitude.",
+    "whyItMatters": "One piece of criticism outweighs ten compliments. Bad news is more memorable than good news. Evolution optimized for threat detection.",
+    "analogy": "Your brain's smoke detector — set to high sensitivity for threats, low sensitivity for rewards."
+  },
+  {
+    "id": "psychology:normalcy-bias",
+    "type": "standard",
+    "concept": "Normalcy Bias",
+    "domain": "Psychology",
+    "oneliner": "The cognitive tendency to underestimate the likelihood and impact of disasters — 'it can't happen here.'",
+    "whyItMatters": "It's why people don't evacuate during hurricanes, why investors don't sell before crashes, why institutions ignore warning signs.",
+    "analogy": "The brain's refusal to believe something unprecedented is actually happening — deer in headlights, at scale."
+  },
+  {
+    "id": "psychology:operant-conditioning",
+    "type": "standard",
+    "concept": "Operant Conditioning",
+    "domain": "Psychology",
+    "oneliner": "Behavior shaped by consequences — reinforcement increases behavior, punishment decreases it. Skinner.",
+    "whyItMatters": "The mechanism behind habits, addiction, gamification. Variable reinforcement (slot machines, social media) is the most powerful schedule. Distinct from classical conditioning (Pavlov — associating stimuli for reflexive responses); operant shapes voluntary behavior through consequences. Most behavior modification uses both.",
+    "analogy": "Do something → get reward → do it again. The reward schedule determines obsessiveness."
+  },
+  {
+    "id": "psychology:overjustification-effect",
+    "type": "standard",
+    "concept": "Overjustification Effect",
+    "domain": "Psychology",
+    "oneliner": "External rewards for intrinsically enjoyable activities reduce intrinsic motivation — paying people for hobbies can kill the joy.",
+    "whyItMatters": "Explains why gamification backfires, why commissioned art feels different, and why bonus structures can demotivate. Extrinsic rewards crowd out intrinsic satisfaction.",
+    "analogy": "Like adding ketchup to a gourmet meal — the condiment doesn't enhance the dish, it replaces the original flavor.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:paradox-of-choice",
+    "type": "standard",
+    "concept": "Paradox of Choice",
+    "domain": "Psychology",
+    "oneliner": "More options can lead to worse decisions and less satisfaction. Too many choices paralyze. Barry Schwartz.",
+    "whyItMatters": "It's why curated menus outperform 30-page menus, why subscription boxes work, why simplicity sells.",
+    "analogy": "A buffet with 200 dishes — you spend more time choosing than eating, and wonder if you picked wrong."
+  },
+  {
+    "id": "psychology:parasocial-relationships",
+    "type": "standard",
+    "concept": "Parasocial Relationships",
+    "domain": "Psychology",
+    "oneliner": "One-sided relationships where one person invests emotional energy in someone who doesn't know they exist — typically media figures.",
+    "whyItMatters": "Social media has industrialized parasocial bonds. Influencer marketing, political cults of personality, and celebrity worship all exploit this asymmetric attachment.",
+    "analogy": "Like talking to a poster on your wall and feeling like it talks back — the emotional connection is real, but the relationship isn't.",
+    "level": "foundational"
+  },
+  {
+    "id": "psychology:paying-students-for-good-grades",
+    "type": "application",
+    "concept": "Paying Students for Good Grades",
+    "domain": "Psychology",
+    "problem": "A school district pays students $50 for every A grade to motivate academic achievement in underperforming schools.",
+    "firstOrder": "Grades improve. Attendance increases. Students from low-income families get direct financial support. Short-term test scores rise.",
+    "secondOrder": "The overjustification effect kicks in — students who were intrinsically motivated now see learning as labor. When payments stop, effort drops below pre-program levels. Students optimize for easy A's rather than challenging courses. Grade inflation pressure on teachers increases. Students learn that learning is only valuable when externally compensated.",
+    "lesson": "Extrinsic rewards for intrinsically rewarding activities consume the intrinsic motivation like fuel. The payment doesn't add motivation — it replaces the existing type with a more fragile, more expensive one. Second-order thinking asks: what motivation was already there, and what happens to it?",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:peak-performance",
+    "type": "standard",
+    "concept": "Peak Performance",
+    "domain": "Psychology",
+    "oneliner": "The state of optimal functioning — achieving maximum output with minimal wasted effort. Flow is one expression.",
+    "whyItMatters": "It requires the right challenge level, clear goals, immediate feedback, and intrinsic motivation.",
+    "analogy": "The sweet spot where skill meets challenge, focus meets enjoyment, and effort becomes effortless."
+  },
+  {
+    "id": "psychology:placebo-nocebo-effect",
+    "type": "standard",
+    "concept": "Placebo/Nocebo Effect",
+    "domain": "Psychology",
+    "oneliner": "Placebo: improvement from inert treatment (belief heals). Nocebo: worsening from negative expectation (belief harms).",
+    "whyItMatters": "Both produce real physiological changes. Placebo triggers endorphins and dopamine; nocebo triggers cortisol and pain pathways. Reading drug side effects makes you more likely to experience them. Expectation shapes biology — a principle that connects medicine, psychology, and neuroscience.",
+    "analogy": "Your brain prescribing health or illness based purely on what it expects to happen."
+  },
+  {
+    "id": "psychology:pluralistic-ignorance",
+    "type": "standard",
+    "concept": "Pluralistic Ignorance",
+    "domain": "Psychology",
+    "oneliner": "When most individuals privately reject a norm but assume everyone else accepts it — so everyone conforms to something nobody believes.",
+    "whyItMatters": "The emperor's new clothes. It explains why bad policies persist — everyone thinks everyone else supports them.",
+    "analogy": "An entire audience pretending to enjoy a terrible play because they think everyone else is enjoying it."
+  },
+  {
+    "id": "psychology:pluralistic-ignorance-in-groups",
+    "type": "standard",
+    "concept": "Pluralistic Ignorance in Groups",
+    "domain": "Psychology",
+    "oneliner": "Everyone privately rejects a norm but complies because they assume everyone else accepts it — majority conformity to a minority belief.",
+    "whyItMatters": "Drives organizational dysfunction: everyone thinks 'am I the only one who sees this is broken?' The answer is usually no — everyone sees it, nobody says it.",
+    "analogy": "Like the Emperor's New Clothes — everyone sees the truth but stays silent because they think they're alone in seeing it.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:post-traumatic-growth",
+    "type": "standard",
+    "concept": "Post-Traumatic Growth",
+    "domain": "Psychology",
+    "oneliner": "Significant positive psychological change experienced as a result of struggling with highly challenging life circumstances.",
+    "whyItMatters": "Not just surviving trauma but being transformed by it — finding new purpose, deeper relationships, or expanded possibilities. Distinct from resilience (bouncing back) — PTG means growing beyond pre-trauma baseline.",
+    "analogy": "Like a broken bone that heals thicker than the original — the fracture site becomes stronger than what was there before.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:projection",
+    "type": "standard",
+    "concept": "Projection",
+    "domain": "Psychology",
+    "oneliner": "Attributing your own unacceptable thoughts or feelings to others.",
+    "whyItMatters": "The person accusing everyone of dishonesty may be the dishonest one. People reveal themselves while criticizing.",
+    "analogy": "Seeing your own reflection in others and thinking it's their face."
+  },
+  {
+    "id": "psychology:prospect-theory-in-practice",
+    "type": "standard",
+    "concept": "Prospect Theory in Practice",
+    "domain": "Psychology",
+    "oneliner": "People feel losses roughly twice as strongly as equivalent gains — losing $100 hurts more than finding $100 feels good.",
+    "whyItMatters": "Kahneman and Tversky's foundational insight explains risk aversion, why insurance sells, why people hold losing stocks, and why framing changes decisions. Loss aversion is the most reliable bias.",
+    "analogy": "Like a scale where the 'loss' side weighs twice as much — equal amounts on each side still tip toward the loss.",
+    "level": "foundational"
+  },
+  {
+    "id": "psychology:psychological-safety",
+    "type": "standard",
+    "concept": "Psychological Safety",
+    "domain": "Psychology",
+    "oneliner": "The shared belief that a team is safe for interpersonal risk-taking — you won't be punished for mistakes or speaking up.",
+    "whyItMatters": "Google's Project Aristotle found it was the #1 predictor of effective teams. Not trust, not talent — safety to be wrong.",
+    "analogy": "The environment where you can say 'I messed up' without fear — and it turns out that's the secret ingredient to great teams."
+  },
+  {
+    "id": "psychology:ptsd",
+    "type": "standard",
+    "concept": "PTSD",
+    "domain": "Psychology",
+    "oneliner": "Post-Traumatic Stress Disorder — persistent psychological distress following exposure to traumatic events.",
+    "whyItMatters": "Affects ~8% of people at some point. Includes flashbacks, hypervigilance, emotional numbing. Treatable with therapy.",
+    "analogy": "A trauma replay button the brain can't turn off — the past keeps invading the present."
+  },
+  {
+    "id": "psychology:pygmalion-effect",
+    "type": "standard",
+    "concept": "Pygmalion Effect",
+    "domain": "Psychology",
+    "oneliner": "Higher expectations placed on people lead to higher performance — a self-fulfilling prophecy.",
+    "whyItMatters": "Teachers who believed students were gifted (randomly selected) saw those students actually improve more.",
+    "analogy": "Expectations creating reality — believe someone will succeed and they're more likely to, because you treat them differently."
+  },
+  {
+    "id": "psychology:raising-the-driving-age-to-18",
+    "type": "application",
+    "concept": "Raising the Driving Age to 18",
+    "domain": "Psychology",
+    "problem": "A country raises the minimum driving age from 16 to 18 to reduce teen traffic fatalities.",
+    "firstOrder": "Teen traffic fatalities drop. Insurance costs decrease for young adults. Parents are relieved. Roads become statistically safer.",
+    "secondOrder": "18-year-olds now enter driving with zero supervised practice during their most responsible years. The 'new 18' becomes as dangerous as the 'old 16' but with less parental oversight. Rural teens lose access to jobs, school activities, and social life. The fatality reduction may simply shift to 18-19 year olds rather than disappearing.",
+    "lesson": "Delay is not the same as prevention. The dangerous period (novice driving) doesn't disappear — it relocates. Second-order thinking asks: what happens to the risk when you move it, and does the new context make it better or worse?",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:reactance",
+    "type": "standard",
+    "concept": "Reactance",
+    "domain": "Psychology",
+    "oneliner": "The motivational state triggered when perceived freedoms are threatened — doing the opposite of what you're told.",
+    "whyItMatters": "'Don't press this button' makes you want to press it. Telling teenagers not to do something often backfires.",
+    "analogy": "The psychological 'you can't tell me what to do' reflex — restricting freedom makes people want it more."
+  },
+  {
+    "id": "psychology:reactance-theory",
+    "type": "standard",
+    "concept": "Reactance Theory",
+    "domain": "Psychology",
+    "oneliner": "When people feel their freedom is threatened, they do the opposite of what's requested — the 'boomerang effect' of persuasion.",
+    "whyItMatters": "Explains why mandates backfire, why 'don't push this button' makes you want to push it, and why reverse psychology works. Heavy-handed persuasion activates the freedom motive.",
+    "analogy": "Like a spring that pushes back harder the more you compress it — the pressure creates equal and opposite resistance.",
+    "level": "foundational"
+  },
+  {
+    "id": "psychology:recency-bias",
+    "type": "standard",
+    "concept": "Recency Bias",
+    "domain": "Psychology",
+    "oneliner": "Overweighting recent events in judgment and prediction — the most recent data feels most representative.",
+    "whyItMatters": "After a market crash, people think crashes are common. After a rally, they think stocks always go up. Neither is true.",
+    "analogy": "Your brain treating the last data point as the most important — what just happened distorts what you expect next."
+  },
+  {
+    "id": "psychology:reciprocity",
+    "type": "standard",
+    "concept": "Reciprocity",
+    "domain": "Psychology",
+    "oneliner": "The deeply ingrained norm compelling people to repay favors — even uninvited ones. Cialdini.",
+    "whyItMatters": "Free samples, unsolicited gifts, buying rounds — all leverage reciprocity.",
+    "analogy": "The invisible social ledger — every favor creates a debt most feel compelled to repay."
+  },
+  {
+    "id": "psychology:scarcity-mindset",
+    "type": "standard",
+    "concept": "Scarcity Mindset",
+    "domain": "Psychology",
+    "oneliner": "When any resource feels scarce (money, time, food), it dominates attention, reducing cognitive bandwidth for everything else.",
+    "whyItMatters": "Mullainathan and Shafir showed poverty isn't just lack of money — it's a cognitive tax. Scarcity captures attention and reduces the bandwidth available for planning, self-control, and good decisions.",
+    "analogy": "Like a computer running with too many background processes — the urgent tasks consume all the RAM, leaving nothing for important ones.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:schemas",
+    "type": "standard",
+    "concept": "Schemas",
+    "domain": "Psychology",
+    "oneliner": "Mental frameworks organizing information and guiding expectations — your brain's filing system for understanding the world.",
+    "whyItMatters": "They speed up processing but create blind spots. Stereotypes are schemas applied to people. First impressions are schema activation.",
+    "analogy": "Your brain's templates for 'how things work' — efficient but rigid, useful but biased."
+  },
+  {
+    "id": "psychology:self-determination-theory",
+    "type": "standard",
+    "concept": "Self-Determination Theory",
+    "domain": "Psychology",
+    "oneliner": "Intrinsic motivation comes from three needs: autonomy (choice), competence (mastery), and relatedness (connection). Deci and Ryan.",
+    "whyItMatters": "It explains why external rewards can REDUCE motivation, why micromanagement kills engagement, and why purpose matters.",
+    "analogy": "The three ingredients of genuine motivation — feeling free, feeling capable, and feeling connected."
+  },
+  {
+    "id": "psychology:self-serving-bias",
+    "type": "standard",
+    "concept": "Self-Serving Bias",
+    "domain": "Psychology",
+    "oneliner": "Attributing successes to skill, failures to external factors. Protects self-esteem, prevents learning.",
+    "whyItMatters": "'I got promoted because I'm talented. I got fired because of politics.'",
+    "analogy": "An internal PR department spinning everything — wins are achievements, losses are someone else's fault."
+  },
+  {
+    "id": "psychology:social-comparison-theory",
+    "type": "standard",
+    "concept": "Social Comparison Theory",
+    "domain": "Psychology",
+    "oneliner": "People determine their self-worth by comparing to others — upward comparison (envy) and downward comparison (relief). Festinger.",
+    "whyItMatters": "Social media amplifies it destructively — you compare your behind-the-scenes to everyone else's highlight reel.",
+    "analogy": "Your brain's constant scoreboard — measuring yourself against others and rarely coming away happy."
+  },
+  {
+    "id": "psychology:social-identity-theory",
+    "type": "standard",
+    "concept": "Social Identity Theory",
+    "domain": "Psychology",
+    "oneliner": "People derive self-esteem from group membership and are motivated to see their in-group as superior to out-groups.",
+    "whyItMatters": "Tajfel showed that even arbitrary group assignments ('you're a red team') trigger in-group favoritism. This mechanism drives nationalism, sports rivalry, brand loyalty, and political tribalism.",
+    "analogy": "Like a jersey that changes how you see the game — once you're wearing team colors, the same play looks brilliant or dirty depending on who made it.",
+    "level": "foundational"
+  },
+  {
+    "id": "psychology:social-proof",
+    "type": "standard",
+    "concept": "Social Proof",
+    "domain": "Psychology",
+    "oneliner": "People look to others' behavior to determine correct action, especially in uncertain situations. Cialdini.",
+    "whyItMatters": "It's why testimonials work, why laugh tracks increase laughing, why people join long restaurant lines.",
+    "analogy": "When unsure what to do, look at what everyone else is doing — and do that."
+  },
+  {
+    "id": "psychology:standardized-testing-in-hiring",
+    "type": "application",
+    "concept": "Standardized Testing in Hiring",
+    "domain": "Psychology",
+    "problem": "A company replaces resume screening with standardized cognitive tests to reduce hiring bias.",
+    "firstOrder": "Bias from name, school prestige, and formatting is eliminated. Candidates from non-traditional backgrounds get a fair shot. Hiring becomes more data-driven.",
+    "secondOrder": "Test performance correlates with test-prep access, reintroducing socioeconomic bias through a different channel. Candidates with test anxiety underperform relative to their actual ability. The test measures test-taking skill, which may not predict job performance. Cognitive diversity (different thinking styles) decreases as the test selects for one type of intelligence.",
+    "lesson": "Every filter has a bias — the question is which bias you prefer. Standardized tests trade one type of unfairness (network-based) for another (access-based). Multi-dimensional evaluation is harder but more honest.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:stanford-prison-experiment",
+    "type": "standard",
+    "concept": "Stanford Prison Experiment",
+    "domain": "Psychology",
+    "oneliner": "Zimbardo's 1971 study where students assigned as 'guards' became sadistic within days. Controversial methodology.",
+    "whyItMatters": "Showed how situational forces can overwhelm individual character. Often cited for institutional design.",
+    "analogy": "Give ordinary people power without accountability and watch personality dissolve into the role."
+  },
+  {
+    "id": "psychology:status-quo-bias",
+    "type": "standard",
+    "concept": "Status Quo Bias",
+    "domain": "Psychology",
+    "oneliner": "The preference for the current state of affairs — people resist change even when objectively better options exist.",
+    "whyItMatters": "It's why default options in organ donation, retirement savings, and software settings are so powerful.",
+    "analogy": "The gravitational pull of 'how things are' — change requires energy, and doing nothing feels safe."
+  },
+  {
+    "id": "psychology:stereotype-threat",
+    "type": "standard",
+    "concept": "Stereotype Threat",
+    "domain": "Psychology",
+    "oneliner": "Performance declining when people are reminded of negative stereotypes about their group.",
+    "whyItMatters": "Women told 'women are bad at math' perform worse. The awareness of the stereotype becomes a self-fulfilling prophecy.",
+    "analogy": "Stereotypes as performance sabotage — just being reminded of them degrades the very ability in question."
+  },
+  {
+    "id": "psychology:survivorship-bias",
+    "type": "standard",
+    "concept": "Survivorship Bias",
+    "domain": "Psychology",
+    "oneliner": "Focusing on successes while ignoring failures, leading to false conclusions about what works.",
+    "whyItMatters": "We study successful entrepreneurs and copy habits — ignoring thousands who did the same and failed.",
+    "analogy": "Only looking at bullet holes on planes that RETURNED — the ones that didn't are where the lessons are."
+  },
+  {
+    "id": "psychology:terror-management-theory",
+    "type": "standard",
+    "concept": "Terror Management Theory",
+    "domain": "Psychology",
+    "oneliner": "Much of human behavior is motivated by unconscious awareness of mortality — we build culture, pursue legacy, and defend worldviews to manage death anxiety.",
+    "whyItMatters": "It explains nationalism, religious fervor, consumer behavior, and why reminders of death make people more tribal.",
+    "analogy": "Everything you do to feel significant is partly because you know you're going to die — and that's terrifying."
+  },
+  {
+    "id": "psychology:the-dunbar-threshold",
+    "type": "scenario",
+    "concept": "The Dunbar Threshold",
+    "domain": "Psychology",
+    "scenario": "A 30-person startup operated with informal communication and high trust. After growing to 200, misunderstandings multiply, silos form, and employees report feeling like strangers despite working at the same company.",
+    "relevantConcepts": [
+      "Dunbar's Number",
+      "Network Effects",
+      "Emergence",
+      "Conway's Law"
+    ],
+    "domains": [
+      "Psychology",
+      "Systems Thinking",
+      "Technology"
+    ],
+    "explanation": "Beyond ~150 people, personal relationships can't sustain organizational cohesion. The transition requires formal communication structures, explicit culture documentation, and deliberate team design. The informal system that scaled to 30 becomes a liability at 200.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:the-surgical-team-dilemma",
+    "type": "scenario",
+    "concept": "The Surgical Team Dilemma",
+    "domain": "Psychology",
+    "scenario": "A hospital implements a new surgical checklist. Senior surgeons resist it, calling it insulting to their expertise. Junior staff want to use it but fear speaking up. Error rates remain unchanged despite the better protocol.",
+    "relevantConcepts": [
+      "Psychological Safety",
+      "Authority Gradient",
+      "Groupthink",
+      "Diffusion of Innovation"
+    ],
+    "domains": [
+      "Psychology",
+      "Systems Thinking"
+    ],
+    "explanation": "The protocol is sound, but the social system blocks adoption. Without psychological safety, junior staff won't challenge senior resistance. The authority gradient creates silence where feedback is most needed. Implementation science shows that adoption depends on social dynamics, not just tool quality.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:vicarious-trauma",
+    "type": "standard",
+    "concept": "Vicarious Trauma",
+    "domain": "Psychology",
+    "oneliner": "Witnessing others' trauma — through work, media, or relationships — can produce trauma symptoms in the observer.",
+    "whyItMatters": "Affects therapists, journalists, social workers, and content moderators. The human mirror system means empathic exposure to suffering has real neurological costs. Institutional support isn't optional.",
+    "analogy": "Like secondhand smoke — you don't have to hold the cigarette to suffer the health effects.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:weber-fechner-law",
+    "type": "standard",
+    "concept": "Weber-Fechner Law",
+    "domain": "Psychology",
+    "oneliner": "The perceived change in a stimulus is proportional to the original stimulus — a logarithmic relationship.",
+    "whyItMatters": "You notice adding one candle in a dark room. You don't notice adding one candle to a hundred. Applies to prices, sounds, weights.",
+    "analogy": "The diminishing sensitivity rule — the bigger the baseline, the bigger the change needed for you to notice."
+  },
+  {
+    "id": "psychology:zeigarnik-effect",
+    "type": "standard",
+    "concept": "Zeigarnik Effect",
+    "domain": "Psychology",
+    "oneliner": "Unfinished tasks are remembered better than completed ones — the brain keeps open loops active.",
+    "whyItMatters": "It's why cliffhangers work, why to-do lists reduce anxiety (offloading the loop), and why waiters forget orders after serving.",
+    "analogy": "Your brain's nagging reminder for unfinished business — tasks don't go away until you check them off."
+  },
+  {
+    "id": "psychology:zero-tolerance-discipline-in-schools",
+    "type": "application",
+    "concept": "Zero-Tolerance Discipline in Schools",
+    "domain": "Psychology",
+    "problem": "A school district implements zero-tolerance discipline: any rule violation results in automatic suspension.",
+    "firstOrder": "Clear, consistent consequences. Disruptive students are removed quickly. Teachers feel supported. Remaining students experience calmer classrooms.",
+    "secondOrder": "Suspended students fall behind academically, increasing future dropout risk. Disproportionate impact on minority students creates a school-to-prison pipeline. Students learn to hide behavior rather than change it. Schools lose the opportunity to teach conflict resolution — the very skill that would prevent future incidents.",
+    "lesson": "Punitive systems optimize for short-term order at the cost of long-term development. The students removed are the ones who most need the school's influence. Second-order thinking asks: what happens to the expelled?",
+    "level": "intermediate"
+  }
+]

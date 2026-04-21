@@ -34,6 +34,8 @@ const HistoryPage = lazy(() => import('./components/History/HistoryPage').then(m
 const ProfilePage = lazy(() => import('./components/Profile/ProfilePage').then(m => ({ default: m.ProfilePage })));
 const PricingPage = lazy(() => import('./components/Pricing/PricingPage').then(m => ({ default: m.PricingPage })));
 const CoachingPage = lazy(() => import('./components/Coaching/CoachingPage').then(m => ({ default: m.CoachingPage })));
+const StudyPage = lazy(() => import('./components/Study/StudyPage').then(m => ({ default: m.StudyPage })));
+const JourneyPage = lazy(() => import('./components/Journey/JourneyPage').then(m => ({ default: m.JourneyPage })));
 
 function LazyFallback() {
   return (
@@ -326,6 +328,8 @@ function AppRoutes() {
         <Route path="/profile" element={<AuthLazyRoute><ProfilePage /></AuthLazyRoute>} />
         <Route path="/pricing" element={<LazyRoute><PricingPage /></LazyRoute>} />
         <Route path="/coaching" element={<AuthLazyRoute><CoachingPage /></AuthLazyRoute>} />
+        <Route path="/study" element={<LazyRoute><StudyPage /></LazyRoute>} />
+        <Route path="/journey" element={<LazyRoute><JourneyPage /></LazyRoute>} />
       </Routes>
     </>
   );

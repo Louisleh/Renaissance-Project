@@ -1,0 +1,946 @@
+[
+  {
+    "id": "technology:a-b-testing",
+    "type": "standard",
+    "concept": "A/B Testing",
+    "domain": "Technology",
+    "oneliner": "Randomly showing users two variants of something and measuring which performs better. The gold standard for product decisions.",
+    "whyItMatters": "Every button color, headline, and feature on major websites was A/B tested. Data over opinions.",
+    "analogy": "Letting users vote with their behavior — show half the audience version A, half version B, and measure what works."
+  },
+  {
+    "id": "technology:api",
+    "type": "standard",
+    "concept": "API",
+    "domain": "Technology",
+    "oneliner": "Application Programming Interface — standardized communication between software systems.",
+    "whyItMatters": "Why Uber shows Google Maps, charges your card, and texts you — all from different companies' systems.",
+    "analogy": "A restaurant menu for software — lists what you can request and what you'll get back."
+  },
+  {
+    "id": "technology:artificial-general-intelligence",
+    "type": "standard",
+    "concept": "Artificial General Intelligence",
+    "domain": "Technology",
+    "oneliner": "Hypothetical AI with human-level reasoning across all domains — not just narrow task performance.",
+    "whyItMatters": "Current AI (including LLMs) is narrow — excellent at specific tasks but lacking general reasoning. AGI would change everything.",
+    "analogy": "The difference between a calculator and a human — current AI is an incredibly powerful calculator."
+  },
+  {
+    "id": "technology:attention-economy",
+    "type": "standard",
+    "concept": "Attention Economy",
+    "domain": "Technology",
+    "oneliner": "The framework treating human attention as a scarce resource that companies compete for — pioneered by Herbert Simon.",
+    "whyItMatters": "Every notification, every infinite scroll, every autoplay video is designed to capture your attention. You are the product.",
+    "analogy": "An economy where the commodity being traded is your eyeballs — and every app is a merchant trying to buy them."
+  },
+  {
+    "id": "technology:attention-mechanism",
+    "type": "standard",
+    "concept": "Attention Mechanism",
+    "domain": "Technology",
+    "oneliner": "The key innovation in transformers — allowing models to weigh the importance of different parts of input relative to each other.",
+    "whyItMatters": "It's why LLMs can handle context. Each word 'attends' to every other word, understanding relationships.",
+    "analogy": "A spotlight that shifts across the text — highlighting which words matter most for understanding each other word."
+  },
+  {
+    "id": "technology:bandwidth-vs-throughput",
+    "type": "standard",
+    "concept": "Bandwidth vs Throughput",
+    "domain": "Technology",
+    "oneliner": "Bandwidth: maximum theoretical data transfer rate. Throughput: actual achieved rate under real conditions.",
+    "whyItMatters": "A highway can theoretically handle 10,000 cars/hour (bandwidth) but traffic and accidents reduce actual flow (throughput).",
+    "analogy": "Bandwidth is pipe diameter. Throughput is how much water actually flows through — always less than the pipe allows."
+  },
+  {
+    "id": "technology:big-o-notation",
+    "type": "standard",
+    "concept": "Big O Notation",
+    "domain": "Technology",
+    "oneliner": "A mathematical way to describe how an algorithm's performance scales with input size.",
+    "whyItMatters": "O(n) = linear, O(n²) = quadratic, O(log n) = logarithmic. Essential for evaluating algorithm efficiency.",
+    "analogy": "The speedometer for algorithms — tells you how much slower things get as the problem gets bigger."
+  },
+  {
+    "id": "technology:bitemporality",
+    "type": "standard",
+    "concept": "Bitemporality",
+    "domain": "Technology",
+    "oneliner": "Tracking both when something happened in reality and when the system learned about it — two independent timelines for every fact.",
+    "whyItMatters": "Financial systems, medical records, and legal documents all need to answer: 'What did we know, and when did we know it?' Bitemporality makes audit trails and corrections possible without losing history.",
+    "analogy": "Like a diary where each entry records both 'when it happened' and 'when I wrote it down' — the two dates tell different stories.",
+    "level": "advanced"
+  },
+  {
+    "id": "technology:blockchain",
+    "type": "standard",
+    "concept": "Blockchain",
+    "domain": "Technology",
+    "oneliner": "A distributed, immutable ledger verified by consensus rather than central authority.",
+    "whyItMatters": "Enables cryptocurrency. Broader applications: supply chain, digital identity, smart contracts.",
+    "analogy": "A shared Google Doc everyone reads, nobody edits retroactively, no single person controls."
+  },
+  {
+    "id": "technology:blockchain-trilemma",
+    "type": "standard",
+    "concept": "Blockchain Trilemma",
+    "domain": "Technology",
+    "oneliner": "A blockchain can optimize for at most two of: decentralization, security, and scalability. Improving one typically degrades another.",
+    "whyItMatters": "Explains why Bitcoin is secure but slow, why faster chains tend toward centralization, and why 'solving' the trilemma remains crypto's central unsolved problem. Every design is a trade-off.",
+    "analogy": "Like the CAP theorem for distributed ledgers — the laws of physics impose trade-offs that clever engineering can't eliminate, only redistribute.",
+    "level": "advanced"
+  },
+  {
+    "id": "technology:blue-green-deployment",
+    "type": "standard",
+    "concept": "Blue-Green Deployment",
+    "domain": "Technology",
+    "oneliner": "Running two identical production environments and switching traffic between them — the new version goes live instantly, and rollback is just switching back.",
+    "whyItMatters": "Eliminates downtime during deployments. If the new version fails, flip the switch back in seconds. The principle: always have a safe retreat available before advancing.",
+    "analogy": "Like having two stages for a performance — the audience watches one while you set up the next, then you switch the spotlight.",
+    "level": "intermediate"
+  },
+  {
+    "id": "technology:cap-theorem",
+    "type": "standard",
+    "concept": "CAP Theorem",
+    "domain": "Technology",
+    "oneliner": "A distributed system can guarantee at most two of three: Consistency (every read gets the latest write), Availability (every request gets a response), Partition tolerance (system works despite network splits).",
+    "whyItMatters": "Forces every distributed system designer to make a trade-off. Banks choose consistency (your balance must be correct). Social media chooses availability (the feed should always load).",
+    "analogy": "Like a triangle where you can only sit on two corners — the third is always out of reach.",
+    "level": "intermediate"
+  },
+  {
+    "id": "technology:cathode-ray-tube",
+    "type": "standard",
+    "concept": "Cathode Ray Tube",
+    "domain": "Technology",
+    "oneliner": "The vacuum tube technology that powered TV screens and monitors for 60 years — electrons hitting phosphors.",
+    "whyItMatters": "Replaced by LCD and LED. Understanding it means understanding the origins of the visual computing age.",
+    "analogy": "The technology of 20th-century screens — shooting electrons at glass to make pictures appear."
+  },
+  {
+    "id": "technology:cdn-content-delivery-network",
+    "type": "standard",
+    "concept": "CDN (Content Delivery Network)",
+    "domain": "Technology",
+    "oneliner": "Distributed servers caching content geographically close to users — reducing latency and load.",
+    "whyItMatters": "It's why Netflix doesn't buffer and why websites load fast globally. Cloudflare, Akamai, AWS CloudFront.",
+    "analogy": "Putting copies of your content in libraries around the world so readers don't all have to visit headquarters."
+  },
+  {
+    "id": "technology:chaos-engineering",
+    "type": "standard",
+    "concept": "Chaos Engineering",
+    "domain": "Technology",
+    "oneliner": "Deliberately injecting failures into production systems to discover weaknesses before they cause real outages.",
+    "whyItMatters": "Netflix's Chaos Monkey kills random services to ensure the system recovers. Proactive failure is cheaper than reactive. You find the weak links before your customers do.",
+    "analogy": "Like a fire drill — start a controlled emergency to find out what breaks before a real one hits.",
+    "level": "intermediate"
+  },
+  {
+    "id": "technology:ci-cd",
+    "type": "standard",
+    "concept": "CI/CD",
+    "domain": "Technology",
+    "oneliner": "Continuous Integration / Continuous Deployment — automatically testing and deploying code changes.",
+    "whyItMatters": "It's why modern software updates daily. Every code change triggers automated tests, and passing code ships automatically.",
+    "analogy": "A factory assembly line for software — code goes in one end, tested and deployed product comes out the other."
+  },
+  {
+    "id": "technology:cloud-computing",
+    "type": "standard",
+    "concept": "Cloud Computing",
+    "domain": "Technology",
+    "oneliner": "Computing services delivered over the internet — storage, processing, databases on demand.",
+    "whyItMatters": "Why startups scale without buying servers. Why AWS is one of the most profitable businesses ever.",
+    "analogy": "Renting computing power instead of buying — a laundromat instead of buying a washing machine."
+  },
+  {
+    "id": "technology:containerization-docker",
+    "type": "standard",
+    "concept": "Containerization (Docker)",
+    "domain": "Technology",
+    "oneliner": "Packaging software with all its dependencies into isolated, portable containers that run anywhere.",
+    "whyItMatters": "It solved 'works on my machine' — the same container runs identically in development, testing, and production.",
+    "analogy": "A shipping container for software — standardized, portable, contents don't interact with surroundings."
+  },
+  {
+    "id": "technology:context-window",
+    "type": "standard",
+    "concept": "Context Window",
+    "domain": "Technology",
+    "oneliner": "The amount of text an AI model can process at once — measured in tokens. Determines how much information it can 'see.'",
+    "whyItMatters": "Claude: ~200K tokens. GPT-4: ~128K. Larger windows mean more context, better coherence, and ability to process longer documents.",
+    "analogy": "The AI's working memory — how much text it can hold in its head at one time."
+  },
+  {
+    "id": "technology:conway-s-law",
+    "type": "standard",
+    "concept": "Conway's Law",
+    "domain": "Technology",
+    "oneliner": "Organizations design systems that mirror their own communication structure — the org chart becomes the architecture diagram.",
+    "whyItMatters": "If three teams build a compiler, you get a three-pass compiler. To change your software architecture, you may need to change your org structure first.",
+    "analogy": "Like a building that reveals the politics of its architects — turf wars produce walls, collaboration produces open plans.",
+    "level": "intermediate"
+  },
+  {
+    "id": "technology:crdt-conflict-free-replicated-data-types",
+    "type": "standard",
+    "concept": "CRDT (Conflict-Free Replicated Data Types)",
+    "domain": "Technology",
+    "oneliner": "Data structures that can be independently modified on different devices and merged automatically without conflicts.",
+    "whyItMatters": "Enables collaborative editing (Google Docs, Figma), offline-first apps, and distributed databases. The mathematical guarantee: no matter the order of operations, the result converges.",
+    "analogy": "Like a shared grocery list where two people add items on different phones — when they sync, both items appear without anyone losing data.",
+    "level": "advanced"
+  },
+  {
+    "id": "technology:data-moat",
+    "type": "standard",
+    "concept": "Data Moat",
+    "domain": "Technology",
+    "oneliner": "A competitive advantage derived from proprietary data that improves a product, creating a flywheel competitors can't replicate.",
+    "whyItMatters": "Google's search data, Waze's traffic data, Netflix's viewing data. The product generates data that makes the product better.",
+    "analogy": "A competitive advantage that deepens with every customer — the more data you have, the better your product, the more data you get."
+  },
+  {
+    "id": "technology:devops",
+    "type": "standard",
+    "concept": "DevOps",
+    "domain": "Technology",
+    "oneliner": "The culture and practice of unifying software development and IT operations — continuous integration and deployment.",
+    "whyItMatters": "It's why modern software updates daily instead of annually. Automates testing, deployment, and monitoring.",
+    "analogy": "Breaking the wall between people who write code and people who run it — everyone's responsible for the whole pipeline."
+  },
+  {
+    "id": "technology:diffusion-model",
+    "type": "standard",
+    "concept": "Diffusion Model",
+    "domain": "Technology",
+    "oneliner": "An AI image generation technique that learns to reverse noise — starting from static and gradually refining it into an image.",
+    "whyItMatters": "It's how Midjourney, DALL-E 3, and Stable Diffusion work. The model learns to turn chaos into coherent images.",
+    "analogy": "Teaching AI to un-scramble TV static — start with noise and gradually sculpt it into a picture."
+  },
+  {
+    "id": "technology:digital-twin",
+    "type": "standard",
+    "concept": "Digital Twin",
+    "domain": "Technology",
+    "oneliner": "A virtual replica of a physical system, updated in real-time with sensor data — enabling simulation and prediction.",
+    "whyItMatters": "GE uses them for jet engines, cities use them for traffic, manufacturers for entire factories.",
+    "analogy": "A mirror-world copy of a real thing — experiment on the digital version before touching the physical one."
+  },
+  {
+    "id": "technology:distributed-consensus",
+    "type": "standard",
+    "concept": "Distributed Consensus",
+    "domain": "Technology",
+    "oneliner": "The problem of getting multiple computers to agree on a single value when messages can be lost, delayed, or duplicated.",
+    "whyItMatters": "Solved by Paxos, Raft, and blockchain consensus algorithms. The fundamental challenge of distributed systems: agreement is hard when communication is unreliable. Byzantine fault tolerance is the hardest variant.",
+    "analogy": "Like a group of generals coordinating an attack by messenger pigeon when some pigeons may not arrive — how do you ensure everyone attacks at dawn?",
+    "level": "advanced"
+  },
+  {
+    "id": "technology:dns",
+    "type": "standard",
+    "concept": "DNS",
+    "domain": "Technology",
+    "oneliner": "Domain Name System — the internet's phone book, translating human-readable domains (google.com) to IP addresses.",
+    "whyItMatters": "Without DNS, you'd need to memorize numerical addresses for every website. It's invisible infrastructure everyone depends on.",
+    "analogy": "The internet's phone book — you say the name, it looks up the number."
+  },
+  {
+    "id": "technology:edge-ai",
+    "type": "standard",
+    "concept": "Edge AI",
+    "domain": "Technology",
+    "oneliner": "Running AI models directly on devices (phones, cars, sensors) rather than in the cloud — reducing latency and privacy concerns.",
+    "whyItMatters": "Your phone's face recognition runs on-device. Self-driving cars can't wait for cloud responses at 60mph.",
+    "analogy": "AI that doesn't need to phone home — processing happens right where the data is generated."
+  },
+  {
+    "id": "technology:edge-computing",
+    "type": "standard",
+    "concept": "Edge Computing",
+    "domain": "Technology",
+    "oneliner": "Processing data near the source rather than in a distant cloud data center — reducing latency.",
+    "whyItMatters": "Critical for autonomous vehicles, IoT, real-time applications where milliseconds matter.",
+    "analogy": "Moving the brain closer to the body — instead of sending signals to a distant headquarters, process locally."
+  },
+  {
+    "id": "technology:eliminating-cash-transactions",
+    "type": "application",
+    "concept": "Eliminating Cash Transactions",
+    "domain": "Technology",
+    "problem": "A country mandates digital-only payments to reduce tax evasion and money laundering.",
+    "firstOrder": "Tax compliance improves dramatically. Money laundering becomes harder. Transaction costs decrease. Government gets real-time economic data.",
+    "secondOrder": "Unbanked populations (elderly, rural, poor) lose access to the economy. Government gains total surveillance of all purchases. System outages become economic emergencies — no fallback when servers go down. Black markets innovate with crypto or barter, and the hardened criminals adapt while ordinary citizens lose privacy.",
+    "lesson": "Eliminating the analog fallback creates a single point of failure for the entire economy. The criminals you're targeting are the most adaptive; the citizens you're protecting are the most vulnerable to the side effects.",
+    "level": "advanced"
+  },
+  {
+    "id": "technology:embeddings",
+    "type": "standard",
+    "concept": "Embeddings",
+    "domain": "Technology",
+    "oneliner": "Vector representations of text (or images, audio) in high-dimensional space — similar meanings cluster nearby.",
+    "whyItMatters": "They power semantic search, recommendation systems, and RAG. 'King - Man + Woman ≈ Queen' is the classic demo.",
+    "analogy": "Translating words into coordinates in a mathematical space — so the computer can measure how similar concepts are."
+  },
+  {
+    "id": "technology:encrypting-everything-by-default",
+    "type": "application",
+    "concept": "Encrypting Everything by Default",
+    "domain": "Technology",
+    "problem": "A messaging platform enables end-to-end encryption for all conversations by default.",
+    "firstOrder": "User privacy improves dramatically. Government surveillance becomes harder. Corporate espionage risk decreases. Trust in the platform increases.",
+    "secondOrder": "Law enforcement loses visibility into criminal communications, complicating investigations of child exploitation and terrorism. Encrypted platforms become preferred channels for organized crime. Governments push for backdoors, which if implemented would undermine security for everyone. The platform faces regulatory pressure it wasn't designed for.",
+    "lesson": "Privacy and security exist in tension with accountability and safety. Second-order thinking reveals that absolute privacy creates spaces where the vulnerable are more, not less, at risk. The design choice is inherently political.",
+    "level": "advanced"
+  },
+  {
+    "id": "technology:encryption",
+    "type": "standard",
+    "concept": "Encryption",
+    "domain": "Technology",
+    "oneliner": "Encoding information so only authorized parties can read it — math that turns text into gibberish and back.",
+    "whyItMatters": "Without it, no online banking, messaging, or e-commerce. Foundation of digital privacy.",
+    "analogy": "A lock only the right key opens — except the lock is mathematical and theoretically unbreakable."
+  },
+  {
+    "id": "technology:eventual-consistency",
+    "type": "standard",
+    "concept": "Eventual Consistency",
+    "domain": "Technology",
+    "oneliner": "In distributed systems, all nodes will eventually reflect the same data, but at any given moment they may disagree.",
+    "whyItMatters": "The CAP theorem forces a choice: immediate consistency or high availability. Most modern systems choose availability and tolerate temporary inconsistency — your social media feed is eventually consistent.",
+    "analogy": "Like gossip spreading through an office — everyone eventually hears the same story, but at any moment different people know different versions.",
+    "level": "intermediate"
+  },
+  {
+    "id": "technology:explainable-ai-xai",
+    "type": "standard",
+    "concept": "Explainable AI (XAI)",
+    "domain": "Technology",
+    "oneliner": "AI systems designed to provide human-understandable explanations for their decisions.",
+    "whyItMatters": "Critical for medical diagnosis, loan approval, criminal justice — any domain where you need to know WHY the AI decided.",
+    "analogy": "An AI that shows its work — not just 'the answer is 42' but 'here's why I think it's 42.'"
+  },
+  {
+    "id": "technology:feature-engineering",
+    "type": "standard",
+    "concept": "Feature Engineering",
+    "domain": "Technology",
+    "oneliner": "Selecting, transforming, and creating input variables that help ML models learn better.",
+    "whyItMatters": "The difference between a mediocre and excellent model often comes down to feature engineering, not algorithm choice.",
+    "analogy": "Choosing which clues to give the detective — the right clues make the case easy, the wrong ones make it impossible."
+  },
+  {
+    "id": "technology:feature-flags",
+    "type": "standard",
+    "concept": "Feature Flags",
+    "domain": "Technology",
+    "oneliner": "Deploying code with new features hidden behind toggles that can be switched on or off without redeploying — separating deployment from release.",
+    "whyItMatters": "Reduces deployment risk to near zero. You can ship code daily while releasing features gradually. If something breaks, flip the flag — no rollback needed.",
+    "analogy": "Like installing a light switch before screwing in the bulb — the wiring is live, but the light doesn't turn on until you're ready.",
+    "level": "foundational"
+  },
+  {
+    "id": "technology:federated-learning",
+    "type": "standard",
+    "concept": "Federated Learning",
+    "domain": "Technology",
+    "oneliner": "Training AI models across multiple devices without centralizing the data — privacy-preserving machine learning.",
+    "whyItMatters": "Your phone improves keyboard predictions using your typing data without sending that data to Apple/Google.",
+    "analogy": "Learning from everyone's diary without reading anyone's diary — each device trains locally, only sharing the lessons."
+  },
+  {
+    "id": "technology:fine-tuning",
+    "type": "standard",
+    "concept": "Fine-Tuning",
+    "domain": "Technology",
+    "oneliner": "Adapting a pre-trained AI model to a specific task or domain by training it further on specialized data.",
+    "whyItMatters": "It's how general-purpose models become specialized — a medical LLM, a legal assistant, a code generator.",
+    "analogy": "Teaching a college graduate the specifics of your company — they have general knowledge, you add the domain expertise."
+  },
+  {
+    "id": "technology:gan-generative-adversarial-network",
+    "type": "standard",
+    "concept": "GAN (Generative Adversarial Network)",
+    "domain": "Technology",
+    "oneliner": "Two neural networks competing — one generates fakes, the other detects them. Both improve through competition.",
+    "whyItMatters": "Produces deepfakes, generates photorealistic faces, creates art. A creativity engine powered by competition.",
+    "analogy": "A forger and a detective in an arms race — each makes the other better until the fakes are indistinguishable."
+  },
+  {
+    "id": "technology:graceful-degradation",
+    "type": "standard",
+    "concept": "Graceful Degradation",
+    "domain": "Technology",
+    "oneliner": "A system that continues to function with reduced capability rather than failing completely when components break.",
+    "whyItMatters": "Netflix without recommendations still shows movies. A website without JavaScript still shows content. Designing for failure isn't pessimism — it's engineering maturity.",
+    "analogy": "Like a car that still drives with a blown speaker — the music is worse, but you still get where you're going.",
+    "level": "foundational"
+  },
+  {
+    "id": "technology:graphql",
+    "type": "standard",
+    "concept": "GraphQL",
+    "domain": "Technology",
+    "oneliner": "A query language for APIs letting clients request exactly the data they need — nothing more, nothing less.",
+    "whyItMatters": "It replaced REST for many use cases because it eliminates over-fetching and under-fetching of data.",
+    "analogy": "Instead of a fixed menu (REST), you write your own order specifying exactly what you want."
+  },
+  {
+    "id": "technology:hallucination-ai",
+    "type": "standard",
+    "concept": "Hallucination (AI)",
+    "domain": "Technology",
+    "oneliner": "When an AI generates confident but factually incorrect information — a fundamental limitation of current language models.",
+    "whyItMatters": "LLMs predict plausible text, not truthful text. They can 'hallucinate' citations, facts, and events that never happened.",
+    "analogy": "An AI confabulating with perfect grammar — making things up while sounding completely authoritative."
+  },
+  {
+    "id": "technology:homomorphic-encryption",
+    "type": "standard",
+    "concept": "Homomorphic Encryption",
+    "domain": "Technology",
+    "oneliner": "Performing computations on encrypted data without decrypting it — processing secrets you can't see.",
+    "whyItMatters": "It would allow cloud computing on sensitive data without trusting the cloud provider. Currently too slow for most uses.",
+    "analogy": "Doing surgery while the patient is inside a sealed box — you can operate but never see what's inside."
+  },
+  {
+    "id": "technology:hysteresis-in-technology",
+    "type": "standard",
+    "concept": "Hysteresis in Technology",
+    "domain": "Technology",
+    "oneliner": "Systems that depend on history, not just current state — the path you took to get here changes where you can go next.",
+    "whyItMatters": "QWERTY keyboard persists not because it's optimal but because of accumulated infrastructure. Migration costs create lock-in that rational analysis alone can't overcome.",
+    "analogy": "Like a footpath through a field — once enough people walk it, everyone follows even if a shorter path exists.",
+    "level": "intermediate"
+  },
+  {
+    "id": "technology:idempotency",
+    "type": "standard",
+    "concept": "Idempotency",
+    "domain": "Technology",
+    "oneliner": "An operation that produces the same result whether you run it once or many times — safe to retry without side effects.",
+    "whyItMatters": "Critical for distributed systems where messages can be duplicated. HTTP PUT is idempotent; POST is not. Designing for idempotency prevents double-charges, duplicate records, and race conditions.",
+    "analogy": "Like pressing an elevator button — pressing it five times doesn't call five elevators.",
+    "level": "intermediate"
+  },
+  {
+    "id": "technology:immutable-infrastructure",
+    "type": "standard",
+    "concept": "Immutable Infrastructure",
+    "domain": "Technology",
+    "oneliner": "Instead of updating servers in place, replace them entirely with new versions — no drift, no 'works on my machine' surprises.",
+    "whyItMatters": "Eliminates configuration drift, makes rollbacks trivial, and ensures every deployment is identical. The principle: treat servers like cattle (replaceable), not pets (unique and precious).",
+    "analogy": "Like using disposable plates instead of washing dishes — each meal starts clean with no residue from the last.",
+    "level": "intermediate"
+  },
+  {
+    "id": "technology:implementing-microservices",
+    "type": "application",
+    "concept": "Implementing Microservices",
+    "domain": "Technology",
+    "problem": "A startup with 8 engineers rewrites their monolith into 30 microservices to 'improve scalability.'",
+    "firstOrder": "Services can be deployed independently. Teams can choose different tech stacks. Each service is smaller and easier to understand in isolation.",
+    "secondOrder": "With 8 engineers and 30 services, no one understands the whole system. Debugging requires tracing requests across multiple services. Network failures between services create new failure modes that didn't exist in the monolith. Deployment complexity explodes. The team spends more time on infrastructure than features.",
+    "lesson": "Microservices trade code complexity for operational complexity. For large organizations with independent teams, the trade is worth it. For a small team, it's a net negative. The architecture should match the organization (Conway's Law), not the ambition.",
+    "level": "intermediate"
+  },
+  {
+    "id": "technology:inference-vs-training-ai",
+    "type": "standard",
+    "concept": "Inference vs Training (AI)",
+    "domain": "Technology",
+    "oneliner": "Training: teaching a model from data (expensive, one-time). Inference: using the trained model for predictions (cheap, ongoing).",
+    "whyItMatters": "Training GPT-4 cost $100M+. Each query costs fractions of a cent. The ratio of training cost to inference cost defines the economics.",
+    "analogy": "Training is building the factory. Inference is running the factory. You spend huge upfront to produce cheaply forever."
+  },
+  {
+    "id": "technology:internet-of-things",
+    "type": "standard",
+    "concept": "Internet of Things",
+    "domain": "Technology",
+    "oneliner": "Physical objects embedded with sensors and connectivity — communicating data over the internet.",
+    "whyItMatters": "Smart thermostats, industrial sensors, connected cars. Expected 75+ billion devices by 2030.",
+    "analogy": "Giving everyday objects a voice and ears — your fridge, your factory, your city all talking to each other."
+  },
+  {
+    "id": "technology:jevons-paradox-in-computing",
+    "type": "standard",
+    "concept": "Jevons Paradox in Computing",
+    "domain": "Technology",
+    "oneliner": "Making computers more efficient increases total computing consumption — efficiency gains are consumed by increased demand.",
+    "whyItMatters": "Faster chips don't reduce energy use; they enable more computation. This applies to bandwidth, storage, and AI: efficiency creates demand that outpaces savings.",
+    "analogy": "Like building wider highways that fill up with more cars — the 'solution' recreates the problem at a larger scale.",
+    "level": "intermediate"
+  },
+  {
+    "id": "technology:kubernetes",
+    "type": "standard",
+    "concept": "Kubernetes",
+    "domain": "Technology",
+    "oneliner": "An open-source system for automating deployment, scaling, and management of containerized applications.",
+    "whyItMatters": "The operating system of the cloud. Manages thousands of containers across clusters of machines.",
+    "analogy": "An air traffic controller for containers — routing, scheduling, and managing thousands of units simultaneously."
+  },
+  {
+    "id": "technology:latency",
+    "type": "standard",
+    "concept": "Latency",
+    "domain": "Technology",
+    "oneliner": "Time delay between action and response — milliseconds for networks, nanoseconds for chips.",
+    "whyItMatters": "Critical for trading, gaming, video calls, autonomous vehicles. Lower is almost always better.",
+    "analogy": "The lag between pressing a button and something happening."
+  },
+  {
+    "id": "technology:llm-large-language-model",
+    "type": "standard",
+    "concept": "LLM (Large Language Model)",
+    "domain": "Technology",
+    "oneliner": "AI trained on massive text datasets to predict the next token — GPT, Claude, Gemini. The technology behind the current AI wave.",
+    "whyItMatters": "They can write, code, analyze, and reason — but they don't 'understand' in the human sense. They're prediction engines.",
+    "analogy": "An incredibly sophisticated autocomplete — trained on most of human text, predicting what comes next."
+  },
+  {
+    "id": "technology:load-balancer",
+    "type": "standard",
+    "concept": "Load Balancer",
+    "domain": "Technology",
+    "oneliner": "A device or software distributing incoming network traffic across multiple servers to prevent overload.",
+    "whyItMatters": "It's why high-traffic websites don't crash. Distributes requests so no single server is overwhelmed.",
+    "analogy": "A traffic cop for internet requests — directing each visitor to the server with the shortest line."
+  },
+  {
+    "id": "technology:machine-learning",
+    "type": "standard",
+    "concept": "Machine Learning",
+    "domain": "Technology",
+    "oneliner": "Systems learning patterns from data rather than following explicit rules — improving through experience.",
+    "whyItMatters": "Powers recommendations, fraud detection, image recognition, medical diagnosis, language models.",
+    "analogy": "Teaching computers by examples instead of rules — like how children learn language vs. multiplication."
+  },
+  {
+    "id": "technology:mcp-model-context-protocol",
+    "type": "standard",
+    "concept": "MCP (Model Context Protocol)",
+    "domain": "Technology",
+    "oneliner": "Anthropic's protocol for connecting AI models to external tools and data sources — standardizing how AI accesses the world.",
+    "whyItMatters": "It lets AI models use tools (search, databases, APIs) through a common interface rather than custom integrations.",
+    "analogy": "A universal adapter letting AI plug into any tool — instead of custom wiring for each connection."
+  },
+  {
+    "id": "technology:metcalfe-s-law",
+    "type": "standard",
+    "concept": "Metcalfe's Law",
+    "domain": "Technology",
+    "oneliner": "Network value is proportional to the square of users. 10 users = 100 value. 100 users = 10,000.",
+    "whyItMatters": "Explains winner-take-all dynamics in network businesses — telephones, social media, payment rails.",
+    "analogy": "Each new person at a party creates connections to everyone already there — value grows quadratically."
+  },
+  {
+    "id": "technology:microservices",
+    "type": "standard",
+    "concept": "Microservices",
+    "domain": "Technology",
+    "oneliner": "Building applications as collections of small, independent services rather than one monolithic program.",
+    "whyItMatters": "Each service can be updated, scaled, and deployed independently. How Netflix, Amazon, and modern tech companies build.",
+    "analogy": "Instead of one massive machine, many small specialized machines that communicate — break one, the rest keep running."
+  },
+  {
+    "id": "technology:middleware",
+    "type": "standard",
+    "concept": "Middleware",
+    "domain": "Technology",
+    "oneliner": "Software that sits between the operating system and applications, providing common services and integration.",
+    "whyItMatters": "It handles authentication, logging, message queuing, and API management — the invisible plumbing between systems.",
+    "analogy": "The translator and traffic manager between different software systems — making things that weren't designed to talk actually communicate."
+  },
+  {
+    "id": "technology:model-collapse",
+    "type": "standard",
+    "concept": "Model Collapse",
+    "domain": "Technology",
+    "oneliner": "When AI models trained on AI-generated data degrade over successive generations — synthetic data poisoning itself.",
+    "whyItMatters": "As AI content floods the internet, future models trained on it may get worse. The ouroboros of AI training data.",
+    "analogy": "Photocopying a photocopy of a photocopy — each generation degrades until the output is meaningless."
+  },
+  {
+    "id": "technology:moore-s-law",
+    "type": "standard",
+    "concept": "Moore's Law",
+    "domain": "Technology",
+    "oneliner": "Transistor density doubles roughly every two years — driving exponential computing improvement for 50+ years.",
+    "whyItMatters": "Now slowing. Your phone is more powerful than the computer that landed on the moon.",
+    "analogy": "The escalator tech has been riding for half a century — same ticket, twice as high every two years."
+  },
+  {
+    "id": "technology:neural-networks",
+    "type": "standard",
+    "concept": "Neural Networks",
+    "domain": "Technology",
+    "oneliner": "Computing systems of interconnected nodes learning patterns — loosely inspired by biological brains.",
+    "whyItMatters": "The architecture behind deep learning, image recognition, GPT. Individually simple, collectively powerful.",
+    "analogy": "A digital brain from simple switches — individually dumb, collectively brilliant."
+  },
+  {
+    "id": "technology:oauth",
+    "type": "standard",
+    "concept": "OAuth",
+    "domain": "Technology",
+    "oneliner": "An authorization protocol letting users grant third-party access to their data without sharing passwords.",
+    "whyItMatters": "It's why you can 'Sign in with Google' — the app gets limited access without ever seeing your password.",
+    "analogy": "Giving a valet a special key that only starts the car — full access to drive, zero access to the trunk or glove box."
+  },
+  {
+    "id": "technology:observability",
+    "type": "standard",
+    "concept": "Observability",
+    "domain": "Technology",
+    "oneliner": "The ability to understand a system's internal state from its external outputs — logs, metrics, traces.",
+    "whyItMatters": "Essential for running reliable cloud services. When something breaks at 3AM, observability tells you where and why.",
+    "analogy": "Diagnostic sensors for software — like a car dashboard but for your entire infrastructure."
+  },
+  {
+    "id": "technology:open-source",
+    "type": "standard",
+    "concept": "Open Source",
+    "domain": "Technology",
+    "oneliner": "Software with publicly available source code — anyone can inspect, modify, distribute.",
+    "whyItMatters": "Linux, Python, Firefox, Android. Collaboration produces better software than secrecy.",
+    "analogy": "A recipe anyone can use, improve, and share — more cooks, better dish."
+  },
+  {
+    "id": "technology:open-sourcing-your-software",
+    "type": "application",
+    "concept": "Open-Sourcing Your Software",
+    "domain": "Technology",
+    "problem": "A company open-sources its core product to increase adoption.",
+    "firstOrder": "Adoption surges. Community contributions improve the code. Developer mindshare increases. Hiring pipeline strengthens.",
+    "secondOrder": "Competitors fork the code and offer cheaper managed services. The original company loses pricing power. Community governance conflicts emerge. Enterprise customers demand stability guarantees the open model can't provide. MongoDB, Elastic, and Redis all hit this wall.",
+    "lesson": "Open source creates value but doesn't automatically capture it. Second-order thinking asks: who will capture the value your openness creates, and how will you sustain the business when they do?",
+    "level": "advanced"
+  },
+  {
+    "id": "technology:overfitting",
+    "type": "standard",
+    "concept": "Overfitting",
+    "domain": "Technology",
+    "oneliner": "When a model learns training data too well — memorizing noise instead of learning patterns. Performs poorly on new data.",
+    "whyItMatters": "The most common failure mode in ML. Like a student who memorizes answers instead of understanding concepts.",
+    "analogy": "Studying the answer key instead of the material — perfect on the practice test, terrible on the real one."
+  },
+  {
+    "id": "technology:prompt-engineering",
+    "type": "standard",
+    "concept": "Prompt Engineering",
+    "domain": "Technology",
+    "oneliner": "The practice of designing inputs to AI models to get optimal outputs — structuring questions, providing context, specifying format.",
+    "whyItMatters": "It's currently the primary interface for getting good results from LLMs. A well-crafted prompt can 10x output quality.",
+    "analogy": "Learning to speak the AI's language — phrasing questions in ways that unlock the model's best capabilities."
+  },
+  {
+    "id": "technology:proof-of-work-vs-proof-of-stake",
+    "type": "standard",
+    "concept": "Proof of Work vs Proof of Stake",
+    "domain": "Technology",
+    "oneliner": "Two blockchain consensus mechanisms: PoW uses computational power (Bitcoin's energy cost). PoS uses staked cryptocurrency (Ethereum's transition).",
+    "whyItMatters": "PoW is energy-intensive but battle-tested. PoS uses ~99.9% less energy. Ethereum switched in 2022.",
+    "analogy": "Two ways to verify trust: PoW = prove you did the work. PoS = put your money where your mouth is."
+  },
+  {
+    "id": "technology:quantum-computing",
+    "type": "standard",
+    "concept": "Quantum Computing",
+    "domain": "Technology",
+    "oneliner": "Computing using quantum mechanical phenomena (superposition, entanglement) to process information in fundamentally new ways.",
+    "whyItMatters": "Could break current encryption, simulate molecules for drug discovery, optimize logistics. Still early but advancing rapidly.",
+    "analogy": "Instead of bits that are 0 OR 1, qubits are 0 AND 1 simultaneously — exploring many solutions at once."
+  },
+  {
+    "id": "technology:rag-retrieval-augmented-generation",
+    "type": "standard",
+    "concept": "RAG (Retrieval-Augmented Generation)",
+    "domain": "Technology",
+    "oneliner": "An AI architecture that retrieves relevant documents before generating answers — grounding outputs in source material.",
+    "whyItMatters": "It reduces hallucination, enables AI to work with current/proprietary data, and is how most enterprise AI is deployed.",
+    "analogy": "Giving the AI a reference library instead of relying on memory — look it up, then answer."
+  },
+  {
+    "id": "technology:rate-limiting",
+    "type": "standard",
+    "concept": "Rate Limiting",
+    "domain": "Technology",
+    "oneliner": "Controlling how many requests a system accepts per time period — preventing abuse and ensuring fair access.",
+    "whyItMatters": "It prevents DDoS attacks, stops API abuse, and ensures servers don't crash under load.",
+    "analogy": "A bouncer at the club door — only letting a certain number of people in per minute."
+  },
+  {
+    "id": "technology:reinforcement-learning",
+    "type": "standard",
+    "concept": "Reinforcement Learning",
+    "domain": "Technology",
+    "oneliner": "AI learning through trial and error — receiving rewards for good actions and penalties for bad ones.",
+    "whyItMatters": "It trained AlphaGo to beat the world champion, teaches robots to walk, and optimizes data center energy use.",
+    "analogy": "Training a dog — good behavior gets treats, bad behavior gets nothing. Eventually the dog figures out what works."
+  },
+  {
+    "id": "technology:retrieval-vs-generation",
+    "type": "standard",
+    "concept": "Retrieval vs Generation",
+    "domain": "Technology",
+    "oneliner": "Two approaches to AI output: retrieving existing information (search) vs. generating new text (LLMs). RAG combines both.",
+    "whyItMatters": "Pure retrieval gives accurate but rigid answers. Pure generation gives flexible but potentially wrong answers. Combining them is the frontier.",
+    "analogy": "Looking it up vs. making it up — the best AI systems do both, using retrieval to ground generation in facts."
+  },
+  {
+    "id": "technology:rlhf",
+    "type": "standard",
+    "concept": "RLHF",
+    "domain": "Technology",
+    "oneliner": "Reinforcement Learning from Human Feedback — the training technique that makes language models helpful and safe.",
+    "whyItMatters": "It's how raw language models become conversational assistants. Humans rate outputs, and the model learns to prefer good responses.",
+    "analogy": "Teaching AI good behavior by having humans grade its homework — and adjusting toward better answers."
+  },
+  {
+    "id": "technology:scaling-laws",
+    "type": "standard",
+    "concept": "Scaling Laws",
+    "domain": "Technology",
+    "oneliner": "The empirical observation that AI model performance improves predictably with more data, compute, and parameters.",
+    "whyItMatters": "They drove the decision to build GPT-3 and beyond — if you spend 10x more, you get predictably better results.",
+    "analogy": "AI's Moore's Law — bigger models trained on more data with more compute keep getting better in predictable ways."
+  },
+  {
+    "id": "technology:semantic-versioning",
+    "type": "standard",
+    "concept": "Semantic Versioning",
+    "domain": "Technology",
+    "oneliner": "A versioning scheme (MAJOR.MINOR.PATCH) that communicates the nature of changes — making compatibility a contract, not a guess.",
+    "whyItMatters": "Without semver, every dependency update is a gamble. The version number becomes a communication protocol between producers and consumers of software.",
+    "analogy": "Like traffic lights for code changes — green (patch) means safe, yellow (minor) means new features, red (major) means breaking changes.",
+    "level": "foundational"
+  },
+  {
+    "id": "technology:service-mesh",
+    "type": "standard",
+    "concept": "Service Mesh",
+    "domain": "Technology",
+    "oneliner": "Infrastructure layer managing service-to-service communication in microservices — handling routing, security, observability.",
+    "whyItMatters": "Istio and Linkerd are the main implementations. Essential for managing hundreds of microservices.",
+    "analogy": "A traffic management system for microservices — routing, load balancing, and monitoring between services."
+  },
+  {
+    "id": "technology:signal-to-noise-ratio",
+    "type": "standard",
+    "concept": "Signal-to-Noise Ratio",
+    "domain": "Technology",
+    "oneliner": "The ratio of useful information to irrelevant background — in any channel, the value is the signal, and the cost is the noise you must filter.",
+    "whyItMatters": "Shannon's information theory formalized it, but the concept applies everywhere: email inboxes, news feeds, data analysis, meeting agendas. Increasing signal matters less than reducing noise.",
+    "analogy": "Like panning for gold — the gold was always in the river, but you need to remove a lot of sand to see it.",
+    "level": "foundational"
+  },
+  {
+    "id": "technology:social-media-content-moderation",
+    "type": "application",
+    "concept": "Social Media Content Moderation",
+    "domain": "Technology",
+    "problem": "A platform aggressively removes 'harmful' content using AI classifiers.",
+    "firstOrder": "Less misinformation and hate speech visible to users. Advertisers feel safer. User experience improves for the majority.",
+    "secondOrder": "False positives silence legitimate speech, disproportionately affecting minority voices and dissidents. Users migrate to unmoderated platforms where radicalization accelerates. Content creators self-censor to avoid algorithmic punishment. The Overton window narrows invisibly.",
+    "lesson": "Moderation isn't a dial between 'censorship' and 'chaos' — it's a complex system where every intervention creates behavioral adaptation. Second-order thinking reveals that aggressive moderation can make the problem worse by pushing it underground.",
+    "level": "advanced"
+  },
+  {
+    "id": "technology:ssh",
+    "type": "standard",
+    "concept": "SSH",
+    "domain": "Technology",
+    "oneliner": "Secure Shell — a protocol for encrypted remote access to computers over unsecured networks.",
+    "whyItMatters": "How developers manage servers, how sysadmins work remotely, how secure file transfers happen.",
+    "analogy": "A secret tunnel between your computer and a remote one — encrypted end-to-end."
+  },
+  {
+    "id": "technology:synthetic-data",
+    "type": "standard",
+    "concept": "Synthetic Data",
+    "domain": "Technology",
+    "oneliner": "Artificially generated data that mimics real data's statistical properties — used when real data is scarce or sensitive.",
+    "whyItMatters": "It solves privacy problems (train AI without real patient data) and data scarcity (generate rare scenarios for autonomous vehicles).",
+    "analogy": "Fake data that's real enough to train on — manufacturing the training examples reality didn't provide."
+  },
+  {
+    "id": "technology:tcp-ip",
+    "type": "standard",
+    "concept": "TCP/IP",
+    "domain": "Technology",
+    "oneliner": "The foundational internet protocol — defining how data is packetized, addressed, transmitted, received.",
+    "whyItMatters": "Every email, web page, and video call uses it. The invisible plumbing of the entire internet.",
+    "analogy": "The postal system of the internet — addressing, routing, delivery rules every message follows."
+  },
+  {
+    "id": "technology:technical-debt",
+    "type": "standard",
+    "concept": "Technical Debt",
+    "domain": "Technology",
+    "oneliner": "The implied cost of additional rework caused by choosing quick solutions now instead of better approaches that take longer.",
+    "whyItMatters": "Like financial debt — borrowing speed now at the cost of future flexibility. Eventually you have to pay it down or the system collapses.",
+    "analogy": "Writing code fast today that makes tomorrow's code slower — and the interest compounds."
+  },
+  {
+    "id": "technology:the-algorithmic-monoculture",
+    "type": "scenario",
+    "concept": "The Algorithmic Monoculture",
+    "domain": "Technology",
+    "scenario": "Every major bank uses the same AI risk model to manage its portfolio. During a market downturn, all models simultaneously trigger sell orders, creating a flash crash that wouldn't have occurred if banks had different models.",
+    "relevantConcepts": [
+      "Biodiversity",
+      "Systemic Risk",
+      "Tight vs Loose Coupling",
+      "Normal Accidents"
+    ],
+    "domains": [
+      "Technology",
+      "Biology",
+      "Systems Thinking",
+      "Economics"
+    ],
+    "explanation": "Monoculture in agriculture creates vulnerability to single diseases; monoculture in financial algorithms creates correlated failure. Diversity of approaches is a system-level resilience property. When everyone optimizes identically, the 'optimal' strategy becomes the point of fragility.",
+    "level": "advanced"
+  },
+  {
+    "id": "technology:the-automation-displacement",
+    "type": "scenario",
+    "concept": "The Automation Displacement",
+    "domain": "Technology",
+    "scenario": "A warehouse automates 80% of picking and packing jobs. Productivity triples. 200 workers are laid off. The company offers retraining, but the new roles require skills the workers don't have and take 2 years to develop. Meanwhile, the workers' community loses its economic base.",
+    "relevantConcepts": [
+      "Creative Destruction",
+      "Structural Unemployment",
+      "Externalities",
+      "Compound Effect"
+    ],
+    "domains": [
+      "Technology",
+      "Economics",
+      "Systems Thinking"
+    ],
+    "explanation": "Automation creates aggregate wealth but distributes the costs (job loss) and benefits (productivity, profits) asymmetrically. The retraining timeline doesn't match the displacement timeline — a 2-year gap where families can't eat. Creative destruction's 'destruction' phase is experienced individually; its 'creative' phase is experienced statistically.",
+    "level": "intermediate"
+  },
+  {
+    "id": "technology:the-platform-trap",
+    "type": "scenario",
+    "concept": "The Platform Trap",
+    "domain": "Technology",
+    "scenario": "A mid-size retailer built its entire business on a single marketplace platform. The platform changes its algorithm, cutting the retailer's visibility by 60% overnight. Revenue drops immediately.",
+    "relevantConcepts": [
+      "Network Effects",
+      "Platform Economics",
+      "Antifragility",
+      "Single Point of Failure"
+    ],
+    "domains": [
+      "Economics",
+      "Technology",
+      "Systems Thinking"
+    ],
+    "explanation": "This illustrates platform dependency risk. Network effects that made the platform attractive also created lock-in. The retailer optimized for one environment and became fragile to changes in it. Antifragile strategy requires diversification across channels.",
+    "level": "intermediate"
+  },
+  {
+    "id": "technology:token",
+    "type": "standard",
+    "concept": "Token",
+    "domain": "Technology",
+    "oneliner": "The basic unit of text that language models process — roughly ¾ of a word in English. Models have token limits (context windows).",
+    "whyItMatters": "GPT-4 processes ~128K tokens. Claude processes ~200K. The context window is the AI's working memory size.",
+    "analogy": "The atoms of AI language — not quite words, not quite letters, but the chunks the model actually reads."
+  },
+  {
+    "id": "technology:tokenization",
+    "type": "standard",
+    "concept": "Tokenization",
+    "domain": "Technology",
+    "oneliner": "Breaking text into tokens (subwords, words, or characters) that models process as numerical IDs.",
+    "whyItMatters": "Different tokenizers produce different token counts for the same text. It affects model performance, cost, and multilingual ability.",
+    "analogy": "Chopping text into digestible pieces for the AI — not by words, but by statistical patterns the model learned to recognize."
+  },
+  {
+    "id": "technology:transformer-architecture",
+    "type": "standard",
+    "concept": "Transformer Architecture",
+    "domain": "Technology",
+    "oneliner": "The 2017 neural network design powering modern language models — using attention mechanisms. 'Attention Is All You Need.'",
+    "whyItMatters": "Why AI suddenly got good at language in the late 2010s. Powers GPT, Claude, and every major LLM.",
+    "analogy": "A reading system looking at every word in relation to every other simultaneously — context-aware at all scales."
+  },
+  {
+    "id": "technology:turing-test",
+    "type": "standard",
+    "concept": "Turing Test",
+    "domain": "Technology",
+    "oneliner": "A machine is intelligent if a human can't distinguish its responses from a human's. Alan Turing, 1950.",
+    "whyItMatters": "Modern LLMs routinely pass informal Turing tests. The question has shifted from 'can machines think?' to 'does it matter?'",
+    "analogy": "The original AI benchmark — and the uncomfortable follow-up: does it matter if you can't tell?"
+  },
+  {
+    "id": "technology:vector-database",
+    "type": "standard",
+    "concept": "Vector Database",
+    "domain": "Technology",
+    "oneliner": "A database optimized for storing and searching high-dimensional vectors — essential for AI applications like semantic search.",
+    "whyItMatters": "It's the infrastructure behind RAG systems, recommendation engines, and any AI that needs to find 'similar' items.",
+    "analogy": "A library organized by meaning instead of alphabet — finding things by what they're about, not what they're called."
+  },
+  {
+    "id": "technology:version-control-git",
+    "type": "standard",
+    "concept": "Version Control (Git)",
+    "domain": "Technology",
+    "oneliner": "A system tracking changes to code over time, enabling collaboration, branching, and reverting mistakes.",
+    "whyItMatters": "GitHub hosts most of the world's open source code. Git is the most important tool a developer uses daily.",
+    "analogy": "Track changes for code — every edit saved, every version recoverable, multiple people editing simultaneously."
+  },
+  {
+    "id": "technology:webassembly",
+    "type": "standard",
+    "concept": "WebAssembly",
+    "domain": "Technology",
+    "oneliner": "A binary instruction format enabling near-native performance code execution in web browsers — beyond JavaScript's limits.",
+    "whyItMatters": "It's why complex applications (Figma, Google Earth) can run in a browser at near-desktop speed.",
+    "analogy": "A turbocharger for web apps — letting browsers run code at speeds previously impossible."
+  },
+  {
+    "id": "technology:webhook",
+    "type": "standard",
+    "concept": "Webhook",
+    "domain": "Technology",
+    "oneliner": "An automated HTTP callback — when an event occurs, a notification is sent to a specified URL.",
+    "whyItMatters": "It's how Stripe notifies your app of payments, how GitHub triggers CI/CD, how Slack bots respond to messages.",
+    "analogy": "A doorbell for your application — instead of constantly checking for visitors, you get notified when someone arrives."
+  },
+  {
+    "id": "technology:zero-day-vulnerability",
+    "type": "standard",
+    "concept": "Zero-Day Vulnerability",
+    "domain": "Technology",
+    "oneliner": "A software security flaw unknown to the vendor — attackers can exploit it before any patch exists.",
+    "whyItMatters": "They're the most valuable and dangerous type of vulnerability. Nation-states stockpile them as cyber weapons.",
+    "analogy": "A lock with a secret flaw only the burglar knows about — the locksmith can't fix what they don't know is broken."
+  },
+  {
+    "id": "technology:zero-knowledge-proof",
+    "type": "standard",
+    "concept": "Zero-Knowledge Proof",
+    "domain": "Technology",
+    "oneliner": "Proving you know something without revealing the thing itself — verification without disclosure.",
+    "whyItMatters": "Enables privacy-preserving authentication: prove you're over 21 without showing your birthday, prove solvency without revealing account balances. The future of digital identity.",
+    "analogy": "Like proving you know the combination to a safe by opening it in front of someone — they see proof of knowledge without learning the numbers.",
+    "level": "advanced"
+  }
+]

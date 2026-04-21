@@ -1,0 +1,777 @@
+[
+  {
+    "id": "cognitive-science:affect-heuristic",
+    "type": "standard",
+    "concept": "Affect Heuristic",
+    "domain": "Cognitive Science",
+    "oneliner": "Judging risk and benefit based on current emotional state rather than objective analysis.",
+    "whyItMatters": "If something feels scary, people overestimate its risk. If it feels good, they underestimate risk. Emotion hijacks evaluation.",
+    "analogy": "Your feelings doing your thinking for you — gut reaction substituting for rational analysis."
+  },
+  {
+    "id": "cognitive-science:analogical-reasoning",
+    "type": "standard",
+    "concept": "Analogical Reasoning",
+    "domain": "Cognitive Science",
+    "oneliner": "Understanding a novel situation by mapping it to a familiar one — identifying structural similarities between domains despite surface differences.",
+    "whyItMatters": "Rutherford understood the atom by analogy to the solar system. Epstein's Range argues that analogical reasoning is the signature skill of high performers in complex environments. It's the cognitive mechanism behind Renaissance's entire cross-domain training model — learning chemistry to think better about economics.",
+    "analogy": "Solving a new puzzle by remembering how you solved a different puzzle with the same underlying structure — even though the pieces looked completely different."
+  },
+  {
+    "id": "cognitive-science:anchoring",
+    "type": "standard",
+    "concept": "Anchoring",
+    "domain": "Cognitive Science",
+    "oneliner": "Over-relying on the first piece of information encountered when making decisions.",
+    "whyItMatters": "Why list prices work in negotiation, why initial salary offers matter disproportionately.",
+    "analogy": "The first number becomes the gravitational center — everything orbits around it."
+  },
+  {
+    "id": "cognitive-science:attention",
+    "type": "standard",
+    "concept": "Attention",
+    "domain": "Cognitive Science",
+    "oneliner": "The cognitive process of selectively concentrating on relevant information while ignoring distractions.",
+    "whyItMatters": "It's a limited resource. Divided attention degrades performance. 'Attention economy' treats it as the scarcest resource.",
+    "analogy": "Your brain's spotlight — it can only illuminate one thing at a time, and everything else fades to darkness."
+  },
+  {
+    "id": "cognitive-science:availability-heuristic",
+    "type": "standard",
+    "concept": "Availability Heuristic",
+    "domain": "Cognitive Science",
+    "oneliner": "Judging probability by how easily examples come to mind — vivid events seem more likely than they are.",
+    "whyItMatters": "Why people fear plane crashes more than car accidents, despite cars being far more deadly.",
+    "analogy": "Your brain's Google — it ranks by what comes to mind fastest, not by what's actually most common."
+  },
+  {
+    "id": "cognitive-science:bayes-theorem",
+    "type": "standard",
+    "concept": "Bayes' Theorem",
+    "domain": "Cognitive Science",
+    "oneliner": "Updating beliefs based on new evidence — probability of A given B depends on prior probability and likelihood.",
+    "whyItMatters": "Foundation of rational belief updating, spam filters, medical diagnosis, scientific reasoning.",
+    "analogy": "A belief-updating formula — start with prior belief, adjust with new data, arrive at better estimate."
+  },
+  {
+    "id": "cognitive-science:bayesian-brain-hypothesis",
+    "type": "standard",
+    "concept": "Bayesian Brain Hypothesis",
+    "domain": "Cognitive Science",
+    "oneliner": "The brain operates as a Bayesian inference engine — continuously updating beliefs (priors) with new evidence (likelihood) to compute the most probable interpretation of sensory data.",
+    "whyItMatters": "Explains why prior expectations dominate perception (you see what you expect), why surprises are processed differently, and why beliefs are hard to change (strong priors resist weak evidence). Unifies predictive processing, attention, and learning under one mathematical framework. Connects cognitive science to Bayes' theorem in mathematics.",
+    "analogy": "A weather forecaster who starts each day with yesterday's prediction and adjusts based on new satellite data — never starting from scratch, always updating."
+  },
+  {
+    "id": "cognitive-science:binding-problem",
+    "type": "standard",
+    "concept": "Binding Problem",
+    "domain": "Cognitive Science",
+    "oneliner": "How does the brain combine separate features (color, shape, motion) processed in different areas into a single unified percept?",
+    "whyItMatters": "You see a red bouncing ball as one object, but redness, roundness, and motion are processed in different brain regions. The mechanism of unification remains one of neuroscience's deepest mysteries.",
+    "analogy": "Like a film editor combining separately shot audio, video, and effects into one seamless scene — except we don't know where the editor sits.",
+    "level": "advanced"
+  },
+  {
+    "id": "cognitive-science:change-blindness",
+    "type": "standard",
+    "concept": "Change Blindness",
+    "domain": "Cognitive Science",
+    "oneliner": "Failing to notice large changes in a visual scene — surprisingly common even for obvious changes.",
+    "whyItMatters": "The famous gorilla-in-the-basketball-game experiment. Your visual system constructs an illusion of seeing everything.",
+    "analogy": "Your brain editing reality in real-time — filling in what it expects to see instead of what's actually there."
+  },
+  {
+    "id": "cognitive-science:chunking",
+    "type": "standard",
+    "concept": "Chunking",
+    "domain": "Cognitive Science",
+    "oneliner": "Grouping individual pieces of information into larger meaningful units to overcome working memory limits — turning 10 digits into 3 phone-number chunks.",
+    "whyItMatters": "George Miller's 'magical number 7±2' describes working memory capacity in chunks, not raw items. Expert chess players chunk board positions; musicians chunk phrases. Chunking is the mechanism behind expertise — the more you know, the bigger your chunks, the more you can process.",
+    "analogy": "Reading words instead of individual letters — 'the' is one chunk, not three separate symbols.",
+    "level": "foundational"
+  },
+  {
+    "id": "cognitive-science:cognitive-architecture",
+    "type": "standard",
+    "concept": "Cognitive Architecture",
+    "domain": "Cognitive Science",
+    "oneliner": "The underlying structure of the mind's information processing system — including perception, memory stores, attention filters, and executive control. ACT-R and SOAR are formal models.",
+    "whyItMatters": "If you want to build AI that thinks like humans (or understand why it doesn't), you need a model of human cognitive architecture. ACT-R successfully predicts human learning curves, error patterns, and reaction times. Understanding architecture explains why some tasks are easy and others hard — it's not about intelligence, it's about fit to the architecture.",
+    "analogy": "The blueprints of a building — you can rearrange the furniture (learn new things) but you can't easily move the load-bearing walls (working memory limits, attention bottlenecks)."
+  },
+  {
+    "id": "cognitive-science:cognitive-biases",
+    "type": "standard",
+    "concept": "Cognitive Biases",
+    "domain": "Cognitive Science",
+    "oneliner": "Systematic deviations from rationality — mental shortcuts producing predictable judgment errors.",
+    "whyItMatters": "Kahneman and Tversky catalogued dozens. They affect investing, hiring, medical diagnosis, and every judgment.",
+    "analogy": "Bugs in your mental software — shipped with the brain, can't be fully patched, only worked around."
+  },
+  {
+    "id": "cognitive-science:cognitive-development",
+    "type": "standard",
+    "concept": "Cognitive Development",
+    "domain": "Cognitive Science",
+    "oneliner": "Piaget's stage theory: children progress through sensorimotor, preoperational, concrete operational, and formal operational thinking — each stage building qualitatively new cognitive capabilities.",
+    "whyItMatters": "A child in the preoperational stage literally cannot understand conservation (pouring water into a taller glass doesn't increase the amount). These aren't failures of effort — they're structural limits. Understanding developmental stages explains why teaching methods must match cognitive readiness. Connects to education theory and neuroscience.",
+    "analogy": "Software that needs OS updates before it can run certain apps — the child's cognitive OS must upgrade before certain operations become possible."
+  },
+  {
+    "id": "cognitive-science:cognitive-flexibility",
+    "type": "standard",
+    "concept": "Cognitive Flexibility",
+    "domain": "Cognitive Science",
+    "oneliner": "The ability to switch between mental frameworks, adapt strategies to new rules, and hold multiple perspectives simultaneously — a core executive function.",
+    "whyItMatters": "Measured by tasks like the Wisconsin Card Sorting Test. Low cognitive flexibility manifests as rigid thinking, difficulty with ambiguity, and poor adaptation to change. It's trainable, peaks in young adulthood, and is one of the best predictors of success in 'wicked' environments where rules keep changing.",
+    "analogy": "A Swiss Army knife mind — instead of hammering every problem with the same tool, you flip to the right blade for each task."
+  },
+  {
+    "id": "cognitive-science:cognitive-load-theory",
+    "type": "standard",
+    "concept": "Cognitive Load Theory",
+    "domain": "Cognitive Science",
+    "oneliner": "Working memory has limited capacity — too much simultaneous information degrades learning.",
+    "whyItMatters": "It's why good teaching chunks information, simple interfaces beat complex ones, and multitasking fails.",
+    "analogy": "Your brain's RAM — overload it and everything slows to a crawl."
+  },
+  {
+    "id": "cognitive-science:cognitive-offloading",
+    "type": "standard",
+    "concept": "Cognitive Offloading",
+    "domain": "Cognitive Science",
+    "oneliner": "Using external tools (notes, calendars, GPS, AI) to reduce demands on internal cognitive resources — freeing working memory for higher-order thinking.",
+    "whyItMatters": "Writing a grocery list frees your mind to think about meals. GPS navigation frees spatial memory for conversation. AI coding assistants free working memory for architecture decisions. But offloading has costs: over-reliance can atrophy the offloaded skill. Connects to the extended mind thesis and to AI-human collaboration.",
+    "analogy": "A student with an open-book exam — the book handles recall, freeing the mind for analysis. But a student who never studies might not know what to look up."
+  },
+  {
+    "id": "cognitive-science:confirmation-bias",
+    "type": "standard",
+    "concept": "Confirmation Bias",
+    "domain": "Cognitive Science",
+    "oneliner": "Searching for and remembering information that confirms existing beliefs while ignoring contradictions.",
+    "whyItMatters": "Arguably the most damaging bias. Why smart people believe stupid things and echo chambers exist.",
+    "analogy": "Your brain's yes-man — only brings news you want to hear."
+  },
+  {
+    "id": "cognitive-science:conjunction-fallacy",
+    "type": "standard",
+    "concept": "Conjunction Fallacy",
+    "domain": "Cognitive Science",
+    "oneliner": "Judging a specific scenario as more likely than a general one because the specific scenario is more vivid.",
+    "whyItMatters": "People rate 'feminist bank teller' as more likely than 'bank teller' for a described progressive woman. Logically impossible.",
+    "analogy": "Adding detail makes a story feel more probable — even though every added condition makes it mathematically less likely."
+  },
+  {
+    "id": "cognitive-science:contextual-reinstatement",
+    "type": "standard",
+    "concept": "Contextual Reinstatement",
+    "domain": "Cognitive Science",
+    "oneliner": "Recall improves when the retrieval context matches the encoding context — studying in the room where you'll take the test helps, and mental reinstatement of the original context aids retrieval even when physical return is impossible.",
+    "whyItMatters": "Divers who learned underwater recalled better underwater. Students who studied with background music recalled better with the same music playing. This explains why 'it'll come to me when I'm back in the kitchen' actually works. For spaced repetition, varying study contexts paradoxically builds context-independent memory.",
+    "analogy": "A song that instantly transports you back to a specific moment — the context was encoded alongside the memory, and the context unlocks it."
+  },
+  {
+    "id": "cognitive-science:counterfactual-thinking",
+    "type": "standard",
+    "concept": "Counterfactual Thinking",
+    "domain": "Cognitive Science",
+    "oneliner": "Imagining alternative outcomes to events that already happened — 'what if I had turned left instead?'",
+    "whyItMatters": "It drives regret, learning, and causal reasoning. People who engage in upward counterfactuals ('it could have been better') learn more.",
+    "analogy": "Your brain's alternate timeline simulator — rerunning the past with different choices to learn from what happened."
+  },
+  {
+    "id": "cognitive-science:decision-fatigue",
+    "type": "standard",
+    "concept": "Decision Fatigue",
+    "domain": "Cognitive Science",
+    "oneliner": "The deteriorating quality of decisions made after a long session of decision-making.",
+    "whyItMatters": "Judges give harsher sentences before lunch. CEOs wear the same outfit daily to conserve decision bandwidth.",
+    "analogy": "Your decision-making battery draining through the day — each choice depletes the supply for the next one."
+  },
+  {
+    "id": "cognitive-science:deliberate-practice",
+    "type": "standard",
+    "concept": "Deliberate Practice",
+    "domain": "Cognitive Science",
+    "oneliner": "Anders Ericsson's finding that expert performance comes from structured, effortful practice with immediate feedback targeting specific weaknesses — not mere repetition or talent.",
+    "whyItMatters": "10,000 hours is a misquote of Ericsson — it's not hours that matter, it's the structure. Mindless repetition produces mediocrity. Deliberate practice requires a coach, clear goals, and discomfort. This is exactly what FSRS spaced repetition provides: targeted, effortful retrieval with feedback. Connects to expertise research and learning science.",
+    "analogy": "A violinist who practices the hard passages slowly until they're perfect, vs one who plays their favorite pieces on repeat. Same hours, radically different outcomes."
+  },
+  {
+    "id": "cognitive-science:design-and-cognition",
+    "type": "connection",
+    "concept": "Design and Cognition",
+    "domain": "Cognitive Science",
+    "conceptA": "Cognitive Load Theory",
+    "domainA": "Cognitive Science",
+    "conceptB": "Minimalism",
+    "domainB": "Art & Architecture",
+    "connection": "Cognitive load theory shows that working memory is limited and excess information impairs processing. Minimalist design reduces visual and conceptual load to what's essential. The science validates the aesthetic — less is more because the brain can only process so much.",
+    "insight": "Mies van der Rohe's 'less is more' and Sweller's cognitive load theory arrived at the same conclusion from opposite directions. Good design is good cognition — every unnecessary element steals processing power from the essential ones.",
+    "prompt": "Why does a cluttered dashboard cause more pilot errors than a clean one? How does this same principle explain why minimalist websites convert better?"
+  },
+  {
+    "id": "cognitive-science:desirable-difficulties",
+    "type": "standard",
+    "concept": "Desirable Difficulties",
+    "domain": "Cognitive Science",
+    "oneliner": "Robert Bjork's insight that conditions making learning feel harder in the short term — spacing, interleaving, testing, varying context — produce stronger long-term retention.",
+    "whyItMatters": "The paradox of learning: fluency ≠ learning. Students who feel they're learning easily are often not retaining. Students who struggle are building durable memory. This explains why FSRS-scheduled reviews feel harder than re-reading — and why they work. The discomfort is the point, not a bug.",
+    "analogy": "Lifting weights vs carrying groceries — the weights feel harder but build more muscle. Difficulty in the right dose is the growth signal."
+  },
+  {
+    "id": "cognitive-science:distributed-cognition",
+    "type": "standard",
+    "concept": "Distributed Cognition",
+    "domain": "Cognitive Science",
+    "oneliner": "Intelligence is spread across people, tools, and environments — not locked inside individual skulls. A cockpit 'thinks' through the collaboration of pilots, instruments, and checklists.",
+    "whyItMatters": "Edwin Hutchins showed that navigation on a Navy ship is a cognitive process distributed across the whole bridge team and their instruments. No single person holds the full picture. This reframes intelligence from individual property to system property — connecting cognitive science to systems thinking and organizational design.",
+    "analogy": "A jazz ensemble — the music exists in the interaction between players, not in any single musician's head."
+  },
+  {
+    "id": "cognitive-science:dual-coding-theory",
+    "type": "standard",
+    "concept": "Dual Coding Theory",
+    "domain": "Cognitive Science",
+    "oneliner": "Allan Paivio's theory that information encoded in both verbal and visual formats creates two independent memory traces, making recall significantly more likely.",
+    "whyItMatters": "Why flashcards with images beat text-only. Why diagrams improve comprehension. Why metaphors and analogies aid memory — they create a visual trace alongside the verbal one. Renaissance's analogy field on every card is dual coding in action: the concept is verbal, the analogy triggers imagery.",
+    "analogy": "Hanging a painting with two hooks instead of one — if one hook fails, the other still holds. Two memory traces are harder to lose than one."
+  },
+  {
+    "id": "cognitive-science:dual-process-theory",
+    "type": "standard",
+    "concept": "Dual Process Theory",
+    "domain": "Cognitive Science",
+    "oneliner": "Cognition operates on two levels: automatic/unconscious (Type 1) and controlled/conscious (Type 2).",
+    "whyItMatters": "Type 1 handles 95% of daily cognition. Type 2 kicks in for novel, complex problems. Biases live in Type 1.",
+    "analogy": "Your brain runs two operating systems — a fast one for routine tasks and a slow one for hard thinking."
+  },
+  {
+    "id": "cognitive-science:dunning-kruger-effect",
+    "type": "standard",
+    "concept": "Dunning-Kruger Effect",
+    "domain": "Cognitive Science",
+    "oneliner": "Low-ability people overestimate competence; experts underestimate theirs.",
+    "whyItMatters": "Why the loudest voice is often least informed. Why true experts hedge their claims.",
+    "analogy": "Mount Stupid — beginners stand on top feeling like experts. Actual experts are in the valley of humility."
+  },
+  {
+    "id": "cognitive-science:embodied-cognition",
+    "type": "standard",
+    "concept": "Embodied Cognition",
+    "domain": "Cognitive Science",
+    "oneliner": "The idea that thinking isn't just in the brain — the body and physical environment shape cognitive processes.",
+    "whyItMatters": "Holding a warm cup makes you judge others as 'warmer.' Nodding while listening increases agreement. Posture affects mood.",
+    "analogy": "Your body isn't just carrying your brain around — it's actively participating in thinking."
+  },
+  {
+    "id": "cognitive-science:enactivism",
+    "type": "standard",
+    "concept": "Enactivism",
+    "domain": "Cognitive Science",
+    "oneliner": "Cognition arises through the dynamic interaction between an organism and its environment — knowing is not representing the world but enacting it through action.",
+    "whyItMatters": "Varela, Thompson, and Rosch argued that cognition isn't a computer processing inputs — it's a living body engaging with a world. A bacterium swimming toward sugar is 'cognizing' without representations. This challenges the computational metaphor of mind and connects to embodied cognition, robotics, and artificial life.",
+    "analogy": "Learning to ride a bike — the knowledge doesn't exist as a representation in your head, it exists in the ongoing coordination between your body, the bike, and the ground."
+  },
+  {
+    "id": "cognitive-science:expertise-reversal-effect",
+    "type": "standard",
+    "concept": "Expertise Reversal Effect",
+    "domain": "Cognitive Science",
+    "oneliner": "Instructional methods that help novices (worked examples, scaffolding) actively hurt experts — and vice versa. The optimal teaching method depends on the learner's current knowledge level.",
+    "whyItMatters": "Step-by-step instructions that help a beginner become redundant clutter for an expert, increasing cognitive load rather than reducing it. This is why adaptive learning systems (like FSRS) matter — they must adjust difficulty to the learner's current state. Connects to cognitive load theory and educational design.",
+    "analogy": "Training wheels on a bicycle — essential for a 4-year-old, a dangerous impediment for a 14-year-old."
+  },
+  {
+    "id": "cognitive-science:extended-mind-thesis",
+    "type": "standard",
+    "concept": "Extended Mind Thesis",
+    "domain": "Cognitive Science",
+    "oneliner": "Clark and Chalmers' argument that cognitive processes can extend beyond the brain into notebooks, phones, and other external tools — if it functions like memory, it is memory.",
+    "whyItMatters": "Your phone's contact list is functionally equivalent to biological memory for phone numbers. If we accept this, then 'cognitive enhancement' isn't science fiction — it's what we already do with every tool. Reframes debates about AI, education, and human capability.",
+    "analogy": "A person with a notebook who can always look up facts is cognitively equivalent to a person who memorized them — the notebook is part of their mind."
+  },
+  {
+    "id": "cognitive-science:false-consensus-effect",
+    "type": "standard",
+    "concept": "False Consensus Effect",
+    "domain": "Cognitive Science",
+    "oneliner": "People overestimate how much others share their beliefs, preferences, and behaviors — assuming their view is the norm.",
+    "whyItMatters": "Product teams build for themselves, politicians assume their district agrees with them, managers think their priorities are obvious. The false consensus effect is the root of most 'but I thought everyone wanted this' failures.",
+    "analogy": "Like assuming everyone at the party likes the same music you do — then being surprised when half the crowd leaves.",
+    "level": "foundational"
+  },
+  {
+    "id": "cognitive-science:flow-state",
+    "type": "standard",
+    "concept": "Flow State",
+    "domain": "Cognitive Science",
+    "oneliner": "Complete absorption in an activity — loss of self-consciousness, time distortion, peak performance. Csikszentmihalyi.",
+    "whyItMatters": "Occurs when challenge matches skill. Too easy = boredom. Too hard = anxiety. Sweet spot = flow.",
+    "analogy": "When you become the activity — the thinker disappears and only the doing remains."
+  },
+  {
+    "id": "cognitive-science:framing-effect",
+    "type": "standard",
+    "concept": "Framing Effect",
+    "domain": "Cognitive Science",
+    "oneliner": "How a choice is presented dramatically affects decisions — '90% survival rate' vs '10% mortality rate.'",
+    "whyItMatters": "Identical information, different frames, different choices. Politicians and marketers exploit this constantly.",
+    "analogy": "The same painting looks different depending on the frame — and your brain can't ignore the frame."
+  },
+  {
+    "id": "cognitive-science:functional-fixedness",
+    "type": "standard",
+    "concept": "Functional Fixedness",
+    "domain": "Cognitive Science",
+    "oneliner": "The inability to see an object as useful for anything other than its intended purpose — a cognitive constraint on creativity.",
+    "whyItMatters": "You don't think to use a shoe as a hammer or a newspaper as insulation because your brain locks objects into their 'proper' role.",
+    "analogy": "Mental tunnel vision for objects — your brain files 'hammer' under 'hitting things' and can't see it as a paperweight."
+  },
+  {
+    "id": "cognitive-science:generation-effect",
+    "type": "standard",
+    "concept": "Generation Effect",
+    "domain": "Cognitive Science",
+    "oneliner": "Information that you generate yourself is remembered better than information you passively receive — producing an answer beats reading it.",
+    "whyItMatters": "Completing 'the capital of France is P___' produces better retention than reading 'the capital of France is Paris.' This is why fill-in-the-blank tests outperform recognition tests for learning. It's the cognitive mechanism behind why active recall (flashcards) beats highlighting. Every moment of struggle before flipping the card is generation at work.",
+    "analogy": "Cooking a meal from scratch vs ordering delivery — you remember the recipe because your hands made it."
+  },
+  {
+    "id": "cognitive-science:hedonic-adaptation",
+    "type": "standard",
+    "concept": "Hedonic Adaptation",
+    "domain": "Cognitive Science",
+    "oneliner": "Returning to baseline happiness despite major positive or negative life changes.",
+    "whyItMatters": "Lottery winners aren't much happier a year later. Paraplegics aren't much sadder. Humans adapt.",
+    "analogy": "An emotional thermostat — no matter how you set it, it slowly creeps back to room temperature."
+  },
+  {
+    "id": "cognitive-science:heuristics",
+    "type": "standard",
+    "concept": "Heuristics",
+    "domain": "Cognitive Science",
+    "oneliner": "Mental shortcuts simplifying complex decisions. Usually effective, can lead to systematic errors.",
+    "whyItMatters": "Fast decisions beat perfect decisions when a lion chases you. But they misfire in modern contexts.",
+    "analogy": "Rules of thumb — good enough for survival, not always good enough for investing."
+  },
+  {
+    "id": "cognitive-science:hindsight-bias",
+    "type": "standard",
+    "concept": "Hindsight Bias",
+    "domain": "Cognitive Science",
+    "oneliner": "After an event, believing you 'knew it all along' — retroactively claiming predictability.",
+    "whyItMatters": "It distorts learning from experience because you can't accurately assess what you actually knew before.",
+    "analogy": "Your memory's revisionist historian — rewriting the past to make you look more prescient than you were."
+  },
+  {
+    "id": "cognitive-science:inattentional-blindness",
+    "type": "standard",
+    "concept": "Inattentional Blindness",
+    "domain": "Cognitive Science",
+    "oneliner": "Failing to notice unexpected objects when attention is focused elsewhere — the invisible gorilla experiment.",
+    "whyItMatters": "You can look directly at something and not see it because your attention is elsewhere. Attention is a prerequisite for perception.",
+    "analogy": "Your eyes see but your brain doesn't notice — attention is the gatekeeper between looking and seeing."
+  },
+  {
+    "id": "cognitive-science:interference-theory",
+    "type": "standard",
+    "concept": "Interference Theory",
+    "domain": "Cognitive Science",
+    "oneliner": "Forgetting occurs because memories compete with each other — proactive interference (old blocks new) and retroactive interference (new blocks old).",
+    "whyItMatters": "Why learning Spanish makes you worse at French (retroactive interference). Why your old phone number intrudes when dialing your new one (proactive interference). This is why interleaved practice works — it forces the brain to discriminate between similar memories, strengthening retrieval pathways. Directly relevant to spaced repetition scheduling.",
+    "analogy": "Radio stations on adjacent frequencies — when they overlap, you get static. Memories on adjacent 'frequencies' blur together."
+  },
+  {
+    "id": "cognitive-science:interleaving-effect",
+    "type": "standard",
+    "concept": "Interleaving Effect",
+    "domain": "Cognitive Science",
+    "oneliner": "Mixing different types of problems or topics during practice produces better long-term learning than blocking (practicing one type until mastery before moving on).",
+    "whyItMatters": "Feels harder and slower in the moment — students rate interleaved practice as less effective even as they learn more. The difficulty forces discrimination between similar concepts. Renaissance's cross-domain training is interleaving by design — studying chemistry between philosophy sessions is harder but builds deeper transfer.",
+    "analogy": "A batting cage that randomly throws fastballs, curves, and changeups instead of 20 fastballs, then 20 curves. Harder to hit in practice, better preparation for a real game."
+  },
+  {
+    "id": "cognitive-science:ironic-process-theory",
+    "type": "standard",
+    "concept": "Ironic Process Theory",
+    "domain": "Cognitive Science",
+    "oneliner": "Trying not to think about something makes you think about it more — suppression requires monitoring for the very thought you're avoiding.",
+    "whyItMatters": "Wegner's 'white bear' experiment: told not to think of a white bear, people think of it more than those not instructed. Thought suppression backfires because monitoring IS thinking about it.",
+    "analogy": "Like trying to fall asleep — the effort of trying keeps you awake because it requires the alertness you're trying to eliminate.",
+    "level": "intermediate"
+  },
+  {
+    "id": "cognitive-science:levels-of-processing",
+    "type": "standard",
+    "concept": "Levels of Processing",
+    "domain": "Cognitive Science",
+    "oneliner": "Craik and Lockhart's framework: deeper processing (semantic meaning, personal relevance) creates stronger memories than shallow processing (appearance, sound).",
+    "whyItMatters": "Asking 'is this word in uppercase?' (shallow) produces worse recall than 'does this word describe you?' (deep). This is why Renaissance cards have a 'whyItMatters' field — forcing the learner to process the concept at a meaningful level rather than just reading a definition. The depth of engagement determines the durability of the memory.",
+    "analogy": "Carving into wood (deep) vs writing on a whiteboard (shallow) — the carved message survives; the whiteboard gets erased."
+  },
+  {
+    "id": "cognitive-science:loss-aversion",
+    "type": "standard",
+    "concept": "Loss Aversion",
+    "domain": "Cognitive Science",
+    "oneliner": "Losses feel roughly twice as painful as equivalent gains feel good. Kahneman and Tversky.",
+    "whyItMatters": "Why people hold losing stocks, avoid necessary risks, and why 'limited time offers' work.",
+    "analogy": "Losing $100 hurts as much as finding $200 feels good — asymmetric pain amplifier."
+  },
+  {
+    "id": "cognitive-science:mental-rotation",
+    "type": "standard",
+    "concept": "Mental Rotation",
+    "domain": "Cognitive Science",
+    "oneliner": "The ability to rotate 2D or 3D objects in your mind — Shepard and Metzler showed that response time increases linearly with the angle of rotation, suggesting an analog (not symbolic) mental process.",
+    "whyItMatters": "Evidence that mental imagery is spatial, not just propositional — you literally 'rotate' the mental image. Connects to spatial reasoning, engineering visualization, and the imagery debate in philosophy of mind. One of the clearest demonstrations that cognition is more than abstract symbol manipulation.",
+    "analogy": "Turning a key in a lock in your imagination — your mind simulates the physical rotation at roughly the same speed as your hand would."
+  },
+  {
+    "id": "cognitive-science:mere-exposure-effect",
+    "type": "standard",
+    "concept": "Mere Exposure Effect",
+    "domain": "Cognitive Science",
+    "oneliner": "Developing preference for things simply because you've been repeatedly exposed to them.",
+    "whyItMatters": "Why radio stations repeat songs, why brand awareness works, why you eventually like a city you initially hated.",
+    "analogy": "Familiarity breeds fondness, not contempt. Your brain trusts what it recognizes."
+  },
+  {
+    "id": "cognitive-science:metacognition",
+    "type": "standard",
+    "concept": "Metacognition",
+    "domain": "Cognitive Science",
+    "oneliner": "Thinking about thinking — awareness and control of your own cognitive processes.",
+    "whyItMatters": "It's what separates effective learners from ineffective ones. Knowing what you don't know is more valuable than knowing things.",
+    "analogy": "Your brain's quality control department — monitoring whether your thinking is actually working."
+  },
+  {
+    "id": "cognitive-science:mirror-neurons",
+    "type": "standard",
+    "concept": "Mirror Neurons",
+    "domain": "Cognitive Science",
+    "oneliner": "Neurons that fire both when performing an action and when observing someone else perform it — discovered in macaque monkeys by Rizzolatti, proposed as a basis for imitation and empathy.",
+    "whyItMatters": "Controversial but influential: mirror neurons may explain how infants learn by imitation, how we understand others' intentions, and why watching sports activates motor cortex. The theory connects neuroscience to social cognition, empathy, and the evolution of culture. Criticized for overreach but the observation is real.",
+    "analogy": "An internal echo — your brain silently rehearses what it sees someone else do, as if you were doing it yourself."
+  },
+  {
+    "id": "cognitive-science:moral-foundations-theory",
+    "type": "standard",
+    "concept": "Moral Foundations Theory",
+    "domain": "Cognitive Science",
+    "oneliner": "Haidt's framework: morality rests on six foundations — care/harm, fairness/cheating, loyalty/betrayal, authority/subversion, sanctity/degradation, liberty/oppression.",
+    "whyItMatters": "Liberals emphasize care and fairness. Conservatives use all six. It explains why people talk past each other on moral issues.",
+    "analogy": "Morality as a six-channel equalizer — different political orientations turn different channels up and down."
+  },
+  {
+    "id": "cognitive-science:narrative-and-memory",
+    "type": "connection",
+    "concept": "Narrative and Memory",
+    "domain": "Cognitive Science",
+    "conceptA": "Schema Theory",
+    "domainA": "Cognitive Science",
+    "conceptB": "Mythological Archetypes",
+    "domainB": "Philosophy",
+    "connection": "Cognitive schemas organize experience into expectation-driven frameworks. Campbell's mythological archetypes (Hero's Journey) are cultural schemas — narrative templates that organize collective experience. Both show that humans don't process raw data; they fit experience into pre-existing patterns.",
+    "insight": "The reason the Hero's Journey appears across all cultures isn't mystical — it's cognitive. The narrative structure maps to universal human experiences (challenge, transformation, return) that our schema-driven minds naturally organize into a common pattern.",
+    "prompt": "Why do Hollywood blockbusters and ancient myths follow the same structure? Is this evidence of universal human experience or universal cognitive architecture — and can you distinguish the two?"
+  },
+  {
+    "id": "cognitive-science:narrative-and-reasoning",
+    "type": "connection",
+    "concept": "Narrative and Reasoning",
+    "domain": "Cognitive Science",
+    "conceptA": "Narrative Fallacy",
+    "domainA": "Cognitive Science",
+    "conceptB": "Historiography",
+    "domainB": "History & Geopolitics",
+    "connection": "Humans compulsively construct causal stories from random events (narrative fallacy). Historians must write narratives to make the past comprehensible, knowing that the narrative structure itself distorts causality. Both grapple with the tension between pattern and randomness.",
+    "insight": "Taleb's narrative fallacy and the historian's craft face the same dilemma: stories are how humans understand, but stories impose false causality on complex events. The solution in both domains is the same: hold narratives lightly, treat them as models not facts.",
+    "prompt": "When a historian says 'World War I was caused by the assassination of Franz Ferdinand,' what narrative fallacy is at work? What would a systems-thinking account of WWI look like instead?"
+  },
+  {
+    "id": "cognitive-science:narrative-fallacy",
+    "type": "standard",
+    "concept": "Narrative Fallacy",
+    "domain": "Cognitive Science",
+    "oneliner": "The human tendency to construct stories to explain random events, creating false causality from coincidence.",
+    "whyItMatters": "We see patterns in noise, attribute success to strategy and failure to bad luck. Nassim Taleb's concept.",
+    "analogy": "Your brain is a compulsive storyteller — it would rather tell a wrong story than admit randomness."
+  },
+  {
+    "id": "cognitive-science:peak-end-rule",
+    "type": "standard",
+    "concept": "Peak-End Rule",
+    "domain": "Cognitive Science",
+    "oneliner": "People judge experiences primarily by their peak intensity and how they end, not by duration or average.",
+    "whyItMatters": "A painful 8-minute procedure feels worse than a painful 24-minute one if the shorter one ends badly. Endings matter disproportionately.",
+    "analogy": "Your memory doesn't average the whole movie — it remembers the climax and the final scene."
+  },
+  {
+    "id": "cognitive-science:predictive-processing",
+    "type": "standard",
+    "concept": "Predictive Processing",
+    "domain": "Cognitive Science",
+    "oneliner": "The brain is a prediction machine — it constantly generates expectations about incoming sensory data, then updates only when predictions fail (prediction error).",
+    "whyItMatters": "Explains perception, attention, learning, and psychosis in a single framework. You don't passively receive the world — you hallucinate it and correct when surprised. Connects neuroscience to Bayesian inference in mathematics and to signal processing in technology.",
+    "analogy": "Autocomplete for reality — your brain fills in what it expects and only notices when the actual input doesn't match."
+  },
+  {
+    "id": "cognitive-science:priming",
+    "type": "standard",
+    "concept": "Priming",
+    "domain": "Cognitive Science",
+    "oneliner": "Exposure to a stimulus unconsciously influencing response to subsequent stimuli.",
+    "whyItMatters": "Seeing 'doctor' makes you recognize 'nurse' faster. Advertisers and politicians use it constantly.",
+    "analogy": "Your brain's autocomplete — recent inputs quietly shape what comes to mind next."
+  },
+  {
+    "id": "cognitive-science:prospective-memory",
+    "type": "standard",
+    "concept": "Prospective Memory",
+    "domain": "Cognitive Science",
+    "oneliner": "Remembering to perform a planned action in the future — 'remember to take medication at 8pm' or 'ask about the report when I see Sarah.'",
+    "whyItMatters": "Distinct from retrospective memory (remembering the past). Prospective memory failures account for most everyday forgetting — missed appointments, forgotten tasks, abandoned intentions. It's heavily dependent on environmental cues, which is why notification systems, spaced repetition reminders, and physical triggers work better than pure intention.",
+    "analogy": "Tying a string around your finger — the cue triggers the future action. Without the cue, the intention stays buried under whatever you're currently doing."
+  },
+  {
+    "id": "cognitive-science:representativeness-heuristic",
+    "type": "standard",
+    "concept": "Representativeness Heuristic",
+    "domain": "Cognitive Science",
+    "oneliner": "Judging probability by similarity to a mental prototype rather than base rates.",
+    "whyItMatters": "Someone described as 'quiet, likes math' — people guess 'engineer' despite there being far more teachers.",
+    "analogy": "Your brain pattern-matching instead of calculating — this LOOKS like an engineer, so it must be one."
+  },
+  {
+    "id": "cognitive-science:risk-perception-gap",
+    "type": "connection",
+    "concept": "Risk Perception Gap",
+    "domain": "Cognitive Science",
+    "conceptA": "Availability Heuristic",
+    "domainA": "Cognitive Science",
+    "conceptB": "Actuarial Science",
+    "domainB": "Mathematics",
+    "connection": "The availability heuristic causes people to estimate risk based on how easily examples come to mind (vivid plane crashes vs mundane car accidents). Actuarial science estimates risk from statistical frequency. The gap between perception and statistics is where irrational fear and false confidence live.",
+    "insight": "People fear terrorism more than heart disease, sharks more than vending machines, flying more than driving — all because of availability bias. Insurance companies make money in this gap. Understanding both the cognitive and statistical sides of risk is essential for personal decisions, public policy, and financial planning.",
+    "prompt": "Why do people buy terrorism insurance but not flood insurance in flood zones? How would an actuary and a cognitive scientist each explain the same behavior?"
+  },
+  {
+    "id": "cognitive-science:sapir-whorf-hypothesis",
+    "type": "standard",
+    "concept": "Sapir-Whorf Hypothesis",
+    "domain": "Cognitive Science",
+    "oneliner": "Language shapes thought — the strong version says language determines what you can think; the weak version says it influences perception, memory, and categorization.",
+    "whyItMatters": "Russian speakers distinguish light vs dark blue faster than English speakers (two words vs one). Mandarin speakers think about time vertically. The language you speak biases which distinctions feel natural. Connects linguistics to philosophy of mind and cross-cultural psychology.",
+    "analogy": "Wearing tinted glasses you forgot about — the color of the lens (your language) subtly changes how everything looks, even though the world itself hasn't changed."
+  },
+  {
+    "id": "cognitive-science:schema-theory",
+    "type": "standard",
+    "concept": "Schema Theory",
+    "domain": "Cognitive Science",
+    "oneliner": "Mental frameworks that organize knowledge and guide perception, memory, and expectation — Bartlett's insight that memory is reconstructive, not reproductive.",
+    "whyItMatters": "You don't remember what happened — you remember what your schema says should have happened. This explains stereotypes, cultural misunderstanding, and why witnesses to the same event give different accounts. Schemas are the cognitive equivalent of mental models in systems thinking.",
+    "analogy": "A filing cabinet with pre-made folders — new information gets filed into existing categories, even if it doesn't quite fit."
+  },
+  {
+    "id": "cognitive-science:selective-attention",
+    "type": "standard",
+    "concept": "Selective Attention",
+    "domain": "Cognitive Science",
+    "oneliner": "The cognitive process of focusing on relevant stimuli while filtering out irrelevant ones — Broadbent's filter theory, Treisman's attenuation, and the cocktail party effect.",
+    "whyItMatters": "You hear your name across a noisy room (cocktail party effect) because attention isn't fully blocked — it's attenuated. Selective attention explains why distracted driving is dangerous, why multitasking is a myth, and why advertising works. The gorilla experiment showed that focused attention creates literal blindness to the unexpected.",
+    "analogy": "A spotlight on a dark stage — whatever it illuminates, you see clearly. Everything outside the beam exists but might as well not."
+  },
+  {
+    "id": "cognitive-science:situated-cognition",
+    "type": "standard",
+    "concept": "Situated Cognition",
+    "domain": "Cognitive Science",
+    "oneliner": "Thinking is not abstract computation in the head — it's shaped by and inseparable from the physical environment, social context, and tools available at the moment of thought.",
+    "whyItMatters": "Students who learn math in classrooms can't always apply it in kitchens. Experts think differently in their workshop than in a lab. Design of physical spaces, tools, and interfaces directly shapes the quality of thinking. Connects cognitive science to architecture, UX design, and organizational theory.",
+    "analogy": "A chess grandmaster who plays brilliantly at a board but struggles to play blindfolded — the physical board is part of the thinking, not just a display."
+  },
+  {
+    "id": "cognitive-science:sleep-and-memory-consolidation",
+    "type": "standard",
+    "concept": "Sleep and Memory Consolidation",
+    "domain": "Cognitive Science",
+    "oneliner": "During sleep, the brain replays and reorganizes daily experiences, transferring memories from hippocampus (short-term) to cortex (long-term) — sleep is when learning solidifies.",
+    "whyItMatters": "Sleep deprivation doesn't just make you tired — it prevents memory consolidation, blocking learning at a biological level. Students who sleep after studying retain significantly more. REM sleep specifically enhances creative connections between distant concepts — making it a biological enabler of cross-domain thinking.",
+    "analogy": "A librarian who works the night shift — filing, cross-referencing, and shelving the day's books while the library is closed."
+  },
+  {
+    "id": "cognitive-science:somatic-marker-hypothesis",
+    "type": "standard",
+    "concept": "Somatic Marker Hypothesis",
+    "domain": "Cognitive Science",
+    "oneliner": "Emotions stored as body sensations ('gut feelings') guide decision-making before conscious reasoning kicks in — the body thinks faster than the mind.",
+    "whyItMatters": "Damasio showed patients with emotion-processing damage make terrible decisions despite intact logic. Rationality doesn't replace emotion — it depends on it. Your body is a decision-making organ.",
+    "analogy": "Like a compass needle that points before you've unfolded the map — the body's signal arrives first and often points the right direction.",
+    "level": "intermediate"
+  },
+  {
+    "id": "cognitive-science:source-amnesia",
+    "type": "standard",
+    "concept": "Source Amnesia",
+    "domain": "Cognitive Science",
+    "oneliner": "Remembering information but forgetting where you learned it — making it impossible to evaluate reliability.",
+    "whyItMatters": "It's why misinformation persists: you remember the 'fact' but forget it came from a dubious source.",
+    "analogy": "Your memory keeps the message but loses the sender — so you can't tell if the news came from the BBC or a meme."
+  },
+  {
+    "id": "cognitive-science:source-monitoring-error",
+    "type": "standard",
+    "concept": "Source Monitoring Error",
+    "domain": "Cognitive Science",
+    "oneliner": "Misattributing where you learned something — confusing imagination with memory, fiction with fact, or dreams with reality.",
+    "whyItMatters": "Explains false memories, why misinformation persists after correction (the fact stays, the source tag falls off), and why people 'remember' events that never happened.",
+    "analogy": "Like a library where someone removed all the 'fiction' and 'non-fiction' labels — the books are still there, but you can't tell which is which.",
+    "level": "intermediate"
+  },
+  {
+    "id": "cognitive-science:spacing-effect",
+    "type": "standard",
+    "concept": "Spacing Effect",
+    "domain": "Cognitive Science",
+    "oneliner": "Distributing study sessions over time produces stronger, longer-lasting memory than massing the same time into one session — the empirical foundation of spaced repetition.",
+    "whyItMatters": "Ebbinghaus discovered it in 1885 and it's been replicated thousands of times. Meta-analyses show d = 0.54 effect size. FSRS algorithms exploit the spacing effect by scheduling reviews at the optimal moment before forgetting. This is the single most robust finding in learning science.",
+    "analogy": "Watering a plant a little each day vs dumping a week's water at once — the plant absorbs distributed water; the flood just runs off.",
+    "level": "foundational"
+  },
+  {
+    "id": "cognitive-science:spotlight-effect",
+    "type": "standard",
+    "concept": "Spotlight Effect",
+    "domain": "Cognitive Science",
+    "oneliner": "Overestimating how much others notice your appearance, behavior, or mistakes.",
+    "whyItMatters": "People pay far less attention to you than you think. Most of your social anxiety is about an audience that isn't watching.",
+    "analogy": "You're the main character of your movie — but everyone else is starring in their own."
+  },
+  {
+    "id": "cognitive-science:spreading-activation",
+    "type": "standard",
+    "concept": "Spreading Activation",
+    "domain": "Cognitive Science",
+    "oneliner": "When one concept is activated in memory, related concepts become partially activated — thinking spreads through your mental network.",
+    "whyItMatters": "It's why one memory triggers another, why brainstorming works, and why context clues help recall.",
+    "analogy": "Dropping a stone in the pond of your memory — ripples spread outward activating related ideas."
+  },
+  {
+    "id": "cognitive-science:sunk-cost-fallacy",
+    "type": "standard",
+    "concept": "Sunk Cost Fallacy",
+    "domain": "Cognitive Science",
+    "oneliner": "Continuing a behavior because of previously invested resources, even when no longer rational.",
+    "whyItMatters": "Why people finish bad movies, stay in bad relationships, throw good money after bad.",
+    "analogy": "Eating a terrible meal because you already paid — the money's gone either way."
+  },
+  {
+    "id": "cognitive-science:system-1-vs-system-2",
+    "type": "standard",
+    "concept": "System 1 vs System 2",
+    "domain": "Cognitive Science",
+    "oneliner": "System 1: fast, automatic, intuitive. System 2: slow, deliberate, analytical.",
+    "whyItMatters": "Most decisions use error-prone System 1. System 2 is more accurate but lazy.",
+    "analogy": "Autopilot vs. pilot — the pilot only takes controls during turbulence, and sometimes not even then."
+  },
+  {
+    "id": "cognitive-science:temporal-discounting",
+    "type": "standard",
+    "concept": "Temporal Discounting",
+    "domain": "Cognitive Science",
+    "oneliner": "Valuing immediate rewards more than future ones — $100 today feels worth more than $110 next week.",
+    "whyItMatters": "It drives procrastination, addiction, and undersaving. The discount rate varies by person and is partly genetic.",
+    "analogy": "Your brain's impatience tax — future rewards shrink in your mental accounting the further away they are."
+  },
+  {
+    "id": "cognitive-science:testing-effect",
+    "type": "standard",
+    "concept": "Testing Effect",
+    "domain": "Cognitive Science",
+    "oneliner": "Retrieving information from memory strengthens that memory more than re-reading or re-studying the same material — practice tests outperform practice studying.",
+    "whyItMatters": "Roediger and Karpicke's landmark studies showed that students who tested themselves retained 50% more after a week than those who re-studied. Every flashcard flip is a retrieval attempt. This is why active recall (flashcards) beats passive review (re-reading notes). The foundation of Renaissance's training methodology.",
+    "analogy": "Hiking a trail through the forest — each time you walk it, the path becomes clearer. Re-reading the map doesn't wear a path."
+  },
+  {
+    "id": "cognitive-science:the-replication-crisis",
+    "type": "scenario",
+    "concept": "The Replication Crisis",
+    "domain": "Cognitive Science",
+    "scenario": "A famous psychology study that influenced policy for two decades fails to replicate in a large pre-registered study. The original researchers defend their work, pointing to differences in methodology. Media coverage says 'science is broken.'",
+    "relevantConcepts": [
+      "Falsifiability",
+      "Publication Bias",
+      "Statistical Significance",
+      "Narrative Fallacy"
+    ],
+    "domains": [
+      "Cognitive Science",
+      "Mathematics",
+      "Philosophy"
+    ],
+    "explanation": "Multiple failures compounded: publication bias favored positive results, p-hacking inflated effects, narrative fallacy made the original story compelling, and the significance threshold (p<0.05) was too permissive. Science isn't broken — self-correction is science working, painfully.",
+    "level": "advanced"
+  },
+  {
+    "id": "cognitive-science:the-streetlight-effect",
+    "type": "scenario",
+    "concept": "The Streetlight Effect",
+    "domain": "Cognitive Science",
+    "scenario": "A company's data team only analyzes metrics from their own platform because that's where the data is. Competitors are winning customers through word-of-mouth and community — channels that don't generate trackable data. The team reports 'no significant competitive threat.'",
+    "relevantConcepts": [
+      "Availability Heuristic",
+      "Selection Bias",
+      "Survivorship Bias",
+      "Epistemic Closure"
+    ],
+    "domains": [
+      "Cognitive Science",
+      "Mathematics",
+      "Philosophy"
+    ],
+    "explanation": "The 'streetlight effect': searching where the light is rather than where the answer is. Observable data creates the illusion of completeness. The most important signals are often in the channels you don't instrument. Epistemic humility means asking: what can't we see with our current tools?",
+    "level": "intermediate"
+  },
+  {
+    "id": "cognitive-science:theory-of-mind",
+    "type": "standard",
+    "concept": "Theory of Mind",
+    "domain": "Cognitive Science",
+    "oneliner": "The ability to attribute mental states (beliefs, intentions, desires) to others — understanding that others have minds different from yours.",
+    "whyItMatters": "It develops around age 4 in children. Its absence is a feature of some autism spectrum conditions. It enables empathy, deception, and cooperation.",
+    "analogy": "The mental model of other minds — understanding that the person across from you has their own thoughts, feelings, and beliefs."
+  },
+  {
+    "id": "cognitive-science:transfer-learning",
+    "type": "standard",
+    "concept": "Transfer Learning",
+    "domain": "Cognitive Science",
+    "oneliner": "Applying knowledge or skills learned in one context to a novel, different context — the holy grail of education and the mechanism behind cross-domain thinking.",
+    "whyItMatters": "Near transfer (similar tasks) is easy; far transfer (across domains) is rare and hard. Renaissance's entire value proposition depends on it — learning chemistry concepts that improve systems thinking. Research shows transfer requires explicit bridging, not just exposure. Connects to analogical reasoning and Epstein's Range thesis.",
+    "analogy": "A musician who picks up a new instrument faster because the principles of rhythm, harmony, and practice transfer — even though the fingering is completely different."
+  },
+  {
+    "id": "cognitive-science:transfer-learning-cognitive",
+    "type": "standard",
+    "concept": "Transfer Learning (Cognitive)",
+    "domain": "Cognitive Science",
+    "oneliner": "Applying knowledge or skills from one domain to solve problems in a different domain — the cognitive basis of interdisciplinary thinking.",
+    "whyItMatters": "Far transfer (between distant domains) is rare and valuable. The Renaissance ideal of the polymath is really about maximizing transfer. Most education produces near transfer only.",
+    "analogy": "Like a chess player recognizing pattern structures in business strategy — the board is different, but the pattern-matching skill carries over.",
+    "level": "intermediate"
+  },
+  {
+    "id": "cognitive-science:working-memory",
+    "type": "standard",
+    "concept": "Working Memory",
+    "domain": "Cognitive Science",
+    "oneliner": "The mental workspace for temporarily holding and manipulating information — limited to ~4 items at once.",
+    "whyItMatters": "It's the bottleneck of cognition. IQ correlates strongly with working memory capacity.",
+    "analogy": "Your brain's whiteboard — small, temporary, constantly being erased and rewritten."
+  }
+]
