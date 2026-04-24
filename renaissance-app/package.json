@@ -12,7 +12,8 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "test:e2e:install": "playwright install --with-deps chromium webkit",
-    "test:perf": "lhci autorun"
+    "test:perf": "lhci autorun",
+    "test:db": "supabase test db"
   },
   "dependencies": {
     "@stripe/stripe-js": "^8.10.0",

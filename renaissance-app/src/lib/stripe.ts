@@ -79,16 +79,14 @@ export async function redirectToCheckout(
   return { error: null };
 }
 
-export async function openCustomerPortal(
-  customerId: string
-): Promise<{ error: string | null }> {
+export async function openCustomerPortal(): Promise<{ error: string | null }> {
   if (typeof window === 'undefined') {
     return { error: null };
   }
 
-  const { data, error } = await callEdgeFunction('create-portal-session', {
-    customer_id: customerId,
-  });
+  // The edge function resolves the Stripe customer id from the caller's
+  // JWT — never from a client-supplied argument — so this call needs no body.
+  const { data, error } = await callEdgeFunction('create-portal-session', {});
 
   if (error || !data?.url) {
     return {

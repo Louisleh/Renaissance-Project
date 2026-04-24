@@ -104,3 +104,26 @@ jobs:
           name: lighthouse-report
           path: renaissance-app/.lighthouseci
           retention-days: 7
+
+  db-policies:
+    name: Database RLS (pgTAP)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+      - name: Start local Supabase
+        run: supabase start
+        working-directory: renaissance-app
+      - name: Apply migrations to local db
+        run: supabase db reset --linked=false
+        working-directory: renaissance-app
+      - name: Run pgTAP RLS specs
+        run: supabase test db
+        working-directory: renaissance-app
+      - name: Stop Supabase
+        if: always()
+        run: supabase stop --no-backup
+        working-directory: renaissance-app
