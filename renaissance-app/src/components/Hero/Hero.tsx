@@ -1,8 +1,11 @@
-import { useMemo, useEffect, useRef } from 'react';
+import { useMemo, useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { trackCtaClick } from '../../lib/analytics';
 import { RadarChart } from '../RadarChart/RadarChart';
 import { skillOrder } from '../../data/assessments';
+import { loadCardStates } from '../../lib/srs/card-state-store';
+import { countDueCards } from '../../lib/srs/scheduler';
 import './Hero.css';
 
 interface HeroProps {
@@ -13,6 +16,19 @@ interface HeroProps {
 export function Hero({ profile, onStartAssessment }: HeroProps) {
   const { user } = useAuth();
   const constellationRef = useRef<SVGSVGElement>(null);
+  const [dueCount, setDueCount] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+
+  useEffect(() => {
+    const refresh = () => {
+      const states = loadCardStates();
+      setHasStarted(Object.keys(states).length > 0);
+      setDueCount(countDueCards(states));
+    };
+    refresh();
+    window.addEventListener('focus', refresh);
+    return () => window.removeEventListener('focus', refresh);
+  }, []);
 
   useEffect(() => {
     const svg = constellationRef.current;
@@ -96,16 +112,46 @@ export function Hero({ profile, onStartAssessment }: HeroProps) {
         </div>
 
         <div className="hero-cta-area reveal">
-          <button
-            className="hero-button"
-            onClick={() => {
-              void trackCtaClick('start_assessment', 'hero', user?.id ?? null);
-              onStartAssessment();
-            }}
-          >
-            Start Your Individual Assessment
-          </button>
-          <p className="hero-cta-sub">10 questions • 3 minutes • 8 domains • one clear next step</p>
+          {hasStarted ? (
+            <>
+              <Link
+                className="hero-button"
+                to="/study"
+                onClick={() => void trackCtaClick('resume_study', 'hero', user?.id ?? null)}
+              >
+                {dueCount > 0
+                  ? `Continue your Journey — ${dueCount} due today`
+                  : 'Continue your Journey'}
+              </Link>
+              <p className="hero-cta-sub">
+                Pick up the daily study loop.{' '}
+                <button
+                  type="button"
+                  className="hero-link-inline"
+                  onClick={() => {
+                    void trackCtaClick('retake_assessment', 'hero', user?.id ?? null);
+                    onStartAssessment();
+                  }}
+                >
+                  Retake the assessment
+                </button>{' '}
+                to refresh your profile.
+              </p>
+            </>
+          ) : (
+            <>
+              <button
+                className="hero-button"
+                onClick={() => {
+                  void trackCtaClick('start_assessment', 'hero', user?.id ?? null);
+                  onStartAssessment();
+                }}
+              >
+                Start Your Individual Assessment
+              </button>
+              <p className="hero-cta-sub">10 questions • 3 minutes • 8 domains • one clear next step</p>
+            </>
+          )}
         </div>
 
         <div className="hero-info-bar reveal">

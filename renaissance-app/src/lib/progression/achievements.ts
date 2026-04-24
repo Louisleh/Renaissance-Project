@@ -1,6 +1,7 @@
 import { isSupabaseConfigured, supabase } from '../supabase';
 import { computeStreak } from './streak';
 import { masterySnapshot, perKnowledgeDomainMastery } from './mastery';
+import { loadCommonplaceEntries } from './commonplace';
 import type { CardState, ReviewLogEntry, StudyDay, KnowledgeDomain } from '../../types/cards';
 
 export const UNLOCKED_ACHIEVEMENTS_KEY = 'renaissance_unlocked_achievements';
@@ -134,7 +135,27 @@ export const ACHIEVEMENT_RULES: AchievementRule[] = [
     id: 'commonplace_streak_14',
     title: 'Commonplace Fourteen',
     copy: 'Fourteen daily reflection entries on consecutive days.',
-    evaluate: () => ({ unlocked: false }),
+    evaluate: ({ now }) => {
+      const entries = loadCommonplaceEntries();
+      if (entries.length < 14) return { unlocked: false };
+      const keys = new Set(
+        entries.map((e) => {
+          const d = new Date(e.created_at);
+          return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+        }),
+      );
+      const today = now ?? new Date();
+      const toKey = (d: Date) =>
+        `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+      const cursor = new Date(today);
+      let streak = 0;
+      if (!keys.has(toKey(cursor))) cursor.setDate(cursor.getDate() - 1);
+      while (keys.has(toKey(cursor))) {
+        streak++;
+        cursor.setDate(cursor.getDate() - 1);
+      }
+      return streak >= 14 ? { unlocked: true, context: { streak } } : { unlocked: false };
+    },
   },
 ];
 
