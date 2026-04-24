@@ -4,6 +4,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import { getDueCards, type SessionPick } from '../../lib/srs/scheduler';
 import { loadCardStates } from '../../lib/srs/card-state-store';
 import { loadReviewLog } from '../../lib/srs/review-log';
+import { ensureCardsLoaded } from '../../data/flashcards';
 import { evaluateAchievements, type NewUnlock } from '../../lib/progression/achievements';
 import { trackStudySessionStarted, trackStudySessionCompleted } from '../../lib/analytics';
 import { perKnowledgeDomainMastery } from '../../lib/progression/mastery';
@@ -15,10 +16,12 @@ import './StudyPage.css';
 
 const DEFAULT_SESSION_SIZE = 20;
 
-type Phase = 'preflight' | 'running' | 'summary';
+type Phase = 'loading' | 'preflight' | 'running' | 'summary';
 
 function pickGrowthKnowledgeDomains(states: Record<string, CardState>): KnowledgeDomain[] {
   const masteries = perKnowledgeDomainMastery(states);
+  const hasAnyProgress = masteries.some((m) => m.reviewedCount > 0);
+  if (!hasAnyProgress) return [];
   return masteries
     .slice()
     .sort((a, b) => a.mastery - b.mastery)
@@ -29,7 +32,7 @@ function pickGrowthKnowledgeDomains(states: Record<string, CardState>): Knowledg
 export function StudyPage() {
   const { user } = useAuth();
   const navigate = useNavigate();
-  const [phase, setPhase] = useState<Phase>('preflight');
+  const [phase, setPhase] = useState<Phase>('loading');
   const [queue, setQueue] = useState<SessionPick[]>([]);
   const [beforeStates, setBeforeStates] = useState<Record<string, CardState>>({});
   const [afterStates, setAfterStates] = useState<Record<string, CardState>>({});
@@ -54,10 +57,28 @@ export function StudyPage() {
   }, []);
 
   useEffect(() => {
-    buildQueue();
+    let cancelled = false;
+    void ensureCardsLoaded().then(() => {
+      if (cancelled) return;
+      buildQueue();
+      setPhase('preflight');
+    });
+    return () => {
+      cancelled = true;
+    };
   }, [buildQueue]);
 
+  useEffect(() => {
+    if (phase !== 'preflight') return;
+    const onFocus = () => buildQueue();
+    window.addEventListener('focus', onFocus);
+    return () => window.removeEventListener('focus', onFocus);
+  }, [buildQueue, phase]);
+
   const startSession = useCallback(() => {
+    setAfterStates({});
+    setOutcome(null);
+    setUnlocks([]);
     setPhase('running');
     void trackStudySessionStarted(queueStats.dueCount, queueStats.total, 'study_page', user?.id ?? null);
   }, [queueStats, user?.id]);
@@ -66,7 +87,7 @@ export function StudyPage() {
     setAfterStates((prev) => ({ ...prev, [state.card_id]: state }));
   }, []);
 
-  const handleComplete = useCallback(
+  const finalize = useCallback(
     async (result: SessionOutcome) => {
       setOutcome(result);
       const latest = loadCardStates();
@@ -93,6 +114,24 @@ export function StudyPage() {
     [user?.id],
   );
 
+  const handleComplete = useCallback(
+    (result: SessionOutcome) => {
+      void finalize(result);
+    },
+    [finalize],
+  );
+
+  const handleExit = useCallback(
+    (partial: SessionOutcome) => {
+      if (partial.cardsReviewed === 0) {
+        setPhase('preflight');
+        return;
+      }
+      void finalize(partial);
+    },
+    [finalize],
+  );
+
   const handleStartAnother = useCallback(() => {
     buildQueue();
     setAfterStates({});
@@ -101,19 +140,17 @@ export function StudyPage() {
     setPhase('preflight');
   }, [buildQueue]);
 
-  const handleExitSession = useCallback(() => {
-    if (Object.keys(afterStates).length > 0) {
-      void handleComplete({
-        cardsReviewed: Object.keys(afterStates).length,
-        durationMs: 0,
-        retentionPct: 0,
-        domainsTouched: [],
-        perDomainReviewCount: {},
-      });
-      return;
-    }
-    setPhase('preflight');
-  }, [afterStates, handleComplete]);
+  if (phase === 'loading') {
+    return (
+      <main id="main-content" className="study-main">
+        <div className="container study-preflight">
+          <div className="study-preflight-card summary-card">
+            <p className="study-preflight-hint">Loading cards…</p>
+          </div>
+        </div>
+      </main>
+    );
+  }
 
   if (phase === 'running') {
     return (
@@ -122,8 +159,8 @@ export function StudyPage() {
           queue={queue}
           userId={user?.id ?? null}
           onStateChanged={handleStateChanged}
-          onComplete={(result) => void handleComplete(result)}
-          onExit={handleExitSession}
+          onComplete={handleComplete}
+          onExit={handleExit}
         />
       </main>
     );
@@ -157,7 +194,8 @@ export function StudyPage() {
           </p>
           <p className="study-preflight-hint">
             Rate each card honestly. The schedule improves when you say Again or Hard — stability grows from real
-            retrieval, not fluency illusions.
+            retrieval, not fluency illusions. Shortcuts:{' '}
+            <kbd>space</kbd> flips, <kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd>/<kbd>4</kbd> rate.
           </p>
           <div className="study-preflight-actions">
             <button className="hero-button" onClick={startSession} type="button" disabled={queue.length === 0}>

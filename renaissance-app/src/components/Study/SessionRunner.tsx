@@ -28,7 +28,7 @@ interface Props {
   userId: string | null;
   onStateChanged: (state: CardState) => void;
   onComplete: (outcome: SessionOutcome) => void;
-  onExit: () => void;
+  onExit: (outcome: SessionOutcome) => void;
 }
 
 const RATING_OPTIONS: Array<{ rating: Rating; label: string; shortcut: string; description: string }> = [
@@ -60,8 +60,8 @@ export function SessionRunner({ queue, userId, onStateChanged, onComplete, onExi
     cardStart.current = Date.now();
   }, [index]);
 
-  const finish = useCallback(
-    (nextReviewed: number, nextSuccess: number) => {
+  const buildOutcome = useCallback(
+    (nextReviewed: number, nextSuccess: number): SessionOutcome => {
       const durationMs = Date.now() - sessionStart.current;
       const retentionPct = nextReviewed === 0 ? 0 : Math.round((nextSuccess / nextReviewed) * 100);
       const domainCounts: Record<string, number> = {};
@@ -70,16 +70,27 @@ export function SessionRunner({ queue, userId, onStateChanged, onComplete, onExi
         domainCounts[domain] = count;
         domainsTouched.push(domain);
       }
-      onComplete({
+      return {
         cardsReviewed: nextReviewed,
         durationMs,
         retentionPct,
         domainsTouched,
         perDomainReviewCount: domainCounts,
-      });
+      };
     },
-    [onComplete],
+    [],
   );
+
+  const finish = useCallback(
+    (nextReviewed: number, nextSuccess: number) => {
+      onComplete(buildOutcome(nextReviewed, nextSuccess));
+    },
+    [buildOutcome, onComplete],
+  );
+
+  const handleExit = useCallback(() => {
+    onExit(buildOutcome(reviewedCount, successCount));
+  }, [buildOutcome, onExit, reviewedCount, successCount]);
 
   const submitRating = useCallback(
     async (rating: Rating) => {
@@ -155,7 +166,7 @@ export function SessionRunner({ queue, userId, onStateChanged, onComplete, onExi
   return (
     <div className="study-session">
       <div className="study-session-header">
-        <button className="study-exit" onClick={onExit} type="button">
+        <button className="study-exit" onClick={handleExit} type="button">
           Leave session
         </button>
         <div className="study-progress">

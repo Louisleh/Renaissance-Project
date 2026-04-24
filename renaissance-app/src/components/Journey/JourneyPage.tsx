@@ -1,13 +1,15 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { loadCardStates } from '../../lib/srs/card-state-store';
 import { loadReviewLog } from '../../lib/srs/review-log';
+import { ensureCardsLoaded } from '../../data/flashcards';
 import { masterySnapshot } from '../../lib/progression/mastery';
 import { countDueCards } from '../../lib/srs/scheduler';
 import { computeStreak } from '../../lib/progression/streak';
 import { loadUnlockedAchievements, ACHIEVEMENT_RULES } from '../../lib/progression/achievements';
 import { trackJourneyViewed } from '../../lib/analytics';
+import type { CardState, ReviewLogEntry } from '../../types/cards';
 import { Constellation } from './Constellation';
 import { LevelBars } from './LevelBars';
 import { StreakStrip } from './StreakStrip';
@@ -15,17 +17,58 @@ import './JourneyPage.css';
 
 export function JourneyPage() {
   const { user } = useAuth();
-  const [states] = useState(() => loadCardStates());
-  const [reviewLog] = useState(() => loadReviewLog());
-  const unlocked = useMemo(() => loadUnlockedAchievements(), []);
+  const [states, setStates] = useState<Record<string, CardState>>({});
+  const [reviewLog, setReviewLog] = useState<ReviewLogEntry[]>([]);
+  const [ready, setReady] = useState(false);
+
+  const refresh = useCallback(() => {
+    setStates(loadCardStates());
+    setReviewLog(loadReviewLog());
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    void ensureCardsLoaded().then(() => {
+      if (cancelled) return;
+      refresh();
+      setReady(true);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [refresh]);
+
+  useEffect(() => {
+    if (!ready) return;
+    const onFocus = () => refresh();
+    window.addEventListener('focus', onFocus);
+    document.addEventListener('visibilitychange', onFocus);
+    return () => {
+      window.removeEventListener('focus', onFocus);
+      document.removeEventListener('visibilitychange', onFocus);
+    };
+  }, [ready, refresh]);
+
+  const unlocked = useMemo(() => loadUnlockedAchievements(), [reviewLog.length, states]);
   const snapshot = useMemo(() => masterySnapshot(states), [states]);
   const dueCount = useMemo(() => countDueCards(states), [states]);
   const streak = useMemo(() => computeStreak(reviewLog), [reviewLog]);
 
   useEffect(() => {
+    if (!ready) return;
     const strongOrAbove = snapshot.domains.filter((d) => d.mastery >= 75).length;
     void trackJourneyViewed(snapshot.synthesis_index, strongOrAbove, user?.id ?? null);
-  }, [snapshot, user?.id]);
+  }, [ready, snapshot, user?.id]);
+
+  if (!ready) {
+    return (
+      <main id="main-content" className="journey-main">
+        <div className="container">
+          <p style={{ color: 'var(--muted)' }}>Loading your journey…</p>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main id="main-content" className="journey-main">
@@ -76,8 +119,8 @@ export function JourneyPage() {
       <section className="container journey-section">
         <h2 className="journey-section-title">Knowledge domains</h2>
         <p className="journey-section-sub">
-          Mastery is the harmonic weight of your stability values across the cards you have reviewed in each
-          domain, scaled by coverage.
+          Mastery is the harmonic weight of your stability values across cards you have reviewed in each domain,
+          scaled by how much of the domain you have touched.
         </p>
         <LevelBars masteries={snapshot.domains} />
       </section>

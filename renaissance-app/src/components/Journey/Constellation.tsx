@@ -49,8 +49,6 @@ function computeEdges(): Array<{ a: KnowledgeDomain; b: KnowledgeDomain; weight:
   });
 }
 
-const EDGE_DEFINITIONS = computeEdges();
-
 export function Constellation({ masteries, size = 480 }: Props) {
   const masteryByDomain = useMemo(() => {
     const map = new Map<KnowledgeDomain, number>();
@@ -74,15 +72,17 @@ export function Constellation({ masteries, size = 480 }: Props) {
     });
   }, [center, radius, masteryByDomain]);
 
+  const edgeDefs = useMemo(() => computeEdges(), []);
+
   const edges: Edge[] = useMemo(() => {
     const nodeByDomain = new Map(nodes.map((n) => [n.domain, n]));
-    return EDGE_DEFINITIONS.map(({ a, b, weight }) => {
+    return edgeDefs.map(({ a, b, weight }) => {
       const nodeA = nodeByDomain.get(a);
       const nodeB = nodeByDomain.get(b);
       if (!nodeA || !nodeB) return null;
       return { a: nodeA, b: nodeB, weight };
     }).filter((e): e is Edge => e !== null);
-  }, [nodes]);
+  }, [nodes, edgeDefs]);
 
   const maxEdgeWeight = Math.max(1, ...edges.map((e) => e.weight));
 
