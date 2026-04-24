@@ -9,6 +9,17 @@
     "analogy": "A market where the sellers know more than the buyers — and the buyers know the sellers know more."
   },
   {
+    "id": "economics:aggressive-price-cuts-in-a-commodity-market",
+    "type": "application",
+    "concept": "Aggressive Price Cuts in a Commodity Market",
+    "domain": "Economics",
+    "problem": "A mid-sized cement producer slashes prices 20% to grab share from rivals in a commoditized regional market.",
+    "firstOrder": "Volume surges and competitors feel pressure. Market share ticks up for two quarters. Customers celebrate the lower prices and reorder aggressively.",
+    "secondOrder": "Rivals match within weeks since cement is undifferentiated. Industry-wide margins collapse, and the price floor resets permanently downward. Weaker firms consolidate, but the initiator's cash reserves thin faster than expected, leaving no room to invest when demand cycles turn.",
+    "lesson": "In commodity markets, a price cut is a coordination signal, not a weapon. Advantages that can be instantly copied aren't advantages at all, just shared wounds.",
+    "level": "intermediate"
+  },
+  {
     "id": "economics:antifragile-portfolio",
     "type": "standard",
     "concept": "Antifragile Portfolio",
@@ -814,6 +825,26 @@
     ],
     "explanation": "Classic perverse incentive: the measure (dead cobras) diverged from the goal (fewer cobras). Goodhart's Law in action — optimizing the metric created a new, worse problem. Effective policy design must model behavioral responses, not just direct effects.",
     "level": "foundational"
+  },
+  {
+    "id": "economics:the-emerging-standard",
+    "type": "scenario",
+    "concept": "The Emerging Standard",
+    "domain": "Economics",
+    "scenario": "Two video codecs compete for industry adoption in 2003. Codec A is technically superior in compression and quality. Codec B ships earlier, lands in three popular consumer devices, and signs a streaming partnership. By 2006, Codec B dominates 80% of the market despite measurable inferiority, and Codec A's backers quietly pivot to licensing it as a niche professional tool.",
+    "relevantConcepts": [
+      "network effects",
+      "path dependence",
+      "first-mover advantage",
+      "coordination equilibrium"
+    ],
+    "domains": [
+      "Economics",
+      "Technology",
+      "Systems Thinking"
+    ],
+    "explanation": "In standards wars, adoption compounds nonlinearly. Each new device or platform picking a codec raises its value to the next adopter and lowers the payoff of choosing the rival. Merit matters until a tipping point, after which the coordination benefit of picking the popular option overwhelms any technical advantage. The winner is rarely the best; it is whoever reaches critical mass first.",
+    "level": "intermediate"
   },
   {
     "id": "economics:the-gentrification-spiral",

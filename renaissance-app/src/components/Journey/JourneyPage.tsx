@@ -10,12 +10,17 @@ import { computeStreak } from '../../lib/progression/streak';
 import { loadUnlockedAchievements, ACHIEVEMENT_RULES } from '../../lib/progression/achievements';
 import { trackJourneyViewed } from '../../lib/analytics';
 import { loadCommonplaceEntries } from '../../lib/progression/commonplace';
+import { weeklyReviewAvailable } from '../../lib/progression/weekly-review';
 import type { CardState, ReviewLogEntry, CommonplaceEntry } from '../../types/cards';
 import { Constellation } from './Constellation';
 import { LevelBars } from './LevelBars';
 import { StreakStrip } from './StreakStrip';
 import { MasteryTrend } from './MasteryTrend';
+import { RetentionGrid } from './RetentionGrid';
 import { CommonplaceHistory } from './CommonplaceHistory';
+import { WeeklyReviewBanner } from './WeeklyReviewBanner';
+import { ShareCard } from './ShareCard';
+import '../WeeklyReview/WeeklyReviewPage.css';
 import './JourneyPage.css';
 
 export function JourneyPage() {
@@ -54,6 +59,11 @@ export function JourneyPage() {
     };
   }, [ready, refresh]);
 
+  const [showWeekly, setShowWeekly] = useState(false);
+  useEffect(() => {
+    if (ready) setShowWeekly(weeklyReviewAvailable());
+  }, [ready]);
+
   const unlocked = useMemo(() => loadUnlockedAchievements(), [reviewLog.length, states]);
   const snapshot = useMemo(() => masterySnapshot(states), [states]);
   const dueCount = useMemo(() => countDueCards(states), [states]);
@@ -77,6 +87,11 @@ export function JourneyPage() {
 
   return (
     <main id="main-content" className="journey-main">
+      {showWeekly && (
+        <section className="container">
+          <WeeklyReviewBanner onDismiss={() => setShowWeekly(false)} />
+        </section>
+      )}
       <section className="container journey-hero">
         <div className="journey-hero-text">
           <span className="journey-eyebrow">Your Journey</span>
@@ -131,6 +146,15 @@ export function JourneyPage() {
       </section>
 
       <section className="container journey-section">
+        <h2 className="journey-section-title">Retention by domain</h2>
+        <p className="journey-section-sub">
+          Share of reviews rated Good or Easy in the last 30 days, per domain. The gap between this and mastery
+          tells you which domains need slower, more deliberate passes.
+        </p>
+        <RetentionGrid reviewLog={reviewLog} />
+      </section>
+
+      <section className="container journey-section">
         <h2 className="journey-section-title">Knowledge domains</h2>
         <p className="journey-section-sub">
           Mastery is the harmonic weight of your stability values across cards you have reviewed in each domain,
@@ -145,6 +169,15 @@ export function JourneyPage() {
           The record of your reflections. Re-read on weeks when progress feels invisible.
         </p>
         <CommonplaceHistory entries={commonplace} />
+      </section>
+
+      <section className="container journey-section">
+        <h2 className="journey-section-title">Share your progress</h2>
+        <p className="journey-section-sub">
+          A snapshot of your constellation and synthesis index, rendered locally. Download the PNG or copy the
+          summary — nothing leaves your browser unless you choose to post it.
+        </p>
+        <ShareCard snapshot={snapshot} />
       </section>
 
       {Object.keys(unlocked).length > 0 && (

@@ -1,0 +1,20 @@
+{
+  "name": "Renaissance Skills",
+  "short_name": "Renaissance",
+  "description": "Daily spaced-repetition practice across 13 knowledge domains.",
+  "start_url": "/study",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d0d0d",
+  "theme_color": "#0d0d0d",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["education", "productivity", "lifestyle"]
+}

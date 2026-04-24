@@ -49,6 +49,17 @@
     "level": "intermediate"
   },
   {
+    "id": "psychology:banning-casual-friday",
+    "type": "application",
+    "concept": "Banning Casual Friday",
+    "domain": "Psychology",
+    "problem": "A new CEO ends a long-standing casual Friday policy to project a more professional image to clients and investors.",
+    "firstOrder": "Office attire tightens. A few executives nod approvingly. Some employees grumble openly while others shrug and comply with the new dress code.",
+    "secondOrder": "The removal of a small, free perk is read as a signal about management's broader posture toward employees. Engagement scores dip. Recruiting referrals slow. Talent begins quietly interviewing elsewhere, reading the change as a harbinger of tighter controls to come.",
+    "lesson": "Symbolic perks carry weight disproportionate to their cost. Removing a benefit signals distrust louder than adding one signals generosity.",
+    "level": "intermediate"
+  },
+  {
     "id": "psychology:broaden-and-build-theory",
     "type": "standard",
     "concept": "Broaden-and-Build Theory",
@@ -831,6 +842,26 @@
       "Systems Thinking"
     ],
     "explanation": "The protocol is sound, but the social system blocks adoption. Without psychological safety, junior staff won't challenge senior resistance. The authority gradient creates silence where feedback is most needed. Implementation science shows that adoption depends on social dynamics, not just tool quality.",
+    "level": "intermediate"
+  },
+  {
+    "id": "psychology:the-well-meaning-filter",
+    "type": "scenario",
+    "concept": "The Well-Meaning Filter",
+    "domain": "Psychology",
+    "scenario": "A new operations manager, overwhelmed by inbound requests, instates a simple intake form requiring justification and priority ranking. Throughput improves for routine tickets. Six months later, senior engineers stop filing requests entirely, routing urgent cross-team needs through informal channels that bypass the form and often the manager.",
+    "relevantConcepts": [
+      "Goodhart's law",
+      "adverse selection",
+      "friction as filter",
+      "informal workarounds"
+    ],
+    "domains": [
+      "Psychology",
+      "Systems Thinking",
+      "Economics"
+    ],
+    "explanation": "Process friction doesn't filter uniformly. It deters the busiest, highest-leverage participants first because their opportunity cost of filling forms is highest. The intake form ends up screening in low-value routine requests while screening out the urgent, ambiguous, high-value ones. The manager sees a clean queue and concludes the system is working, unaware that real work has rerouted around them.",
     "level": "intermediate"
   },
   {

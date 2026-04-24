@@ -1,0 +1,579 @@
+[
+  {
+    "type": "connection",
+    "concept": "Entasis and Perceptual Correction",
+    "domain": "Art & Architecture",
+    "conceptA": "Entasis",
+    "domainA": "Art & Architecture",
+    "conceptB": "Perceptual Correction",
+    "domainB": "Cognitive Science",
+    "connection": "Greek columns bulge slightly in the middle because straight columns look concave to the eye. Builders compensated for a known perceptual distortion, encoding a model of the viewer's visual system directly into stone geometry.",
+    "insight": "Designing for the eye's quirks beats designing for geometric truth. Any interface that ignores the perceiver's biases will feel subtly wrong even when technically correct.",
+    "prompt": "Where in your own work are you optimizing for measured correctness rather than perceived correctness?"
+  },
+  {
+    "type": "connection",
+    "concept": "Flying Buttress as Force Vector",
+    "domain": "Art & Architecture",
+    "conceptA": "Flying Buttress",
+    "domainA": "Art & Architecture",
+    "conceptB": "Vector Decomposition",
+    "domainB": "Physics",
+    "connection": "Gothic cathedrals externalize lateral thrust through angled stone arms that redirect horizontal force into the ground. The buttress is a physical diagram of force decomposition, making the hidden math of vaults visible as architecture.",
+    "insight": "When a system cannot absorb a force internally, the honest move is to externalize it visibly rather than pretend it isn't there. Visible supports are clearer than hidden ones.",
+    "prompt": "What lateral pressure in your life or work needs its own flying buttress instead of more internal reinforcement?"
+  },
+  {
+    "type": "connection",
+    "concept": "Golden Rectangle and Self-Similarity",
+    "domain": "Art & Architecture",
+    "conceptA": "Golden Rectangle",
+    "domainA": "Art & Architecture",
+    "conceptB": "Recursive Sequence",
+    "domainB": "Mathematics",
+    "connection": "A golden rectangle divides into a square plus a smaller golden rectangle, which divides the same way, forever. Composition in Renaissance painting exploits this recursion, so the eye finds proportional echoes at every scale of the canvas.",
+    "insight": "Aesthetic coherence often comes from the same rule applying at multiple scales. Self-similar systems feel inevitable because each part rehearses the logic of the whole.",
+    "prompt": "What rule, if repeated at every scale of your project, would make it feel unified rather than assembled?"
+  },
+  {
+    "type": "connection",
+    "concept": "Negative Space and Gestalt Closure",
+    "domain": "Art & Architecture",
+    "conceptA": "Negative Space",
+    "domainA": "Art & Architecture",
+    "conceptB": "Gestalt Closure",
+    "domainB": "Psychology",
+    "connection": "Painters and logo designers leave gaps the mind completes automatically, because perception prefers whole forms over fragments. The unpainted area does real cognitive work, recruiting the viewer into finishing the image.",
+    "insight": "What you omit can carry more weight than what you include, because the audience's mind rushes in to close the gap and takes ownership of the result.",
+    "prompt": "In your next explanation or pitch, what could you leave out so the listener completes it themselves?"
+  },
+  {
+    "type": "connection",
+    "concept": "Patina and Path Dependence",
+    "domain": "Art & Architecture",
+    "conceptA": "Patina",
+    "domainA": "Art & Architecture",
+    "conceptB": "Path Dependence",
+    "domainB": "Systems Thinking",
+    "connection": "Patina is the visible record of every hand, weather event, and repair a surface has endured. Like path-dependent systems, the current state is legible only through its history; you cannot fake it by jumping to the endpoint.",
+    "insight": "Some qualities are not features but accumulated histories. Trying to manufacture them in one step produces counterfeit versions that lack the structural memory of the real thing.",
+    "prompt": "Which quality you admire in a person or product is really just compounded history that cannot be shortcut?"
+  },
+  {
+    "type": "connection",
+    "concept": "Trompe L'Oeil and Predictive Coding",
+    "domain": "Art & Architecture",
+    "conceptA": "Trompe L'Oeil",
+    "domainA": "Art & Architecture",
+    "conceptB": "Predictive Coding",
+    "domainB": "Cognitive Science",
+    "connection": "Illusionist painting exploits the brain's habit of predicting 3D scenes from 2D cues. Shadow, perspective, and occlusion trigger the same inference machinery a real room would, so the wall reads as a doorway until touch overrides vision.",
+    "insight": "Perception is a bet, not a recording. Systems that understand which cues the brain weights most heavily can construct convincing realities from surprisingly thin evidence.",
+    "prompt": "What assumption are you treating as observed data when it is actually just a strong prediction your mind filled in?"
+  },
+  {
+    "type": "connection",
+    "concept": "Palladian Villa as Modular Grammar",
+    "domain": "Art & Architecture",
+    "conceptA": "Palladian Symmetry",
+    "domainA": "Art & Architecture",
+    "conceptB": "Generative Grammar",
+    "domainB": "Mathematics",
+    "connection": "Palladio's villas are recombinations of a small vocabulary (portico, central hall, symmetric wings) governed by strict rules. Like a formal grammar, a finite kit of parts plus compositional constraints produces an open-ended family of coherent buildings.",
+    "insight": "Creative range often comes from tightening the rules, not loosening them. A small vocabulary under strict grammar generates more legible variety than a large vocabulary with loose rules.",
+    "prompt": "What constraints could you add to your work so that variation becomes meaningful rather than noisy?"
+  },
+  {
+    "type": "connection",
+    "concept": "Sfumato and Signal Smoothing",
+    "domain": "Art & Architecture",
+    "conceptA": "Sfumato",
+    "domainA": "Art & Architecture",
+    "conceptB": "Gaussian Blur",
+    "domainB": "Physics",
+    "connection": "Leonardo's sfumato dissolves edges into gradients, mirroring how light actually diffuses through atmosphere and through the eye's optics. Hard contours are a linguistic convenience; real photons arrive as smoothed distributions, not step functions.",
+    "insight": "Sharp boundaries are usually artifacts of how we label the world, not of the world itself. Honest representation often means restoring the blur that categorization removed.",
+    "prompt": "Where are you drawing a hard line that the underlying phenomenon is actually showing you as a gradient?"
+  },
+  {
+    "type": "connection",
+    "concept": "Dual-Process Theory and Monetary Policy",
+    "domain": "Cognitive Science",
+    "conceptA": "Dual-Process Theory",
+    "domainA": "Cognitive Science",
+    "conceptB": "Monetary Policy",
+    "domainB": "Economics",
+    "connection": "System 1 and System 2 mirror the split between rule-based automatic stabilizers and deliberative central bank decisions. Fast heuristics handle routine cases cheaply; slow analysis intervenes when heuristics break. Both systems risk over-reliance on pattern-matching to prior crises.",
+    "insight": "Economies, like minds, cannot afford to think hard about everything. The architecture of cognition is the architecture of institutional response.",
+    "prompt": "Which of your habitual judgments are effectively 'automatic stabilizers' that you have stopped auditing?"
+  },
+  {
+    "type": "connection",
+    "concept": "Theory of Mind and Diplomatic Signaling",
+    "domain": "Cognitive Science",
+    "conceptA": "Theory of Mind",
+    "domainA": "Cognitive Science",
+    "conceptB": "Diplomatic Signaling",
+    "domainB": "History & Geopolitics",
+    "connection": "Statecraft is recursive theory of mind operationalized: 'I know that you know that I know.' Deterrence, bluffing, and ultimatums all depend on correctly modeling the opponent's model of you. Failures of diplomacy are often failures of second-order mentalizing.",
+    "insight": "Geopolitics runs on the same cognitive machinery a four-year-old uses to hide a cookie. The stakes scale, but the primitives do not.",
+    "prompt": "In your last negotiation, at what level of recursion did your model of the other side stop being explicit?"
+  },
+  {
+    "type": "connection",
+    "concept": "Grounded Cognition and Skeuomorphism",
+    "domain": "Cognitive Science",
+    "conceptA": "Grounded Cognition",
+    "domainA": "Cognitive Science",
+    "conceptB": "Skeuomorphism",
+    "domainB": "Technology",
+    "connection": "Grounded cognition holds that abstract thought reuses sensorimotor circuits. Skeuomorphic interfaces exploit this by dressing digital objects as physical ones — leather-bound calendars, page-turn animations — so users can import bodily intuitions rather than learn symbols from scratch.",
+    "insight": "Every new medium is initially understood as a metaphor of the old one. The body is the original UI toolkit.",
+    "prompt": "Which 'skeuomorph' in your own thinking is still borrowing from a metaphor you have outgrown?"
+  },
+  {
+    "type": "connection",
+    "concept": "Cognitive Offloading and Division of Labor",
+    "domain": "Cognitive Science",
+    "conceptA": "Cognitive Offloading",
+    "domainA": "Cognitive Science",
+    "conceptB": "Division of Labor",
+    "domainB": "Economics",
+    "connection": "Writing notes, using calculators, and consulting experts are all forms of externalizing cognition. Smith's pin factory externalizes motor skill across workers; modern knowledge work externalizes memory and reasoning across tools and specialists, yielding similar productivity gains and similar fragility.",
+    "insight": "Specialization is cognitive offloading with a paycheck. Both multiply capability and concentrate vulnerability in the links between minds.",
+    "prompt": "Which piece of your thinking have you offloaded so thoroughly that you could no longer reconstruct it alone?"
+  },
+  {
+    "type": "connection",
+    "concept": "Autobiographical Memory and Narrative Identity",
+    "domain": "Cognitive Science",
+    "conceptA": "Autobiographical Memory",
+    "domainA": "Cognitive Science",
+    "conceptB": "Narrative Identity",
+    "domainB": "Philosophy",
+    "connection": "Autobiographical memory is reconstructive — each recall rewrites the trace. Philosophers from Ricoeur to MacIntyre argue the self is constituted by the story it tells about itself. Both views converge: identity is not stored, it is re-authored on each retrieval, coherent by design rather than by fact.",
+    "insight": "You do not remember your life; you rewrite it. The self is the most frequently edited document you own.",
+    "prompt": "Which chapter of your own story have you quietly revised since you last told it out loud?"
+  },
+  {
+    "type": "connection",
+    "concept": "Neural Pruning and Apoptosis",
+    "domain": "Cognitive Science",
+    "conceptA": "Synaptic Pruning",
+    "domainA": "Cognitive Science",
+    "conceptB": "Apoptosis",
+    "domainB": "Biology",
+    "connection": "Development proceeds by subtraction. The infant brain over-produces synapses and eliminates the unused ones; tissues sculpt themselves through programmed cell death. In both, what remains is defined by what was killed, and pathology arises when the pruning rules misfire.",
+    "insight": "Form in living systems is a record of deletions, not additions. Learning and morphogenesis are both curated losses.",
+    "prompt": "What capacity have you pruned recently without noticing — and was the pruning signal trustworthy?"
+  },
+  {
+    "type": "connection",
+    "concept": "Cognitive Dissonance and Belief Revision",
+    "domain": "Cognitive Science",
+    "conceptA": "Cognitive Dissonance",
+    "domainA": "Psychology",
+    "conceptB": "Bayesian Updating",
+    "domainB": "Cognitive Science",
+    "connection": "Dissonance is the felt cost of holding inconsistent beliefs; Bayesian updating is the normative rule for resolving inconsistency with new evidence. Humans often resolve dissonance by editing the prior belief or discounting evidence — a cheaper local minimum than true updating.",
+    "insight": "Dissonance is the affective signature of an update pending. Whether you pay the tax or reroute around it determines whether you learn.",
+    "prompt": "When did you last feel dissonance and choose rationalization over revision?"
+  },
+  {
+    "type": "connection",
+    "concept": "Affordances and Interface Design",
+    "domain": "Cognitive Science",
+    "conceptA": "Affordances",
+    "domainA": "Cognitive Science",
+    "conceptB": "Interface Design",
+    "domainB": "Technology",
+    "connection": "Gibson's affordances describe action possibilities an environment offers to an organism. Interface designers inherit this directly: a button must look pressable, a slider draggable. Good design makes the affordance visible; bad design hides it, forcing the user to reason instead of perceive.",
+    "insight": "The best interfaces are not learned — they are seen. Perception is cheaper than cognition, and designers compete for that discount.",
+    "prompt": "Which tool in your daily life forces you to think where it should let you simply see?"
+  },
+  {
+    "type": "connection",
+    "concept": "Power Laws and Pareto Efficiency",
+    "domain": "Mathematics",
+    "conceptA": "Power Law Distribution",
+    "domainA": "Mathematics",
+    "conceptB": "Pareto Efficiency",
+    "domainB": "Economics",
+    "connection": "Power law distributions have heavy tails where a small fraction of events produces most of the magnitude. Pareto noticed wealth, firm sizes, and city populations follow this shape, which makes the classical average a misleading summary and shifts policy focus from the typical case to the consequential outliers.",
+    "insight": "In heavy-tailed systems, variance can be infinite and the mean is not representative. Managing risk and opportunity requires tail thinking, not mean thinking.",
+    "prompt": "Which metric in your work is secretly power-law distributed, and how would your decisions change if you treated it that way?"
+  },
+  {
+    "type": "connection",
+    "concept": "Markov Chains and Morphogenesis",
+    "domain": "Mathematics",
+    "conceptA": "Markov Chain",
+    "domainA": "Mathematics",
+    "conceptB": "Morphogenesis",
+    "domainB": "Biology",
+    "connection": "A Markov chain evolves a state based only on its current configuration, not its history. Embryonic cells choose fates by reading local chemical neighborhoods, so tissue patterning can be modeled as a spatial Markov process where memoryless local rules produce globally reliable body plans.",
+    "insight": "Reliable global structure can emerge from memoryless local transitions. Complexity does not require a blueprint when the transition rules are well-tuned.",
+    "prompt": "What system around you looks designed top-down but is actually the fixed point of simple local transition rules?"
+  },
+  {
+    "type": "connection",
+    "concept": "Convex Optimization and Metabolic Scaling",
+    "domain": "Mathematics",
+    "conceptA": "Convex Optimization",
+    "domainA": "Mathematics",
+    "conceptB": "Metabolic Scaling Laws",
+    "domainB": "Biology",
+    "connection": "Convex optimization finds the unique minimum of a cost subject to constraints. Vascular networks in organisms appear to minimize the energy cost of distributing resources under volume constraints, yielding the quarter-power metabolic scaling law that spans bacteria to whales.",
+    "insight": "Evolution and engineering converge on the same optima because convex problems have one answer. Biology looks designed because the math permits only a narrow family of solutions.",
+    "prompt": "Where in nature or society does a universal pattern hint that an invisible cost function is being minimized?"
+  },
+  {
+    "type": "connection",
+    "concept": "Fourier Transforms and Musical Timbre",
+    "domain": "Mathematics",
+    "conceptA": "Fourier Transform",
+    "domainA": "Mathematics",
+    "conceptB": "Musical Timbre",
+    "domainB": "Art & Architecture",
+    "connection": "The Fourier transform decomposes any waveform into a sum of pure sinusoids at different frequencies and amplitudes. The distinct color of a violin versus a clarinet playing the same pitch is entirely the relative weights of the harmonics, so timbre is literally the spectrum of a periodic signal.",
+    "insight": "Perceived quality often lives in a transformed representation, not the raw signal. Changing basis can turn mystery into arithmetic.",
+    "prompt": "What problem in your life would look simpler if you described it in terms of its component frequencies instead of its moment-by-moment values?"
+  },
+  {
+    "type": "connection",
+    "concept": "Graph Centrality and Social Influence",
+    "domain": "Mathematics",
+    "conceptA": "Eigenvector Centrality",
+    "domainA": "Mathematics",
+    "conceptB": "Social Influence",
+    "domainB": "Psychology",
+    "connection": "Eigenvector centrality scores a node highly when it is connected to other highly scored nodes, defining importance through a self-referential fixed point. The same recursion explains why social influence concentrates: being trusted by trusted people compounds, so reputation becomes a spectral property of the network.",
+    "insight": "Status and authority are rarely intrinsic; they are eigenvectors of the relationship graph. Change your neighbors and you change your score.",
+    "prompt": "Whose trust, if you earned it, would most raise your standing in the eyes of everyone else you care about?"
+  },
+  {
+    "type": "connection",
+    "concept": "Entropy Across Information and Heat",
+    "domain": "Mathematics",
+    "conceptA": "Shannon Entropy",
+    "domainA": "Mathematics",
+    "conceptB": "Thermodynamic Entropy",
+    "domainB": "Physics",
+    "connection": "Shannon defined entropy as the expected surprise of a probability distribution, while Boltzmann defined it as the logarithm of microstates compatible with a macrostate. The formulas are identical up to a constant, and Landauer showed erasing one bit of information must dissipate a minimum amount of heat.",
+    "insight": "Information and energy are not analogies but two accounts of the same ledger. Computation has a physical price and physics has an informational description.",
+    "prompt": "If every bit you erase costs energy, which of your daily digital habits is quietly heating the planet the most?"
+  },
+  {
+    "type": "connection",
+    "concept": "Exploration-Exploitation and Research Funding",
+    "domain": "Mathematics",
+    "conceptA": "Multi-Armed Bandit Problem",
+    "domainA": "Mathematics",
+    "conceptB": "Research Funding Allocation",
+    "domainB": "Economics",
+    "connection": "Bandit theory proves that optimal learning requires occasionally pulling arms that currently look worse than the best, because estimates are uncertain. Research grants face the same tradeoff: funding only the top-ranked proposals exploits known talent but starves the exploratory bets that produce paradigm shifts.",
+    "insight": "Pure meritocracy is mathematically suboptimal under uncertainty. A healthy portfolio must deliberately fund some apparent losers to keep learning.",
+    "prompt": "What is your current exploration rate, and when did you last deliberately try an option you believed was probably worse than your default?"
+  },
+  {
+    "type": "connection",
+    "concept": "Gradient Descent and Neural Network Training",
+    "domain": "Mathematics",
+    "conceptA": "Gradient Descent",
+    "domainA": "Mathematics",
+    "conceptB": "Neural Network Training",
+    "domainB": "Technology",
+    "connection": "Gradient descent follows the steepest downhill direction of a loss surface by nudging parameters opposite the gradient. Modern deep learning scales this nineteenth-century calculus idea to billions of weights, and the surprising fact is that in very high dimensions this naive local procedure reliably finds usable minima.",
+    "insight": "Intelligence in current AI is not clever search but patient local descent in huge parameter spaces. Scale plus a good gradient beats cleverness.",
+    "prompt": "Where in your own learning are you trying to leap globally when consistent small gradient steps would actually reach a better minimum?"
+  },
+  {
+    "type": "connection",
+    "concept": "Ship of Theseus and Cellular Turnover",
+    "domain": "Philosophy",
+    "conceptA": "Ship of Theseus",
+    "domainA": "Philosophy",
+    "conceptB": "Cellular Turnover",
+    "domainB": "Biology",
+    "connection": "The ancient puzzle of whether a ship remains itself as each plank is replaced finds a biological echo in the human body: most of your cells are replaced on rolling timescales, yet continuity of memory, pattern, and narrative persists. Identity here is carried by organization, not substance.",
+    "insight": "Persistence of identity is a claim about pattern-preservation across substrate change, not about matter staying put.",
+    "prompt": "What in your life today is the 'pattern' that survives even as the 'planks' beneath it are replaced?"
+  },
+  {
+    "type": "connection",
+    "concept": "Stoicism and Control Theory",
+    "domain": "Philosophy",
+    "conceptA": "Dichotomy of Control",
+    "domainA": "Philosophy",
+    "conceptB": "Feedback Control Loops",
+    "domainB": "Systems Thinking",
+    "connection": "Stoicism partitions the world into what is 'up to us' and what is not, and urges effort only on the former. Control theory formalizes the same distinction: a controller can only act on manipulated variables, and stability depends on correctly modeling which disturbances are measurable versus uncontrollable.",
+    "insight": "Wisdom and good engineering converge on the same discipline: apply effort only where your action actually closes a loop.",
+    "prompt": "Where are you currently pushing on variables that aren't in your control channel?"
+  },
+  {
+    "type": "connection",
+    "concept": "Phenomenology and User-Centered Design",
+    "domain": "Philosophy",
+    "conceptA": "Phenomenology",
+    "domainA": "Philosophy",
+    "conceptB": "User-Centered Design",
+    "domainB": "Technology",
+    "connection": "Husserl's program began with bracketing theory to study lived experience as it presents itself. Modern user-centered design enacts the same move pragmatically: before specifying features, designers observe how users actually encounter an interface, suspending their assumptions about what 'should' be obvious.",
+    "insight": "Good design, like good phenomenology, starts by suspending your model of the world and attending to what the user actually meets.",
+    "prompt": "When you last designed something for others, did you describe their experience or prescribe it?"
+  },
+  {
+    "type": "connection",
+    "concept": "Teleology and Sunk Costs",
+    "domain": "Philosophy",
+    "conceptA": "Teleological Reasoning",
+    "domainA": "Philosophy",
+    "conceptB": "Sunk Cost Fallacy",
+    "domainB": "Economics",
+    "connection": "Teleological thinking reads events backward from their apparent purpose, often overfitting a goal to whatever happened. Sunk-cost reasoning does the same in personal economics: because money was spent toward an end, the end feels validated, and we keep walking a path whose only remaining justification is the path already walked.",
+    "insight": "Purpose read backward from investment looks like meaning, but is often just the mind preferring a story over a write-off.",
+    "prompt": "Which ongoing commitment would you not start today, yet continue because you've already paid for it?"
+  },
+  {
+    "type": "connection",
+    "concept": "Resonance and Social Proof",
+    "domain": "Physics",
+    "conceptA": "Resonance",
+    "domainA": "Physics",
+    "conceptB": "Social Proof",
+    "domainB": "Psychology",
+    "connection": "A driven oscillator absorbs energy efficiently only near its natural frequency; small periodic pushes at the right rate produce disproportionate amplitude. Social proof is the cognitive analogue: a message matched to the listener's existing beliefs and in-group rhythm amplifies far beyond its informational content, while off-frequency arguments dissipate.",
+    "insight": "Influence, like energy transfer, scales not with how hard you push but with how closely you match the receiver's resonant mode.",
+    "prompt": "What 'natural frequency' does a community you care about actually oscillate at — and are you driving it or fighting it?"
+  },
+  {
+    "type": "connection",
+    "concept": "Ergodicity and Time-Averaged Returns",
+    "domain": "Physics",
+    "conceptA": "Ergodicity",
+    "domainA": "Physics",
+    "conceptB": "Time-Averaged Returns",
+    "domainB": "Economics",
+    "connection": "In an ergodic system, the average over many copies equals the average over one copy's long history. Most compounding financial processes are non-ergodic: the expected return across hypothetical investors diverges from what any single investor experiences through time, because ruin is absorbing and cannot be undone by others' luck.",
+    "insight": "When outcomes compound and ruin is absorbing, the only average that matters is the one your single timeline actually realizes.",
+    "prompt": "In a repeated decision you face, is the 'expected value' you're using an ensemble average or a time average?"
+  },
+  {
+    "type": "connection",
+    "concept": "Damping and Over-Engineering",
+    "domain": "Physics",
+    "conceptA": "Critical Damping",
+    "domainA": "Physics",
+    "conceptB": "Over-Engineering",
+    "domainB": "Technology",
+    "connection": "An under-damped system oscillates wastefully; an over-damped one responds sluggishly; critical damping reaches the target fastest without overshoot. Software and product teams face the same tradeoff — too little process and the system rings with bugs, too much and every change crawls through review. The optimum is the least structure that still suppresses oscillation.",
+    "insight": "The goal isn't maximum robustness or maximum speed; it's the smallest amount of structure that kills oscillation without introducing drag.",
+    "prompt": "Where in your current workflow are you over-damped — solving a problem of resonance you no longer have?"
+  },
+  {
+    "type": "connection",
+    "concept": "Least Action and Heuristics",
+    "domain": "Physics",
+    "conceptA": "Principle of Least Action",
+    "domainA": "Physics",
+    "conceptB": "Optimization Heuristics",
+    "domainB": "Systems Thinking",
+    "connection": "Classical mechanics can be restated as: systems evolve along paths that extremize an action integral. Organizations and individuals rarely compute such integrals, but effective heuristics — 'do the reversible thing first', 'minimize WIP' — act as local rules whose aggregate behavior approximates a global stationary-path principle.",
+    "insight": "Good heuristics are compressed variational principles: local rules whose trajectories look, in aggregate, like someone was optimizing the right global quantity.",
+    "prompt": "Which of your heuristics, if traced to its implied 'action', would reveal what you are actually optimizing for?"
+  },
+  {
+    "type": "standard",
+    "concept": "Entasis",
+    "domain": "Art & Architecture",
+    "oneliner": "The slight outward convex curve applied to a classical column's shaft to counteract the optical illusion that perfectly straight sides appear to bow inward.",
+    "whyItMatters": "It shows that serious design corrects for the observer, not just the object. Greek architects engineered around human perception millennia before formal vision science existed.",
+    "analogy": "Like a chef slightly over-salting a dish destined for an airplane meal — compensating for a known perceptual distortion so the final experience lands as intended."
+  },
+  {
+    "type": "standard",
+    "concept": "Tripartite Elevation",
+    "domain": "Art & Architecture",
+    "oneliner": "A facade or interior wall organized into three stacked horizontal zones — typically base, middle, and crown — that give a building visual coherence and proportional rhythm.",
+    "whyItMatters": "This scheme underlies everything from Gothic cathedrals (arcade, triforium, clerestory) to Renaissance palazzi and modern skyscrapers, giving learners a universal template for reading architectural facades.",
+    "analogy": "Like the three acts of a play: a grounded setup, a developed middle, and a resolving finale — you feel the completeness even when you can't name the parts."
+  },
+  {
+    "type": "standard",
+    "concept": "Oculus",
+    "domain": "Art & Architecture",
+    "oneliner": "A circular opening at the apex of a dome or in a wall, admitting light and sometimes air, most famously the unglazed 27-foot aperture crowning the Pantheon in Rome.",
+    "whyItMatters": "The oculus converts raw sunlight into a moving, sacred focal point, showing how architecture can choreograph time and weather itself into the building's experience.",
+    "analogy": "Like a pinhole camera on a cathedral scale — a single round hole turning the sky into a slowly rotating spotlight that paints the interior."
+  },
+  {
+    "type": "standard",
+    "concept": "Trompe-l'oeil",
+    "domain": "Art & Architecture",
+    "oneliner": "A painting technique that uses rigorous perspective and shading to fool the eye into perceiving a flat surface as a three-dimensional object or extended space.",
+    "whyItMatters": "It reveals how much of seeing is inference: once the cues match, the brain commits to a depth reading even when it is demonstrably wrong, a principle foundational to modern visual science and CGI.",
+    "analogy": "Like a high-fidelity voice impersonator — the signal is flat on the surface, but your perceptual system insists on hearing a whole person behind it."
+  },
+  {
+    "type": "standard",
+    "concept": "Procedural Memory",
+    "domain": "Cognitive Science",
+    "oneliner": "A non-declarative long-term memory system that stores motor and cognitive skills as tacit procedures, accessed automatically through performance rather than conscious recall.",
+    "whyItMatters": "Amnesiacs who cannot remember a lesson can still improve at it, proving memory is not one thing; understanding this dissociation reshapes how we think about learning, habit, and rehabilitation.",
+    "analogy": "Like muscle memory for typing — your fingers know where the Q key is even when, asked verbally, you have to mime the keyboard to answer."
+  },
+  {
+    "type": "standard",
+    "concept": "Source Monitoring",
+    "domain": "Cognitive Science",
+    "oneliner": "The metacognitive process by which we attribute a remembered item to its origin — whether we saw it, were told it, imagined it, or merely inferred it.",
+    "whyItMatters": "Source monitoring failures underlie false memories, eyewitness errors, and plagiarism-by-accident; knowing the mechanism explains why confidently remembered details can still be wholly fabricated.",
+    "analogy": "Like losing track of which browser tab a quote came from — you still have the sentence, but you can no longer tell if it was the journal article or the reddit comment."
+  },
+  {
+    "type": "application",
+    "concept": "Aggressive Price Cuts in a Commodity Market",
+    "domain": "Economics",
+    "problem": "A mid-sized cement producer slashes prices 20% to grab share from rivals in a commoditized regional market.",
+    "firstOrder": "Volume surges and competitors feel pressure. Market share ticks up for two quarters. Customers celebrate the lower prices and reorder aggressively.",
+    "secondOrder": "Rivals match within weeks since cement is undifferentiated. Industry-wide margins collapse, and the price floor resets permanently downward. Weaker firms consolidate, but the initiator's cash reserves thin faster than expected, leaving no room to invest when demand cycles turn.",
+    "lesson": "In commodity markets, a price cut is a coordination signal, not a weapon. Advantages that can be instantly copied aren't advantages at all, just shared wounds.",
+    "level": "intermediate"
+  },
+  {
+    "type": "application",
+    "concept": "Banning Casual Friday",
+    "domain": "Psychology",
+    "problem": "A new CEO ends a long-standing casual Friday policy to project a more professional image to clients and investors.",
+    "firstOrder": "Office attire tightens. A few executives nod approvingly. Some employees grumble openly while others shrug and comply with the new dress code.",
+    "secondOrder": "The removal of a small, free perk is read as a signal about management's broader posture toward employees. Engagement scores dip. Recruiting referrals slow. Talent begins quietly interviewing elsewhere, reading the change as a harbinger of tighter controls to come.",
+    "lesson": "Symbolic perks carry weight disproportionate to their cost. Removing a benefit signals distrust louder than adding one signals generosity.",
+    "level": "intermediate"
+  },
+  {
+    "type": "application",
+    "concept": "Mandating 99.99% Uptime SLA",
+    "domain": "Technology",
+    "problem": "A B2B SaaS startup commits to a 99.99% uptime SLA to unlock enterprise deals with Fortune 500 buyers.",
+    "firstOrder": "Larger contracts close. Reliability becomes the org-wide north star. On-call rotations tighten, and incident response takes precedence over roadmap work.",
+    "secondOrder": "Shipping velocity collapses under redundancy, review gates, and change-freeze windows. On-call burnout drives senior engineers to exit. A culture of safe, incremental changes entrenches. The product stabilizes but stops surprising customers; competitors lap it on features while it guards its nines.",
+    "lesson": "Every tightened constraint costs something you don't immediately see. Price an SLA against the innovations you'll never attempt once it's signed.",
+    "level": "intermediate"
+  },
+  {
+    "type": "application",
+    "concept": "Eradicating a Single Crop Pest",
+    "domain": "Biology",
+    "problem": "An agriculture ministry launches a program to eliminate one dominant insect pest attacking the national staple crop.",
+    "firstOrder": "Pesticide deployment ramps up. The target pest population plummets within two seasons. Farmers report visibly cleaner fields and higher early yields.",
+    "secondOrder": "With the dominant pest gone, previously suppressed secondary pests explode into the ecological vacuum. Beneficial predator populations collapse alongside the target. Soil microbiota shifts. Within five years yields fall below pre-program levels, and the ministry faces a more diverse, less tractable pest complex than before.",
+    "lesson": "In complex systems, removing one element rearranges the whole. Niches don't stay empty; they fill with whatever was next in line, which is rarely what you wanted.",
+    "level": "intermediate"
+  },
+  {
+    "type": "application",
+    "concept": "Breaking Up a Monopoly in One Move",
+    "domain": "History & Geopolitics",
+    "problem": "A government forcibly splits a dominant state energy monopoly into five regional firms to foster competition.",
+    "firstOrder": "Headlines celebrate the dismantling. Five new CEOs are appointed. Regulators declare competition restored and consumer prices are projected to drop within a year.",
+    "secondOrder": "The new firms inherit fragmented infrastructure and lose economies of scale. Tacit coordination emerges through shared supply chains and former colleagues. Within a decade three of the five merge or are absorbed, producing a tighter oligopoly than the original monopoly, now with less accountability and diffuse regulatory targets.",
+    "lesson": "Structural interventions work against the grain of the forces that created the original structure. Without changing the underlying economics, markets reconverge on their natural concentration.",
+    "level": "intermediate"
+  },
+  {
+    "type": "scenario",
+    "concept": "The Bureaucratic Moat",
+    "domain": "Technology",
+    "scenario": "A Fortune 500 bank has run its core ledger on a legacy mainframe vendor for 30 years. Every internal process, audit trail, and compliance report assumes its quirks. A modern alternative exists at a fraction of the cost, but the migration estimate is five years and the CFO cannot justify the disruption. The vendor raises prices 12% annually; the bank keeps paying.",
+    "relevantConcepts": [
+      "switching costs",
+      "path dependence",
+      "lock-in",
+      "sunk cost entrenchment"
+    ],
+    "domains": [
+      "Technology",
+      "Economics",
+      "Systems Thinking"
+    ],
+    "explanation": "The moat isn't technical superiority but accumulated organizational entanglement. Workflows, skills, contracts, and audit assumptions calcify around the vendor until extraction cost exceeds any rational comparison of alternatives. Each year of use deepens the dependency, and the vendor can extract rent up to the migration cost ceiling. This is how mediocre incumbents survive indefinitely.",
+    "level": "intermediate"
+  },
+  {
+    "type": "scenario",
+    "concept": "The Well-Meaning Filter",
+    "domain": "Psychology",
+    "scenario": "A new operations manager, overwhelmed by inbound requests, instates a simple intake form requiring justification and priority ranking. Throughput improves for routine tickets. Six months later, senior engineers stop filing requests entirely, routing urgent cross-team needs through informal channels that bypass the form and often the manager.",
+    "relevantConcepts": [
+      "Goodhart's law",
+      "adverse selection",
+      "friction as filter",
+      "informal workarounds"
+    ],
+    "domains": [
+      "Psychology",
+      "Systems Thinking",
+      "Economics"
+    ],
+    "explanation": "Process friction doesn't filter uniformly. It deters the busiest, highest-leverage participants first because their opportunity cost of filling forms is highest. The intake form ends up screening in low-value routine requests while screening out the urgent, ambiguous, high-value ones. The manager sees a clean queue and concludes the system is working, unaware that real work has rerouted around them.",
+    "level": "intermediate"
+  },
+  {
+    "type": "scenario",
+    "concept": "The Emerging Standard",
+    "domain": "Economics",
+    "scenario": "Two video codecs compete for industry adoption in 2003. Codec A is technically superior in compression and quality. Codec B ships earlier, lands in three popular consumer devices, and signs a streaming partnership. By 2006, Codec B dominates 80% of the market despite measurable inferiority, and Codec A's backers quietly pivot to licensing it as a niche professional tool.",
+    "relevantConcepts": [
+      "network effects",
+      "path dependence",
+      "first-mover advantage",
+      "coordination equilibrium"
+    ],
+    "domains": [
+      "Economics",
+      "Technology",
+      "Systems Thinking"
+    ],
+    "explanation": "In standards wars, adoption compounds nonlinearly. Each new device or platform picking a codec raises its value to the next adopter and lowers the payoff of choosing the rival. Merit matters until a tipping point, after which the coordination benefit of picking the popular option overwhelms any technical advantage. The winner is rarely the best; it is whoever reaches critical mass first.",
+    "level": "intermediate"
+  },
+  {
+    "type": "scenario",
+    "concept": "The Unmoored Metric",
+    "domain": "Systems Thinking",
+    "scenario": "A support org adopts average ticket resolution time as its primary KPI, originally chosen as a proxy for customer satisfaction. Two years in, resolution time has dropped 40%. Leadership celebrates. But NPS has also dropped, because agents now close tickets prematurely, split complex issues into multiple quick-close tickets, and avoid difficult cases that would drag their averages.",
+    "relevantConcepts": [
+      "Goodhart's law",
+      "proxy drift",
+      "gaming the metric",
+      "loss of telos"
+    ],
+    "domains": [
+      "Systems Thinking",
+      "Psychology",
+      "Economics"
+    ],
+    "explanation": "Metrics chosen as proxies for an underlying goal drift from that goal once they become targets. Optimization pressure finds every path that improves the number without improving the thing the number was meant to represent. Over time the metric becomes a ghost, tracked obsessively while the actual goal decays silently. The fix requires periodically re-grounding metrics in the outcomes they were meant to serve.",
+    "level": "intermediate"
+  },
+  {
+    "type": "scenario",
+    "concept": "The Sentimental Architect",
+    "domain": "History & Geopolitics",
+    "scenario": "A university requires all undergraduates to complete a two-semester Latin sequence, a rule instated in 1887 when Latin was the gateway to scholarly literature. Today nearly all relevant sources are in English or vernacular translation, yet the requirement persists because its removal would 'dilute the tradition' and no faculty committee wants to author the decision that ends it.",
+    "relevantConcepts": [
+      "Chesterton's fence",
+      "path dependence",
+      "institutional inertia",
+      "diffused accountability"
+    ],
+    "domains": [
+      "History & Geopolitics",
+      "Psychology",
+      "Systems Thinking"
+    ],
+    "explanation": "Policies outlive their justifications when the cost of removal is concentrated on identifiable decision-makers while the cost of retention is diffused across many silent bearers. The original rationale dissolves, but no one person has the incentive or authority to formally dissolve the rule. Tradition becomes the justification retroactively, obscuring that the original reason has long since vanished.",
+    "level": "intermediate"
+  }
+]
