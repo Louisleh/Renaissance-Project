@@ -198,6 +198,22 @@
   letter-spacing: 0.08em;
 }
 
+.hero-link-inline {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: var(--gold);
+  font: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-link-inline:hover {
+  color: var(--text);
+}
+
 .hero-info-bar {
   display: flex;
   justify-content: center;
