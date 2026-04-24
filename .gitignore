@@ -1,1 +1,5 @@
 .DS_Store
+
+# Raw card corpus lives on the main branch; generated packs in
+# renaissance-app/src/data/flashcards/v1/ are the source of truth for the app.
+renaissance-cards.json

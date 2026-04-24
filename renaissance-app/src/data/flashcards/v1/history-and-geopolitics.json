@@ -1,0 +1,938 @@
+[
+  {
+    "id": "history-and-geopolitics:9-11",
+    "type": "standard",
+    "concept": "9/11",
+    "domain": "History & Geopolitics",
+    "oneliner": "The September 11, 2001 terrorist attacks on the US — nearly 3,000 killed, triggering the War on Terror.",
+    "whyItMatters": "It reshaped US foreign policy, created the surveillance state, launched wars in Afghanistan and Iraq, and changed airport security forever.",
+    "analogy": "The day that ended the 1990s sense of post-Cold War optimism — and launched two decades of military intervention."
+  },
+  {
+    "id": "history-and-geopolitics:american-revolution",
+    "type": "standard",
+    "concept": "American Revolution",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1775-83 colonial rebellion establishing the first modern democratic republic based on Enlightenment principles.",
+    "whyItMatters": "It proved constitutional democracy was viable at scale and inspired revolutions worldwide.",
+    "analogy": "The Enlightenment's first field test — taking philosophical ideals and building an actual country on them."
+  },
+  {
+    "id": "history-and-geopolitics:apartheid",
+    "type": "standard",
+    "concept": "Apartheid",
+    "domain": "History & Geopolitics",
+    "oneliner": "South Africa's system of institutionalized racial segregation (1948-1991) — ended through internal resistance and international pressure.",
+    "whyItMatters": "Mandela's 27-year imprisonment and peaceful transition to democracy is one of the most remarkable political stories of the 20th century.",
+    "analogy": "Racial segregation built into law — and its dismantling without civil war, which seemed impossible until it happened."
+  },
+  {
+    "id": "history-and-geopolitics:arab-spring",
+    "type": "standard",
+    "concept": "Arab Spring",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 2010-12 wave of pro-democracy protests across the Middle East and North Africa, triggered by a Tunisian street vendor's self-immolation.",
+    "whyItMatters": "Led to regime change in Tunisia, Egypt, Libya; civil war in Syria and Yemen. Showed both the power and limits of popular uprising.",
+    "analogy": "A political wildfire — sparked by one man's desperation, spread by social media, with outcomes ranging from democracy to catastrophe."
+  },
+  {
+    "id": "history-and-geopolitics:assassination-of-archduke-franz-ferdinand",
+    "type": "standard",
+    "concept": "Assassination of Archduke Franz Ferdinand",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1914 event in Sarajevo that triggered WWI through alliance cascades — one bullet reshaping the entire century.",
+    "whyItMatters": "Without it, no WWI, no Versailles, no WWII, no Cold War — arguably the most consequential single event in modern history.",
+    "analogy": "The butterfly effect in geopolitics — one assassination triggering a chain reaction that killed 80 million people."
+  },
+  {
+    "id": "history-and-geopolitics:atomic-bombings",
+    "type": "standard",
+    "concept": "Atomic Bombings",
+    "domain": "History & Geopolitics",
+    "oneliner": "The US dropping nuclear weapons on Hiroshima and Nagasaki in August 1945 — ending WWII and beginning the nuclear age.",
+    "whyItMatters": "It remains the only use of nuclear weapons in war. The moral debate continues: did it save more lives than it took?",
+    "analogy": "The moment humanity acquired the power to destroy itself — and used it, creating the threat that has haunted every decade since."
+  },
+  {
+    "id": "history-and-geopolitics:balance-of-power",
+    "type": "standard",
+    "concept": "Balance of Power",
+    "domain": "History & Geopolitics",
+    "oneliner": "No single state should dominate — others form alliances to counterbalance any rising hegemon.",
+    "whyItMatters": "Explains WWI (alliance cascades), NATO's existence, responses to China's rise.",
+    "analogy": "The geopolitical seesaw — when one side gets heavy, others pile on the other."
+  },
+  {
+    "id": "history-and-geopolitics:bandung-conference",
+    "type": "standard",
+    "concept": "Bandung Conference",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1955 meeting of 29 African and Asian nations — establishing the Non-Aligned Movement during the Cold War.",
+    "whyItMatters": "Newly independent nations asserting they didn't have to choose US or Soviet alignment. Created the concept of the 'Third World.'",
+    "analogy": "The developing world saying 'we refuse to pick sides in your fight' — the birth of non-alignment."
+  },
+  {
+    "id": "history-and-geopolitics:belt-and-road-initiative",
+    "type": "standard",
+    "concept": "Belt and Road Initiative",
+    "domain": "History & Geopolitics",
+    "oneliner": "China's massive infrastructure investment strategy across Asia, Africa, and Europe — ports, roads, railways, digital networks.",
+    "whyItMatters": "The largest infrastructure project in history. Critics call it debt-trap diplomacy. China calls it win-win development.",
+    "analogy": "A modern Silk Road built with Chinese money and Chinese contractors — creating economic dependency disguised as development."
+  },
+  {
+    "id": "history-and-geopolitics:berlin-wall",
+    "type": "standard",
+    "concept": "Berlin Wall",
+    "domain": "History & Geopolitics",
+    "oneliner": "The physical and symbolic barrier dividing East and West Berlin (1961-1989). Its fall marked the end of the Cold War.",
+    "whyItMatters": "Its construction was a propaganda disaster for communism. Its fall in 1989 symbolized the collapse of the Soviet bloc.",
+    "analogy": "A concrete scar across a city — proving that ideology can literally divide families."
+  },
+  {
+    "id": "history-and-geopolitics:bismarck-s-unification",
+    "type": "standard",
+    "concept": "Bismarck's Unification",
+    "domain": "History & Geopolitics",
+    "oneliner": "Otto von Bismarck unifying Germany through 'blood and iron' — three wars (1864-71) creating the German Empire.",
+    "whyItMatters": "It shifted European power permanently, created the conditions for WWI, and demonstrated realpolitik.",
+    "analogy": "A politician who manufactured wars to forge a nation — the ultimate practitioner of 'the ends justify the means.'"
+  },
+  {
+    "id": "history-and-geopolitics:boxer-rebellion",
+    "type": "standard",
+    "concept": "Boxer Rebellion",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1899-1901 Chinese uprising against foreign influence — suppressed by an eight-nation military coalition.",
+    "whyItMatters": "It deepened China's 'Century of Humiliation' and contributed to the fall of the Qing Dynasty.",
+    "analogy": "China's violent rejection of foreign exploitation — crushed by a multinational force, leaving wounds that shaped modern Chinese nationalism."
+  },
+  {
+    "id": "history-and-geopolitics:bretton-woods",
+    "type": "standard",
+    "concept": "Bretton Woods",
+    "domain": "History & Geopolitics",
+    "oneliner": "1944 agreement creating the post-WWII economic order — IMF, World Bank, US dollar as reserve currency pegged to gold.",
+    "whyItMatters": "Nixon ended gold convertibility in 1971 but dollar dominance persists. These institutions still shape global finance.",
+    "analogy": "America wrote the rules of global finance — and made the dollar the chips everyone plays with."
+  },
+  {
+    "id": "history-and-geopolitics:bretton-woods-system",
+    "type": "standard",
+    "concept": "Bretton Woods System",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1944 agreement that created the IMF, World Bank, and pegged global currencies to the US dollar (backed by gold) — architecting the post-war economic order.",
+    "whyItMatters": "Established American financial hegemony that persists today. When Nixon ended gold convertibility in 1971, the system collapsed but the dollar's dominance didn't. Architecture outlasts its original terms.",
+    "analogy": "Like building a highway system — the original justification (military) faded, but the infrastructure shaped everything that followed.",
+    "level": "intermediate"
+  },
+  {
+    "id": "history-and-geopolitics:brexit",
+    "type": "standard",
+    "concept": "Brexit",
+    "domain": "History & Geopolitics",
+    "oneliner": "The UK's 2016 referendum to leave the European Union — the first country to do so. Completed January 2020.",
+    "whyItMatters": "It fragmented British politics, raised questions about the EU's viability, and demonstrated the power of populist referendums.",
+    "analogy": "A country voting to leave its largest trading bloc — revealing the tensions between sovereignty and economic integration."
+  },
+  {
+    "id": "history-and-geopolitics:brics",
+    "type": "standard",
+    "concept": "BRICS",
+    "domain": "History & Geopolitics",
+    "oneliner": "The economic bloc of Brazil, Russia, India, China, South Africa + new members — challenging Western-dominated institutions.",
+    "whyItMatters": "Expanding rapidly as developing nations seek alternatives to IMF/World Bank. Whether it achieves real coordination is the open question.",
+    "analogy": "The Global South's attempt to build an alternative to Western-dominated finance and governance."
+  },
+  {
+    "id": "history-and-geopolitics:chinese-civil-war",
+    "type": "standard",
+    "concept": "Chinese Civil War",
+    "domain": "History & Geopolitics",
+    "oneliner": "The conflict between Mao's Communists and Chiang Kai-shek's Nationalists (1927-49), producing modern China and Taiwan.",
+    "whyItMatters": "It created the People's Republic of China and the Taiwan situation — one of today's most dangerous geopolitical flashpoints.",
+    "analogy": "The war that split China in two — creating one of the 21st century's most dangerous unresolved conflicts."
+  },
+  {
+    "id": "history-and-geopolitics:clausewitz-s-fog-of-war",
+    "type": "standard",
+    "concept": "Clausewitz's Fog of War",
+    "domain": "History & Geopolitics",
+    "oneliner": "The uncertainty, confusion, and incomplete information that characterize all real conflicts — no plan survives first contact with reality.",
+    "whyItMatters": "Clausewitz showed that theoretical strategy breaks down in practice because of friction, chance, and the enemy's unpredictability. Applies to business: your competitor has a plan too.",
+    "analogy": "Like trying to play chess while your opponent's pieces are invisible — you know they're there, but every move is partly a guess.",
+    "level": "intermediate"
+  },
+  {
+    "id": "history-and-geopolitics:climate-change-as-geopolitics",
+    "type": "standard",
+    "concept": "Climate Change as Geopolitics",
+    "domain": "History & Geopolitics",
+    "oneliner": "Global warming as a driver of conflict, migration, resource competition, and international negotiation.",
+    "whyItMatters": "It's reshaping agriculture, displacing populations, creating water conflicts, and making the Arctic a contested resource frontier.",
+    "analogy": "The slow-motion geopolitical crisis — not a single event but a steady reshaping of every map and every resource equation."
+  },
+  {
+    "id": "history-and-geopolitics:cold-war",
+    "type": "standard",
+    "concept": "Cold War",
+    "domain": "History & Geopolitics",
+    "oneliner": "1947-1991 US-Soviet rivalry — nuclear deterrence, proxy wars, ideological competition, no direct military conflict.",
+    "whyItMatters": "Shaped the world map, fueled the space race, created NATO and Warsaw Pact. Its end produced the unipolar moment.",
+    "analogy": "A 44-year chess game with nuclear pieces — the only winning move was not to play directly."
+  },
+  {
+    "id": "history-and-geopolitics:colonialism",
+    "type": "standard",
+    "concept": "Colonialism",
+    "domain": "History & Geopolitics",
+    "oneliner": "Powerful nations establishing control over foreign territories for economic extraction and strategic advantage.",
+    "whyItMatters": "Reshaped the global map, created lasting inequalities, explains much of today's wealth gap.",
+    "analogy": "A 500-year wealth transfer from the rest of the world to Europe — effects still dominant."
+  },
+  {
+    "id": "history-and-geopolitics:color-revolutions",
+    "type": "standard",
+    "concept": "Color Revolutions",
+    "domain": "History & Geopolitics",
+    "oneliner": "The series of post-Soviet pro-democracy movements — Ukraine (Orange), Georgia (Rose), Kyrgyzstan (Tulip).",
+    "whyItMatters": "Russia views them as Western-backed regime change, which shapes its suspicion of all domestic protest movements.",
+    "analogy": "Popular uprisings wearing colors as brands — democracy movements that terrified authoritarian neighbors."
+  },
+  {
+    "id": "history-and-geopolitics:columbian-exchange",
+    "type": "standard",
+    "concept": "Columbian Exchange",
+    "domain": "History & Geopolitics",
+    "oneliner": "The massive transfer of plants, animals, diseases, and people between the Old and New Worlds after 1492 — the most consequential ecological event in human history.",
+    "whyItMatters": "Potatoes fueled Europe's population boom. Smallpox killed 90% of indigenous Americans. Sugar created the slave trade. One event reshaped agriculture, demographics, and power on every continent.",
+    "analogy": "Like two isolated ecosystems suddenly connected by a bridge — everything crosses, and neither side is ever the same.",
+    "level": "foundational"
+  },
+  {
+    "id": "history-and-geopolitics:concert-of-europe",
+    "type": "standard",
+    "concept": "Concert of Europe",
+    "domain": "History & Geopolitics",
+    "oneliner": "The post-Napoleonic system (1815-1914) where great powers managed European affairs through diplomacy and periodic conferences.",
+    "whyItMatters": "It maintained relative peace for a century. Its breakdown led directly to WWI. The model for later international organizations.",
+    "analogy": "Five great powers agreeing to manage their disputes over dinner instead of on battlefields — it worked for 100 years."
+  },
+  {
+    "id": "history-and-geopolitics:congress-of-vienna",
+    "type": "standard",
+    "concept": "Congress of Vienna",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1814-15 settlement after Napoleon's defeat — redesigned Europe's map and created a century of relative peace.",
+    "whyItMatters": "It established the Concert of Europe — great powers managing conflict through diplomacy rather than war. Lasted until WWI.",
+    "analogy": "The original G7 meeting — monarchs redrawing the map over dinner and keeping the peace for 100 years."
+  },
+  {
+    "id": "history-and-geopolitics:containment",
+    "type": "standard",
+    "concept": "Containment",
+    "domain": "History & Geopolitics",
+    "oneliner": "George Kennan's Cold War strategy: don't try to defeat the Soviet Union militarily, just prevent it from expanding.",
+    "whyItMatters": "It defined US foreign policy for 40 years — NATO, Korean War, Vietnam War were all containment operations.",
+    "analogy": "Building a fence around a fire and waiting for it to burn itself out — patient strategy over direct confrontation."
+  },
+  {
+    "id": "history-and-geopolitics:cuban-missile-crisis",
+    "type": "standard",
+    "concept": "Cuban Missile Crisis",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1962 13-day standoff between US and USSR over Soviet nuclear missiles in Cuba — the closest the world came to nuclear war.",
+    "whyItMatters": "Kennedy and Khrushchev stepped back from the brink. It led to the hotline and nuclear test ban treaties.",
+    "analogy": "Two superpowers playing chicken with nuclear weapons — the moment both realized the game wasn't worth winning."
+  },
+  {
+    "id": "history-and-geopolitics:debt-trap-diplomacy",
+    "type": "standard",
+    "concept": "Debt Trap Diplomacy",
+    "domain": "History & Geopolitics",
+    "oneliner": "Lending to countries that can't repay, then extracting concessions (ports, resources, political alignment) when they default.",
+    "whyItMatters": "Controversial characterization of some Belt and Road loans. Whether intentional or not, sovereign debt dependence creates political leverage. Financial instruments as geopolitical tools.",
+    "analogy": "Like a payday lender for countries — the interest isn't financial, it's political, and the collateral is sovereignty.",
+    "level": "intermediate"
+  },
+  {
+    "id": "history-and-geopolitics:decolonization",
+    "type": "standard",
+    "concept": "Decolonization",
+    "domain": "History & Geopolitics",
+    "oneliner": "Post-WWII colonies gaining independence — reshaping Africa, Asia, and the Middle East's political map.",
+    "whyItMatters": "Created most developing-world nation-states, often with arbitrary borders ignoring ethnic and tribal boundaries.",
+    "analogy": "Empires went home but drew property lines first — often guaranteeing future conflict."
+  },
+  {
+    "id": "history-and-geopolitics:decolonization-waves",
+    "type": "standard",
+    "concept": "Decolonization Waves",
+    "domain": "History & Geopolitics",
+    "oneliner": "The cascading independence movements that ended European colonial empires — 1947 (South Asia), 1960s (Africa), 1970s (Portugal's colonies).",
+    "whyItMatters": "Created 80+ new nations in 30 years, each inheriting colonial borders, institutions, and economic dependencies. Understanding decolonization is essential for understanding every post-colonial state's challenges today.",
+    "analogy": "Like a franchise system collapsing — each location suddenly needs to run independently, but the original infrastructure was designed for dependence, not autonomy.",
+    "level": "foundational"
+  },
+  {
+    "id": "history-and-geopolitics:demographic-transition",
+    "type": "standard",
+    "concept": "Demographic Transition",
+    "domain": "History & Geopolitics",
+    "oneliner": "The shift from high birth/death rates to low birth/death rates as countries develop — a universal pattern.",
+    "whyItMatters": "Every wealthy country has gone through it. The population explosion happens in the middle (death rates fall before birth rates).",
+    "analogy": "The population growth curve every nation follows — birth rates eventually catch down to death rates, but the lag causes a boom."
+  },
+  {
+    "id": "history-and-geopolitics:domino-theory",
+    "type": "standard",
+    "concept": "Domino Theory",
+    "domain": "History & Geopolitics",
+    "oneliner": "The Cold War belief that if one country fell to communism, neighboring countries would follow — justifying intervention.",
+    "whyItMatters": "It drove US involvement in Vietnam, Laos, and Cambodia. Partially validated (Indochina) but overapplied globally.",
+    "analogy": "The geopolitical version of falling dominoes — if Vietnam goes communist, Thailand and Malaysia follow. Partly true, mostly paranoia."
+  },
+  {
+    "id": "history-and-geopolitics:enclosure-movement",
+    "type": "standard",
+    "concept": "Enclosure Movement",
+    "domain": "History & Geopolitics",
+    "oneliner": "The privatization of common land in England that displaced peasants and created the urban labor force for industrialization.",
+    "whyItMatters": "Every tech platform recapitulates enclosure: open commons become proprietary platforms. Understanding this pattern reveals who gains and who loses when 'commons' get fenced.",
+    "analogy": "Like a free park that becomes a gated community — the space is the same, but access changes everything.",
+    "level": "intermediate"
+  },
+  {
+    "id": "history-and-geopolitics:enlightenment",
+    "type": "standard",
+    "concept": "Enlightenment",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 18th-century intellectual movement emphasizing reason, science, individual rights, and skepticism of authority.",
+    "whyItMatters": "It produced the American and French Revolutions, modern democracy, secular government, and the scientific method.",
+    "analogy": "The moment Western civilization decided reason should replace tradition as the basis for organizing society."
+  },
+  {
+    "id": "history-and-geopolitics:european-union",
+    "type": "standard",
+    "concept": "European Union",
+    "domain": "History & Geopolitics",
+    "oneliner": "Political/economic union of 27 countries — shared institutions, common market, common currency for most.",
+    "whyItMatters": "The most ambitious supranational governance experiment. Born to make European war economically impossible.",
+    "analogy": "Tying economies so tightly that war would be punching yourself — peace through prosperity."
+  },
+  {
+    "id": "history-and-geopolitics:failed-state",
+    "type": "standard",
+    "concept": "Failed State",
+    "domain": "History & Geopolitics",
+    "oneliner": "A state that can no longer perform basic governance functions — security, rule of law, public services.",
+    "whyItMatters": "Somalia, Yemen, and parts of Libya. Failed states create refugee crises, terrorism, and regional instability.",
+    "analogy": "A government that exists on paper but not in reality — no security, no services, no legitimate authority."
+  },
+  {
+    "id": "history-and-geopolitics:fall-of-the-soviet-union",
+    "type": "standard",
+    "concept": "Fall of the Soviet Union",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1991 dissolution of the USSR into 15 independent states — ending the Cold War.",
+    "whyItMatters": "Created a unipolar world with US dominance, unleashed 15 new nations, and produced both democratic aspirations and authoritarian backsliding.",
+    "analogy": "A superpower simply ceasing to exist — not conquered, just collapsed from internal contradictions."
+  },
+  {
+    "id": "history-and-geopolitics:french-revolution",
+    "type": "standard",
+    "concept": "French Revolution",
+    "domain": "History & Geopolitics",
+    "oneliner": "1789 overthrow of French monarchy — established modern concepts of citizenship, popular sovereignty, secular government.",
+    "whyItMatters": "Showed how revolutions can devour their own children. Liberty, equality, fraternity — and the guillotine.",
+    "analogy": "When subjects became citizens — and discovered freedom without institutions produces chaos."
+  },
+  {
+    "id": "history-and-geopolitics:genocide",
+    "type": "standard",
+    "concept": "Genocide",
+    "domain": "History & Geopolitics",
+    "oneliner": "The deliberate, systematic destruction of an ethnic, racial, religious, or national group. Term coined by Raphael Lemkin in 1944.",
+    "whyItMatters": "The Holocaust, Rwanda, Armenia, Cambodia. The UN Genocide Convention (1948) made it a crime under international law.",
+    "analogy": "The darkest capability of human organization — industrial-scale hatred requiring bureaucracy, logistics, and willful blindness."
+  },
+  {
+    "id": "history-and-geopolitics:great-divergence",
+    "type": "standard",
+    "concept": "Great Divergence",
+    "domain": "History & Geopolitics",
+    "oneliner": "Why did Western Europe industrialize first, pulling ahead of China and the Islamic world after centuries of rough parity?",
+    "whyItMatters": "Pomeranz's thesis: coal geography and New World colonization, not cultural superiority, explain the divergence. Path dependence, not destiny.",
+    "analogy": "Like two runners who were neck-and-neck until one found a shortcut — the gap isn't talent, it's terrain.",
+    "level": "advanced"
+  },
+  {
+    "id": "history-and-geopolitics:green-revolution",
+    "type": "standard",
+    "concept": "Green Revolution",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1960s-70s agricultural transformation — high-yield crop varieties, irrigation, fertilizers that dramatically increased food production.",
+    "whyItMatters": "It prevented predicted mass famines in Asia and Latin America. Norman Borlaug's work may have saved a billion lives.",
+    "analogy": "Science's answer to Malthus — proving that human ingenuity could outrun population growth, at least temporarily."
+  },
+  {
+    "id": "history-and-geopolitics:gunpowder-empires",
+    "type": "standard",
+    "concept": "Gunpowder Empires",
+    "domain": "History & Geopolitics",
+    "oneliner": "The Ottoman, Safavid, and Mughal empires that dominated the Islamic world from the 15th-18th centuries by mastering gunpowder warfare.",
+    "whyItMatters": "Technology adoption doesn't just win battles — it determines which civilizations rise and fall. The empires that mastered gunpowder earliest dominated for centuries. The same pattern repeats with each transformative technology.",
+    "analogy": "Like early adopters of the internet building platform empires — the technology was available to everyone, but those who integrated it first dominated the era.",
+    "level": "intermediate"
+  },
+  {
+    "id": "history-and-geopolitics:haitian-revolution",
+    "type": "standard",
+    "concept": "Haitian Revolution",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1791-1804 slave revolt establishing Haiti as the first free Black republic — the only successful large-scale slave rebellion.",
+    "whyItMatters": "It terrified slaveholding societies worldwide and influenced abolition movements. Napoleon sold Louisiana partly because of it.",
+    "analogy": "Enslaved people defeating the most powerful army in the world — and creating a nation from revolution."
+  },
+  {
+    "id": "history-and-geopolitics:helsinki-accords",
+    "type": "standard",
+    "concept": "Helsinki Accords",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1975 agreement between Western and Eastern blocs recognizing European borders and establishing human rights commitments.",
+    "whyItMatters": "The human rights provisions became a tool for dissidents behind the Iron Curtain — a weapon the Soviets didn't realize they'd handed over.",
+    "analogy": "The diplomatic document that accidentally gave dissidents a legal framework to challenge their own governments."
+  },
+  {
+    "id": "history-and-geopolitics:holocaust",
+    "type": "standard",
+    "concept": "Holocaust",
+    "domain": "History & Geopolitics",
+    "oneliner": "The systematic murder of 6 million Jews and millions of others by Nazi Germany (1941-1945).",
+    "whyItMatters": "It defined the moral baseline of the postwar order, created the Universal Declaration of Human Rights, and the State of Israel.",
+    "analogy": "Industrialized genocide — bureaucracy, logistics, and ideology combined to produce history's greatest moral catastrophe."
+  },
+  {
+    "id": "history-and-geopolitics:hundred-years-war",
+    "type": "standard",
+    "concept": "Hundred Years' War",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1337-1453 series of conflicts between England and France that transformed both nations and warfare.",
+    "whyItMatters": "It produced Joan of Arc, ended feudal warfare, created national identities, and established that longbows beat knights.",
+    "analogy": "A family feud that lasted five generations and accidentally invented national identity."
+  },
+  {
+    "id": "history-and-geopolitics:industrial-revolution",
+    "type": "standard",
+    "concept": "Industrial Revolution",
+    "domain": "History & Geopolitics",
+    "oneliner": "Late 18th-19th century transition from agrarian to industrial manufacturing — beginning in Britain.",
+    "whyItMatters": "Transformed every aspect of human life: urbanization, wealth, labor, pollution, trade. We live in its consequences.",
+    "analogy": "The moment humanity multiplied labor with machines — and everything changed forever."
+  },
+  {
+    "id": "history-and-geopolitics:iranian-revolution",
+    "type": "standard",
+    "concept": "Iranian Revolution",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1979 overthrow of the US-backed Shah, establishing an Islamic Republic under Ayatollah Khomeini.",
+    "whyItMatters": "It created the Sunni-Shia geopolitical divide, the hostage crisis, and Iran's role as a Middle East power broker.",
+    "analogy": "The moment political Islam proved it could topple a Western-backed regime — reshaping the Middle East."
+  },
+  {
+    "id": "history-and-geopolitics:longue-duree",
+    "type": "standard",
+    "concept": "Longue Durée",
+    "domain": "History & Geopolitics",
+    "oneliner": "Braudel's concept of long-duration historical structures — geography, climate, and deep cultural patterns that persist for centuries beneath surface events.",
+    "whyItMatters": "News reports events; history studies decades; the longue durée studies centuries. The deepest forces shaping your world are the ones changing too slowly to notice.",
+    "analogy": "Like tectonic plates beneath earthquakes — the quakes make the news, but the plates explain the pattern.",
+    "level": "advanced"
+  },
+  {
+    "id": "history-and-geopolitics:mad-mutually-assured-destruction",
+    "type": "standard",
+    "concept": "MAD (Mutually Assured Destruction)",
+    "domain": "History & Geopolitics",
+    "oneliner": "Nuclear war is unwinnable because both sides can destroy each other — making first strikes suicidal.",
+    "whyItMatters": "Arguably prevented WWIII. Safety through guaranteed mutual annihilation.",
+    "analogy": "Two people in a dynamite room, each holding a lighter — neither lights up because both would die."
+  },
+  {
+    "id": "history-and-geopolitics:magna-carta",
+    "type": "standard",
+    "concept": "Magna Carta",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1215 English charter establishing that the king is subject to law — the seed of constitutional government.",
+    "whyItMatters": "It introduced the principle that no one, not even the monarch, is above the law. Foundation of Anglo-American legal tradition.",
+    "analogy": "The first time a king was told 'you're not above the rules' — and it stuck."
+  },
+  {
+    "id": "history-and-geopolitics:mandate-of-heaven",
+    "type": "standard",
+    "concept": "Mandate of Heaven",
+    "domain": "History & Geopolitics",
+    "oneliner": "Legitimate rule requires just governance — natural disasters and popular revolt signal Heaven has withdrawn its mandate.",
+    "whyItMatters": "Chinese political philosophy for 3,000 years. Unlike divine right, the Mandate can be lost. It's a built-in accountability mechanism: bad outcomes = illegitimate rule.",
+    "analogy": "Like a performance review from the cosmos — floods and famines are your negative feedback, and you can be fired.",
+    "level": "intermediate"
+  },
+  {
+    "id": "history-and-geopolitics:mandate-system",
+    "type": "standard",
+    "concept": "Mandate System",
+    "domain": "History & Geopolitics",
+    "oneliner": "The post-WWI League of Nations arrangement giving Allied powers oversight of former German and Ottoman territories.",
+    "whyItMatters": "It was colonialism rebranded as 'guardianship.' Mandates in the Middle East created Iraq, Jordan, Palestine, and Syria.",
+    "analogy": "Colonialism with a permission slip — controlling foreign territories under the fig leaf of international authorization."
+  },
+  {
+    "id": "history-and-geopolitics:marshall-plan",
+    "type": "standard",
+    "concept": "Marshall Plan",
+    "domain": "History & Geopolitics",
+    "oneliner": "1948 US program providing $13B+ to rebuild Western Europe after WWII.",
+    "whyItMatters": "Rebuilt allies, created markets, prevented communist expansion. Arguably the most successful foreign policy program ever.",
+    "analogy": "Investing in customers' recovery because their prosperity is your prosperity — enlightened self-interest at scale."
+  },
+  {
+    "id": "history-and-geopolitics:meiji-restoration",
+    "type": "standard",
+    "concept": "Meiji Restoration",
+    "domain": "History & Geopolitics",
+    "oneliner": "Japan's rapid modernization (1868-1912) — transforming from feudal isolation to industrial power in one generation.",
+    "whyItMatters": "Japan went from samurai to battleships in 40 years. The most dramatic voluntary modernization in history.",
+    "analogy": "A country speedrunning the Industrial Revolution — feudal to modern in one generation through sheer national will."
+  },
+  {
+    "id": "history-and-geopolitics:monroe-doctrine",
+    "type": "standard",
+    "concept": "Monroe Doctrine",
+    "domain": "History & Geopolitics",
+    "oneliner": "1823 US policy declaring the Western Hemisphere off-limits to European colonization or interference.",
+    "whyItMatters": "It defined US foreign policy for two centuries and justified both protecting Latin America and intervening in it.",
+    "analogy": "America's 'no trespassing' sign for the Western Hemisphere — neighborly protection with an imperial subtext."
+  },
+  {
+    "id": "history-and-geopolitics:napoleonic-wars",
+    "type": "standard",
+    "concept": "Napoleonic Wars",
+    "domain": "History & Geopolitics",
+    "oneliner": "The series of conflicts (1803-1815) spreading French Revolutionary ideals across Europe through military conquest.",
+    "whyItMatters": "Napoleon exported legal codes, meritocracy, and national identity — permanently transforming European governance.",
+    "analogy": "A short man's attempt to reorganize Europe by force — spreading revolutionary ideas at bayonet point."
+  },
+  {
+    "id": "history-and-geopolitics:nato",
+    "type": "standard",
+    "concept": "NATO",
+    "domain": "History & Geopolitics",
+    "oneliner": "Military alliance where an attack on one is an attack on all (Article 5). Founded 1949. 32 members.",
+    "whyItMatters": "Deterred Soviet aggression. Article 5 invoked once — after 9/11. Backbone of Western collective defense.",
+    "analogy": "Mess with one of us, you mess with all 32 of us."
+  },
+  {
+    "id": "history-and-geopolitics:non-aligned-movement",
+    "type": "standard",
+    "concept": "Non-Aligned Movement",
+    "domain": "History & Geopolitics",
+    "oneliner": "Cold War-era coalition of states belonging to neither the Western nor Soviet bloc — India, Egypt, Yugoslavia leading.",
+    "whyItMatters": "It represented the majority of the world's population refusing to take sides. Its influence waned after the Cold War ended.",
+    "analogy": "The world's majority saying 'your fight isn't our fight' — neutrality as a political statement."
+  },
+  {
+    "id": "history-and-geopolitics:nuclear-proliferation",
+    "type": "standard",
+    "concept": "Nuclear Proliferation",
+    "domain": "History & Geopolitics",
+    "oneliner": "The spread of nuclear weapons to additional states beyond the original five (US, Russia, UK, France, China).",
+    "whyItMatters": "Nine states now have nuclear weapons. The Non-Proliferation Treaty (NPT) has partially constrained spread but faces growing challenges.",
+    "analogy": "A genie that can't go back in the bottle — each new nuclear state changes the calculus for every other."
+  },
+  {
+    "id": "history-and-geopolitics:nuremberg-trials",
+    "type": "standard",
+    "concept": "Nuremberg Trials",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1945-46 prosecution of Nazi leaders — establishing that 'following orders' is not a defense for war crimes.",
+    "whyItMatters": "Created the framework of international criminal law. Established individual accountability for crimes against humanity.",
+    "analogy": "The moment 'I was just following orders' stopped being a legal defense — personal responsibility for atrocities."
+  },
+  {
+    "id": "history-and-geopolitics:opium-wars",
+    "type": "standard",
+    "concept": "Opium Wars",
+    "domain": "History & Geopolitics",
+    "oneliner": "British-Chinese conflicts (1839-42, 1856-60) over opium trade — resulting in China's 'Century of Humiliation.'",
+    "whyItMatters": "They forced China to cede Hong Kong, opened treaty ports, and created deep resentment that shapes Chinese politics today.",
+    "analogy": "A superpower forcibly drugging another country's population to fix a trade deficit — colonialism at its most nakedly corrupt."
+  },
+  {
+    "id": "history-and-geopolitics:partition-of-india",
+    "type": "standard",
+    "concept": "Partition of India",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1947 division of British India into India and Pakistan along religious lines — the largest mass migration in history.",
+    "whyItMatters": "10-20 million displaced, 1-2 million killed. Created a nuclear rivalry that persists today.",
+    "analogy": "Drawing a line through a civilization along religious fault lines — with predictably catastrophic results."
+  },
+  {
+    "id": "history-and-geopolitics:pax-americana",
+    "type": "standard",
+    "concept": "Pax Americana",
+    "domain": "History & Geopolitics",
+    "oneliner": "Post-WWII period of relative global peace under American hegemony — military presence, alliances, economic dominance.",
+    "whyItMatters": "Arguably ending as China rises and US politics fractures. What replaces it is the defining question.",
+    "analogy": "America as world's sheriff — keeping order but also writing rules to benefit itself."
+  },
+  {
+    "id": "history-and-geopolitics:peloponnesian-war",
+    "type": "standard",
+    "concept": "Peloponnesian War",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 5th-century BCE conflict between Athens and Sparta that destroyed Greek dominance and gave us Thucydides' history.",
+    "whyItMatters": "It's the original case study in great power conflict, democratic hubris, and the fog of war. Required reading for strategists.",
+    "analogy": "The ancient Greek Cold War — democracy vs. militarism, sea power vs. land power, ending with both sides weakened."
+  },
+  {
+    "id": "history-and-geopolitics:petrodollar",
+    "type": "standard",
+    "concept": "Petrodollar",
+    "domain": "History & Geopolitics",
+    "oneliner": "After Nixon ended gold convertibility, dollar dominance maintained partly through oil being globally priced in dollars.",
+    "whyItMatters": "Countries need dollars to buy oil, creating permanent demand for US currency and debt. BRICS de-dollarization threatens this.",
+    "analogy": "The dollar's second life — after gold backing ended, oil became the new anchor."
+  },
+  {
+    "id": "history-and-geopolitics:pivot-to-asia",
+    "type": "standard",
+    "concept": "Pivot to Asia",
+    "domain": "History & Geopolitics",
+    "oneliner": "The Obama-era US strategic reorientation toward the Asia-Pacific — recognizing China as the primary long-term competitor.",
+    "whyItMatters": "It signaled that the Middle East was no longer the top priority. Continued under different names by subsequent administrations.",
+    "analogy": "America shifting its strategic attention from the Middle East chessboard to the Pacific one."
+  },
+  {
+    "id": "history-and-geopolitics:printing-press",
+    "type": "standard",
+    "concept": "Printing Press",
+    "domain": "History & Geopolitics",
+    "oneliner": "Gutenberg's movable type press (~1440) — enabled mass production of books, democratizing knowledge.",
+    "whyItMatters": "It triggered the Reformation, the Scientific Revolution, and the Enlightenment. Information became accessible to the masses.",
+    "analogy": "The original internet — suddenly information could be copied cheaply and spread without gatekeepers."
+  },
+  {
+    "id": "history-and-geopolitics:printing-press-revolution",
+    "type": "standard",
+    "concept": "Printing Press Revolution",
+    "domain": "History & Geopolitics",
+    "oneliner": "Gutenberg's press didn't just spread information faster — it destroyed the Church's information monopoly, enabling the Reformation, science, and democracy.",
+    "whyItMatters": "Every communication revolution (printing press, telegraph, internet, social media) follows the same pattern: democratize access, destabilize gatekeepers, trigger social upheaval.",
+    "analogy": "Like giving everyone a megaphone in a room where only priests could speak — the volume of ideas becomes uncontrollable.",
+    "level": "foundational"
+  },
+  {
+    "id": "history-and-geopolitics:proxy-war",
+    "type": "standard",
+    "concept": "Proxy War",
+    "domain": "History & Geopolitics",
+    "oneliner": "A conflict where major powers support opposing sides without directly fighting each other — Korea, Vietnam, Afghanistan, Syria.",
+    "whyItMatters": "Superpowers avoid direct confrontation by fighting through local allies. The human cost falls on the proxy nations.",
+    "analogy": "Two chess players using someone else's pieces — and someone else's board."
+  },
+  {
+    "id": "history-and-geopolitics:proxy-wars-modern",
+    "type": "standard",
+    "concept": "Proxy Wars (Modern)",
+    "domain": "History & Geopolitics",
+    "oneliner": "21st-century great-power competition fought through local allies — Syria, Yemen, Ukraine before 2022.",
+    "whyItMatters": "The pattern from the Cold War continues. Major powers avoid direct confrontation by supporting opposing sides.",
+    "analogy": "The modern version of great powers fighting without fighting — using other countries' soldiers and other countries' soil."
+  },
+  {
+    "id": "history-and-geopolitics:realism-vs-liberalism-ir",
+    "type": "standard",
+    "concept": "Realism vs Liberalism (IR)",
+    "domain": "History & Geopolitics",
+    "oneliner": "Realism: states are self-interested, power is currency, conflict inevitable. Liberalism: institutions and trade foster cooperation.",
+    "whyItMatters": "Realists predicted Russia's aggression. Liberals predicted the EU. Neither alone explains everything.",
+    "analogy": "Realism says the world is a dark alley. Liberalism says we can install streetlights."
+  },
+  {
+    "id": "history-and-geopolitics:reformation",
+    "type": "standard",
+    "concept": "Reformation",
+    "domain": "History & Geopolitics",
+    "oneliner": "Luther's 1517 challenge to Catholic Church authority — splitting Western Christianity and reshaping European politics.",
+    "whyItMatters": "It created Protestantism, triggered the Wars of Religion, and ultimately contributed to secularism, individualism, and capitalism.",
+    "analogy": "One monk's complaint letter that accidentally broke Western Christianity in half and reshaped civilization."
+  },
+  {
+    "id": "history-and-geopolitics:resource-curse",
+    "type": "standard",
+    "concept": "Resource Curse",
+    "domain": "History & Geopolitics",
+    "oneliner": "Countries rich in natural resources often have slower economic growth, more corruption, and weaker democracies.",
+    "whyItMatters": "Oil-rich nations like Venezuela, Nigeria, and Libya often underperform resource-poor ones like South Korea and Singapore.",
+    "analogy": "Winning the geological lottery but losing the governance game — natural wealth creating political dysfunction."
+  },
+  {
+    "id": "history-and-geopolitics:rise-of-china",
+    "type": "standard",
+    "concept": "Rise of China",
+    "domain": "History & Geopolitics",
+    "oneliner": "China's transformation from impoverished communist state to the world's second-largest economy in 40 years.",
+    "whyItMatters": "The most significant geopolitical shift of the 21st century. 800 million lifted from poverty. Now challenging US dominance.",
+    "analogy": "The fastest economic transformation in human history — rewriting the global power map in a single generation."
+  },
+  {
+    "id": "history-and-geopolitics:russian-revolution",
+    "type": "standard",
+    "concept": "Russian Revolution",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1917 overthrow of the Tsar and establishment of the world's first communist state under Lenin.",
+    "whyItMatters": "It created the Soviet Union, triggered the Cold War, and inspired communist movements worldwide. Shaped the entire 20th century.",
+    "analogy": "The moment Marx's theory met reality — and immediately began diverging from the script."
+  },
+  {
+    "id": "history-and-geopolitics:rwandan-genocide",
+    "type": "standard",
+    "concept": "Rwandan Genocide",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1994 mass slaughter of ~800,000 Tutsis by Hutu extremists in 100 days — while the international community watched.",
+    "whyItMatters": "Exposed the failure of 'Never Again' and the UN's structural inability to intervene. Led to the concept of 'Responsibility to Protect.'",
+    "analogy": "The world watching a genocide unfold on live television and choosing not to act — the ultimate test of international morality, failed."
+  },
+  {
+    "id": "history-and-geopolitics:scramble-for-africa",
+    "type": "standard",
+    "concept": "Scramble for Africa",
+    "domain": "History & Geopolitics",
+    "oneliner": "European powers carving up Africa at the Berlin Conference (1884-85) — dividing the continent with no African input.",
+    "whyItMatters": "Created arbitrary borders cutting through ethnic groups, sowing seeds of conflict that persist today.",
+    "analogy": "Colonialism's most brazen episode — Europeans dividing a continent they barely knew using rulers and pencils."
+  },
+  {
+    "id": "history-and-geopolitics:silk-road",
+    "type": "standard",
+    "concept": "Silk Road",
+    "domain": "History & Geopolitics",
+    "oneliner": "Ancient trade network connecting China to the Mediterranean — carrying goods, ideas, religions, and diseases for millennia.",
+    "whyItMatters": "It spread Buddhism, Islam, paper, gunpowder, and plague. The original globalization network.",
+    "analogy": "The ancient internet — a slow, physical network transmitting goods, ideas, and viruses across civilizations."
+  },
+  {
+    "id": "history-and-geopolitics:silk-road-modern",
+    "type": "standard",
+    "concept": "Silk Road (Modern)",
+    "domain": "History & Geopolitics",
+    "oneliner": "China's Belt and Road Initiative — a global infrastructure network across 140+ countries. The 21st century's largest development project.",
+    "whyItMatters": "It creates economic dependency, diplomatic leverage, and strategic infrastructure for China. Critics call it debt-trap diplomacy.",
+    "analogy": "A modern empire built with loans and construction contracts instead of armies — influence through infrastructure."
+  },
+  {
+    "id": "history-and-geopolitics:silk-road-economics",
+    "type": "standard",
+    "concept": "Silk Road Economics",
+    "domain": "History & Geopolitics",
+    "oneliner": "The ancient trade network connecting China to Rome that transferred not just goods but technologies, religions, diseases, and ideas across civilizations.",
+    "whyItMatters": "Paper, gunpowder, compass, and the Black Death all traveled the Silk Road. Trade routes are information highways — they transfer culture and knowledge far more consequentially than commodities.",
+    "analogy": "Like the internet of the ancient world — bandwidth was low and latency was months, but the information that crossed it reshaped civilizations.",
+    "level": "foundational"
+  },
+  {
+    "id": "history-and-geopolitics:soft-power",
+    "type": "standard",
+    "concept": "Soft Power",
+    "domain": "History & Geopolitics",
+    "oneliner": "Influencing through attraction (culture, values) rather than coercion (military, sanctions). Joseph Nye coined it.",
+    "whyItMatters": "Hollywood, universities, tech companies are American soft power. K-pop and anime are Korean and Japanese.",
+    "analogy": "Getting people to want what you want — seduction instead of coercion."
+  },
+  {
+    "id": "history-and-geopolitics:space-race",
+    "type": "standard",
+    "concept": "Space Race",
+    "domain": "History & Geopolitics",
+    "oneliner": "The Cold War competition between US and USSR for spaceflight supremacy (1955-1975).",
+    "whyItMatters": "Produced Sputnik, Apollo 11, and massive technological spillovers (GPS, satellite communication, materials science).",
+    "analogy": "Two superpowers trying to out-engineer each other — and accidentally inventing the future."
+  },
+  {
+    "id": "history-and-geopolitics:suez-crisis",
+    "type": "standard",
+    "concept": "Suez Crisis",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1956 conflict when Britain, France, and Israel attacked Egypt after Nasser nationalized the Suez Canal.",
+    "whyItMatters": "The US forced its allies to withdraw, marking the definitive end of British and French imperial power. Pax Americana confirmed.",
+    "analogy": "The moment the old empires discovered they were no longer in charge — America told them to go home, and they did."
+  },
+  {
+    "id": "history-and-geopolitics:suez-crisis-1956",
+    "type": "standard",
+    "concept": "Suez Crisis (1956)",
+    "domain": "History & Geopolitics",
+    "oneliner": "When Britain, France, and Israel invaded Egypt over the Suez Canal, the US and USSR forced them to withdraw — marking the end of European imperial power.",
+    "whyItMatters": "The moment the world realized power had shifted. Old empires learned they couldn't act without superpower permission. Every industry has its 'Suez moment' when the real power is revealed.",
+    "analogy": "Like a vice president overruling the CEO in a board meeting — everyone suddenly understands who actually holds power.",
+    "level": "intermediate"
+  },
+  {
+    "id": "history-and-geopolitics:sykes-picot",
+    "type": "standard",
+    "concept": "Sykes-Picot",
+    "domain": "History & Geopolitics",
+    "oneliner": "Secret 1916 British-French agreement carving up the Ottoman Empire's Middle East into spheres of influence.",
+    "whyItMatters": "Created borders of modern Iraq, Syria, Lebanon, Jordan — ignoring ethnic and religious realities. Many conflicts trace here.",
+    "analogy": "Two diplomats with a map and a ruler, drawing lines through communities they'd never visited."
+  },
+  {
+    "id": "history-and-geopolitics:sykes-picot-agreement",
+    "type": "standard",
+    "concept": "Sykes-Picot Agreement",
+    "domain": "History & Geopolitics",
+    "oneliner": "The secret 1916 deal between Britain and France to carve up the Ottoman Middle East into spheres of influence — borders drawn with rulers, not demographics.",
+    "whyItMatters": "Created Iraq, Syria, Lebanon, and Jordan as artificial states grouping hostile populations. Most Middle Eastern conflicts today trace back to these imposed borders.",
+    "analogy": "Like dividing a city's neighborhoods between two landlords using a street map instead of asking residents where their community ends.",
+    "level": "intermediate"
+  },
+  {
+    "id": "history-and-geopolitics:the-language-extinction-cascade",
+    "type": "scenario",
+    "concept": "The Language Extinction Cascade",
+    "domain": "History & Geopolitics",
+    "scenario": "A minority language loses its youngest generation of speakers when schooling shifts to the dominant language. Within 50 years, the language is extinct, and with it, unique ecological knowledge, oral histories, and cognitive frameworks encoded nowhere else.",
+    "relevantConcepts": [
+      "Biodiversity",
+      "Path Dependence",
+      "Information Entropy",
+      "Sapir-Whorf Hypothesis"
+    ],
+    "domains": [
+      "History & Geopolitics",
+      "Biology",
+      "Cognitive Science"
+    ],
+    "explanation": "Language extinction parallels biodiversity loss: each language encodes unique ways of categorizing reality (Sapir-Whorf). Once lost, the knowledge is irrecoverable — linguistic path dependence means the concepts can't be reconstructed. The threshold is one generation of non-transmission.",
+    "level": "intermediate"
+  },
+  {
+    "id": "history-and-geopolitics:the-nile-dam-crisis",
+    "type": "scenario",
+    "concept": "The Nile Dam Crisis",
+    "domain": "History & Geopolitics",
+    "scenario": "Ethiopia builds a massive hydroelectric dam on the Blue Nile. Egypt, which depends on the Nile for 97% of its water, threatens military action. Sudan is caught in between, needing both the electricity and the water.",
+    "relevantConcepts": [
+      "Tragedy of the Commons",
+      "Game Theory",
+      "Zero-Sum vs Positive-Sum",
+      "Water Security"
+    ],
+    "domains": [
+      "History & Geopolitics",
+      "Economics",
+      "Systems Thinking"
+    ],
+    "explanation": "A shared resource with no global governance creates a multi-player game theory problem. Ethiopia frames it as development rights; Egypt frames it as survival. Neither is wrong. The tragedy of the commons plays out geopolitically when the 'common' is a river that crosses borders. Solutions require moving from zero-sum (my water vs yours) to positive-sum (shared management).",
+    "level": "advanced"
+  },
+  {
+    "id": "history-and-geopolitics:thirty-years-war",
+    "type": "standard",
+    "concept": "Thirty Years' War",
+    "domain": "History & Geopolitics",
+    "oneliner": "The devastating European conflict (1618-1648) that killed 8 million and ended with the Peace of Westphalia.",
+    "whyItMatters": "It established the modern state system, religious tolerance, and the principle of national sovereignty.",
+    "analogy": "Europe's most destructive war before the 20th century — so bad it created the international order to prevent the next one."
+  },
+  {
+    "id": "history-and-geopolitics:thucydides-trap",
+    "type": "standard",
+    "concept": "Thucydides Trap",
+    "domain": "History & Geopolitics",
+    "oneliner": "War becomes likely when a rising power threatens to displace an established one. Graham Allison's theory.",
+    "whyItMatters": "Applied to US-China. In 12 of 16 historical cases, the result was war.",
+    "analogy": "Two alpha males in the same room — historically, someone throws a punch."
+  },
+  {
+    "id": "history-and-geopolitics:tiananmen-square",
+    "type": "standard",
+    "concept": "Tiananmen Square",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1989 pro-democracy protests in Beijing, crushed by military force. Hundreds to thousands killed.",
+    "whyItMatters": "It defined the Chinese Communist Party's approach: economic liberalization, political control. The 'Tank Man' image is iconic.",
+    "analogy": "The moment China's government decided that economic freedom would not include political freedom — and enforced it with tanks."
+  },
+  {
+    "id": "history-and-geopolitics:treaty-of-tordesillas",
+    "type": "standard",
+    "concept": "Treaty of Tordesillas",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1494 agreement between Spain and Portugal dividing the non-Christian world between them — with papal authority.",
+    "whyItMatters": "It's why Brazil speaks Portuguese and the rest of Latin America speaks Spanish. Two countries dividing the globe.",
+    "analogy": "Two countries splitting a planet they hadn't explored yet — drawing a line through the Atlantic and calling dibs."
+  },
+  {
+    "id": "history-and-geopolitics:treaty-of-versailles",
+    "type": "standard",
+    "concept": "Treaty of Versailles",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1919 peace treaty ending WWI — imposed harsh reparations on Germany, widely seen as sowing seeds for WWII.",
+    "whyItMatters": "Keynes predicted it would lead to disaster. It humiliated Germany, fueled resentment, enabled Hitler's rise.",
+    "analogy": "A peace treaty designed more for punishment than stability — planting the bomb that would detonate 20 years later."
+  },
+  {
+    "id": "history-and-geopolitics:vietnam-war",
+    "type": "standard",
+    "concept": "Vietnam War",
+    "domain": "History & Geopolitics",
+    "oneliner": "US military intervention in Vietnam (1955-75) attempting to prevent communist unification — America's longest and most divisive war at the time.",
+    "whyItMatters": "58,000 Americans and 2-3 million Vietnamese died. It shattered American confidence in military intervention.",
+    "analogy": "A superpower learning that you can't defeat a guerrilla insurgency with conventional military force."
+  },
+  {
+    "id": "history-and-geopolitics:war-of-attrition",
+    "type": "standard",
+    "concept": "War of Attrition",
+    "domain": "History & Geopolitics",
+    "oneliner": "A strategy where victory goes to the side willing to endure more losses — grinding down the opponent's will and resources.",
+    "whyItMatters": "WWI trenches were pure attrition. Modern examples include economic sanctions and protracted insurgencies.",
+    "analogy": "Winning by exhaustion rather than maneuver — the grimmer, less romantic reality of most prolonged conflicts."
+  },
+  {
+    "id": "history-and-geopolitics:westphalian-system",
+    "type": "standard",
+    "concept": "Westphalian System",
+    "domain": "History & Geopolitics",
+    "oneliner": "The post-1648 international order — nation-states as sovereign entities with exclusive authority over territory.",
+    "whyItMatters": "Foundation of modern international relations. National sovereignty, non-interference, territorial integrity all trace here.",
+    "analogy": "The moment Europe agreed each country is boss inside its borders — the OS of geopolitics."
+  },
+  {
+    "id": "history-and-geopolitics:westward-expansion",
+    "type": "standard",
+    "concept": "Westward Expansion",
+    "domain": "History & Geopolitics",
+    "oneliner": "US territorial growth across North America (19th century) — Manifest Destiny, displacement of indigenous peoples, gold rush.",
+    "whyItMatters": "It shaped American identity, culture, and mythology. It also involved systematic dispossession and genocide of Native Americans.",
+    "analogy": "A nation expanding by conviction and conquest — building a continent-spanning country on taken land."
+  },
+  {
+    "id": "history-and-geopolitics:willy-brandt-s-kniefall",
+    "type": "standard",
+    "concept": "Willy Brandt's Kniefall",
+    "domain": "History & Geopolitics",
+    "oneliner": "The West German Chancellor kneeling at the Warsaw Ghetto memorial in 1970 — a defining moment of postwar German atonement.",
+    "whyItMatters": "One of the most powerful political gestures in history. Represented Germany's break from its past and commitment to reconciliation.",
+    "analogy": "A leader falling to his knees — saying with a gesture what no speech could: genuine national accountability."
+  },
+  {
+    "id": "history-and-geopolitics:yalta-conference",
+    "type": "standard",
+    "concept": "Yalta Conference",
+    "domain": "History & Geopolitics",
+    "oneliner": "The 1945 meeting of Roosevelt, Churchill, and Stalin dividing postwar Europe into spheres of influence.",
+    "whyItMatters": "It effectively drew the Iron Curtain before the war was over. Eastern Europe's fate was sealed at this table.",
+    "analogy": "Three men dividing the world over dinner — drawing the lines that would define the Cold War."
+  }
+]

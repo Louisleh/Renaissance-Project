@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "generated_at": "2026-04-21T05:20:35.177Z",
+  "source": "/home/user/Renaissance-Project/renaissance-cards.json",
+  "card_count": 1200,
+  "duplicates_skipped": 0,
+  "domain_counts": {
+    "Systems Thinking": 106,
+    "Biology": 122,
+    "Chemistry": 90,
+    "Physics": 95,
+    "Philosophy": 93,
+    "Cognitive Science": 81,
+    "Art & Architecture": 88,
+    "History & Geopolitics": 100,
+    "Mathematics": 92,
+    "Economics": 100,
+    "Psychology": 90,
+    "Technology": 98,
+    "Cross-Domain": 45
+  },
+  "domain_files": {
+    "Systems Thinking": "systems-thinking.json",
+    "Biology": "biology.json",
+    "Chemistry": "chemistry.json",
+    "Physics": "physics.json",
+    "Philosophy": "philosophy.json",
+    "Cognitive Science": "cognitive-science.json",
+    "Art & Architecture": "art-and-architecture.json",
+    "History & Geopolitics": "history-and-geopolitics.json",
+    "Mathematics": "mathematics.json",
+    "Economics": "economics.json",
+    "Psychology": "psychology.json",
+    "Technology": "technology.json",
+    "Cross-Domain": "cross-domain.json"
+  },
+  "type_counts": {
+    "standard": 1063,
+    "connection": 60,
+    "scenario": 24,
+    "application": 28,
+    "synthesis": 25
+  }
+}

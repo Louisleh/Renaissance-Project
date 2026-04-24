@@ -1,0 +1,809 @@
+[
+  {
+    "id": "art-and-architecture:abstract-expressionism",
+    "type": "standard",
+    "concept": "Abstract Expressionism",
+    "domain": "Art & Architecture",
+    "oneliner": "Post-WWII American movement — Pollock, Rothko, de Kooning — spontaneous, automatic, subconscious creation.",
+    "whyItMatters": "Shifted art's center from Paris to New York. Pollock's drip paintings changed what art could be.",
+    "analogy": "Art that doesn't represent anything — it IS something. Pure emotion on canvas."
+  },
+  {
+    "id": "art-and-architecture:acoustic-ecology",
+    "type": "standard",
+    "concept": "Acoustic Ecology",
+    "domain": "Art & Architecture",
+    "oneliner": "The study of the relationship between living beings and their sonic environment — soundscapes as ecosystems.",
+    "whyItMatters": "R. Murray Schafer showed that the sounds of a place define it as much as its visual landscape. Office design, urban planning, and product design all benefit from considering the acoustic environment as a first-class design concern.",
+    "analogy": "Like reading the 'soundtrack' of a place — a quiet library, a noisy market, a humming server room each tell you exactly where you are.",
+    "level": "intermediate"
+  },
+  {
+    "id": "art-and-architecture:adaptive-reuse",
+    "type": "standard",
+    "concept": "Adaptive Reuse",
+    "domain": "Art & Architecture",
+    "oneliner": "Converting old buildings for new purposes — factories into lofts, churches into restaurants, power stations into museums.",
+    "whyItMatters": "Tate Modern (power station), High Line (elevated railway). It's sustainable, preserves character, and creates unique spaces.",
+    "analogy": "Giving old buildings a second career — the architectural equivalent of career pivoting."
+  },
+  {
+    "id": "art-and-architecture:ai-generated-art-flood",
+    "type": "application",
+    "concept": "AI-Generated Art Flood",
+    "domain": "Art & Architecture",
+    "problem": "AI tools make it possible to generate thousands of images per hour, flooding stock photo sites and social media with synthetic content.",
+    "firstOrder": "Visual content becomes nearly free to produce. Small businesses and indie creators access imagery previously requiring expensive photographers. Creative output volume explodes.",
+    "secondOrder": "Human illustrators and photographers lose income as their work competes with free AI output. Training data includes copyrighted work without consent, creating legal battles. Audiences lose ability to distinguish real from synthetic, eroding trust in visual media. Platforms drown in volume, making human-made work harder to discover.",
+    "lesson": "When creation becomes free, curation becomes valuable. The scarce resource shifts from production to attention and trust. Second-order thinking asks: what happens when something previously scarce becomes abundant?",
+    "level": "intermediate"
+  },
+  {
+    "id": "art-and-architecture:art-brut-outsider-art",
+    "type": "standard",
+    "concept": "Art Brut / Outsider Art",
+    "domain": "Art & Architecture",
+    "oneliner": "Art created outside the mainstream art world — by self-taught artists, psychiatric patients, prisoners, visionaries.",
+    "whyItMatters": "Jean Dubuffet coined 'Art Brut' to describe art untainted by academic training. Some of the most raw, powerful work exists here.",
+    "analogy": "Art by people who don't know the rules — and produce something the trained artists can't replicate."
+  },
+  {
+    "id": "art-and-architecture:art-deco",
+    "type": "standard",
+    "concept": "Art Deco",
+    "domain": "Art & Architecture",
+    "oneliner": "1920s-30s glamour — geometric patterns, bold colors, luxurious materials. Chrysler Building, Great Gatsby aesthetic.",
+    "whyItMatters": "Celebrated modernity, speed, and luxury. The visual language of Jazz Age optimism.",
+    "analogy": "What happens when geometry goes to a cocktail party — sharp angles wearing gold and marble."
+  },
+  {
+    "id": "art-and-architecture:art-nouveau",
+    "type": "standard",
+    "concept": "Art Nouveau",
+    "domain": "Art & Architecture",
+    "oneliner": "Late 19th-early 20th century — organic, flowing lines inspired by natural forms. Mucha, Klimt, Gaudí.",
+    "whyItMatters": "A brief beautiful bridge between historical styles and modernism. Gaudí's Sagrada Família is its masterpiece.",
+    "analogy": "Architecture and design having a love affair with nature — curves, vines, and flowers rendered in iron and glass."
+  },
+  {
+    "id": "art-and-architecture:assemblage",
+    "type": "standard",
+    "concept": "Assemblage",
+    "domain": "Art & Architecture",
+    "oneliner": "Three-dimensional art made from combining found objects and materials — Joseph Cornell, Louise Nevelson.",
+    "whyItMatters": "It broke the boundary between sculpture and junk. If you arrange garbage meaningfully, is it art?",
+    "analogy": "Art made from things that weren't supposed to be art — turning trash into meaning through arrangement."
+  },
+  {
+    "id": "art-and-architecture:atrium",
+    "type": "standard",
+    "concept": "Atrium",
+    "domain": "Art & Architecture",
+    "oneliner": "A large open interior space, often multi-story with a glass roof — from the central courtyard of Roman houses.",
+    "whyItMatters": "Modern atriums bring natural light deep into buildings and create dramatic interior public spaces.",
+    "analogy": "Bringing the outside inside — a covered sky that fills interiors with natural light."
+  },
+  {
+    "id": "art-and-architecture:axiality",
+    "type": "standard",
+    "concept": "Axiality",
+    "domain": "Art & Architecture",
+    "oneliner": "Organization of space along a central axis — creates symmetry, procession, and monumental feeling. Versailles, the National Mall.",
+    "whyItMatters": "It's the architectural tool of power — every palace and government building uses axial symmetry to project authority.",
+    "analogy": "Architecture's power stance — a straight line from entrance to focal point that says 'this is important.'"
+  },
+  {
+    "id": "art-and-architecture:baroque",
+    "type": "standard",
+    "concept": "Baroque",
+    "domain": "Art & Architecture",
+    "oneliner": "Dramatic, ornate, emotionally intense style (1600-1750) — Caravaggio's shadows, Bernini's sculptures, Versailles' excess.",
+    "whyItMatters": "Partly a Catholic response to Protestantism — art as emotional propaganda designed to overwhelm.",
+    "analogy": "Art turned to 11 — if Renaissance was a conversation, Baroque was a sermon during a thunderstorm."
+  },
+  {
+    "id": "art-and-architecture:bauhaus",
+    "type": "standard",
+    "concept": "Bauhaus",
+    "domain": "Art & Architecture",
+    "oneliner": "German design school (1919-1933) unifying art, craft, and technology. 'Form follows function.'",
+    "whyItMatters": "Every minimalist product, clean font, and glass-steel building traces back to Bauhaus.",
+    "analogy": "The school that decided beauty should come from purpose, not decoration."
+  },
+  {
+    "id": "art-and-architecture:bauhaus-typography",
+    "type": "standard",
+    "concept": "Bauhaus Typography",
+    "domain": "Art & Architecture",
+    "oneliner": "The Bauhaus school's approach to type — sans-serif, geometric, minimal, functional. Futura is the quintessential example.",
+    "whyItMatters": "It killed ornamental type and established the clean, readable aesthetic that dominates modern design.",
+    "analogy": "Typefaces that got a haircut and went to engineering school — clean, geometric, no nonsense."
+  },
+  {
+    "id": "art-and-architecture:biomimicry-in-architecture",
+    "type": "standard",
+    "concept": "Biomimicry in Architecture",
+    "domain": "Art & Architecture",
+    "oneliner": "Designing buildings and structures by emulating nature's time-tested patterns, forms, and strategies.",
+    "whyItMatters": "Eastgate Centre in Zimbabwe uses termite-mound ventilation to cool without AC. Nature has already solved most engineering problems — the skill is knowing where to look.",
+    "analogy": "Like asking evolution for engineering advice — 3.8 billion years of R&D, all open-source.",
+    "level": "intermediate"
+  },
+  {
+    "id": "art-and-architecture:biophilic-design",
+    "type": "standard",
+    "concept": "Biophilic Design",
+    "domain": "Art & Architecture",
+    "oneliner": "Incorporating natural elements — plants, water, natural light, organic materials — into built environments.",
+    "whyItMatters": "Evidence shows it reduces stress, improves productivity, and accelerates hospital recovery.",
+    "analogy": "Architecture that remembers humans are animals — bringing nature inside because our brains never stopped needing it."
+  },
+  {
+    "id": "art-and-architecture:brutalism",
+    "type": "standard",
+    "concept": "Brutalism",
+    "domain": "Art & Architecture",
+    "oneliner": "Mid-20th century raw concrete, massive geometry, uncompromising functionality.",
+    "whyItMatters": "Loved by architects, often hated by residents. Experiencing a revival for its honesty.",
+    "analogy": "Architecture that refuses to apologize for being a building — raw concrete, zero decoration."
+  },
+  {
+    "id": "art-and-architecture:brutalism-revival",
+    "type": "standard",
+    "concept": "Brutalism Revival",
+    "domain": "Art & Architecture",
+    "oneliner": "The 21st-century reappraisal of Brutalist architecture — once reviled, now celebrated for honesty and sculptural power.",
+    "whyItMatters": "Instagram-driven appreciation of raw concrete. What one generation demolished, the next photographs obsessively.",
+    "analogy": "The ugly duckling of architecture — decades of hatred followed by a hipster-driven love affair."
+  },
+  {
+    "id": "art-and-architecture:cantilever",
+    "type": "standard",
+    "concept": "Cantilever",
+    "domain": "Art & Architecture",
+    "oneliner": "A beam anchored at only one end, projecting outward — a fundamental engineering principle.",
+    "whyItMatters": "It enables balconies, bridges, aircraft wings, and Frank Lloyd Wright's Fallingwater.",
+    "analogy": "A diving board — anchored at one end, defying gravity at the other."
+  },
+  {
+    "id": "art-and-architecture:chiaroscuro",
+    "type": "standard",
+    "concept": "Chiaroscuro",
+    "domain": "Art & Architecture",
+    "oneliner": "Dramatic contrast between light and dark — pioneered by Caravaggio. Still used in film noir and cinematography.",
+    "whyItMatters": "Creates depth, drama, and emotional intensity. Still the visual language of suspense.",
+    "analogy": "Painting with shadows — using darkness as actively as light to create mood."
+  },
+  {
+    "id": "art-and-architecture:chroma-saturation",
+    "type": "standard",
+    "concept": "Chroma / Saturation",
+    "domain": "Art & Architecture",
+    "oneliner": "The intensity or purity of a color — high saturation is vivid, low saturation is muted or grayish.",
+    "whyItMatters": "Understanding saturation is key to color theory, interior design, branding, and understanding why film colorists do what they do.",
+    "analogy": "The volume knob of color — turning it up makes red screaming-red, turning it down makes red dusty-pink."
+  },
+  {
+    "id": "art-and-architecture:color-field-painting",
+    "type": "standard",
+    "concept": "Color Field Painting",
+    "domain": "Art & Architecture",
+    "oneliner": "Large expanses of flat color that create an immersive emotional experience — Rothko's goal was to make the viewer cry, not think.",
+    "whyItMatters": "Proved that color alone, without representation or narrative, can produce profound emotional responses. In design: sometimes the most powerful communication is the simplest — a single color, properly deployed, says more than an essay.",
+    "analogy": "Like standing in fog — there's nothing to 'see,' but the experience envelops you completely.",
+    "level": "intermediate"
+  },
+  {
+    "id": "art-and-architecture:composition",
+    "type": "standard",
+    "concept": "Composition",
+    "domain": "Art & Architecture",
+    "oneliner": "The arrangement of visual elements within a frame — balance, symmetry, rule of thirds, leading lines.",
+    "whyItMatters": "It's what separates a snapshot from a photograph, a painting from a decoration. The invisible structure guiding the viewer's eye.",
+    "analogy": "The architecture of an image — where things are placed matters as much as what they are."
+  },
+  {
+    "id": "art-and-architecture:concrete",
+    "type": "standard",
+    "concept": "Concrete",
+    "domain": "Art & Architecture",
+    "oneliner": "The most used construction material on Earth — a mixture of cement, water, sand, and aggregate.",
+    "whyItMatters": "After water, it's the most consumed substance on Earth. Cement production alone causes ~8% of global CO2.",
+    "analogy": "The stuff everything is built from — ordinary, ubiquitous, and quietly one of the biggest climate problems."
+  },
+  {
+    "id": "art-and-architecture:constructivism",
+    "type": "standard",
+    "concept": "Constructivism",
+    "domain": "Art & Architecture",
+    "oneliner": "Russian avant-garde movement (1910s-20s) — art in service of social revolution. Geometric, industrial, utilitarian.",
+    "whyItMatters": "Art as propaganda and social engineering. Influenced graphic design, typography, and architecture globally.",
+    "analogy": "Art that punched a time clock — beauty in service of the revolution, form in service of ideology."
+  },
+  {
+    "id": "art-and-architecture:contrapposto",
+    "type": "standard",
+    "concept": "Contrapposto",
+    "domain": "Art & Architecture",
+    "oneliner": "A sculpture pose where the figure's weight shifts to one leg, creating a natural S-curve — invented by ancient Greeks.",
+    "whyItMatters": "It made marble look alive. Before contrapposto, statues stood rigid. After, they looked like they might walk away.",
+    "analogy": "The moment sculpture learned to relax — shifting weight to one hip and suddenly looking human."
+  },
+  {
+    "id": "art-and-architecture:counter-reformation-art",
+    "type": "standard",
+    "concept": "Counter-Reformation Art",
+    "domain": "Art & Architecture",
+    "oneliner": "Catholic art deliberately designed to inspire faith and counter Protestant criticisms — emotional, dramatic, accessible.",
+    "whyItMatters": "The Council of Trent mandated art that was clear, emotionally engaging, and doctrinally correct. Baroque art was the result.",
+    "analogy": "Art as spiritual propaganda — the Catholic Church weaponizing beauty to win back hearts from Protestantism."
+  },
+  {
+    "id": "art-and-architecture:cubism",
+    "type": "standard",
+    "concept": "Cubism",
+    "domain": "Art & Architecture",
+    "oneliner": "Picasso and Braque showing multiple perspectives simultaneously — fragmenting subjects into geometric forms.",
+    "whyItMatters": "The most influential art movement of the 20th century. It shattered the single viewpoint that had dominated since the Renaissance.",
+    "analogy": "Looking at something from every angle at once and painting all those views on the same canvas."
+  },
+  {
+    "id": "art-and-architecture:de-stijl",
+    "type": "standard",
+    "concept": "De Stijl",
+    "domain": "Art & Architecture",
+    "oneliner": "Dutch movement (1917-31) — pure abstraction using only primary colors, black, white, and straight lines. Mondrian, Rietveld.",
+    "whyItMatters": "Reduced art to its most fundamental elements. Influenced Bauhaus, modern architecture, and graphic design.",
+    "analogy": "Art reduced to its periodic table — only the primary elements, nothing extra."
+  },
+  {
+    "id": "art-and-architecture:deconstructivism",
+    "type": "standard",
+    "concept": "Deconstructivism",
+    "domain": "Art & Architecture",
+    "oneliner": "Architectural style featuring fragmented, distorted forms that challenge conventional structure — Gehry, Hadid, Libeskind.",
+    "whyItMatters": "Buildings that look impossible or unstable but are structurally sound. The Guggenheim Bilbao transformed a city.",
+    "analogy": "Architecture having a nervous breakdown — and looking spectacular doing it."
+  },
+  {
+    "id": "art-and-architecture:environmental-design",
+    "type": "standard",
+    "concept": "Environmental Design",
+    "domain": "Art & Architecture",
+    "oneliner": "Designing the total environment — buildings, landscapes, urban spaces — as integrated human experiences.",
+    "whyItMatters": "It considers how architecture, landscape, lighting, sound, and signage create holistic experiences.",
+    "analogy": "Designing the stage, not just the building — the entire human experience of being in a place."
+  },
+  {
+    "id": "art-and-architecture:fenestration",
+    "type": "standard",
+    "concept": "Fenestration",
+    "domain": "Art & Architecture",
+    "oneliner": "The arrangement and design of windows in a building — controlling light, view, privacy, and thermal performance through aperture design.",
+    "whyItMatters": "Le Corbusier called architecture 'the masterly, correct, and magnificent play of masses brought together in light.' Windows are how buildings breathe, see, and speak.",
+    "analogy": "Like the eyes of a face — their size, shape, and placement define the building's character and relationship to its surroundings.",
+    "level": "intermediate"
+  },
+  {
+    "id": "art-and-architecture:feng-shui",
+    "type": "standard",
+    "concept": "Feng Shui",
+    "domain": "Art & Architecture",
+    "oneliner": "Chinese philosophical system of spatial arrangement to harmonize with the environment — literally 'wind-water.'",
+    "whyItMatters": "Whether you believe in qi or not, many feng shui principles align with good design: natural light, decluttering, flow.",
+    "analogy": "Ancient Chinese interior design philosophy — arranging space to optimize energy flow, or at minimum, good vibes."
+  },
+  {
+    "id": "art-and-architecture:flying-buttress",
+    "type": "standard",
+    "concept": "Flying Buttress",
+    "domain": "Art & Architecture",
+    "oneliner": "An external arch transferring roof thrust to an outer support, allowing thin walls and huge windows.",
+    "whyItMatters": "A structural engineering breakthrough that defined Gothic architecture and enabled stained glass cathedrals.",
+    "analogy": "An architectural kickstand — supporting the wall from outside so the inside can be all light."
+  },
+  {
+    "id": "art-and-architecture:form-follows-function",
+    "type": "standard",
+    "concept": "Form Follows Function",
+    "domain": "Art & Architecture",
+    "oneliner": "Louis Sullivan's principle that a building's design should be determined by its purpose — the core idea of modernist architecture.",
+    "whyItMatters": "It challenged centuries of decorative tradition. A factory should look like a factory, not a Greek temple.",
+    "analogy": "Don't put a hat on a fish — let the building's purpose determine its shape."
+  },
+  {
+    "id": "art-and-architecture:fresco",
+    "type": "standard",
+    "concept": "Fresco",
+    "domain": "Art & Architecture",
+    "oneliner": "Painting on wet plaster so pigment becomes part of the wall — Michelangelo's Sistine Chapel is the most famous.",
+    "whyItMatters": "It's permanent but unforgiving — mistakes can't be painted over. Artists must work fast before plaster dries.",
+    "analogy": "Painting INTO the wall rather than ON it — the art literally becomes part of the architecture."
+  },
+  {
+    "id": "art-and-architecture:futurism",
+    "type": "standard",
+    "concept": "Futurism",
+    "domain": "Art & Architecture",
+    "oneliner": "Italian movement (1909-44) celebrating speed, technology, machinery, and modernity. Boccioni, Marinetti.",
+    "whyItMatters": "It glorified technology and rejected the past. Unfortunately, its politics aligned with Fascism.",
+    "analogy": "Art that wanted to burn museums and worship race cars — modernity as religion."
+  },
+  {
+    "id": "art-and-architecture:geodesic-dome",
+    "type": "standard",
+    "concept": "Geodesic Dome",
+    "domain": "Art & Architecture",
+    "oneliner": "Buckminster Fuller's structure using interconnected triangles to create a spherical dome — strong, lightweight, efficient.",
+    "whyItMatters": "It encloses the maximum volume with minimum surface area. Used for greenhouses, radar stations, festival structures.",
+    "analogy": "Nature's favorite architecture — the same geometry as carbon molecules and soccer balls."
+  },
+  {
+    "id": "art-and-architecture:gestalt-principles",
+    "type": "standard",
+    "concept": "Gestalt Principles",
+    "domain": "Art & Architecture",
+    "oneliner": "Laws of visual perception — proximity, similarity, continuity, closure. How the brain organizes visual elements into groups.",
+    "whyItMatters": "They govern graphic design, UI/UX, architecture. Your brain sees patterns and wholes, not individual elements.",
+    "analogy": "Your brain's automatic grouping software — it can't help organizing shapes into patterns and objects."
+  },
+  {
+    "id": "art-and-architecture:golden-ratio",
+    "type": "standard",
+    "concept": "Golden Ratio",
+    "domain": "Art & Architecture",
+    "oneliner": "The irrational number ~1.618 appearing in nature, art, and architecture. Rectangles with this ratio seem pleasing.",
+    "whyItMatters": "Found in spiral galaxies, sunflower seeds, the Parthenon. Whether it's truly 'beautiful' is debated.",
+    "analogy": "Nature's favorite proportion — the recipe that keeps showing up in things humans find beautiful."
+  },
+  {
+    "id": "art-and-architecture:gothic-architecture",
+    "type": "standard",
+    "concept": "Gothic Architecture",
+    "domain": "Art & Architecture",
+    "oneliner": "Medieval European style — pointed arches, ribbed vaults, flying buttresses, enormous stained glass.",
+    "whyItMatters": "Flying buttresses allowed walls to be mostly glass — engineering serving spirituality.",
+    "analogy": "Stone fingers pointing at heaven — buildings designed to make you feel small before God."
+  },
+  {
+    "id": "art-and-architecture:horror-vacui-vs-minimalism",
+    "type": "standard",
+    "concept": "Horror Vacui vs Minimalism",
+    "domain": "Art & Architecture",
+    "oneliner": "The tension between filling every surface with detail (horror vacui) and stripping to essentials (minimalism) defines aesthetic identity.",
+    "whyItMatters": "Islamic geometric art embraces horror vacui; Japanese Zen embraces minimalism. Neither is superior — the choice reflects cultural values about abundance, attention, and meaning.",
+    "analogy": "Like the difference between a maximalist dinner party and a single perfect omakase course — both are complete, just differently.",
+    "level": "intermediate"
+  },
+  {
+    "id": "art-and-architecture:iconoclasm",
+    "type": "standard",
+    "concept": "Iconoclasm",
+    "domain": "Art & Architecture",
+    "oneliner": "The deliberate destruction of religious images or cultural symbols — has occurred across many cultures and eras.",
+    "whyItMatters": "From Byzantine icon-smashing to Taliban destroying Buddhas to ISIS demolishing Palmyra. Art destruction as political statement.",
+    "analogy": "The idea that images have so much power they must be destroyed — which ironically proves how powerful art is."
+  },
+  {
+    "id": "art-and-architecture:impasto",
+    "type": "standard",
+    "concept": "Impasto",
+    "domain": "Art & Architecture",
+    "oneliner": "Thick, textured paint applied with palette knife or brush so it stands up from the surface — Van Gogh's signature.",
+    "whyItMatters": "It adds physicality and energy. You can see the artist's gesture in every stroke.",
+    "analogy": "Painting so thick you could feel it with your eyes closed — three-dimensional brushwork."
+  },
+  {
+    "id": "art-and-architecture:impressionism",
+    "type": "standard",
+    "concept": "Impressionism",
+    "domain": "Art & Architecture",
+    "oneliner": "Late 19th century — Monet, Renoir, Degas — prioritizing light, color, and sensation over precise detail.",
+    "whyItMatters": "Broke academic rules, opened the door to Post-Impressionism, Expressionism, Abstraction.",
+    "analogy": "Painting what you feel when you look rather than what you'd photograph — sensation over documentation."
+  },
+  {
+    "id": "art-and-architecture:kinetic-art",
+    "type": "standard",
+    "concept": "Kinetic Art",
+    "domain": "Art & Architecture",
+    "oneliner": "Art that contains moving parts or depends on motion for its effect — Calder's mobiles pioneered the form.",
+    "whyItMatters": "It challenged the assumption that art must be static. Dance, film, and interactive installations followed.",
+    "analogy": "Art that refuses to hold still — the artwork changes depending on when you look at it."
+  },
+  {
+    "id": "art-and-architecture:land-art",
+    "type": "standard",
+    "concept": "Land Art",
+    "domain": "Art & Architecture",
+    "oneliner": "Art created directly in the landscape using natural materials — Smithson's Spiral Jetty, Christo's wrappings.",
+    "whyItMatters": "It challenged the idea that art belongs in galleries. The landscape itself becomes the canvas and medium.",
+    "analogy": "Using the Earth as your canvas — art at a scale where the gallery is the planet itself."
+  },
+  {
+    "id": "art-and-architecture:linear-perspective",
+    "type": "standard",
+    "concept": "Linear Perspective",
+    "domain": "Art & Architecture",
+    "oneliner": "Mathematical technique creating depth illusion on flat surfaces using vanishing points — Brunelleschi, ~1415.",
+    "whyItMatters": "Before it, paintings were flat hierarchies. After it, art could represent space as humans see it.",
+    "analogy": "The cheat code that made flat paintings look 3D — one of the most important technical inventions in art."
+  },
+  {
+    "id": "art-and-architecture:minimalism-art",
+    "type": "standard",
+    "concept": "Minimalism (Art)",
+    "domain": "Art & Architecture",
+    "oneliner": "Reducing art to essential elements — simple geometry, industrial materials, no metaphor.",
+    "whyItMatters": "How little can something be and still be art? Donald Judd, Dan Flavin, Agnes Martin.",
+    "analogy": "Stripping away until only the essential remains — the Marie Kondo of art movements."
+  },
+  {
+    "id": "art-and-architecture:mise-en-scene",
+    "type": "standard",
+    "concept": "Mise en Scène",
+    "domain": "Art & Architecture",
+    "oneliner": "The arrangement of everything in a visual frame — staging, lighting, costume, set design. From French: 'placing on stage.'",
+    "whyItMatters": "It's what separates great directors from good ones. Every element visible in the frame is a deliberate choice.",
+    "analogy": "The art of controlling everything the audience sees — every detail in the frame is there for a reason."
+  },
+  {
+    "id": "art-and-architecture:mixed-media",
+    "type": "standard",
+    "concept": "Mixed Media",
+    "domain": "Art & Architecture",
+    "oneliner": "Art combining multiple materials and techniques — collage, found objects, digital elements, paint, fabric.",
+    "whyItMatters": "It broke the rule that painting is paint on canvas. Rauschenberg, Kiefer, and contemporary installation art.",
+    "analogy": "Art that refuses to pick one material — combining everything from newspaper clippings to engine parts."
+  },
+  {
+    "id": "art-and-architecture:modernism-art",
+    "type": "standard",
+    "concept": "Modernism (Art)",
+    "domain": "Art & Architecture",
+    "oneliner": "Early 20th century rejection of tradition — Cubism, Abstract Expressionism, Bauhaus. Each movement challenged assumptions.",
+    "whyItMatters": "It asked: what is art, really? Picasso deconstructed form. Duchamp questioned the concept of art itself.",
+    "analogy": "Art having an identity crisis — and producing its most interesting work in the process."
+  },
+  {
+    "id": "art-and-architecture:modular-design",
+    "type": "standard",
+    "concept": "Modular Design",
+    "domain": "Art & Architecture",
+    "oneliner": "Designing with standardized, interchangeable components that can be combined in different ways — flexibility through constraint.",
+    "whyItMatters": "LEGO, IKEA, and microservices all use modular design. The constraint of standardized interfaces enables infinite recombination. The module is more valuable than the whole because it has more possible futures.",
+    "analogy": "Like an alphabet — 26 standard letters, but they combine into every word that exists or will ever exist.",
+    "level": "foundational"
+  },
+  {
+    "id": "art-and-architecture:mosaic",
+    "type": "standard",
+    "concept": "Mosaic",
+    "domain": "Art & Architecture",
+    "oneliner": "Images created from small pieces (tesserae) of stone, glass, or tile — an ancient technique still used today.",
+    "whyItMatters": "From Roman floors to Byzantine churches to Gaudí's Park Güell. Pixels before pixels existed.",
+    "analogy": "The original pixel art — thousands of tiny colored squares creating images that survive millennia."
+  },
+  {
+    "id": "art-and-architecture:negative-space",
+    "type": "standard",
+    "concept": "Negative Space",
+    "domain": "Art & Architecture",
+    "oneliner": "The empty space around and between subjects — an active compositional element, not just background.",
+    "whyItMatters": "The FedEx arrow, Rubin's vase, Japanese ma concept. What you DON'T put in matters as much as what you do.",
+    "analogy": "The silence between notes that makes music — without emptiness, fullness has no meaning."
+  },
+  {
+    "id": "art-and-architecture:neoclassicism",
+    "type": "standard",
+    "concept": "Neoclassicism",
+    "domain": "Art & Architecture",
+    "oneliner": "18th-19th century return to classical Greek and Roman aesthetics — clean lines, symmetry, idealized forms. The Capitol Building.",
+    "whyItMatters": "It was the visual language of Enlightenment ideals — reason, democracy, civic virtue expressed in marble.",
+    "analogy": "Ancient Greece and Rome as filtered through 18th-century taste — columns and togas as political statements."
+  },
+  {
+    "id": "art-and-architecture:oulipo-constraints",
+    "type": "standard",
+    "concept": "Oulipo Constraints",
+    "domain": "Art & Architecture",
+    "oneliner": "A literary movement that used mathematical and logical constraints to generate literature — writing an entire novel without the letter 'e' (Perec's La Disparition).",
+    "whyItMatters": "Proves that extreme formal constraints don't kill creativity — they channel it. When you can't use the obvious tool, you discover solutions you'd never have found otherwise.",
+    "analogy": "Like a musician who unplugs their best instrument and discovers a new sound with what's left.",
+    "level": "intermediate"
+  },
+  {
+    "id": "art-and-architecture:palimpsest",
+    "type": "standard",
+    "concept": "Palimpsest",
+    "domain": "Art & Architecture",
+    "oneliner": "A surface reused after earlier content was erased — layers of history visible through each other. Also used metaphorically.",
+    "whyItMatters": "In architecture, it describes buildings or cities showing traces of their previous uses. Rome is a palimpsest of 2,000 years.",
+    "analogy": "A page written, erased, and rewritten — but the old words still show through."
+  },
+  {
+    "id": "art-and-architecture:parametric-design",
+    "type": "standard",
+    "concept": "Parametric Design",
+    "domain": "Art & Architecture",
+    "oneliner": "Architecture generated by algorithms and computational rules rather than hand-drawn forms. Zaha Hadid pioneered it.",
+    "whyItMatters": "It creates organic, flowing forms impossible to design manually. The future of architecture is computational.",
+    "analogy": "Architecture designed by equations — the architect writes the rules, the computer draws the building."
+  },
+  {
+    "id": "art-and-architecture:patina",
+    "type": "standard",
+    "concept": "Patina",
+    "domain": "Art & Architecture",
+    "oneliner": "The surface changes that develop on materials over time — oxidation on bronze, weathering on stone, aging on leather.",
+    "whyItMatters": "Some cultures prize it (wabi-sabi, antiques). Others obsessively prevent it (car detailing, restoration).",
+    "analogy": "Time's signature on surfaces — some see damage, others see character."
+  },
+  {
+    "id": "art-and-architecture:patina-and-weathering",
+    "type": "standard",
+    "concept": "Patina and Weathering",
+    "domain": "Art & Architecture",
+    "oneliner": "The surface changes materials undergo over time — aging that adds character, history, and beauty rather than decay.",
+    "whyItMatters": "Corten steel, aged copper, worn leather — some materials improve with time. In product design, building in graceful degradation is better than fighting entropy.",
+    "analogy": "Like laugh lines on a face — they record a life lived, adding warmth that youth can't replicate.",
+    "level": "foundational"
+  },
+  {
+    "id": "art-and-architecture:patrons-and-patronage",
+    "type": "standard",
+    "concept": "Patrons and Patronage",
+    "domain": "Art & Architecture",
+    "oneliner": "Wealthy individuals or institutions funding artists — the Medici, the Catholic Church, modern collectors and galleries.",
+    "whyItMatters": "Without patronage, no Sistine Chapel, no Beethoven symphonies. The patron-artist relationship shapes what art gets made.",
+    "analogy": "The money behind the masterpiece — art has always needed funding, and funders shape what gets created."
+  },
+  {
+    "id": "art-and-architecture:pergola-vs-gazebo-vs-arbor",
+    "type": "standard",
+    "concept": "Pergola vs Gazebo vs Arbor",
+    "domain": "Art & Architecture",
+    "oneliner": "Pergola: open roof structure with beams. Gazebo: fully roofed freestanding structure. Arbor: arch supporting climbing plants.",
+    "whyItMatters": "Knowing the difference makes you sound like you understand outdoor architecture. Small distinctions, big credibility.",
+    "analogy": "The subtle taxonomy of garden structures — knowing which is which is the kind of detail architects notice."
+  },
+  {
+    "id": "art-and-architecture:plein-air",
+    "type": "standard",
+    "concept": "Plein Air",
+    "domain": "Art & Architecture",
+    "oneliner": "Painting outdoors, directly from nature — central to Impressionism. Monet, Renoir, Pissarro.",
+    "whyItMatters": "It changed how artists captured light because they could see it changing in real time.",
+    "analogy": "Taking the easel outside — painting nature while it's happening rather than from memory in a studio."
+  },
+  {
+    "id": "art-and-architecture:pop-art",
+    "type": "standard",
+    "concept": "Pop Art",
+    "domain": "Art & Architecture",
+    "oneliner": "1950s-60s movement elevating mass culture imagery to fine art — Warhol's soup cans, Lichtenstein's comics.",
+    "whyItMatters": "It blurred the line between 'high' and 'low' culture. Asked: is a Coca-Cola bottle art? Is a Brillo box?",
+    "analogy": "Art that grabbed everyday objects and put them in a gallery — forcing you to look at the ordinary as extraordinary."
+  },
+  {
+    "id": "art-and-architecture:postmodernism",
+    "type": "standard",
+    "concept": "Postmodernism",
+    "domain": "Art & Architecture",
+    "oneliner": "Late 20th century reaction against modernist purity — irony, pastiche, historical references, blurring high/low culture.",
+    "whyItMatters": "Rejected the idea of one 'right' way. Why buildings can be playful, why art can be a banana on a wall.",
+    "analogy": "Modernism's rebellious teenager — mixing everything together, insisting nothing is sacred."
+  },
+  {
+    "id": "art-and-architecture:proportion",
+    "type": "standard",
+    "concept": "Proportion",
+    "domain": "Art & Architecture",
+    "oneliner": "The relationship of sizes between parts of a whole — human body proportions, building dimensions, typeface ratios.",
+    "whyItMatters": "The ancient Greeks defined ideal proportions. Le Corbusier created Le Modulor scale based on human body measurements.",
+    "analogy": "The mathematics of harmony — why some buildings feel right and others feel wrong."
+  },
+  {
+    "id": "art-and-architecture:provenance",
+    "type": "standard",
+    "concept": "Provenance",
+    "domain": "Art & Architecture",
+    "oneliner": "The documented history of ownership of an artwork — critical for authentication, valuation, and identifying stolen works.",
+    "whyItMatters": "Nazi-looted art, antiquities trafficking, and forgery detection all revolve around provenance research.",
+    "analogy": "An artwork's pedigree — who owned it, when, and whether any of those owners stole it."
+  },
+  {
+    "id": "art-and-architecture:ready-made",
+    "type": "standard",
+    "concept": "Ready-Made",
+    "domain": "Art & Architecture",
+    "oneliner": "An ordinary manufactured object designated as art — Duchamp's urinal ('Fountain,' 1917) being the most famous.",
+    "whyItMatters": "It challenged the entire definition of art. If the artist says it's art, is it? The question is still unresolved.",
+    "analogy": "Taking a toilet and calling it art — the biggest flex in art history, and we're still arguing about it."
+  },
+  {
+    "id": "art-and-architecture:readymade-duchamp",
+    "type": "standard",
+    "concept": "Readymade (Duchamp)",
+    "domain": "Art & Architecture",
+    "oneliner": "An ordinary object presented as art — the artist's choice, not craft, defines what counts as art.",
+    "whyItMatters": "Duchamp's urinal ('Fountain', 1917) forced art to answer: what IS art? The answer shifted from 'skilled making' to 'intentional framing.' Every industry has its Duchamp moment.",
+    "analogy": "Like a CEO calling a meeting that's really just a conversation — the label changes how people experience the same thing.",
+    "level": "intermediate"
+  },
+  {
+    "id": "art-and-architecture:renaissance-art",
+    "type": "standard",
+    "concept": "Renaissance (Art)",
+    "domain": "Art & Architecture",
+    "oneliner": "14th-17th century Italian cultural rebirth — classical learning, perspective, human-centered art. Leonardo, Michelangelo, Raphael.",
+    "whyItMatters": "Shifted art from symbolic/religious to realistic/humanist. Invented the modern concept of 'the artist.'",
+    "analogy": "The moment Western art went from 2D religious icons to 3D human beings with emotions and shadows."
+  },
+  {
+    "id": "art-and-architecture:rococo",
+    "type": "standard",
+    "concept": "Rococo",
+    "domain": "Art & Architecture",
+    "oneliner": "The lighter, more playful successor to Baroque (1700s) — pastel colors, curves, asymmetry, frivolity.",
+    "whyItMatters": "Where Baroque was about power and drama, Rococo was about pleasure and decoration. Think Marie Antoinette's world.",
+    "analogy": "Baroque went on a diet and got a sense of humor — lighter, prettier, and entirely unserious."
+  },
+  {
+    "id": "art-and-architecture:romanticism",
+    "type": "standard",
+    "concept": "Romanticism",
+    "domain": "Art & Architecture",
+    "oneliner": "Late 18th-19th century reaction against Enlightenment rationalism — emotion, nature, individualism, the sublime.",
+    "whyItMatters": "It valued feeling over reason, nature over civilization, passion over order. Influenced nationalism and environmentalism.",
+    "analogy": "The artistic rebellion against reason — celebrating storms, mountains, and overwhelming emotion."
+  },
+  {
+    "id": "art-and-architecture:sfumato",
+    "type": "standard",
+    "concept": "Sfumato",
+    "domain": "Art & Architecture",
+    "oneliner": "Leonardo da Vinci's technique of softening transitions between colors — no harsh lines, smoky blending.",
+    "whyItMatters": "It gives the Mona Lisa her mysterious, lifelike quality. Literally means 'vanished like smoke.'",
+    "analogy": "The opposite of coloring inside the lines — reality doesn't have outlines, and neither should great painting."
+  },
+  {
+    "id": "art-and-architecture:sgraffito",
+    "type": "standard",
+    "concept": "Sgraffito",
+    "domain": "Art & Architecture",
+    "oneliner": "A technique of scratching through a surface layer to reveal a contrasting color beneath — destruction as a creative act.",
+    "whyItMatters": "Used from Renaissance facades to modern ceramics. The principle applies beyond art: sometimes removing the top layer reveals the interesting structure underneath.",
+    "analogy": "Like scratching a lottery ticket — the value was always there, hidden under the surface.",
+    "level": "intermediate"
+  },
+  {
+    "id": "art-and-architecture:site-specific-art",
+    "type": "standard",
+    "concept": "Site-Specific Art",
+    "domain": "Art & Architecture",
+    "oneliner": "Art created for and inseparable from a particular location — removing it from the site destroys the work.",
+    "whyItMatters": "Serra's 'Tilted Arc' was destroyed when relocated because the site WAS the art. Context isn't a backdrop — it's a material. Products designed for a specific context fail when transplanted to another.",
+    "analogy": "Like a conversation that's hilarious at the dinner table but falls flat when repeated at work — the joke was never separable from the moment.",
+    "level": "intermediate"
+  },
+  {
+    "id": "art-and-architecture:stained-glass",
+    "type": "standard",
+    "concept": "Stained Glass",
+    "domain": "Art & Architecture",
+    "oneliner": "Colored glass pieces joined with lead to create images — the primary narrative art form of medieval cathedrals.",
+    "whyItMatters": "Before literacy was widespread, stained glass told Bible stories to illiterate congregations. Light as storytelling medium.",
+    "analogy": "Medieval cinema — stories told in light and color for an audience that couldn't read."
+  },
+  {
+    "id": "art-and-architecture:street-art",
+    "type": "standard",
+    "concept": "Street Art",
+    "domain": "Art & Architecture",
+    "oneliner": "Art created in public spaces, often without permission — Banksy, Jean-Michel Basquiat, Shepard Fairey.",
+    "whyItMatters": "It democratized art, brought it out of galleries and into communities. Raises questions about vandalism vs. expression.",
+    "analogy": "Art that escaped the museum — illegally reclaiming public walls for self-expression."
+  },
+  {
+    "id": "art-and-architecture:surrealism",
+    "type": "standard",
+    "concept": "Surrealism",
+    "domain": "Art & Architecture",
+    "oneliner": "Art movement exploring the unconscious mind through dreamlike, irrational imagery — Dalí, Magritte, Ernst.",
+    "whyItMatters": "Influenced by Freud. Aimed to liberate thought from rational control. Melting clocks, impossible architecture.",
+    "analogy": "Art from the dream layer — logic checked at the door, the subconscious takes over the brush."
+  },
+  {
+    "id": "art-and-architecture:sustainable-architecture",
+    "type": "standard",
+    "concept": "Sustainable Architecture",
+    "domain": "Art & Architecture",
+    "oneliner": "Design that minimizes environmental impact — passive solar, green roofs, recycled materials, net-zero energy.",
+    "whyItMatters": "Buildings account for ~40% of global energy use. Sustainable design is essential for climate targets.",
+    "analogy": "Architecture that gives back more than it takes — buildings as ecosystems rather than energy sinks."
+  },
+  {
+    "id": "art-and-architecture:tectonic-expression",
+    "type": "standard",
+    "concept": "Tectonic Expression",
+    "domain": "Art & Architecture",
+    "oneliner": "Architecture that honestly reveals how a building is constructed — celebrating structure rather than hiding it.",
+    "whyItMatters": "The Centre Pompidou puts mechanical systems on the outside. Structural honesty as aesthetic principle.",
+    "analogy": "A building that shows how it stands up — wearing its skeleton on the outside."
+  },
+  {
+    "id": "art-and-architecture:tensile-structure",
+    "type": "standard",
+    "concept": "Tensile Structure",
+    "domain": "Art & Architecture",
+    "oneliner": "Architecture using tension rather than compression — cables, membranes, fabric roofs. Frei Otto pioneered it.",
+    "whyItMatters": "The Munich Olympic Stadium, Denver Airport, and Millennium Dome all use tensile structures.",
+    "analogy": "Architecture held up by pulling rather than pushing — cables and fabric instead of columns and beams."
+  },
+  {
+    "id": "art-and-architecture:trompe-l-oeil",
+    "type": "standard",
+    "concept": "Trompe l'oeil",
+    "domain": "Art & Architecture",
+    "oneliner": "Hyper-realistic painting that creates optical illusions of three-dimensionality — 'deceiving the eye.'",
+    "whyItMatters": "From ancient Roman murals to modern street art. It demonstrates mastery of perspective and light.",
+    "analogy": "Art so realistic your brain is convinced the flat surface has depth — optical illusion as artistic flex."
+  },
+  {
+    "id": "art-and-architecture:typographic-hierarchy",
+    "type": "standard",
+    "concept": "Typographic Hierarchy",
+    "domain": "Art & Architecture",
+    "oneliner": "Using size, weight, color, and spacing to create a visual order that guides the eye through content.",
+    "whyItMatters": "Good typography is invisible — it leads you through information without effort. Bad typography makes you work to find what matters. This applies to dashboards, documents, and slide decks.",
+    "analogy": "Like a well-organized bookshelf — you find what you need at a glance because everything has its logical place.",
+    "level": "foundational"
+  },
+  {
+    "id": "art-and-architecture:typography",
+    "type": "standard",
+    "concept": "Typography",
+    "domain": "Art & Architecture",
+    "oneliner": "The art of designing and arranging type — fonts, spacing, hierarchy. Gutenberg to Google Fonts.",
+    "whyItMatters": "It affects readability, mood, and credibility. Comic Sans on a legal brief vs. Garamond — font choice communicates.",
+    "analogy": "The clothes your words wear — same text, different fonts, completely different impressions."
+  },
+  {
+    "id": "art-and-architecture:ukiyo-e",
+    "type": "standard",
+    "concept": "Ukiyo-e",
+    "domain": "Art & Architecture",
+    "oneliner": "Japanese woodblock prints (17th-19th century) — 'pictures of the floating world.' Hokusai's Great Wave is the most famous.",
+    "whyItMatters": "They profoundly influenced Impressionism when they reached Europe. Van Gogh collected them obsessively.",
+    "analogy": "Japan's Instagram of the Edo period — popular, reproducible images of celebrities, landscapes, and everyday life."
+  },
+  {
+    "id": "art-and-architecture:ukiyo-e-influence",
+    "type": "standard",
+    "concept": "Ukiyo-e Influence",
+    "domain": "Art & Architecture",
+    "oneliner": "Japanese woodblock prints that revolutionized Western art — flat color, asymmetric composition, and everyday subjects shattered European perspective traditions.",
+    "whyItMatters": "When Impressionists saw ukiyo-e, they abandoned realistic perspective. Cross-cultural influence doesn't just add ideas — it breaks constraints you didn't know you had.",
+    "analogy": "Like a fish discovering water — Western artists didn't know perspective was a choice until they saw art that chose differently.",
+    "level": "intermediate"
+  },
+  {
+    "id": "art-and-architecture:vernacular-architecture",
+    "type": "standard",
+    "concept": "Vernacular Architecture",
+    "domain": "Art & Architecture",
+    "oneliner": "Buildings designed by local people using local materials and traditional methods — without architects.",
+    "whyItMatters": "Adobe in the desert, log cabins in forests, stilts in floodplains. Millennia of crowd-sourced engineering wisdom.",
+    "analogy": "Buildings evolved by trial and error over centuries — the architectural equivalent of folk wisdom."
+  },
+  {
+    "id": "art-and-architecture:wabi-sabi",
+    "type": "standard",
+    "concept": "Wabi-Sabi",
+    "domain": "Art & Architecture",
+    "oneliner": "Japanese aesthetic finding beauty in imperfection, impermanence, and incompleteness.",
+    "whyItMatters": "Values patina over polish, asymmetry over symmetry. The philosophical opposite of Western perfectionism.",
+    "analogy": "The beauty of a cracked teacup — perfection is sterile; imperfection is alive."
+  }
+]

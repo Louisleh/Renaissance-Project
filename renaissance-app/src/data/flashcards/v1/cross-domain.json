@@ -1,0 +1,803 @@
+[
+  {
+    "id": "cross-domain:activation-energy-behavioral-activation",
+    "type": "connection",
+    "concept": "Activation Energy ↔ Behavioral Activation",
+    "domain": "Cross-Domain",
+    "conceptA": "Activation Energy",
+    "domainA": "Chemistry",
+    "conceptB": "Behavioral Activation",
+    "domainB": "Psychology",
+    "connection": "Chemical reactions need activation energy to start; behavioral therapy's core insight is that action precedes motivation, not the other way around. Both overcome inertia through initial energy investment.",
+    "insight": "Waiting to 'feel motivated' is like waiting for a reaction to start without heat. The activation energy must come first — start the action, and the energy to sustain it follows.",
+    "prompt": "Where are you waiting for motivation when you should be applying activation energy?",
+    "level": "foundational"
+  },
+  {
+    "id": "cross-domain:algorithmic-bias-institutional-racism",
+    "type": "connection",
+    "concept": "Algorithmic Bias ↔ Institutional Racism",
+    "domain": "Cross-Domain",
+    "conceptA": "Algorithmic Bias",
+    "domainA": "Technology",
+    "conceptB": "Institutional Racism",
+    "domainB": "History & Geopolitics",
+    "connection": "Algorithms trained on historical data inherit and amplify the institutional biases embedded in that data — the past literally programs the future.",
+    "insight": "Technology doesn't neutralize history; it encodes it. Fixing algorithmic bias requires understanding the historical structures the data reflects.",
+    "prompt": "How can you audit a system — technological or institutional — for inherited biases it wasn't designed to have?",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:bauhaus-principles-unix-philosophy",
+    "type": "connection",
+    "concept": "Bauhaus Principles ↔ Unix Philosophy",
+    "domain": "Cross-Domain",
+    "conceptA": "Bauhaus Principles",
+    "domainA": "Art & Architecture",
+    "conceptB": "Unix Philosophy",
+    "domainB": "Technology",
+    "connection": "Both movements insist that form follows function, favor composable modular units over monolithic designs, and believe constraints produce better outcomes than freedom.",
+    "insight": "'Do one thing well' applies equally to a building, a command-line tool, and an organizational process.",
+    "prompt": "What would your current project look like if you applied 'form follows function' ruthlessly?",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:buffer-solutions-emergency-funds",
+    "type": "connection",
+    "concept": "Buffer Solutions ↔ Emergency Funds",
+    "domain": "Cross-Domain",
+    "conceptA": "Buffer Solutions",
+    "domainA": "Chemistry",
+    "conceptB": "Emergency Funds",
+    "domainB": "Economics",
+    "connection": "Chemical buffers maintain pH stability by absorbing acid/base additions; emergency funds maintain financial stability by absorbing unexpected expenses. Both work through maintained reserves that neutralize disturbances.",
+    "insight": "Resilience in any system requires pre-positioned reserves that specifically counter the most likely perturbations. Generic slack helps, but targeted buffers are more efficient.",
+    "prompt": "What specific 'buffers' has your team or organization built to absorb common shocks — and what shocks are unbuffered?",
+    "level": "foundational"
+  },
+  {
+    "id": "cross-domain:carrying-capacity-market-saturation",
+    "type": "connection",
+    "concept": "Carrying Capacity ↔ Market Saturation",
+    "domain": "Cross-Domain",
+    "conceptA": "Carrying Capacity",
+    "domainA": "Biology",
+    "conceptB": "Market Saturation",
+    "domainB": "Economics",
+    "connection": "Every ecosystem has a maximum population its resources can sustain (carrying capacity); every market has a maximum demand its demographics can sustain (market saturation). Growth follows an S-curve in both.",
+    "insight": "Exponential growth is always a temporary phase. Founders and investors who extrapolate early growth indefinitely are confusing the initial exponential phase for the final state.",
+    "prompt": "Is your product in the exponential growth phase or approaching the inflection point toward saturation?",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:chirality-framing-effect",
+    "type": "connection",
+    "concept": "Chirality ↔ Framing Effect",
+    "domain": "Cross-Domain",
+    "conceptA": "Chirality",
+    "domainA": "Chemistry",
+    "conceptB": "Framing Effect",
+    "domainB": "Cognitive Science",
+    "connection": "Mirror-image molecules (chirality) have identical composition but opposite biological effects. Mirror-image framings ('90% survival rate' vs '10% mortality rate') have identical information but opposite psychological effects.",
+    "insight": "In both chemistry and cognition, the 'handedness' or orientation of identical content changes the outcome. Structure matters as much as substance.",
+    "prompt": "How are you framing a decision or proposal — and would the mirror-image framing change the response?",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:color-theory-emotional-valence",
+    "type": "connection",
+    "concept": "Color Theory ↔ Emotional Valence",
+    "domain": "Cross-Domain",
+    "conceptA": "Color Theory",
+    "domainA": "Art & Architecture",
+    "conceptB": "Emotional Valence",
+    "domainB": "Psychology",
+    "connection": "Color relationships in art systematically manipulate the same emotional valence dimensions that psychology measures — warm/cool maps to approach/avoid, saturation to arousal.",
+    "insight": "Artists discovered empirically what affective science later quantified: hue, saturation, and brightness are levers on the valence-arousal circumplex.",
+    "prompt": "How does a brand's color palette encode psychological intent, even when the audience isn't consciously aware?",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:commons-and-anti-commons",
+    "type": "synthesis",
+    "concept": "Commons and Anti-Commons",
+    "domain": "Cross-Domain",
+    "title": "Too Much Sharing, Too Much Owning",
+    "concepts": [
+      "Tragedy of the Commons",
+      "Enclosure Movement",
+      "Patent Thickets",
+      "Open Source"
+    ],
+    "domains": [
+      "Economics",
+      "History & Geopolitics",
+      "Technology",
+      "Philosophy"
+    ],
+    "synthesis": "Hardin's tragedy of the commons shows shared resources get overexploited. But Heller's tragedy of the anti-commons shows that too many owners can prevent any use at all — patent thickets block innovation, NIMBYism blocks housing, overlapping IP claims block drug development. History oscillates: the Enclosure Movement privatized commons, then open-source software re-commoned code. The synthesis: neither pure commons nor pure private ownership is optimal. The productive zone is managed commons with clear governance — Ostrom's Nobel-winning insight that communities can self-govern resources without either state control or privatization.",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:complexity-as-immune-system",
+    "type": "synthesis",
+    "concept": "Complexity as Immune System",
+    "domain": "Cross-Domain",
+    "title": "How Messy Systems Survive",
+    "concepts": [
+      "Biodiversity",
+      "Antifragility",
+      "Redundancy",
+      "Scale-Free Networks"
+    ],
+    "domains": [
+      "Biology",
+      "Systems Thinking",
+      "Technology",
+      "Mathematics"
+    ],
+    "synthesis": "Ecosystems with high biodiversity resist collapse. Immune systems with diverse antibody repertoires resist infection. Networks with scale-free topology resist random failures. Redundant engineering systems resist component failure. The common principle: diversity and redundancy are the immune system of complex systems. Efficiency-driven simplification strips these defenses. The synthesis: what looks like waste, mess, or inefficiency in a stable period is actually the resilience infrastructure that prevents catastrophe during disruption. Complexity isn't a bug to optimize away — it's the system's immune response to uncertainty.",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:constraints-as-creative-force",
+    "type": "synthesis",
+    "concept": "Constraints as Creative Force",
+    "domain": "Cross-Domain",
+    "title": "Why Limitation Enables Innovation",
+    "concepts": [
+      "Formal Constraints",
+      "Bounded Rationality",
+      "Wabi-Sabi",
+      "Unix Philosophy"
+    ],
+    "domains": [
+      "Art & Architecture",
+      "Economics",
+      "Philosophy",
+      "Technology"
+    ],
+    "synthesis": "Sonnets have 14 lines. Haiku has 17 syllables. Unix tools do one thing. Bounded rationality means we can't consider all options. In each case, constraint doesn't limit creativity — it enables it by reducing the search space to a manageable size. Wabi-sabi finds beauty in imperfection because perfection is a constraint violation (infinite resources). The Bauhaus principle 'less is more' isn't aesthetic preference — it's a recognition that the human mind works best within boundaries. Freedom paralyzes; constraint liberates.",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:convergent-evolution-independent-invention",
+    "type": "connection",
+    "concept": "Convergent Evolution ↔ Independent Invention",
+    "domain": "Cross-Domain",
+    "conceptA": "Convergent Evolution",
+    "domainA": "Biology",
+    "conceptB": "Independent Invention",
+    "domainB": "History & Geopolitics",
+    "connection": "Eyes evolved independently 40+ times in biology; agriculture was independently invented at least 7 times across continents. When the same solution emerges independently, it reveals a deep structural constraint, not coincidence.",
+    "insight": "Convergence is evidence of optimality for a given constraint set. If three teams independently build similar solutions, the problem's structure is driving the design.",
+    "prompt": "Where have you seen the same solution independently invented by different teams — and what does that tell you about the problem?",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:cycles-of-centralization",
+    "type": "synthesis",
+    "concept": "Cycles of Centralization",
+    "domain": "Cross-Domain",
+    "title": "Why Systems Oscillate Between Control and Freedom",
+    "concepts": [
+      "Entropy",
+      "Regulatory Capture",
+      "Creative Destruction",
+      "Enclosure Movement"
+    ],
+    "domains": [
+      "Chemistry",
+      "Economics",
+      "History & Geopolitics",
+      "Systems Thinking"
+    ],
+    "synthesis": "Open systems centralize over time: the internet became dominated by five companies, medieval commons became enclosed estates, revolutionary governments became bureaucracies. Entropy drives disorder, but power concentrates as a counter-entropic force. Then the centralized system becomes rigid, regulatory capture locks in incumbents, and creative destruction resets the cycle. The synthesis: centralization and decentralization are phases in a cycle, not endpoints. Understanding where you are in the cycle determines whether you should be building institutions or disrupting them.",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:debt-as-universal-pattern",
+    "type": "synthesis",
+    "concept": "Debt as Universal Pattern",
+    "domain": "Cross-Domain",
+    "title": "Borrowing from the Future Across Domains",
+    "concepts": [
+      "Technical Debt",
+      "Ecological Debt",
+      "Sleep Debt",
+      "Fiscal Deficit"
+    ],
+    "domains": [
+      "Technology",
+      "Biology",
+      "Psychology",
+      "Economics"
+    ],
+    "synthesis": "Technical debt borrows clean code from the future. Ecological debt borrows environmental capacity from the future. Sleep debt borrows cognitive performance from the future. Fiscal deficit borrows purchasing power from the future. In each case: short-term gains are real, interest compounds silently, and repayment is more expensive than the original loan. The synthesis: debt is a universal pattern of temporal displacement — moving costs from now to later. The danger is identical across domains: the interest is invisible until the bill comes due, and by then the principal has grown beyond what you can repay.",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:dunbar-s-number-conway-s-law",
+    "type": "connection",
+    "concept": "Dunbar's Number ↔ Conway's Law",
+    "domain": "Cross-Domain",
+    "conceptA": "Dunbar's Number",
+    "domainA": "Psychology",
+    "conceptB": "Conway's Law",
+    "domainB": "Technology",
+    "connection": "Dunbar's ~150 limit on meaningful relationships constrains organization size; Conway's Law means the organization's communication structure shapes its technical architecture. Together: human cognitive limits determine software architecture.",
+    "insight": "Microservices work for large organizations because teams beyond Dunbar's number can't coordinate through informal channels — the architecture must match the communication limit.",
+    "prompt": "Does your team's size match the architecture it maintains — or is there a mismatch creating friction?",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:emergence-across-scales",
+    "type": "synthesis",
+    "concept": "Emergence Across Scales",
+    "domain": "Cross-Domain",
+    "title": "Why the Whole Exceeds Its Parts",
+    "concepts": [
+      "Emergence",
+      "Self-Organization",
+      "Phase Transitions",
+      "Cellular Automata"
+    ],
+    "domains": [
+      "Systems Thinking",
+      "Physics",
+      "Biology",
+      "Mathematics"
+    ],
+    "synthesis": "Water molecules aren't wet. Neurons aren't conscious. Ants aren't architects. Yet wetness, consciousness, and anthills exist. Emergence is the universe's most reliable trick: simple rules at one scale produce qualitatively new properties at the next. Phase transitions in physics, self-organization in biology, and complex behavior from cellular automata in mathematics all demonstrate that reductionism — understanding parts — is necessary but insufficient. To understand a system, you must understand the interactions, not just the components.",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:epigenetics-institutional-memory",
+    "type": "connection",
+    "concept": "Epigenetics ↔ Institutional Memory",
+    "domain": "Cross-Domain",
+    "conceptA": "Epigenetics",
+    "domainA": "Biology",
+    "conceptB": "Institutional Memory",
+    "domainB": "History & Geopolitics",
+    "connection": "Just as epigenetic marks pass environmental adaptations to offspring without changing DNA, organizations pass cultural norms, procedures, and unwritten rules to new members without changing the formal charter.",
+    "insight": "Both systems transmit 'soft' information that modifies behavior across generations. Toxic culture and healthy culture are both 'epigenetic' — inherited but mutable.",
+    "prompt": "What 'epigenetic' norms does your organization pass down that no one explicitly teaches but everyone absorbs?",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:euler-s-identity-symmetry-in-physics",
+    "type": "connection",
+    "concept": "Euler's Identity ↔ Symmetry in Physics",
+    "domain": "Cross-Domain",
+    "conceptA": "Euler's Identity",
+    "domainA": "Mathematics",
+    "conceptB": "Symmetry",
+    "domainB": "Physics",
+    "connection": "Euler's identity unifies five fundamental constants through rotational symmetry in the complex plane — the same symmetry principles that underpin conservation laws in physics via Noether's theorem.",
+    "insight": "Deep mathematical beauty often signals deep physical truth. Symmetry is the bridge between abstract elegance and physical law.",
+    "prompt": "When you encounter surprising elegance in a model or framework, does it signal that you're close to something fundamental?",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:evolution-as-universal-algorithm",
+    "type": "synthesis",
+    "concept": "Evolution as Universal Algorithm",
+    "domain": "Cross-Domain",
+    "title": "Variation, Selection, Retention Beyond Biology",
+    "concepts": [
+      "Natural Selection",
+      "Creative Destruction",
+      "Genetic Algorithm",
+      "Diffusion of Innovation"
+    ],
+    "domains": [
+      "Biology",
+      "Economics",
+      "Technology",
+      "Psychology"
+    ],
+    "synthesis": "Darwin's algorithm — variation, selection, retention — operates wherever three conditions hold: agents vary, some variants perform better, and successful variants are copied. Markets evolve products (variation = startups, selection = consumer choice, retention = scaling). Culture evolves ideas (variation = innovation, selection = social proof, retention = tradition). Technology evolves designs (variation = prototypes, selection = user feedback, retention = standardization). The synthesis: evolution isn't a biological metaphor applied to business — biology is one instance of a universal algorithmic pattern. Understanding the algorithm makes you a better designer of systems that learn.",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:feedback-across-timescales",
+    "type": "synthesis",
+    "concept": "Feedback Across Timescales",
+    "domain": "Cross-Domain",
+    "title": "Why Slow Feedback Loses to Fast Feedback",
+    "concepts": [
+      "Temporal Discounting",
+      "Climate Feedback Loops",
+      "Compound Interest",
+      "Evolutionary Adaptation"
+    ],
+    "domains": [
+      "Psychology",
+      "Physics",
+      "Economics",
+      "Biology"
+    ],
+    "synthesis": "Evolution operates on generational timescales. Climate feedback spans decades. Compound interest takes years to become visible. But human temporal discounting shrinks distant consequences to nothing. The synthesis: the most consequential processes operate on timescales our psychology systematically ignores. Fast feedback loops (social media likes, quarterly earnings) dominate slow ones (skill development, ecosystem health) not because they matter more, but because they feel more real. Civilizational wisdom is the ability to weight slow feedback correctly.",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:flow-state-optimal-stopping",
+    "type": "connection",
+    "concept": "Flow State ↔ Optimal Stopping",
+    "domain": "Cross-Domain",
+    "conceptA": "Flow State",
+    "domainA": "Psychology",
+    "conceptB": "Optimal Stopping",
+    "domainB": "Mathematics",
+    "connection": "Both describe the point where engagement and challenge are perfectly calibrated — flow is the experiential version of what optimal stopping formalizes mathematically.",
+    "insight": "Knowing when to stop searching and commit (37% rule) mirrors the psychological sweet spot where skill meets challenge.",
+    "prompt": "When making a big decision, how do you balance analytical stopping rules with the gut feel of being in flow?",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:hormesis-deliberate-practice",
+    "type": "connection",
+    "concept": "Hormesis ↔ Deliberate Practice",
+    "domain": "Cross-Domain",
+    "conceptA": "Hormesis",
+    "domainA": "Biology",
+    "conceptB": "Deliberate Practice",
+    "domainB": "Psychology",
+    "connection": "Hormesis: small doses of stress make organisms stronger. Deliberate practice: targeted difficulty at the edge of ability builds skill. Both require calibrated stress — too little does nothing, too much causes damage.",
+    "insight": "Growth in biological and cognitive systems follows the same curve: comfort produces stagnation, optimal stress produces adaptation, excessive stress produces breakdown.",
+    "prompt": "Are your current challenges in the hormetic sweet spot — hard enough to grow from, not so hard they break you?",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:information-as-physical",
+    "type": "synthesis",
+    "concept": "Information as Physical",
+    "domain": "Cross-Domain",
+    "title": "Why Bits Have Weight",
+    "concepts": [
+      "Information Entropy",
+      "Thermodynamic Entropy",
+      "Landauer's Principle",
+      "DNA"
+    ],
+    "domains": [
+      "Mathematics",
+      "Physics",
+      "Chemistry",
+      "Biology"
+    ],
+    "synthesis": "Shannon's information entropy and Boltzmann's thermodynamic entropy share the same mathematical form — and that's not coincidence. Landauer's principle proves that erasing one bit of information releases a minimum amount of heat. DNA stores information in chemical bonds. Black holes have entropy proportional to their surface area. The synthesis: information is physical. It has mass, requires energy to process, and obeys conservation laws. The 'information age' isn't a metaphor — information literally has thermodynamic consequences.",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:language-as-technology",
+    "type": "synthesis",
+    "concept": "Language as Technology",
+    "domain": "Cross-Domain",
+    "title": "How Words Build and Constrain Reality",
+    "concepts": [
+      "Sapir-Whorf Hypothesis",
+      "Confucian Rectification of Names",
+      "Discourse Analysis",
+      "Framing Effect"
+    ],
+    "domains": [
+      "Cognitive Science",
+      "Philosophy",
+      "Psychology"
+    ],
+    "synthesis": "Language doesn't just describe reality — it shapes perception, enables thought, and constrains possibility. The Sapir-Whorf hypothesis (strong form: language determines thought; weak form: language influences thought) finds support in research on color perception, spatial reasoning, and temporal thinking. Confucius argued that naming things correctly is the foundation of good governance. Framing effects show that identical facts described differently produce different decisions. The synthesis: language is humanity's first and most powerful technology. Every new vocabulary (scientific, legal, emotional) literally creates new things you can think about and new actions you can take.",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:learned-helplessness-poverty-traps",
+    "type": "connection",
+    "concept": "Learned Helplessness ↔ Poverty Traps",
+    "domain": "Cross-Domain",
+    "conceptA": "Learned Helplessness",
+    "domainA": "Psychology",
+    "conceptB": "Poverty Traps",
+    "domainB": "Economics",
+    "connection": "Seligman's learned helplessness shows organisms stop trying after repeated failure; poverty traps create the same dynamic at scale — rational actors stop investing when returns are consistently blocked.",
+    "insight": "Individual psychology and structural economics reinforce each other in a vicious cycle. Breaking either loop can unlock the other.",
+    "prompt": "Where do you see 'learned helplessness' operating in organizations — and what would break the cycle?",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:maps-models-and-mirrors",
+    "type": "synthesis",
+    "concept": "Maps, Models, and Mirrors",
+    "domain": "Cross-Domain",
+    "title": "How Representations Shape Reality",
+    "concepts": [
+      "Map-Territory Distinction",
+      "Mental Models",
+      "Maya (Illusion)",
+      "Predictive Processing"
+    ],
+    "domains": [
+      "Philosophy",
+      "Systems Thinking",
+      "Cognitive Science"
+    ],
+    "synthesis": "Every cognitive system — from a thermostat to a human brain — operates on models of reality, not reality itself. Korzybski's 'map is not the territory' parallels Hindu Maya (perceived reality as illusion) and predictive processing (the brain hallucinating a controlled model). The dangerous moment isn't when your model is wrong — it's when you forget it's a model. Mental models become invisible with use, and invisible assumptions are the most powerful. Cross-domain thinking is valuable precisely because it exposes the models you've been living inside.",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:phase-transitions-organizational-restructuring",
+    "type": "connection",
+    "concept": "Phase Transitions ↔ Organizational Restructuring",
+    "domain": "Cross-Domain",
+    "conceptA": "Phase Transitions",
+    "domainA": "Physics",
+    "conceptB": "Organizational Restructuring",
+    "domainB": "Systems Thinking",
+    "connection": "Phase transitions in physics require energy input (latent heat) with no visible change until the transition completes. Organizational restructuring similarly requires sustained effort with no visible improvement until the new structure crystallizes.",
+    "insight": "The 'latent heat' phase — where energy goes in but nothing seems to change — is where most change initiatives get abandoned. Understanding phase transitions teaches patience: the energy isn't wasted, it's accumulating.",
+    "prompt": "Is your organization in a 'latent heat' phase where effort hasn't yet produced visible change — and are you at risk of giving up too early?",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:power-laws-in-nature-and-society",
+    "type": "synthesis",
+    "concept": "Power Laws in Nature and Society",
+    "domain": "Cross-Domain",
+    "title": "Why Inequality Is the Default",
+    "concepts": [
+      "Power Law",
+      "Pareto Principle",
+      "Zipf's Law",
+      "Preferential Attachment"
+    ],
+    "domains": [
+      "Mathematics",
+      "Economics",
+      "Systems Thinking",
+      "Technology"
+    ],
+    "synthesis": "City sizes, wealth distribution, word frequency, website traffic, earthquake magnitudes, and species abundance all follow power laws: a few dominate, most are small. This isn't coincidence — preferential attachment ('the rich get richer') is a universal mechanism. In networks, early nodes accumulate connections; in markets, early leaders accumulate customers; in language, common words get used more. The synthesis: equality is unstable in any system with positive feedback. Achieving equality requires active counter-mechanisms — it won't emerge spontaneously.",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:prospect-theory-dramatic-irony",
+    "type": "connection",
+    "concept": "Prospect Theory ↔ Dramatic Irony",
+    "domain": "Cross-Domain",
+    "conceptA": "Prospect Theory",
+    "domainA": "Economics",
+    "conceptB": "Dramatic Irony",
+    "domainB": "Art & Architecture",
+    "connection": "Kahneman's prospect theory shows losses loom larger than gains; dramatic irony exploits this by letting audiences see the loss coming before the character does, amplifying emotional impact.",
+    "insight": "Great storytelling weaponizes cognitive biases. The audience's loss aversion makes dramatic irony viscerally painful — which is why it works.",
+    "prompt": "How do effective presentations use the audience's loss aversion to make a point land harder?",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:the-attention-allocation-problem",
+    "type": "synthesis",
+    "concept": "The Attention Allocation Problem",
+    "domain": "Cross-Domain",
+    "title": "How Finite Attention Creates Infinite Consequences",
+    "concepts": [
+      "Selective Attention",
+      "Opportunity Cost",
+      "Bounded Rationality",
+      "Attention Economy"
+    ],
+    "domains": [
+      "Cognitive Science",
+      "Economics",
+      "Psychology",
+      "Technology"
+    ],
+    "synthesis": "Attention is the fundamental scarce resource. Cognitive science shows we can process ~4 items simultaneously. Economics shows every choice forecloses alternatives. Bounded rationality means we satisfice rather than optimize. The attention economy monetizes what little attention we have. The synthesis: attention allocation is the meta-skill that determines which other skills develop. You literally become what you pay attention to — your neural pathways strengthen with use and prune with neglect. In a world of infinite information and finite attention, the ability to choose what to ignore is more valuable than the ability to acquire more.",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:the-attention-economy-s-hidden-costs",
+    "type": "synthesis",
+    "concept": "The Attention Economy's Hidden Costs",
+    "domain": "Cross-Domain",
+    "title": "What Happens When Attention Is the Currency",
+    "concepts": [
+      "Attention Economy",
+      "Intermittent Reinforcement",
+      "Dopamine",
+      "Cognitive Load Theory"
+    ],
+    "domains": [
+      "Technology",
+      "Psychology",
+      "Biology",
+      "Cognitive Science"
+    ],
+    "synthesis": "Social media platforms exploit the same intermittent reinforcement schedules that make slot machines addictive, targeting dopamine pathways evolved for foraging — not scrolling. Cognitive load theory explains the consequence: depleted executive function, reduced deep work capacity, and decision fatigue. The business model (attention = revenue) is structurally misaligned with human wellbeing. This isn't a design flaw; it's the core mechanic. Understanding the synthesis across neuroscience, psychology, and economics reveals why individual willpower is insufficient — the system is optimized against it.",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:the-bootstrap-problem",
+    "type": "synthesis",
+    "concept": "The Bootstrap Problem",
+    "domain": "Cross-Domain",
+    "title": "How New Things Start Without Prerequisites",
+    "concepts": [
+      "Dependent Origination",
+      "Chicken-and-Egg Problem",
+      "Network Effects",
+      "Activation Energy"
+    ],
+    "domains": [
+      "Philosophy",
+      "Economics",
+      "Technology",
+      "Chemistry"
+    ],
+    "synthesis": "Every platform needs users to attract users. Every language needs speakers to be worth learning. Every chemical reaction needs energy to release energy. The bootstrap problem is universal: how does something that requires itself to exist come into existence? Solutions recur across domains: catalysts lower activation energy in chemistry, subsidies create artificial network effects in economics, and in Buddhist dependent origination, things co-arise rather than causing each other sequentially. The synthesis: bootstrapping requires temporarily violating the equilibrium conditions — an external push, a subsidy, or a phase transition.",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:the-cooperation-paradox",
+    "type": "synthesis",
+    "concept": "The Cooperation Paradox",
+    "domain": "Cross-Domain",
+    "title": "Why Selfish Genes Build Cooperative Societies",
+    "concepts": [
+      "Prisoner's Dilemma",
+      "Kin Selection",
+      "Reciprocity",
+      "Social Contract"
+    ],
+    "domains": [
+      "Mathematics",
+      "Biology",
+      "Psychology",
+      "Philosophy"
+    ],
+    "synthesis": "Evolution selects for individual fitness, yet cooperation is everywhere: cells cooperate in bodies, organisms cooperate in ecosystems, humans cooperate in societies. The resolution comes from multiple domains: kin selection (shared genes), reciprocal altruism (repeated interactions), and social contracts (institutional enforcement). The iterated Prisoner's Dilemma shows cooperation emerges when the game repeats. The synthesis: cooperation isn't altruistic — it's a strategy that outperforms defection in environments with repeated interaction, kin proximity, or institutional enforcement.",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:the-fragility-of-optimization",
+    "type": "synthesis",
+    "concept": "The Fragility of Optimization",
+    "domain": "Cross-Domain",
+    "title": "Why Optimized Systems Break",
+    "concepts": [
+      "Antifragility",
+      "Efficiency vs Resilience",
+      "Redundancy",
+      "Normal Accidents"
+    ],
+    "domains": [
+      "Systems Thinking",
+      "Economics",
+      "Biology",
+      "Technology"
+    ],
+    "synthesis": "Optimization removes slack, redundancy, and buffers — the very things that absorb shocks. Biological systems maintain 'wasteful' redundancy (two kidneys, vast immune repertoires) precisely because efficiency kills in volatile environments. Economic systems optimized for quarterly returns collapse under stress. Technology systems with zero slack in capacity buckle under load spikes. The synthesis: optimization is fragility by another name. The right question is never 'how efficient?' but 'efficient relative to what range of conditions?'",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:the-identity-belief-trap",
+    "type": "synthesis",
+    "concept": "The Identity-Belief Trap",
+    "domain": "Cross-Domain",
+    "title": "Why People Defend Wrong Beliefs",
+    "concepts": [
+      "Cognitive Dissonance",
+      "Identity Fusion",
+      "Terror Management Theory",
+      "Epistemic Closure"
+    ],
+    "domains": [
+      "Psychology",
+      "Philosophy",
+      "Cognitive Science"
+    ],
+    "synthesis": "When beliefs become identity ('I'm a X kind of person'), evidence against the belief is processed as an attack on the self. Cognitive dissonance theory shows we change beliefs to match behavior, not vice versa. Identity fusion means group beliefs become personal identity. Terror management theory adds existential stakes: worldviews buffer death anxiety, so threatening someone's worldview triggers primal defense. The synthesis: rational argument fails against identity-fused beliefs because rationality was never the mechanism holding the belief in place. Changing minds requires offering an alternative identity, not just alternative evidence.",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:the-legibility-problem",
+    "type": "synthesis",
+    "concept": "The Legibility Problem",
+    "domain": "Cross-Domain",
+    "title": "Why Simplification Destroys What It Tries to Save",
+    "concepts": [
+      "Reductionism",
+      "Confucian Rectification of Names",
+      "Map-Territory Distinction",
+      "Goodhart's Law"
+    ],
+    "domains": [
+      "Philosophy",
+      "Systems Thinking",
+      "Economics"
+    ],
+    "synthesis": "James Scott's 'Seeing Like a State' shows that legibility — making a complex system readable to central authority — requires simplification that destroys the very complexity that makes the system work. Forests reduced to timber yields, cities reduced to grids, people reduced to census categories. Confucius's 'rectification of names' cuts both ways: precise language enables governance, but it also flattens nuance. The map-territory distinction and Goodhart's Law complete the picture: once the simplified version becomes the official reality, the rich original is replaced by its caricature.",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:the-measurement-trap",
+    "type": "synthesis",
+    "concept": "The Measurement Trap",
+    "domain": "Cross-Domain",
+    "title": "When Measuring Changes the Measured",
+    "concepts": [
+      "Observer Effect",
+      "Goodhart's Law",
+      "Hawthorne Effect",
+      "Heisenberg Uncertainty"
+    ],
+    "domains": [
+      "Physics",
+      "Economics",
+      "Psychology",
+      "Systems Thinking"
+    ],
+    "synthesis": "Across physics, psychology, and economics, the act of measurement alters the system being measured. Heisenberg showed particles can't be simultaneously pinned in position and momentum. The Hawthorne effect shows workers change behavior under observation. Goodhart's Law shows metrics warp once targeted. The common thread: observation is intervention. Any system that responds to its environment will respond to being measured. This doesn't mean measurement is futile — it means measurement design is itself a first-order decision, not a neutral act.",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:the-observer-s-dilemma",
+    "type": "synthesis",
+    "concept": "The Observer's Dilemma",
+    "domain": "Cross-Domain",
+    "title": "Why Neutrality Is Impossible in Complex Systems",
+    "concepts": [
+      "Observer Effect",
+      "Hermeneutics",
+      "Participatory Anthropology",
+      "Reflexivity"
+    ],
+    "domains": [
+      "Physics",
+      "Philosophy",
+      "Cognitive Science",
+      "Economics"
+    ],
+    "synthesis": "Heisenberg showed measurement disturbs physical systems. Gadamer showed understanding requires the interpreter's prejudices. Anthropologists changed the cultures they studied. Soros's reflexivity shows market participants' beliefs change the market they analyze. The synthesis: in any system where the observer is also a participant, pure objectivity is structurally impossible. This isn't a flaw to overcome — it's a fundamental feature of complex, reflexive systems. The best you can achieve is transparent subjectivity: knowing how your position shapes what you see, and reporting that alongside what you observe.",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:the-price-of-abstraction",
+    "type": "synthesis",
+    "concept": "The Price of Abstraction",
+    "domain": "Cross-Domain",
+    "title": "When Removing Detail Removes Meaning",
+    "concepts": [
+      "Abstraction",
+      "Reductionism",
+      "Data Compression",
+      "Construal Level Theory"
+    ],
+    "domains": [
+      "Philosophy",
+      "Technology",
+      "Mathematics",
+      "Psychology"
+    ],
+    "synthesis": "Abstraction is civilization's superpower: money abstracts value, language abstracts experience, code abstracts computation. But every abstraction discards information. Lossy compression in tech has an analog in human cognition: construal level theory shows we think abstractly about distant things, concretely about close ones. The synthesis: abstraction enables scalability (you can't think about billions without statistics) but the discarded detail is where individuals live. The person reduced to a data point, the community reduced to a demographic, the forest reduced to board-feet. Power and danger live in the same operation: abstraction.",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:the-scaling-problem",
+    "type": "synthesis",
+    "concept": "The Scaling Problem",
+    "domain": "Cross-Domain",
+    "title": "Why What Works Small Fails Big",
+    "concepts": [
+      "Dunbar's Number",
+      "Square-Cube Law",
+      "Diseconomies of Scale",
+      "Hierarchy Theory"
+    ],
+    "domains": [
+      "Psychology",
+      "Physics",
+      "Economics",
+      "Systems Thinking"
+    ],
+    "synthesis": "An ant scaled to human size would collapse under its own weight (square-cube law). A startup's culture dies when it scales past Dunbar's number (~150). A small government program that works in one city fails when nationalized. In each case, the properties that worked at one scale become liabilities at another because relationships between components change faster than the components themselves. The synthesis: scale isn't just 'more of the same' — it's a qualitative transformation. Successful scaling requires redesigning the system for the new scale, not just making the old system bigger.",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:the-threshold-effect",
+    "type": "synthesis",
+    "concept": "The Threshold Effect",
+    "domain": "Cross-Domain",
+    "title": "Why Gradual Inputs Produce Sudden Outputs",
+    "concepts": [
+      "Phase Transitions",
+      "Tipping Points",
+      "Activation Energy",
+      "Critical Mass"
+    ],
+    "domains": [
+      "Physics",
+      "Systems Thinking",
+      "Chemistry",
+      "Economics"
+    ],
+    "synthesis": "Water doesn't gradually become steam — it hits 100°C and transforms suddenly. Revolutions erupt after decades of slow resentment. Markets crash after years of overvaluation. Viral content explodes after months of obscurity. In each case, a gradual quantitative change produces a sudden qualitative shift. The synthesis: linear thinking ('things will change proportionally') fails catastrophically near thresholds. The most dangerous moment in any system is when you're close to a threshold but can't see it because the indicators are still 'gradual.' History doesn't creep — it snaps.",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:the-trust-stack",
+    "type": "synthesis",
+    "concept": "The Trust Stack",
+    "domain": "Cross-Domain",
+    "title": "How Complex Societies Build on Layers of Trust",
+    "concepts": [
+      "Social Contract",
+      "Institutional Path Dependence",
+      "Asymmetric Information",
+      "Psychological Safety"
+    ],
+    "domains": [
+      "Philosophy",
+      "History & Geopolitics",
+      "Economics",
+      "Psychology"
+    ],
+    "synthesis": "A credit card transaction requires trust in the merchant, the bank, the payment network, the legal system, the currency, and the government. Each layer was built over centuries: social contracts established governance, institutions created enforcement, financial systems created liquidity, and psychological safety enables the interpersonal trust that makes it all work. Remove any layer and the stack collapses — as it does in failed states. The synthesis: civilization is a trust stack where each layer depends on the ones below. Innovation adds layers; crisis reveals which layers were load-bearing.",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:thermodynamic-equilibrium-chemical-kinetics",
+    "type": "connection",
+    "concept": "Thermodynamic Equilibrium ↔ Chemical Kinetics",
+    "domain": "Cross-Domain",
+    "conceptA": "Thermodynamic Equilibrium",
+    "domainA": "Physics",
+    "conceptB": "Chemical Kinetics",
+    "domainB": "Chemistry",
+    "connection": "Thermodynamics tells you where a reaction wants to go; kinetics tells you how fast it gets there. A reaction can be thermodynamically favorable but kinetically trapped.",
+    "insight": "The gap between 'possible' and 'actual' is governed by activation energy — the same distinction between strategy (what should happen) and execution (making it happen).",
+    "prompt": "Where in your work is something clearly the right move but stuck behind an activation-energy barrier?",
+    "level": "intermediate"
+  },
+  {
+    "id": "cross-domain:wabi-sabi-agile-development",
+    "type": "connection",
+    "concept": "Wabi-Sabi ↔ Agile Development",
+    "domain": "Cross-Domain",
+    "conceptA": "Wabi-Sabi",
+    "domainA": "Philosophy",
+    "conceptB": "Agile Development",
+    "domainB": "Technology",
+    "connection": "Wabi-sabi finds beauty in imperfection and impermanence; Agile embraces 'working software over comprehensive documentation' and iterative improvement over upfront perfection.",
+    "insight": "Both philosophies reject the pursuit of flawless completion in favor of embracing the incomplete and evolving. The shipped imperfection has more value than the unshipped ideal.",
+    "prompt": "Where is your team pursuing perfection when 'beautifully imperfect' would serve users better?",
+    "level": "foundational"
+  },
+  {
+    "id": "cross-domain:wave-particle-duality-complementarity-principle",
+    "type": "connection",
+    "concept": "Wave-Particle Duality ↔ Complementarity Principle",
+    "domain": "Cross-Domain",
+    "conceptA": "Wave-Particle Duality",
+    "domainA": "Physics",
+    "conceptB": "Complementarity Principle",
+    "domainB": "Philosophy",
+    "connection": "Bohr's complementarity says mutually exclusive descriptions can both be necessary for a complete picture — wave-particle duality is its most famous physical instance.",
+    "insight": "Many real-world phenomena require holding contradictory frames simultaneously. The skill isn't choosing one — it's knowing when each applies.",
+    "prompt": "What problem in your field looks different depending on which 'lens' you use, and are both lenses necessary?",
+    "level": "advanced"
+  },
+  {
+    "id": "cross-domain:westphalian-sovereignty-social-contract",
+    "type": "connection",
+    "concept": "Westphalian Sovereignty ↔ Social Contract",
+    "domain": "Cross-Domain",
+    "conceptA": "Westphalian Sovereignty",
+    "domainA": "History & Geopolitics",
+    "conceptB": "Social Contract",
+    "domainB": "Philosophy",
+    "connection": "The Peace of Westphalia (1648) created the modern nation-state, operationalizing what Hobbes and Locke theorized — that legitimate authority requires defined boundaries and consent.",
+    "insight": "Every organization mirrors this tension: sovereignty (autonomy) and social contract (mutual obligation) must be negotiated simultaneously.",
+    "prompt": "How do modern tech platforms challenge Westphalian assumptions about territorial sovereignty?",
+    "level": "advanced"
+  }
+]

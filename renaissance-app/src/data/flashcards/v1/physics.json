@@ -1,0 +1,873 @@
+[
+  {
+    "id": "physics:angular-momentum",
+    "type": "standard",
+    "concept": "Angular Momentum",
+    "domain": "Physics",
+    "oneliner": "The rotational equivalent of linear momentum — a spinning object resists changes to its rotation.",
+    "whyItMatters": "It's why gyroscopes work, why figure skaters spin faster when they pull their arms in, and why the Earth keeps spinning.",
+    "analogy": "Once something starts spinning, it wants to keep spinning — pull your arms in and you spin faster."
+  },
+  {
+    "id": "physics:antimatter",
+    "type": "standard",
+    "concept": "Antimatter",
+    "domain": "Physics",
+    "oneliner": "Particles with the same mass but opposite charge to normal matter — when they meet, both annihilate in pure energy.",
+    "whyItMatters": "It's real and manufactured at CERN. Matter-antimatter annihilation is the most efficient energy release possible (E=mc²).",
+    "analogy": "The universe's evil twin particles — identical but opposite, and when they touch, both explode into pure energy."
+  },
+  {
+    "id": "physics:archimedes-principle",
+    "type": "standard",
+    "concept": "Archimedes' Principle",
+    "domain": "Physics",
+    "oneliner": "An object submerged in fluid experiences an upward force equal to the weight of fluid it displaces.",
+    "whyItMatters": "It's how ships float, how submarines control depth, and how density is measured.",
+    "analogy": "The fluid pushes back with the weight of what you displaced — bigger displacement, more force upward."
+  },
+  {
+    "id": "physics:bernoulli-s-principle",
+    "type": "standard",
+    "concept": "Bernoulli's Principle",
+    "domain": "Physics",
+    "oneliner": "As fluid speed increases, pressure decreases — the principle behind airplane lift, carburetors, and curveballs.",
+    "whyItMatters": "It's a common (simplified) explanation for why airplane wings generate lift, though the full story is more complex.",
+    "analogy": "Fast-moving air sucks — literally. The faster it moves, the less it pushes sideways."
+  },
+  {
+    "id": "physics:biomechanics",
+    "type": "standard",
+    "concept": "Biomechanics",
+    "domain": "Physics",
+    "oneliner": "Applying mechanical engineering principles to biological systems — analyzing bones as beams, muscles as actuators, and joints as linkages.",
+    "whyItMatters": "Prosthetics, sports performance, ergonomics, and robotic design all draw from biomechanics. Understanding the human body as an engineering system reveals both its elegance and its design compromises.",
+    "analogy": "Like reverse-engineering a car engine to understand how it was designed — except the 'car' is a human body, optimized by evolution instead of engineers.",
+    "level": "intermediate"
+  },
+  {
+    "id": "physics:black-holes",
+    "type": "standard",
+    "concept": "Black Holes",
+    "domain": "Physics",
+    "oneliner": "Regions where gravity is so extreme nothing can escape past the event horizon — not even light.",
+    "whyItMatters": "Where our physics breaks down. Supermassive ones sit at galaxy centers, including ours.",
+    "analogy": "A cosmic drain — anything crossing the edge is gone from our universe forever."
+  },
+  {
+    "id": "physics:blackbody-radiation",
+    "type": "standard",
+    "concept": "Blackbody Radiation",
+    "domain": "Physics",
+    "oneliner": "Every object emits electromagnetic radiation based on its temperature — the spectrum reveals the temperature without touching the object.",
+    "whyItMatters": "Planck's solution to the blackbody problem (quantized energy) launched quantum mechanics. Remote temperature measurement enables astronomy, thermal imaging, and climate science.",
+    "analogy": "Like how a heated iron changes color from red to white — the color IS the temperature, encoded in light.",
+    "level": "intermediate"
+  },
+  {
+    "id": "physics:bose-einstein-condensate",
+    "type": "standard",
+    "concept": "Bose-Einstein Condensate",
+    "domain": "Physics",
+    "oneliner": "At temperatures near absolute zero, particles lose individual identity and merge into a single quantum state — a macroscopic quantum object.",
+    "whyItMatters": "Proves quantum effects can manifest at visible scales. Enables precision measurements, quantum computing research, and challenges our intuition about individuality at fundamental levels.",
+    "analogy": "Like a choir where every voice merges into one tone — the individual singers disappear, and only the collective sound remains.",
+    "level": "advanced"
+  },
+  {
+    "id": "physics:brownian-motion",
+    "type": "standard",
+    "concept": "Brownian Motion",
+    "domain": "Physics",
+    "oneliner": "The random movement of particles suspended in fluid, caused by collisions with surrounding molecules. Einstein explained it in 1905.",
+    "whyItMatters": "It proved atoms exist, launched statistical mechanics, and models random walks in finance.",
+    "analogy": "Pollen grains dancing in water — invisible molecules bumping visible particles around in a random walk."
+  },
+  {
+    "id": "physics:buoyancy",
+    "type": "standard",
+    "concept": "Buoyancy",
+    "domain": "Physics",
+    "oneliner": "The upward force on an object submerged in fluid, equal to the weight of displaced fluid (Archimedes' principle).",
+    "whyItMatters": "It's why ships float, why hot air balloons rise, and why you feel lighter in a pool.",
+    "analogy": "A fluid's way of saying 'you're taking up my space' — it pushes back with a force equal to the weight of fluid displaced."
+  },
+  {
+    "id": "physics:capacitance",
+    "type": "standard",
+    "concept": "Capacitance",
+    "domain": "Physics",
+    "oneliner": "The ability to store electric charge — capacitors store energy in an electric field between two plates.",
+    "whyItMatters": "Camera flashes, touch screens, heart defibrillators, and power grid stabilization all use capacitors.",
+    "analogy": "An electrical sponge — absorbs charge quickly, releases it quickly. Fast energy storage and discharge."
+  },
+  {
+    "id": "physics:casimir-effect",
+    "type": "standard",
+    "concept": "Casimir Effect",
+    "domain": "Physics",
+    "oneliner": "Two uncharged metal plates placed close together experience a tiny attractive force from quantum vacuum fluctuations — empty space exerts pressure.",
+    "whyItMatters": "Proves that the vacuum isn't truly empty but seethes with virtual particles. 'Nothing' has measurable effects — a profound insight for anyone who dismisses the invisible.",
+    "analogy": "Like two ships in open ocean being pushed together by waves — the space between them has fewer waves than the space outside.",
+    "level": "advanced"
+  },
+  {
+    "id": "physics:centripetal-force",
+    "type": "standard",
+    "concept": "Centripetal Force",
+    "domain": "Physics",
+    "oneliner": "The inward force keeping an object moving in a circular path — not an outward 'centrifugal' force.",
+    "whyItMatters": "It's why satellites orbit, why cars turn on curves, and why you feel pushed outward on a carousel (that's inertia, not a real force).",
+    "analogy": "The leash on a dog running in circles — remove it and the dog flies off in a straight line."
+  },
+  {
+    "id": "physics:chaos-theory",
+    "type": "standard",
+    "concept": "Chaos Theory",
+    "domain": "Physics",
+    "oneliner": "In some systems, tiny differences in initial conditions lead to vastly different outcomes — deterministic but unpredictable.",
+    "whyItMatters": "The 'butterfly effect.' It's why long-term weather forecasting is fundamentally limited despite perfect equations.",
+    "analogy": "A pool table where the cue ball's path after 10 bounces depends on the gravitational pull of people standing nearby."
+  },
+  {
+    "id": "physics:conservation-laws",
+    "type": "standard",
+    "concept": "Conservation Laws",
+    "domain": "Physics",
+    "oneliner": "Certain quantities (energy, momentum, charge) can never be created or destroyed, only transformed — the universe's non-negotiable accounting rules.",
+    "whyItMatters": "Noether's theorem links conservation laws to symmetries. Every conservation law tells you something deep about the geometry of spacetime. The most powerful constraints are the ones you can't violate.",
+    "analogy": "Like a cosmic budget — you can move money between accounts, but the total never changes. Every gain somewhere is a loss elsewhere.",
+    "level": "foundational"
+  },
+  {
+    "id": "physics:conservation-of-energy",
+    "type": "standard",
+    "concept": "Conservation of Energy",
+    "domain": "Physics",
+    "oneliner": "Energy cannot be created or destroyed — only transformed. Total energy in an isolated system stays constant.",
+    "whyItMatters": "Why perpetual motion is impossible. Every process converts energy between forms.",
+    "analogy": "Money in a closed economy — changes hands and form, total never changes."
+  },
+  {
+    "id": "physics:conservation-of-momentum",
+    "type": "standard",
+    "concept": "Conservation of Momentum",
+    "domain": "Physics",
+    "oneliner": "Total momentum in a closed system stays constant — what's gained by one object is lost by another.",
+    "whyItMatters": "It governs every collision, explosion, and rocket launch. It's why guns recoil and why Newton's cradle works.",
+    "analogy": "The universe's perfect accounting — momentum is never created or destroyed, only transferred."
+  },
+  {
+    "id": "physics:coriolis-effect",
+    "type": "standard",
+    "concept": "Coriolis Effect",
+    "domain": "Physics",
+    "oneliner": "The apparent deflection of moving objects caused by Earth's rotation — right in Northern Hemisphere, left in Southern.",
+    "whyItMatters": "It determines hurricane rotation direction, affects ocean currents, and influences artillery trajectories.",
+    "analogy": "The Earth spinning beneath you while you try to move in a straight line — making everything curve."
+  },
+  {
+    "id": "physics:cosmic-microwave-background",
+    "type": "standard",
+    "concept": "Cosmic Microwave Background",
+    "domain": "Physics",
+    "oneliner": "The faint radiation left over from the Big Bang — the oldest light in the universe, from 380,000 years after creation.",
+    "whyItMatters": "It's the strongest evidence for the Big Bang. Its tiny temperature variations map the seeds of galaxy formation.",
+    "analogy": "The universe's baby photo — a snapshot of everything when the cosmos was 380,000 years old."
+  },
+  {
+    "id": "physics:coulomb-s-law",
+    "type": "standard",
+    "concept": "Coulomb's Law",
+    "domain": "Physics",
+    "oneliner": "The electric force between charged particles is proportional to their charges and inversely proportional to distance squared.",
+    "whyItMatters": "Identical to gravity's math but trillions of times stronger. It governs atoms, chemistry, and all electrical phenomena.",
+    "analogy": "Newton's gravity law but for electric charges — and enormously more powerful."
+  },
+  {
+    "id": "physics:dark-energy",
+    "type": "standard",
+    "concept": "Dark Energy",
+    "domain": "Physics",
+    "oneliner": "Unknown force making up ~68% of the universe — driving accelerating expansion.",
+    "whyItMatters": "The universe isn't just expanding, it's accelerating. We have almost no idea what causes this.",
+    "analogy": "An invisible accelerator pedal being pressed harder and harder — and we can't find the driver."
+  },
+  {
+    "id": "physics:dark-matter",
+    "type": "standard",
+    "concept": "Dark Matter",
+    "domain": "Physics",
+    "oneliner": "Unknown substance making up ~27% of the universe's mass-energy. Detectable only through gravitational effects.",
+    "whyItMatters": "Galaxies rotate too fast for visible matter alone. Something invisible provides extra gravity.",
+    "analogy": "The universe's invisible scaffolding — things hang on it, but we can't see or touch it."
+  },
+  {
+    "id": "physics:diffraction",
+    "type": "standard",
+    "concept": "Diffraction",
+    "domain": "Physics",
+    "oneliner": "Waves bending around obstacles or spreading through openings — the reason shadows aren't perfectly sharp.",
+    "whyItMatters": "It limits the resolution of microscopes and telescopes. Understanding it led to X-ray crystallography and DVD technology.",
+    "analogy": "Waves refusing to travel in straight lines — they peek around corners and spread through gaps."
+  },
+  {
+    "id": "physics:doppler-effect",
+    "type": "standard",
+    "concept": "Doppler Effect",
+    "domain": "Physics",
+    "oneliner": "The change in frequency of a wave relative to an observer moving toward or away from the source.",
+    "whyItMatters": "It's why an ambulance siren changes pitch as it passes, and how astronomers measure if galaxies are moving toward or away from us.",
+    "analogy": "The sonic equivalent of a snowball effect — waves get compressed ahead and stretched behind a moving source."
+  },
+  {
+    "id": "physics:elastic-vs-inelastic-collision",
+    "type": "standard",
+    "concept": "Elastic vs Inelastic Collision",
+    "domain": "Physics",
+    "oneliner": "Elastic: kinetic energy conserved (billiard balls). Inelastic: kinetic energy converted to heat/deformation (car crashes).",
+    "whyItMatters": "Most real collisions are inelastic — energy goes into sound, heat, and crumpling. Perfect elasticity is an idealization.",
+    "analogy": "Billiard balls bounce (elastic). Cars crumple (inelastic). The difference is where the energy goes."
+  },
+  {
+    "id": "physics:electromagnetic-force",
+    "type": "standard",
+    "concept": "Electromagnetic Force",
+    "domain": "Physics",
+    "oneliner": "One of four fundamental forces — governs interactions between charged particles. Responsible for chemistry, light, electricity.",
+    "whyItMatters": "It holds atoms together, makes chemistry possible, and governs every electromagnetic device. Infinitely stronger than gravity.",
+    "analogy": "The force behind everything you touch, see, and use electronically — the workhorse of the four fundamental forces."
+  },
+  {
+    "id": "physics:electromagnetic-induction",
+    "type": "standard",
+    "concept": "Electromagnetic Induction",
+    "domain": "Physics",
+    "oneliner": "A changing magnetic field creates electric current, and vice versa. Discovered by Faraday in 1831.",
+    "whyItMatters": "The principle behind every generator, transformer, motor, and wireless charger. It literally powers civilization.",
+    "analogy": "Magnetism and electricity are dance partners — move one, the other follows."
+  },
+  {
+    "id": "physics:electromagnetic-spectrum",
+    "type": "standard",
+    "concept": "Electromagnetic Spectrum",
+    "domain": "Physics",
+    "oneliner": "The full range of EM radiation: radio, microwave, infrared, visible light, UV, X-ray, gamma — all the same phenomenon at different wavelengths.",
+    "whyItMatters": "Wi-Fi, sunlight, medical imaging, and nuclear radiation are all electromagnetic waves. You see a tiny slice.",
+    "analogy": "A piano with infinite keys — visible light is just one octave in the middle."
+  },
+  {
+    "id": "physics:emissivity",
+    "type": "standard",
+    "concept": "Emissivity",
+    "domain": "Physics",
+    "oneliner": "How efficiently a surface radiates thermal energy compared to a perfect black body — affects heating, cooling, and thermal imaging.",
+    "whyItMatters": "Light-colored surfaces have low emissivity (reflect heat). Dark surfaces have high emissivity (radiate heat).",
+    "analogy": "A surface's thermal loudness — how efficiently it broadcasts its heat to the surroundings."
+  },
+  {
+    "id": "physics:entropic-forces",
+    "type": "standard",
+    "concept": "Entropic Forces",
+    "domain": "Physics",
+    "oneliner": "Forces that arise from a system's tendency toward maximum entropy — disorder itself can push things around.",
+    "whyItMatters": "Osmotic pressure, rubber elasticity, and even aspects of gravity can be understood as entropic effects. The tendency toward disorder isn't just passive decay — it's an active physical force.",
+    "analogy": "Like a messy teenager whose chaos actively pushes clean socks under the bed — disorder isn't just absence of order, it's a force with direction.",
+    "level": "advanced"
+  },
+  {
+    "id": "physics:equipartition-theorem",
+    "type": "standard",
+    "concept": "Equipartition Theorem",
+    "domain": "Physics",
+    "oneliner": "Energy distributes equally among all available degrees of freedom — the universe doesn't play favorites with how energy is stored.",
+    "whyItMatters": "Explains heat capacity, why monoatomic gases behave differently from diatomic ones, and the ultraviolet catastrophe that launched quantum mechanics.",
+    "analogy": "Like pouring water into connected vessels — it finds the same level everywhere, no matter the shape of the containers.",
+    "level": "intermediate"
+  },
+  {
+    "id": "physics:escape-velocity",
+    "type": "standard",
+    "concept": "Escape Velocity",
+    "domain": "Physics",
+    "oneliner": "The minimum speed needed to break free from a gravitational field without further propulsion — 11.2 km/s for Earth.",
+    "whyItMatters": "It's why rockets need such enormous fuel loads and why the Moon has no atmosphere (too low to retain gas).",
+    "analogy": "The speed you need to throw a ball so hard it never comes back down."
+  },
+  {
+    "id": "physics:faraday-cage",
+    "type": "standard",
+    "concept": "Faraday Cage",
+    "domain": "Physics",
+    "oneliner": "A conductive enclosure that blocks external electric fields — electromagnetic shielding.",
+    "whyItMatters": "It's why your microwave doesn't cook you, why planes survive lightning strikes, and why some buildings block cell signals.",
+    "analogy": "A metal box that makes electromagnetic fields go around it instead of through it — an invisible force field."
+  },
+  {
+    "id": "physics:frame-of-reference",
+    "type": "standard",
+    "concept": "Frame of Reference",
+    "domain": "Physics",
+    "oneliner": "The perspective from which motion is measured — velocity, simultaneity, and even time depend on the observer's reference frame.",
+    "whyItMatters": "It's the foundation of relativity. There's no absolute motion — only motion relative to something else.",
+    "analogy": "There's no 'standing still' in the universe — everything is moving relative to everything else."
+  },
+  {
+    "id": "physics:friction",
+    "type": "standard",
+    "concept": "Friction",
+    "domain": "Physics",
+    "oneliner": "The resistive force between surfaces opposing motion. Without it, you couldn't walk or hold anything.",
+    "whyItMatters": "Converts kinetic energy to heat. Reducing it (lubricants) and increasing it (brakes) are core engineering challenges.",
+    "analogy": "The tax on movement — every motion pays a percentage to heat."
+  },
+  {
+    "id": "physics:general-relativity",
+    "type": "standard",
+    "concept": "General Relativity",
+    "domain": "Physics",
+    "oneliner": "Einstein's 1915 theory: gravity is the curvature of spacetime caused by mass and energy.",
+    "whyItMatters": "Predicted black holes, gravitational waves, universe expansion — all confirmed. Our best theory of gravity.",
+    "analogy": "Massive objects create dips in spacetime, like bowling balls on a trampoline."
+  },
+  {
+    "id": "physics:geodesy",
+    "type": "standard",
+    "concept": "Geodesy",
+    "domain": "Physics",
+    "oneliner": "The science of measuring Earth's shape, orientation, and gravitational field — essential for GPS, mapping, and navigation.",
+    "whyItMatters": "GPS works because we know Earth's exact shape. Geodesy provides the mathematical model of the planet.",
+    "analogy": "The science of knowing exactly where 'here' is — measuring the shape of the Earth to centimeter precision."
+  },
+  {
+    "id": "physics:gravitational-waves",
+    "type": "standard",
+    "concept": "Gravitational Waves",
+    "domain": "Physics",
+    "oneliner": "Ripples in spacetime caused by massive accelerating objects — predicted by Einstein, detected by LIGO in 2015.",
+    "whyItMatters": "They opened a new window on the universe. We can now 'hear' black hole mergers and neutron star collisions.",
+    "analogy": "Dropping a bowling ball on a waterbed — the ripples travel outward through the fabric of space itself."
+  },
+  {
+    "id": "physics:gravity",
+    "type": "standard",
+    "concept": "Gravity",
+    "domain": "Physics",
+    "oneliner": "The fundamental force of attraction between all objects with mass. Described by Newton and refined by Einstein as curved spacetime.",
+    "whyItMatters": "Keeps you on Earth, planets orbiting, galaxies together. Weakest fundamental force but dominates at cosmic scales.",
+    "analogy": "The universe's default setting — everything pulls on everything else."
+  },
+  {
+    "id": "physics:harmonic-motion",
+    "type": "standard",
+    "concept": "Harmonic Motion",
+    "domain": "Physics",
+    "oneliner": "Repetitive back-and-forth motion around an equilibrium position — pendulums, springs, vibrating strings.",
+    "whyItMatters": "It describes everything from clock pendulums to sound waves to atomic vibrations.",
+    "analogy": "The universe's favorite motion pattern — oscillate back and forth, over and over."
+  },
+  {
+    "id": "physics:hawking-radiation",
+    "type": "standard",
+    "concept": "Hawking Radiation",
+    "domain": "Physics",
+    "oneliner": "Stephen Hawking's prediction that black holes slowly emit radiation and eventually evaporate — bridging quantum mechanics and gravity.",
+    "whyItMatters": "It was the first theoretical connection between quantum mechanics and general relativity. Not yet directly observed.",
+    "analogy": "Black holes slowly leaking — the one place things supposedly can't escape from, actually losing mass to the quantum vacuum."
+  },
+  {
+    "id": "physics:heat-death-of-the-universe",
+    "type": "standard",
+    "concept": "Heat Death of the Universe",
+    "domain": "Physics",
+    "oneliner": "The ultimate fate of the universe: maximum entropy where no energy gradients exist and no work can be done — perfect disorder, perfect stillness.",
+    "whyItMatters": "The second law of thermodynamics implies all structure is temporary. Life, civilization, and meaning exist because we're far from equilibrium. Equilibrium is death. The interesting stuff happens in disequilibrium.",
+    "analogy": "Like a room that will eventually reach the same temperature everywhere — once it does, you can't use temperature differences to run an engine. The gradients are what power everything.",
+    "level": "advanced"
+  },
+  {
+    "id": "physics:heisenberg-uncertainty",
+    "type": "standard",
+    "concept": "Heisenberg Uncertainty",
+    "domain": "Physics",
+    "oneliner": "You cannot simultaneously know exact position and exact momentum of a particle — fundamental, not a measurement limit.",
+    "whyItMatters": "Reality itself is fuzzy at quantum level. Precision in one decreases precision in the other.",
+    "analogy": "Photographing a hummingbird — freeze the frame, lose the speed; track the motion, lose the position."
+  },
+  {
+    "id": "physics:higgs-boson",
+    "type": "standard",
+    "concept": "Higgs Boson",
+    "domain": "Physics",
+    "oneliner": "The particle associated with the Higgs field, which gives other particles their mass. Confirmed at CERN in 2012.",
+    "whyItMatters": "Without the Higgs field, electrons would be massless and atoms couldn't form. Cost $13B and decades to confirm.",
+    "analogy": "The universe's thick syrup — particles wading through it acquire mass; the harder they are to push, the heavier they are."
+  },
+  {
+    "id": "physics:hooke-s-law",
+    "type": "standard",
+    "concept": "Hooke's Law",
+    "domain": "Physics",
+    "oneliner": "The force needed to extend or compress a spring is proportional to the displacement — F = kx.",
+    "whyItMatters": "It governs springs, elastic materials, and any system with a restoring force proportional to displacement.",
+    "analogy": "The spring's personality equation — pull it twice as far, it pulls back twice as hard."
+  },
+  {
+    "id": "physics:inertia",
+    "type": "standard",
+    "concept": "Inertia",
+    "domain": "Physics",
+    "oneliner": "An object's resistance to change in motion — the greater the mass, the greater the inertia.",
+    "whyItMatters": "It's why heavy things are hard to start moving AND hard to stop. Newton's first law is the law of inertia.",
+    "analogy": "The universe's laziness — everything wants to keep doing exactly what it's already doing."
+  },
+  {
+    "id": "physics:interference",
+    "type": "standard",
+    "concept": "Interference",
+    "domain": "Physics",
+    "oneliner": "When waves overlap, they can amplify (constructive) or cancel (destructive) each other.",
+    "whyItMatters": "Noise-canceling headphones use destructive interference. Thin-film rainbow colors on soap bubbles are constructive.",
+    "analogy": "Two waves meeting — they either high-five (louder) or arm-wrestle to silence."
+  },
+  {
+    "id": "physics:interference-patterns",
+    "type": "standard",
+    "concept": "Interference Patterns",
+    "domain": "Physics",
+    "oneliner": "When waves overlap, they can amplify (constructive) or cancel (destructive) each other — combination isn't always addition.",
+    "whyItMatters": "Explains the double-slit experiment, noise-canceling headphones, and thin-film colors. In systems: combining two good things can produce a worse outcome if they're out of phase.",
+    "analogy": "Like two people pushing a swing — if they push in rhythm it soars, if they push out of sync it stalls.",
+    "level": "foundational"
+  },
+  {
+    "id": "physics:kelvin-scale",
+    "type": "standard",
+    "concept": "Kelvin Scale",
+    "domain": "Physics",
+    "oneliner": "The absolute temperature scale starting at absolute zero (−273.15°C) — where all molecular motion ceases.",
+    "whyItMatters": "0 K is the lowest possible temperature. It's the scale used in physics because it starts at the true zero.",
+    "analogy": "Temperature measured from true zero — no negative numbers, because you can't be colder than 'no motion at all.'"
+  },
+  {
+    "id": "physics:laser",
+    "type": "standard",
+    "concept": "Laser",
+    "domain": "Physics",
+    "oneliner": "Light Amplification by Stimulated Emission of Radiation — coherent, focused light of a single wavelength.",
+    "whyItMatters": "Used in surgery, fiber optics, barcode scanners, precision measurement, and weapons. One of the most versatile inventions.",
+    "analogy": "Organizing a crowd of photons into a single-file, perfectly synchronized marching band."
+  },
+  {
+    "id": "physics:laws-of-thermodynamics",
+    "type": "standard",
+    "concept": "Laws of Thermodynamics",
+    "domain": "Physics",
+    "oneliner": "0th: Thermal equilibrium. 1st: Energy conserved. 2nd: Entropy increases. 3rd: Absolute zero unreachable.",
+    "whyItMatters": "These set absolute boundaries of what's physically possible. No perpetual motion. No free energy.",
+    "analogy": "The universe's constitution — four non-negotiable rules."
+  },
+  {
+    "id": "physics:lenz-s-law",
+    "type": "standard",
+    "concept": "Lenz's Law",
+    "domain": "Physics",
+    "oneliner": "An induced current always flows in a direction that opposes the change that caused it — nature resists being changed.",
+    "whyItMatters": "Explains electromagnetic braking, why transformers work, and why eddy currents slow falling magnets. The principle generalizes: systems generate counter-forces to changes imposed on them.",
+    "analogy": "Like pushing a swinging door that pushes back harder the more you push — the system's response always opposes your action.",
+    "level": "intermediate"
+  },
+  {
+    "id": "physics:magnetic-field",
+    "type": "standard",
+    "concept": "Magnetic Field",
+    "domain": "Physics",
+    "oneliner": "The region around a magnet or moving charge where magnetic force acts — visualized as field lines.",
+    "whyItMatters": "Earth's magnetic field protects us from solar wind. MRI machines use powerful magnetic fields.",
+    "analogy": "An invisible force field around magnets — guiding compass needles and deflecting charged particles."
+  },
+  {
+    "id": "physics:magnetic-resonance-imaging",
+    "type": "standard",
+    "concept": "Magnetic Resonance Imaging",
+    "domain": "Physics",
+    "oneliner": "Using strong magnetic fields and radio waves to create detailed images of soft tissue — revolutionized medical diagnosis.",
+    "whyItMatters": "It images the brain, joints, organs without radiation. Functional MRI can even map brain activity in real-time.",
+    "analogy": "Making your atoms sing in a magnetic field and listening to the song to see inside your body."
+  },
+  {
+    "id": "physics:magnetohydrodynamics",
+    "type": "standard",
+    "concept": "Magnetohydrodynamics",
+    "domain": "Physics",
+    "oneliner": "The study of electrically conducting fluids in magnetic fields — the physics of stars, fusion reactors, and Earth's magnetic field.",
+    "whyItMatters": "Governs solar flares, planetary magnetic fields, and the quest for fusion energy. When fluid dynamics meets electromagnetism, the resulting behavior is far more complex than either alone.",
+    "analogy": "Like trying to control a river that's also an electrical wire — the flow and the current interact in ways neither alone would suggest.",
+    "level": "advanced"
+  },
+  {
+    "id": "physics:moment-of-inertia",
+    "type": "standard",
+    "concept": "Moment of Inertia",
+    "domain": "Physics",
+    "oneliner": "Resistance to rotational acceleration — depends on mass distribution relative to the axis of rotation.",
+    "whyItMatters": "It's why hollow tubes are stiffer than solid rods of the same weight, and why figure skaters control spin speed with arm position.",
+    "analogy": "The rotational version of mass — not just how heavy, but how far the weight is from the spin axis."
+  },
+  {
+    "id": "physics:momentum",
+    "type": "standard",
+    "concept": "Momentum",
+    "domain": "Physics",
+    "oneliner": "Mass times velocity — a measure of how hard it is to stop a moving object. Always conserved in collisions.",
+    "whyItMatters": "A truck at 30mph has more momentum than a bicycle at 30mph. Conservation of momentum governs every collision.",
+    "analogy": "The difficulty of stopping something — slow and heavy or fast and light can be equally hard to stop."
+  },
+  {
+    "id": "physics:multiverse-theory",
+    "type": "standard",
+    "concept": "Multiverse Theory",
+    "domain": "Physics",
+    "oneliner": "The hypothesis that our universe is one of many — possibly infinite — parallel universes with different physical laws.",
+    "whyItMatters": "Arising from quantum mechanics and string theory. Fascinating but potentially unfalsifiable — is it science or philosophy?",
+    "analogy": "The idea that every possible universe exists somewhere — including ones where you made every different choice."
+  },
+  {
+    "id": "physics:newton-s-laws-of-motion",
+    "type": "standard",
+    "concept": "Newton's Laws of Motion",
+    "domain": "Physics",
+    "oneliner": "1: Objects stay at rest/motion unless acted on. 2: F=ma. 3: Every action has equal opposite reaction.",
+    "whyItMatters": "They govern car crashes, rocket launches, and all classical mechanics — the physics of everyday life.",
+    "analogy": "The operating manual for how objects move — three rules explaining nearly all motion you'll see."
+  },
+  {
+    "id": "physics:nuclear-fission-vs-fusion",
+    "type": "standard",
+    "concept": "Nuclear Fission vs Fusion",
+    "domain": "Physics",
+    "oneliner": "Fission: splitting heavy atoms releases energy (current nuclear). Fusion: combining light atoms releases more (the Sun's process).",
+    "whyItMatters": "Fission works but produces waste. Fusion would be limitless clean energy but we haven't sustained it yet.",
+    "analogy": "Fission = breaking a rock and releasing binding energy. Fusion = slamming small rocks together to merge."
+  },
+  {
+    "id": "physics:ohm-s-law",
+    "type": "standard",
+    "concept": "Ohm's Law",
+    "domain": "Physics",
+    "oneliner": "V = IR. Voltage equals current times resistance. The fundamental law of electrical circuits.",
+    "whyItMatters": "It governs every electrical device. Understanding it means understanding circuits, power delivery, and electronics.",
+    "analogy": "Water flowing through a pipe: voltage is water pressure, current is flow rate, resistance is pipe narrowness."
+  },
+  {
+    "id": "physics:parallax",
+    "type": "standard",
+    "concept": "Parallax",
+    "domain": "Physics",
+    "oneliner": "The apparent shift in position of an object when viewed from different angles — used to measure stellar distances.",
+    "whyItMatters": "It's how astronomers measure distances to nearby stars. Also how your two eyes create depth perception.",
+    "analogy": "Hold up a finger, close one eye, then the other — the apparent shift is parallax, and it reveals distance."
+  },
+  {
+    "id": "physics:photoelectric-effect",
+    "type": "standard",
+    "concept": "Photoelectric Effect",
+    "domain": "Physics",
+    "oneliner": "Light hitting a metal surface ejects electrons — proving light has particle nature. Einstein won his Nobel for explaining this.",
+    "whyItMatters": "It's the foundation of solar cells, light sensors, and digital cameras. Light = particles (photons) with energy.",
+    "analogy": "Light knocking electrons loose from metal — proving photons are real bullets of energy, not just waves."
+  },
+  {
+    "id": "physics:photon",
+    "type": "standard",
+    "concept": "Photon",
+    "domain": "Physics",
+    "oneliner": "A quantum of electromagnetic radiation — a particle of light with zero mass that travels at light speed.",
+    "whyItMatters": "Light is made of photons. Each photon carries a specific energy related to its wavelength. They're both particles and waves.",
+    "analogy": "A bullet of light — massless energy packets that carry all electromagnetic force across the universe."
+  },
+  {
+    "id": "physics:piezoelectricity",
+    "type": "standard",
+    "concept": "Piezoelectricity",
+    "domain": "Physics",
+    "oneliner": "Certain crystals generate electricity when mechanically stressed, and change shape when voltage is applied.",
+    "whyItMatters": "Used in lighters, quartz watches, ultrasound machines, and precise actuators. Mechanical-electrical conversion.",
+    "analogy": "Crystals that turn pressure into electricity and electricity into movement — nature's transducer."
+  },
+  {
+    "id": "physics:planck-length",
+    "type": "standard",
+    "concept": "Planck Length",
+    "domain": "Physics",
+    "oneliner": "The smallest meaningful length in physics — ~1.6 × 10⁻³⁵ meters. Below this, spacetime itself may not exist.",
+    "whyItMatters": "It's where quantum gravity effects become dominant. Current physics literally cannot describe anything smaller.",
+    "analogy": "The pixel size of reality — zoom in further and the concept of 'space' may stop making sense."
+  },
+  {
+    "id": "physics:plasma-physics",
+    "type": "standard",
+    "concept": "Plasma (Physics)",
+    "domain": "Physics",
+    "oneliner": "The fourth state of matter — ionized gas where electrons are stripped from atoms. 99% of visible matter in the universe.",
+    "whyItMatters": "Stars, lightning, neon signs, and fusion reactors are all plasma. It conducts electricity and responds to magnetic fields.",
+    "analogy": "Gas that got so hot its atoms fell apart — the stuff stars are made of."
+  },
+  {
+    "id": "physics:pressure",
+    "type": "standard",
+    "concept": "Pressure",
+    "domain": "Physics",
+    "oneliner": "Force per unit area. Atmospheric pressure at sea level: ~101 kPa or 1 atm. Increases with depth in fluids.",
+    "whyItMatters": "It's why your ears pop in airplanes, why deep-sea creatures are crushed at surface, and why hydraulic systems work.",
+    "analogy": "The weight of everything above you pressing down — more stuff above = more pressure."
+  },
+  {
+    "id": "physics:principle-of-least-action",
+    "type": "standard",
+    "concept": "Principle of Least Action",
+    "domain": "Physics",
+    "oneliner": "Physical systems evolve along the path that minimizes a quantity called action — nature is inherently economical.",
+    "whyItMatters": "Unifies classical mechanics, optics, and quantum mechanics under one principle. Feynman's path integral formulation of quantum mechanics is built on it.",
+    "analogy": "Like water always finding the path of least resistance — nature doesn't waste effort, and the laws of physics are its budget.",
+    "level": "advanced"
+  },
+  {
+    "id": "physics:quantum-entanglement",
+    "type": "standard",
+    "concept": "Quantum Entanglement",
+    "domain": "Physics",
+    "oneliner": "Two particles becoming correlated so that measuring one instantly determines the state of the other, regardless of distance.",
+    "whyItMatters": "Einstein called it 'spooky action at a distance.' It's been confirmed experimentally and is the basis of quantum computing and communication.",
+    "analogy": "Two particles sharing a fate — measure one and you instantly know the other, even across the universe. No signal travels."
+  },
+  {
+    "id": "physics:quantum-mechanics",
+    "type": "standard",
+    "concept": "Quantum Mechanics",
+    "domain": "Physics",
+    "oneliner": "The physics of the very small — particles exist in probability clouds and behave differently when observed.",
+    "whyItMatters": "Unintuitive but spectacularly accurate. Enables lasers, transistors, and MRI machines.",
+    "analogy": "Reality at the smallest scale plays dice until you look — then particles commit."
+  },
+  {
+    "id": "physics:quantum-tunneling",
+    "type": "standard",
+    "concept": "Quantum Tunneling",
+    "domain": "Physics",
+    "oneliner": "Particles can pass through energy barriers they classically shouldn't be able to cross — probability leaks through walls.",
+    "whyItMatters": "Makes nuclear fusion in stars possible, enables flash memory and tunnel diodes. At the quantum level, 'impossible' just means 'improbable.'",
+    "analogy": "Like throwing a ball at a wall and having it occasionally appear on the other side — not because the wall broke, but because probability doesn't respect barriers.",
+    "level": "intermediate"
+  },
+  {
+    "id": "physics:radiocarbon-dating",
+    "type": "standard",
+    "concept": "Radiocarbon Dating",
+    "domain": "Physics",
+    "oneliner": "Using the decay rate of carbon-14 to determine the age of organic materials up to ~50,000 years old.",
+    "whyItMatters": "It revolutionized archaeology, paleontology, and climate science. Won Libby the 1960 Nobel Prize in Chemistry.",
+    "analogy": "Nature's timestamp — radioactive carbon ticking away like a clock embedded in every living thing."
+  },
+  {
+    "id": "physics:refraction",
+    "type": "standard",
+    "concept": "Refraction",
+    "domain": "Physics",
+    "oneliner": "The bending of light (or any wave) as it passes between materials of different densities.",
+    "whyItMatters": "It's why pools look shallower than they are, why lenses work, and why rainbows exist.",
+    "analogy": "Light changing speed at a boundary — like a car wheel hitting sand, the side that slows first makes the whole thing turn."
+  },
+  {
+    "id": "physics:relativistic-time-dilation",
+    "type": "standard",
+    "concept": "Relativistic Time Dilation",
+    "domain": "Physics",
+    "oneliner": "Time passes slower for objects moving at high speeds or in strong gravitational fields — time is not universal but relative to the observer.",
+    "whyItMatters": "GPS satellites must correct for time dilation (both special and general relativity) or positions would drift by ~10 km per day. Einstein's 'thought experiment' physics has engineering consequences.",
+    "analogy": "Like two clocks that started synchronized but drift apart because one is on a fast-moving train — motion literally changes the flow of time.",
+    "level": "advanced"
+  },
+  {
+    "id": "physics:renormalization",
+    "type": "standard",
+    "concept": "Renormalization",
+    "domain": "Physics",
+    "oneliner": "A mathematical technique for removing infinities from physical theories — the art of making sense of divergent calculations.",
+    "whyItMatters": "Quantum electrodynamics predicted infinite values until Feynman, Schwinger, and Tomonaga developed renormalization. Sometimes the math breaks, and the fix is redefining what you measure.",
+    "analogy": "Like adjusting a bathroom scale that reads 'infinity' by calibrating it to a known weight — the reading becomes finite and useful.",
+    "level": "advanced"
+  },
+  {
+    "id": "physics:resonance-physics",
+    "type": "standard",
+    "concept": "Resonance (Physics)",
+    "domain": "Physics",
+    "oneliner": "When a system is driven at its natural frequency, amplitude increases dramatically — sometimes destructively.",
+    "whyItMatters": "It's why opera singers can shatter glass, why the Tacoma Narrows Bridge collapsed, and how MRI machines work.",
+    "analogy": "Pushing a swing at exactly the right moment each time — small pushes build into enormous motion."
+  },
+  {
+    "id": "physics:schrodinger-s-cat",
+    "type": "standard",
+    "concept": "Schrödinger's Cat",
+    "domain": "Physics",
+    "oneliner": "A thought experiment: a cat in a box with a quantum trigger is simultaneously alive and dead until observed.",
+    "whyItMatters": "Illustrates the absurdity of quantum superposition at macroscopic scales. Highlights the measurement problem.",
+    "analogy": "The universe's refusal to commit — until you check, all possibilities coexist."
+  },
+  {
+    "id": "physics:snell-s-law",
+    "type": "standard",
+    "concept": "Snell's Law",
+    "domain": "Physics",
+    "oneliner": "The mathematical relationship between angles of incidence and refraction when light passes between media.",
+    "whyItMatters": "It governs lens design, fiber optics, and why pools look shallower than they are.",
+    "analogy": "The traffic rule for light crossing borders — it bends by a predictable amount based on the materials."
+  },
+  {
+    "id": "physics:special-relativity",
+    "type": "standard",
+    "concept": "Special Relativity",
+    "domain": "Physics",
+    "oneliner": "Einstein's 1905 theory: speed of light is constant for all observers, time slows at high speeds, E=mc².",
+    "whyItMatters": "Time literally passes differently depending on velocity. GPS satellites must correct for relativistic time dilation.",
+    "analogy": "Time is a rubber band that stretches depending on how fast you're moving."
+  },
+  {
+    "id": "physics:specific-heat-capacity",
+    "type": "standard",
+    "concept": "Specific Heat Capacity",
+    "domain": "Physics",
+    "oneliner": "The energy needed to raise one gram of a substance by one degree Celsius. Water's is unusually high.",
+    "whyItMatters": "It's why coastal climates are milder (water absorbs/releases heat slowly) and why water is used as a coolant.",
+    "analogy": "A material's thermal stubbornness — how much energy you need to change its temperature."
+  },
+  {
+    "id": "physics:speed-of-light",
+    "type": "standard",
+    "concept": "Speed of Light",
+    "domain": "Physics",
+    "oneliner": "299,792,458 m/s — the universal speed limit. Nothing with mass can reach it.",
+    "whyItMatters": "Not just about light — it's the speed of causality. Defines what can influence what in the universe.",
+    "analogy": "The universe's bandwidth cap — the hard limit no matter how much you optimize."
+  },
+  {
+    "id": "physics:spontaneous-symmetry-breaking",
+    "type": "standard",
+    "concept": "Spontaneous Symmetry Breaking",
+    "domain": "Physics",
+    "oneliner": "A symmetric system spontaneously settles into an asymmetric state — the laws are symmetric, but the outcome isn't.",
+    "whyItMatters": "Explains the Higgs mechanism (why particles have mass), magnetism, and superconductivity. Many organizational 'inequalities' emerge from symmetric starting conditions.",
+    "analogy": "Like a pencil balanced on its point — the setup is perfectly symmetric, but it must fall in one direction. The symmetry breaks itself.",
+    "level": "advanced"
+  },
+  {
+    "id": "physics:standard-model",
+    "type": "standard",
+    "concept": "Standard Model",
+    "domain": "Physics",
+    "oneliner": "The theory describing 17 fundamental particles and three of four forces (electromagnetic, weak, strong — not gravity).",
+    "whyItMatters": "It's the most successfully tested theory in physics. The Higgs boson was its last predicted particle, confirmed 2012.",
+    "analogy": "The periodic table of particles — 17 fundamental building blocks and the forces between them."
+  },
+  {
+    "id": "physics:string-theory",
+    "type": "standard",
+    "concept": "String Theory",
+    "domain": "Physics",
+    "oneliner": "A theoretical framework proposing that fundamental particles are actually tiny vibrating strings of energy in 10-11 dimensions.",
+    "whyItMatters": "It attempts to unify quantum mechanics and general relativity — the holy grail of physics. Unproven and possibly unprovable.",
+    "analogy": "Instead of point-like particles, everything is made of vibrating guitar strings — different vibrations, different particles."
+  },
+  {
+    "id": "physics:strong-nuclear-force",
+    "type": "standard",
+    "concept": "Strong Nuclear Force",
+    "domain": "Physics",
+    "oneliner": "The strongest of four fundamental forces — holds protons and neutrons together in atomic nuclei despite electromagnetic repulsion.",
+    "whyItMatters": "Without it, every atom heavier than hydrogen would fly apart. It operates only at nuclear distances (~1 fm).",
+    "analogy": "The invisible glue holding atomic nuclei together — overcoming protons' mutual repulsion through sheer strength."
+  },
+  {
+    "id": "physics:superconductivity",
+    "type": "standard",
+    "concept": "Superconductivity",
+    "domain": "Physics",
+    "oneliner": "Zero electrical resistance, typically at extreme cold. Room-temperature superconductivity is the holy grail.",
+    "whyItMatters": "Would revolutionize energy transmission, transportation, and computing if achieved at practical temperatures.",
+    "analogy": "A highway with no speed limit and no friction — current flows forever once started."
+  },
+  {
+    "id": "physics:supercooling",
+    "type": "standard",
+    "concept": "Supercooling",
+    "domain": "Physics",
+    "oneliner": "Cooling a liquid below its freezing point without it solidifying — a metastable state that crystallizes instantly when disturbed.",
+    "whyItMatters": "Pure water can be supercooled to -42°C. A tap or vibration triggers instant freezing. Used in some food processing.",
+    "analogy": "Water refusing to freeze even below zero — then flash-freezing the instant you tap the bottle."
+  },
+  {
+    "id": "physics:tensile-strength",
+    "type": "standard",
+    "concept": "Tensile Strength",
+    "domain": "Physics",
+    "oneliner": "The maximum stress a material can withstand while being stretched before breaking.",
+    "whyItMatters": "Steel has high tensile strength (cables, beams). Glass has high compressive strength but low tensile (shatters when pulled).",
+    "analogy": "How hard you can pull something before it snaps — the molecular tug-of-war limit."
+  },
+  {
+    "id": "physics:thermal-conductivity",
+    "type": "standard",
+    "concept": "Thermal Conductivity",
+    "domain": "Physics",
+    "oneliner": "How well a material transfers heat — metals conduct well (pots, heatsinks), insulators don't (wool, styrofoam).",
+    "whyItMatters": "It's why metal feels cold to touch (conducts heat away from your hand) and why down jackets keep you warm.",
+    "analogy": "Some materials are heat highways, others are heat roadblocks — and that's why you don't make frying pans from wood."
+  },
+  {
+    "id": "physics:torque",
+    "type": "standard",
+    "concept": "Torque",
+    "domain": "Physics",
+    "oneliner": "Rotational force — the tendency of a force to rotate an object around an axis. Depends on force, distance, and angle.",
+    "whyItMatters": "It's why longer wrenches are easier, why doors have handles far from hinges, and how engines produce power.",
+    "analogy": "The twist — not just how hard you push, but how far from the pivot point you push."
+  },
+  {
+    "id": "physics:wave-function",
+    "type": "standard",
+    "concept": "Wave Function",
+    "domain": "Physics",
+    "oneliner": "The mathematical description of a quantum system — contains all possible information about a particle's state.",
+    "whyItMatters": "It gives probabilities, not certainties. The famous question: does it 'collapse' upon measurement, or do all branches persist (many-worlds)?",
+    "analogy": "Quantum reality's recipe card — it doesn't tell you what IS, only what MIGHT BE and with what probability."
+  },
+  {
+    "id": "physics:wave-particle-duality",
+    "type": "standard",
+    "concept": "Wave-Particle Duality",
+    "domain": "Physics",
+    "oneliner": "Light and matter exhibit both wave and particle properties depending on measurement.",
+    "whyItMatters": "Shattered classical physics. Electrons create wave patterns but hit detectors at specific points.",
+    "analogy": "Asking whether water is wet or dry — the answer depends on what you do with it."
+  },
+  {
+    "id": "physics:weak-nuclear-force",
+    "type": "standard",
+    "concept": "Weak Nuclear Force",
+    "domain": "Physics",
+    "oneliner": "One of four fundamental forces — responsible for radioactive decay and nuclear fusion in stars.",
+    "whyItMatters": "Without it, the Sun wouldn't shine (it enables hydrogen fusion) and radioactive materials wouldn't decay.",
+    "analogy": "The force that lets atoms change identity — transforming one element into another through decay."
+  },
+  {
+    "id": "physics:work-energy-theorem",
+    "type": "standard",
+    "concept": "Work-Energy Theorem",
+    "domain": "Physics",
+    "oneliner": "The work done on an object equals its change in kinetic energy.",
+    "whyItMatters": "It connects force, distance, and speed in a single equation. The foundation of mechanical energy analysis.",
+    "analogy": "Push something over a distance and it speeds up — the energy of your push becomes the energy of its motion."
+  }
+]
