@@ -9,21 +9,26 @@ import { countDueCards } from '../../lib/srs/scheduler';
 import { computeStreak } from '../../lib/progression/streak';
 import { loadUnlockedAchievements, ACHIEVEMENT_RULES } from '../../lib/progression/achievements';
 import { trackJourneyViewed } from '../../lib/analytics';
-import type { CardState, ReviewLogEntry } from '../../types/cards';
+import { loadCommonplaceEntries } from '../../lib/progression/commonplace';
+import type { CardState, ReviewLogEntry, CommonplaceEntry } from '../../types/cards';
 import { Constellation } from './Constellation';
 import { LevelBars } from './LevelBars';
 import { StreakStrip } from './StreakStrip';
+import { MasteryTrend } from './MasteryTrend';
+import { CommonplaceHistory } from './CommonplaceHistory';
 import './JourneyPage.css';
 
 export function JourneyPage() {
   const { user } = useAuth();
   const [states, setStates] = useState<Record<string, CardState>>({});
   const [reviewLog, setReviewLog] = useState<ReviewLogEntry[]>([]);
+  const [commonplace, setCommonplace] = useState<CommonplaceEntry[]>([]);
   const [ready, setReady] = useState(false);
 
   const refresh = useCallback(() => {
     setStates(loadCardStates());
     setReviewLog(loadReviewLog());
+    setCommonplace(loadCommonplaceEntries());
   }, []);
 
   useEffect(() => {
@@ -117,12 +122,29 @@ export function JourneyPage() {
       </section>
 
       <section className="container journey-section">
+        <h2 className="journey-section-title">Mastery over time</h2>
+        <p className="journey-section-sub">
+          Twelve-week trajectory of per-domain stability, reconstructed from your review log. Lines rise as
+          your recall steadies and plateau when a domain is neglected.
+        </p>
+        <MasteryTrend reviewLog={reviewLog} />
+      </section>
+
+      <section className="container journey-section">
         <h2 className="journey-section-title">Knowledge domains</h2>
         <p className="journey-section-sub">
           Mastery is the harmonic weight of your stability values across cards you have reviewed in each domain,
           scaled by how much of the domain you have touched.
         </p>
         <LevelBars masteries={snapshot.domains} />
+      </section>
+
+      <section className="container journey-section">
+        <h2 className="journey-section-title">Commonplace book</h2>
+        <p className="journey-section-sub">
+          The record of your reflections. Re-read on weeks when progress feels invisible.
+        </p>
+        <CommonplaceHistory entries={commonplace} />
       </section>
 
       {Object.keys(unlocked).length > 0 && (

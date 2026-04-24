@@ -72,6 +72,18 @@ describe('Scheduler', () => {
     expect(countDueCards(states, new Date('2026-01-15T00:00:00Z'))).toBe(3);
   });
 
+  it('caps new cards per low-coverage domain at 3 (progressive introduction)', () => {
+    const picks = getDueCards(makeStates(), { limit: 20, now: new Date('2026-01-01T00:00:00Z') });
+    const newPerDomain = new Map<string, number>();
+    for (const pick of picks) {
+      if (!pick.isNew) continue;
+      newPerDomain.set(pick.card.domain, (newPerDomain.get(pick.card.domain) ?? 0) + 1);
+    }
+    for (const [, count] of newPerDomain.entries()) {
+      expect(count).toBeLessThanOrEqual(3);
+    }
+  });
+
   it('favors growth domain new cards when no due cards exist', () => {
     const picks = getDueCards(makeStates(), {
       limit: 5,

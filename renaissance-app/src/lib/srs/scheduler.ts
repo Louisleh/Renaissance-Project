@@ -15,6 +15,8 @@ export interface ScheduleOptions {
 const DEFAULT_LIMIT = 20;
 const DEFAULT_MAX_SHARE_PER_DOMAIN = 0.4;
 const DEFAULT_NEW_RATIO = 0.3;
+const LOW_COVERAGE_THRESHOLD = 0.3;
+const LOW_COVERAGE_NEW_CAP = 3;
 
 function shuffle<T>(arr: T[], seed: number): T[] {
   let s = seed;
@@ -53,6 +55,23 @@ export function getDueCards(states: StatesMap, options: ScheduleOptions = {}): S
 
   const allCards = getAllCards();
 
+  // Per-domain coverage: fraction of cards that have been reviewed at all.
+  const totalsByDomain = new Map<KnowledgeDomain, number>();
+  for (const card of allCards) {
+    totalsByDomain.set(card.domain, (totalsByDomain.get(card.domain) ?? 0) + 1);
+  }
+  const reviewedByDomain = new Map<KnowledgeDomain, number>();
+  for (const state of Object.values(states)) {
+    if (isNew(state)) continue;
+    reviewedByDomain.set(state.domain, (reviewedByDomain.get(state.domain) ?? 0) + 1);
+  }
+  const lowCoverageDomains = new Set<KnowledgeDomain>();
+  for (const [domain, total] of totalsByDomain.entries()) {
+    const reviewed = reviewedByDomain.get(domain) ?? 0;
+    if (total === 0) continue;
+    if (reviewed / total < LOW_COVERAGE_THRESHOLD) lowCoverageDomains.add(domain);
+  }
+
   const dueStates: Array<{ state: CardState; card: Card }> = [];
   for (const state of Object.values(states)) {
     if (isNew(state)) continue;
@@ -65,6 +84,7 @@ export function getDueCards(states: StatesMap, options: ScheduleOptions = {}): S
 
   const seen = new Set<string>();
   const domainCount = new Map<KnowledgeDomain, number>();
+  const newDomainCount = new Map<KnowledgeDomain, number>();
   const picks: SessionPick[] = [];
 
   const tryAdd = (card: Card, state: CardState | null, newFlag: boolean): boolean => {
@@ -72,9 +92,14 @@ export function getDueCards(states: StatesMap, options: ScheduleOptions = {}): S
     if (seen.has(card.id)) return false;
     const current = domainCount.get(card.domain) ?? 0;
     if (current >= maxPerDomain) return false;
+    if (newFlag && lowCoverageDomains.has(card.domain)) {
+      const newCount = newDomainCount.get(card.domain) ?? 0;
+      if (newCount >= LOW_COVERAGE_NEW_CAP) return false;
+    }
     picks.push({ card, state, isNew: newFlag });
     seen.add(card.id);
     domainCount.set(card.domain, current + 1);
+    if (newFlag) newDomainCount.set(card.domain, (newDomainCount.get(card.domain) ?? 0) + 1);
     return true;
   };
 
