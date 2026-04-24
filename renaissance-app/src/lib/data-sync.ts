@@ -5,6 +5,7 @@ import {
 } from './curriculum-progress';
 import { captureEvent } from './posthog';
 import { isSupabaseConfigured, supabase } from './supabase';
+import { safeRead, safeWrite, safeRemove } from './safe-local-storage';
 import { CARD_STATES_KEY, syncCardStatesOnSignIn, clearLocalCardStates } from './srs/card-state-store';
 import { REVIEW_LOG_KEY, flushUnsyncedReviews, clearLocalReviewLog } from './srs/review-log';
 import { CARD_FLAGS_KEY, clearLocalCardFlags } from './srs/card-flags';
@@ -41,32 +42,15 @@ interface CurriculumProgressRow {
 }
 
 function readLocalStorage<T>(key: string): T | null {
-  if (typeof window === 'undefined') {
-    return null;
-  }
-
-  try {
-    const stored = window.localStorage.getItem(key);
-    return stored ? (JSON.parse(stored) as T) : null;
-  } catch {
-    return null;
-  }
+  return safeRead<T>(key);
 }
 
-function writeLocalStorage<T>(key: string, value: T): void {
-  if (typeof window === 'undefined') {
-    return;
-  }
-
-  window.localStorage.setItem(key, JSON.stringify(value));
+function writeLocalStorage<T>(key: string, value: T): boolean {
+  return safeWrite<T>(key, value);
 }
 
 function clearLocalStorageKey(key: string): void {
-  if (typeof window === 'undefined') {
-    return;
-  }
-
-  window.localStorage.removeItem(key);
+  safeRemove(key);
 }
 
 function loadLocalAssessment(type: AssessmentType): AssessmentResult | null {

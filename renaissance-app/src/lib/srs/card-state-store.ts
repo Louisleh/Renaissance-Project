@@ -1,4 +1,5 @@
 import { isSupabaseConfigured, supabase } from '../supabase';
+import { safeRead, safeWrite, safeRemove } from '../safe-local-storage';
 import { CARD_SET_VERSION, type CardState, type KnowledgeDomain } from '../../types/cards';
 
 export const CARD_STATES_KEY = 'renaissance_card_states';
@@ -22,18 +23,11 @@ interface CardStateRow {
 }
 
 function readLocal(): StatesMap {
-  if (typeof window === 'undefined') return {};
-  try {
-    const raw = window.localStorage.getItem(CARD_STATES_KEY);
-    return raw ? (JSON.parse(raw) as StatesMap) : {};
-  } catch {
-    return {};
-  }
+  return safeRead<StatesMap>(CARD_STATES_KEY) ?? {};
 }
 
-function writeLocal(states: StatesMap): void {
-  if (typeof window === 'undefined') return;
-  window.localStorage.setItem(CARD_STATES_KEY, JSON.stringify(states));
+function writeLocal(states: StatesMap): boolean {
+  return safeWrite(CARD_STATES_KEY, states);
 }
 
 export function loadCardStates(): StatesMap {
@@ -150,8 +144,7 @@ export async function syncCardStatesOnSignIn(userId: string): Promise<void> {
 }
 
 export function clearLocalCardStates(): void {
-  if (typeof window === 'undefined') return;
-  window.localStorage.removeItem(CARD_STATES_KEY);
+  safeRemove(CARD_STATES_KEY);
 }
 
 export function cardSetVersion(): number {

@@ -23,12 +23,14 @@ describe('LlmMirrorOverlay', () => {
     });
   });
 
-  it('copies the analysis prompt when the intro CTA is clicked', () => {
+  it('copies the analysis prompt when the intro CTA is clicked', async () => {
     renderOverlay();
 
     fireEvent.click(screen.getByRole('button', { name: /copy the analysis prompt/i }));
 
     expect(navigator.clipboard.writeText).toHaveBeenCalledWith(generateMirrorAnalysisPrompt());
-    expect(screen.getByRole('heading', { name: /copy the analysis prompt/i })).toBeInTheDocument();
+    expect(
+      await screen.findByRole('heading', { name: /copy the analysis prompt/i }),
+    ).toBeInTheDocument();
   });
 });
