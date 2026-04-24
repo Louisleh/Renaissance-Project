@@ -49,7 +49,12 @@ export function perKnowledgeDomainMastery(states: StatesMap): DomainMastery[] {
     const reviewedCount = bucket?.count ?? 0;
     const meanStability = bucket && bucket.count > 0 ? bucket.sum / bucket.count : 0;
     const coverage = total === 0 ? 0 : reviewedCount / total;
-    const mastery = Math.round(meanStability * coverage);
+    // Square-root scaling of coverage: a user who has reviewed 25% of a
+    // domain with strong stability already counts as having half-mastered it,
+    // rather than being dragged to a quarter. Prevents "always 0" mastery
+    // in long-tail domains.
+    const coverageWeight = coverage === 0 ? 0 : Math.sqrt(coverage);
+    const mastery = Math.round(meanStability * coverageWeight);
     return {
       domain,
       mastery,

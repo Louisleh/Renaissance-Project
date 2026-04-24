@@ -37,7 +37,7 @@ describe('Mastery', () => {
     expect(biology?.coverage).toBe(1);
   });
 
-  it('partial coverage reduces mastery proportionally', () => {
+  it('partial coverage reduces mastery sub-linearly (sqrt scaling)', () => {
     const biologyCards = getCardsByDomain('Biology');
     const half = Math.floor(biologyCards.length / 2);
     const states: Record<string, CardState> = {};
@@ -48,8 +48,25 @@ describe('Mastery', () => {
     }
     const result = perKnowledgeDomainMastery(states);
     const biology = result.find((d) => d.domain === 'Biology');
-    expect(biology?.mastery).toBeGreaterThan(40);
-    expect(biology?.mastery).toBeLessThan(60);
+    // Half coverage at saturated stability → sqrt(0.5) ≈ 0.707 of ceiling
+    expect(biology?.mastery).toBeGreaterThan(60);
+    expect(biology?.mastery).toBeLessThan(80);
+  });
+
+  it('tiny coverage at full stability still registers non-zero mastery', () => {
+    const biologyCards = getCardsByDomain('Biology');
+    const states: Record<string, CardState> = {};
+    // Review only 5 cards out of 122 at full stability
+    for (let i = 0; i < 5; i++) {
+      const card = biologyCards[i];
+      const base = initialState(card.id, card.domain);
+      states[card.id] = setStability(base, MASTERY_STABILITY_CEILING_DAYS);
+    }
+    const result = perKnowledgeDomainMastery(states);
+    const biology = result.find((d) => d.domain === 'Biology');
+    // 5/122 = 4% coverage; sqrt ≈ 0.2 → mastery ≈ 20
+    expect(biology?.mastery).toBeGreaterThan(15);
+    expect(biology?.mastery).toBeLessThan(30);
   });
 
   it('synthesis index is zero when no progress exists', () => {
