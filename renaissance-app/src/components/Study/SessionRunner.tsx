@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { initialState, rate } from '../../lib/srs/fsrs';
+import { initialState, previewIntervals, rate } from '../../lib/srs/fsrs';
 import { saveCardState } from '../../lib/srs/card-state-store';
 import { appendReview } from '../../lib/srs/review-log';
 import { trackCardReviewed } from '../../lib/analytics';
@@ -159,6 +159,12 @@ export function SessionRunner({ queue, userId, onStateChanged, onComplete, onExi
     return Math.round(((index + (flipped ? 0.5 : 0)) / denom) * 100);
   }, [flipped, index, queue.length]);
 
+  const intervals = useMemo(() => {
+    if (!pick || !card) return null;
+    const baseState = pick.state ?? initialState(card.id, card.domain);
+    return previewIntervals(baseState);
+  }, [pick, card]);
+
   if (!pick || !card) {
     return null;
   }
@@ -178,10 +184,11 @@ export function SessionRunner({ queue, userId, onStateChanged, onComplete, onExi
       </div>
 
       <div
-        className={`study-card ${flipped ? 'is-flipped' : ''} ${pick.isNew ? 'is-new' : ''}`}
+        className={`study-card-stage ${flipped ? 'is-flipped' : ''} ${pick.isNew ? 'is-new' : ''}`}
         onClick={flip}
         role="button"
         tabIndex={0}
+        aria-pressed={flipped}
         onKeyDown={(e) => {
           if (e.key === ' ' || e.key === 'Enter') {
             e.preventDefault();
@@ -189,24 +196,35 @@ export function SessionRunner({ queue, userId, onStateChanged, onComplete, onExi
           }
         }}
       >
-        <CardRenderer card={card} flipped={flipped} />
+        <div className="study-card" aria-hidden={flipped}>
+          <CardRenderer card={card} flipped={false} />
+        </div>
+        <div className="study-card study-card-reverse" aria-hidden={!flipped}>
+          <CardRenderer card={card} flipped={true} />
+        </div>
       </div>
 
       <div className="study-rating-bar" role="group" aria-label="Rate your recall">
-        {RATING_OPTIONS.map((opt) => (
-          <button
-            key={opt.rating}
-            className={`study-rating-btn study-rating-${opt.label.toLowerCase()}`}
-            disabled={!flipped || processing}
-            onClick={() => void submitRating(opt.rating)}
-            type="button"
-            aria-keyshortcuts={opt.shortcut}
-          >
-            <span className="study-rating-label">{opt.label}</span>
-            <span className="study-rating-description">{opt.description}</span>
-            <span className="study-rating-shortcut">{opt.shortcut}</span>
-          </button>
-        ))}
+        {RATING_OPTIONS.map((opt) => {
+          const preview = intervals?.[opt.label.toLowerCase() as 'again' | 'hard' | 'good' | 'easy'];
+          return (
+            <button
+              key={opt.rating}
+              className={`study-rating-btn study-rating-${opt.label.toLowerCase()}`}
+              disabled={!flipped || processing}
+              onClick={() => void submitRating(opt.rating)}
+              type="button"
+              aria-keyshortcuts={opt.shortcut}
+            >
+              <span className="study-rating-label">{opt.label}</span>
+              <span className="study-rating-description">{opt.description}</span>
+              <span className="study-rating-footer">
+                <span className="study-rating-interval">{preview ?? '—'}</span>
+                <span className="study-rating-shortcut">{opt.shortcut}</span>
+              </span>
+            </button>
+          );
+        })}
       </div>
     </div>
   );

@@ -115,30 +115,53 @@
   transition: width 180ms ease;
 }
 
-.study-card {
+.study-card-stage {
   position: relative;
+  min-height: 320px;
+  perspective: 1600px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.study-card-stage:focus-visible {
+  outline: none;
+}
+
+.study-card-stage:focus-visible .study-card {
+  box-shadow: var(--focus-ring);
+}
+
+.study-card {
+  position: absolute;
+  inset: 0;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 2.25rem;
-  min-height: 280px;
   display: grid;
   gap: 1.25rem;
-  cursor: pointer;
   box-shadow: var(--shadow-md);
-  transition: border-color 160ms ease, transform 160ms ease;
+  backface-visibility: hidden;
+  transition: transform 420ms cubic-bezier(0.4, 0.0, 0.2, 1), border-color 160ms ease;
+  transform: rotateY(0deg);
 }
 
-.study-card:focus-visible {
-  outline: none;
-  box-shadow: var(--focus-ring);
+.study-card-reverse {
+  transform: rotateY(180deg);
 }
 
-.study-card.is-flipped {
+.study-card-stage.is-flipped .study-card {
+  transform: rotateY(180deg);
+}
+
+.study-card-stage.is-flipped .study-card-reverse {
+  transform: rotateY(360deg);
   border-color: var(--gold-40);
 }
 
-.study-card.is-new::before {
+.study-card-stage.is-new .study-card::before {
   content: "New";
   position: absolute;
   top: 1rem;
@@ -150,6 +173,10 @@
   background: var(--gold-9);
   padding: 0.25rem 0.55rem;
   border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .study-card { transition: border-color 160ms ease; }
 }
 
 .study-card-face {
@@ -290,6 +317,20 @@
   font-size: 0.75rem;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.15em;
+}
+
+.study-rating-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 0.3rem;
+}
+
+.study-rating-interval {
+  color: var(--muted-strong);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
 }
 
 .study-summary {

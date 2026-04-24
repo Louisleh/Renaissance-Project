@@ -84,3 +84,36 @@ export function isDue(state: CardState, now: Date = new Date()): boolean {
 export function isNew(state: CardState): boolean {
   return state.reps === 0 && state.last_review === null;
 }
+
+export interface IntervalPreview {
+  again: string;
+  hard: string;
+  good: string;
+  easy: string;
+}
+
+function formatInterval(days: number): string {
+  if (days < 1 / 1440) return '<1m';
+  if (days < 1 / 24) return `${Math.max(1, Math.round(days * 1440))}m`;
+  if (days < 1) return `${Math.max(1, Math.round(days * 24))}h`;
+  if (days < 30) return `${Math.max(1, Math.round(days))}d`;
+  if (days < 365) return `${Math.max(1, Math.round(days / 30))}mo`;
+  return `${Math.max(1, Math.round(days / 365))}y`;
+}
+
+export function previewIntervals(state: CardState, now: Date = new Date()): IntervalPreview {
+  const internal = toInternal(state);
+  const preview = scheduler.repeat(internal, now);
+  const interval = (grade: 1 | 2 | 3 | 4): string => {
+    const item = preview[grade];
+    const due = item.card.due.getTime();
+    const days = (due - now.getTime()) / (1000 * 60 * 60 * 24);
+    return formatInterval(days);
+  };
+  return {
+    again: interval(1),
+    hard: interval(2),
+    good: interval(3),
+    easy: interval(4),
+  };
+}
