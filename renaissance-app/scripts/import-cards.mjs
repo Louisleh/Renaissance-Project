@@ -8,7 +8,7 @@
  * Usage:
  *   node scripts/import-cards.mjs [--source PATH]
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -65,6 +65,38 @@ function main() {
   const raw = readFileSync(sourcePath, 'utf8');
   const cards = JSON.parse(raw);
   if (!Array.isArray(cards)) throw new Error('Source JSON must be an array');
+
+  // Always merge additions that live under src/data/flashcards/source/*.json
+  const sourceDir = join(appRoot, 'src/data/flashcards/source');
+  if (existsSync(sourceDir)) {
+    for (const name of readdirSync(sourceDir)) {
+      if (!name.endsWith('.json')) continue;
+      const extraPath = join(sourceDir, name);
+      const extraCards = JSON.parse(readFileSync(extraPath, 'utf8'));
+      if (!Array.isArray(extraCards)) continue;
+      cards.push(...extraCards);
+      console.log(`  merged ${extraCards.length} cards from ${name}`);
+    }
+  }
+
+  // Extra sources passed via --extras (one-off; preferred path is source/ dir)
+  const extrasIdx = args.indexOf('--extras');
+  if (extrasIdx >= 0) {
+    const extras = args.slice(extrasIdx + 1).filter((a) => !a.startsWith('--'));
+    for (const extraPath of extras) {
+      if (!existsSync(extraPath)) {
+        console.warn(`  extras not found, skipping: ${extraPath}`);
+        continue;
+      }
+      const extraCards = JSON.parse(readFileSync(extraPath, 'utf8'));
+      if (!Array.isArray(extraCards)) {
+        console.warn(`  extras not an array, skipping: ${extraPath}`);
+        continue;
+      }
+      cards.push(...extraCards);
+      console.log(`  merged ${extraCards.length} cards from ${extraPath}`);
+    }
+  }
 
   const byDomain = new Map();
   const idSet = new Set();

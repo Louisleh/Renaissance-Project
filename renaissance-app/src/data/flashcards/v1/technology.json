@@ -525,6 +525,17 @@
     "analogy": "Teaching computers by examples instead of rules — like how children learn language vs. multiplication."
   },
   {
+    "id": "technology:mandating-99-99-uptime-sla",
+    "type": "application",
+    "concept": "Mandating 99.99% Uptime SLA",
+    "domain": "Technology",
+    "problem": "A B2B SaaS startup commits to a 99.99% uptime SLA to unlock enterprise deals with Fortune 500 buyers.",
+    "firstOrder": "Larger contracts close. Reliability becomes the org-wide north star. On-call rotations tighten, and incident response takes precedence over roadmap work.",
+    "secondOrder": "Shipping velocity collapses under redundancy, review gates, and change-freeze windows. On-call burnout drives senior engineers to exit. A culture of safe, incremental changes entrenches. The product stabilizes but stops surprising customers; competitors lap it on features while it guards its nines.",
+    "lesson": "Every tightened constraint costs something you don't immediately see. Price an SLA against the innovations you'll never attempt once it's signed.",
+    "level": "intermediate"
+  },
+  {
     "id": "technology:mcp-model-context-protocol",
     "type": "standard",
     "concept": "MCP (Model Context Protocol)",
@@ -830,6 +841,26 @@
       "Systems Thinking"
     ],
     "explanation": "Automation creates aggregate wealth but distributes the costs (job loss) and benefits (productivity, profits) asymmetrically. The retraining timeline doesn't match the displacement timeline — a 2-year gap where families can't eat. Creative destruction's 'destruction' phase is experienced individually; its 'creative' phase is experienced statistically.",
+    "level": "intermediate"
+  },
+  {
+    "id": "technology:the-bureaucratic-moat",
+    "type": "scenario",
+    "concept": "The Bureaucratic Moat",
+    "domain": "Technology",
+    "scenario": "A Fortune 500 bank has run its core ledger on a legacy mainframe vendor for 30 years. Every internal process, audit trail, and compliance report assumes its quirks. A modern alternative exists at a fraction of the cost, but the migration estimate is five years and the CFO cannot justify the disruption. The vendor raises prices 12% annually; the bank keeps paying.",
+    "relevantConcepts": [
+      "switching costs",
+      "path dependence",
+      "lock-in",
+      "sunk cost entrenchment"
+    ],
+    "domains": [
+      "Technology",
+      "Economics",
+      "Systems Thinking"
+    ],
+    "explanation": "The moat isn't technical superiority but accumulated organizational entanglement. Workflows, skills, contracts, and audit assumptions calcify around the vendor until extraction cost exceeds any rational comparison of alternatives. Each year of use deepens the dependency, and the vendor can extract rent up to the migration cost ceiling. This is how mediocre incumbents survive indefinitely.",
     "level": "intermediate"
   },
   {

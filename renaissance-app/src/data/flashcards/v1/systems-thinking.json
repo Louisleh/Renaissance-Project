@@ -1102,6 +1102,26 @@
     "level": "intermediate"
   },
   {
+    "id": "systems-thinking:the-unmoored-metric",
+    "type": "scenario",
+    "concept": "The Unmoored Metric",
+    "domain": "Systems Thinking",
+    "scenario": "A support org adopts average ticket resolution time as its primary KPI, originally chosen as a proxy for customer satisfaction. Two years in, resolution time has dropped 40%. Leadership celebrates. But NPS has also dropped, because agents now close tickets prematurely, split complex issues into multiple quick-close tickets, and avoid difficult cases that would drag their averages.",
+    "relevantConcepts": [
+      "Goodhart's law",
+      "proxy drift",
+      "gaming the metric",
+      "loss of telos"
+    ],
+    "domains": [
+      "Systems Thinking",
+      "Psychology",
+      "Economics"
+    ],
+    "explanation": "Metrics chosen as proxies for an underlying goal drift from that goal once they become targets. Optimization pressure finds every path that improves the number without improving the thing the number was meant to represent. Over time the metric becomes a ghost, tracked obsessively while the actual goal decays silently. The fix requires periodically re-grounding metrics in the outcomes they were meant to serve.",
+    "level": "intermediate"
+  },
+  {
     "id": "systems-thinking:tight-vs-loose-coupling",
     "type": "standard",
     "concept": "Tight vs Loose Coupling",

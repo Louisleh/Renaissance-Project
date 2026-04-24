@@ -108,6 +108,17 @@
     "analogy": "China's violent rejection of foreign exploitation — crushed by a multinational force, leaving wounds that shaped modern Chinese nationalism."
   },
   {
+    "id": "history-and-geopolitics:breaking-up-a-monopoly-in-one-move",
+    "type": "application",
+    "concept": "Breaking Up a Monopoly in One Move",
+    "domain": "History & Geopolitics",
+    "problem": "A government forcibly splits a dominant state energy monopoly into five regional firms to foster competition.",
+    "firstOrder": "Headlines celebrate the dismantling. Five new CEOs are appointed. Regulators declare competition restored and consumer prices are projected to drop within a year.",
+    "secondOrder": "The new firms inherit fragmented infrastructure and lose economies of scale. Tacit coordination emerges through shared supply chains and former colleagues. Within a decade three of the five merge or are absorbed, producing a tighter oligopoly than the original monopoly, now with less accountability and diffuse regulatory targets.",
+    "lesson": "Structural interventions work against the grain of the forces that created the original structure. Without changing the underlying economics, markets reconverge on their natural concentration.",
+    "level": "intermediate"
+  },
+  {
     "id": "history-and-geopolitics:bretton-woods",
     "type": "standard",
     "concept": "Bretton Woods",
@@ -835,6 +846,26 @@
     ],
     "explanation": "A shared resource with no global governance creates a multi-player game theory problem. Ethiopia frames it as development rights; Egypt frames it as survival. Neither is wrong. The tragedy of the commons plays out geopolitically when the 'common' is a river that crosses borders. Solutions require moving from zero-sum (my water vs yours) to positive-sum (shared management).",
     "level": "advanced"
+  },
+  {
+    "id": "history-and-geopolitics:the-sentimental-architect",
+    "type": "scenario",
+    "concept": "The Sentimental Architect",
+    "domain": "History & Geopolitics",
+    "scenario": "A university requires all undergraduates to complete a two-semester Latin sequence, a rule instated in 1887 when Latin was the gateway to scholarly literature. Today nearly all relevant sources are in English or vernacular translation, yet the requirement persists because its removal would 'dilute the tradition' and no faculty committee wants to author the decision that ends it.",
+    "relevantConcepts": [
+      "Chesterton's fence",
+      "path dependence",
+      "institutional inertia",
+      "diffused accountability"
+    ],
+    "domains": [
+      "History & Geopolitics",
+      "Psychology",
+      "Systems Thinking"
+    ],
+    "explanation": "Policies outlive their justifications when the cost of removal is concentrated on identifiable decision-makers while the cost of retention is diffused across many silent bearers. The original rationale dissolves, but no one person has the incentive or authority to formally dissolve the rule. Tradition becomes the justification retroactively, obscuring that the original reason has long since vanished.",
+    "level": "intermediate"
   },
   {
     "id": "history-and-geopolitics:thirty-years-war",

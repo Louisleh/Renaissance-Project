@@ -618,6 +618,19 @@
     "analogy": "Instead of studying what the world IS, study what it's LIKE to experience the world."
   },
   {
+    "id": "philosophy:phenomenology-and-user-centered-design",
+    "type": "connection",
+    "concept": "Phenomenology and User-Centered Design",
+    "domain": "Philosophy",
+    "conceptA": "Phenomenology",
+    "domainA": "Philosophy",
+    "conceptB": "User-Centered Design",
+    "domainB": "Technology",
+    "connection": "Husserl's program began with bracketing theory to study lived experience as it presents itself. Modern user-centered design enacts the same move pragmatically: before specifying features, designers observe how users actually encounter an interface, suspending their assumptions about what 'should' be obvious.",
+    "insight": "Good design, like good phenomenology, starts by suspending your model of the world and attending to what the user actually meets.",
+    "prompt": "When you last designed something for others, did you describe their experience or prescribe it?"
+  },
+  {
     "id": "philosophy:philosophy-of-mind",
     "type": "standard",
     "concept": "Philosophy of Mind",
@@ -701,6 +714,19 @@
     "analogy": "You replace every cell in your body over years — are you the same person? If so, what makes you 'you'?"
   },
   {
+    "id": "philosophy:ship-of-theseus-and-cellular-turnover",
+    "type": "connection",
+    "concept": "Ship of Theseus and Cellular Turnover",
+    "domain": "Philosophy",
+    "conceptA": "Ship of Theseus",
+    "domainA": "Philosophy",
+    "conceptB": "Cellular Turnover",
+    "domainB": "Biology",
+    "connection": "The ancient puzzle of whether a ship remains itself as each plank is replaced finds a biological echo in the human body: most of your cells are replaced on rolling timescales, yet continuity of memory, pattern, and narrative persists. Identity here is carried by organization, not substance.",
+    "insight": "Persistence of identity is a claim about pattern-preservation across substrate change, not about matter staying put.",
+    "prompt": "What in your life today is the 'pattern' that survives even as the 'planks' beneath it are replaced?"
+  },
+  {
     "id": "philosophy:simone-de-beauvoir-s-ethics-of-ambiguity",
     "type": "standard",
     "concept": "Simone de Beauvoir's Ethics of Ambiguity",
@@ -747,6 +773,19 @@
     "analogy": "The original operating system for mental toughness — focus on inputs, accept outputs."
   },
   {
+    "id": "philosophy:stoicism-and-control-theory",
+    "type": "connection",
+    "concept": "Stoicism and Control Theory",
+    "domain": "Philosophy",
+    "conceptA": "Dichotomy of Control",
+    "domainA": "Philosophy",
+    "conceptB": "Feedback Control Loops",
+    "domainB": "Systems Thinking",
+    "connection": "Stoicism partitions the world into what is 'up to us' and what is not, and urges effort only on the former. Control theory formalizes the same distinction: a controller can only act on manipulated variables, and stability depends on correctly modeling which disturbances are measurable versus uncontrollable.",
+    "insight": "Wisdom and good engineering converge on the same discipline: apply effort only where your action actually closes a loop.",
+    "prompt": "Where are you currently pushing on variables that aren't in your control channel?"
+  },
+  {
     "id": "philosophy:straw-man",
     "type": "standard",
     "concept": "Straw Man",
@@ -773,6 +812,19 @@
     "oneliner": "Locke's idea that humans are born as blank slates — all knowledge comes from experience, not innate ideas.",
     "whyItMatters": "It influenced education theory, psychology, and political philosophy. Nature vs. nurture debates trace back here.",
     "analogy": "The mind as a whiteboard at birth — every word written on it comes from experience."
+  },
+  {
+    "id": "philosophy:teleology-and-sunk-costs",
+    "type": "connection",
+    "concept": "Teleology and Sunk Costs",
+    "domain": "Philosophy",
+    "conceptA": "Teleological Reasoning",
+    "domainA": "Philosophy",
+    "conceptB": "Sunk Cost Fallacy",
+    "domainB": "Economics",
+    "connection": "Teleological thinking reads events backward from their apparent purpose, often overfitting a goal to whatever happened. Sunk-cost reasoning does the same in personal economics: because money was spent toward an end, the end feels validated, and we keep walking a path whose only remaining justification is the path already walked.",
+    "insight": "Purpose read backward from investment looks like meaning, but is often just the mind preferring a story over a write-off.",
+    "prompt": "Which ongoing commitment would you not start today, yet continue because you've already paid for it?"
   },
   {
     "id": "philosophy:the-cassandra-complex",

@@ -1,5 +1,6 @@
 import { daysUntilDue, isNew } from './fsrs';
 import { getAllCards, getCardById } from '../../data/flashcards';
+import { isCardActive } from './card-flags';
 import type { Card, CardState, KnowledgeDomain } from '../../types/cards';
 
 type StatesMap = Record<string, CardState>;
@@ -76,6 +77,7 @@ export function getDueCards(states: StatesMap, options: ScheduleOptions = {}): S
   for (const state of Object.values(states)) {
     if (isNew(state)) continue;
     if (daysUntilDue(state, now) > 0) continue;
+    if (!isCardActive(state.card_id, now)) continue;
     const card = getCardById(state.card_id);
     if (!card) continue;
     dueStates.push({ state, card });
@@ -109,7 +111,7 @@ export function getDueCards(states: StatesMap, options: ScheduleOptions = {}): S
   }
 
   const seenIds = new Set(allCards.filter((c) => states[c.id] && !isNew(states[c.id])).map((c) => c.id));
-  const newCards = allCards.filter((c) => !seenIds.has(c.id));
+  const newCards = allCards.filter((c) => !seenIds.has(c.id) && isCardActive(c.id, now));
   const seed = dailySeed(now);
   const shuffled = shuffle(newCards, seed);
 
@@ -141,7 +143,9 @@ export function countDueCards(states: StatesMap, now: Date = new Date()): number
   let count = 0;
   for (const state of Object.values(states)) {
     if (isNew(state)) continue;
-    if (daysUntilDue(state, now) <= 0) count++;
+    if (daysUntilDue(state, now) > 0) continue;
+    if (!isCardActive(state.card_id, now)) continue;
+    count++;
   }
   return count;
 }

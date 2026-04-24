@@ -1,0 +1,226 @@
+.weekly-review-main {
+  padding: 5rem 0 6rem;
+}
+
+.weekly-review-shell {
+  max-width: 860px;
+  display: grid;
+  gap: 2.25rem;
+}
+
+.weekly-review-header {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.weekly-review-eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.weekly-review-page-title {
+  font-family: var(--heading-font);
+  font-size: 2.4rem;
+  line-height: 1.1;
+  margin: 0;
+  color: var(--text);
+}
+
+.weekly-review-lede {
+  color: var(--muted-strong);
+  margin: 0;
+  max-width: 60ch;
+  line-height: 1.6;
+}
+
+.weekly-review-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.9rem;
+}
+
+.weekly-review-stat {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.weekly-review-stat-label {
+  color: var(--gold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.weekly-review-stat-value {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.weekly-review-section h2 {
+  font-family: var(--heading-font);
+  font-size: 1.3rem;
+  color: var(--text);
+  margin: 0 0 0.75rem;
+}
+
+.weekly-review-section {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+}
+
+.weekly-review-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.4rem;
+  color: var(--muted-strong);
+}
+
+.weekly-review-hint {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 0 0 1rem;
+}
+
+.weekly-review-empty {
+  color: var(--muted);
+  font-style: italic;
+  margin: 0;
+}
+
+.weekly-review-resurface {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.weekly-review-resurface li {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: baseline;
+  padding: 0.55rem 0.85rem;
+  background: var(--gold-4);
+  border-radius: 10px;
+  color: var(--muted-strong);
+}
+
+.weekly-review-domain {
+  color: var(--gold);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.weekly-review-concept {
+  color: var(--text);
+}
+
+.weekly-review-entries {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.weekly-review-entries li {
+  padding: 0.9rem 1rem;
+  background: var(--gold-4);
+  border-radius: 10px;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.weekly-review-prompt {
+  margin: 0;
+  color: var(--gold);
+  font-family: var(--heading-font);
+  font-size: 0.98rem;
+}
+
+.weekly-review-body {
+  margin: 0;
+  color: var(--muted-strong);
+  white-space: pre-wrap;
+}
+
+.weekly-review-reflect {
+  background: var(--gold-6);
+  border-color: var(--gold-25);
+}
+
+.weekly-review-textarea {
+  width: 100%;
+  min-height: 180px;
+  padding: 1rem;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  line-height: 1.55;
+  resize: vertical;
+}
+
+.weekly-review-textarea:focus {
+  outline: none;
+  border-color: var(--gold-40);
+}
+
+.weekly-review-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.weekly-review-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: var(--gold-9);
+  border: 1px solid var(--gold-25);
+  border-radius: 14px;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.weekly-review-banner-text {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.weekly-review-title {
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: 1.3rem;
+  color: var(--text);
+}
+
+.weekly-review-copy {
+  margin: 0;
+  color: var(--muted-strong);
+}
+
+.weekly-review-banner-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 720px) {
+  .weekly-review-grid { grid-template-columns: repeat(2, 1fr); }
+  .weekly-review-banner { flex-direction: column; align-items: flex-start; }
+  .weekly-review-resurface li { grid-template-columns: 1fr; }
+}

@@ -249,6 +249,101 @@
   letter-spacing: 0.08em;
 }
 
+.share-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.share-card-preview {
+  max-width: 540px;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #0d0d0d;
+}
+
+.share-card-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.share-card-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.share-card-note {
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.retention-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.retention-tile {
+  background: var(--gold-4);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem 0.9rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.retention-domain {
+  color: var(--text);
+  font-family: var(--heading-font);
+  font-size: 0.98rem;
+}
+
+.retention-bar {
+  position: relative;
+  height: 4px;
+  background: var(--gold-8);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.retention-bar-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--gold);
+  transition: width 220ms ease;
+}
+
+.retention-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.retention-pct {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.retention-total {
+  font-variant-numeric: tabular-nums;
+}
+
+.retention-empty {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
 .mastery-trend {
   display: grid;
   gap: 1rem;

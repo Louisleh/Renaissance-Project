@@ -9,6 +9,19 @@
     "analogy": "Your feelings doing your thinking for you — gut reaction substituting for rational analysis."
   },
   {
+    "id": "cognitive-science:affordances-and-interface-design",
+    "type": "connection",
+    "concept": "Affordances and Interface Design",
+    "domain": "Cognitive Science",
+    "conceptA": "Affordances",
+    "domainA": "Cognitive Science",
+    "conceptB": "Interface Design",
+    "domainB": "Technology",
+    "connection": "Gibson's affordances describe action possibilities an environment offers to an organism. Interface designers inherit this directly: a button must look pressable, a slider draggable. Good design makes the affordance visible; bad design hides it, forcing the user to reason instead of perceive.",
+    "insight": "The best interfaces are not learned — they are seen. Perception is cheaper than cognition, and designers compete for that discount.",
+    "prompt": "Which tool in your daily life forces you to think where it should let you simply see?"
+  },
+  {
     "id": "cognitive-science:analogical-reasoning",
     "type": "standard",
     "concept": "Analogical Reasoning",
@@ -34,6 +47,19 @@
     "oneliner": "The cognitive process of selectively concentrating on relevant information while ignoring distractions.",
     "whyItMatters": "It's a limited resource. Divided attention degrades performance. 'Attention economy' treats it as the scarcest resource.",
     "analogy": "Your brain's spotlight — it can only illuminate one thing at a time, and everything else fades to darkness."
+  },
+  {
+    "id": "cognitive-science:autobiographical-memory-and-narrative-identity",
+    "type": "connection",
+    "concept": "Autobiographical Memory and Narrative Identity",
+    "domain": "Cognitive Science",
+    "conceptA": "Autobiographical Memory",
+    "domainA": "Cognitive Science",
+    "conceptB": "Narrative Identity",
+    "domainB": "Philosophy",
+    "connection": "Autobiographical memory is reconstructive — each recall rewrites the trace. Philosophers from Ricoeur to MacIntyre argue the self is constituted by the story it tells about itself. Both views converge: identity is not stored, it is re-authored on each retrieval, coherent by design rather than by fact.",
+    "insight": "You do not remember your life; you rewrite it. The self is the most frequently edited document you own.",
+    "prompt": "Which chapter of your own story have you quietly revised since you last told it out loud?"
   },
   {
     "id": "cognitive-science:availability-heuristic",
@@ -119,6 +145,19 @@
     "analogy": "Software that needs OS updates before it can run certain apps — the child's cognitive OS must upgrade before certain operations become possible."
   },
   {
+    "id": "cognitive-science:cognitive-dissonance-and-belief-revision",
+    "type": "connection",
+    "concept": "Cognitive Dissonance and Belief Revision",
+    "domain": "Cognitive Science",
+    "conceptA": "Cognitive Dissonance",
+    "domainA": "Psychology",
+    "conceptB": "Bayesian Updating",
+    "domainB": "Cognitive Science",
+    "connection": "Dissonance is the felt cost of holding inconsistent beliefs; Bayesian updating is the normative rule for resolving inconsistency with new evidence. Humans often resolve dissonance by editing the prior belief or discounting evidence — a cheaper local minimum than true updating.",
+    "insight": "Dissonance is the affective signature of an update pending. Whether you pay the tax or reroute around it determines whether you learn.",
+    "prompt": "When did you last feel dissonance and choose rationalization over revision?"
+  },
+  {
     "id": "cognitive-science:cognitive-flexibility",
     "type": "standard",
     "concept": "Cognitive Flexibility",
@@ -144,6 +183,19 @@
     "oneliner": "Using external tools (notes, calendars, GPS, AI) to reduce demands on internal cognitive resources — freeing working memory for higher-order thinking.",
     "whyItMatters": "Writing a grocery list frees your mind to think about meals. GPS navigation frees spatial memory for conversation. AI coding assistants free working memory for architecture decisions. But offloading has costs: over-reliance can atrophy the offloaded skill. Connects to the extended mind thesis and to AI-human collaboration.",
     "analogy": "A student with an open-book exam — the book handles recall, freeing the mind for analysis. But a student who never studies might not know what to look up."
+  },
+  {
+    "id": "cognitive-science:cognitive-offloading-and-division-of-labor",
+    "type": "connection",
+    "concept": "Cognitive Offloading and Division of Labor",
+    "domain": "Cognitive Science",
+    "conceptA": "Cognitive Offloading",
+    "domainA": "Cognitive Science",
+    "conceptB": "Division of Labor",
+    "domainB": "Economics",
+    "connection": "Writing notes, using calculators, and consulting experts are all forms of externalizing cognition. Smith's pin factory externalizes motor skill across workers; modern knowledge work externalizes memory and reasoning across tools and specialists, yielding similar productivity gains and similar fragility.",
+    "insight": "Specialization is cognitive offloading with a paycheck. Both multiply capability and concentrate vulnerability in the links between minds.",
+    "prompt": "Which piece of your thinking have you offloaded so thoroughly that you could no longer reconstruct it alone?"
   },
   {
     "id": "cognitive-science:confirmation-bias",
@@ -249,6 +301,19 @@
     "analogy": "Your brain runs two operating systems — a fast one for routine tasks and a slow one for hard thinking."
   },
   {
+    "id": "cognitive-science:dual-process-theory-and-monetary-policy",
+    "type": "connection",
+    "concept": "Dual-Process Theory and Monetary Policy",
+    "domain": "Cognitive Science",
+    "conceptA": "Dual-Process Theory",
+    "domainA": "Cognitive Science",
+    "conceptB": "Monetary Policy",
+    "domainB": "Economics",
+    "connection": "System 1 and System 2 mirror the split between rule-based automatic stabilizers and deliberative central bank decisions. Fast heuristics handle routine cases cheaply; slow analysis intervenes when heuristics break. Both systems risk over-reliance on pattern-matching to prior crises.",
+    "insight": "Economies, like minds, cannot afford to think hard about everything. The architecture of cognition is the architecture of institutional response.",
+    "prompt": "Which of your habitual judgments are effectively 'automatic stabilizers' that you have stopped auditing?"
+  },
+  {
     "id": "cognitive-science:dunning-kruger-effect",
     "type": "standard",
     "concept": "Dunning-Kruger Effect",
@@ -338,6 +403,19 @@
     "oneliner": "Information that you generate yourself is remembered better than information you passively receive — producing an answer beats reading it.",
     "whyItMatters": "Completing 'the capital of France is P___' produces better retention than reading 'the capital of France is Paris.' This is why fill-in-the-blank tests outperform recognition tests for learning. It's the cognitive mechanism behind why active recall (flashcards) beats highlighting. Every moment of struggle before flipping the card is generation at work.",
     "analogy": "Cooking a meal from scratch vs ordering delivery — you remember the recipe because your hands made it."
+  },
+  {
+    "id": "cognitive-science:grounded-cognition-and-skeuomorphism",
+    "type": "connection",
+    "concept": "Grounded Cognition and Skeuomorphism",
+    "domain": "Cognitive Science",
+    "conceptA": "Grounded Cognition",
+    "domainA": "Cognitive Science",
+    "conceptB": "Skeuomorphism",
+    "domainB": "Technology",
+    "connection": "Grounded cognition holds that abstract thought reuses sensorimotor circuits. Skeuomorphic interfaces exploit this by dressing digital objects as physical ones — leather-bound calendars, page-turn animations — so users can import bodily intuitions rather than learn symbols from scratch.",
+    "insight": "Every new medium is initially understood as a metaphor of the old one. The body is the original UI toolkit.",
+    "prompt": "Which 'skeuomorph' in your own thinking is still borrowing from a metaphor you have outgrown?"
   },
   {
     "id": "cognitive-science:hedonic-adaptation",
@@ -502,6 +580,19 @@
     "analogy": "Your brain is a compulsive storyteller — it would rather tell a wrong story than admit randomness."
   },
   {
+    "id": "cognitive-science:neural-pruning-and-apoptosis",
+    "type": "connection",
+    "concept": "Neural Pruning and Apoptosis",
+    "domain": "Cognitive Science",
+    "conceptA": "Synaptic Pruning",
+    "domainA": "Cognitive Science",
+    "conceptB": "Apoptosis",
+    "domainB": "Biology",
+    "connection": "Development proceeds by subtraction. The infant brain over-produces synapses and eliminates the unused ones; tissues sculpt themselves through programmed cell death. In both, what remains is defined by what was killed, and pathology arises when the pruning rules misfire.",
+    "insight": "Form in living systems is a record of deletions, not additions. Learning and morphogenesis are both curated losses.",
+    "prompt": "What capacity have you pruned recently without noticing — and was the pruning signal trustworthy?"
+  },
+  {
     "id": "cognitive-science:peak-end-rule",
     "type": "standard",
     "concept": "Peak-End Rule",
@@ -527,6 +618,15 @@
     "oneliner": "Exposure to a stimulus unconsciously influencing response to subsequent stimuli.",
     "whyItMatters": "Seeing 'doctor' makes you recognize 'nurse' faster. Advertisers and politicians use it constantly.",
     "analogy": "Your brain's autocomplete — recent inputs quietly shape what comes to mind next."
+  },
+  {
+    "id": "cognitive-science:procedural-memory",
+    "type": "standard",
+    "concept": "Procedural Memory",
+    "domain": "Cognitive Science",
+    "oneliner": "A non-declarative long-term memory system that stores motor and cognitive skills as tacit procedures, accessed automatically through performance rather than conscious recall.",
+    "whyItMatters": "Amnesiacs who cannot remember a lesson can still improve at it, proving memory is not one thing; understanding this dissociation reshapes how we think about learning, habit, and rehabilitation.",
+    "analogy": "Like muscle memory for typing — your fingers know where the Q key is even when, asked verbally, you have to mime the keyboard to answer."
   },
   {
     "id": "cognitive-science:prospective-memory",
@@ -622,6 +722,15 @@
     "oneliner": "Remembering information but forgetting where you learned it — making it impossible to evaluate reliability.",
     "whyItMatters": "It's why misinformation persists: you remember the 'fact' but forget it came from a dubious source.",
     "analogy": "Your memory keeps the message but loses the sender — so you can't tell if the news came from the BBC or a meme."
+  },
+  {
+    "id": "cognitive-science:source-monitoring",
+    "type": "standard",
+    "concept": "Source Monitoring",
+    "domain": "Cognitive Science",
+    "oneliner": "The metacognitive process by which we attribute a remembered item to its origin — whether we saw it, were told it, imagined it, or merely inferred it.",
+    "whyItMatters": "Source monitoring failures underlie false memories, eyewitness errors, and plagiarism-by-accident; knowing the mechanism explains why confidently remembered details can still be wholly fabricated.",
+    "analogy": "Like losing track of which browser tab a quote came from — you still have the sentence, but you can no longer tell if it was the journal article or the reddit comment."
   },
   {
     "id": "cognitive-science:source-monitoring-error",
@@ -745,6 +854,19 @@
     "oneliner": "The ability to attribute mental states (beliefs, intentions, desires) to others — understanding that others have minds different from yours.",
     "whyItMatters": "It develops around age 4 in children. Its absence is a feature of some autism spectrum conditions. It enables empathy, deception, and cooperation.",
     "analogy": "The mental model of other minds — understanding that the person across from you has their own thoughts, feelings, and beliefs."
+  },
+  {
+    "id": "cognitive-science:theory-of-mind-and-diplomatic-signaling",
+    "type": "connection",
+    "concept": "Theory of Mind and Diplomatic Signaling",
+    "domain": "Cognitive Science",
+    "conceptA": "Theory of Mind",
+    "domainA": "Cognitive Science",
+    "conceptB": "Diplomatic Signaling",
+    "domainB": "History & Geopolitics",
+    "connection": "Statecraft is recursive theory of mind operationalized: 'I know that you know that I know.' Deterrence, bluffing, and ultimatums all depend on correctly modeling the opponent's model of you. Failures of diplomacy are often failures of second-order mentalizing.",
+    "insight": "Geopolitics runs on the same cognitive machinery a four-year-old uses to hide a cookie. The stakes scale, but the primitives do not.",
+    "prompt": "In your last negotiation, at what level of recursion did your model of the other side stop being explicit?"
   },
   {
     "id": "cognitive-science:transfer-learning",

@@ -7,6 +7,7 @@ import { captureEvent } from './posthog';
 import { isSupabaseConfigured, supabase } from './supabase';
 import { CARD_STATES_KEY, syncCardStatesOnSignIn, clearLocalCardStates } from './srs/card-state-store';
 import { REVIEW_LOG_KEY, flushUnsyncedReviews, clearLocalReviewLog } from './srs/review-log';
+import { CARD_FLAGS_KEY, clearLocalCardFlags } from './srs/card-flags';
 import { COMMONPLACE_KEY, syncCommonplaceOnSignIn, clearLocalCommonplace } from './progression/commonplace';
 import type {
   AssessmentHistoryEntry,
@@ -433,9 +434,11 @@ export function clearLocalUserData(): void {
   clearLocalStorageKey(CARD_STATES_KEY);
   clearLocalStorageKey(REVIEW_LOG_KEY);
   clearLocalStorageKey(COMMONPLACE_KEY);
+  clearLocalStorageKey(CARD_FLAGS_KEY);
   clearLocalCardStates();
   clearLocalReviewLog();
   clearLocalCommonplace();
+  clearLocalCardFlags();
 }
 
 export async function deleteUserData(userId: string): Promise<void> {

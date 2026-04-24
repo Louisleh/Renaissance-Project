@@ -357,6 +357,17 @@
     "analogy": "DNA is the piano — epigenetics decides which keys get played."
   },
   {
+    "id": "biology:eradicating-a-single-crop-pest",
+    "type": "application",
+    "concept": "Eradicating a Single Crop Pest",
+    "domain": "Biology",
+    "problem": "An agriculture ministry launches a program to eliminate one dominant insect pest attacking the national staple crop.",
+    "firstOrder": "Pesticide deployment ramps up. The target pest population plummets within two seasons. Farmers report visibly cleaner fields and higher early yields.",
+    "secondOrder": "With the dominant pest gone, previously suppressed secondary pests explode into the ecological vacuum. Beneficial predator populations collapse alongside the target. Soil microbiota shifts. Within five years yields fall below pre-program levels, and the ministry faces a more diverse, less tractable pest complex than before.",
+    "lesson": "In complex systems, removing one element rearranges the whole. Niches don't stay empty; they fill with whatever was next in line, which is rarely what you wanted.",
+    "level": "intermediate"
+  },
+  {
     "id": "biology:fascia",
     "type": "standard",
     "concept": "Fascia",

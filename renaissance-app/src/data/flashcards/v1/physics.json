@@ -185,6 +185,19 @@
     "analogy": "Newton's gravity law but for electric charges — and enormously more powerful."
   },
   {
+    "id": "physics:damping-and-over-engineering",
+    "type": "connection",
+    "concept": "Damping and Over-Engineering",
+    "domain": "Physics",
+    "conceptA": "Critical Damping",
+    "domainA": "Physics",
+    "conceptB": "Over-Engineering",
+    "domainB": "Technology",
+    "connection": "An under-damped system oscillates wastefully; an over-damped one responds sluggishly; critical damping reaches the target fastest without overshoot. Software and product teams face the same tradeoff — too little process and the system rings with bugs, too much and every change crawls through review. The optimum is the least structure that still suppresses oscillation.",
+    "insight": "The goal isn't maximum robustness or maximum speed; it's the smallest amount of structure that kills oscillation without introducing drag.",
+    "prompt": "Where in your current workflow are you over-damped — solving a problem of resonance you no longer have?"
+  },
+  {
     "id": "physics:dark-energy",
     "type": "standard",
     "concept": "Dark Energy",
@@ -284,6 +297,19 @@
     "whyItMatters": "Explains heat capacity, why monoatomic gases behave differently from diatomic ones, and the ultraviolet catastrophe that launched quantum mechanics.",
     "analogy": "Like pouring water into connected vessels — it finds the same level everywhere, no matter the shape of the containers.",
     "level": "intermediate"
+  },
+  {
+    "id": "physics:ergodicity-and-time-averaged-returns",
+    "type": "connection",
+    "concept": "Ergodicity and Time-Averaged Returns",
+    "domain": "Physics",
+    "conceptA": "Ergodicity",
+    "domainA": "Physics",
+    "conceptB": "Time-Averaged Returns",
+    "domainB": "Economics",
+    "connection": "In an ergodic system, the average over many copies equals the average over one copy's long history. Most compounding financial processes are non-ergodic: the expected return across hypothetical investors diverges from what any single investor experiences through time, because ruin is absorbing and cannot be undone by others' luck.",
+    "insight": "When outcomes compound and ruin is absorbing, the only average that matters is the one your single timeline actually realizes.",
+    "prompt": "In a repeated decision you face, is the 'expected value' you're using an ensemble average or a time average?"
   },
   {
     "id": "physics:escape-velocity",
@@ -466,6 +492,19 @@
     "oneliner": "0th: Thermal equilibrium. 1st: Energy conserved. 2nd: Entropy increases. 3rd: Absolute zero unreachable.",
     "whyItMatters": "These set absolute boundaries of what's physically possible. No perpetual motion. No free energy.",
     "analogy": "The universe's constitution — four non-negotiable rules."
+  },
+  {
+    "id": "physics:least-action-and-heuristics",
+    "type": "connection",
+    "concept": "Least Action and Heuristics",
+    "domain": "Physics",
+    "conceptA": "Principle of Least Action",
+    "domainA": "Physics",
+    "conceptB": "Optimization Heuristics",
+    "domainB": "Systems Thinking",
+    "connection": "Classical mechanics can be restated as: systems evolve along paths that extremize an action integral. Organizations and individuals rarely compute such integrals, but effective heuristics — 'do the reversible thing first', 'minimize WIP' — act as local rules whose aggregate behavior approximates a global stationary-path principle.",
+    "insight": "Good heuristics are compressed variational principles: local rules whose trajectories look, in aggregate, like someone was optimizing the right global quantity.",
+    "prompt": "Which of your heuristics, if traced to its implied 'action', would reveal what you are actually optimizing for?"
   },
   {
     "id": "physics:lenz-s-law",
@@ -706,6 +745,19 @@
     "oneliner": "When a system is driven at its natural frequency, amplitude increases dramatically — sometimes destructively.",
     "whyItMatters": "It's why opera singers can shatter glass, why the Tacoma Narrows Bridge collapsed, and how MRI machines work.",
     "analogy": "Pushing a swing at exactly the right moment each time — small pushes build into enormous motion."
+  },
+  {
+    "id": "physics:resonance-and-social-proof",
+    "type": "connection",
+    "concept": "Resonance and Social Proof",
+    "domain": "Physics",
+    "conceptA": "Resonance",
+    "domainA": "Physics",
+    "conceptB": "Social Proof",
+    "domainB": "Psychology",
+    "connection": "A driven oscillator absorbs energy efficiently only near its natural frequency; small periodic pushes at the right rate produce disproportionate amplitude. Social proof is the cognitive analogue: a message matched to the listener's existing beliefs and in-group rhythm amplifies far beyond its informational content, while off-frequency arguments dissipate.",
+    "insight": "Influence, like energy transfer, scales not with how hard you push but with how closely you match the receiver's resonant mode.",
+    "prompt": "What 'natural frequency' does a community you care about actually oscillate at — and are you driving it or fighting it?"
   },
   {
     "id": "physics:schrodinger-s-cat",

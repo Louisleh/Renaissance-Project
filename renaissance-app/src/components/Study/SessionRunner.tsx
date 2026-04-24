@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { initialState, previewIntervals, rate } from '../../lib/srs/fsrs';
 import { saveCardState } from '../../lib/srs/card-state-store';
 import { appendReview } from '../../lib/srs/review-log';
+import { setCardFlag } from '../../lib/srs/card-flags';
 import { trackCardReviewed } from '../../lib/analytics';
 import {
   RATING_AGAIN,
@@ -92,6 +93,25 @@ export function SessionRunner({ queue, userId, onStateChanged, onComplete, onExi
     onExit(buildOutcome(reviewedCount, successCount));
   }, [buildOutcome, onExit, reviewedCount, successCount]);
 
+  const advance = useCallback(() => {
+    if (index + 1 >= queue.length) {
+      finish(reviewedCount, successCount);
+      return;
+    }
+    setIndex(index + 1);
+  }, [finish, index, queue.length, reviewedCount, successCount]);
+
+  const flagCard = useCallback(
+    (action: 'suspend' | 'bury' | 'report') => {
+      if (!card) return;
+      if (action === 'suspend') setCardFlag(card.id, 'suspended');
+      else if (action === 'bury') setCardFlag(card.id, 'buried', { buryDays: 7 });
+      else setCardFlag(card.id, 'reported');
+      advance();
+    },
+    [advance, card],
+  );
+
   const submitRating = useCallback(
     async (rating: Rating) => {
       if (!pick || !card || !flipped || processing) return;
@@ -144,6 +164,14 @@ export function SessionRunner({ queue, userId, onStateChanged, onComplete, onExi
         flip();
         return;
       }
+      if (event.key === 's' || event.key === 'S') {
+        flagCard('suspend');
+        return;
+      }
+      if (event.key === 'b' || event.key === 'B') {
+        flagCard('bury');
+        return;
+      }
       if (!flipped) return;
       if (event.key === '1') void submitRating(RATING_AGAIN);
       if (event.key === '2') void submitRating(RATING_HARD);
@@ -152,7 +180,7 @@ export function SessionRunner({ queue, userId, onStateChanged, onComplete, onExi
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [flip, flipped, submitRating]);
+  }, [flagCard, flip, flipped, submitRating]);
 
   const progress = useMemo(() => {
     const denom = queue.length || 1;
@@ -202,6 +230,26 @@ export function SessionRunner({ queue, userId, onStateChanged, onComplete, onExi
         <div className="study-card study-card-reverse" aria-hidden={!flipped}>
           <CardRenderer card={card} flipped={true} />
         </div>
+      </div>
+
+      <div className="study-card-actions" role="group" aria-label="Card actions">
+        <button type="button" className="study-card-action" onClick={() => flagCard('bury')}>
+          Bury 7 days <span className="study-card-action-key">B</span>
+        </button>
+        <button type="button" className="study-card-action" onClick={() => flagCard('suspend')}>
+          Suspend <span className="study-card-action-key">S</span>
+        </button>
+        <button
+          type="button"
+          className="study-card-action"
+          onClick={() => {
+            if (window.confirm('Report this card as broken or unhelpful? It will be removed from your queue.')) {
+              flagCard('report');
+            }
+          }}
+        >
+          Report
+        </button>
       </div>
 
       <div className="study-rating-bar" role="group" aria-label="Rate your recall">
