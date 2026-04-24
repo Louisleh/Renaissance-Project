@@ -266,6 +266,28 @@
     "analogy": "Architecture having a nervous breakdown — and looking spectacular doing it."
   },
   {
+    "id": "art-and-architecture:entasis",
+    "type": "standard",
+    "concept": "Entasis",
+    "domain": "Art & Architecture",
+    "oneliner": "The slight outward convex curve applied to a classical column's shaft to counteract the optical illusion that perfectly straight sides appear to bow inward.",
+    "whyItMatters": "It shows that serious design corrects for the observer, not just the object. Greek architects engineered around human perception millennia before formal vision science existed.",
+    "analogy": "Like a chef slightly over-salting a dish destined for an airplane meal — compensating for a known perceptual distortion so the final experience lands as intended."
+  },
+  {
+    "id": "art-and-architecture:entasis-and-perceptual-correction",
+    "type": "connection",
+    "concept": "Entasis and Perceptual Correction",
+    "domain": "Art & Architecture",
+    "conceptA": "Entasis",
+    "domainA": "Art & Architecture",
+    "conceptB": "Perceptual Correction",
+    "domainB": "Cognitive Science",
+    "connection": "Greek columns bulge slightly in the middle because straight columns look concave to the eye. Builders compensated for a known perceptual distortion, encoding a model of the viewer's visual system directly into stone geometry.",
+    "insight": "Designing for the eye's quirks beats designing for geometric truth. Any interface that ignores the perceiver's biases will feel subtly wrong even when technically correct.",
+    "prompt": "Where in your own work are you optimizing for measured correctness rather than perceived correctness?"
+  },
+  {
     "id": "art-and-architecture:environmental-design",
     "type": "standard",
     "concept": "Environmental Design",
@@ -301,6 +323,19 @@
     "oneliner": "An external arch transferring roof thrust to an outer support, allowing thin walls and huge windows.",
     "whyItMatters": "A structural engineering breakthrough that defined Gothic architecture and enabled stained glass cathedrals.",
     "analogy": "An architectural kickstand — supporting the wall from outside so the inside can be all light."
+  },
+  {
+    "id": "art-and-architecture:flying-buttress-as-force-vector",
+    "type": "connection",
+    "concept": "Flying Buttress as Force Vector",
+    "domain": "Art & Architecture",
+    "conceptA": "Flying Buttress",
+    "domainA": "Art & Architecture",
+    "conceptB": "Vector Decomposition",
+    "domainB": "Physics",
+    "connection": "Gothic cathedrals externalize lateral thrust through angled stone arms that redirect horizontal force into the ground. The buttress is a physical diagram of force decomposition, making the hidden math of vaults visible as architecture.",
+    "insight": "When a system cannot absorb a force internally, the honest move is to externalize it visibly rather than pretend it isn't there. Visible supports are clearer than hidden ones.",
+    "prompt": "What lateral pressure in your life or work needs its own flying buttress instead of more internal reinforcement?"
   },
   {
     "id": "art-and-architecture:form-follows-function",
@@ -355,6 +390,19 @@
     "oneliner": "The irrational number ~1.618 appearing in nature, art, and architecture. Rectangles with this ratio seem pleasing.",
     "whyItMatters": "Found in spiral galaxies, sunflower seeds, the Parthenon. Whether it's truly 'beautiful' is debated.",
     "analogy": "Nature's favorite proportion — the recipe that keeps showing up in things humans find beautiful."
+  },
+  {
+    "id": "art-and-architecture:golden-rectangle-and-self-similarity",
+    "type": "connection",
+    "concept": "Golden Rectangle and Self-Similarity",
+    "domain": "Art & Architecture",
+    "conceptA": "Golden Rectangle",
+    "domainA": "Art & Architecture",
+    "conceptB": "Recursive Sequence",
+    "domainB": "Mathematics",
+    "connection": "A golden rectangle divides into a square plus a smaller golden rectangle, which divides the same way, forever. Composition in Renaissance painting exploits this recursion, so the eye finds proportional echoes at every scale of the canvas.",
+    "insight": "Aesthetic coherence often comes from the same rule applying at multiple scales. Self-similar systems feel inevitable because each part rehearses the logic of the whole.",
+    "prompt": "What rule, if repeated at every scale of your project, would make it feel unified rather than assembled?"
   },
   {
     "id": "art-and-architecture:gothic-architecture",
@@ -494,6 +542,19 @@
     "analogy": "The silence between notes that makes music — without emptiness, fullness has no meaning."
   },
   {
+    "id": "art-and-architecture:negative-space-and-gestalt-closure",
+    "type": "connection",
+    "concept": "Negative Space and Gestalt Closure",
+    "domain": "Art & Architecture",
+    "conceptA": "Negative Space",
+    "domainA": "Art & Architecture",
+    "conceptB": "Gestalt Closure",
+    "domainB": "Psychology",
+    "connection": "Painters and logo designers leave gaps the mind completes automatically, because perception prefers whole forms over fragments. The unpainted area does real cognitive work, recruiting the viewer into finishing the image.",
+    "insight": "What you omit can carry more weight than what you include, because the audience's mind rushes in to close the gap and takes ownership of the result.",
+    "prompt": "In your next explanation or pitch, what could you leave out so the listener completes it themselves?"
+  },
+  {
     "id": "art-and-architecture:neoclassicism",
     "type": "standard",
     "concept": "Neoclassicism",
@@ -501,6 +562,15 @@
     "oneliner": "18th-19th century return to classical Greek and Roman aesthetics — clean lines, symmetry, idealized forms. The Capitol Building.",
     "whyItMatters": "It was the visual language of Enlightenment ideals — reason, democracy, civic virtue expressed in marble.",
     "analogy": "Ancient Greece and Rome as filtered through 18th-century taste — columns and togas as political statements."
+  },
+  {
+    "id": "art-and-architecture:oculus",
+    "type": "standard",
+    "concept": "Oculus",
+    "domain": "Art & Architecture",
+    "oneliner": "A circular opening at the apex of a dome or in a wall, admitting light and sometimes air, most famously the unglazed 27-foot aperture crowning the Pantheon in Rome.",
+    "whyItMatters": "The oculus converts raw sunlight into a moving, sacred focal point, showing how architecture can choreograph time and weather itself into the building's experience.",
+    "analogy": "Like a pinhole camera on a cathedral scale — a single round hole turning the sky into a slowly rotating spotlight that paints the interior."
   },
   {
     "id": "art-and-architecture:oulipo-constraints",
@@ -522,6 +592,19 @@
     "analogy": "A page written, erased, and rewritten — but the old words still show through."
   },
   {
+    "id": "art-and-architecture:palladian-villa-as-modular-grammar",
+    "type": "connection",
+    "concept": "Palladian Villa as Modular Grammar",
+    "domain": "Art & Architecture",
+    "conceptA": "Palladian Symmetry",
+    "domainA": "Art & Architecture",
+    "conceptB": "Generative Grammar",
+    "domainB": "Mathematics",
+    "connection": "Palladio's villas are recombinations of a small vocabulary (portico, central hall, symmetric wings) governed by strict rules. Like a formal grammar, a finite kit of parts plus compositional constraints produces an open-ended family of coherent buildings.",
+    "insight": "Creative range often comes from tightening the rules, not loosening them. A small vocabulary under strict grammar generates more legible variety than a large vocabulary with loose rules.",
+    "prompt": "What constraints could you add to your work so that variation becomes meaningful rather than noisy?"
+  },
+  {
     "id": "art-and-architecture:parametric-design",
     "type": "standard",
     "concept": "Parametric Design",
@@ -538,6 +621,19 @@
     "oneliner": "The surface changes that develop on materials over time — oxidation on bronze, weathering on stone, aging on leather.",
     "whyItMatters": "Some cultures prize it (wabi-sabi, antiques). Others obsessively prevent it (car detailing, restoration).",
     "analogy": "Time's signature on surfaces — some see damage, others see character."
+  },
+  {
+    "id": "art-and-architecture:patina-and-path-dependence",
+    "type": "connection",
+    "concept": "Patina and Path Dependence",
+    "domain": "Art & Architecture",
+    "conceptA": "Patina",
+    "domainA": "Art & Architecture",
+    "conceptB": "Path Dependence",
+    "domainB": "Systems Thinking",
+    "connection": "Patina is the visible record of every hand, weather event, and repair a surface has endured. Like path-dependent systems, the current state is legible only through its history; you cannot fake it by jumping to the endpoint.",
+    "insight": "Some qualities are not features but accumulated histories. Trying to manufacture them in one step produces counterfeit versions that lack the structural memory of the real thing.",
+    "prompt": "Which quality you admire in a person or product is really just compounded history that cannot be shortcut?"
   },
   {
     "id": "art-and-architecture:patina-and-weathering",
@@ -668,6 +764,19 @@
     "analogy": "The opposite of coloring inside the lines — reality doesn't have outlines, and neither should great painting."
   },
   {
+    "id": "art-and-architecture:sfumato-and-signal-smoothing",
+    "type": "connection",
+    "concept": "Sfumato and Signal Smoothing",
+    "domain": "Art & Architecture",
+    "conceptA": "Sfumato",
+    "domainA": "Art & Architecture",
+    "conceptB": "Gaussian Blur",
+    "domainB": "Physics",
+    "connection": "Leonardo's sfumato dissolves edges into gradients, mirroring how light actually diffuses through atmosphere and through the eye's optics. Hard contours are a linguistic convenience; real photons arrive as smoothed distributions, not step functions.",
+    "insight": "Sharp boundaries are usually artifacts of how we label the world, not of the world itself. Honest representation often means restoring the blur that categorization removed.",
+    "prompt": "Where are you drawing a hard line that the underlying phenomenon is actually showing you as a gradient?"
+  },
+  {
     "id": "art-and-architecture:sgraffito",
     "type": "standard",
     "concept": "Sgraffito",
@@ -742,6 +851,15 @@
     "analogy": "Architecture held up by pulling rather than pushing — cables and fabric instead of columns and beams."
   },
   {
+    "id": "art-and-architecture:tripartite-elevation",
+    "type": "standard",
+    "concept": "Tripartite Elevation",
+    "domain": "Art & Architecture",
+    "oneliner": "A facade or interior wall organized into three stacked horizontal zones — typically base, middle, and crown — that give a building visual coherence and proportional rhythm.",
+    "whyItMatters": "This scheme underlies everything from Gothic cathedrals (arcade, triforium, clerestory) to Renaissance palazzi and modern skyscrapers, giving learners a universal template for reading architectural facades.",
+    "analogy": "Like the three acts of a play: a grounded setup, a developed middle, and a resolving finale — you feel the completeness even when you can't name the parts."
+  },
+  {
     "id": "art-and-architecture:trompe-l-oeil",
     "type": "standard",
     "concept": "Trompe l'oeil",
@@ -749,6 +867,19 @@
     "oneliner": "Hyper-realistic painting that creates optical illusions of three-dimensionality — 'deceiving the eye.'",
     "whyItMatters": "From ancient Roman murals to modern street art. It demonstrates mastery of perspective and light.",
     "analogy": "Art so realistic your brain is convinced the flat surface has depth — optical illusion as artistic flex."
+  },
+  {
+    "id": "art-and-architecture:trompe-l-oeil-and-predictive-coding",
+    "type": "connection",
+    "concept": "Trompe L'Oeil and Predictive Coding",
+    "domain": "Art & Architecture",
+    "conceptA": "Trompe L'Oeil",
+    "domainA": "Art & Architecture",
+    "conceptB": "Predictive Coding",
+    "domainB": "Cognitive Science",
+    "connection": "Illusionist painting exploits the brain's habit of predicting 3D scenes from 2D cues. Shadow, perspective, and occlusion trigger the same inference machinery a real room would, so the wall reads as a doorway until touch overrides vision.",
+    "insight": "Perception is a bet, not a recording. Systems that understand which cues the brain weights most heavily can construct convincing realities from surprisingly thin evidence.",
+    "prompt": "What assumption are you treating as observed data when it is actually just a strong prediction your mind filled in?"
   },
   {
     "id": "art-and-architecture:typographic-hierarchy",

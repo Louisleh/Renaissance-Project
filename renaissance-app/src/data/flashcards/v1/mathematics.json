@@ -179,6 +179,19 @@
     "analogy": "Not 'the answer is between 40 and 60' but 'we're 95% confident the answer is between 40 and 60' — subtle but critical."
   },
   {
+    "id": "mathematics:convex-optimization-and-metabolic-scaling",
+    "type": "connection",
+    "concept": "Convex Optimization and Metabolic Scaling",
+    "domain": "Mathematics",
+    "conceptA": "Convex Optimization",
+    "domainA": "Mathematics",
+    "conceptB": "Metabolic Scaling Laws",
+    "domainB": "Biology",
+    "connection": "Convex optimization finds the unique minimum of a cost subject to constraints. Vascular networks in organisms appear to minimize the energy cost of distributing resources under volume constraints, yielding the quarter-power metabolic scaling law that spans bacteria to whales.",
+    "insight": "Evolution and engineering converge on the same optima because convex problems have one answer. Biology looks designed because the math permits only a narrow family of solutions.",
+    "prompt": "Where in nature or society does a universal pattern hint that an invisible cost function is being minimized?"
+  },
+  {
     "id": "mathematics:convexity",
     "type": "standard",
     "concept": "Convexity",
@@ -272,6 +285,19 @@
     "analogy": "The average amount of surprise in a message — highly predictable = low entropy, shocking = high entropy."
   },
   {
+    "id": "mathematics:entropy-across-information-and-heat",
+    "type": "connection",
+    "concept": "Entropy Across Information and Heat",
+    "domain": "Mathematics",
+    "conceptA": "Shannon Entropy",
+    "domainA": "Mathematics",
+    "conceptB": "Thermodynamic Entropy",
+    "domainB": "Physics",
+    "connection": "Shannon defined entropy as the expected surprise of a probability distribution, while Boltzmann defined it as the logarithm of microstates compatible with a macrostate. The formulas are identical up to a constant, and Landauer showed erasing one bit of information must dissipate a minimum amount of heat.",
+    "insight": "Information and energy are not analogies but two accounts of the same ledger. Computation has a physical price and physics has an informational description.",
+    "prompt": "If every bit you erase costs energy, which of your daily digital habits is quietly heating the planet the most?"
+  },
+  {
     "id": "mathematics:ergodic-theorem",
     "type": "standard",
     "concept": "Ergodic Theorem",
@@ -308,6 +334,19 @@
     "oneliner": "The probability-weighted average of all possible outcomes. The long-run average result of a repeated decision.",
     "whyItMatters": "It's how to evaluate bets, investments, and any decision under uncertainty. Positive expected value = take the bet.",
     "analogy": "If you played this game a million times, what would your average result be?"
+  },
+  {
+    "id": "mathematics:exploration-exploitation-and-research-funding",
+    "type": "connection",
+    "concept": "Exploration-Exploitation and Research Funding",
+    "domain": "Mathematics",
+    "conceptA": "Multi-Armed Bandit Problem",
+    "domainA": "Mathematics",
+    "conceptB": "Research Funding Allocation",
+    "domainB": "Economics",
+    "connection": "Bandit theory proves that optimal learning requires occasionally pulling arms that currently look worse than the best, because estimates are uncertain. Research grants face the same tradeoff: funding only the top-ranked proposals exploits known talent but starves the exploratory bets that produce paradigm shifts.",
+    "insight": "Pure meritocracy is mathematically suboptimal under uncertainty. A healthy portfolio must deliberately fund some apparent losers to keep learning.",
+    "prompt": "What is your current exploration rate, and when did you last deliberately try an option you believed was probably worse than your default?"
   },
   {
     "id": "mathematics:exponential-growth",
@@ -356,6 +395,19 @@
     "analogy": "A prism for any signal — breaking it into its frequency components so you can analyze each one separately."
   },
   {
+    "id": "mathematics:fourier-transforms-and-musical-timbre",
+    "type": "connection",
+    "concept": "Fourier Transforms and Musical Timbre",
+    "domain": "Mathematics",
+    "conceptA": "Fourier Transform",
+    "domainA": "Mathematics",
+    "conceptB": "Musical Timbre",
+    "domainB": "Art & Architecture",
+    "connection": "The Fourier transform decomposes any waveform into a sum of pure sinusoids at different frequencies and amplitudes. The distinct color of a violin versus a clarinet playing the same pitch is entirely the relative weights of the harmonics, so timbre is literally the spectrum of a periodic signal.",
+    "insight": "Perceived quality often lives in a transformed representation, not the raw signal. Changing basis can turn mystery into arithmetic.",
+    "prompt": "What problem in your life would look simpler if you described it in terms of its component frequencies instead of its moment-by-moment values?"
+  },
+  {
     "id": "mathematics:fractals",
     "type": "standard",
     "concept": "Fractals",
@@ -390,6 +442,32 @@
     "oneliner": "An optimization algorithm that iteratively adjusts parameters by moving in the direction that reduces error most steeply.",
     "whyItMatters": "It's how neural networks learn — the fundamental training algorithm behind all modern AI.",
     "analogy": "Finding the bottom of a valley while blindfolded — take small steps in the steepest downhill direction."
+  },
+  {
+    "id": "mathematics:gradient-descent-and-neural-network-training",
+    "type": "connection",
+    "concept": "Gradient Descent and Neural Network Training",
+    "domain": "Mathematics",
+    "conceptA": "Gradient Descent",
+    "domainA": "Mathematics",
+    "conceptB": "Neural Network Training",
+    "domainB": "Technology",
+    "connection": "Gradient descent follows the steepest downhill direction of a loss surface by nudging parameters opposite the gradient. Modern deep learning scales this nineteenth-century calculus idea to billions of weights, and the surprising fact is that in very high dimensions this naive local procedure reliably finds usable minima.",
+    "insight": "Intelligence in current AI is not clever search but patient local descent in huge parameter spaces. Scale plus a good gradient beats cleverness.",
+    "prompt": "Where in your own learning are you trying to leap globally when consistent small gradient steps would actually reach a better minimum?"
+  },
+  {
+    "id": "mathematics:graph-centrality-and-social-influence",
+    "type": "connection",
+    "concept": "Graph Centrality and Social Influence",
+    "domain": "Mathematics",
+    "conceptA": "Eigenvector Centrality",
+    "domainA": "Mathematics",
+    "conceptB": "Social Influence",
+    "domainB": "Psychology",
+    "connection": "Eigenvector centrality scores a node highly when it is connected to other highly scored nodes, defining importance through a self-referential fixed point. The same recursion explains why social influence concentrates: being trusted by trusted people compounds, so reputation becomes a spectral property of the network.",
+    "insight": "Status and authority are rarely intrinsic; they are eigenvectors of the relationship graph. Change your neighbors and you change your score.",
+    "prompt": "Whose trust, if you earned it, would most raise your standing in the eyes of everyone else you care about?"
   },
   {
     "id": "mathematics:graph-theory",
@@ -493,6 +571,19 @@
     "oneliner": "A model where the next state depends only on the current state, not the history — memoryless transitions.",
     "whyItMatters": "Used in Google's PageRank, weather prediction, speech recognition, and financial modeling.",
     "analogy": "A system with no memory — where you go next depends only on where you are now, not how you got here."
+  },
+  {
+    "id": "mathematics:markov-chains-and-morphogenesis",
+    "type": "connection",
+    "concept": "Markov Chains and Morphogenesis",
+    "domain": "Mathematics",
+    "conceptA": "Markov Chain",
+    "domainA": "Mathematics",
+    "conceptB": "Morphogenesis",
+    "domainB": "Biology",
+    "connection": "A Markov chain evolves a state based only on its current configuration, not its history. Embryonic cells choose fates by reading local chemical neighborhoods, so tissue patterning can be modeled as a spatial Markov process where memoryless local rules produce globally reliable body plans.",
+    "insight": "Reliable global structure can emerge from memoryless local transitions. Complexity does not require a blueprint when the transition rules are well-tuned.",
+    "prompt": "What system around you looks designed top-down but is actually the fixed point of simple local transition rules?"
   },
   {
     "id": "mathematics:markov-property",
@@ -624,6 +715,19 @@
     "oneliner": "A small number of items account for a disproportionate share — the 80/20 rule is a rough version.",
     "whyItMatters": "Describes wealth distribution, city sizes, earthquake magnitudes, word frequencies.",
     "analogy": "The universe's unfair distribution — a few get most of the resources, attention, and impact."
+  },
+  {
+    "id": "mathematics:power-laws-and-pareto-efficiency",
+    "type": "connection",
+    "concept": "Power Laws and Pareto Efficiency",
+    "domain": "Mathematics",
+    "conceptA": "Power Law Distribution",
+    "domainA": "Mathematics",
+    "conceptB": "Pareto Efficiency",
+    "domainB": "Economics",
+    "connection": "Power law distributions have heavy tails where a small fraction of events produces most of the magnitude. Pareto noticed wealth, firm sizes, and city populations follow this shape, which makes the classical average a misleading summary and shifts policy focus from the typical case to the consequential outliers.",
+    "insight": "In heavy-tailed systems, variance can be infinite and the mean is not representative. Managing risk and opportunity requires tail thinking, not mean thinking.",
+    "prompt": "Which metric in your work is secretly power-law distributed, and how would your decisions change if you treated it that way?"
   },
   {
     "id": "mathematics:prime-numbers",

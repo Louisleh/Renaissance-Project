@@ -140,3 +140,13 @@ export interface CommonplaceEntry {
   created_at: string;
   synced: boolean;
 }
+
+export type CardFlagStatus = 'suspended' | 'buried' | 'reported';
+
+export interface CardFlag {
+  card_id: string;
+  status: CardFlagStatus;
+  reason: string | null;
+  flagged_at: string;
+  bury_until: string | null;
+}

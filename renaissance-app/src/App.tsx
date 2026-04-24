@@ -36,6 +36,7 @@ const PricingPage = lazy(() => import('./components/Pricing/PricingPage').then(m
 const CoachingPage = lazy(() => import('./components/Coaching/CoachingPage').then(m => ({ default: m.CoachingPage })));
 const StudyPage = lazy(() => import('./components/Study/StudyPage').then(m => ({ default: m.StudyPage })));
 const JourneyPage = lazy(() => import('./components/Journey/JourneyPage').then(m => ({ default: m.JourneyPage })));
+const WeeklyReviewPage = lazy(() => import('./components/WeeklyReview/WeeklyReviewPage').then(m => ({ default: m.WeeklyReviewPage })));
 
 function LazyFallback() {
   return (
@@ -330,6 +331,7 @@ function AppRoutes() {
         <Route path="/coaching" element={<AuthLazyRoute><CoachingPage /></AuthLazyRoute>} />
         <Route path="/study" element={<LazyRoute><StudyPage /></LazyRoute>} />
         <Route path="/journey" element={<LazyRoute><JourneyPage /></LazyRoute>} />
+        <Route path="/review" element={<LazyRoute><WeeklyReviewPage /></LazyRoute>} />
       </Routes>
     </>
   );

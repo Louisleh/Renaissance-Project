@@ -270,6 +270,36 @@
   margin: 0;
 }
 
+.study-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.study-card-action {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+
+.study-card-action:hover {
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.study-card-action-key {
+  margin-left: 0.45rem;
+  color: var(--gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+}
+
 .study-rating-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
