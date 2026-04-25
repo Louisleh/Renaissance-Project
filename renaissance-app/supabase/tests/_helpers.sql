@@ -1,5 +1,7 @@
 -- Shared helpers for pgTAP RLS specs.
--- Usage: \i supabase/tests/_helpers.sql (loaded at the top of each spec).
+-- Usage: \i tests/_helpers.sql (loaded at the top of each spec).
+-- Path is relative to <project>/supabase/, which is the cwd
+-- `supabase test db` runs pg_prove from.
 
 -- Swap to the `authenticated` role and set the JWT `sub` claim so
 -- auth.uid() resolves to the given uuid inside the current transaction.
