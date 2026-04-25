@@ -114,11 +114,8 @@ jobs:
       - uses: supabase/setup-cli@v1
         with:
           version: latest
-      - name: Start local Supabase
+      - name: Start local Supabase (applies migrations)
         run: supabase start
-        working-directory: renaissance-app
-      - name: Apply migrations to local db
-        run: supabase db reset --linked=false
         working-directory: renaissance-app
       - name: Run pgTAP RLS specs
         run: supabase test db
