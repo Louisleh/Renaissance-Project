@@ -5,7 +5,7 @@
 
 BEGIN;
 
-\i supabase/tests/_helpers.sql
+\i tests/_helpers.sql
 
 SELECT plan(5);
 
