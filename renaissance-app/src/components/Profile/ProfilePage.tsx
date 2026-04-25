@@ -101,7 +101,7 @@ export function ProfilePage() {
       return;
     }
 
-    const { error } = await openCustomerPortal(subscription.stripe_customer_id ?? 'unknown-customer');
+    const { error } = await openCustomerPortal();
     if (error) {
       toast.show(error, 'info');
     }
@@ -241,7 +241,7 @@ export function ProfilePage() {
                 <button
                   className="ghost-button"
                   onClick={async () => {
-                    const { error } = await openCustomerPortal(subscription.stripe_customer_id ?? 'unknown-customer');
+                    const { error } = await openCustomerPortal();
                     if (error) toast.show(error, 'info');
                   }}
                 >

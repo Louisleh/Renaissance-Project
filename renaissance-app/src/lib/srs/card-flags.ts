@@ -1,3 +1,4 @@
+import { safeRead, safeWrite, safeRemove } from '../safe-local-storage';
 import type { CardFlag, CardFlagStatus } from '../../types/cards';
 
 export const CARD_FLAGS_KEY = 'renaissance_card_flags';
@@ -5,18 +6,11 @@ export const CARD_FLAGS_KEY = 'renaissance_card_flags';
 type FlagsMap = Record<string, CardFlag>;
 
 function read(): FlagsMap {
-  if (typeof window === 'undefined') return {};
-  try {
-    const raw = window.localStorage.getItem(CARD_FLAGS_KEY);
-    return raw ? (JSON.parse(raw) as FlagsMap) : {};
-  } catch {
-    return {};
-  }
+  return safeRead<FlagsMap>(CARD_FLAGS_KEY) ?? {};
 }
 
-function write(flags: FlagsMap): void {
-  if (typeof window === 'undefined') return;
-  window.localStorage.setItem(CARD_FLAGS_KEY, JSON.stringify(flags));
+function write(flags: FlagsMap): boolean {
+  return safeWrite(CARD_FLAGS_KEY, flags);
 }
 
 export function loadCardFlags(): FlagsMap {
@@ -67,6 +61,5 @@ export function isCardActive(cardId: string, now: Date = new Date()): boolean {
 }
 
 export function clearLocalCardFlags(): void {
-  if (typeof window === 'undefined') return;
-  window.localStorage.removeItem(CARD_FLAGS_KEY);
+  safeRemove(CARD_FLAGS_KEY);
 }

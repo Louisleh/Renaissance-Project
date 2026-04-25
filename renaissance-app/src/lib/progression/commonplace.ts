@@ -1,4 +1,5 @@
 import { isSupabaseConfigured, supabase } from '../supabase';
+import { safeRead, safeWrite, safeRemove } from '../safe-local-storage';
 import type { CommonplaceEntry, KnowledgeDomain } from '../../types/cards';
 
 export const COMMONPLACE_KEY = 'renaissance_commonplace_entries';
@@ -13,18 +14,11 @@ interface CommonplaceRow {
 }
 
 function readLocal(): CommonplaceEntry[] {
-  if (typeof window === 'undefined') return [];
-  try {
-    const raw = window.localStorage.getItem(COMMONPLACE_KEY);
-    return raw ? (JSON.parse(raw) as CommonplaceEntry[]) : [];
-  } catch {
-    return [];
-  }
+  return safeRead<CommonplaceEntry[]>(COMMONPLACE_KEY) ?? [];
 }
 
-function writeLocal(entries: CommonplaceEntry[]): void {
-  if (typeof window === 'undefined') return;
-  window.localStorage.setItem(COMMONPLACE_KEY, JSON.stringify(entries));
+function writeLocal(entries: CommonplaceEntry[]): boolean {
+  return safeWrite(COMMONPLACE_KEY, entries);
 }
 
 function generateId(): string {
@@ -138,8 +132,7 @@ export async function syncCommonplaceOnSignIn(userId: string): Promise<void> {
 }
 
 export function clearLocalCommonplace(): void {
-  if (typeof window === 'undefined') return;
-  window.localStorage.removeItem(COMMONPLACE_KEY);
+  safeRemove(COMMONPLACE_KEY);
 }
 
 export interface CommonplacePrompt {

@@ -1,23 +1,18 @@
 import { isSupabaseConfigured, supabase } from '../supabase';
+import { safeRead, safeWrite, safeRemove } from '../safe-local-storage';
 import type { KnowledgeDomain, Rating, ReviewLogEntry } from '../../types/cards';
 
 export const REVIEW_LOG_KEY = 'renaissance_review_log';
-const MAX_LOCAL_ENTRIES = 2000;
+export const MAX_LOCAL_REVIEW_ENTRIES = 2000;
 
 function readLocal(): ReviewLogEntry[] {
-  if (typeof window === 'undefined') return [];
-  try {
-    const raw = window.localStorage.getItem(REVIEW_LOG_KEY);
-    return raw ? (JSON.parse(raw) as ReviewLogEntry[]) : [];
-  } catch {
-    return [];
-  }
+  return safeRead<ReviewLogEntry[]>(REVIEW_LOG_KEY) ?? [];
 }
 
-function writeLocal(entries: ReviewLogEntry[]): void {
-  if (typeof window === 'undefined') return;
-  const trimmed = entries.length > MAX_LOCAL_ENTRIES ? entries.slice(-MAX_LOCAL_ENTRIES) : entries;
-  window.localStorage.setItem(REVIEW_LOG_KEY, JSON.stringify(trimmed));
+function writeLocal(entries: ReviewLogEntry[]): boolean {
+  const trimmed =
+    entries.length > MAX_LOCAL_REVIEW_ENTRIES ? entries.slice(-MAX_LOCAL_REVIEW_ENTRIES) : entries;
+  return safeWrite(REVIEW_LOG_KEY, trimmed);
 }
 
 function generateEntryId(): string {
@@ -110,6 +105,5 @@ export async function flushUnsyncedReviews(userId: string): Promise<void> {
 }
 
 export function clearLocalReviewLog(): void {
-  if (typeof window === 'undefined') return;
-  window.localStorage.removeItem(REVIEW_LOG_KEY);
+  safeRemove(REVIEW_LOG_KEY);
 }
