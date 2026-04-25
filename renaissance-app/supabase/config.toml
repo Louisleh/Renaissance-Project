@@ -21,7 +21,6 @@ max_client_conn = 100
 
 [db.seed]
 enabled = true
-sql_paths = ["./seed.sql"]
 
 [realtime]
 enabled = false
